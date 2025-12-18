@@ -1,12 +1,13 @@
 import { motion } from "framer-motion";
+import { Cloud, Brain, Shield, BarChart3, Zap, Link2 } from "lucide-react";
 
 const products = [
-  { icon: '☁️', title: 'Cloud Platform', desc: 'Enterprise cloud infrastructure & management', color: 'from-blue-400 to-cyan-300' },
-  { icon: '🤖', title: 'AI Suite', desc: 'Machine learning & automation tools', color: 'from-primary to-gold' },
-  { icon: '🔒', title: 'SecureGuard', desc: 'Cybersecurity & threat protection', color: 'from-emerald-400 to-teal-300' },
-  { icon: '📊', title: 'DataFlow', desc: 'Analytics & business intelligence', color: 'from-orange-400 to-amber-300' },
-  { icon: '⚡', title: 'DevOps Pro', desc: 'CI/CD & infrastructure automation', color: 'from-rose-400 to-pink-300' },
-  { icon: '🔗', title: 'IntegrateHub', desc: 'API management & system integration', color: 'from-indigo-400 to-purple-300' },
+  { icon: Cloud, title: 'Cloud Platform', desc: 'Enterprise cloud infrastructure & management', gradient: 'from-blue-500 to-cyan-400' },
+  { icon: Brain, title: 'AI Suite', desc: 'Machine learning & automation tools', gradient: 'from-primary to-gold' },
+  { icon: Shield, title: 'SecureGuard', desc: 'Cybersecurity & threat protection', gradient: 'from-emerald-500 to-teal-400' },
+  { icon: BarChart3, title: 'DataFlow', desc: 'Analytics & business intelligence', gradient: 'from-orange-500 to-amber-400' },
+  { icon: Zap, title: 'DevOps Pro', desc: 'CI/CD & infrastructure automation', gradient: 'from-rose-500 to-pink-400' },
+  { icon: Link2, title: 'IntegrateHub', desc: 'API management & system integration', gradient: 'from-indigo-500 to-purple-400' },
 ];
 
 // 3D Hexagonal Grid Visual
@@ -39,6 +40,7 @@ const Products3DVisual = () => {
         const radius = 140;
         const x = Math.cos(angle) * radius;
         const y = Math.sin(angle) * radius;
+        const Icon = product.icon;
         
         return (
           <motion.div
@@ -56,8 +58,8 @@ const Products3DVisual = () => {
               scale: { duration: 3 + i * 0.5, repeat: Infinity, ease: "easeInOut" }
             }}
           >
-            <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${product.color} flex items-center justify-center text-2xl shadow-lg shadow-primary/20`}>
-              {product.icon}
+            <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${product.gradient} flex items-center justify-center shadow-lg shadow-primary/20`}>
+              <Icon className="w-6 h-6 text-white" strokeWidth={2} />
             </div>
           </motion.div>
         );
@@ -144,26 +146,45 @@ export const ProductsSection = () => {
 
           {/* Products Grid */}
           <div className="order-1 lg:order-2 grid sm:grid-cols-2 gap-4">
-            {products.map((product, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.1 * i, duration: 0.5 }}
-                className="group p-6 rounded-2xl bg-white/80 backdrop-blur-sm border border-navy/5 hover:border-primary/20 hover:shadow-lg hover:shadow-primary/5 transition-all duration-300"
-              >
-                <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${product.color} flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                  {product.icon}
-                </div>
-                <h3 className="font-sora text-lg font-semibold text-navy group-hover:text-primary transition-colors">
-                  {product.title}
-                </h3>
-                <p className="font-inter text-sm text-navy/55 mt-2">
-                  {product.desc}
-                </p>
-              </motion.div>
-            ))}
+            {products.map((product, i) => {
+              const Icon = product.icon;
+              return (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.1 * i, duration: 0.5 }}
+                  className="group relative p-6 rounded-2xl bg-white/80 backdrop-blur-sm border border-navy/5 hover:border-primary/30 transition-all duration-300 overflow-hidden"
+                >
+                  {/* Hover gradient overlay */}
+                  <div className={`absolute inset-0 bg-gradient-to-br ${product.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-300`} />
+                  
+                  {/* Icon container with gradient border */}
+                  <div className="relative mb-4">
+                    <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${product.gradient} p-[1px]`}>
+                      <div className="w-full h-full rounded-xl bg-white flex items-center justify-center group-hover:bg-transparent transition-colors duration-300">
+                        <Icon className={`w-5 h-5 text-navy group-hover:text-white transition-colors duration-300`} strokeWidth={2} />
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <h3 className="font-sora text-lg font-semibold text-navy group-hover:text-primary transition-colors relative">
+                    {product.title}
+                  </h3>
+                  <p className="font-inter text-sm text-navy/55 mt-2 relative">
+                    {product.desc}
+                  </p>
+                  
+                  {/* Arrow indicator */}
+                  <div className="absolute bottom-6 right-6 w-8 h-8 rounded-full bg-navy/5 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 translate-x-2 group-hover:translate-x-0">
+                    <svg className="w-4 h-4 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                  </div>
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </div>
