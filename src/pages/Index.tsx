@@ -2,7 +2,9 @@ import { AmbientGlows } from "@/components/AmbientGlows";
 import { Navbar } from "@/components/Navbar";
 import { HeroSection } from "@/components/HeroSection";
 import { AboutSection } from "@/components/AboutSection";
+import { ProductsSection } from "@/components/ProductsSection";
 import { ServicesSection } from "@/components/ServicesSection";
+import { IndustriesSection } from "@/components/IndustriesSection";
 import { CapabilitiesSection } from "@/components/CapabilitiesSection";
 import { StatsSection } from "@/components/StatsSection";
 import { ProcessSection } from "@/components/ProcessSection";
@@ -17,7 +19,9 @@ const Index = () => {
       <Navbar />
       <HeroSection />
       <AboutSection />
+      <ProductsSection />
       <ServicesSection />
+      <IndustriesSection />
       <CapabilitiesSection />
       <StatsSection />
       <ProcessSection />
