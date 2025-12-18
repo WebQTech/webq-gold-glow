@@ -2,6 +2,13 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 
+const navLinks = [
+  { label: "Solutions", href: "#solutions" },
+  { label: "Capabilities", href: "#capabilities" },
+  { label: "Process", href: "#process" },
+  { label: "About", href: "#about" },
+];
+
 export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -20,20 +27,33 @@ export const Navbar = () => {
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-cream/90 backdrop-blur-xl" : ""
+        isScrolled ? "bg-cream/90 backdrop-blur-xl border-b border-navy/5" : ""
       }`}
     >
-      <div className="container mx-auto px-6 py-5">
+      <div className="container mx-auto px-6 lg:px-12 py-6">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <a href="#" className="font-sora text-xl font-bold text-navy">
+          <a href="#" className="font-sora text-lg font-bold text-navy">
             WebQ
           </a>
 
+          {/* Desktop Nav Links */}
+          <div className="hidden md:flex items-center gap-8">
+            {navLinks.map((link) => (
+              <a
+                key={link.label}
+                href={link.href}
+                className="text-[13px] text-navy/60 hover:text-navy transition-colors duration-300"
+              >
+                {link.label}
+              </a>
+            ))}
+          </div>
+
           {/* Desktop CTA */}
           <div className="hidden md:block">
-            <a href="#contact" className="btn-pill text-sm">
-              Let's Talk
+            <a href="#contact" className="text-sm font-medium text-primary hover:text-primary-light transition-colors">
+              Let's Talk →
             </a>
           </div>
 
@@ -52,14 +72,24 @@ export const Navbar = () => {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="md:hidden mt-4 pb-4 border-t border-navy/10 pt-4"
+            className="md:hidden mt-6 pb-6 border-t border-navy/10 pt-6 space-y-4"
           >
+            {navLinks.map((link) => (
+              <a
+                key={link.label}
+                href={link.href}
+                className="block text-sm text-navy/70 hover:text-navy transition-colors"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                {link.label}
+              </a>
+            ))}
             <a
               href="#contact"
-              className="btn-pill text-sm w-full justify-center"
+              className="block text-sm font-medium text-primary"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              Let's Talk
+              Let's Talk →
             </a>
           </motion.div>
         )}

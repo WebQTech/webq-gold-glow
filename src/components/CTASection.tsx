@@ -1,49 +1,63 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { ArrowRight } from "lucide-react";
 
 export const CTASection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="contact" ref={ref} className="py-32 border-t border-border">
-      <div className="container mx-auto px-6">
-        <motion.div
+    <section id="contact" ref={ref} className="py-32 lg:py-40 relative overflow-hidden">
+      {/* Background gradient effect */}
+      <div 
+        className="absolute inset-0 -z-10"
+        style={{
+          background: "radial-gradient(ellipse 80% 60% at 50% 100%, hsla(var(--plum), 0.08) 0%, hsla(var(--gold), 0.05) 40%, transparent 70%)",
+          borderRadius: "400px 400px 0 0",
+        }}
+      />
+
+      <div className="container mx-auto px-6 lg:px-12 text-center">
+        <motion.h2
           initial={{ opacity: 0, y: 40 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
-          className="text-center max-w-3xl mx-auto"
+          transition={{ duration: 0.8 }}
+          className="text-4xl md:text-5xl lg:text-6xl font-medium leading-tight text-navy"
         >
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight leading-[1.1]">
-            Let's build the{" "}
-            <span className="font-serif italic text-primary">future</span>
-          </h2>
-          <p className="text-muted-foreground text-lg mt-8 max-w-xl mx-auto">
-            Ready to transform your technology? Start a conversation with our team of experts.
-          </p>
-          
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4"
-          >
-            <a
-              href="#"
-              className="inline-flex items-center gap-2 px-8 py-4 btn-gradient text-primary-foreground font-medium rounded-full hover:opacity-90 transition-opacity"
-            >
-              Get in Touch
-              <ArrowRight className="w-4 h-4" />
-            </a>
-            <a
-              href="#"
-              className="inline-flex items-center gap-2 px-8 py-4 border border-border text-foreground font-medium rounded-full hover:bg-secondary transition-colors"
-            >
-              Schedule a Demo
-            </a>
-          </motion.div>
+          Ready to{" "}
+          <span className="font-serif italic text-gradient">transform?</span>
+        </motion.h2>
+
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="mt-6 text-lg text-navy/50 max-w-md mx-auto"
+        >
+          Let's build technology that matters.
+        </motion.p>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="mt-10"
+        >
+          <a href="#" className="btn-gradient text-lg px-10 py-5">
+            Start a Conversation
+          </a>
         </motion.div>
+
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={isInView ? { opacity: 1 } : {}}
+          transition={{ duration: 0.6, delay: 0.5 }}
+          className="mt-6 text-sm text-navy/40"
+        >
+          Or email us at{" "}
+          <a href="mailto:hello@webq.tech" className="text-primary hover:underline">
+            hello@webq.tech
+          </a>
+        </motion.p>
       </div>
     </section>
   );

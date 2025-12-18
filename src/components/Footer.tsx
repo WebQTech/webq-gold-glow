@@ -1,55 +1,39 @@
 import { motion } from "framer-motion";
-import { Linkedin, Twitter, Github } from "lucide-react";
+import { Linkedin, Twitter } from "lucide-react";
 
 const footerLinks = {
-  Solutions: ["Custom Software", "Cloud Solutions", "AI Integration", "Cybersecurity"],
-  Company: ["About", "Careers", "Partners", "Contact"],
-  Resources: ["Blog", "Case Studies", "Documentation", "Support"],
+  Solutions: ["Custom Software", "Cloud Migration", "AI Solutions", "Cybersecurity"],
+  Company: ["About", "Process", "Careers", "Contact"],
+  Resources: ["Case Studies", "Blog", "Documentation"],
 };
-
-const socialLinks = [
-  { icon: Linkedin, href: "#", label: "LinkedIn" },
-  { icon: Twitter, href: "#", label: "Twitter" },
-  { icon: Github, href: "#", label: "GitHub" },
-];
 
 export const Footer = () => {
   return (
-    <footer className="border-t border-border bg-card">
-      <div className="container mx-auto px-6 py-16">
+    <footer className="border-t border-navy/6 py-16 lg:py-20">
+      <div className="container mx-auto px-6 lg:px-12">
         <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-12">
           {/* Brand Column */}
           <div className="lg:col-span-2">
-            <a href="#" className="flex items-center mb-4">
-              <span className="text-xl font-medium tracking-tight text-foreground">W</span>
+            <a href="#" className="font-sora text-xl font-bold text-navy">
+              WebQ
             </a>
-            <p className="text-muted-foreground text-sm mb-6 max-w-xs leading-relaxed">
-              AI-Powered IT Solutions for enterprises that demand excellence.
+            <p className="mt-4 text-sm text-navy/50 max-w-xs leading-relaxed">
+              Enterprise-grade IT solutions that empower organizations to innovate and scale.
             </p>
-
-            {/* Newsletter */}
-            <div className="flex gap-2">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-4 py-2.5 bg-background border border-border rounded-full text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-primary"
-              />
-              <button className="px-5 py-2.5 btn-gradient text-primary-foreground font-medium text-sm rounded-full hover:opacity-90 transition-opacity">
-                Subscribe
-              </button>
-            </div>
           </div>
 
           {/* Link Columns */}
           {Object.entries(footerLinks).map(([title, links]) => (
             <div key={title}>
-              <h4 className="text-sm font-medium text-foreground mb-4">{title}</h4>
+              <h4 className="text-xs font-semibold uppercase tracking-wider text-navy/40 mb-4">
+                {title}
+              </h4>
               <ul className="space-y-3">
                 {links.map((link) => (
                   <li key={link}>
                     <a
                       href="#"
-                      className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                      className="text-sm text-navy/60 hover:text-navy transition-colors"
                     >
                       {link}
                     </a>
@@ -60,25 +44,48 @@ export const Footer = () => {
           ))}
         </div>
 
-        {/* Bottom Row */}
-        <div className="mt-16 pt-8 border-t border-border flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-sm text-muted-foreground">
-            © 2025 WebQ Technologies LLC. All rights reserved.
-          </p>
+        {/* Contact */}
+        <div className="mt-12 pt-8 border-t border-navy/6">
+          <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+            <div>
+              <span className="text-xs font-semibold uppercase tracking-wider text-navy/40">
+                Get in touch
+              </span>
+              <p className="mt-1">
+                <a href="mailto:hello@webq.tech" className="text-sm text-primary hover:underline">
+                  hello@webq.tech
+                </a>
+              </p>
+            </div>
 
-          {/* Social Links */}
-          <div className="flex items-center gap-3">
-            {socialLinks.map((social) => (
+            {/* Social */}
+            <div className="flex items-center gap-3">
               <motion.a
-                key={social.label}
-                href={social.href}
+                href="#"
                 whileHover={{ scale: 1.05 }}
-                className="w-9 h-9 rounded-full bg-secondary flex items-center justify-center text-muted-foreground hover:text-primary transition-colors"
-                aria-label={social.label}
+                className="w-9 h-9 rounded-full bg-navy/5 flex items-center justify-center text-navy/50 hover:text-primary transition-colors"
+                aria-label="LinkedIn"
               >
-                <social.icon className="w-4 h-4" />
+                <Linkedin className="w-4 h-4" />
               </motion.a>
-            ))}
+              <motion.a
+                href="#"
+                whileHover={{ scale: 1.05 }}
+                className="w-9 h-9 rounded-full bg-navy/5 flex items-center justify-center text-navy/50 hover:text-primary transition-colors"
+                aria-label="Twitter"
+              >
+                <Twitter className="w-4 h-4" />
+              </motion.a>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom Bar */}
+        <div className="mt-12 pt-8 border-t border-navy/6 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-navy/40">
+          <p>© 2025 WebQ Technologies LLC</p>
+          <div className="flex items-center gap-6">
+            <a href="#" className="hover:text-navy transition-colors">Privacy Policy</a>
+            <a href="#" className="hover:text-navy transition-colors">Terms of Service</a>
           </div>
         </div>
       </div>
