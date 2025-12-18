@@ -27,7 +27,7 @@ export const Navbar = () => {
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-background/90 backdrop-blur-xl" : ""
+        isScrolled ? "bg-background/90 backdrop-blur-xl shadow-sm" : ""
       }`}
     >
       <div className="container mx-auto px-6 py-5">
@@ -38,7 +38,7 @@ export const Navbar = () => {
           </a>
 
           {/* Desktop Nav Icons - Center */}
-          <div className="hidden md:flex items-center gap-1 bg-secondary/50 backdrop-blur-sm rounded-full px-2 py-1.5 border border-border">
+          <div className="hidden md:flex items-center gap-1 bg-card backdrop-blur-sm rounded-full px-2 py-1.5 border border-border shadow-sm">
             {navIcons.map((item) => (
               <a
                 key={item.label}
