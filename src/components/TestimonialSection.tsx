@@ -1,62 +1,54 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { Quote } from "lucide-react";
-
-const clientLogos = [
-  "TechCorp",
-  "Innovate",
-  "DataFlow",
-  "CloudPeak",
-  "SecureNet",
-];
 
 export const TestimonialSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section ref={ref} className="bg-background py-24 md:py-32">
+    <section ref={ref} className="py-32 border-t border-border">
       <div className="container mx-auto px-6">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 40 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
           className="max-w-4xl mx-auto text-center"
         >
-          {/* Quote Icon */}
-          <Quote className="w-12 h-12 text-primary mx-auto mb-8 rotate-180" />
+          <span className="section-label">What clients say</span>
 
-          {/* Quote Text */}
-          <blockquote className="text-2xl md:text-3xl lg:text-4xl font-light text-foreground leading-relaxed italic">
-            "WebQ transformed our entire infrastructure in 6 months. Their team's expertise and dedication exceeded every expectation."
+          <blockquote className="text-2xl md:text-3xl lg:text-4xl font-light text-foreground leading-relaxed mt-10">
+            "WebQ transformed our entire infrastructure in 6 months. Their team's expertise and dedication{" "}
+            <span className="font-serif italic text-accent">exceeded every expectation.</span>"
           </blockquote>
 
-          {/* Attribution */}
-          <div className="mt-8">
-            <p className="text-foreground font-semibold">Sarah Chen</p>
-            <p className="text-muted-foreground text-sm">CTO, TechCorp Inc.</p>
+          <div className="mt-10 flex items-center justify-center gap-4">
+            <div className="w-12 h-12 rounded-full bg-secondary" />
+            <div className="text-left">
+              <p className="text-foreground font-medium">Sarah Chen</p>
+              <p className="text-muted-foreground text-sm">CTO, TechCorp Inc.</p>
+            </div>
           </div>
         </motion.div>
 
         {/* Client Logos */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          className="mt-20 border-t border-border pt-12"
+          transition={{ duration: 0.8, delay: 0.3 }}
+          className="mt-24 border-t border-border pt-16"
         >
-          <p className="text-muted-foreground text-sm text-center mb-8 tracking-wider uppercase">
+          <p className="text-muted-foreground text-xs text-center tracking-wider uppercase mb-10">
             Trusted by industry leaders
           </p>
-          <div className="flex flex-wrap items-center justify-center gap-8 md:gap-16">
-            {clientLogos.map((logo, index) => (
+          <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-6">
+            {["TechCorp", "Innovate", "DataFlow", "CloudPeak", "SecureNet"].map((logo, index) => (
               <motion.span
                 key={logo}
                 initial={{ opacity: 0 }}
-                animate={isInView ? { opacity: 0.4 } : {}}
+                animate={isInView ? { opacity: 0.3 } : {}}
                 transition={{ duration: 0.4, delay: 0.4 + index * 0.1 }}
-                whileHover={{ opacity: 0.8 }}
-                className="text-xl md:text-2xl font-semibold text-foreground tracking-wide cursor-default transition-opacity"
+                whileHover={{ opacity: 0.7 }}
+                className="text-xl font-medium text-foreground tracking-wide cursor-default transition-opacity"
               >
                 {logo}
               </motion.span>

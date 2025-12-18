@@ -1,6 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { Check } from "lucide-react";
+import { Check, ArrowUpRight } from "lucide-react";
 
 const features = [
   "15+ years average engineer experience",
@@ -9,95 +9,88 @@ const features = [
   "24/7 priority support",
 ];
 
+const stats = [
+  { number: "500+", label: "Projects Delivered" },
+  { number: "99.9%", label: "Uptime" },
+  { number: "50+", label: "Enterprise Clients" },
+];
+
 export const FeatureSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="about" ref={ref} className="bg-cream py-24 md:py-32">
+    <section id="about" ref={ref} className="py-32 border-t border-border">
       <div className="container mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center max-w-6xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-start max-w-6xl mx-auto">
           {/* Left Column - Text */}
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.6 }}
+            initial={{ opacity: 0, y: 40 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
           >
-            <span className="text-xs font-medium tracking-[3px] uppercase text-charcoal/60">
-              WHY WEBQ
-            </span>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-navy mt-4 leading-tight">
-              Technology partners, not just vendors
+            <span className="section-label">Why WebQ</span>
+            <h2 className="text-4xl md:text-5xl font-medium tracking-tight mt-6 leading-[1.15]">
+              Technology partners,{" "}
+              <span className="font-serif italic text-accent">not just vendors</span>
             </h2>
-            <p className="text-lg text-charcoal/70 leading-relaxed mt-6">
+            <p className="text-lg text-muted-foreground leading-relaxed mt-8">
               We don't just build solutions—we become an extension of your team. Our senior engineers bring decades of enterprise experience to every project.
             </p>
 
-            <ul className="mt-8 space-y-4">
+            <ul className="mt-10 space-y-4">
               {features.map((feature, index) => (
                 <motion.li
                   key={feature}
                   initial={{ opacity: 0, x: -20 }}
                   animate={isInView ? { opacity: 1, x: 0 } : {}}
-                  transition={{ duration: 0.4, delay: 0.3 + index * 0.1 }}
-                  className="flex items-center gap-3"
+                  transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
+                  className="flex items-center gap-4"
                 >
-                  <div className="w-6 h-6 rounded-full bg-primary flex items-center justify-center flex-shrink-0">
-                    <Check className="w-4 h-4 text-primary-foreground" />
+                  <div className="w-5 h-5 rounded-full bg-foreground flex items-center justify-center flex-shrink-0">
+                    <Check className="w-3 h-3 text-background" />
                   </div>
-                  <span className="text-charcoal/80 font-medium">{feature}</span>
+                  <span className="text-foreground/80">{feature}</span>
                 </motion.li>
               ))}
             </ul>
+
+            <motion.a
+              href="#contact"
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6, delay: 0.6 }}
+              className="inline-flex items-center gap-2 mt-10 text-foreground font-medium hover:opacity-70 transition-opacity"
+            >
+              Learn more about us
+              <ArrowUpRight className="w-4 h-4" />
+            </motion.a>
           </motion.div>
 
-          {/* Right Column - Visual */}
+          {/* Right Column - Stats Cards */}
           <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="relative"
+            initial={{ opacity: 0, y: 40 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.8, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
+            className="space-y-5"
           >
-            <div className="relative bg-navy rounded-3xl p-12 overflow-hidden">
-              {/* Decorative elements */}
-              <div className="absolute top-0 right-0 w-40 h-40 bg-primary/20 rounded-full blur-3xl" />
-              <div className="absolute bottom-0 left-0 w-32 h-32 bg-accent/20 rounded-full blur-3xl" />
-              
-              <div className="relative z-10 text-center">
-                <motion.span
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={isInView ? { opacity: 1, scale: 1 } : {}}
-                  transition={{ duration: 0.6, delay: 0.4 }}
-                  className="text-7xl md:text-8xl font-bold text-primary"
-                >
-                  15+
-                </motion.span>
-                <p className="text-foreground/70 text-lg mt-4">Years of Excellence</p>
-              </div>
-
-              {/* Floating cards */}
+            {stats.map((stat, index) => (
               <motion.div
-                animate={{ y: [0, -10, 0] }}
-                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute top-8 right-8 bg-charcoal/80 backdrop-blur-sm rounded-xl p-4 border border-foreground/10"
+                key={stat.label}
+                initial={{ opacity: 0, y: 30 }}
+                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.6, delay: 0.3 + index * 0.15 }}
+                className="glass-card p-8 flex items-center justify-between"
               >
-                <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-accent" />
-                  <span className="text-sm text-foreground/70">Systems Online</span>
+                <div>
+                  <span className="text-4xl md:text-5xl font-medium text-foreground">{stat.number}</span>
+                  <p className="text-muted-foreground mt-1">{stat.label}</p>
+                </div>
+                <div className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center">
+                  <ArrowUpRight className="w-5 h-5 text-foreground" />
                 </div>
               </motion.div>
-
-              <motion.div
-                animate={{ y: [0, 10, 0] }}
-                transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-                className="absolute bottom-8 left-8 bg-charcoal/80 backdrop-blur-sm rounded-xl p-4 border border-foreground/10"
-              >
-                <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-primary" />
-                  <span className="text-sm text-foreground/70">99.9% Uptime</span>
-                </div>
-              </motion.div>
-            </div>
+            ))}
           </motion.div>
         </div>
       </div>
