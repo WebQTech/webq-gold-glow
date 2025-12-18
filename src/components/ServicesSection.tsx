@@ -1,43 +1,47 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { ArrowRight, Zap, Cloud, Bot, Shield, Database, BarChart3 } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 const services = [
   {
-    icon: Zap,
-    title: "Custom Software",
-    description: "Tailored applications built for your unique business processes",
-    iconColor: "text-primary",
+    number: "01",
+    name: "Custom Software Development",
+    description: "Bespoke solutions tailored to unique operational needs",
   },
   {
-    icon: Cloud,
-    title: "Cloud Solutions", 
-    description: "Seamless migration and management across all major platforms",
-    iconColor: "text-accent",
+    number: "02",
+    name: "Cloud Migration & Deployment",
+    description: "Legacy to cloud across public, private & hybrid",
   },
   {
-    icon: Bot,
-    title: "AI Integration",
-    description: "Intelligent automation that drives measurable results",
-    iconColor: "text-primary",
+    number: "03",
+    name: "AI-Powered Solutions",
+    description: "Machine learning, predictive analytics & automation",
   },
   {
-    icon: Shield,
-    title: "Cybersecurity",
-    description: "Enterprise-grade protection for your digital assets",
-    iconColor: "text-accent",
+    number: "04",
+    name: "IT Infrastructure Management",
+    description: "Networks, servers & systems for uptime & scalability",
   },
   {
-    icon: Database,
-    title: "Infrastructure",
-    description: "Reliable systems that scale with your growth",
-    iconColor: "text-primary",
+    number: "05",
+    name: "Cybersecurity & Compliance",
+    description: "Threat mitigation & regulatory compliance",
   },
   {
-    icon: BarChart3,
-    title: "Analytics",
-    description: "Data-driven insights for smarter decisions",
-    iconColor: "text-accent",
+    number: "06",
+    name: "Technology Modernization",
+    description: "Transform legacy systems into scalable applications",
+  },
+  {
+    number: "07",
+    name: "Quality Assurance & Testing",
+    description: "AI-based testing, data quality & validation",
+  },
+  {
+    number: "08",
+    name: "Production Support & Monitoring",
+    description: "24/7 oversight, incident response & optimization",
   },
 ];
 
@@ -46,51 +50,60 @@ export const ServicesSection = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="services" ref={ref} className="py-32">
-      <div className="container mx-auto px-6">
-        {/* Section Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
-          className="text-center mb-20"
-        >
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight">
-            Explore <span className="font-serif italic text-primary">WebQ Services</span>
-          </h2>
-          <p className="text-muted-foreground mt-6 max-w-xl mx-auto">
-            Explore our innovative AI-powered solutions and tools for enterprise professionals
-          </p>
-        </motion.div>
+    <section id="solutions" ref={ref} className="py-24 lg:py-32">
+      <div className="container mx-auto px-6 lg:px-12">
+        {/* Header */}
+        <div className="max-w-2xl mb-16">
+          <motion.span
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6 }}
+            className="section-label"
+          >
+            Solutions
+          </motion.span>
 
-        {/* Services Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 max-w-6xl mx-auto">
+          <motion.h2
+            initial={{ opacity: 0, y: 30 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="mt-4 text-3xl md:text-4xl lg:text-5xl font-medium leading-tight text-navy"
+          >
+            Full-stack enterprise{" "}
+            <span className="font-serif italic text-primary">technology.</span>
+          </motion.h2>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="mt-4 text-base text-navy/55"
+          >
+            End-to-end services from development to deployment, monitoring, and continuous improvement.
+          </motion.p>
+        </div>
+
+        {/* Services List */}
+        <div>
           {services.map((service, index) => (
             <motion.div
-              key={service.title}
-              initial={{ opacity: 0, y: 40 }}
+              key={service.number}
+              initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.7, delay: index * 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
-              className="glass-card group cursor-pointer hover:shadow-lg transition-all duration-500 gradient-border"
+              transition={{ duration: 0.5, delay: 0.1 + index * 0.05 }}
+              className="service-row cursor-pointer"
             >
-              <div className="p-6 flex flex-col justify-between min-h-[280px]">
-                <div>
-                  <div className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center mb-4">
-                    <service.icon className={`w-5 h-5 ${service.iconColor}`} />
-                  </div>
-                  <span className="text-xs text-muted-foreground uppercase tracking-wider">WebQ Platform</span>
-                  <h3 className="text-xl font-medium text-foreground mt-2">{service.title}</h3>
-                  <p className="text-sm text-muted-foreground mt-3 leading-relaxed">{service.description}</p>
-                </div>
-                <div className="flex items-center justify-between mt-4">
-                  <span className="text-xs text-muted-foreground">Open Service</span>
-                  <motion.div
-                    whileHover={{ x: 5 }}
-                    className="w-8 h-8 rounded-full bg-secondary flex items-center justify-center group-hover:bg-primary/10 transition-colors"
-                  >
-                    <ArrowRight className="w-3 h-3 text-foreground" />
-                  </motion.div>
-                </div>
+              <div className="grid grid-cols-[60px_1fr_auto] md:grid-cols-[60px_260px_1fr_auto] gap-4 md:gap-8 items-center">
+                <span className="service-number text-sm font-medium text-navy/30 transition-colors">
+                  {service.number}
+                </span>
+                <span className="service-name text-[15px] md:text-base font-semibold text-navy transition-colors">
+                  {service.name}
+                </span>
+                <span className="hidden md:block text-sm text-navy/45">
+                  {service.description}
+                </span>
+                <ArrowRight className="service-arrow w-4 h-4 text-primary" />
               </div>
             </motion.div>
           ))}
