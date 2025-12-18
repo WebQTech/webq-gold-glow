@@ -15,26 +15,26 @@ const socialLinks = [
 
 export const Footer = () => {
   return (
-    <footer className="border-t border-border">
-      <div className="container mx-auto px-6 py-16">
-        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-12">
+    <footer className="bg-background-footer border-t border-white/[0.06]">
+      <div className="container-custom py-20">
+        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-14">
           {/* Brand Column */}
           <div className="lg:col-span-2">
-            <a href="#" className="flex items-center mb-4">
-              <span className="text-xl font-medium tracking-tight text-foreground">W</span>
+            <a href="#" className="flex items-center mb-5">
+              <span className="text-xl font-medium tracking-tight text-primary-100">W</span>
             </a>
-            <p className="text-muted-foreground text-sm mb-6 max-w-xs leading-relaxed">
+            <p className="text-primary-50 text-sm mb-8 max-w-xs leading-relaxed">
               AI-Powered IT Solutions for enterprises that demand excellence.
             </p>
 
             {/* Newsletter */}
-            <div className="flex gap-2">
+            <div className="flex gap-3">
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 px-4 py-2.5 bg-secondary border border-border rounded-full text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-foreground/20"
+                className="flex-1 px-5 py-3 bg-white/[0.03] border border-white/[0.06] rounded-full text-sm text-primary-100 placeholder:text-primary-40 focus:outline-none focus:ring-1 focus:ring-primary/30 focus:border-primary/30"
               />
-              <button className="px-5 py-2.5 bg-foreground text-background font-medium text-sm rounded-full hover:opacity-90 transition-opacity">
+              <button className="btn-primary px-6 py-3 text-sm">
                 Subscribe
               </button>
             </div>
@@ -43,13 +43,13 @@ export const Footer = () => {
           {/* Link Columns */}
           {Object.entries(footerLinks).map(([title, links]) => (
             <div key={title}>
-              <h4 className="text-sm font-medium text-foreground mb-4">{title}</h4>
-              <ul className="space-y-3">
+              <h4 className="text-sm font-medium text-primary-100 mb-5">{title}</h4>
+              <ul className="space-y-4">
                 {links.map((link) => (
                   <li key={link}>
                     <a
                       href="#"
-                      className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                      className="text-sm text-primary-50 hover:text-primary-100 transition-colors"
                     >
                       {link}
                     </a>
@@ -61,8 +61,8 @@ export const Footer = () => {
         </div>
 
         {/* Bottom Row */}
-        <div className="mt-16 pt-8 border-t border-border flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-sm text-muted-foreground">
+        <div className="mt-20 pt-10 border-t border-white/[0.06] flex flex-col md:flex-row items-center justify-between gap-5">
+          <p className="text-sm text-primary-40">
             © 2025 WebQ Technologies LLC. All rights reserved.
           </p>
 
@@ -73,7 +73,7 @@ export const Footer = () => {
                 key={social.label}
                 href={social.href}
                 whileHover={{ scale: 1.05 }}
-                className="w-9 h-9 rounded-full bg-secondary flex items-center justify-center text-muted-foreground hover:text-foreground transition-colors"
+                className="w-10 h-10 rounded-full bg-white/[0.03] border border-white/[0.06] flex items-center justify-center text-primary-50 hover:text-primary-100 hover:border-primary/30 transition-all"
                 aria-label={social.label}
               >
                 <social.icon className="w-4 h-4" />
