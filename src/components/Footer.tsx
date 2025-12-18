@@ -15,7 +15,7 @@ const socialLinks = [
 
 export const Footer = () => {
   return (
-    <footer className="border-t border-border">
+    <footer className="border-t border-border bg-card">
       <div className="container mx-auto px-6 py-16">
         <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-12">
           {/* Brand Column */}
@@ -32,9 +32,9 @@ export const Footer = () => {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 px-4 py-2.5 bg-secondary border border-border rounded-full text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-foreground/20"
+                className="flex-1 px-4 py-2.5 bg-background border border-border rounded-full text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-primary"
               />
-              <button className="px-5 py-2.5 bg-foreground text-background font-medium text-sm rounded-full hover:opacity-90 transition-opacity">
+              <button className="px-5 py-2.5 btn-gradient text-primary-foreground font-medium text-sm rounded-full hover:opacity-90 transition-opacity">
                 Subscribe
               </button>
             </div>
@@ -73,7 +73,7 @@ export const Footer = () => {
                 key={social.label}
                 href={social.href}
                 whileHover={{ scale: 1.05 }}
-                className="w-9 h-9 rounded-full bg-secondary flex items-center justify-center text-muted-foreground hover:text-foreground transition-colors"
+                className="w-9 h-9 rounded-full bg-secondary flex items-center justify-center text-muted-foreground hover:text-primary transition-colors"
                 aria-label={social.label}
               >
                 <social.icon className="w-4 h-4" />

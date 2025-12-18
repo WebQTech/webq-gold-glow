@@ -7,37 +7,37 @@ const services = [
     icon: Zap,
     title: "Custom Software",
     description: "Tailored applications built for your unique business processes",
-    image: "from-amber-900/30 via-stone-800/30 to-neutral-900/30",
+    iconColor: "text-primary",
   },
   {
     icon: Cloud,
     title: "Cloud Solutions", 
     description: "Seamless migration and management across all major platforms",
-    image: "from-stone-800/30 via-neutral-800/30 to-zinc-900/30",
+    iconColor: "text-accent",
   },
   {
     icon: Bot,
     title: "AI Integration",
     description: "Intelligent automation that drives measurable results",
-    image: "from-neutral-800/30 via-stone-900/30 to-zinc-900/30",
+    iconColor: "text-primary",
   },
   {
     icon: Shield,
     title: "Cybersecurity",
     description: "Enterprise-grade protection for your digital assets",
-    image: "from-zinc-800/30 via-stone-800/30 to-neutral-900/30",
+    iconColor: "text-accent",
   },
   {
     icon: Database,
     title: "Infrastructure",
     description: "Reliable systems that scale with your growth",
-    image: "from-stone-900/30 via-neutral-800/30 to-zinc-800/30",
+    iconColor: "text-primary",
   },
   {
     icon: BarChart3,
     title: "Analytics",
     description: "Data-driven insights for smarter decisions",
-    image: "from-neutral-900/30 via-zinc-800/30 to-stone-800/30",
+    iconColor: "text-accent",
   },
 ];
 
@@ -56,7 +56,7 @@ export const ServicesSection = () => {
           className="text-center mb-20"
         >
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight">
-            Explore <span className="font-serif italic text-accent">WebQ Services</span>
+            Explore <span className="font-serif italic text-primary">WebQ Services</span>
           </h2>
           <p className="text-muted-foreground mt-6 max-w-xl mx-auto">
             Explore our innovative AI-powered solutions and tools for enterprise professionals
@@ -71,12 +71,12 @@ export const ServicesSection = () => {
               initial={{ opacity: 0, y: 40 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.7, delay: index * 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
-              className="glass-card group cursor-pointer hover:border-foreground/20 transition-all duration-500"
+              className="glass-card group cursor-pointer hover:shadow-lg transition-all duration-500 gradient-border"
             >
-              <div className={`aspect-[4/3] bg-gradient-to-br ${service.image} p-6 flex flex-col justify-between`}>
+              <div className="p-6 flex flex-col justify-between min-h-[280px]">
                 <div>
-                  <div className="w-10 h-10 rounded-full bg-secondary/60 flex items-center justify-center mb-4">
-                    <service.icon className="w-5 h-5 text-foreground" />
+                  <div className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center mb-4">
+                    <service.icon className={`w-5 h-5 ${service.iconColor}`} />
                   </div>
                   <span className="text-xs text-muted-foreground uppercase tracking-wider">WebQ Platform</span>
                   <h3 className="text-xl font-medium text-foreground mt-2">{service.title}</h3>
@@ -86,7 +86,7 @@ export const ServicesSection = () => {
                   <span className="text-xs text-muted-foreground">Open Service</span>
                   <motion.div
                     whileHover={{ x: 5 }}
-                    className="w-8 h-8 rounded-full bg-secondary/50 flex items-center justify-center group-hover:bg-secondary transition-colors"
+                    className="w-8 h-8 rounded-full bg-secondary flex items-center justify-center group-hover:bg-primary/10 transition-colors"
                   >
                     <ArrowRight className="w-3 h-3 text-foreground" />
                   </motion.div>

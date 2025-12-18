@@ -48,7 +48,7 @@ export const StatsSection = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section ref={ref} className="bg-charcoal py-20">
+    <section ref={ref} className="bg-card py-20 border-y border-border">
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4">
           {stats.map((stat, index) => (
@@ -58,7 +58,7 @@ export const StatsSection = () => {
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className={`text-center ${
-                index < stats.length - 1 ? "md:border-r md:border-foreground/10" : ""
+                index < stats.length - 1 ? "md:border-r md:border-border" : ""
               }`}
             >
               <AnimatedNumber value={stat.number} suffix={stat.suffix} />

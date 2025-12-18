@@ -18,11 +18,11 @@ export const TestimonialSection = () => {
 
           <blockquote className="text-2xl md:text-3xl lg:text-4xl font-light text-foreground leading-relaxed mt-10">
             "WebQ transformed our entire infrastructure in 6 months. Their team's expertise and dedication{" "}
-            <span className="font-serif italic text-accent">exceeded every expectation.</span>"
+            <span className="font-serif italic text-primary">exceeded every expectation.</span>"
           </blockquote>
 
           <div className="mt-10 flex items-center justify-center gap-4">
-            <div className="w-12 h-12 rounded-full bg-secondary" />
+            <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-accent" />
             <div className="text-left">
               <p className="text-foreground font-medium">Sarah Chen</p>
               <p className="text-muted-foreground text-sm">CTO, TechCorp Inc.</p>
@@ -45,9 +45,9 @@ export const TestimonialSection = () => {
               <motion.span
                 key={logo}
                 initial={{ opacity: 0 }}
-                animate={isInView ? { opacity: 0.3 } : {}}
+                animate={isInView ? { opacity: 0.4 } : {}}
                 transition={{ duration: 0.4, delay: 0.4 + index * 0.1 }}
-                whileHover={{ opacity: 0.7 }}
+                whileHover={{ opacity: 0.8 }}
                 className="text-xl font-medium text-foreground tracking-wide cursor-default transition-opacity"
               >
                 {logo}

@@ -17,7 +17,7 @@ export const CTASection = () => {
         >
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight leading-[1.1]">
             Let's build the{" "}
-            <span className="font-serif italic text-accent">future</span>
+            <span className="font-serif italic text-primary">future</span>
           </h2>
           <p className="text-muted-foreground text-lg mt-8 max-w-xl mx-auto">
             Ready to transform your technology? Start a conversation with our team of experts.
@@ -31,7 +31,7 @@ export const CTASection = () => {
           >
             <a
               href="#"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-foreground text-background font-medium rounded-full hover:opacity-90 transition-opacity"
+              className="inline-flex items-center gap-2 px-8 py-4 btn-gradient text-primary-foreground font-medium rounded-full hover:opacity-90 transition-opacity"
             >
               Get in Touch
               <ArrowRight className="w-4 h-4" />
