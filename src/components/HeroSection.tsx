@@ -31,7 +31,7 @@ export const HeroSection = () => {
             >
               We build technology
               <br />
-              <span className="font-serif italic text-gradient">that transforms.</span>
+              <span className="font-serif italic text-gradient">that transforms Business.</span>
             </motion.h1>
 
             {/* Subheadline */}
