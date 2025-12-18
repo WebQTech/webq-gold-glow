@@ -1,14 +1,15 @@
 import { motion } from "framer-motion";
+import { GraduationCap, CreditCard, Heart, ShoppingCart, Factory, Landmark, Truck, Bolt } from "lucide-react";
 
 const industries = [
-  { icon: '🎓', title: 'EdTech', desc: 'Learning platforms & educational technology' },
-  { icon: '💳', title: 'FinTech', desc: 'Financial services & payment solutions' },
-  { icon: '🏥', title: 'HealthTech', desc: 'Healthcare systems & medical technology' },
-  { icon: '🛒', title: 'Retail & E-commerce', desc: 'Digital commerce & inventory systems' },
-  { icon: '🏭', title: 'Manufacturing', desc: 'Industrial automation & IoT' },
-  { icon: '🏛️', title: 'Government', desc: 'Public sector & civic technology' },
-  { icon: '🚚', title: 'Logistics', desc: 'Transportation & distribution systems' },
-  { icon: '⚡', title: 'Energy', desc: 'Smart grid & resource management' },
+  { icon: GraduationCap, title: 'EdTech', desc: 'Learning platforms & educational technology' },
+  { icon: CreditCard, title: 'FinTech', desc: 'Financial services & payment solutions' },
+  { icon: Heart, title: 'HealthTech', desc: 'Healthcare systems & medical technology' },
+  { icon: ShoppingCart, title: 'Retail & E-commerce', desc: 'Digital commerce & inventory systems' },
+  { icon: Factory, title: 'Manufacturing', desc: 'Industrial automation & IoT' },
+  { icon: Landmark, title: 'Government', desc: 'Public sector & civic technology' },
+  { icon: Truck, title: 'Logistics', desc: 'Transportation & distribution systems' },
+  { icon: Bolt, title: 'Energy', desc: 'Smart grid & resource management' },
 ];
 
 // 3D Globe/Network Visual
@@ -60,6 +61,7 @@ const Industries3DVisual = () => {
         const radiusY = 160;
         const x = Math.cos(angle) * radiusX;
         const y = Math.sin(angle) * radiusY;
+        const Icon = industry.icon;
         
         return (
           <motion.div
@@ -85,10 +87,10 @@ const Industries3DVisual = () => {
               animate={{ y: [0, -8, 0] }}
               transition={{ duration: 3 + i * 0.3, repeat: Infinity, ease: "easeInOut" }}
             >
-              <div className="w-12 h-12 rounded-full bg-white shadow-lg shadow-primary/20 flex items-center justify-center text-xl border border-primary/10">
-                {industry.icon}
+              <div className="w-12 h-12 rounded-full bg-white/10 backdrop-blur-sm shadow-lg shadow-primary/20 flex items-center justify-center border border-white/20">
+                <Icon className="w-5 h-5 text-white" strokeWidth={1.5} />
               </div>
-              <span className="mt-2 text-xs font-sora font-medium text-navy/70 whitespace-nowrap">
+              <span className="mt-2 text-xs font-sora font-medium text-white/70 whitespace-nowrap">
                 {industry.title}
               </span>
             </motion.div>
@@ -175,30 +177,41 @@ export const IndustriesSection = () => {
         <div className="grid lg:grid-cols-2 gap-8 items-center">
           {/* Industries Grid */}
           <div className="grid sm:grid-cols-2 gap-4">
-            {industries.map((industry, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.08 * i, duration: 0.5 }}
-                className="group p-5 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-primary/30 hover:bg-white/10 transition-all duration-300"
-              >
-                <div className="flex items-start gap-4">
-                  <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-primary/20 to-gold/10 flex items-center justify-center text-xl group-hover:scale-110 transition-transform duration-300">
-                    {industry.icon}
+            {industries.map((industry, i) => {
+              const Icon = industry.icon;
+              return (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.08 * i, duration: 0.5 }}
+                  className="group p-5 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-primary/40 hover:bg-white/10 transition-all duration-300 cursor-pointer"
+                >
+                  <div className="flex items-start gap-4">
+                    {/* Icon with animated gradient border */}
+                    <div className="relative">
+                      <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-primary/30 to-gold/20 p-[1px]">
+                        <div className="w-full h-full rounded-xl bg-navy/80 flex items-center justify-center group-hover:bg-primary/20 transition-colors duration-300">
+                          <Icon className="w-5 h-5 text-white/80 group-hover:text-white transition-colors duration-300" strokeWidth={1.5} />
+                        </div>
+                      </div>
+                      {/* Subtle glow on hover */}
+                      <div className="absolute inset-0 rounded-xl bg-primary/20 blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10" />
+                    </div>
+                    
+                    <div className="flex-1">
+                      <h3 className="font-sora text-base font-semibold text-white group-hover:text-primary-light transition-colors">
+                        {industry.title}
+                      </h3>
+                      <p className="font-inter text-sm text-white/45 mt-1 group-hover:text-white/60 transition-colors">
+                        {industry.desc}
+                      </p>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="font-sora text-base font-semibold text-white group-hover:text-primary-light transition-colors">
-                      {industry.title}
-                    </h3>
-                    <p className="font-inter text-sm text-white/45 mt-1">
-                      {industry.desc}
-                    </p>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
+                </motion.div>
+              );
+            })}
           </div>
 
           {/* 3D Visual */}
