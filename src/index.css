@@ -4,35 +4,43 @@
 
 @layer base {
   :root {
-    --background: 0 0% 4%;
-    --foreground: 0 0% 98%;
+    /* Deep Forest Green Theme */
+    --background: 150 38% 9%;
+    --background-secondary: 150 35% 12%;
+    --background-footer: 150 40% 6%;
+    --foreground: 0 0% 100%;
 
-    --card: 0 0% 8%;
-    --card-foreground: 0 0% 98%;
+    --card: 0 0% 100% / 0.03;
+    --card-foreground: 0 0% 100%;
 
-    --popover: 0 0% 4%;
-    --popover-foreground: 0 0% 98%;
+    --popover: 150 38% 9%;
+    --popover-foreground: 0 0% 100%;
 
-    --primary: 0 0% 98%;
-    --primary-foreground: 0 0% 4%;
+    --primary: 43 74% 60%;
+    --primary-foreground: 150 38% 9%;
 
-    --secondary: 0 0% 12%;
-    --secondary-foreground: 0 0% 98%;
+    --secondary: 0 0% 100% / 0.03;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 0 0% 12%;
-    --muted-foreground: 0 0% 98% / 0.5;
+    --muted: 0 0% 100% / 0.06;
+    --muted-foreground: 0 0% 100% / 0.5;
 
-    --accent: 37 29% 72%;
-    --accent-foreground: 0 0% 4%;
+    --accent: 160 64% 52%;
+    --accent-foreground: 150 38% 9%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 0 0% 100% / 0.08;
-    --input: 0 0% 100% / 0.08;
-    --ring: 0 0% 98%;
+    --border: 0 0% 100% / 0.06;
+    --input: 0 0% 100% / 0.06;
+    --ring: 43 74% 60%;
 
     --radius: 0.75rem;
+
+    /* Custom colors */
+    --gold: 43 74% 60%;
+    --mint: 160 64% 52%;
+    --cream: 43 100% 99%;
   }
 }
 
@@ -56,21 +64,67 @@
     font-family: 'Playfair Display', Georgia, serif;
   }
 
-  .text-gradient {
-    @apply bg-gradient-to-r from-foreground to-muted-foreground bg-clip-text text-transparent;
+  .bg-forest {
+    background-color: hsl(150 38% 9%);
+  }
+
+  .bg-forest-light {
+    background-color: hsl(150 35% 12%);
+  }
+
+  .bg-forest-dark {
+    background-color: hsl(150 40% 6%);
+  }
+
+  .text-primary-100 {
+    color: rgba(255, 255, 255, 1);
+  }
+
+  .text-primary-70 {
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  .text-primary-50 {
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  .text-primary-40 {
+    color: rgba(255, 255, 255, 0.4);
   }
 
   .glass-card {
-    @apply bg-card border border-border rounded-2xl overflow-hidden;
+    @apply bg-white/[0.03] border border-white/[0.06] rounded-2xl overflow-hidden;
+  }
+
+  .glass-card-hover {
+    @apply hover:bg-white/[0.06] hover:border-primary transition-all duration-300;
   }
 }
 
 @layer components {
   .nav-link {
-    @apply text-sm text-muted-foreground hover:text-foreground transition-colors duration-300;
+    @apply text-sm text-primary-50 hover:text-primary-100 transition-colors duration-300;
   }
 
   .section-label {
-    @apply text-xs font-medium tracking-[0.2em] uppercase text-muted-foreground;
+    @apply text-xs font-medium tracking-[0.2em] uppercase text-primary-40;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center gap-2 px-8 py-4 bg-primary text-primary-foreground font-medium rounded-full transition-all duration-300;
+    box-shadow: 0 4px 20px rgba(229, 185, 78, 0.3);
+  }
+
+  .btn-primary:hover {
+    box-shadow: 0 8px 32px rgba(229, 185, 78, 0.5);
+    transform: translateY(-2px);
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center gap-2 px-8 py-4 border border-white/10 text-foreground font-medium rounded-full hover:bg-white/[0.06] transition-all duration-300;
+  }
+
+  .container-custom {
+    @apply max-w-[1200px] mx-auto px-10;
   }
 }
