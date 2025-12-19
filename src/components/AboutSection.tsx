@@ -8,10 +8,10 @@ const features = [
   "Enterprise & government ready",
 ];
 
-const stats = [
-  { value: "50+", label: "Enterprises" },
-  { value: "500+", label: "Projects" },
-  { value: "99.9%", label: "Uptime" },
+const pillars = [
+  { icon: "🎯", label: "Mission-Driven" },
+  { icon: "⚡", label: "Agile Delivery" },
+  { icon: "🔒", label: "Secure & Reliable" },
 ];
 
 export const AboutSection = () => {
@@ -115,12 +115,12 @@ export const AboutSection = () => {
                 </div>
               </div>
 
-              {/* Stats Grid */}
+              {/* Pillars Grid */}
               <div className="relative grid grid-cols-3 gap-4">
-                {stats.map((stat, i) => (
+                {pillars.map((pillar, i) => (
                   <div key={i} className="text-center p-3 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10">
-                    <div className="font-playfair text-xl lg:text-2xl text-white">{stat.value}</div>
-                    <div className="text-[11px] text-white/50 mt-1">{stat.label}</div>
+                    <div className="text-2xl mb-1">{pillar.icon}</div>
+                    <div className="text-[11px] text-white/70">{pillar.label}</div>
                   </div>
                 ))}
               </div>
