@@ -1,10 +1,17 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import { CheckCircle2, ArrowRight } from "lucide-react";
 
 const features = [
   "Full lifecycle software services",
-  "Business-technology alignment",
+  "Business-technology alignment", 
   "Enterprise & government ready",
+];
+
+const stats = [
+  { value: "50+", label: "Enterprises" },
+  { value: "500+", label: "Projects" },
+  { value: "99.9%", label: "Uptime" },
 ];
 
 export const AboutSection = () => {
@@ -12,44 +19,11 @@ export const AboutSection = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="about" ref={ref} className="py-24 lg:py-32">
+    <section id="about" ref={ref} className="py-16 lg:py-24 bg-gradient-to-b from-cream to-white">
       <div className="container mx-auto px-6 lg:px-12">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Left - 3D Ring Visual */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={isInView ? { opacity: 1, scale: 1 } : {}}
-            transition={{ duration: 0.8 }}
-            className="relative flex items-center justify-center h-[400px]"
-          >
-            <div 
-              className="ring-container relative"
-              style={{ transformStyle: "preserve-3d", transform: "rotateX(60deg)" }}
-            >
-              {/* Outer Ring */}
-              <div className="absolute -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 w-[250px] h-[250px] ring-3d ring-3d-1" />
-              
-              {/* Middle Ring */}
-              <div className="absolute -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 w-[200px] h-[200px] ring-3d ring-3d-2" />
-              
-              {/* Inner Ring */}
-              <div className="absolute -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 w-[150px] h-[150px] ring-3d ring-3d-3" />
-            </div>
-
-            {/* Center Orb with W */}
-            <div 
-              className="absolute w-20 h-20 rounded-full flex items-center justify-center"
-              style={{
-                background: "linear-gradient(135deg, hsl(var(--plum)), hsl(var(--gold)))",
-                boxShadow: "0 20px 50px hsla(var(--plum), 0.4)",
-              }}
-            >
-              <span className="font-serif text-3xl text-white">W</span>
-            </div>
-          </motion.div>
-
-          {/* Right - Content */}
-          <div>
+        <div className="grid lg:grid-cols-5 gap-8 lg:gap-12 items-center">
+          {/* Left - Content (takes 3 cols) */}
+          <div className="lg:col-span-3 order-2 lg:order-1">
             <motion.span
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -63,17 +37,17 @@ export const AboutSection = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="mt-4 text-3xl md:text-4xl lg:text-5xl font-medium leading-tight text-navy"
+              className="mt-4 text-3xl md:text-4xl lg:text-[42px] font-medium leading-tight text-navy"
             >
               Your strategic{" "}
-              <span className="font-serif italic text-primary">technology partner.</span>
+              <span className="font-serif italic text-gradient">technology partner.</span>
             </motion.h2>
 
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="mt-6 text-base leading-relaxed text-navy/55 max-w-lg"
+              className="mt-5 text-base leading-relaxed text-navy/60 max-w-xl"
             >
               We deliver comprehensive, enterprise-grade IT solutions that empower 
               organizations to innovate, scale, and operate with agility. We specialize 
@@ -81,24 +55,91 @@ export const AboutSection = () => {
               initial design to continuous improvement.
             </motion.p>
 
-            {/* Feature List */}
-            <motion.ul
+            {/* Feature List - Horizontal on desktop */}
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="mt-8 space-y-4"
+              className="mt-6 flex flex-col sm:flex-row sm:flex-wrap gap-3 sm:gap-6"
             >
               {features.map((feature, index) => (
-                <li key={index} className="flex items-center gap-3">
-                  <span 
-                    className="w-2 h-2 rounded-full"
-                    style={{ background: "linear-gradient(135deg, hsl(var(--plum)), hsl(var(--gold)))" }}
-                  />
-                  <span className="text-[15px] text-navy/70">{feature}</span>
-                </li>
+                <div key={index} className="flex items-center gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-primary" strokeWidth={2} />
+                  <span className="text-sm text-navy/70">{feature}</span>
+                </div>
               ))}
-            </motion.ul>
+            </motion.div>
+
+            {/* CTA */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="mt-8"
+            >
+              <a 
+                href="#solutions" 
+                className="inline-flex items-center gap-2 text-primary font-medium hover:gap-3 transition-all duration-300"
+              >
+                <span>Explore our solutions</span>
+                <ArrowRight className="w-4 h-4" />
+              </a>
+            </motion.div>
           </div>
+
+          {/* Right - Visual Card (takes 2 cols) */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={isInView ? { opacity: 1, scale: 1 } : {}}
+            transition={{ duration: 0.8 }}
+            className="lg:col-span-2 order-1 lg:order-2"
+          >
+            <div className="relative p-8 rounded-3xl bg-gradient-to-br from-navy via-navy to-primary/40 overflow-hidden">
+              {/* Background decoration */}
+              <div className="absolute top-0 right-0 w-40 h-40 bg-primary/20 rounded-full blur-[60px]" />
+              <div className="absolute bottom-0 left-0 w-32 h-32 bg-gold/20 rounded-full blur-[50px]" />
+              
+              {/* Logo/Brand */}
+              <div className="relative flex items-center gap-4 mb-6">
+                <div 
+                  className="w-14 h-14 rounded-xl flex items-center justify-center"
+                  style={{
+                    background: "linear-gradient(135deg, hsl(var(--plum)), hsl(var(--gold)))",
+                  }}
+                >
+                  <span className="font-serif text-2xl text-white font-medium">W</span>
+                </div>
+                <div>
+                  <div className="font-sora font-semibold text-white text-lg">WebQ</div>
+                  <div className="text-white/50 text-sm">Technologies</div>
+                </div>
+              </div>
+
+              {/* Stats Grid */}
+              <div className="relative grid grid-cols-3 gap-4">
+                {stats.map((stat, i) => (
+                  <div key={i} className="text-center p-3 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10">
+                    <div className="font-playfair text-xl lg:text-2xl text-white">{stat.value}</div>
+                    <div className="text-[11px] text-white/50 mt-1">{stat.label}</div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Floating rings decoration */}
+              <div className="absolute -bottom-10 -right-10 w-32 h-32">
+                <motion.div
+                  className="absolute inset-0 rounded-full border border-white/10"
+                  animate={{ rotate: 360 }}
+                  transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                />
+                <motion.div
+                  className="absolute inset-4 rounded-full border border-white/20"
+                  animate={{ rotate: -360 }}
+                  transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
+                />
+              </div>
+            </div>
+          </motion.div>
         </div>
       </div>
     </section>
