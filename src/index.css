@@ -174,9 +174,8 @@
     position: absolute;
     width: 120px;
     height: 120px;
-    background: linear-gradient(135deg, hsla(var(--plum), 0.15), hsla(var(--gold), 0.08));
-    border: 1px solid hsla(var(--plum), 0.3);
-    backdrop-filter: blur(10px);
+    background: linear-gradient(135deg, hsla(var(--plum), 0.08), hsla(var(--gold), 0.04));
+    border: none;
   }
 
   .cube-face-front { transform: translateZ(60px); }
