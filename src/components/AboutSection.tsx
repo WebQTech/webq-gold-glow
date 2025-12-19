@@ -49,10 +49,7 @@ export const AboutSection = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="mt-5 text-base leading-relaxed text-navy/60 max-w-xl"
             >
-              We deliver comprehensive, enterprise-grade IT solutions that empower 
-              organizations to innovate, scale, and operate with agility. We specialize 
-              in the full lifecycle of software and infrastructure services — from 
-              initial design to continuous improvement.
+              WebQ Technologies is a full-stack enterprise technology company specializing in AI-powered solutions, cloud infrastructure, and custom software development. From ready-to-deploy products to tailored solutions, we help businesses across EdTech, FinTech, HealthTech, and beyond transform their operations, modernize legacy systems, and scale with confidence. Our team combines deep technical expertise with a commitment to delivering measurable results.
             </motion.p>
 
             {/* Feature List - Horizontal on desktop */}
