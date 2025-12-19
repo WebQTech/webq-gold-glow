@@ -35,7 +35,7 @@ export const Navbar = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <a href="#" className="font-sora text-lg font-bold text-navy">
-            WebQ
+            WebQTech
           </a>
 
           {/* Desktop Nav Links */}
