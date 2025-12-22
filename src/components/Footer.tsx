@@ -52,8 +52,8 @@ export const Footer = () => {
                 Get in touch
               </span>
               <p className="mt-1">
-                <a href="mailto:hello@webq.tech" className="text-sm text-primary hover:underline">
-                  hello@webq.tech
+                <a href="mailto:admin@webqtech.com" className="text-sm text-primary hover:underline">
+                  admin@webqtech.com
                 </a>
               </p>
             </div>
