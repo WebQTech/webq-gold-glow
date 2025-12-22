@@ -401,18 +401,6 @@ export const ProductsSection = () => {
         </div>
       </div>
 
-      {/* Background overlay when expanded */}
-      <AnimatePresence>
-        {expandedIndex !== null && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.2 }}
-            className="fixed inset-0 bg-navy/10 backdrop-blur-[2px] z-40 pointer-events-none"
-          />
-        )}
-      </AnimatePresence>
     </section>
   );
 };
