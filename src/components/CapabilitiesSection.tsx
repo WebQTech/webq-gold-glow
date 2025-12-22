@@ -251,20 +251,21 @@ export const CapabilitiesSection = () => {
               `,
             }}
           >
-            {/* Subtle scan line animation */}
+            {/* Holographic gold scan line animation */}
             <motion.div
-              className="absolute inset-0 pointer-events-none overflow-hidden rounded-2xl opacity-40"
+              className="absolute inset-0 pointer-events-none overflow-hidden rounded-2xl"
             >
               <motion.div
-                className="absolute left-0 right-0 h-px"
+                className="absolute left-0 right-0 h-[2px]"
                 style={{
-                  background: 'linear-gradient(90deg, transparent, rgba(139, 92, 246, 0.4), rgba(229, 185, 78, 0.3), transparent)',
+                  background: 'linear-gradient(90deg, transparent 5%, rgba(212, 168, 75, 0.8) 30%, rgba(229, 185, 78, 1) 50%, rgba(212, 168, 75, 0.8) 70%, transparent 95%)',
+                  boxShadow: '0 0 12px rgba(212, 168, 75, 0.6), 0 0 24px rgba(212, 168, 75, 0.3)',
                 }}
                 animate={{
-                  top: ['-1px', '100%'],
+                  top: ['-2px', '100%'],
                 }}
                 transition={{
-                  duration: 5,
+                  duration: 4,
                   repeat: Infinity,
                   ease: "linear",
                 }}
