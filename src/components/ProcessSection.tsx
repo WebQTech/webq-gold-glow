@@ -49,7 +49,7 @@ export const ProcessSection = () => {
             className="mt-4 text-3xl md:text-4xl lg:text-5xl font-medium leading-tight text-navy"
           >
             From idea to{" "}
-            <span className="font-serif italic text-primary">infrastructure.</span>
+            <span className="font-serif italic text-primary">product.</span>
           </motion.h2>
         </div>
 
