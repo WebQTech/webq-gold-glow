@@ -1,152 +1,413 @@
-import { motion } from "framer-motion";
-import { GraduationCap, CreditCard, Heart, ShoppingCart, Factory, Landmark, Truck, Bolt } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { useState, useRef, useEffect } from "react";
+import { 
+  GraduationCap, CreditCard, Heart, ShoppingCart, Factory, Landmark, 
+  Truck, Bolt, Brain, RefreshCw, Atom, X 
+} from "lucide-react";
 
 const industries = [
-  { icon: GraduationCap, title: 'EdTech', desc: 'Learning platforms & educational technology' },
-  { icon: CreditCard, title: 'FinTech', desc: 'Financial services & payment solutions' },
-  { icon: Heart, title: 'HealthTech', desc: 'Healthcare systems & medical technology' },
-  { icon: ShoppingCart, title: 'Retail & E-commerce', desc: 'Digital commerce & inventory systems' },
-  { icon: Factory, title: 'Manufacturing', desc: 'Industrial automation & IoT' },
-  { icon: Landmark, title: 'Government', desc: 'Public sector & civic technology' },
-  { icon: Truck, title: 'Logistics', desc: 'Transportation & distribution systems' },
-  { icon: Bolt, title: 'Energy', desc: 'Smart grid & resource management' },
+  { 
+    icon: GraduationCap, 
+    title: 'EduTech', 
+    desc: 'Learning platforms & educational technology',
+    stat: '500M+',
+    statLabel: 'Learners Impacted',
+    whatWeSolve: 'Student engagement, administrative inefficiencies, outdated learning systems',
+    howWeHelp: [
+      'Learning management systems (LMS) with AI-powered personalization',
+      'Virtual classroom and live collaboration platforms',
+      'Student performance tracking and predictive analytics',
+      'Automated grading and assessment tools',
+      'Mobile-first learning apps for accessibility'
+    ],
+    tags: ['K-12', 'Higher Education', 'Corporate Training', 'Online Course Platforms']
+  },
+  { 
+    icon: CreditCard, 
+    title: 'FinTech', 
+    desc: 'Financial services & payment solutions',
+    stat: '$2T+',
+    statLabel: 'Transactions Processed',
+    whatWeSolve: 'Slow transaction processing, fraud vulnerabilities, regulatory complexity',
+    howWeHelp: [
+      'Real-time payment processing and settlement systems',
+      'Fraud detection using machine learning models',
+      'KYC/AML compliance automation',
+      'Digital banking and mobile wallet platforms',
+      'Blockchain-based secure transaction ledgers'
+    ],
+    tags: ['Banks', 'Credit Unions', 'Payment Processors', 'Insurance', 'Lending Platforms']
+  },
+  { 
+    icon: Heart, 
+    title: 'HealthcareTech', 
+    desc: 'Healthcare systems & medical technology',
+    stat: '10M+',
+    statLabel: 'Patients Served',
+    whatWeSolve: 'Fragmented patient data, manual workflows, diagnostic delays',
+    howWeHelp: [
+      'Electronic health record (EHR) integration and optimization',
+      'Telemedicine platforms with secure video consultations',
+      'AI-assisted diagnostics and medical imaging analysis',
+      'Patient scheduling and workflow automation',
+      'HIPAA-compliant data storage and security'
+    ],
+    tags: ['Hospitals', 'Clinics', 'Telehealth Providers', 'Pharmaceutical', 'Medical Devices']
+  },
+  { 
+    icon: ShoppingCart, 
+    title: 'Retail & E-commerce', 
+    desc: 'Digital commerce & inventory systems',
+    stat: '99.9%',
+    statLabel: 'Uptime Guaranteed',
+    whatWeSolve: 'Inventory mismanagement, poor customer personalization, disconnected sales channels',
+    howWeHelp: [
+      'Omnichannel commerce platform integration',
+      'AI-powered product recommendations and search',
+      'Real-time inventory tracking and demand forecasting',
+      'Customer loyalty and personalization engines',
+      'Headless commerce architecture for flexibility'
+    ],
+    tags: ['Online Retailers', 'Brick-and-Mortar Stores', 'Marketplaces', 'D2C Brands']
+  },
+  { 
+    icon: Factory, 
+    title: 'Manufacturing', 
+    desc: 'Industrial automation & IoT',
+    stat: '40%',
+    statLabel: 'Efficiency Gains',
+    whatWeSolve: 'Production inefficiencies, equipment downtime, supply chain blind spots',
+    howWeHelp: [
+      'IoT-enabled predictive maintenance systems',
+      'Real-time production monitoring dashboards',
+      'Supply chain visibility and optimization',
+      'Quality control automation with computer vision',
+      'Digital twin simulations for process improvement'
+    ],
+    tags: ['Automotive', 'Electronics', 'Consumer Goods', 'Industrial Equipment']
+  },
+  { 
+    icon: Landmark, 
+    title: 'Government', 
+    desc: 'Public sector & civic technology',
+    stat: '50+',
+    statLabel: 'Agencies Served',
+    whatWeSolve: 'Legacy system limitations, citizen service delays, data silos across agencies',
+    howWeHelp: [
+      'Citizen portal and digital service platforms',
+      'Legacy system modernization to cloud',
+      'Interagency data sharing and integration',
+      'Document digitization and workflow automation',
+      'FedRAMP and compliance-ready infrastructure'
+    ],
+    tags: ['Federal Agencies', 'State & Local Government', 'Public Services']
+  },
+  { 
+    icon: Truck, 
+    title: 'Logistics & Supply Chain', 
+    desc: 'Transportation & distribution systems',
+    stat: '25%',
+    statLabel: 'Cost Reduction',
+    whatWeSolve: 'Shipment visibility gaps, route inefficiencies, warehouse bottlenecks',
+    howWeHelp: [
+      'End-to-end shipment tracking and visibility platforms',
+      'Route optimization using AI algorithms',
+      'Warehouse management system (WMS) implementation',
+      'Demand forecasting and inventory optimization',
+      'Carrier management and freight audit automation'
+    ],
+    tags: ['3PLs', 'Freight Forwarders', 'Warehousing', 'Last-Mile Delivery']
+  },
+  { 
+    icon: Bolt, 
+    title: 'Energy & Utilities', 
+    desc: 'Smart grid & resource management',
+    stat: '30%',
+    statLabel: 'Energy Savings',
+    whatWeSolve: 'Grid instability, energy waste, aging infrastructure',
+    howWeHelp: [
+      'Smart grid monitoring and management systems',
+      'Renewable energy integration and optimization',
+      'Predictive maintenance for utility infrastructure',
+      'Customer usage analytics and demand response',
+      'SCADA system modernization and security'
+    ],
+    tags: ['Electric Utilities', 'Oil & Gas', 'Renewable Energy', 'Water & Wastewater']
+  },
+  { 
+    icon: Brain, 
+    title: 'AI-Based Tech Domain', 
+    desc: 'AI strategy, implementation & optimization',
+    stat: '10x',
+    statLabel: 'Faster Insights',
+    isNew: true,
+    whatWeSolve: 'Lack of AI expertise, failed AI implementations, unstructured data chaos',
+    howWeHelp: [
+      'AI readiness assessment and strategy roadmap',
+      'Custom ML model development for your specific use case',
+      'Data preparation, labeling, and pipeline setup',
+      'AI model deployment, monitoring, and retraining',
+      'Responsible AI implementation with bias detection'
+    ],
+    tags: ['Chatbots', 'Recommendation Engines', 'Document Processing', 'Predictive Models', 'Computer Vision']
+  },
+  { 
+    icon: RefreshCw, 
+    title: 'Legacy to AI Transformation', 
+    desc: 'Modernize systems with AI integration',
+    stat: '60%',
+    statLabel: 'Process Automation',
+    isNew: true,
+    whatWeSolve: 'Outdated systems that can\'t support AI, data trapped in legacy databases, slow manual processes',
+    howWeHelp: [
+      'Legacy system audit and AI opportunity mapping',
+      'Data extraction and migration from legacy databases',
+      'API layer creation to connect old systems with AI tools',
+      'Gradual AI integration without full system replacement',
+      'Change management and team upskilling'
+    ],
+    tags: ['Assessment', 'Data Prep', 'Pilot AI Project', 'Scale', 'Optimize']
+  },
+  { 
+    icon: Atom, 
+    title: 'Quantum Adoption', 
+    desc: 'Quantum readiness & hybrid solutions',
+    stat: '1000x',
+    statLabel: 'Computational Power',
+    isNew: true,
+    whatWeSolve: 'Uncertainty about quantum readiness, complex optimization problems classical computers can\'t handle',
+    howWeHelp: [
+      'Quantum readiness assessment for your business',
+      'Identification of quantum-applicable use cases',
+      'Quantum algorithm prototyping and simulation',
+      'Hybrid quantum-classical solution design',
+      'Partnership facilitation with quantum hardware providers (IBM, Google, IonQ)'
+    ],
+    tags: ['Portfolio Optimization', 'Drug Discovery', 'Cryptography', 'Logistics Routing', 'Materials Science']
+  },
 ];
 
-// 3D Globe/Network Visual
-const Industries3DVisual = () => {
+const IndustryCard = ({ 
+  industry, 
+  index, 
+  isExpanded, 
+  onToggle 
+}: { 
+  industry: typeof industries[0]; 
+  index: number; 
+  isExpanded: boolean; 
+  onToggle: () => void;
+}) => {
+  const Icon = industry.icon;
+
   return (
-    <div className="relative w-full h-[450px] flex items-center justify-center">
-      {/* Central globe */}
-      <div className="relative w-48 h-48">
-        {/* Globe sphere */}
-        <motion.div
-          className="absolute inset-0 rounded-full bg-gradient-to-br from-navy via-primary/30 to-navy"
-          style={{
-            boxShadow: 'inset -20px -20px 60px rgba(0,0,0,0.3), inset 20px 20px 60px rgba(139,92,246,0.2), 0 0 80px rgba(139,92,246,0.3)',
-          }}
-          animate={{ rotateY: 360 }}
-          transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
-        >
-          {/* Latitude lines */}
-          {[20, 40, 60, 80, 100, 120, 140, 160].map((deg, i) => (
-            <div
-              key={i}
-              className="absolute inset-2 rounded-full border border-primary/20"
-              style={{ transform: `rotateX(${deg}deg)` }}
-            />
-          ))}
-          {/* Longitude lines */}
-          {[0, 30, 60, 90, 120, 150].map((deg, i) => (
-            <div
-              key={i}
-              className="absolute inset-2 rounded-full border border-gold/15"
-              style={{ transform: `rotateY(${deg}deg)` }}
-            />
-          ))}
-        </motion.div>
-
-        {/* Orbiting ring */}
-        <motion.div
-          className="absolute -inset-8 rounded-full border-2 border-dashed border-primary/30"
-          style={{ transform: 'rotateX(70deg)' }}
-          animate={{ rotate: 360 }}
-          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-        />
-      </div>
-
-      {/* Floating industry nodes around the globe */}
-      {industries.map((industry, i) => {
-        const angle = (i * 45 - 90) * (Math.PI / 180);
-        const radiusX = 180;
-        const radiusY = 160;
-        const x = Math.cos(angle) * radiusX;
-        const y = Math.sin(angle) * radiusY;
-        const Icon = industry.icon;
-        
-        return (
-          <motion.div
-            key={i}
-            className="absolute"
-            style={{ left: '50%', top: '50%' }}
-            initial={{ x, y, opacity: 0, scale: 0 }}
-            animate={{ 
-              x, 
-              y, 
-              opacity: 1,
-              scale: 1,
-            }}
-            transition={{ 
-              delay: 0.1 * i, 
-              duration: 0.6,
-              type: "spring",
-              stiffness: 100
-            }}
-          >
-            <motion.div
-              className="flex flex-col items-center"
-              animate={{ y: [0, -8, 0] }}
-              transition={{ duration: 3 + i * 0.3, repeat: Infinity, ease: "easeInOut" }}
-            >
-              <div className="w-12 h-12 rounded-full bg-white/10 backdrop-blur-sm shadow-lg shadow-primary/20 flex items-center justify-center border border-white/20">
-                <Icon className="w-5 h-5 text-white" strokeWidth={1.5} />
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ delay: 0.05 * index, duration: 0.5 }}
+      onClick={onToggle}
+      className="cursor-pointer"
+      data-industry-card
+    >
+      <motion.div
+        className={`relative rounded-2xl border transition-all duration-400 overflow-hidden ${
+          isExpanded 
+            ? 'bg-gradient-to-br from-cream to-white border-gold/40 shadow-2xl' 
+            : 'bg-white/5 backdrop-blur-sm border-white/10 hover:border-gold/30 hover:bg-white/10'
+        }`}
+        animate={{
+          scale: isExpanded ? 1.01 : 1,
+          y: isExpanded ? -4 : 0,
+        }}
+        whileHover={!isExpanded ? {
+          scale: 1.01,
+          boxShadow: '0 0 30px rgba(212, 168, 75, 0.15)',
+        } : {}}
+        transition={{ 
+          duration: 0.4, 
+          ease: [0.23, 1, 0.32, 1]
+        }}
+        style={{ 
+          zIndex: isExpanded ? 50 : 1,
+        }}
+      >
+        {/* Collapsed State */}
+        <div className={`p-5 ${isExpanded ? 'pb-0' : ''}`}>
+          <div className="flex items-start gap-4">
+            {/* Icon */}
+            <div className="relative">
+              <div className={`w-11 h-11 rounded-xl p-[1px] ${
+                isExpanded 
+                  ? 'bg-gradient-to-br from-gold to-primary' 
+                  : 'bg-gradient-to-br from-primary/30 to-gold/20'
+              }`}>
+                <div className={`w-full h-full rounded-xl flex items-center justify-center transition-colors duration-300 ${
+                  isExpanded 
+                    ? 'bg-white' 
+                    : 'bg-navy/80 group-hover:bg-primary/20'
+                }`}>
+                  <Icon className={`w-5 h-5 transition-colors duration-300 ${
+                    isExpanded ? 'text-gold' : 'text-white/80'
+                  }`} strokeWidth={1.5} />
+                </div>
               </div>
-              <span className="mt-2 text-xs font-sora font-medium text-white/70 whitespace-nowrap">
-                {industry.title}
-              </span>
+            </div>
+            
+            <div className="flex-1 min-w-0">
+              <div className="flex items-start justify-between gap-2">
+                <div>
+                  <div className="flex items-center gap-2">
+                    <h3 className={`font-sora text-base font-semibold transition-colors ${
+                      isExpanded ? 'text-navy' : 'text-white'
+                    }`}>
+                      {industry.title}
+                    </h3>
+                    {industry.isNew && (
+                      <span className="px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider bg-gold text-navy rounded-full">
+                        New
+                      </span>
+                    )}
+                  </div>
+                  <p className={`text-sm mt-1 transition-colors ${
+                    isExpanded ? 'text-navy/60' : 'text-white/45'
+                  }`}>
+                    {industry.desc}
+                  </p>
+                </div>
+
+                {/* Expand/Collapse indicator */}
+                <div className={`shrink-0 w-7 h-7 rounded-full flex items-center justify-center transition-all duration-300 ${
+                  isExpanded 
+                    ? 'bg-navy/10' 
+                    : 'bg-white/10'
+                }`}>
+                  <X className={`w-3.5 h-3.5 transition-all duration-300 ${
+                    isExpanded 
+                      ? 'text-navy rotate-0' 
+                      : 'text-white/60 rotate-45'
+                  }`} />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Expanded Content */}
+        <AnimatePresence>
+          {isExpanded && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.4, ease: [0.23, 1, 0.32, 1] }}
+              className="overflow-hidden"
+            >
+              <div className="px-5 pb-5 pt-4">
+                {/* Two Column Layout */}
+                <div className="flex gap-4">
+                  {/* Left Column - Stat */}
+                  <div className="w-[30%] flex flex-col items-center justify-center pr-4 border-r-2 border-gold/30">
+                    <motion.div
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{ delay: 0.1 }}
+                      className="text-center"
+                    >
+                      <span className="block text-3xl md:text-4xl font-bold text-gold">
+                        {industry.stat}
+                      </span>
+                      <span className="block text-xs text-navy/50 mt-1 font-medium">
+                        {industry.statLabel}
+                      </span>
+                    </motion.div>
+                  </div>
+
+                  {/* Right Column - Content */}
+                  <div className="w-[70%] space-y-4">
+                    {/* What we solve */}
+                    <motion.div
+                      initial={{ opacity: 0, x: 10 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: 0.15 }}
+                    >
+                      <p className="text-sm italic text-navy/50">
+                        <span className="font-medium text-navy/70">What we solve:</span> {industry.whatWeSolve}
+                      </p>
+                    </motion.div>
+
+                    {/* How we help */}
+                    <div>
+                      <span className="text-xs font-semibold text-navy/70 uppercase tracking-wider">
+                        How we help
+                      </span>
+                      <ul className="mt-2 space-y-1.5">
+                        {industry.howWeHelp.map((item, i) => (
+                          <motion.li
+                            key={i}
+                            initial={{ opacity: 0, x: 10 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ delay: 0.2 + i * 0.05 }}
+                            className="flex items-start gap-2 text-sm text-navy/70"
+                          >
+                            <span className="mt-1.5 w-1 h-1 rounded-full bg-gold shrink-0" />
+                            {item}
+                          </motion.li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    {/* Tags */}
+                    <motion.div
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 0.4 }}
+                      className="flex flex-wrap gap-1.5 pt-2"
+                    >
+                      {industry.tags.map((tag, i) => (
+                        <span 
+                          key={i}
+                          className="px-2.5 py-1 text-[10px] font-medium bg-navy/5 text-navy/60 rounded-full border border-navy/10"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </motion.div>
+                  </div>
+                </div>
+              </div>
             </motion.div>
-          </motion.div>
-        );
-      })}
-
-      {/* Connection lines from globe to nodes */}
-      <svg className="absolute inset-0 w-full h-full pointer-events-none">
-        <defs>
-          <linearGradient id="connectionGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="hsl(var(--primary))" stopOpacity="0.3" />
-            <stop offset="100%" stopColor="hsl(var(--gold))" stopOpacity="0.1" />
-          </linearGradient>
-        </defs>
-        {industries.map((_, i) => {
-          const angle = (i * 45 - 90) * (Math.PI / 180);
-          const x = Math.cos(angle) * 180 + 225;
-          const y = Math.sin(angle) * 160 + 225;
-          return (
-            <motion.line
-              key={i}
-              x1="225"
-              y1="225"
-              x2={x}
-              y2={y}
-              stroke="url(#connectionGradient)"
-              strokeWidth="1"
-              initial={{ pathLength: 0 }}
-              animate={{ pathLength: 1 }}
-              transition={{ delay: 0.15 * i, duration: 0.6 }}
-            />
-          );
-        })}
-      </svg>
-
-      {/* Pulsing rings */}
-      {[0, 1, 2].map((i) => (
-        <motion.div
-          key={i}
-          className="absolute w-48 h-48 rounded-full border border-primary/20"
-          initial={{ scale: 1, opacity: 0.3 }}
-          animate={{ scale: 2.5, opacity: 0 }}
-          transition={{ 
-            duration: 3, 
-            repeat: Infinity, 
-            delay: i * 1,
-            ease: "easeOut"
-          }}
-        />
-      ))}
-    </div>
+          )}
+        </AnimatePresence>
+      </motion.div>
+    </motion.div>
   );
 };
 
 export const IndustriesSection = () => {
+  const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
+  const sectionRef = useRef<HTMLDivElement>(null);
+
+  // Click outside to close
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (expandedIndex !== null && sectionRef.current) {
+        const target = event.target as Node;
+        const cards = sectionRef.current.querySelectorAll('[data-industry-card]');
+        let clickedOnCard = false;
+        cards.forEach(card => {
+          if (card.contains(target)) clickedOnCard = true;
+        });
+        if (!clickedOnCard) {
+          setExpandedIndex(null);
+        }
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, [expandedIndex]);
+
   return (
     <section id="industries" className="py-24 lg:py-32 bg-navy relative overflow-hidden">
       {/* Background accents */}
@@ -173,57 +434,17 @@ export const IndustriesSection = () => {
           </p>
         </motion.div>
 
-        {/* Two columns: Grid + 3D Visual */}
-        <div className="grid lg:grid-cols-2 gap-8 items-center">
-          {/* Industries Grid */}
-          <div className="grid sm:grid-cols-2 gap-4">
-            {industries.map((industry, i) => {
-              const Icon = industry.icon;
-              return (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.08 * i, duration: 0.5 }}
-                  className="group p-5 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-primary/40 hover:bg-white/10 transition-all duration-300 cursor-pointer"
-                >
-                  <div className="flex items-start gap-4">
-                    {/* Icon with animated gradient border */}
-                    <div className="relative">
-                      <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-primary/30 to-gold/20 p-[1px]">
-                        <div className="w-full h-full rounded-xl bg-navy/80 flex items-center justify-center group-hover:bg-primary/20 transition-colors duration-300">
-                          <Icon className="w-5 h-5 text-white/80 group-hover:text-white transition-colors duration-300" strokeWidth={1.5} />
-                        </div>
-                      </div>
-                      {/* Subtle glow on hover */}
-                      <div className="absolute inset-0 rounded-xl bg-primary/20 blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10" />
-                    </div>
-                    
-                    <div className="flex-1">
-                      <h3 className="font-sora text-base font-semibold text-white group-hover:text-primary-light transition-colors">
-                        {industry.title}
-                      </h3>
-                      <p className="font-inter text-sm text-white/45 mt-1 group-hover:text-white/60 transition-colors">
-                        {industry.desc}
-                      </p>
-                    </div>
-                  </div>
-                </motion.div>
-              );
-            })}
-          </div>
-
-          {/* 3D Visual */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="hidden lg:block"
-          >
-            <Industries3DVisual />
-          </motion.div>
+        {/* Industries Grid */}
+        <div ref={sectionRef} className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {industries.map((industry, index) => (
+            <IndustryCard
+              key={industry.title}
+              industry={industry}
+              index={index}
+              isExpanded={expandedIndex === index}
+              onToggle={() => setExpandedIndex(expandedIndex === index ? null : index)}
+            />
+          ))}
         </div>
       </div>
     </section>
