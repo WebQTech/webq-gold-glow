@@ -417,8 +417,9 @@ export const CapabilitiesSection = () => {
           transition={{ duration: 0.7 }}
           className="text-center mb-16 lg:mb-24"
         >
+          <span className="section-label">Core Capabilities</span>
           <h2 
-            className="font-playfair text-4xl md:text-5xl lg:text-6xl text-navy relative inline-block"
+            className="mt-4 font-playfair text-3xl md:text-4xl lg:text-5xl text-navy relative inline-block"
             style={{
               textShadow: `
                 1px 1px 0 rgba(15, 23, 42, 0.1),
@@ -431,7 +432,7 @@ export const CapabilitiesSection = () => {
             The WebQ <span className="italic text-primary">Difference.</span>
           </h2>
           <motion.p 
-            className="mt-4 text-lg font-medium tracking-wide"
+            className="mt-4 text-base font-medium tracking-wide"
             style={{
               color: '#D4A84B',
               textShadow: '0 0 20px rgba(212, 168, 75, 0.3)',
