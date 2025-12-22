@@ -59,8 +59,8 @@ export const CapabilitiesSection = () => {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="mt-4 text-3xl md:text-4xl lg:text-5xl font-medium leading-tight text-navy"
           >
-            What sets us{" "}
-            <span className="font-serif italic text-primary">apart.</span>
+            The WebQ{" "}
+            <span className="font-serif italic text-primary">Difference.</span>
           </motion.h2>
         </div>
 
