@@ -34,8 +34,8 @@ const DataParticle = ({ delay, startX, startY, color }: { delay: number; startX:
       animate={{
         opacity: [0, 1, 1, 0],
         scale: [0, 1, 1, 0.5],
-        x: [0, 150 - startX],
-        y: [0, 150 - startY],
+        x: [0, 200 - startX],
+        y: [0, 200 - startY],
       }}
       transition={{
         duration: 3 + Math.random() * 2,
@@ -49,10 +49,10 @@ const DataParticle = ({ delay, startX, startY, color }: { delay: number; startX:
 
 const DataStream = ({ angle, delay }: { angle: number; delay: number }) => {
   const radians = (angle * Math.PI) / 180;
-  const startX = 150 + Math.cos(radians) * 180;
-  const startY = 150 + Math.sin(radians) * 180;
-  const endX = 150 + Math.cos(radians) * 40;
-  const endY = 150 + Math.sin(radians) * 40;
+  const startX = 200 + Math.cos(radians) * 220;
+  const startY = 200 + Math.sin(radians) * 220;
+  const endX = 200 + Math.cos(radians) * 60;
+  const endY = 200 + Math.sin(radians) * 60;
 
   return (
     <motion.line
@@ -80,30 +80,30 @@ const DataStream = ({ angle, delay }: { angle: number; delay: number }) => {
 
 export const Hero3DVisual = () => {
   const particles = useMemo(() => {
-    return Array.from({ length: 16 }, (_, i) => ({
+    return Array.from({ length: 20 }, (_, i) => ({
       id: i,
-      startX: Math.random() * 300,
-      startY: Math.random() * 300,
+      startX: Math.random() * 400,
+      startY: Math.random() * 400,
       delay: Math.random() * 3,
       color: (Math.random() > 0.5 ? "plum" : "gold") as "plum" | "gold",
     }));
   }, []);
 
   const binaryPositions = [
-    { x: "5%", y: "10%", delay: 0 },
-    { x: "85%", y: "15%", delay: 1.5 },
-    { x: "10%", y: "80%", delay: 0.8 },
-    { x: "80%", y: "85%", delay: 2.2 },
-    { x: "2%", y: "45%", delay: 1.2 },
-    { x: "88%", y: "50%", delay: 0.5 },
-    { x: "40%", y: "5%", delay: 1.8 },
-    { x: "45%", y: "92%", delay: 2.5 },
+    { x: "3%", y: "8%", delay: 0 },
+    { x: "90%", y: "12%", delay: 1.5 },
+    { x: "8%", y: "85%", delay: 0.8 },
+    { x: "85%", y: "88%", delay: 2.2 },
+    { x: "0%", y: "45%", delay: 1.2 },
+    { x: "92%", y: "50%", delay: 0.5 },
+    { x: "42%", y: "3%", delay: 1.8 },
+    { x: "48%", y: "95%", delay: 2.5 },
   ];
 
   return (
-    <div className="relative w-full h-[500px] flex items-center justify-center overflow-hidden">
+    <div className="relative w-full h-[600px] flex items-center justify-center overflow-hidden">
       {/* SVG for data streams */}
-      <svg className="absolute w-[300px] h-[300px]" viewBox="0 0 300 300">
+      <svg className="absolute w-[400px] h-[400px]" viewBox="0 0 400 400">
         <defs>
           <linearGradient id="streamGradient" x1="0%" y1="0%" x2="100%" y2="100%">
             <stop offset="0%" stopColor="#8B5CF6" />
@@ -122,7 +122,7 @@ export const Hero3DVisual = () => {
 
       {/* Circular Rings */}
       <div className="absolute">
-        {[120, 160, 200, 240].map((size, i) => (
+        {[160, 220, 280, 340].map((size, i) => (
           <motion.div
             key={size}
             className="absolute rounded-full"
@@ -143,7 +143,7 @@ export const Hero3DVisual = () => {
       </div>
 
       {/* Data Particles */}
-      <div className="absolute w-[300px] h-[300px]">
+      <div className="absolute w-[400px] h-[400px]">
         {particles.map((p) => (
           <DataParticle
             key={p.id}
@@ -167,7 +167,7 @@ export const Hero3DVisual = () => {
         }}
       >
         <div
-          className="relative w-20 h-20"
+          className="relative w-28 h-28"
           style={{
             transformStyle: "preserve-3d",
             animation: "cubeRotate 15s linear infinite",
@@ -175,9 +175,9 @@ export const Hero3DVisual = () => {
         >
           {/* Front */}
           <div
-            className="absolute w-20 h-20 flex items-center justify-center text-white font-bold text-lg"
+            className="absolute w-28 h-28 flex items-center justify-center text-white font-bold text-xl"
             style={{
-              transform: "translateZ(40px)",
+              transform: "translateZ(56px)",
               background: "linear-gradient(135deg, rgba(139, 92, 246, 0.9), rgba(229, 185, 78, 0.9))",
               backdropFilter: "blur(8px)",
               border: "1px solid rgba(255, 255, 255, 0.2)",
@@ -188,9 +188,9 @@ export const Hero3DVisual = () => {
           </div>
           {/* Back */}
           <div
-            className="absolute w-20 h-20 flex items-center justify-center text-white font-bold text-lg"
+            className="absolute w-28 h-28 flex items-center justify-center text-white font-bold text-xl"
             style={{
-              transform: "rotateY(180deg) translateZ(40px)",
+              transform: "rotateY(180deg) translateZ(56px)",
               background: "linear-gradient(135deg, rgba(229, 185, 78, 0.9), rgba(139, 92, 246, 0.9))",
               backdropFilter: "blur(8px)",
               border: "1px solid rgba(255, 255, 255, 0.2)",
@@ -200,9 +200,9 @@ export const Hero3DVisual = () => {
           </div>
           {/* Right */}
           <div
-            className="absolute w-20 h-20 flex items-center justify-center text-white font-bold text-lg"
+            className="absolute w-28 h-28 flex items-center justify-center text-white font-bold text-xl"
             style={{
-              transform: "rotateY(90deg) translateZ(40px)",
+              transform: "rotateY(90deg) translateZ(56px)",
               background: "linear-gradient(135deg, rgba(139, 92, 246, 0.85), rgba(229, 185, 78, 0.85))",
               backdropFilter: "blur(8px)",
               border: "1px solid rgba(255, 255, 255, 0.2)",
@@ -212,9 +212,9 @@ export const Hero3DVisual = () => {
           </div>
           {/* Left */}
           <div
-            className="absolute w-20 h-20 flex items-center justify-center text-white font-bold text-lg"
+            className="absolute w-28 h-28 flex items-center justify-center text-white font-bold text-xl"
             style={{
-              transform: "rotateY(-90deg) translateZ(40px)",
+              transform: "rotateY(-90deg) translateZ(56px)",
               background: "linear-gradient(135deg, rgba(229, 185, 78, 0.85), rgba(139, 92, 246, 0.85))",
               backdropFilter: "blur(8px)",
               border: "1px solid rgba(255, 255, 255, 0.2)",
@@ -224,9 +224,9 @@ export const Hero3DVisual = () => {
           </div>
           {/* Top */}
           <div
-            className="absolute w-20 h-20"
+            className="absolute w-28 h-28"
             style={{
-              transform: "rotateX(90deg) translateZ(40px)",
+              transform: "rotateX(90deg) translateZ(56px)",
               background: "linear-gradient(135deg, rgba(139, 92, 246, 0.7), rgba(229, 185, 78, 0.7))",
               backdropFilter: "blur(8px)",
               border: "1px solid rgba(255, 255, 255, 0.2)",
@@ -234,9 +234,9 @@ export const Hero3DVisual = () => {
           />
           {/* Bottom */}
           <div
-            className="absolute w-20 h-20"
+            className="absolute w-28 h-28"
             style={{
-              transform: "rotateX(-90deg) translateZ(40px)",
+              transform: "rotateX(-90deg) translateZ(56px)",
               background: "linear-gradient(135deg, rgba(229, 185, 78, 0.7), rgba(139, 92, 246, 0.7))",
               backdropFilter: "blur(8px)",
               border: "1px solid rgba(255, 255, 255, 0.2)",
