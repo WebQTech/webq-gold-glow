@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Cloud, Brain, Shield, BarChart3, Zap, Link2 } from "lucide-react";
+import { Cloud, Brain, Shield, BarChart3, Zap, Link2, Package, Atom } from "lucide-react";
 
 const products = [
   { icon: Cloud, title: 'Cloud Platform', desc: 'Enterprise cloud infrastructure & management', gradient: 'from-blue-500 to-cyan-400' },
@@ -8,6 +8,8 @@ const products = [
   { icon: BarChart3, title: 'DataFlow', desc: 'Analytics & business intelligence', gradient: 'from-orange-500 to-amber-400' },
   { icon: Zap, title: 'DevOps Pro', desc: 'CI/CD & infrastructure automation', gradient: 'from-rose-500 to-pink-400' },
   { icon: Link2, title: 'IntegrateHub', desc: 'API management & system integration', gradient: 'from-indigo-500 to-purple-400' },
+  { icon: Package, title: 'Custom Product Development', desc: 'Tailored products built from the ground up to meet your unique business requirements and scale with your growth.', gradient: 'from-violet-500 to-fuchsia-400' },
+  { icon: Atom, title: 'Quantum Functions', desc: 'Next-generation quantum computing capabilities for complex problem-solving and advanced computational tasks.', gradient: 'from-cyan-500 to-blue-400' },
 ];
 
 // 3D Hexagonal Grid Visual
