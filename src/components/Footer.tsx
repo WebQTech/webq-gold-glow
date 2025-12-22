@@ -15,7 +15,7 @@ export const Footer = () => {
           {/* Brand Column */}
           <div className="lg:col-span-2">
             <a href="#" className="font-sora text-xl font-bold text-navy">
-              WebQ
+              WebQ Tech
             </a>
             <p className="mt-4 text-sm text-navy/50 max-w-xs leading-relaxed">
               Enterprise-grade IT solutions that empower organizations to innovate and scale.
