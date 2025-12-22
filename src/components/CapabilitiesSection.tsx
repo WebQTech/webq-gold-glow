@@ -24,25 +24,17 @@ const differentiators = [
   },
 ];
 
-// Globe node positions (where connection lines attach)
-const nodePositions = {
-  "top-left": { x: 25, y: 30 },
-  "top-right": { x: 75, y: 30 },
-  "bottom-left": { x: 25, y: 70 },
-  "bottom-right": { x: 75, y: 70 },
-};
-
-// 3D Globe Component
+// 3D Globe Component - Refined
 const Globe3D = () => {
   return (
-    <div className="relative w-[300px] h-[300px] md:w-[400px] md:h-[400px] lg:w-[500px] lg:h-[500px]">
+    <div className="relative w-[200px] h-[200px] md:w-[260px] md:h-[260px] lg:w-[300px] lg:h-[300px]">
       {/* Globe glow backdrop */}
       <div 
         className="absolute inset-0 rounded-full"
         style={{
-          background: 'radial-gradient(circle, rgba(139, 92, 246, 0.3) 0%, rgba(229, 185, 78, 0.2) 50%, transparent 70%)',
-          filter: 'blur(40px)',
-          transform: 'scale(1.3)',
+          background: 'radial-gradient(circle, rgba(139, 92, 246, 0.15) 0%, rgba(229, 185, 78, 0.1) 50%, transparent 70%)',
+          filter: 'blur(30px)',
+          transform: 'scale(1.2)',
         }}
       />
       
@@ -52,157 +44,88 @@ const Globe3D = () => {
         style={{
           background: 'radial-gradient(circle at 30% 30%, #C4B5FD, #8B5CF6 30%, #7C3AED 60%, #E5B94E 100%)',
           boxShadow: `
-            inset -30px -30px 60px rgba(0, 0, 0, 0.4),
-            inset 20px 20px 40px rgba(255, 255, 255, 0.1),
-            0 0 80px rgba(139, 92, 246, 0.5),
-            0 0 120px rgba(229, 185, 78, 0.3)
+            inset -20px -20px 40px rgba(0, 0, 0, 0.3),
+            inset 15px 15px 30px rgba(255, 255, 255, 0.15),
+            0 0 40px rgba(139, 92, 246, 0.25),
+            0 0 60px rgba(229, 185, 78, 0.15)
           `,
         }}
         animate={{ rotateY: 360 }}
         transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
       >
         {/* Globe grid lines (latitude) */}
-        {[20, 35, 50, 65, 80].map((top, i) => (
-          <motion.div
+        {[25, 40, 50, 60, 75].map((top, i) => (
+          <div
             key={`lat-${i}`}
-            className="absolute left-1/2 -translate-x-1/2 rounded-full border border-white/20"
+            className="absolute left-1/2 -translate-x-1/2 rounded-full border border-white/15"
             style={{
               top: `${top}%`,
-              width: `${100 - Math.abs(50 - top) * 1.6}%`,
+              width: `${100 - Math.abs(50 - top) * 1.8}%`,
               height: '1px',
-              transform: `translateX(-50%) rotateX(75deg)`,
             }}
           />
         ))}
         
         {/* Globe grid lines (longitude) */}
-        {[0, 30, 60, 90, 120, 150].map((rotation, i) => (
-          <motion.div
+        {[0, 45, 90, 135].map((rotation, i) => (
+          <div
             key={`long-${i}`}
-            className="absolute inset-4 rounded-full border border-white/15"
+            className="absolute inset-[15%] rounded-full border border-white/10"
             style={{
-              transform: `rotateY(${rotation}deg) rotateX(15deg)`,
+              transform: `rotateY(${rotation}deg)`,
             }}
           />
         ))}
       </motion.div>
       
-      {/* Glowing connection nodes */}
-      {Object.entries(nodePositions).map(([key, pos], i) => (
+      {/* Glowing connection nodes - smaller and subtler */}
+      {[
+        { x: 20, y: 35 },
+        { x: 80, y: 35 },
+        { x: 20, y: 65 },
+        { x: 80, y: 65 },
+      ].map((pos, i) => (
         <motion.div
-          key={key}
-          className="absolute w-4 h-4 rounded-full"
+          key={i}
+          className="absolute w-2.5 h-2.5 rounded-full"
           style={{
             left: `${pos.x}%`,
             top: `${pos.y}%`,
             background: 'radial-gradient(circle at 30% 30%, #FFF, #E5B94E 60%, #D4A84B)',
-            boxShadow: '0 0 20px rgba(229, 185, 78, 0.8), 0 0 40px rgba(229, 185, 78, 0.4)',
+            boxShadow: '0 0 12px rgba(229, 185, 78, 0.6)',
           }}
           animate={{
-            scale: [1, 1.3, 1],
-            boxShadow: [
-              '0 0 20px rgba(229, 185, 78, 0.8), 0 0 40px rgba(229, 185, 78, 0.4)',
-              '0 0 30px rgba(229, 185, 78, 1), 0 0 60px rgba(229, 185, 78, 0.6)',
-              '0 0 20px rgba(229, 185, 78, 0.8), 0 0 40px rgba(229, 185, 78, 0.4)',
-            ],
+            scale: [1, 1.2, 1],
+            opacity: [0.8, 1, 0.8],
           }}
-          transition={{ duration: 2, repeat: Infinity, delay: i * 0.3 }}
+          transition={{ duration: 2.5, repeat: Infinity, delay: i * 0.4 }}
         />
       ))}
       
       {/* Orbital ring 1 */}
       <motion.div
-        className="absolute inset-[-20%] rounded-full border-2 border-gold/30"
+        className="absolute inset-[-15%] rounded-full border border-gold/20"
         style={{
           transform: 'rotateX(70deg) rotateZ(20deg)',
-          boxShadow: '0 0 20px rgba(212, 168, 75, 0.3)',
         }}
         animate={{ rotateZ: [20, 380] }}
-        transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+        transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
       />
       
       {/* Orbital ring 2 */}
       <motion.div
-        className="absolute inset-[-30%] rounded-full border border-plum/20"
+        className="absolute inset-[-8%] rounded-full border border-plum/15"
         style={{
-          transform: 'rotateX(60deg) rotateZ(-30deg)',
-          boxShadow: '0 0 15px rgba(139, 92, 246, 0.2)',
+          transform: 'rotateX(65deg) rotateZ(-15deg)',
         }}
-        animate={{ rotateZ: [-30, -390] }}
-        transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
-      />
-      
-      {/* Orbital ring 3 */}
-      <motion.div
-        className="absolute inset-[-10%] rounded-full border border-white/10"
-        style={{
-          transform: 'rotateX(80deg) rotateZ(45deg)',
-        }}
-        animate={{ rotateZ: [45, 405] }}
-        transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
+        animate={{ rotateZ: [-15, -375] }}
+        transition={{ duration: 35, repeat: Infinity, ease: "linear" }}
       />
     </div>
   );
 };
 
-// Connection line from text to globe node
-const ConnectionLine = ({ position, index }: { position: string; index: number }) => {
-  const getLineStyle = () => {
-    switch (position) {
-      case 'top-left':
-        return { 
-          left: '100%', 
-          top: '50%',
-          width: '80px',
-          transform: 'rotate(25deg)',
-          transformOrigin: 'left center',
-        };
-      case 'top-right':
-        return { 
-          right: '100%', 
-          top: '50%',
-          width: '80px',
-          transform: 'rotate(-25deg)',
-          transformOrigin: 'right center',
-        };
-      case 'bottom-left':
-        return { 
-          left: '100%', 
-          top: '50%',
-          width: '80px',
-          transform: 'rotate(-25deg)',
-          transformOrigin: 'left center',
-        };
-      case 'bottom-right':
-        return { 
-          right: '100%', 
-          top: '50%',
-          width: '80px',
-          transform: 'rotate(25deg)',
-          transformOrigin: 'right center',
-        };
-      default:
-        return {};
-    }
-  };
-
-  return (
-    <motion.div
-      className="absolute h-[2px] hidden lg:block"
-      style={{
-        ...getLineStyle(),
-        background: 'linear-gradient(90deg, transparent, #E5B94E, transparent)',
-        boxShadow: '0 0 10px rgba(229, 185, 78, 0.5)',
-      }}
-      initial={{ scaleX: 0, opacity: 0 }}
-      whileInView={{ scaleX: 1, opacity: 1 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
-    />
-  );
-};
-
-// Text item component
+// Text item component - Cleaner styling
 const TextItem = ({ 
   item, 
   index 
@@ -213,32 +136,44 @@ const TextItem = ({
   const getPositionClasses = () => {
     switch (item.position) {
       case 'top-left':
-        return 'lg:absolute lg:left-0 lg:top-[10%] lg:text-right lg:max-w-[280px] xl:max-w-[320px]';
+        return 'lg:absolute lg:left-0 lg:top-[15%] lg:text-right lg:pr-8';
       case 'top-right':
-        return 'lg:absolute lg:right-0 lg:top-[10%] lg:text-left lg:max-w-[280px] xl:max-w-[320px]';
+        return 'lg:absolute lg:right-0 lg:top-[15%] lg:text-left lg:pl-8';
       case 'bottom-left':
-        return 'lg:absolute lg:left-0 lg:bottom-[10%] lg:text-right lg:max-w-[280px] xl:max-w-[320px]';
+        return 'lg:absolute lg:left-0 lg:bottom-[15%] lg:text-right lg:pr-8';
       case 'bottom-right':
-        return 'lg:absolute lg:right-0 lg:bottom-[10%] lg:text-left lg:max-w-[280px] xl:max-w-[320px]';
+        return 'lg:absolute lg:right-0 lg:bottom-[15%] lg:text-left lg:pl-8';
       default:
         return '';
     }
   };
 
+  const isLeft = item.position.includes('left');
+
   return (
     <motion.div
-      className={`relative ${getPositionClasses()}`}
-      initial={{ opacity: 0, y: 30 }}
+      className={`relative max-w-[240px] ${getPositionClasses()}`}
+      initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ duration: 0.7, delay: 0.2 + index * 0.15 }}
+      transition={{ duration: 0.6, delay: 0.15 + index * 0.1 }}
     >
-      <ConnectionLine position={item.position} index={index} />
+      {/* Subtle connection line */}
+      <motion.div
+        className={`absolute top-1/2 hidden lg:block h-[1px] w-12 ${isLeft ? 'left-full ml-2' : 'right-full mr-2'}`}
+        style={{
+          background: `linear-gradient(${isLeft ? '90deg' : '270deg'}, rgba(139, 92, 246, 0.3), transparent)`,
+        }}
+        initial={{ scaleX: 0, opacity: 0 }}
+        whileInView={{ scaleX: 1, opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
+      />
       
-      <h3 className="font-playfair font-bold text-white text-xl md:text-2xl mb-3">
+      <h3 className="font-sora font-semibold text-navy text-[16px] lg:text-[17px] mb-1.5 leading-snug">
         {item.title}
       </h3>
-      <p className="text-white/60 text-sm md:text-base leading-relaxed">
+      <p className="font-inter text-[13px] lg:text-[14px] text-[#64748B] leading-relaxed">
         {item.description}
       </p>
     </motion.div>
@@ -252,208 +187,124 @@ export const CapabilitiesSection = () => {
     offset: ["start end", "end start"]
   });
 
-  // Parallax for background elements
-  const bgY = useTransform(scrollYProgress, [0, 1], [50, -50]);
+  const bgY = useTransform(scrollYProgress, [0, 1], [30, -30]);
 
   return (
     <section 
       id="capabilities" 
       ref={ref} 
-      className="py-24 lg:py-32 relative overflow-hidden"
-      style={{ background: '#0F172A' }}
+      className="py-20 lg:py-24 relative overflow-hidden"
+      style={{ background: '#FFFCF7' }}
     >
-      {/* Background gradient mesh */}
+      {/* Subtle background accents */}
       <motion.div 
         className="absolute inset-0 pointer-events-none"
         style={{ y: bgY }}
       >
         <div 
-          className="absolute top-0 left-0 w-full h-full"
+          className="absolute top-0 left-0 w-full h-full opacity-50"
           style={{
             background: `
-              radial-gradient(ellipse at 20% 30%, rgba(139, 92, 246, 0.15) 0%, transparent 50%),
-              radial-gradient(ellipse at 80% 70%, rgba(229, 185, 78, 0.1) 0%, transparent 50%)
+              radial-gradient(ellipse at 30% 40%, rgba(139, 92, 246, 0.06) 0%, transparent 50%),
+              radial-gradient(ellipse at 70% 60%, rgba(229, 185, 78, 0.05) 0%, transparent 50%)
             `,
           }}
         />
-        
-        {/* Blurred 3D shapes in background */}
-        <motion.div
-          className="absolute w-32 h-32 rounded-full opacity-20"
-          style={{
-            top: '15%',
-            left: '10%',
-            background: 'radial-gradient(circle, #8B5CF6, transparent)',
-            filter: 'blur(40px)',
-          }}
-          animate={{ y: [0, -20, 0], scale: [1, 1.1, 1] }}
-          transition={{ duration: 8, repeat: Infinity }}
-        />
-        <motion.div
-          className="absolute w-24 h-24 rounded-full opacity-15"
-          style={{
-            bottom: '20%',
-            right: '15%',
-            background: 'radial-gradient(circle, #E5B94E, transparent)',
-            filter: 'blur(30px)',
-          }}
-          animate={{ y: [0, 15, 0], scale: [1, 0.9, 1] }}
-          transition={{ duration: 6, repeat: Infinity }}
-        />
-        
-        {/* 3D hexagon */}
-        <motion.div
-          className="absolute w-20 h-20 opacity-10"
-          style={{
-            top: '40%',
-            right: '8%',
-            background: 'linear-gradient(135deg, #8B5CF6, #E5B94E)',
-            clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)',
-            filter: 'blur(2px)',
-          }}
-          animate={{ rotate: [0, 360], y: [0, -10, 0] }}
-          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-        />
-        
-        {/* 3D ring */}
-        <motion.div
-          className="absolute w-28 h-28 opacity-20 rounded-full border-2 border-plum/40"
-          style={{
-            bottom: '30%',
-            left: '5%',
-            transform: 'rotateX(60deg)',
-            filter: 'blur(1px)',
-          }}
-          animate={{ rotateZ: [0, 360] }}
-          transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
-        />
       </motion.div>
 
-      {/* Holographic panel */}
       <div className="container mx-auto px-6 lg:px-12 relative z-10">
-        {/* Header */}
+        {/* Header - Clean and minimal */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
-          className="text-center mb-16 lg:mb-20"
+          transition={{ duration: 0.6 }}
+          className="text-center mb-12 lg:mb-16"
         >
-          <span className="section-label">Core Capabilities</span>
-          <h2 className="mt-4 font-playfair text-3xl md:text-4xl lg:text-5xl text-white relative inline-block">
-            The WebQ <span className="italic text-gold">Difference.</span>
+          <h2 className="font-playfair text-3xl md:text-4xl lg:text-[42px] text-navy">
+            The WebQ <span className="italic text-primary">Difference.</span>
           </h2>
-          <motion.p 
-            className="mt-4 text-base font-medium tracking-wide text-gold"
-            animate={{ 
-              textShadow: [
-                '0 0 20px rgba(212, 168, 75, 0.3)',
-                '0 0 30px rgba(212, 168, 75, 0.5)',
-                '0 0 20px rgba(212, 168, 75, 0.3)',
-              ]
-            }}
-            transition={{ duration: 3, repeat: Infinity }}
-          >
+          <p className="mt-3 text-sm font-medium tracking-wide text-gold">
             Trust. Expertise. Results.
-          </motion.p>
+          </p>
         </motion.div>
 
-        {/* Holographic glass panel with globe and text */}
+        {/* Holographic panel with globe */}
         <motion.div
-          className="relative mx-auto max-w-6xl"
-          initial={{ opacity: 0, scale: 0.95 }}
+          className="relative mx-auto max-w-4xl"
+          initial={{ opacity: 0, scale: 0.98 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          style={{
-            perspective: '1000px',
-          }}
+          transition={{ duration: 0.7 }}
         >
           {/* Glass panel */}
           <div
-            className="relative rounded-3xl p-8 lg:p-16"
+            className="relative rounded-2xl p-8 lg:p-12"
             style={{
-              background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(139, 92, 246, 0.08) 50%, rgba(229, 185, 78, 0.05) 100%)',
-              backdropFilter: 'blur(20px)',
-              border: '1px solid',
-              borderImage: 'linear-gradient(135deg, rgba(139, 92, 246, 0.4), rgba(229, 185, 78, 0.4)) 1',
+              background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.4) 100%)',
+              backdropFilter: 'blur(16px)',
+              border: '1px solid rgba(139, 92, 246, 0.15)',
               boxShadow: `
-                0 0 40px rgba(139, 92, 246, 0.15),
-                0 0 80px rgba(229, 185, 78, 0.1),
-                inset 0 1px 0 rgba(255, 255, 255, 0.1)
+                0 4px 24px rgba(139, 92, 246, 0.08),
+                0 1px 3px rgba(0, 0, 0, 0.04),
+                inset 0 1px 0 rgba(255, 255, 255, 0.8)
               `,
-              transform: 'rotateX(2deg)',
             }}
           >
-            {/* Scan line animation */}
+            {/* Subtle scan line animation */}
             <motion.div
-              className="absolute inset-0 pointer-events-none overflow-hidden rounded-3xl"
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
+              className="absolute inset-0 pointer-events-none overflow-hidden rounded-2xl opacity-40"
             >
               <motion.div
-                className="absolute left-0 right-0 h-[2px]"
+                className="absolute left-0 right-0 h-px"
                 style={{
-                  background: 'linear-gradient(90deg, transparent, rgba(139, 92, 246, 0.5), rgba(229, 185, 78, 0.5), transparent)',
-                  boxShadow: '0 0 20px rgba(139, 92, 246, 0.3)',
+                  background: 'linear-gradient(90deg, transparent, rgba(139, 92, 246, 0.4), rgba(229, 185, 78, 0.3), transparent)',
                 }}
                 animate={{
-                  top: ['-2px', '100%'],
+                  top: ['-1px', '100%'],
                 }}
                 transition={{
-                  duration: 4,
+                  duration: 5,
                   repeat: Infinity,
                   ease: "linear",
                 }}
               />
             </motion.div>
 
-            {/* Gradient border glow */}
-            <div 
-              className="absolute inset-0 rounded-3xl pointer-events-none"
-              style={{
-                background: 'linear-gradient(135deg, rgba(139, 92, 246, 0.1), transparent, rgba(229, 185, 78, 0.1))',
-                opacity: 0.5,
-              }}
-            />
-
-            {/* Content layout */}
+            {/* Content */}
             <div className="relative z-10">
               {/* Mobile: stacked layout */}
-              <div className="lg:hidden space-y-8">
+              <div className="lg:hidden space-y-6">
+                <div className="flex justify-center py-6">
+                  <Globe3D />
+                </div>
                 {differentiators.map((item, index) => (
                   <motion.div
                     key={item.title}
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={{ opacity: 0, y: 15 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    className="text-center"
+                    transition={{ duration: 0.5, delay: index * 0.08 }}
+                    className="text-center px-4"
                   >
-                    <h3 className="font-playfair font-bold text-white text-xl mb-2">
+                    <h3 className="font-sora font-semibold text-navy text-[15px] mb-1">
                       {item.title}
                     </h3>
-                    <p className="text-white/60 text-sm leading-relaxed">
+                    <p className="font-inter text-[13px] text-[#64748B] leading-relaxed">
                       {item.description}
                     </p>
                   </motion.div>
                 ))}
-                
-                {/* Mobile globe */}
-                <div className="flex justify-center py-8">
-                  <Globe3D />
-                </div>
               </div>
 
               {/* Desktop: globe center with floating text */}
-              <div className="hidden lg:block relative min-h-[600px]">
+              <div className="hidden lg:block relative min-h-[420px]">
                 {/* Center globe */}
                 <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
                   <Globe3D />
                 </div>
 
-                {/* Floating text items around the globe */}
+                {/* Text items around the globe */}
                 {differentiators.map((item, index) => (
                   <TextItem key={item.title} item={item} index={index} />
                 ))}
