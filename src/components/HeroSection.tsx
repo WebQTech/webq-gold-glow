@@ -18,7 +18,7 @@ export const HeroSection = () => {
             >
               <span className="w-2 h-2 rounded-full bg-gradient-primary animate-pulse-glow" />
               <span className="text-[11px] font-medium uppercase tracking-[0.15em] text-primary">
-                AI-Powered Enterprise Technology
+                Powered by Web3, Quantum & Artificial Intelligence
               </span>
             </motion.div>
 
