@@ -258,7 +258,7 @@ const IndustryCard = ({
               <div className="flex items-start justify-between gap-2">
                 <div>
                   <div className="flex items-center gap-2">
-                    <h3 className="font-sora text-base font-semibold text-navy">
+                    <h3 className="font-sora text-base md:text-lg font-semibold text-navy">
                       {industry.title}
                     </h3>
                     {industry.isNew && (
@@ -267,7 +267,7 @@ const IndustryCard = ({
                       </span>
                     )}
                   </div>
-                  <p className="text-sm mt-0.5 text-navy/60 line-clamp-1">
+                  <p className="text-sm md:text-base mt-0.5 text-navy/60 line-clamp-1">
                     {industry.desc}
                   </p>
                 </div>

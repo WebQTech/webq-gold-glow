@@ -180,12 +180,12 @@ const ServiceCard = ({
           <div className="flex-1 min-w-0">
             <div className="flex items-start justify-between gap-3">
               <div>
-                <h3 className={`text-sm md:text-base font-semibold transition-colors ${
+                <h3 className={`text-base md:text-lg font-semibold transition-colors ${
                   isExpanded ? 'text-primary' : 'text-navy'
                 }`}>
                   {service.name}
                 </h3>
-                <p className="text-xs text-navy/50 mt-0.5 line-clamp-1">
+                <p className="text-sm text-navy/50 mt-0.5 line-clamp-1">
                   {service.description}
                 </p>
               </div>
