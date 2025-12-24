@@ -135,7 +135,7 @@ const ServiceCard = ({
       data-service-card
     >
       <motion.div
-        className={`relative p-5 md:p-6 rounded-2xl border transition-all duration-300 ${
+        className={`relative p-4 rounded-xl border transition-all duration-300 ${
           isExpanded 
             ? 'bg-white border-primary/30 shadow-xl shadow-primary/10' 
             : 'bg-white/50 border-navy/5 hover:bg-white hover:border-primary/20 hover:shadow-lg'
@@ -159,47 +159,47 @@ const ServiceCard = ({
         }}
       >
         {/* Main row content */}
-        <div className="flex items-start gap-4 md:gap-6">
+        <div className="flex items-start gap-3">
           {/* Number & Icon */}
-          <div className="flex flex-col items-center gap-2">
-            <span className={`text-xs font-medium transition-colors ${
+          <div className="flex flex-col items-center gap-1">
+            <span className={`text-[10px] font-medium transition-colors ${
               isExpanded ? 'text-primary' : 'text-navy/30'
             }`}>
               {service.number}
             </span>
-            <div className={`w-10 h-10 rounded-xl flex items-center justify-center transition-all duration-300 ${
+            <div className={`w-8 h-8 rounded-lg flex items-center justify-center transition-all duration-300 ${
               isExpanded 
                 ? 'bg-primary text-white' 
                 : 'bg-primary/10 text-primary'
             }`}>
-              <Icon className="w-5 h-5" strokeWidth={1.5} />
+              <Icon className="w-4 h-4" strokeWidth={1.5} />
             </div>
           </div>
 
           {/* Content */}
           <div className="flex-1 min-w-0">
-            <div className="flex items-start justify-between gap-4">
+            <div className="flex items-start justify-between gap-3">
               <div>
-                <h3 className={`text-base md:text-lg font-semibold transition-colors ${
+                <h3 className={`text-sm md:text-base font-semibold transition-colors ${
                   isExpanded ? 'text-primary' : 'text-navy'
                 }`}>
                   {service.name}
                 </h3>
-                <p className="text-sm text-navy/50 mt-1">
+                <p className="text-xs text-navy/50 mt-0.5 line-clamp-1">
                   {service.description}
                 </p>
               </div>
 
               {/* Expand/Collapse indicator */}
-              <div className={`shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 ${
+              <div className={`shrink-0 w-6 h-6 rounded-full flex items-center justify-center transition-all duration-300 ${
                 isExpanded 
                   ? 'bg-navy/10 rotate-0' 
                   : 'bg-primary/10'
               }`}>
                 {isExpanded ? (
-                  <X className="w-4 h-4 text-navy" />
+                  <X className="w-3 h-3 text-navy" />
                 ) : (
-                  <ArrowRight className="w-4 h-4 text-primary" />
+                  <ArrowRight className="w-3 h-3 text-primary" />
                 )}
               </div>
             </div>
@@ -267,10 +267,10 @@ export const ServicesSection = () => {
   }, [expandedIndex]);
 
   return (
-    <section id="solutions" ref={ref} className="py-16 lg:py-20">
+    <section id="solutions" ref={ref} className="py-10 lg:py-12">
       <div className="container mx-auto px-6 lg:px-12">
         {/* Header */}
-        <div className="max-w-2xl mb-16">
+        <div className="max-w-2xl mb-8">
           <motion.span
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -284,7 +284,7 @@ export const ServicesSection = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="mt-4 text-3xl md:text-4xl lg:text-5xl font-medium leading-tight text-navy"
+            className="mt-3 text-2xl md:text-3xl lg:text-4xl font-medium leading-tight text-navy"
           >
             Full-stack enterprise{" "}
             <span className="font-serif italic text-primary">technology.</span>
@@ -294,14 +294,14 @@ export const ServicesSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="mt-4 text-base text-navy/55"
+            className="mt-3 text-sm text-navy/55"
           >
             End-to-end services from development to deployment, monitoring, and continuous improvement.
           </motion.p>
         </div>
 
         {/* Services Grid */}
-        <div ref={sectionRef} className="grid md:grid-cols-2 gap-4">
+        <div ref={sectionRef} className="grid md:grid-cols-2 gap-3">
           {services.map((service, index) => (
             <ServiceCard
               key={service.number}
