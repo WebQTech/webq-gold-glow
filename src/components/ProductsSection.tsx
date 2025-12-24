@@ -276,12 +276,12 @@ const ProductCard = ({ product, index, isExpanded, onToggle }: {
           )}
         </div>
         
-        <h3 className={`font-sora text-base font-semibold transition-colors relative ${
+        <h3 className={`font-sora text-base md:text-lg font-semibold transition-colors relative ${
           isExpanded ? 'text-primary' : 'text-navy group-hover:text-primary'
         }`}>
           {product.title}
         </h3>
-        <p className="font-inter text-xs text-navy/55 mt-1 relative line-clamp-2">
+        <p className="font-inter text-sm text-navy/55 mt-1 relative line-clamp-2">
           {product.desc}
         </p>
         
