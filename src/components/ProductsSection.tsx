@@ -353,7 +353,7 @@ export const ProductsSection = () => {
   }, [expandedIndex]);
 
   return (
-    <section id="products" className="py-24 lg:py-32 bg-section-light">
+    <section id="products" className="py-16 lg:py-20 bg-section-light">
       <div className="container mx-auto px-6 lg:px-12">
         {/* Header */}
         <motion.div
