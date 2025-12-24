@@ -1,5 +1,15 @@
 import { motion } from "framer-motion";
-import { useMemo } from "react";
+import { useMemo, useState, useEffect } from "react";
+
+// Cycling text content for each face
+const faceContent = [
+  { terms: ["Web3", "Blockchain", "dApps", "Smart Contracts"] },
+  { terms: ["Quantum", "Qubits", "Optimization", "Simulation"] },
+  { terms: ["AI/ML", "Neural Nets", "Deep Learning", "NLP"] },
+  { terms: ["Cloud", "AWS", "Azure", "GCP"] },
+  { terms: ["DevOps", "CI/CD", "Kubernetes", "Terraform"] },
+  { terms: ["LLMs", "GPT", "Claude", "Agents"] },
+];
 
 const BinaryText = ({ delay, x, y }: { delay: number; x: string; y: string }) => {
   const binary = useMemo(() => {
@@ -78,6 +88,48 @@ const DataStream = ({ angle, delay }: { angle: number; delay: number }) => {
   );
 };
 
+// Cycling text component for cube faces
+const CyclingText = ({ terms, isActive }: { terms: string[]; isActive?: boolean }) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % terms.length);
+    }, 2500);
+    return () => clearInterval(interval);
+  }, [terms.length]);
+
+  return (
+    <div className="relative w-full h-full flex items-center justify-center overflow-hidden">
+      {terms.map((term, index) => (
+        <motion.span
+          key={term}
+          className="absolute text-white font-semibold text-sm md:text-base tracking-wide text-center px-2"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{
+            opacity: currentIndex === index ? 1 : 0,
+            y: currentIndex === index ? 0 : (currentIndex > index ? -20 : 20),
+          }}
+          transition={{ duration: 0.4, ease: "easeOut" }}
+        >
+          {term}
+        </motion.span>
+      ))}
+      {/* Active face glow indicator */}
+      {isActive && (
+        <motion.div
+          className="absolute inset-0 rounded-sm"
+          style={{
+            boxShadow: "inset 0 0 20px rgba(255, 255, 255, 0.15)",
+          }}
+          animate={{ opacity: [0.5, 1, 0.5] }}
+          transition={{ duration: 2, repeat: Infinity }}
+        />
+      )}
+    </div>
+  );
+};
+
 export const Hero3DVisual = () => {
   const particles = useMemo(() => {
     return Array.from({ length: 20 }, (_, i) => ({
@@ -99,6 +151,16 @@ export const Hero3DVisual = () => {
     { x: "42%", y: "3%", delay: 1.8 },
     { x: "48%", y: "95%", delay: 2.5 },
   ];
+
+  // Glassmorphism face style
+  const faceStyle = (gradientAngle: number, isMain?: boolean) => ({
+    background: `linear-gradient(${gradientAngle}deg, rgba(139, 92, 246, 0.85), rgba(229, 185, 78, 0.85))`,
+    backdropFilter: "blur(12px)",
+    border: "1px solid rgba(255, 255, 255, 0.25)",
+    boxShadow: isMain 
+      ? "0 8px 32px rgba(139, 92, 246, 0.4), inset 0 0 30px rgba(255, 255, 255, 0.1)"
+      : "0 4px 16px rgba(139, 92, 246, 0.2), inset 0 0 20px rgba(255, 255, 255, 0.05)",
+  });
 
   return (
     <div className="relative w-full h-[600px] flex items-center justify-center overflow-hidden">
@@ -155,93 +217,100 @@ export const Hero3DVisual = () => {
         ))}
       </div>
 
-      {/* 3D Rotating Cube */}
+      {/* 3D Rotating Cube with Cycling Text */}
       <motion.div
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1, delay: 0.3 }}
         className="relative z-10"
         style={{ 
-          perspective: "600px",
+          perspective: "800px",
           perspectiveOrigin: "center center",
         }}
       >
+        {/* Outer glow */}
+        <motion.div
+          className="absolute inset-0 -m-8 rounded-full"
+          style={{
+            background: "radial-gradient(circle, rgba(139, 92, 246, 0.3) 0%, transparent 70%)",
+            filter: "blur(20px)",
+          }}
+          animate={{ opacity: [0.5, 0.8, 0.5], scale: [0.95, 1.05, 0.95] }}
+          transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+        />
+        
         <div
-          className="relative w-28 h-28"
+          className="relative w-32 h-32 md:w-36 md:h-36"
           style={{
             transformStyle: "preserve-3d",
-            animation: "cubeRotate 15s linear infinite",
+            animation: "cubeRotate 18s linear infinite",
           }}
         >
-          {/* Front */}
+          {/* Front - Web3 */}
           <div
-            className="absolute w-28 h-28 flex items-center justify-center text-white font-bold text-xl"
+            className="absolute w-32 h-32 md:w-36 md:h-36 rounded-sm"
             style={{
-              transform: "translateZ(56px)",
-              background: "linear-gradient(135deg, rgba(139, 92, 246, 0.9), rgba(229, 185, 78, 0.9))",
-              backdropFilter: "blur(8px)",
-              border: "1px solid rgba(255, 255, 255, 0.2)",
-              boxShadow: "0 8px 32px rgba(139, 92, 246, 0.3)",
+              transform: "translateZ(64px)",
+              ...faceStyle(135, true),
             }}
           >
-            DATA
+            <CyclingText terms={faceContent[0].terms} isActive />
           </div>
-          {/* Back */}
+          
+          {/* Back - Quantum */}
           <div
-            className="absolute w-28 h-28 flex items-center justify-center text-white font-bold text-xl"
+            className="absolute w-32 h-32 md:w-36 md:h-36 rounded-sm"
             style={{
-              transform: "rotateY(180deg) translateZ(56px)",
-              background: "linear-gradient(135deg, rgba(229, 185, 78, 0.9), rgba(139, 92, 246, 0.9))",
-              backdropFilter: "blur(8px)",
-              border: "1px solid rgba(255, 255, 255, 0.2)",
+              transform: "rotateY(180deg) translateZ(64px)",
+              ...faceStyle(315),
             }}
           >
-            FLOW
+            <CyclingText terms={faceContent[1].terms} />
           </div>
-          {/* Right */}
+          
+          {/* Right - AI/ML */}
           <div
-            className="absolute w-28 h-28 flex items-center justify-center text-white font-bold text-xl"
+            className="absolute w-32 h-32 md:w-36 md:h-36 rounded-sm"
             style={{
-              transform: "rotateY(90deg) translateZ(56px)",
-              background: "linear-gradient(135deg, rgba(139, 92, 246, 0.85), rgba(229, 185, 78, 0.85))",
-              backdropFilter: "blur(8px)",
-              border: "1px solid rgba(255, 255, 255, 0.2)",
+              transform: "rotateY(90deg) translateZ(64px)",
+              ...faceStyle(45),
             }}
           >
-            AI
+            <CyclingText terms={faceContent[2].terms} />
           </div>
-          {/* Left */}
+          
+          {/* Left - Cloud */}
           <div
-            className="absolute w-28 h-28 flex items-center justify-center text-white font-bold text-xl"
+            className="absolute w-32 h-32 md:w-36 md:h-36 rounded-sm"
             style={{
-              transform: "rotateY(-90deg) translateZ(56px)",
-              background: "linear-gradient(135deg, rgba(229, 185, 78, 0.85), rgba(139, 92, 246, 0.85))",
-              backdropFilter: "blur(8px)",
-              border: "1px solid rgba(255, 255, 255, 0.2)",
+              transform: "rotateY(-90deg) translateZ(64px)",
+              ...faceStyle(225),
             }}
           >
-            ML
+            <CyclingText terms={faceContent[3].terms} />
           </div>
-          {/* Top */}
+          
+          {/* Top - DevOps */}
           <div
-            className="absolute w-28 h-28"
+            className="absolute w-32 h-32 md:w-36 md:h-36 rounded-sm"
             style={{
-              transform: "rotateX(90deg) translateZ(56px)",
-              background: "linear-gradient(135deg, rgba(139, 92, 246, 0.7), rgba(229, 185, 78, 0.7))",
-              backdropFilter: "blur(8px)",
-              border: "1px solid rgba(255, 255, 255, 0.2)",
+              transform: "rotateX(90deg) translateZ(64px)",
+              ...faceStyle(90),
             }}
-          />
-          {/* Bottom */}
+          >
+            <CyclingText terms={faceContent[4].terms} />
+          </div>
+          
+          {/* Bottom - LLMs */}
           <div
-            className="absolute w-28 h-28"
+            className="absolute w-32 h-32 md:w-36 md:h-36 rounded-sm"
             style={{
-              transform: "rotateX(-90deg) translateZ(56px)",
-              background: "linear-gradient(135deg, rgba(229, 185, 78, 0.7), rgba(139, 92, 246, 0.7))",
-              backdropFilter: "blur(8px)",
-              border: "1px solid rgba(255, 255, 255, 0.2)",
+              transform: "rotateX(-90deg) translateZ(64px)",
+              ...faceStyle(270),
             }}
-          />
+          >
+            <CyclingText terms={faceContent[5].terms} />
+          </div>
         </div>
       </motion.div>
 
