@@ -104,7 +104,7 @@ const products = [
 // 3D Hexagonal Grid Visual
 const Products3DVisual = () => {
   return (
-    <div className="relative w-full h-[400px] flex items-center justify-center">
+    <div className="relative w-full h-[280px] flex items-center justify-center">
       {/* Central rotating hexagon */}
       <motion.div
         className="absolute w-32 h-32"
@@ -221,7 +221,7 @@ const ProductCard = ({ product, index, isExpanded, onToggle }: {
       style={{ perspective: '1000px' }}
     >
       <motion.div
-        className={`group relative p-6 rounded-2xl bg-white/80 backdrop-blur-sm border transition-colors duration-300 overflow-hidden ${
+        className={`group relative p-4 rounded-xl bg-white/80 backdrop-blur-sm border transition-colors duration-300 overflow-hidden ${
           isExpanded 
             ? 'border-primary/50 shadow-2xl shadow-primary/20' 
             : 'border-navy/5 hover:border-primary/30'
@@ -249,12 +249,12 @@ const ProductCard = ({ product, index, isExpanded, onToggle }: {
         <div className={`absolute inset-0 bg-gradient-to-br ${product.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-300 ${isExpanded ? 'opacity-5' : ''}`} />
         
         {/* Icon container with gradient border */}
-        <div className="relative mb-4 flex items-start justify-between">
-          <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${product.gradient} p-[1px]`}>
-            <div className={`w-full h-full rounded-xl flex items-center justify-center transition-colors duration-300 ${
+        <div className="relative mb-2 flex items-start justify-between">
+          <div className={`w-10 h-10 rounded-lg bg-gradient-to-br ${product.gradient} p-[1px]`}>
+            <div className={`w-full h-full rounded-lg flex items-center justify-center transition-colors duration-300 ${
               isExpanded ? 'bg-transparent' : 'bg-white group-hover:bg-transparent'
             }`}>
-              <Icon className={`w-5 h-5 transition-colors duration-300 ${
+              <Icon className={`w-4 h-4 transition-colors duration-300 ${
                 isExpanded ? 'text-white' : 'text-navy group-hover:text-white'
               }`} strokeWidth={2} />
             </div>
@@ -276,12 +276,12 @@ const ProductCard = ({ product, index, isExpanded, onToggle }: {
           )}
         </div>
         
-        <h3 className={`font-sora text-lg font-semibold transition-colors relative ${
+        <h3 className={`font-sora text-base font-semibold transition-colors relative ${
           isExpanded ? 'text-primary' : 'text-navy group-hover:text-primary'
         }`}>
           {product.title}
         </h3>
-        <p className="font-inter text-sm text-navy/55 mt-2 relative">
+        <p className="font-inter text-xs text-navy/55 mt-1 relative line-clamp-2">
           {product.desc}
         </p>
         
@@ -317,7 +317,7 @@ const ProductCard = ({ product, index, isExpanded, onToggle }: {
         
         {/* Arrow indicator - only show when not expanded */}
         {!isExpanded && (
-          <div className="absolute bottom-6 right-6 w-8 h-8 rounded-full bg-navy/5 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 translate-x-2 group-hover:translate-x-0">
+          <div className="absolute bottom-4 right-4 w-6 h-6 rounded-full bg-navy/5 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 translate-x-2 group-hover:translate-x-0">
             <svg className="w-4 h-4 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
@@ -353,7 +353,7 @@ export const ProductsSection = () => {
   }, [expandedIndex]);
 
   return (
-    <section id="products" className="py-16 lg:py-20 bg-section-light">
+    <section id="products" className="py-10 lg:py-12 bg-section-light">
       <div className="container mx-auto px-6 lg:px-12">
         {/* Header */}
         <motion.div
@@ -361,19 +361,19 @@ export const ProductsSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-8"
         >
           <span className="section-label">Products</span>
-          <h2 className="font-playfair text-4xl lg:text-5xl text-navy mt-4">
+          <h2 className="font-playfair text-3xl lg:text-4xl text-navy mt-3">
             Enterprise-ready <span className="italic text-gradient">solutions.</span>
           </h2>
-          <p className="font-inter text-navy/60 mt-4 max-w-xl mx-auto">
+          <p className="font-inter text-sm text-navy/60 mt-3 max-w-xl mx-auto">
             Ready-to-deploy products built for scale, security, and seamless integration.
           </p>
         </motion.div>
 
         {/* Two columns: 3D Visual + Products Grid */}
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
+        <div className="grid lg:grid-cols-2 gap-8 items-start">
           {/* 3D Visual */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -386,7 +386,7 @@ export const ProductsSection = () => {
           </motion.div>
 
           {/* Products Grid */}
-          <div ref={sectionRef} className="order-1 lg:order-2 grid sm:grid-cols-2 gap-4">
+          <div ref={sectionRef} className="order-1 lg:order-2 grid sm:grid-cols-2 gap-3">
             {products.map((product, i) => (
               <div key={i} data-product-card>
                 <ProductCard
