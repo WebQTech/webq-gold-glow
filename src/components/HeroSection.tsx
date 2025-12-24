@@ -4,7 +4,7 @@ import { Hero3DVisual } from "./Hero3DVisual";
 
 export const HeroSection = () => {
   return (
-    <section className="relative min-h-screen pt-24 lg:pt-28 pb-20 overflow-hidden">
+    <section className="relative min-h-screen pt-24 lg:pt-28 pb-12 overflow-hidden">
       <div className="container mx-auto px-6 lg:px-12">
         <div className="grid lg:grid-cols-[55%_45%] gap-12 lg:gap-8 items-center">
           {/* Left Column - Content */}
