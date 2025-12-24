@@ -211,7 +211,7 @@ const IndustryCard = ({
       data-industry-card
     >
       <motion.div
-        className={`relative rounded-2xl border transition-all duration-400 overflow-hidden ${
+        className={`relative rounded-xl border transition-all duration-400 overflow-hidden ${
           isExpanded 
             ? 'bg-gradient-to-br from-cream to-white border-gold/40 shadow-2xl' 
             : 'bg-white border-navy/10 hover:border-gold/30 hover:shadow-lg'
@@ -233,21 +233,21 @@ const IndustryCard = ({
         }}
       >
         {/* Collapsed State */}
-        <div className={`p-5 ${isExpanded ? 'pb-0' : ''}`}>
-          <div className="flex items-start gap-4">
+        <div className={`p-3 ${isExpanded ? 'pb-0' : ''}`}>
+          <div className="flex items-start gap-3">
             {/* Icon */}
             <div className="relative">
-              <div className={`w-11 h-11 rounded-xl p-[1px] ${
+              <div className={`w-9 h-9 rounded-lg p-[1px] ${
                 isExpanded 
                   ? 'bg-gradient-to-br from-gold to-primary' 
                   : 'bg-gradient-to-br from-primary/30 to-gold/20'
               }`}>
-                <div className={`w-full h-full rounded-xl flex items-center justify-center transition-colors duration-300 ${
+                <div className={`w-full h-full rounded-lg flex items-center justify-center transition-colors duration-300 ${
                   isExpanded 
                     ? 'bg-white' 
                     : 'bg-cream'
                 }`}>
-                  <Icon className={`w-5 h-5 transition-colors duration-300 ${
+                  <Icon className={`w-4 h-4 transition-colors duration-300 ${
                     isExpanded ? 'text-gold' : 'text-primary'
                   }`} strokeWidth={1.5} />
                 </div>
@@ -267,18 +267,18 @@ const IndustryCard = ({
                       </span>
                     )}
                   </div>
-                  <p className="text-sm mt-1 text-navy/60">
+                  <p className="text-sm mt-0.5 text-navy/60 line-clamp-1">
                     {industry.desc}
                   </p>
                 </div>
 
                 {/* Expand/Collapse indicator */}
-                <div className={`shrink-0 w-7 h-7 rounded-full flex items-center justify-center transition-all duration-300 ${
+                <div className={`shrink-0 w-6 h-6 rounded-full flex items-center justify-center transition-all duration-300 ${
                   isExpanded 
                     ? 'bg-navy/10' 
                     : 'bg-navy/5'
                 }`}>
-                  <X className={`w-3.5 h-3.5 transition-all duration-300 ${
+                  <X className={`w-3 h-3 transition-all duration-300 ${
                     isExpanded 
                       ? 'text-navy rotate-0' 
                       : 'text-navy/40 rotate-45'
@@ -405,7 +405,7 @@ export const IndustriesSection = () => {
   }, [expandedIndex]);
 
   return (
-    <section id="industries" className="py-16 lg:py-20 bg-cream relative overflow-hidden">
+    <section id="industries" className="py-8 lg:py-10 bg-cream relative overflow-hidden">
       {/* Background accents */}
       <div className="absolute inset-0 opacity-30">
         <div className="absolute top-0 right-0 w-96 h-96 bg-primary/10 rounded-full blur-[100px]" />
@@ -419,19 +419,19 @@ export const IndustriesSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-6"
         >
           <span className="section-label">Industries</span>
-          <h2 className="font-playfair text-4xl lg:text-5xl text-navy mt-4">
+          <h2 className="font-playfair text-4xl lg:text-5xl text-navy mt-3">
             Trusted across <span className="italic text-gradient">sectors.</span>
           </h2>
-          <p className="font-inter text-navy/60 mt-4 max-w-xl mx-auto">
+          <p className="font-inter text-navy/60 mt-3 max-w-xl mx-auto">
             From startups to enterprises, we deliver solutions tailored to your industry's unique challenges.
           </p>
         </motion.div>
 
         {/* Industries Grid */}
-        <div ref={sectionRef} className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div ref={sectionRef} className="grid md:grid-cols-2 lg:grid-cols-3 gap-3">
           {industries.map((industry, index) => (
             <IndustryCard
               key={industry.title}
