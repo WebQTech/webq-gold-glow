@@ -267,7 +267,7 @@ const IndustryCard = ({
                       </span>
                     )}
                   </div>
-                  <p className="text-sm md:text-base mt-0.5 text-navy/60 line-clamp-1">
+                  <p className="text-sm md:text-base mt-0.5 text-navy/60">
                     {industry.desc}
                   </p>
                 </div>
