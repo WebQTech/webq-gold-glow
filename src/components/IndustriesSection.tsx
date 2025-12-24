@@ -214,7 +214,7 @@ const IndustryCard = ({
         className={`relative rounded-2xl border transition-all duration-400 overflow-hidden ${
           isExpanded 
             ? 'bg-gradient-to-br from-cream to-white border-gold/40 shadow-2xl' 
-            : 'bg-white/5 backdrop-blur-sm border-white/10 hover:border-gold/30 hover:bg-white/10'
+            : 'bg-white border-navy/10 hover:border-gold/30 hover:shadow-lg'
         }`}
         animate={{
           scale: isExpanded ? 1.01 : 1,
@@ -245,10 +245,10 @@ const IndustryCard = ({
                 <div className={`w-full h-full rounded-xl flex items-center justify-center transition-colors duration-300 ${
                   isExpanded 
                     ? 'bg-white' 
-                    : 'bg-navy/80 group-hover:bg-primary/20'
+                    : 'bg-cream'
                 }`}>
                   <Icon className={`w-5 h-5 transition-colors duration-300 ${
-                    isExpanded ? 'text-gold' : 'text-white/80'
+                    isExpanded ? 'text-gold' : 'text-primary'
                   }`} strokeWidth={1.5} />
                 </div>
               </div>
@@ -258,9 +258,7 @@ const IndustryCard = ({
               <div className="flex items-start justify-between gap-2">
                 <div>
                   <div className="flex items-center gap-2">
-                    <h3 className={`font-sora text-base font-semibold transition-colors ${
-                      isExpanded ? 'text-navy' : 'text-white'
-                    }`}>
+                    <h3 className="font-sora text-base font-semibold text-navy">
                       {industry.title}
                     </h3>
                     {industry.isNew && (
@@ -269,9 +267,7 @@ const IndustryCard = ({
                       </span>
                     )}
                   </div>
-                  <p className={`text-sm mt-1 transition-colors ${
-                    isExpanded ? 'text-navy/60' : 'text-white/45'
-                  }`}>
+                  <p className="text-sm mt-1 text-navy/60">
                     {industry.desc}
                   </p>
                 </div>
@@ -280,12 +276,12 @@ const IndustryCard = ({
                 <div className={`shrink-0 w-7 h-7 rounded-full flex items-center justify-center transition-all duration-300 ${
                   isExpanded 
                     ? 'bg-navy/10' 
-                    : 'bg-white/10'
+                    : 'bg-navy/5'
                 }`}>
                   <X className={`w-3.5 h-3.5 transition-all duration-300 ${
                     isExpanded 
                       ? 'text-navy rotate-0' 
-                      : 'text-white/60 rotate-45'
+                      : 'text-navy/40 rotate-45'
                   }`} />
                 </div>
               </div>
@@ -409,11 +405,11 @@ export const IndustriesSection = () => {
   }, [expandedIndex]);
 
   return (
-    <section id="industries" className="py-24 lg:py-32 bg-navy relative overflow-hidden">
+    <section id="industries" className="py-20 lg:py-24 bg-cream relative overflow-hidden">
       {/* Background accents */}
       <div className="absolute inset-0 opacity-30">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-primary/20 rounded-full blur-[100px]" />
-        <div className="absolute bottom-0 left-0 w-80 h-80 bg-gold/15 rounded-full blur-[80px]" />
+        <div className="absolute top-0 right-0 w-96 h-96 bg-primary/10 rounded-full blur-[100px]" />
+        <div className="absolute bottom-0 left-0 w-80 h-80 bg-gold/10 rounded-full blur-[80px]" />
       </div>
 
       <div className="container mx-auto px-6 lg:px-12 relative z-10">
@@ -426,10 +422,10 @@ export const IndustriesSection = () => {
           className="text-center mb-16"
         >
           <span className="section-label">Industries</span>
-          <h2 className="font-playfair text-4xl lg:text-5xl text-white mt-4">
+          <h2 className="font-playfair text-4xl lg:text-5xl text-navy mt-4">
             Trusted across <span className="italic text-gradient">sectors.</span>
           </h2>
-          <p className="font-inter text-white/50 mt-4 max-w-xl mx-auto">
+          <p className="font-inter text-navy/60 mt-4 max-w-xl mx-auto">
             From startups to enterprises, we deliver solutions tailored to your industry's unique challenges.
           </p>
         </motion.div>
