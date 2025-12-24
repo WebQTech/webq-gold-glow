@@ -7,134 +7,6 @@ import {
 
 const industries = [
   { 
-    icon: GraduationCap, 
-    title: 'EduTech', 
-    desc: 'Learning platforms & educational technology',
-    stat: '500M+',
-    statLabel: 'Learners Impacted',
-    whatWeSolve: 'Student engagement, administrative inefficiencies, outdated learning systems',
-    howWeHelp: [
-      'Learning management systems (LMS) with AI-powered personalization',
-      'Virtual classroom and live collaboration platforms',
-      'Student performance tracking and predictive analytics',
-      'Automated grading and assessment tools',
-      'Mobile-first learning apps for accessibility'
-    ],
-    tags: ['K-12', 'Higher Education', 'Corporate Training', 'Online Course Platforms']
-  },
-  { 
-    icon: CreditCard, 
-    title: 'FinTech', 
-    desc: 'Financial services & payment solutions',
-    stat: '$2T+',
-    statLabel: 'Transactions Processed',
-    whatWeSolve: 'Slow transaction processing, fraud vulnerabilities, regulatory complexity',
-    howWeHelp: [
-      'Real-time payment processing and settlement systems',
-      'Fraud detection using machine learning models',
-      'KYC/AML compliance automation',
-      'Digital banking and mobile wallet platforms',
-      'Blockchain-based secure transaction ledgers'
-    ],
-    tags: ['Banks', 'Credit Unions', 'Payment Processors', 'Insurance', 'Lending Platforms']
-  },
-  { 
-    icon: Heart, 
-    title: 'HealthcareTech', 
-    desc: 'Healthcare systems & medical technology',
-    stat: '10M+',
-    statLabel: 'Patients Served',
-    whatWeSolve: 'Fragmented patient data, manual workflows, diagnostic delays',
-    howWeHelp: [
-      'Electronic health record (EHR) integration and optimization',
-      'Telemedicine platforms with secure video consultations',
-      'AI-assisted diagnostics and medical imaging analysis',
-      'Patient scheduling and workflow automation',
-      'HIPAA-compliant data storage and security'
-    ],
-    tags: ['Hospitals', 'Clinics', 'Telehealth Providers', 'Pharmaceutical', 'Medical Devices']
-  },
-  { 
-    icon: ShoppingCart, 
-    title: 'Retail & E-commerce', 
-    desc: 'Digital commerce & inventory systems',
-    stat: '99.9%',
-    statLabel: 'Uptime Guaranteed',
-    whatWeSolve: 'Inventory mismanagement, poor customer personalization, disconnected sales channels',
-    howWeHelp: [
-      'Omnichannel commerce platform integration',
-      'AI-powered product recommendations and search',
-      'Real-time inventory tracking and demand forecasting',
-      'Customer loyalty and personalization engines',
-      'Headless commerce architecture for flexibility'
-    ],
-    tags: ['Online Retailers', 'Brick-and-Mortar Stores', 'Marketplaces', 'D2C Brands']
-  },
-  { 
-    icon: Factory, 
-    title: 'Manufacturing', 
-    desc: 'Industrial automation & IoT',
-    stat: '40%',
-    statLabel: 'Efficiency Gains',
-    whatWeSolve: 'Production inefficiencies, equipment downtime, supply chain blind spots',
-    howWeHelp: [
-      'IoT-enabled predictive maintenance systems',
-      'Real-time production monitoring dashboards',
-      'Supply chain visibility and optimization',
-      'Quality control automation with computer vision',
-      'Digital twin simulations for process improvement'
-    ],
-    tags: ['Automotive', 'Electronics', 'Consumer Goods', 'Industrial Equipment']
-  },
-  { 
-    icon: Landmark, 
-    title: 'Government', 
-    desc: 'Public sector & civic technology',
-    stat: '50+',
-    statLabel: 'Agencies Served',
-    whatWeSolve: 'Legacy system limitations, citizen service delays, data silos across agencies',
-    howWeHelp: [
-      'Citizen portal and digital service platforms',
-      'Legacy system modernization to cloud',
-      'Interagency data sharing and integration',
-      'Document digitization and workflow automation',
-      'FedRAMP and compliance-ready infrastructure'
-    ],
-    tags: ['Federal Agencies', 'State & Local Government', 'Public Services']
-  },
-  { 
-    icon: Truck, 
-    title: 'Logistics & Supply Chain', 
-    desc: 'Transportation & distribution systems',
-    stat: '25%',
-    statLabel: 'Cost Reduction',
-    whatWeSolve: 'Shipment visibility gaps, route inefficiencies, warehouse bottlenecks',
-    howWeHelp: [
-      'End-to-end shipment tracking and visibility platforms',
-      'Route optimization using AI algorithms',
-      'Warehouse management system (WMS) implementation',
-      'Demand forecasting and inventory optimization',
-      'Carrier management and freight audit automation'
-    ],
-    tags: ['3PLs', 'Freight Forwarders', 'Warehousing', 'Last-Mile Delivery']
-  },
-  { 
-    icon: Bolt, 
-    title: 'Energy & Utilities', 
-    desc: 'Smart grid & resource management',
-    stat: '30%',
-    statLabel: 'Energy Savings',
-    whatWeSolve: 'Grid instability, energy waste, aging infrastructure',
-    howWeHelp: [
-      'Smart grid monitoring and management systems',
-      'Renewable energy integration and optimization',
-      'Predictive maintenance for utility infrastructure',
-      'Customer usage analytics and demand response',
-      'SCADA system modernization and security'
-    ],
-    tags: ['Electric Utilities', 'Oil & Gas', 'Renewable Energy', 'Water & Wastewater']
-  },
-  { 
     icon: Brain, 
     title: 'AI-Based Tech Domain', 
     desc: 'AI strategy, implementation & optimization',
@@ -169,21 +41,149 @@ const industries = [
     tags: ['Assessment', 'Data Prep', 'Pilot AI Project', 'Scale', 'Optimize']
   },
   { 
-    icon: Atom, 
-    title: 'Quantum Adoption', 
-    desc: 'Quantum readiness & hybrid solutions',
-    stat: '1000x',
-    statLabel: 'Computational Power',
-    isNew: true,
-    whatWeSolve: 'Uncertainty about quantum readiness, complex optimization problems classical computers can\'t handle',
+    icon: CreditCard, 
+    title: 'Banks & FinTech', 
+    desc: 'Financial services & payment solutions',
+    stat: '$2T+',
+    statLabel: 'Transactions Processed',
+    whatWeSolve: 'Slow transaction processing, fraud vulnerabilities, regulatory complexity',
     howWeHelp: [
-      'Quantum readiness assessment for your business',
-      'Identification of quantum-applicable use cases',
-      'Quantum algorithm prototyping and simulation',
-      'Hybrid quantum-classical solution design',
-      'Partnership facilitation with quantum hardware providers (IBM, Google, IonQ)'
+      'Real-time payment processing and settlement systems',
+      'Fraud detection using machine learning models',
+      'KYC/AML compliance automation',
+      'Digital banking and mobile wallet platforms',
+      'Blockchain-based secure transaction ledgers'
     ],
-    tags: ['Portfolio Optimization', 'Drug Discovery', 'Cryptography', 'Logistics Routing', 'Materials Science']
+    tags: ['Banks', 'Credit Unions', 'Payment Processors', 'Insurance', 'Lending Platforms']
+  },
+  { 
+    icon: Landmark, 
+    title: 'Capital Markets', 
+    desc: 'Investment platforms & trading systems',
+    stat: '$500B+',
+    statLabel: 'Assets Managed',
+    isNew: true,
+    whatWeSolve: 'Complex trading operations, regulatory compliance burden, fragmented financial data',
+    howWeHelp: [
+      'Investment platform development for real estate and private equity',
+      'Trading systems with real-time market data integration',
+      'Asset management and portfolio tracking solutions',
+      'Regulatory compliance and reporting automation',
+      'High-performance systems for securities operations'
+    ],
+    tags: ['Real Estate', 'Private Equity', 'Asset Management', 'Securities Firms', 'Trading Platforms']
+  },
+  { 
+    icon: Heart, 
+    title: 'Healthcare Tech', 
+    desc: 'Healthcare systems & medical technology',
+    stat: '10M+',
+    statLabel: 'Patients Served',
+    whatWeSolve: 'Fragmented patient data, manual workflows, diagnostic delays',
+    howWeHelp: [
+      'Electronic health record (EHR) integration and optimization',
+      'Telemedicine platforms with secure video consultations',
+      'AI-assisted diagnostics and medical imaging analysis',
+      'Patient scheduling and workflow automation',
+      'HIPAA-compliant data storage and security'
+    ],
+    tags: ['Hospitals', 'Clinics', 'Telehealth Providers', 'Pharmaceutical', 'Medical Devices']
+  },
+  { 
+    icon: Landmark, 
+    title: 'Government', 
+    desc: 'Public sector & civic technology',
+    stat: '50+',
+    statLabel: 'Agencies Served',
+    whatWeSolve: 'Legacy system limitations, citizen service delays, data silos across agencies',
+    howWeHelp: [
+      'Citizen portal and digital service platforms',
+      'Legacy system modernization to cloud',
+      'Interagency data sharing and integration',
+      'Document digitization and workflow automation',
+      'FedRAMP and compliance-ready infrastructure'
+    ],
+    tags: ['Federal Agencies', 'State & Local Government', 'Public Services']
+  },
+  { 
+    icon: GraduationCap, 
+    title: 'EduTech', 
+    desc: 'Learning platforms & educational technology',
+    stat: '500M+',
+    statLabel: 'Learners Impacted',
+    whatWeSolve: 'Student engagement, administrative inefficiencies, outdated learning systems',
+    howWeHelp: [
+      'Learning management systems (LMS) with AI-powered personalization',
+      'Virtual classroom and live collaboration platforms',
+      'Student performance tracking and predictive analytics',
+      'Automated grading and assessment tools',
+      'Mobile-first learning apps for accessibility'
+    ],
+    tags: ['K-12', 'Higher Education', 'Corporate Training', 'Online Course Platforms']
+  },
+  { 
+    icon: ShoppingCart, 
+    title: 'Retail & E-commerce', 
+    desc: 'Digital commerce & inventory systems',
+    stat: '99.9%',
+    statLabel: 'Uptime Guaranteed',
+    whatWeSolve: 'Inventory mismanagement, poor customer personalization, disconnected sales channels',
+    howWeHelp: [
+      'Omnichannel commerce platform integration',
+      'AI-powered product recommendations and search',
+      'Real-time inventory tracking and demand forecasting',
+      'Customer loyalty and personalization engines',
+      'Headless commerce architecture for flexibility'
+    ],
+    tags: ['Online Retailers', 'Brick-and-Mortar Stores', 'Marketplaces', 'D2C Brands']
+  },
+  { 
+    icon: Factory, 
+    title: 'Manufacturing', 
+    desc: 'Industrial automation & IoT',
+    stat: '40%',
+    statLabel: 'Efficiency Gains',
+    whatWeSolve: 'Production inefficiencies, equipment downtime, supply chain blind spots',
+    howWeHelp: [
+      'IoT-enabled predictive maintenance systems',
+      'Real-time production monitoring dashboards',
+      'Supply chain visibility and optimization',
+      'Quality control automation with computer vision',
+      'Digital twin simulations for process improvement'
+    ],
+    tags: ['Automotive', 'Electronics', 'Consumer Goods', 'Industrial Equipment']
+  },
+  { 
+    icon: Truck, 
+    title: 'Logistics & Supply Chain', 
+    desc: 'Transportation & distribution systems',
+    stat: '25%',
+    statLabel: 'Cost Reduction',
+    whatWeSolve: 'Shipment visibility gaps, route inefficiencies, warehouse bottlenecks',
+    howWeHelp: [
+      'End-to-end shipment tracking and visibility platforms',
+      'Route optimization using AI algorithms',
+      'Warehouse management system (WMS) implementation',
+      'Demand forecasting and inventory optimization',
+      'Carrier management and freight audit automation'
+    ],
+    tags: ['3PLs', 'Freight Forwarders', 'Warehousing', 'Last-Mile Delivery']
+  },
+  { 
+    icon: Bolt, 
+    title: 'Energy & Utilities', 
+    desc: 'Smart grid & resource management',
+    stat: '30%',
+    statLabel: 'Energy Savings',
+    whatWeSolve: 'Grid instability, energy waste, aging infrastructure',
+    howWeHelp: [
+      'Smart grid monitoring and management systems',
+      'Renewable energy integration and optimization',
+      'Predictive maintenance for utility infrastructure',
+      'Customer usage analytics and demand response',
+      'SCADA system modernization and security'
+    ],
+    tags: ['Electric Utilities', 'Oil & Gas', 'Renewable Energy', 'Water & Wastewater']
   },
 ];
 
