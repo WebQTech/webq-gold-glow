@@ -2,9 +2,20 @@ import { motion } from "framer-motion";
 import { Linkedin, Twitter } from "lucide-react";
 
 const footerLinks = {
-  Solutions: ["Custom Software", "Cloud Migration", "AI Solutions", "Cybersecurity"],
-  Company: ["About", "Process", "Careers", "Contact"],
-  Resources: ["Case Studies", "Blog", "Documentation"],
+  Solutions: [
+    { label: "Custom Software", href: "#services" },
+    { label: "Cloud Migration", href: "#services" },
+    { label: "AI Solutions", href: "#services" },
+    { label: "Cybersecurity", href: "#services" },
+  ],
+  Company: [
+    { label: "About", href: "#about" },
+    { label: "Process", href: "#process" },
+    { label: "Contact", href: "#contact" },
+  ],
+  Resources: [
+    { label: "Case Studies", href: "#about" },
+  ],
 };
 
 export const Footer = () => {
@@ -30,12 +41,12 @@ export const Footer = () => {
               </h4>
               <ul className="space-y-3">
                 {links.map((link) => (
-                  <li key={link}>
+                  <li key={link.label}>
                     <a
-                      href="#"
+                      href={link.href}
                       className="text-sm text-navy/60 hover:text-navy transition-colors"
                     >
-                      {link}
+                      {link.label}
                     </a>
                   </li>
                 ))}
@@ -52,8 +63,8 @@ export const Footer = () => {
                 Get in touch
               </span>
               <p className="mt-1">
-                <a href="mailto:admin@webqtech.com" className="text-sm text-primary hover:underline">
-                  admin@webqtech.com
+                <a href="mailto:contact@webqtech.com" className="text-sm text-primary hover:underline">
+                  contact@webqtech.com
                 </a>
               </p>
             </div>

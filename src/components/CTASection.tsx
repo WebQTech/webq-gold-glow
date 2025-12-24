@@ -54,8 +54,8 @@ export const CTASection = () => {
           className="mt-6 text-sm text-navy/40"
         >
           Or email us at{" "}
-          <a href="mailto:admin@webqtech.com" className="text-primary hover:underline">
-            admin@webqtech.com
+        <a href="mailto:contact@webqtech.com" className="text-primary hover:underline">
+            contact@webqtech.com
           </a>
         </motion.p>
       </div>
