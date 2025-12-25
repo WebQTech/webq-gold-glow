@@ -17,6 +17,22 @@ const industryLinks = [
   { label: "Energy & Utilities", href: "/industries/energy-utilities" },
 ];
 
+const serviceLinks = [
+  { label: "AI & Machine Learning", href: "/services/ai-machine-learning" },
+  { label: "Generative AI Solutions", href: "/services/generative-ai-solutions" },
+  { label: "AI Process Automation", href: "/services/ai-process-automation" },
+  { label: "Agentic AI, Agents & Tools", href: "/services/agentic-ai-agents-tools" },
+  { label: "Custom App Development", href: "/services/custom-app-development" },
+  { label: "Mobile App Development", href: "/services/mobile-app-development" },
+  { label: "Cloud Migration & Deployment", href: "/services/cloud-migration" },
+  { label: "DevOps & SRE", href: "/services/devops-sre" },
+  { label: "Data Engineering", href: "/services/data-engineering" },
+  { label: "Business Intelligence", href: "/services/business-intelligence" },
+  { label: "Cybersecurity Services", href: "/services/cybersecurity" },
+  { label: "API Development & Integration", href: "/services/api-development" },
+  { label: "Quality Engineering", href: "/services/quality-engineering" },
+];
+
 const footerLinks = {
   Company: [
     { label: "About Us", href: "#about" },
@@ -35,7 +51,7 @@ export const Footer = () => {
   return (
     <footer className="bg-[hsl(215,50%,8%)] text-white">
       <div className="container mx-auto px-6 lg:px-12 py-16">
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
           {/* Brand Column */}
           <div className="col-span-2 md:col-span-3 lg:col-span-1 mb-8 lg:mb-0">
             <a href="#" className="flex items-center gap-3 mb-6 group">
@@ -78,6 +94,25 @@ export const Footer = () => {
             </h4>
             <ul className="space-y-2">
               {industryLinks.map((link) => (
+                <li key={link.label}>
+                  <Link
+                    to={link.href}
+                    className="text-sm text-white/60 hover:text-white transition-colors"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Services Column */}
+          <div>
+            <h4 className="text-sm font-semibold uppercase tracking-wider text-white/40 mb-4">
+              Services
+            </h4>
+            <ul className="space-y-2">
+              {serviceLinks.map((link) => (
                 <li key={link.label}>
                   <Link
                     to={link.href}
