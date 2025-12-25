@@ -3,6 +3,19 @@ import {
   ShoppingCart, Factory, Truck, Bolt, LucideIcon
 } from "lucide-react";
 
+// Hero images
+import aiTechHero from "@/assets/industries/ai-tech-hero.jpg";
+import legacyTransformHero from "@/assets/industries/legacy-transform-hero.jpg";
+import fintechHero from "@/assets/industries/fintech-hero.jpg";
+import capitalMarketsHero from "@/assets/industries/capital-markets-hero.jpg";
+import healthcareHero from "@/assets/industries/healthcare-hero.jpg";
+import governmentHero from "@/assets/industries/government-hero.jpg";
+import edutechHero from "@/assets/industries/edutech-hero.jpg";
+import retailHero from "@/assets/industries/retail-hero.jpg";
+import manufacturingHero from "@/assets/industries/manufacturing-hero.jpg";
+import logisticsHero from "@/assets/industries/logistics-hero.jpg";
+import energyHero from "@/assets/industries/energy-hero.jpg";
+
 export interface IndustryCaseStudy {
   company: string;
   challenge: string;
@@ -24,6 +37,7 @@ export interface IndustryDetail {
   howWeHelp: string[];
   tags: string[];
   services: string[];
+  heroImage: string;
   caseStudies: IndustryCaseStudy[];
   faqs: { question: string; answer: string }[];
 }
@@ -49,6 +63,7 @@ export const industriesData: IndustryDetail[] = [
     ],
     tags: ["Chatbots", "Recommendation Engines", "Document Processing", "Predictive Models", "Computer Vision"],
     services: ["AI & Machine Learning", "Generative AI Solutions", "Agentic AI, Agents & Tools"],
+    heroImage: aiTechHero,
     caseStudies: [
       {
         company: "TechVenture Labs",
@@ -93,6 +108,7 @@ export const industriesData: IndustryDetail[] = [
     ],
     tags: ["Assessment", "Data Prep", "Pilot AI Project", "Scale", "Optimize"],
     services: ["AI Process Automation", "Cloud Migration", "DevOps & CI/CD"],
+    heroImage: legacyTransformHero,
     caseStudies: [
       {
         company: "Industrial Corp",
@@ -136,6 +152,7 @@ export const industriesData: IndustryDetail[] = [
     ],
     tags: ["Banks", "Credit Unions", "Payment Processors", "Insurance", "Lending Platforms"],
     services: ["AI & Machine Learning", "Custom App Development", "Cloud Solutions"],
+    heroImage: fintechHero,
     caseStudies: [
       {
         company: "Regional Bank Network",
@@ -180,6 +197,7 @@ export const industriesData: IndustryDetail[] = [
     ],
     tags: ["Real Estate", "Private Equity", "Asset Management", "Securities Firms", "Trading Platforms"],
     services: ["Custom App Development", "AI & Machine Learning", "Data & Analytics"],
+    heroImage: capitalMarketsHero,
     caseStudies: [
       {
         company: "Global Asset Partners",
@@ -223,6 +241,7 @@ export const industriesData: IndustryDetail[] = [
     ],
     tags: ["Hospitals", "Clinics", "Telehealth Providers", "Pharmaceutical", "Medical Devices"],
     services: ["Custom App Development", "AI & Machine Learning", "Cloud Solutions"],
+    heroImage: healthcareHero,
     caseStudies: [
       {
         company: "Metro Health System",
@@ -266,6 +285,7 @@ export const industriesData: IndustryDetail[] = [
     ],
     tags: ["Federal Agencies", "State & Local Government", "Public Services"],
     services: ["Cloud Migration", "Custom App Development", "AI Process Automation"],
+    heroImage: governmentHero,
     caseStudies: [
       {
         company: "State Department of Revenue",
@@ -309,6 +329,7 @@ export const industriesData: IndustryDetail[] = [
     ],
     tags: ["K-12", "Higher Education", "Corporate Training", "Online Course Platforms"],
     services: ["Custom App Development", "AI & Machine Learning", "Mobile Development"],
+    heroImage: edutechHero,
     caseStudies: [
       {
         company: "National Learning Academy",
@@ -352,6 +373,7 @@ export const industriesData: IndustryDetail[] = [
     ],
     tags: ["Online Retailers", "Brick-and-Mortar Stores", "Marketplaces", "D2C Brands"],
     services: ["Custom App Development", "AI & Machine Learning", "Cloud Solutions"],
+    heroImage: retailHero,
     caseStudies: [
       {
         company: "Fashion Forward Retail",
@@ -395,6 +417,7 @@ export const industriesData: IndustryDetail[] = [
     ],
     tags: ["Automotive", "Electronics", "Consumer Goods", "Industrial Equipment"],
     services: ["AI & Machine Learning", "IoT Solutions", "Data & Analytics"],
+    heroImage: manufacturingHero,
     caseStudies: [
       {
         company: "Precision Manufacturing Co",
@@ -438,6 +461,7 @@ export const industriesData: IndustryDetail[] = [
     ],
     tags: ["3PLs", "Freight Forwarders", "Warehousing", "Last-Mile Delivery"],
     services: ["Custom App Development", "AI & Machine Learning", "Mobile Development"],
+    heroImage: logisticsHero,
     caseStudies: [
       {
         company: "National Logistics Partners",
@@ -481,6 +505,7 @@ export const industriesData: IndustryDetail[] = [
     ],
     tags: ["Electric Utilities", "Oil & Gas", "Renewable Energy", "Water & Wastewater"],
     services: ["IoT Solutions", "AI & Machine Learning", "Cloud Solutions"],
+    heroImage: energyHero,
     caseStudies: [
       {
         company: "Regional Power Authority",
