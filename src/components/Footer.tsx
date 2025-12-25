@@ -41,9 +41,12 @@ export const Footer = () => {
           <div className="col-span-2 md:col-span-3 lg:col-span-1 mb-8 lg:mb-0">
             <a href="#" className="flex items-center gap-3 mb-6 group">
               <img src={logo} alt="WebQ Technologies" className="h-14 w-auto transition-all duration-300 group-hover:scale-110 group-hover:drop-shadow-[0_0_12px_hsl(var(--primary)/0.6)]" />
-              <span className="font-montserrat text-lg font-bold tracking-tight">
-                WebQ <span className="text-primary">Technologies</span>
-              </span>
+              <div className="flex flex-col">
+                <span className="font-montserrat text-lg font-bold tracking-tight leading-tight">
+                  WebQ <span className="text-primary">Technologies</span>
+                </span>
+                <span className="text-xs text-white/50 font-medium tracking-wide">Innovate. Transform. Succeed.</span>
+              </div>
             </a>
             <p className="text-sm text-white/50 max-w-xs leading-relaxed">
               Enterprise technology solutions that transform businesses and drive innovation.
