@@ -70,7 +70,7 @@ const ServiceDetail = () => {
               animate={isHeroInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.7 }}
             >
-              <span className="section-label">{service.category}</span>
+              <span className="section-label font-bold">{service.category}</span>
               <h1 className="mt-4 text-4xl lg:text-5xl font-bold text-foreground leading-tight">
                 {service.name}
               </h1>
