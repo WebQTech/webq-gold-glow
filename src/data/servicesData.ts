@@ -1857,6 +1857,97 @@ export const servicesData: ServiceDetail[] = [
         answer: "Basic SSO for a few applications can be done in 2-4 weeks. Enterprise-wide implementation with many applications typically takes 2-4 months, depending on complexity and integration requirements."
       }
     ]
+  },
+  {
+    slug: "compliance-governance",
+    name: "Compliance & Governance",
+    shortDescription: "Navigate regulatory requirements and establish robust governance frameworks.",
+    fullDescription: "Achieve and maintain compliance with industry regulations while building strong governance foundations. We help organizations navigate complex regulatory landscapes, implement compliance programs, and establish governance frameworks that protect your business and build stakeholder trust.",
+    icon: FileText,
+    category: "Security",
+    features: [
+      "SOC 2 Type I & II certification",
+      "GDPR compliance implementation",
+      "HIPAA compliance programs",
+      "PCI-DSS certification",
+      "ISO 27001 implementation",
+      "Policy & procedure development",
+      "Risk management frameworks",
+      "Audit preparation & support"
+    ],
+    benefits: [
+      "Achieve regulatory compliance",
+      "Reduce audit preparation time by 60%",
+      "Build customer and partner trust",
+      "Avoid costly penalties and fines",
+      "Enable enterprise sales opportunities"
+    ],
+    technologies: ["Vanta", "Drata", "Secureframe", "OneTrust", "ServiceNow GRC", "LogicGate", "AuditBoard", "Archer"],
+    pricing: [
+      {
+        name: "Compliance Starter",
+        price: "$20,000",
+        description: "Single framework compliance",
+        features: [
+          "Gap assessment",
+          "Policy templates",
+          "Control implementation",
+          "Documentation",
+          "Audit preparation support"
+        ]
+      },
+      {
+        name: "Compliance Pro",
+        price: "$60,000",
+        description: "Multi-framework compliance",
+        features: [
+          "Multiple frameworks (SOC 2 + GDPR)",
+          "GRC platform setup",
+          "Custom policy development",
+          "Employee training",
+          "Continuous monitoring",
+          "Auditor coordination"
+        ],
+        popular: true
+      },
+      {
+        name: "Enterprise GRC",
+        price: "Custom",
+        description: "Full governance program",
+        features: [
+          "Enterprise-wide GRC",
+          "Risk management program",
+          "Board reporting",
+          "Vendor risk management",
+          "Managed compliance",
+          "Dedicated team"
+        ]
+      }
+    ],
+    caseStudies: [
+      {
+        company: "SaaSStartup Inc",
+        industry: "Technology",
+        challenge: "Needed SOC 2 certification to close enterprise deals but had no compliance program.",
+        solution: "Implemented comprehensive SOC 2 program with automated evidence collection and continuous monitoring.",
+        results: [
+          "SOC 2 Type II achieved in 4 months",
+          "Closed $2M in enterprise contracts",
+          "Compliance overhead reduced by 70%",
+          "Passed audit with zero exceptions"
+        ]
+      }
+    ],
+    faqs: [
+      {
+        question: "How long does SOC 2 certification take?",
+        answer: "SOC 2 Type I can be achieved in 2-3 months with proper preparation. Type II requires a 3-12 month observation period after Type I. With our accelerated approach, many clients achieve Type II within 6 months total."
+      },
+      {
+        question: "Do we need dedicated compliance staff?",
+        answer: "Not necessarily. With modern GRC platforms and our managed services, small teams can maintain compliance efficiently. We help you determine the right balance of tools, processes, and personnel for your organization."
+      }
+    ]
   }
 ];
 
