@@ -52,45 +52,45 @@ export const Navbar = () => {
 
   // Insights dropdown items
   const insightsItems = [
-    { label: "Industry Reports", href: "#insights", icon: FileText },
-    { label: "Case Studies", href: "#insights", icon: BookOpen },
-    { label: "Whitepapers", href: "#insights", icon: Lightbulb },
-    { label: "Tech Trends", href: "#insights", icon: TrendingUp },
-    { label: "Webinars", href: "#insights", icon: Mic },
-    { label: "Events", href: "#insights", icon: Calendar },
+    { label: "Industry Reports", href: "/insights", icon: FileText },
+    { label: "Case Studies", href: "/insights", icon: BookOpen },
+    { label: "Whitepapers", href: "/insights", icon: Lightbulb },
+    { label: "Tech Trends", href: "/insights", icon: TrendingUp },
+    { label: "Webinars", href: "/insights", icon: Mic },
+    { label: "Events", href: "/insights", icon: Calendar },
   ];
 
   // About dropdown items
   const aboutItems = [
-    { label: "Our Story", href: "#about", icon: Building2 },
-    { label: "Leadership Team", href: "#about", icon: Users },
-    { label: "Our Values", href: "#about", icon: Award },
-    { label: "Global Presence", href: "#about", icon: MapPin },
-    { label: "Partners", href: "#about", icon: Handshake },
+    { label: "Our Story", href: "/about", icon: Building2 },
+    { label: "Leadership Team", href: "/about", icon: Users },
+    { label: "Our Values", href: "/about", icon: Award },
+    { label: "Global Presence", href: "/about", icon: MapPin },
+    { label: "Partners", href: "/about", icon: Handshake },
   ];
 
   // Careers dropdown items
   const careersItems = [
-    { label: "Open Positions", href: "#careers", icon: Briefcase },
-    { label: "Life at WebQ", href: "#careers", icon: Users },
-    { label: "Benefits", href: "#careers", icon: Gift },
-    { label: "Internships", href: "#careers", icon: UserCheck },
+    { label: "Open Positions", href: "/careers#open-positions", icon: Briefcase },
+    { label: "Life at WebQ", href: "/careers", icon: Users },
+    { label: "Benefits", href: "/careers", icon: Gift },
+    { label: "Internships", href: "/careers", icon: UserCheck },
   ];
 
   // News dropdown items
   const newsItems = [
-    { label: "Press Releases", href: "#news", icon: Newspaper },
-    { label: "Company Updates", href: "#news", icon: FileText },
-    { label: "Media Coverage", href: "#news", icon: Mic },
-    { label: "Blog", href: "#news", icon: BookOpen },
+    { label: "Press Releases", href: "/news", icon: Newspaper },
+    { label: "Company Updates", href: "/news", icon: FileText },
+    { label: "Media Coverage", href: "/news", icon: Mic },
+    { label: "Blog", href: "/news", icon: BookOpen },
   ];
 
   // Investors dropdown items
   const investorsItems = [
-    { label: "Financial Reports", href: "#investors", icon: BarChart3 },
-    { label: "Stock Information", href: "#investors", icon: TrendingUp },
-    { label: "Governance", href: "#investors", icon: Building2 },
-    { label: "Investor Resources", href: "#investors", icon: DollarSign },
+    { label: "Financial Reports", href: "/investors", icon: BarChart3 },
+    { label: "Stock Information", href: "/investors", icon: TrendingUp },
+    { label: "Governance", href: "/investors", icon: Building2 },
+    { label: "Investor Resources", href: "/investors", icon: DollarSign },
   ];
 
   return (
@@ -116,10 +116,10 @@ export const Navbar = () => {
               <DropdownMenuContent align="end" className="w-48 bg-background border border-border shadow-lg z-50">
                 {careersItems.map((item) => (
                   <DropdownMenuItem key={item.label} asChild>
-                    <a href={item.href} className="flex items-center gap-2 cursor-pointer focus:bg-primary/10 focus:text-primary">
+                    <Link to={item.href} className="flex items-center gap-2 cursor-pointer focus:bg-primary/10 focus:text-primary">
                       <item.icon className="w-4 h-4 text-primary" />
                       <span>{item.label}</span>
-                    </a>
+                    </Link>
                   </DropdownMenuItem>
                 ))}
               </DropdownMenuContent>
@@ -134,10 +134,10 @@ export const Navbar = () => {
               <DropdownMenuContent align="end" className="w-48 bg-background border border-border shadow-lg z-50">
                 {newsItems.map((item) => (
                   <DropdownMenuItem key={item.label} asChild>
-                    <a href={item.href} className="flex items-center gap-2 cursor-pointer focus:bg-primary/10 focus:text-primary">
+                    <Link to={item.href} className="flex items-center gap-2 cursor-pointer focus:bg-primary/10 focus:text-primary">
                       <item.icon className="w-4 h-4 text-primary" />
                       <span>{item.label}</span>
-                    </a>
+                    </Link>
                   </DropdownMenuItem>
                 ))}
               </DropdownMenuContent>
@@ -152,10 +152,10 @@ export const Navbar = () => {
               <DropdownMenuContent align="end" className="w-48 bg-background border border-border shadow-lg z-50">
                 {investorsItems.map((item) => (
                   <DropdownMenuItem key={item.label} asChild>
-                    <a href={item.href} className="flex items-center gap-2 cursor-pointer focus:bg-primary/10 focus:text-primary">
+                    <Link to={item.href} className="flex items-center gap-2 cursor-pointer focus:bg-primary/10 focus:text-primary">
                       <item.icon className="w-4 h-4 text-primary" />
                       <span>{item.label}</span>
-                    </a>
+                    </Link>
                   </DropdownMenuItem>
                 ))}
               </DropdownMenuContent>
@@ -371,7 +371,7 @@ export const Navbar = () => {
               <DropdownMenu>
                 <DropdownMenuTrigger 
                   className={`flex items-center gap-1 text-sm font-medium transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded-sm relative ${
-                    isHomePage && isActive("insights")
+                    location.pathname === "/insights"
                       ? "text-primary"
                       : "text-foreground/80 hover:text-primary"
                   }`}
@@ -379,7 +379,7 @@ export const Navbar = () => {
                 >
                   Insights
                   <ChevronDown className="w-4 h-4 transition-transform duration-200 group-data-[state=open]:rotate-180" />
-                  {isHomePage && isActive("insights") && (
+                  {location.pathname === "/insights" && (
                     <span className="absolute -bottom-1 left-0 right-0 h-0.5 bg-primary rounded-full" />
                   )}
                 </DropdownMenuTrigger>
@@ -390,14 +390,13 @@ export const Navbar = () => {
                 >
                   {insightsItems.map((item) => (
                     <DropdownMenuItem key={item.label} asChild>
-                      <a 
-                        href={isHomePage ? item.href : `/${item.href}`}
-                        onClick={handleAnchorClick(isHomePage ? item.href : `/${item.href}`)}
+                      <Link 
+                        to={item.href}
                         className="flex items-center gap-2 cursor-pointer focus:bg-primary/10 focus:text-primary"
                       >
                         <item.icon className="w-4 h-4 text-primary" />
                         <span>{item.label}</span>
-                      </a>
+                      </Link>
                     </DropdownMenuItem>
                   ))}
                 </DropdownMenuContent>
@@ -407,7 +406,7 @@ export const Navbar = () => {
               <DropdownMenu>
                 <DropdownMenuTrigger 
                   className={`flex items-center gap-1 text-sm font-medium transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded-sm relative ${
-                    isHomePage && isActive("about")
+                    location.pathname === "/about"
                       ? "text-primary"
                       : "text-foreground/80 hover:text-primary"
                   }`}
@@ -415,7 +414,7 @@ export const Navbar = () => {
                 >
                   About
                   <ChevronDown className="w-4 h-4 transition-transform duration-200 group-data-[state=open]:rotate-180" />
-                  {isHomePage && isActive("about") && (
+                  {location.pathname === "/about" && (
                     <span className="absolute -bottom-1 left-0 right-0 h-0.5 bg-primary rounded-full" />
                   )}
                 </DropdownMenuTrigger>
@@ -426,14 +425,13 @@ export const Navbar = () => {
                 >
                   {aboutItems.map((item) => (
                     <DropdownMenuItem key={item.label} asChild>
-                      <a 
-                        href={isHomePage ? item.href : `/${item.href}`}
-                        onClick={handleAnchorClick(isHomePage ? item.href : `/${item.href}`)}
+                      <Link 
+                        to={item.href}
                         className="flex items-center gap-2 cursor-pointer focus:bg-primary/10 focus:text-primary"
                       >
                         <item.icon className="w-4 h-4 text-primary" />
                         <span>{item.label}</span>
-                      </a>
+                      </Link>
                     </DropdownMenuItem>
                   ))}
                 </DropdownMenuContent>
@@ -586,60 +584,48 @@ export const Navbar = () => {
 
                 {/* Insights Section */}
                 <div className="border-b border-border/50">
-                  <a
-                    href={isHomePage ? "#insights" : "/#insights"}
+                  <Link
+                    to="/insights"
                     className="block py-3 text-foreground/80 hover:text-primary transition-colors font-medium"
-                    onClick={(e) => {
-                      handleAnchorClick(isHomePage ? "#insights" : "/#insights")(e);
-                      setIsMobileMenuOpen(false);
-                    }}
+                    onClick={() => setIsMobileMenuOpen(false)}
                   >
                     Insights
-                  </a>
+                  </Link>
                   <div className="pb-3 pl-4 space-y-1">
                     {insightsItems.map((item) => (
-                      <a
+                      <Link
                         key={item.label}
-                        href={isHomePage ? item.href : `/${item.href}`}
+                        to={item.href}
                         className="flex items-center gap-2 py-2 pl-2 text-sm text-foreground/70 hover:text-primary transition-colors"
-                        onClick={(e) => {
-                          handleAnchorClick(isHomePage ? item.href : `/${item.href}`)(e);
-                          setIsMobileMenuOpen(false);
-                        }}
+                        onClick={() => setIsMobileMenuOpen(false)}
                       >
                         <item.icon className="w-4 h-4 text-primary" />
                         {item.label}
-                      </a>
+                      </Link>
                     ))}
                   </div>
                 </div>
 
                 {/* About Section */}
                 <div className="border-b border-border/50">
-                  <a
-                    href={isHomePage ? "#about" : "/#about"}
+                  <Link
+                    to="/about"
                     className="block py-3 text-foreground/80 hover:text-primary transition-colors font-medium"
-                    onClick={(e) => {
-                      handleAnchorClick(isHomePage ? "#about" : "/#about")(e);
-                      setIsMobileMenuOpen(false);
-                    }}
+                    onClick={() => setIsMobileMenuOpen(false)}
                   >
                     About
-                  </a>
+                  </Link>
                   <div className="pb-3 pl-4 space-y-1">
                     {aboutItems.map((item) => (
-                      <a
+                      <Link
                         key={item.label}
-                        href={isHomePage ? item.href : `/${item.href}`}
+                        to={item.href}
                         className="flex items-center gap-2 py-2 pl-2 text-sm text-foreground/70 hover:text-primary transition-colors"
-                        onClick={(e) => {
-                          handleAnchorClick(isHomePage ? item.href : `/${item.href}`)(e);
-                          setIsMobileMenuOpen(false);
-                        }}
+                        onClick={() => setIsMobileMenuOpen(false)}
                       >
                         <item.icon className="w-4 h-4 text-primary" />
                         {item.label}
-                      </a>
+                      </Link>
                     ))}
                   </div>
                 </div>
@@ -647,50 +633,68 @@ export const Navbar = () => {
                 {/* Careers, News, Investors */}
                 <div className="pt-4 space-y-4">
                   <div>
-                    <span className="text-xs text-muted-foreground uppercase tracking-wider block pb-2">Careers</span>
+                    <Link 
+                      to="/careers"
+                      className="text-xs text-muted-foreground uppercase tracking-wider block pb-2 hover:text-primary transition-colors"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      Careers
+                    </Link>
                     <div className="pl-2 space-y-1">
                       {careersItems.map((item) => (
-                        <a
+                        <Link
                           key={item.label}
-                          href={item.href}
+                          to={item.href}
                           className="flex items-center gap-2 py-1.5 text-sm text-foreground/70 hover:text-primary transition-colors"
                           onClick={() => setIsMobileMenuOpen(false)}
                         >
                           <item.icon className="w-4 h-4 text-primary" />
                           {item.label}
-                        </a>
+                        </Link>
                       ))}
                     </div>
                   </div>
                   <div>
-                    <span className="text-xs text-muted-foreground uppercase tracking-wider block pb-2">News</span>
+                    <Link 
+                      to="/news"
+                      className="text-xs text-muted-foreground uppercase tracking-wider block pb-2 hover:text-primary transition-colors"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      News
+                    </Link>
                     <div className="pl-2 space-y-1">
                       {newsItems.map((item) => (
-                        <a
+                        <Link
                           key={item.label}
-                          href={item.href}
+                          to={item.href}
                           className="flex items-center gap-2 py-1.5 text-sm text-foreground/70 hover:text-primary transition-colors"
                           onClick={() => setIsMobileMenuOpen(false)}
                         >
                           <item.icon className="w-4 h-4 text-primary" />
                           {item.label}
-                        </a>
+                        </Link>
                       ))}
                     </div>
                   </div>
                   <div>
-                    <span className="text-xs text-muted-foreground uppercase tracking-wider block pb-2">Investors</span>
+                    <Link 
+                      to="/investors"
+                      className="text-xs text-muted-foreground uppercase tracking-wider block pb-2 hover:text-primary transition-colors"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      Investors
+                    </Link>
                     <div className="pl-2 space-y-1">
                       {investorsItems.map((item) => (
-                        <a
+                        <Link
                           key={item.label}
-                          href={item.href}
+                          to={item.href}
                           className="flex items-center gap-2 py-1.5 text-sm text-foreground/70 hover:text-primary transition-colors"
                           onClick={() => setIsMobileMenuOpen(false)}
                         >
                           <item.icon className="w-4 h-4 text-primary" />
                           {item.label}
-                        </a>
+                        </Link>
                       ))}
                     </div>
                   </div>
