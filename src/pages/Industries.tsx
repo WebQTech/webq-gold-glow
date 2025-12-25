@@ -71,57 +71,68 @@ const Industries = () => {
                       >
                         <Link
                           to={`/industries/${industry.slug}`}
-                          className="group block h-full bg-card border border-border rounded-2xl p-6 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5 transition-all duration-300"
+                          className="group block h-full bg-card border border-border rounded-2xl overflow-hidden hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5 transition-all duration-300"
                         >
-                          <div className="flex items-start justify-between mb-4">
-                            <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                              <Icon className="w-6 h-6 text-primary" />
+                          {/* Hero Image */}
+                          <div className="aspect-video w-full overflow-hidden">
+                            <img 
+                              src={industry.heroImage} 
+                              alt={industry.name}
+                              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                            />
+                          </div>
+
+                          <div className="p-6">
+                            <div className="flex items-start justify-between mb-3">
+                              <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                                <Icon className="w-5 h-5 text-primary" />
+                              </div>
+                              {industry.isNew && (
+                                <span className="px-2 py-1 text-xs font-bold uppercase tracking-wider bg-primary text-primary-foreground rounded-full">
+                                  New
+                                </span>
+                              )}
                             </div>
-                            {industry.isNew && (
-                              <span className="px-2 py-1 text-xs font-bold uppercase tracking-wider bg-primary text-primary-foreground rounded-full">
-                                New
-                              </span>
-                            )}
-                          </div>
-                          
-                          <h3 className="text-xl font-semibold text-foreground group-hover:text-primary transition-colors">
-                            {industry.name}
-                          </h3>
-                          
-                          <p className="mt-2 text-sm text-muted-foreground line-clamp-2">
-                            {industry.shortDescription}
-                          </p>
+                            
+                            <h3 className="text-xl font-semibold text-foreground group-hover:text-primary transition-colors">
+                              {industry.name}
+                            </h3>
+                            
+                            <p className="mt-2 text-sm text-muted-foreground line-clamp-2">
+                              {industry.shortDescription}
+                            </p>
 
-                          <div className="mt-4 flex items-center gap-4">
-                            <div className="text-center">
-                              <span className="block text-2xl font-bold text-primary">
-                                {industry.stat}
-                              </span>
-                              <span className="text-xs text-muted-foreground">
-                                {industry.statLabel}
-                              </span>
+                            <div className="mt-4 flex items-center gap-4">
+                              <div className="text-center">
+                                <span className="block text-2xl font-bold text-primary">
+                                  {industry.stat}
+                                </span>
+                                <span className="text-xs text-muted-foreground">
+                                  {industry.statLabel}
+                                </span>
+                              </div>
                             </div>
-                          </div>
 
-                          <div className="mt-4 flex flex-wrap gap-1">
-                            {industry.tags.slice(0, 3).map((tag, i) => (
-                              <span 
-                                key={i}
-                                className="px-2 py-0.5 text-xs bg-muted text-muted-foreground rounded-full"
-                              >
-                                {tag}
-                              </span>
-                            ))}
-                            {industry.tags.length > 3 && (
-                              <span className="px-2 py-0.5 text-xs bg-muted text-muted-foreground rounded-full">
-                                +{industry.tags.length - 3}
-                              </span>
-                            )}
-                          </div>
+                            <div className="mt-4 flex flex-wrap gap-1">
+                              {industry.tags.slice(0, 3).map((tag, i) => (
+                                <span 
+                                  key={i}
+                                  className="px-2 py-0.5 text-xs bg-muted text-muted-foreground rounded-full"
+                                >
+                                  {tag}
+                                </span>
+                              ))}
+                              {industry.tags.length > 3 && (
+                                <span className="px-2 py-0.5 text-xs bg-muted text-muted-foreground rounded-full">
+                                  +{industry.tags.length - 3}
+                                </span>
+                              )}
+                            </div>
 
-                          <div className="mt-6 inline-flex items-center gap-2 text-sm text-primary opacity-0 group-hover:opacity-100 transition-opacity">
-                            Learn more
-                            <ArrowRight className="w-4 h-4" />
+                            <div className="mt-6 inline-flex items-center gap-2 text-sm text-primary opacity-0 group-hover:opacity-100 transition-opacity">
+                              Learn more
+                              <ArrowRight className="w-4 h-4" />
+                            </div>
                           </div>
                         </Link>
                       </motion.div>
