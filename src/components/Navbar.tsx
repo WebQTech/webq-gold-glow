@@ -106,19 +106,29 @@ export const Navbar = () => {
 
               {/* Services Dropdown */}
               <DropdownMenu>
-                <DropdownMenuTrigger className="flex items-center gap-1 text-sm font-medium text-foreground/80 hover:text-primary transition-colors duration-200 outline-none">
+                <DropdownMenuTrigger 
+                  className="flex items-center gap-1 text-sm font-medium text-foreground/80 hover:text-primary transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded-sm"
+                  aria-label="Services menu"
+                >
                   Services
-                  <ChevronDown className="w-4 h-4" />
+                  <ChevronDown className="w-4 h-4 transition-transform duration-200 group-data-[state=open]:rotate-180" />
                 </DropdownMenuTrigger>
-                <DropdownMenuContent align="start" className="w-72 max-h-[70vh] overflow-y-auto bg-background border border-border shadow-lg">
+                <DropdownMenuContent 
+                  align="start" 
+                  className="w-72 max-h-[70vh] overflow-y-auto bg-background border border-border shadow-lg z-50"
+                  sideOffset={8}
+                >
                   <DropdownMenuItem asChild>
-                    <Link to="/services" className="font-medium text-primary">
+                    <Link 
+                      to="/services" 
+                      className="font-medium text-primary focus:bg-primary/10 focus:text-primary"
+                    >
                       View All Services
                     </Link>
                   </DropdownMenuItem>
                   <DropdownMenuSeparator />
                   {servicesByCategory.map(({ category, services }) => (
-                    <div key={category}>
+                    <div key={category} role="group" aria-label={category}>
                       <DropdownMenuLabel className="text-xs text-muted-foreground uppercase tracking-wider">
                         {category}
                       </DropdownMenuLabel>
@@ -128,9 +138,9 @@ export const Navbar = () => {
                           <DropdownMenuItem key={service.slug} asChild>
                             <Link
                               to={`/services/${service.slug}`}
-                              className="flex items-center gap-2 cursor-pointer"
+                              className="flex items-center gap-2 cursor-pointer focus:bg-primary/10 focus:text-primary"
                             >
-                              <ServiceIcon className="w-4 h-4 text-primary" />
+                              <ServiceIcon className="w-4 h-4 text-primary" aria-hidden="true" />
                               <span>{service.name}</span>
                             </Link>
                           </DropdownMenuItem>
