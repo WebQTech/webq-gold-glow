@@ -1132,96 +1132,6 @@ export const servicesData: ServiceDetail[] = [
     ]
   },
   {
-    slug: "quality-assurance",
-    name: "Quality Assurance",
-    shortDescription: "Comprehensive testing strategies to ensure software excellence.",
-    fullDescription: "Deliver flawless software with our comprehensive QA services. From manual testing to fully automated test suites, we ensure your applications meet the highest quality standards before reaching your users.",
-    icon: TestTube,
-    category: "Quality & Security",
-    features: [
-      "Automated testing frameworks",
-      "Performance & load testing",
-      "Security testing",
-      "UAT coordination",
-      "Mobile app testing",
-      "API testing",
-      "Accessibility testing",
-      "Regression testing"
-    ],
-    benefits: [
-      "Reduce bugs in production by 80%",
-      "Faster release cycles",
-      "Improved user satisfaction",
-      "Lower support costs",
-      "Confident deployments"
-    ],
-    technologies: ["Selenium", "Cypress", "Playwright", "JMeter", "Postman", "Appium", "TestRail", "JIRA"],
-    pricing: [
-      {
-        name: "Test Automation",
-        price: "$20,000",
-        description: "Automated test suite setup",
-        features: [
-          "Test framework setup",
-          "Up to 100 test cases",
-          "CI/CD integration",
-          "Documentation",
-          "Team training"
-        ]
-      },
-      {
-        name: "QA Partnership",
-        price: "$8,000/mo",
-        description: "Ongoing QA services",
-        features: [
-          "Dedicated QA engineer",
-          "Manual & automated testing",
-          "Performance testing",
-          "Continuous improvement",
-          "Weekly reports"
-        ],
-        popular: true
-      },
-      {
-        name: "Enterprise QA",
-        price: "Custom",
-        description: "Full QA outsourcing",
-        features: [
-          "Dedicated QA team",
-          "Full test coverage",
-          "All testing types",
-          "24/7 availability",
-          "Custom tools & processes",
-          "QA consulting"
-        ]
-      }
-    ],
-    caseStudies: [
-      {
-        company: "TravelBook",
-        industry: "Travel",
-        challenge: "Frequent production bugs damaging brand reputation and causing booking errors.",
-        solution: "Implemented comprehensive test automation with Cypress, performance testing, and CI integration.",
-        results: [
-          "Production bugs reduced by 85%",
-          "Release confidence improved dramatically",
-          "Test execution time reduced from days to hours",
-          "Booking error rate dropped to near zero"
-        ]
-      }
-    ],
-    faqs: [
-      {
-        question: "What percentage of tests should be automated?",
-        answer: "We recommend automating 70-80% of regression tests. Exploratory testing, usability testing, and edge cases are often better suited for manual testing. We help you find the right balance."
-      },
-      {
-        question: "How do you integrate with our development process?",
-        answer: "Our QA integrates seamlessly with agile workflows. We participate in sprint planning, write tests alongside development, and ensure automated tests run in your CI/CD pipeline."
-      }
-    ]
-  },
-  {
     slug: "cybersecurity",
     name: "Cybersecurity Services",
     shortDescription: "Protect your digital assets with enterprise-grade security solutions.",
@@ -1673,6 +1583,96 @@ export const servicesData: ServiceDetail[] = [
       {
         question: "How do you handle API security?",
         answer: "We implement industry-standard security including OAuth 2.0, API keys, rate limiting, input validation, and encryption. Security is built into the API design from the start."
+      }
+    ]
+  },
+  {
+    slug: "quality-engineering",
+    name: "Quality Engineering & Assurance",
+    shortDescription: "Comprehensive testing strategies to ensure software excellence.",
+    fullDescription: "Deliver flawless software with our comprehensive QA services. From manual testing to fully automated test suites, we ensure your applications meet the highest quality standards before reaching your users.",
+    icon: TestTube,
+    category: "Development & Engineering",
+    features: [
+      "Automated testing frameworks",
+      "Performance & load testing",
+      "Security testing",
+      "UAT coordination",
+      "Mobile app testing",
+      "API testing",
+      "Accessibility testing",
+      "Regression testing"
+    ],
+    benefits: [
+      "Reduce bugs in production by 80%",
+      "Faster release cycles",
+      "Improved user satisfaction",
+      "Lower support costs",
+      "Confident deployments"
+    ],
+    technologies: ["Selenium", "Cypress", "Playwright", "JMeter", "Postman", "Appium", "TestRail", "JIRA"],
+    pricing: [
+      {
+        name: "Test Automation",
+        price: "$20,000",
+        description: "Automated test suite setup",
+        features: [
+          "Test framework setup",
+          "Up to 100 test cases",
+          "CI/CD integration",
+          "Documentation",
+          "Team training"
+        ]
+      },
+      {
+        name: "QA Partnership",
+        price: "$8,000/mo",
+        description: "Ongoing QA services",
+        features: [
+          "Dedicated QA engineer",
+          "Manual & automated testing",
+          "Performance testing",
+          "Continuous improvement",
+          "Weekly reports"
+        ],
+        popular: true
+      },
+      {
+        name: "Enterprise QA",
+        price: "Custom",
+        description: "Full QA outsourcing",
+        features: [
+          "Dedicated QA team",
+          "Full test coverage",
+          "All testing types",
+          "24/7 availability",
+          "Custom tools & processes",
+          "QA consulting"
+        ]
+      }
+    ],
+    caseStudies: [
+      {
+        company: "TravelBook",
+        industry: "Travel",
+        challenge: "Frequent production bugs damaging brand reputation and causing booking errors.",
+        solution: "Implemented comprehensive test automation with Cypress, performance testing, and CI integration.",
+        results: [
+          "Production bugs reduced by 85%",
+          "Release confidence improved dramatically",
+          "Test execution time reduced from days to hours",
+          "Booking error rate dropped to near zero"
+        ]
+      }
+    ],
+    faqs: [
+      {
+        question: "What percentage of tests should be automated?",
+        answer: "We recommend automating 70-80% of regression tests. Exploratory testing, usability testing, and edge cases are often better suited for manual testing. We help you find the right balance."
+      },
+      {
+        question: "How do you integrate with our development process?",
+        answer: "Our QA integrates seamlessly with agile workflows. We participate in sprint planning, write tests alongside development, and ensure automated tests run in your CI/CD pipeline."
       }
     ]
   },
