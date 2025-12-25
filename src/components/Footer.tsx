@@ -40,7 +40,7 @@ export const Footer = () => {
           {/* Brand Column */}
           <div className="col-span-2 md:col-span-3 lg:col-span-1 mb-8 lg:mb-0">
             <a href="#" className="flex items-center gap-2 mb-6">
-              <img src={logo} alt="WebQ Technologies" className="h-14 w-auto" />
+              <img src={logo} alt="WebQ Technologies" className="h-14 w-auto transition-all duration-300 hover:scale-110 hover:drop-shadow-[0_0_12px_hsl(var(--primary)/0.6)]" />
             </a>
             <p className="text-sm text-white/50 max-w-xs leading-relaxed">
               Enterprise technology solutions that transform businesses and drive innovation.
