@@ -37,204 +37,7 @@ export interface ServiceDetail {
 }
 
 export const servicesData: ServiceDetail[] = [
-  {
-    slug: "custom-software-development",
-    name: "Custom Software Development",
-    shortDescription: "Full-cycle development from requirements to deployment, tailored to your specific business needs.",
-    fullDescription: "We deliver end-to-end custom software solutions that transform your business operations. Our experienced development teams work closely with you to understand your unique requirements and build scalable, maintainable applications that drive real business value. From initial concept to deployment and ongoing support, we're with you every step of the way.",
-    icon: Code2,
-    category: "Development & Engineering",
-    features: [
-      "Technology stack selection (React, Node, Python, .NET)",
-      "API design and third-party integrations",
-      "Legacy system modernization",
-      "Dedicated development teams",
-      "Agile methodology with sprint-based delivery",
-      "Code reviews and quality assurance",
-      "Documentation and knowledge transfer",
-      "Post-launch support and maintenance"
-    ],
-    benefits: [
-      "Reduce operational costs by up to 40%",
-      "Improve process efficiency and automation",
-      "Gain competitive advantage with unique solutions",
-      "Scale your business without technical limitations",
-      "Integrate seamlessly with existing systems"
-    ],
-    technologies: ["React", "Node.js", "Python", ".NET", "TypeScript", "PostgreSQL", "MongoDB", "AWS", "Azure"],
-    pricing: [
-      {
-        name: "Starter",
-        price: "$15,000",
-        description: "Perfect for MVPs and small projects",
-        features: [
-          "Up to 3 months development",
-          "Single dedicated developer",
-          "Basic architecture design",
-          "Weekly progress reports",
-          "30 days post-launch support"
-        ]
-      },
-      {
-        name: "Professional",
-        price: "$45,000",
-        description: "Ideal for medium-sized applications",
-        features: [
-          "Up to 6 months development",
-          "Team of 2-3 developers",
-          "Full architecture design",
-          "Daily standups",
-          "90 days post-launch support",
-          "Performance optimization"
-        ],
-        popular: true
-      },
-      {
-        name: "Enterprise",
-        price: "Custom",
-        description: "For complex, large-scale projects",
-        features: [
-          "Unlimited development timeline",
-          "Full dedicated team",
-          "Enterprise architecture",
-          "24/7 support availability",
-          "Ongoing maintenance",
-          "SLA guarantees"
-        ]
-      }
-    ],
-    caseStudies: [
-      {
-        company: "FinanceHub Corp",
-        industry: "Financial Services",
-        challenge: "Legacy trading platform couldn't handle increasing transaction volumes and lacked mobile capabilities.",
-        solution: "Built a modern, cloud-native trading platform with React frontend, microservices backend, and native mobile apps.",
-        results: [
-          "300% increase in transaction capacity",
-          "50% reduction in trade execution time",
-          "Mobile app launched in 4 months",
-          "$2M annual cost savings"
-        ]
-      },
-      {
-        company: "HealthFirst Medical",
-        industry: "Healthcare",
-        challenge: "Paper-based patient management system causing delays and compliance issues.",
-        solution: "Developed HIPAA-compliant patient management system with automated workflows and real-time reporting.",
-        results: [
-          "90% reduction in paperwork",
-          "100% HIPAA compliance achieved",
-          "Patient wait times reduced by 40%",
-          "Staff productivity increased by 60%"
-        ]
-      }
-    ],
-    faqs: [
-      {
-        question: "How long does a typical custom software project take?",
-        answer: "Project timelines vary based on complexity. Simple MVPs can be delivered in 2-3 months, while enterprise applications may take 6-12 months. We provide detailed estimates after the discovery phase."
-      },
-      {
-        question: "What technologies do you specialize in?",
-        answer: "We're proficient in React, Node.js, Python, .NET, and modern cloud platforms (AWS, Azure, GCP). We select the best technology stack based on your specific requirements and existing infrastructure."
-      },
-      {
-        question: "Do you provide ongoing maintenance after launch?",
-        answer: "Yes, all our packages include post-launch support. We also offer extended maintenance contracts for bug fixes, updates, and feature enhancements."
-      }
-    ]
-  },
-  {
-    slug: "mobile-app-development",
-    name: "Mobile App Development",
-    shortDescription: "Native and cross-platform mobile applications for iOS and Android.",
-    fullDescription: "Create powerful mobile experiences that engage your users and drive business growth. Our mobile development team specializes in both native and cross-platform solutions, ensuring your app delivers exceptional performance and user experience on every device.",
-    icon: Smartphone,
-    category: "Development & Engineering",
-    features: [
-      "React Native & Flutter development",
-      "Native iOS (Swift) and Android (Kotlin)",
-      "App Store optimization",
-      "Push notifications & analytics",
-      "Offline-first architecture",
-      "Biometric authentication",
-      "Payment integration",
-      "Real-time synchronization"
-    ],
-    benefits: [
-      "Reach customers on their preferred devices",
-      "Increase user engagement by 60%",
-      "Generate new revenue streams",
-      "Build brand loyalty through mobile presence",
-      "Collect valuable user behavior data"
-    ],
-    technologies: ["React Native", "Flutter", "Swift", "Kotlin", "Firebase", "GraphQL", "Redux", "App Store Connect"],
-    pricing: [
-      {
-        name: "Single Platform",
-        price: "$25,000",
-        description: "iOS or Android app",
-        features: [
-          "One platform (iOS or Android)",
-          "Up to 10 screens",
-          "Basic analytics",
-          "Push notifications",
-          "App store submission"
-        ]
-      },
-      {
-        name: "Cross-Platform",
-        price: "$40,000",
-        description: "Both iOS and Android",
-        features: [
-          "iOS and Android apps",
-          "Up to 20 screens",
-          "Advanced analytics",
-          "Push notifications",
-          "App store optimization",
-          "Backend API included"
-        ],
-        popular: true
-      },
-      {
-        name: "Enterprise Mobile",
-        price: "Custom",
-        description: "Complex enterprise apps",
-        features: [
-          "All platforms",
-          "Unlimited screens",
-          "Enterprise integrations",
-          "Advanced security",
-          "Dedicated support team",
-          "Custom features"
-        ]
-      }
-    ],
-    caseStudies: [
-      {
-        company: "RetailMax",
-        industry: "Retail",
-        challenge: "Needed a mobile commerce platform to compete with larger retailers.",
-        solution: "Built a cross-platform shopping app with personalized recommendations and seamless checkout.",
-        results: [
-          "1M+ downloads in first year",
-          "35% of total sales from mobile",
-          "4.8 star rating on both stores",
-          "Customer retention up 45%"
-        ]
-      }
-    ],
-    faqs: [
-      {
-        question: "Should I choose native or cross-platform development?",
-        answer: "Cross-platform (React Native/Flutter) is cost-effective and faster for most apps. Native development is recommended for apps requiring complex animations, AR/VR features, or maximum performance."
-      },
-      {
-        question: "How long does it take to get an app on the App Store?",
-        answer: "Development typically takes 3-6 months. App Store review takes 1-3 days for iOS and 1-7 days for Google Play. We handle the entire submission process."
-      }
-    ]
-  },
+  // ==================== ARTIFICIAL INTELLIGENCE ====================
   {
     slug: "ai-machine-learning",
     name: "AI & Machine Learning",
@@ -687,6 +490,98 @@ export const servicesData: ServiceDetail[] = [
       {
         question: "Which processes should we automate first?",
         answer: "We recommend starting with high-volume, rule-based processes with clear ROI. We conduct process discovery to identify and prioritize the best automation candidates."
+      }
+    ]
+  },
+  // ==================== DEVELOPMENT & ENGINEERING ====================
+  {
+    slug: "mobile-app-development",
+    name: "Mobile App Development",
+    shortDescription: "Native and cross-platform mobile applications for iOS and Android.",
+    fullDescription: "Create powerful mobile experiences that engage your users and drive business growth. Our mobile development team specializes in both native and cross-platform solutions, ensuring your app delivers exceptional performance and user experience on every device.",
+    icon: Smartphone,
+    category: "Development & Engineering",
+    features: [
+      "React Native & Flutter development",
+      "Native iOS (Swift) and Android (Kotlin)",
+      "App Store optimization",
+      "Push notifications & analytics",
+      "Offline-first architecture",
+      "Biometric authentication",
+      "Payment integration",
+      "Real-time synchronization"
+    ],
+    benefits: [
+      "Reach customers on their preferred devices",
+      "Increase user engagement by 60%",
+      "Generate new revenue streams",
+      "Build brand loyalty through mobile presence",
+      "Collect valuable user behavior data"
+    ],
+    technologies: ["React Native", "Flutter", "Swift", "Kotlin", "Firebase", "GraphQL", "Redux", "App Store Connect"],
+    pricing: [
+      {
+        name: "Single Platform",
+        price: "$25,000",
+        description: "iOS or Android app",
+        features: [
+          "One platform (iOS or Android)",
+          "Up to 10 screens",
+          "Basic analytics",
+          "Push notifications",
+          "App store submission"
+        ]
+      },
+      {
+        name: "Cross-Platform",
+        price: "$40,000",
+        description: "Both iOS and Android",
+        features: [
+          "iOS and Android apps",
+          "Up to 20 screens",
+          "Advanced analytics",
+          "Push notifications",
+          "App store optimization",
+          "Backend API included"
+        ],
+        popular: true
+      },
+      {
+        name: "Enterprise Mobile",
+        price: "Custom",
+        description: "Complex enterprise apps",
+        features: [
+          "All platforms",
+          "Unlimited screens",
+          "Enterprise integrations",
+          "Advanced security",
+          "Dedicated support team",
+          "Custom features"
+        ]
+      }
+    ],
+    caseStudies: [
+      {
+        company: "RetailMax",
+        industry: "Retail",
+        challenge: "Needed a mobile commerce platform to compete with larger retailers.",
+        solution: "Built a cross-platform shopping app with personalized recommendations and seamless checkout.",
+        results: [
+          "1M+ downloads in first year",
+          "35% of total sales from mobile",
+          "4.8 star rating on both stores",
+          "Customer retention up 45%"
+        ]
+      }
+    ],
+    faqs: [
+      {
+        question: "Should I choose native or cross-platform development?",
+        answer: "Cross-platform (React Native/Flutter) is cost-effective and faster for most apps. Native development is recommended for apps requiring complex animations, AR/VR features, or maximum performance."
+      },
+      {
+        question: "How long does it take to get an app on the App Store?",
+        answer: "Development typically takes 3-6 months. App Store review takes 1-3 days for iOS and 1-7 days for Google Play. We handle the entire submission process."
       }
     ]
   },
