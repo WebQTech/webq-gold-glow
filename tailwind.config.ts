@@ -71,6 +71,7 @@ export default {
         sans: ["Inter", "sans-serif"],
         serif: ["Playfair Display", "serif"],
         sora: ["Sora", "sans-serif"],
+        montserrat: ["Montserrat", "sans-serif"],
       },
       keyframes: {
         "accordion-down": {

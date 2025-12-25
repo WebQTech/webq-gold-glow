@@ -39,11 +39,11 @@ export const Footer = () => {
           {/* Brand Column */}
           <div className="col-span-2 md:col-span-3 lg:col-span-1 mb-8 lg:mb-0">
             <a href="#" className="flex items-center gap-2 mb-6">
-              <div className="w-8 h-8 bg-gradient-primary rounded-sm flex items-center justify-center">
-                <span className="text-white font-bold text-sm">W</span>
+              <div className="w-9 h-9 bg-gradient-primary rounded-lg flex items-center justify-center">
+                <span className="text-white font-montserrat font-extrabold text-lg">W</span>
               </div>
-              <span className="font-sora text-lg font-bold">
-                webq<span className="text-[hsl(195,100%,45%)]">tech</span>
+              <span className="font-montserrat text-lg font-bold tracking-tight">
+                WebQ <span className="text-primary">Technologies</span>
               </span>
             </a>
             <p className="text-sm text-white/50 max-w-xs leading-relaxed">
