@@ -5,6 +5,7 @@ import { Link, useLocation } from "react-router-dom";
 import { servicesData, getAllCategories } from "@/data/servicesData";
 import { AccessibilityPanel } from "@/components/AccessibilityPanel";
 import { useSmoothScroll } from "@/hooks/useSmoothScroll";
+import { useScrollSpy } from "@/hooks/useScrollSpy";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -14,12 +15,22 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 
+// Section definitions for scroll spy
+const navSections = [
+  { id: "industries", label: "Industries" },
+  { id: "insights", label: "Insights" },
+  { id: "about", label: "About" },
+  { id: "contact", label: "Contact" },
+];
+
 export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
   const isHomePage = location.pathname === "/";
+  const isServicesPage = location.pathname.startsWith("/services");
   const { handleAnchorClick } = useSmoothScroll();
+  const { isActive } = useScrollSpy(navSections, 150);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -39,8 +50,8 @@ export const Navbar = () => {
   }, []);
 
   const navLinks = [
-    { label: "Insights", href: isHomePage ? "#insights" : "/#insights", isExternal: false },
-    { label: "About", href: isHomePage ? "#about" : "/#about", isExternal: false },
+    { label: "Insights", href: isHomePage ? "#insights" : "/#insights", sectionId: "insights" },
+    { label: "About", href: isHomePage ? "#about" : "/#about", sectionId: "about" },
   ];
 
   const topLinks = [
@@ -113,19 +124,37 @@ export const Navbar = () => {
               <a
                 href={isHomePage ? "#industries" : "/#industries"}
                 onClick={handleAnchorClick(isHomePage ? "#industries" : "/#industries")}
-                className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors duration-200"
+                className={`text-sm font-medium transition-colors duration-200 relative ${
+                  isHomePage && isActive("industries")
+                    ? "text-primary"
+                    : "text-foreground/80 hover:text-primary"
+                }`}
               >
                 Industries
+                {isHomePage && isActive("industries") && (
+                  <motion.span
+                    layoutId="activeNav"
+                    className="absolute -bottom-1 left-0 right-0 h-0.5 bg-primary rounded-full"
+                    transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                  />
+                )}
               </a>
 
               {/* Services Dropdown */}
               <DropdownMenu>
                 <DropdownMenuTrigger 
-                  className="flex items-center gap-1 text-sm font-medium text-foreground/80 hover:text-primary transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded-sm"
+                  className={`flex items-center gap-1 text-sm font-medium transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded-sm relative ${
+                    isServicesPage
+                      ? "text-primary"
+                      : "text-foreground/80 hover:text-primary"
+                  }`}
                   aria-label="Services menu"
                 >
                   Services
                   <ChevronDown className="w-4 h-4 transition-transform duration-200 group-data-[state=open]:rotate-180" />
+                  {isServicesPage && (
+                    <span className="absolute -bottom-1 left-0 right-0 h-0.5 bg-primary rounded-full" />
+                  )}
                 </DropdownMenuTrigger>
                 <DropdownMenuContent 
                   align="start" 
@@ -168,24 +197,25 @@ export const Navbar = () => {
 
               {/* Other nav links */}
               {navLinks.map((link) => (
-                link.href.startsWith("/") && !link.href.startsWith("/#") ? (
-                  <Link
-                    key={link.label}
-                    to={link.href}
-                    className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors duration-200"
-                  >
-                    {link.label}
-                  </Link>
-                ) : (
-                  <a
-                    key={link.label}
-                    href={link.href}
-                    onClick={handleAnchorClick(link.href)}
-                    className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors duration-200"
-                  >
-                    {link.label}
-                  </a>
-                )
+                <a
+                  key={link.label}
+                  href={link.href}
+                  onClick={handleAnchorClick(link.href)}
+                  className={`text-sm font-medium transition-colors duration-200 relative ${
+                    isHomePage && isActive(link.sectionId)
+                      ? "text-primary"
+                      : "text-foreground/80 hover:text-primary"
+                  }`}
+                >
+                  {link.label}
+                  {isHomePage && isActive(link.sectionId) && (
+                    <motion.span
+                      layoutId="activeNav"
+                      className="absolute -bottom-1 left-0 right-0 h-0.5 bg-primary rounded-full"
+                      transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                    />
+                  )}
+                </a>
               ))}
             </div>
 
@@ -194,7 +224,9 @@ export const Navbar = () => {
               <a 
                 href={isHomePage ? "#contact" : "/#contact"}
                 onClick={handleAnchorClick(isHomePage ? "#contact" : "/#contact")}
-                className="btn-primary text-sm px-6 py-2.5"
+                className={`btn-primary text-sm px-6 py-2.5 ${
+                  isHomePage && isActive("contact") ? "ring-2 ring-primary/50 ring-offset-2 ring-offset-background" : ""
+                }`}
               >
                 Contact Us
               </a>
