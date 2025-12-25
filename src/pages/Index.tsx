@@ -1,31 +1,27 @@
-import { AmbientGlows } from "@/components/AmbientGlows";
 import { Navbar } from "@/components/Navbar";
 import { HeroSection } from "@/components/HeroSection";
+import { ValueProposition } from "@/components/ValueProposition";
+import { FeaturedSection } from "@/components/FeaturedSection";
+import { CaseStudiesSection } from "@/components/CaseStudiesSection";
 import { AboutSection } from "@/components/AboutSection";
-import { ProductsSection } from "@/components/ProductsSection";
-import { ServicesSection } from "@/components/ServicesSection";
-import { IndustriesSection } from "@/components/IndustriesSection";
-import { CapabilitiesSection } from "@/components/CapabilitiesSection";
-import { ProcessSection } from "@/components/ProcessSection";
-import { CTASection } from "@/components/CTASection";
+import { InsightBanner } from "@/components/InsightBanner";
+import { NewsSection } from "@/components/NewsSection";
+import { ContactSection } from "@/components/ContactSection";
 import { Footer } from "@/components/Footer";
 import BackToTopButton from "@/components/BackToTopButton";
 
 const Index = () => {
   return (
-    <main className="relative overflow-hidden bg-gradient-subtle">
-      <AmbientGlows />
+    <main className="relative overflow-hidden bg-background">
       <Navbar />
       <HeroSection />
+      <ValueProposition />
+      <FeaturedSection />
+      <CaseStudiesSection />
       <AboutSection />
-      <ProductsSection />
-      <ServicesSection />
-      <IndustriesSection />
-      <CapabilitiesSection />
-      
-      <ProcessSection />
-      
-      <CTASection />
+      <InsightBanner />
+      <NewsSection />
+      <ContactSection />
       <Footer />
       <BackToTopButton />
     </main>

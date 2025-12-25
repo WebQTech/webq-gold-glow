@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Globe, ChevronDown } from "lucide-react";
 
 export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -15,56 +15,96 @@ export const Navbar = () => {
   }, []);
 
   const navLinks = [
-    { label: "Products", href: "#products" },
-    { label: "Solutions", href: "#solutions" },
     { label: "Industries", href: "#industries" },
-    { label: "Process", href: "#process" },
+    { label: "Services", href: "#solutions" },
+    { label: "Insights", href: "#insights" },
     { label: "About", href: "#about" },
   ];
 
-  return (
-    <motion.nav
-      initial={{ y: -100, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.6, ease: "easeOut" }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-cream/90 backdrop-blur-xl border-b border-navy/5" : ""
-      }`}
-    >
-      <div className="container mx-auto px-6 lg:px-12 py-6">
-        <div className="flex items-center justify-between">
-          {/* Logo */}
-          <a href="#" className="font-sora text-lg font-bold text-navy">
-            WebQTech
-          </a>
+  const topLinks = [
+    { label: "Careers", href: "#careers" },
+    { label: "News", href: "#news" },
+    { label: "Investors", href: "#investors" },
+  ];
 
-          {/* Desktop Nav Links */}
-          <div className="hidden lg:flex items-center gap-8">
-            {navLinks.map((link) => (
+  return (
+    <>
+      {/* Top utility bar */}
+      <div className="hidden lg:block bg-background border-b border-border/50">
+        <div className="container mx-auto px-6 lg:px-12">
+          <div className="flex items-center justify-end gap-6 py-2">
+            {topLinks.map((link) => (
               <a
                 key={link.label}
                 href={link.href}
-                className="text-sm text-navy/60 hover:text-navy transition-colors duration-300"
+                className="text-xs text-foreground/60 hover:text-primary transition-colors"
               >
                 {link.label}
               </a>
             ))}
+            <div className="flex items-center gap-1 text-xs text-foreground/60 cursor-pointer hover:text-primary transition-colors">
+              <Globe className="w-3 h-3" />
+              <span>US-EN</span>
+              <ChevronDown className="w-3 h-3" />
+            </div>
           </div>
+        </div>
+      </div>
 
-          {/* Desktop CTA */}
-          <div className="hidden lg:block">
-            <a href="#contact" className="text-sm font-medium text-primary hover:text-primary-light transition-colors">
-              Let's Talk →
+      {/* Main navbar */}
+      <motion.nav
+        initial={{ y: -100, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
+        className={`sticky top-0 z-50 transition-all duration-300 ${
+          isScrolled 
+            ? "bg-background shadow-sm" 
+            : "bg-background"
+        }`}
+      >
+        <div className="container mx-auto px-6 lg:px-12">
+          <div className="flex items-center justify-between h-16 lg:h-20">
+            {/* Logo */}
+            <a href="#" className="flex items-center gap-3">
+              <div className="w-8 h-8 bg-gradient-primary rounded-sm flex items-center justify-center">
+                <span className="text-white font-bold text-sm">W</span>
+              </div>
+              <span className="font-sora text-xl font-bold text-foreground">
+                webq<span className="text-primary">technologies</span>
+              </span>
             </a>
-          </div>
 
-          {/* Mobile Menu Button */}
-          <button
-            className="lg:hidden text-navy"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          >
-            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+            {/* Desktop Nav Links */}
+            <div className="hidden lg:flex items-center gap-8">
+              {navLinks.map((link) => (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors duration-200"
+                >
+                  {link.label}
+                </a>
+              ))}
+            </div>
+
+            {/* Desktop CTA */}
+            <div className="hidden lg:flex items-center gap-4">
+              <a 
+                href="#contact" 
+                className="btn-primary text-sm px-6 py-2.5"
+              >
+                Contact Us
+              </a>
+            </div>
+
+            {/* Mobile Menu Button */}
+            <button
+              className="lg:hidden text-foreground p-2"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            >
+              {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Menu */}
@@ -74,29 +114,43 @@ export const Navbar = () => {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
-              className="lg:hidden mt-6 pb-6 border-t border-navy/10 pt-6 overflow-hidden"
+              className="lg:hidden bg-background border-t border-border overflow-hidden"
             >
-              {navLinks.map((link) => (
+              <div className="container mx-auto px-6 py-4">
+                {navLinks.map((link) => (
+                  <a
+                    key={link.label}
+                    href={link.href}
+                    className="block py-3 text-foreground/80 hover:text-primary transition-colors border-b border-border/50"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    {link.label}
+                  </a>
+                ))}
+                <div className="pt-4 space-y-3">
+                  {topLinks.map((link) => (
+                    <a
+                      key={link.label}
+                      href={link.href}
+                      className="block text-sm text-foreground/60 hover:text-primary transition-colors"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      {link.label}
+                    </a>
+                  ))}
+                </div>
                 <a
-                  key={link.label}
-                  href={link.href}
-                  className="block py-4 text-navy/70 hover:text-navy transition-colors border-b border-navy/10"
+                  href="#contact"
+                  className="block mt-4 btn-primary text-center text-sm"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  {link.label}
+                  Contact Us
                 </a>
-              ))}
-              <a
-                href="#contact"
-                className="block py-4 font-medium text-primary"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Let's Talk →
-              </a>
+              </div>
             </motion.div>
           )}
         </AnimatePresence>
-      </div>
-    </motion.nav>
+      </motion.nav>
+    </>
   );
 };

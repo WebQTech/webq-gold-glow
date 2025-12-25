@@ -1,162 +1,67 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { Brain, Workflow, Wrench, ArrowRight } from "lucide-react";
-import { AIBrainVisual } from "./AIBrainVisual";
+import { ArrowRight, Building2, Users, Globe, Award } from "lucide-react";
 
-const statsPills = [
-  { label: "100+ Projects" },
-  { label: "20+ Years" },
-  { label: "Global 24/7" },
+const stats = [
+  { icon: Building2, value: "500+", label: "Enterprise Clients" },
+  { icon: Users, value: "5,000+", label: "Team Members" },
+  { icon: Globe, value: "30+", label: "Countries" },
+  { icon: Award, value: "20+", label: "Years Experience" },
 ];
-
-const aiTags = [
-  { icon: Brain, label: "LLMs" },
-  { icon: Workflow, label: "AI SDLC" },
-  { icon: Wrench, label: "Modern Tools" },
-];
-
-const sdlcSteps = ["Ideation", "Development", "Deployment", "Production"];
 
 export const AboutSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="about" ref={ref} className="py-16 lg:py-20 bg-cream relative overflow-hidden scroll-mt-20">
-      <div className="container mx-auto px-6 lg:px-12 relative z-10">
-        {/* Two Column Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-[55%_45%] gap-8 lg:gap-12 items-center">
-          {/* Left Column - Compact Text Content */}
-          <div className="space-y-6">
-            {/* About WebQ Label */}
-            <motion.span
-              initial={{ opacity: 0, y: 20 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6 }}
-              className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-xs font-medium tracking-wider uppercase"
-            >
-              About WebQ
-            </motion.span>
+    <section id="about" ref={ref} className="py-16 lg:py-24 bg-background scroll-mt-20">
+      <div className="container mx-auto px-6 lg:px-12">
+        {/* Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.7 }}
+          className="max-w-3xl mb-16"
+        >
+          <span className="section-label">About WebQ Technologies</span>
+          <h2 className="mt-4 text-3xl lg:text-4xl font-bold text-foreground">
+            We engineer technology for lasting business impact
+          </h2>
+          <p className="mt-4 text-foreground/70 text-lg leading-relaxed">
+            WebQ Technologies partners with enterprises worldwide to modernize technology, 
+            reimagine processes, and transform experiences. Our deep industry expertise and 
+            innovative approach help clients navigate complexity and achieve their strategic goals.
+          </p>
+          <a 
+            href="#"
+            className="inline-flex items-center gap-2 mt-6 text-primary font-semibold hover:gap-3 transition-all"
+          >
+            Learn more about us
+            <ArrowRight className="w-4 h-4" />
+          </a>
+        </motion.div>
 
-            {/* Who We Are */}
+        {/* Stats Grid */}
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+          {stats.map((stat, index) => (
             <motion.div
+              key={stat.label}
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.1 }}
+              transition={{ duration: 0.5, delay: 0.1 * index }}
+              className="text-center"
             >
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-medium leading-tight text-navy mb-3">
-                Who We Are
-              </h2>
-              <p className="text-sm md:text-base leading-relaxed text-navy/70">
-                Enterprise technology. 100+ projects. Decades of experience. Global delivery.
-              </p>
-            </motion.div>
-
-            {/* Stats Pills */}
-            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.15 }}
-              className="flex flex-wrap gap-2"
-            >
-              {statsPills.map((stat) => (
-                <div
-                  key={stat.label}
-                  className="inline-flex items-center px-3 py-1.5 rounded-full bg-plum/10 border border-plum/20 text-navy text-xs font-medium"
-                >
-                  {stat.label}
-                </div>
-              ))}
-            </motion.div>
-
-            {/* Gold Divider */}
-            <motion.div
-              initial={{ opacity: 0, scaleX: 0 }}
-              animate={isInView ? { opacity: 1, scaleX: 1 } : {}}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="h-px w-full bg-gradient-to-r from-gold via-gold/60 to-transparent origin-left"
-            />
-
-            {/* AI at Every Stage */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.25 }}
-              className="space-y-3"
-            >
-              <h3 className="text-lg md:text-xl font-medium text-navy">
-                AI at Every Stage
-              </h3>
-              
-              {/* SDLC Flow */}
-              <div className="flex flex-wrap items-center gap-1.5 text-xs text-navy/60">
-                {sdlcSteps.map((step, index) => (
-                  <span key={step} className="flex items-center gap-1.5">
-                    <span className="font-medium">{step}</span>
-                    {index < sdlcSteps.length - 1 && (
-                      <span className="text-gold">→</span>
-                    )}
-                  </span>
-                ))}
+              <div className="inline-flex items-center justify-center w-14 h-14 rounded-lg bg-primary/10 text-primary mb-4">
+                <stat.icon className="w-6 h-6" />
               </div>
-
-              {/* AI Tags */}
-              <div className="flex flex-wrap gap-2">
-                {aiTags.map((tag) => (
-                  <div
-                    key={tag.label}
-                    className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white border border-gold/30 text-navy text-[11px] font-medium"
-                  >
-                    <tag.icon className="w-3 h-3 text-primary" />
-                    <span>{tag.label}</span>
-                  </div>
-                ))}
+              <div className="text-3xl lg:text-4xl font-bold text-foreground">
+                {stat.value}
+              </div>
+              <div className="mt-1 text-sm text-foreground/60">
+                {stat.label}
               </div>
             </motion.div>
-
-            {/* Gold Divider */}
-            <motion.div
-              initial={{ opacity: 0, scaleX: 0 }}
-              animate={isInView ? { opacity: 1, scaleX: 1 } : {}}
-              transition={{ duration: 0.8, delay: 0.3 }}
-              className="h-px w-full bg-gradient-to-r from-gold via-gold/60 to-transparent origin-left"
-            />
-
-            {/* Case Study - Compact */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.35 }}
-              className="flex items-center justify-between gap-4"
-            >
-              <div className="flex items-center gap-3">
-                <span className="px-2 py-0.5 rounded bg-primary/10 text-primary text-[10px] font-semibold tracking-wider uppercase">
-                  Case Study
-                </span>
-                <div>
-                  <span className="font-semibold text-navy text-sm">Classium</span>
-                  <span className="text-navy/60 text-xs ml-2">AI-powered business management</span>
-                </div>
-              </div>
-              <a
-                href="#case-studies"
-                className="inline-flex items-center gap-1.5 text-primary text-xs font-medium hover:gap-2.5 transition-all duration-300 whitespace-nowrap"
-              >
-                <span>View</span>
-                <ArrowRight className="w-3.5 h-3.5" />
-              </a>
-            </motion.div>
-          </div>
-
-          {/* Right Column - 3D AI Brain Visual */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={isInView ? { opacity: 1, scale: 1 } : {}}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative h-[300px] md:h-[350px] lg:h-[400px]"
-          >
-            <AIBrainVisual />
-          </motion.div>
+          ))}
         </div>
       </div>
     </section>
