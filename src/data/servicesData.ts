@@ -1964,14 +1964,14 @@ export const servicesData: ServiceDetail[] = [
     icon: RefreshCw,
     category: "Cloud & Infrastructure",
     features: [
-      "Monolith to microservices",
-      "Containerization (Docker/K8s)",
-      "Database modernization",
-      "Technical debt reduction",
-      "Code refactoring",
-      "Framework upgrades",
-      "API enablement",
-      "Performance optimization"
+      "Monolith to microservices migration",
+      "Containerization with Docker & Kubernetes",
+      "Database upgrades & optimization",
+      "Technical debt remediation",
+      "Code refactoring & cleanup",
+      "Framework & library upgrades",
+      "API-first architecture enablement",
+      "Performance tuning & scalability"
     ],
     benefits: [
       "Improved system performance",
