@@ -2312,6 +2312,97 @@ export const servicesData: ServiceDetail[] = [
         answer: "We monitor dark web forums, marketplaces, and paste sites for mentions of your organization, leaked credentials, stolen data, or planned attacks. This early warning allows you to respond before attackers can use compromised information."
       }
     ]
+  },
+  {
+    slug: "vulnerability-management",
+    name: "Vulnerability Management",
+    shortDescription: "Identify, prioritize, and remediate security vulnerabilities across your infrastructure.",
+    fullDescription: "Proactively discover and address security weaknesses before attackers can exploit them. Our vulnerability management services provide continuous scanning, risk-based prioritization, and guided remediation to help organizations maintain a strong security posture across their entire technology stack.",
+    icon: Shield,
+    category: "Security",
+    features: [
+      "Continuous vulnerability scanning",
+      "Asset discovery & inventory",
+      "Risk-based prioritization",
+      "Patch management support",
+      "Configuration assessment",
+      "Web application scanning",
+      "Container & cloud vulnerability scanning",
+      "Remediation tracking & reporting"
+    ],
+    benefits: [
+      "Reduce attack surface by 70%",
+      "Prioritize vulnerabilities by business risk",
+      "Meet compliance scanning requirements",
+      "Accelerate remediation cycles",
+      "Track security posture over time"
+    ],
+    technologies: ["Tenable Nessus", "Qualys", "Rapid7 InsightVM", "CrowdStrike Falcon Spotlight", "Wiz", "Snyk", "Burp Suite", "OWASP ZAP"],
+    pricing: [
+      {
+        name: "VM Essentials",
+        price: "$4,000/month",
+        description: "Core vulnerability scanning",
+        features: [
+          "Weekly vulnerability scans",
+          "Up to 500 assets",
+          "Risk-based prioritization",
+          "Monthly reports",
+          "Remediation guidance"
+        ]
+      },
+      {
+        name: "VM Professional",
+        price: "$10,000/month",
+        description: "Comprehensive vulnerability program",
+        features: [
+          "Continuous scanning",
+          "Up to 2,000 assets",
+          "Web application scanning",
+          "Cloud & container scanning",
+          "Patch prioritization",
+          "Weekly executive reports"
+        ],
+        popular: true
+      },
+      {
+        name: "VM Enterprise",
+        price: "Custom",
+        description: "Enterprise-scale program",
+        features: [
+          "Unlimited assets",
+          "Custom scan schedules",
+          "API integrations",
+          "Dedicated analyst team",
+          "SLA-based remediation",
+          "Board-level reporting"
+        ]
+      }
+    ],
+    caseStudies: [
+      {
+        company: "HealthNet Systems",
+        industry: "Healthcare",
+        challenge: "Large healthcare network with thousands of devices, struggling to manage vulnerabilities and meet HIPAA requirements.",
+        solution: "Implemented continuous vulnerability management program with risk-based prioritization and automated patch recommendations.",
+        results: [
+          "Critical vulnerabilities reduced by 85%",
+          "Mean time to remediate decreased from 45 to 7 days",
+          "Achieved full HIPAA compliance",
+          "Visibility into 100% of network assets"
+        ]
+      }
+    ],
+    faqs: [
+      {
+        question: "How often should we scan for vulnerabilities?",
+        answer: "Best practice is continuous or daily scanning for critical systems, weekly for standard infrastructure, and after any significant changes. Our program adapts scanning frequency based on asset criticality and compliance requirements."
+      },
+      {
+        question: "How do you prioritize which vulnerabilities to fix first?",
+        answer: "We use risk-based prioritization that considers CVSS scores, exploit availability, asset criticality, business context, and threat intelligence. This ensures you focus resources on vulnerabilities that pose the greatest actual risk to your organization."
+      }
+    ]
   }
 ];
 
