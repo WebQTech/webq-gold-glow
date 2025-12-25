@@ -18,13 +18,11 @@ const ServiceDetail = () => {
 
   const heroRef = useRef(null);
   const featuresRef = useRef(null);
-  const pricingRef = useRef(null);
   const caseStudiesRef = useRef(null);
   const faqRef = useRef(null);
 
   const isHeroInView = useInView(heroRef, { once: true });
   const isFeaturesInView = useInView(featuresRef, { once: true, margin: "-100px" });
-  const isPricingInView = useInView(pricingRef, { once: true, margin: "-100px" });
   const isCaseStudiesInView = useInView(caseStudiesRef, { once: true, margin: "-100px" });
   const isFaqInView = useInView(faqRef, { once: true, margin: "-100px" });
 
@@ -71,14 +69,11 @@ const ServiceDetail = () => {
               <p className="mt-6 text-lg text-muted-foreground">
                 {service.fullDescription}
               </p>
-              <div className="mt-8 flex flex-wrap gap-4">
+              <div className="mt-8">
                 <Link to="/#contact" className="btn-primary inline-flex items-center gap-2">
                   Get Started
                   <ArrowRight className="w-4 h-4" />
                 </Link>
-                <a href="#pricing" className="btn-secondary inline-flex items-center gap-2">
-                  View Pricing
-                </a>
               </div>
             </motion.div>
 
@@ -169,75 +164,6 @@ const ServiceDetail = () => {
                 </div>
               </div>
             </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing */}
-      <section id="pricing" ref={pricingRef} className="py-16 lg:py-24 bg-muted/30">
-        <div className="container mx-auto px-6 lg:px-12">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={isPricingInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-3xl lg:text-4xl font-bold text-foreground">
-              Pricing Plans
-            </h2>
-            <p className="mt-4 text-muted-foreground max-w-2xl mx-auto">
-              Flexible options to match your needs and budget
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            {service.pricing.map((tier, index) => (
-              <motion.div
-                key={tier.name}
-                initial={{ opacity: 0, y: 30 }}
-                animate={isPricingInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className={`relative bg-card rounded-2xl p-8 border ${
-                  tier.popular
-                    ? "border-primary shadow-lg shadow-primary/10"
-                    : "border-border"
-                }`}
-              >
-                {tier.popular && (
-                  <span className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 bg-primary text-white text-sm font-medium rounded-full">
-                    Most Popular
-                  </span>
-                )}
-                <div className="text-center mb-6">
-                  <h3 className="text-xl font-semibold text-foreground">{tier.name}</h3>
-                  <div className="mt-4">
-                    <span className="text-4xl font-bold text-foreground">{tier.price}</span>
-                    {tier.price !== "Custom" && !tier.price.includes("/mo") && (
-                      <span className="text-muted-foreground ml-1">starting</span>
-                    )}
-                  </div>
-                  <p className="mt-2 text-sm text-muted-foreground">{tier.description}</p>
-                </div>
-                <ul className="space-y-3 mb-8">
-                  {tier.features.map((feature, i) => (
-                    <li key={i} className="flex items-start gap-2 text-sm">
-                      <Check className="w-4 h-4 text-primary shrink-0 mt-0.5" />
-                      <span className="text-foreground/80">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-                <Link
-                  to="/#contact"
-                  className={`block w-full text-center py-3 rounded-lg font-medium transition-colors ${
-                    tier.popular
-                      ? "bg-primary text-white hover:bg-primary/90"
-                      : "bg-muted text-foreground hover:bg-muted/80"
-                  }`}
-                >
-                  {tier.price === "Custom" ? "Contact Us" : "Get Started"}
-                </Link>
-              </motion.div>
-            ))}
           </div>
         </div>
       </section>
