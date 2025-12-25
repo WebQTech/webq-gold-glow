@@ -53,6 +53,80 @@
     --background: 215 50% 12%;
     --foreground: 0 0% 100%;
   }
+
+  /* High Contrast Mode - WCAG AAA compliant */
+  .high-contrast {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 0%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 0%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 0%;
+
+    --primary: 240 100% 25%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 240 100% 35%;
+
+    --secondary: 0 0% 95%;
+    --secondary-foreground: 0 0% 0%;
+
+    --muted: 0 0% 90%;
+    --muted-foreground: 0 0% 20%;
+
+    --accent: 240 100% 25%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 100% 40%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 0%;
+    --input: 0 0% 0%;
+    --ring: 240 100% 25%;
+
+    --cognizant-blue: 240 100% 25%;
+    --cognizant-dark: 0 0% 0%;
+    --cognizant-cyan: 240 100% 35%;
+    --cognizant-light: 0 0% 95%;
+    --navy: 0 0% 0%;
+    --charcoal: 0 0% 0%;
+  }
+
+  .high-contrast.dark {
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
+
+    --card: 0 0% 5%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 0 0% 5%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 60 100% 50%;
+    --primary-foreground: 0 0% 0%;
+    --primary-light: 60 100% 60%;
+
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 0 0% 20%;
+    --muted-foreground: 0 0% 80%;
+
+    --accent: 60 100% 50%;
+    --accent-foreground: 0 0% 0%;
+
+    --border: 0 0% 100%;
+    --input: 0 0% 100%;
+    --ring: 60 100% 50%;
+
+    --cognizant-blue: 60 100% 50%;
+    --cognizant-dark: 0 0% 0%;
+    --cognizant-cyan: 60 100% 60%;
+    --cognizant-light: 0 0% 15%;
+    --navy: 0 0% 0%;
+    --charcoal: 0 0% 100%;
+  }
 }
 
 @layer base {

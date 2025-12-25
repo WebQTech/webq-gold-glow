@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Globe, ChevronDown } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { servicesData, getAllCategories } from "@/data/servicesData";
+import { HighContrastToggle } from "@/components/HighContrastToggle";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -60,7 +61,7 @@ export const Navbar = () => {
       {/* Top utility bar */}
       <div className="hidden lg:block bg-background border-b border-border/50">
         <div className="container mx-auto px-6 lg:px-12">
-          <div className="flex items-center justify-end gap-6 py-2">
+          <div className="flex items-center justify-end gap-4 py-2">
             {topLinks.map((link) => (
               <a
                 key={link.label}
@@ -74,6 +75,9 @@ export const Navbar = () => {
               <Globe className="w-3 h-3" />
               <span>US-EN</span>
               <ChevronDown className="w-3 h-3" />
+            </div>
+            <div className="border-l border-border/50 pl-4">
+              <HighContrastToggle />
             </div>
           </div>
         </div>
@@ -288,6 +292,10 @@ export const Navbar = () => {
                       {link.label}
                     </a>
                   ))}
+                </div>
+                <div className="pt-4 flex items-center gap-3 border-t border-border/50 mt-4">
+                  <span className="text-sm text-foreground/60">Accessibility:</span>
+                  <HighContrastToggle />
                 </div>
                 <Link
                   to={isHomePage ? "#contact" : "/#contact"}
