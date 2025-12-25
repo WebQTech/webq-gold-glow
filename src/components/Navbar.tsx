@@ -1,10 +1,13 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Globe, ChevronDown } from "lucide-react";
+import { Link, useLocation } from "react-router-dom";
 
 export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
+  const isHomePage = location.pathname === "/";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -15,10 +18,10 @@ export const Navbar = () => {
   }, []);
 
   const navLinks = [
-    { label: "Industries", href: "#industries" },
-    { label: "Services", href: "#solutions" },
-    { label: "Insights", href: "#insights" },
-    { label: "About", href: "#about" },
+    { label: "Industries", href: isHomePage ? "#industries" : "/#industries", isExternal: false },
+    { label: "Services", href: "/services", isExternal: false },
+    { label: "Insights", href: isHomePage ? "#insights" : "/#insights", isExternal: false },
+    { label: "About", href: isHomePage ? "#about" : "/#about", isExternal: false },
   ];
 
   const topLinks = [
@@ -65,36 +68,46 @@ export const Navbar = () => {
         <div className="container mx-auto px-6 lg:px-12">
           <div className="flex items-center justify-between h-16 lg:h-20">
             {/* Logo */}
-            <a href="#" className="flex items-center gap-3">
+            <Link to="/" className="flex items-center gap-3">
               <div className="w-8 h-8 bg-gradient-primary rounded-sm flex items-center justify-center">
                 <span className="text-white font-bold text-sm">W</span>
               </div>
               <span className="font-sora text-xl font-bold text-foreground">
                 webq<span className="text-primary">technologies</span>
               </span>
-            </a>
+            </Link>
 
             {/* Desktop Nav Links */}
             <div className="hidden lg:flex items-center gap-8">
               {navLinks.map((link) => (
-                <a
-                  key={link.label}
-                  href={link.href}
-                  className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors duration-200"
-                >
-                  {link.label}
-                </a>
+                link.href.startsWith("/") && !link.href.startsWith("/#") ? (
+                  <Link
+                    key={link.label}
+                    to={link.href}
+                    className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors duration-200"
+                  >
+                    {link.label}
+                  </Link>
+                ) : (
+                  <a
+                    key={link.label}
+                    href={link.href}
+                    className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors duration-200"
+                  >
+                    {link.label}
+                  </a>
+                )
               ))}
             </div>
 
             {/* Desktop CTA */}
             <div className="hidden lg:flex items-center gap-4">
-              <a 
-                href="#contact" 
+              <Link 
+                to={isHomePage ? "#contact" : "/#contact"} 
                 className="btn-primary text-sm px-6 py-2.5"
               >
                 Contact Us
-              </a>
+              </Link>
             </div>
 
             {/* Mobile Menu Button */}
@@ -118,14 +131,25 @@ export const Navbar = () => {
             >
               <div className="container mx-auto px-6 py-4">
                 {navLinks.map((link) => (
-                  <a
-                    key={link.label}
-                    href={link.href}
-                    className="block py-3 text-foreground/80 hover:text-primary transition-colors border-b border-border/50"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    {link.label}
-                  </a>
+                  link.href.startsWith("/") && !link.href.startsWith("/#") ? (
+                    <Link
+                      key={link.label}
+                      to={link.href}
+                      className="block py-3 text-foreground/80 hover:text-primary transition-colors border-b border-border/50"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      {link.label}
+                    </Link>
+                  ) : (
+                    <a
+                      key={link.label}
+                      href={link.href}
+                      className="block py-3 text-foreground/80 hover:text-primary transition-colors border-b border-border/50"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      {link.label}
+                    </a>
+                  )
                 ))}
                 <div className="pt-4 space-y-3">
                   {topLinks.map((link) => (
@@ -139,13 +163,13 @@ export const Navbar = () => {
                     </a>
                   ))}
                 </div>
-                <a
-                  href="#contact"
+                <Link
+                  to={isHomePage ? "#contact" : "/#contact"}
                   className="block mt-4 btn-primary text-center text-sm"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Contact Us
-                </a>
+                </Link>
               </div>
             </motion.div>
           )}
