@@ -47,15 +47,13 @@ export const servicesData: ServiceDetail[] = [
     category: "Artificial Intelligence",
     features: [
       "Custom ML model development",
-      "Natural language processing",
-      "Computer vision solutions",
-      "Predictive analytics",
+      "Predictive analytics & forecasting",
       "Recommendation engines",
-      "Chatbots and virtual assistants",
-      "Anomaly detection",
+      "Anomaly detection systems",
       "Document processing and OCR",
+      "Data pipeline automation",
+      "Model optimization & deployment",
       "AI ethics & responsible AI practices",
-      "Bias detection and fairness audits",
       "EU AI Act & GDPR compliance",
       "AI risk assessment frameworks"
     ],
@@ -599,14 +597,14 @@ export const servicesData: ServiceDetail[] = [
     icon: Bot,
     category: "Artificial Intelligence",
     features: [
-      "Domain-specific AI agents",
-      "Customer service agents",
-      "Sales and support assistants",
-      "Research and analysis agents",
-      "Coding assistants",
-      "Knowledge base agents",
-      "Voice-enabled agents",
-      "Multi-modal agents (text, image, voice)"
+      "Domain-specific expertise",
+      "Customer service automation",
+      "Sales and support workflows",
+      "Research and analysis capabilities",
+      "Code generation and review",
+      "Knowledge base integration",
+      "Voice-enabled interactions",
+      "Multi-modal support (text, image, voice)"
     ],
     benefits: [
       "24/7 availability for customers",
