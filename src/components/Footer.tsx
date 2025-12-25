@@ -1,50 +1,87 @@
 import { motion } from "framer-motion";
-import { Linkedin, Twitter } from "lucide-react";
+import { Linkedin, Twitter, Youtube, Facebook } from "lucide-react";
 
 const footerLinks = {
-  Solutions: [
-    { label: "Custom Software", href: "#services" },
-    { label: "Cloud Migration", href: "#services" },
-    { label: "AI Solutions", href: "#services" },
-    { label: "Cybersecurity", href: "#services" },
+  Industries: [
+    { label: "Healthcare", href: "#industries" },
+    { label: "Banking & Finance", href: "#industries" },
+    { label: "Retail", href: "#industries" },
+    { label: "Manufacturing", href: "#industries" },
+    { label: "Technology", href: "#industries" },
+  ],
+  Services: [
+    { label: "AI Solutions", href: "#solutions" },
+    { label: "Cloud Services", href: "#solutions" },
+    { label: "Digital Engineering", href: "#solutions" },
+    { label: "Data & Analytics", href: "#solutions" },
+    { label: "Enterprise Platforms", href: "#solutions" },
   ],
   Company: [
-    { label: "About", href: "#about" },
-    { label: "Process", href: "#process" },
+    { label: "About Us", href: "#about" },
+    { label: "Leadership", href: "#about" },
+    { label: "Careers", href: "#careers" },
+    { label: "News", href: "#news" },
     { label: "Contact", href: "#contact" },
   ],
   Resources: [
-    { label: "Case Studies", href: "#about" },
+    { label: "Case Studies", href: "#insights" },
+    { label: "Insights", href: "#insights" },
+    { label: "Blog", href: "#" },
+    { label: "Events", href: "#" },
   ],
 };
 
 export const Footer = () => {
   return (
-    <footer className="border-t border-navy/6 py-16 lg:py-20">
-      <div className="container mx-auto px-6 lg:px-12">
-        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-12">
+    <footer className="bg-[hsl(215,50%,8%)] text-white">
+      <div className="container mx-auto px-6 lg:px-12 py-16">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
           {/* Brand Column */}
-          <div className="lg:col-span-2">
-            <a href="#" className="font-sora text-xl font-bold text-navy">
-              WebQ Tech
+          <div className="col-span-2 md:col-span-3 lg:col-span-1 mb-8 lg:mb-0">
+            <a href="#" className="flex items-center gap-2 mb-6">
+              <div className="w-8 h-8 bg-gradient-primary rounded-sm flex items-center justify-center">
+                <span className="text-white font-bold text-sm">W</span>
+              </div>
+              <span className="font-sora text-lg font-bold">
+                webq<span className="text-[hsl(195,100%,45%)]">tech</span>
+              </span>
             </a>
-            <p className="mt-4 text-sm text-navy/50 max-w-xs leading-relaxed">
-              Enterprise-grade IT solutions that empower organizations to innovate and scale.
+            <p className="text-sm text-white/50 max-w-xs leading-relaxed">
+              Enterprise technology solutions that transform businesses and drive innovation.
             </p>
+
+            {/* Social Links */}
+            <div className="flex items-center gap-3 mt-6">
+              {[
+                { icon: Linkedin, href: "#" },
+                { icon: Twitter, href: "#" },
+                { icon: Youtube, href: "#" },
+                { icon: Facebook, href: "#" },
+              ].map((social, i) => (
+                <motion.a
+                  key={i}
+                  href={social.href}
+                  whileHover={{ scale: 1.1 }}
+                  className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-white/60 hover:text-white hover:bg-white/20 transition-colors"
+                >
+                  <social.icon className="w-4 h-4" />
+                </motion.a>
+              ))}
+            </div>
           </div>
 
           {/* Link Columns */}
           {Object.entries(footerLinks).map(([title, links]) => (
             <div key={title}>
-              <h4 className="text-xs font-semibold uppercase tracking-wider text-navy/40 mb-4">
+              <h4 className="text-sm font-semibold uppercase tracking-wider text-white/40 mb-4">
                 {title}
               </h4>
-              <ul className="space-y-3">
+              <ul className="space-y-2">
                 {links.map((link) => (
                   <li key={link.label}>
                     <a
                       href={link.href}
-                      className="text-sm text-navy/60 hover:text-navy transition-colors"
+                      className="text-sm text-white/60 hover:text-white transition-colors"
                     >
                       {link.label}
                     </a>
@@ -54,49 +91,19 @@ export const Footer = () => {
             </div>
           ))}
         </div>
+      </div>
 
-        {/* Contact */}
-        <div className="mt-12 pt-8 border-t border-navy/6">
-          <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-            <div>
-              <span className="text-xs font-semibold uppercase tracking-wider text-navy/40">
-                Get in touch
-              </span>
-              <p className="mt-1">
-                <a href="mailto:contact@webqtech.com" className="text-sm text-primary hover:underline">
-                  contact@webqtech.com
-                </a>
-              </p>
+      {/* Bottom Bar */}
+      <div className="border-t border-white/10">
+        <div className="container mx-auto px-6 lg:px-12 py-6">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-white/40">
+            <p>© 2025 WebQ Technologies. All rights reserved.</p>
+            <div className="flex items-center gap-6">
+              <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
+              <a href="#" className="hover:text-white transition-colors">Terms of Use</a>
+              <a href="#" className="hover:text-white transition-colors">Cookie Policy</a>
+              <a href="#" className="hover:text-white transition-colors">Accessibility</a>
             </div>
-
-            {/* Social */}
-            <div className="flex items-center gap-3">
-              <motion.a
-                href="#"
-                whileHover={{ scale: 1.05 }}
-                className="w-9 h-9 rounded-full bg-navy/5 flex items-center justify-center text-navy/50 hover:text-primary transition-colors"
-                aria-label="LinkedIn"
-              >
-                <Linkedin className="w-4 h-4" />
-              </motion.a>
-              <motion.a
-                href="#"
-                whileHover={{ scale: 1.05 }}
-                className="w-9 h-9 rounded-full bg-navy/5 flex items-center justify-center text-navy/50 hover:text-primary transition-colors"
-                aria-label="Twitter"
-              >
-                <Twitter className="w-4 h-4" />
-              </motion.a>
-            </div>
-          </div>
-        </div>
-
-        {/* Bottom Bar */}
-        <div className="mt-12 pt-8 border-t border-navy/6 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-navy/40">
-          <p>© 2025 WebQ Technologies LLC</p>
-          <div className="flex items-center gap-6">
-            <a href="#" className="hover:text-navy transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-navy transition-colors">Terms of Service</a>
           </div>
         </div>
       </div>
