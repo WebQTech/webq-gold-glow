@@ -782,14 +782,14 @@ export const servicesData: ServiceDetail[] = [
     icon: Code2,
     category: "Development & Engineering",
     features: [
-      "Web application development",
       "Enterprise software solutions",
       "SaaS platform development",
       "Internal tools and dashboards",
       "E-commerce and marketplace platforms",
       "Real-time collaboration tools",
       "Workflow automation systems",
-      "Integration with existing systems"
+      "Third-party system integration",
+      "Scalable architecture design"
     ],
     benefits: [
       "Solve unique business challenges",
@@ -1328,13 +1328,13 @@ export const servicesData: ServiceDetail[] = [
     icon: BarChart3,
     category: "Data & Analytics",
     features: [
-      "Custom BI dashboards",
+      "Interactive dashboards",
       "KPI tracking & reporting",
-      "Data visualization",
+      "Advanced data visualization",
       "Self-service analytics",
       "Embedded analytics",
-      "Automated reporting",
-      "Mobile BI solutions",
+      "Automated report generation",
+      "Mobile-friendly solutions",
       "Executive scorecards"
     ],
     benefits: [
@@ -1511,13 +1511,13 @@ export const servicesData: ServiceDetail[] = [
     icon: Headphones,
     category: "Support & Consulting",
     features: [
-      "24/7 monitoring & alerting",
-      "Incident management",
+      "Round-the-clock monitoring",
+      "Incident management & triage",
       "Root cause analysis",
-      "SLA management",
+      "SLA management & reporting",
       "Performance tuning",
-      "Release support",
-      "On-call engineering",
+      "Release deployment support",
+      "On-call engineering coverage",
       "Runbook automation"
     ],
     benefits: [
@@ -1693,14 +1693,14 @@ export const servicesData: ServiceDetail[] = [
     icon: Users,
     category: "Support & Consulting",
     features: [
-      "Dedicated developers",
+      "Senior engineers and architects",
       "Flexible engagement models",
-      "Domain expertise",
-      "Seamless integration",
-      "Rapid onboarding",
+      "Domain and industry expertise",
+      "Seamless team integration",
+      "Rapid onboarding (under 2 weeks)",
       "Skill gap coverage",
-      "Project-based or long-term",
-      "Multiple time zone coverage"
+      "Project-based or long-term options",
+      "Global time zone coverage"
     ],
     benefits: [
       "Faster time to hire",
