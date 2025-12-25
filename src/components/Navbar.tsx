@@ -1,7 +1,16 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Globe, ChevronDown } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
+import { servicesData, getAllCategories } from "@/data/servicesData";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -17,9 +26,17 @@ export const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Group services by category
+  const servicesByCategory = useMemo(() => {
+    const categories = getAllCategories();
+    return categories.map(category => ({
+      category,
+      services: servicesData.filter(s => s.category === category)
+    }));
+  }, []);
+
   const navLinks = [
     { label: "Industries", href: isHomePage ? "#industries" : "/#industries", isExternal: false },
-    { label: "Services", href: "/services", isExternal: false },
     { label: "Insights", href: isHomePage ? "#insights" : "/#insights", isExternal: false },
     { label: "About", href: isHomePage ? "#about" : "/#about", isExternal: false },
   ];
@@ -79,6 +96,53 @@ export const Navbar = () => {
 
             {/* Desktop Nav Links */}
             <div className="hidden lg:flex items-center gap-8">
+              {/* Industries link */}
+              <a
+                href={isHomePage ? "#industries" : "/#industries"}
+                className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors duration-200"
+              >
+                Industries
+              </a>
+
+              {/* Services Dropdown */}
+              <DropdownMenu>
+                <DropdownMenuTrigger className="flex items-center gap-1 text-sm font-medium text-foreground/80 hover:text-primary transition-colors duration-200 outline-none">
+                  Services
+                  <ChevronDown className="w-4 h-4" />
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="start" className="w-72 max-h-[70vh] overflow-y-auto bg-background border border-border shadow-lg">
+                  <DropdownMenuItem asChild>
+                    <Link to="/services" className="font-medium text-primary">
+                      View All Services
+                    </Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuSeparator />
+                  {servicesByCategory.map(({ category, services }) => (
+                    <div key={category}>
+                      <DropdownMenuLabel className="text-xs text-muted-foreground uppercase tracking-wider">
+                        {category}
+                      </DropdownMenuLabel>
+                      {services.map((service) => {
+                        const ServiceIcon = service.icon;
+                        return (
+                          <DropdownMenuItem key={service.slug} asChild>
+                            <Link
+                              to={`/services/${service.slug}`}
+                              className="flex items-center gap-2 cursor-pointer"
+                            >
+                              <ServiceIcon className="w-4 h-4 text-primary" />
+                              <span>{service.name}</span>
+                            </Link>
+                          </DropdownMenuItem>
+                        );
+                      })}
+                      <DropdownMenuSeparator />
+                    </div>
+                  ))}
+                </DropdownMenuContent>
+              </DropdownMenu>
+
+              {/* Other nav links */}
               {navLinks.map((link) => (
                 link.href.startsWith("/") && !link.href.startsWith("/#") ? (
                   <Link
@@ -129,7 +193,51 @@ export const Navbar = () => {
               exit={{ opacity: 0, height: 0 }}
               className="lg:hidden bg-background border-t border-border overflow-hidden"
             >
-              <div className="container mx-auto px-6 py-4">
+              <div className="container mx-auto px-6 py-4 max-h-[70vh] overflow-y-auto">
+                {/* Industries */}
+                <a
+                  href={isHomePage ? "#industries" : "/#industries"}
+                  className="block py-3 text-foreground/80 hover:text-primary transition-colors border-b border-border/50"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Industries
+                </a>
+
+                {/* Services with expandable categories */}
+                <div className="border-b border-border/50">
+                  <Link
+                    to="/services"
+                    className="block py-3 text-foreground/80 hover:text-primary transition-colors font-medium"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    All Services
+                  </Link>
+                  <div className="pb-3 space-y-2">
+                    {servicesByCategory.map(({ category, services }) => (
+                      <div key={category} className="pl-4">
+                        <span className="text-xs text-muted-foreground uppercase tracking-wider block py-1">
+                          {category}
+                        </span>
+                        {services.map((service) => {
+                          const ServiceIcon = service.icon;
+                          return (
+                            <Link
+                              key={service.slug}
+                              to={`/services/${service.slug}`}
+                              className="flex items-center gap-2 py-2 pl-2 text-sm text-foreground/70 hover:text-primary transition-colors"
+                              onClick={() => setIsMobileMenuOpen(false)}
+                            >
+                              <ServiceIcon className="w-4 h-4 text-primary" />
+                              {service.name}
+                            </Link>
+                          );
+                        })}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Other nav links */}
                 {navLinks.map((link) => (
                   link.href.startsWith("/") && !link.href.startsWith("/#") ? (
                     <Link
