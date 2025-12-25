@@ -9,6 +9,8 @@ import { CapabilitiesSection } from "@/components/CapabilitiesSection";
 import { ProcessSection } from "@/components/ProcessSection";
 import { CTASection } from "@/components/CTASection";
 import { Footer } from "@/components/Footer";
+import BackToTopButton from "@/components/BackToTopButton";
+
 const Index = () => {
   return (
     <main className="relative overflow-hidden bg-gradient-subtle">
@@ -25,6 +27,7 @@ const Index = () => {
       
       <CTASection />
       <Footer />
+      <BackToTopButton />
     </main>
   );
 };
