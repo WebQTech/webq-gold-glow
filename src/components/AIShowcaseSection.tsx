@@ -1,47 +1,55 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ArrowRight, Brain, Sparkles, MessageSquare, Eye, Workflow, Zap } from "lucide-react";
+import { ArrowRight, Zap } from "lucide-react";
 import { NeuralNetworkBackground } from "./NeuralNetworkBackground";
+
+// Custom AI service illustrations
+import aiMlIcon from "@/assets/ai-ml-icon.png";
+import generativeAiIcon from "@/assets/generative-ai-icon.png";
+import conversationalAiIcon from "@/assets/conversational-ai-icon.png";
+import computerVisionIcon from "@/assets/computer-vision-icon.png";
+import aiAutomationIcon from "@/assets/ai-automation-icon.png";
+
 const aiServices = [
   {
     slug: "ai-machine-learning",
     name: "AI & Machine Learning",
     description: "Custom ML models, predictive analytics, and intelligent automation",
-    icon: Brain,
-    gradient: "from-violet-500 to-purple-600",
+    image: aiMlIcon,
+    gradient: "from-violet-500/20 to-purple-600/20",
     features: ["Custom ML Models", "Predictive Analytics", "Recommendation Engines"]
   },
   {
     slug: "generative-ai-solutions",
     name: "Generative AI",
     description: "LLM integration, RAG systems, and AI-powered content creation",
-    icon: Sparkles,
-    gradient: "from-amber-500 to-orange-600",
+    image: generativeAiIcon,
+    gradient: "from-amber-500/20 to-orange-600/20",
     features: ["GPT-4 & Claude Integration", "RAG Systems", "Content Generation"]
   },
   {
     slug: "conversational-ai",
     name: "Conversational AI",
     description: "Intelligent chatbots and virtual assistants for any channel",
-    icon: MessageSquare,
-    gradient: "from-emerald-500 to-teal-600",
+    image: conversationalAiIcon,
+    gradient: "from-emerald-500/20 to-teal-600/20",
     features: ["Multi-channel Bots", "Natural Language", "24/7 Support"]
   },
   {
     slug: "computer-vision",
     name: "Computer Vision",
     description: "Visual recognition, object detection, and image analysis",
-    icon: Eye,
-    gradient: "from-blue-500 to-cyan-600",
+    image: computerVisionIcon,
+    gradient: "from-blue-500/20 to-cyan-600/20",
     features: ["Object Detection", "Image Classification", "Video Analytics"]
   },
   {
     slug: "ai-process-automation",
     name: "AI Automation",
     description: "Intelligent process automation combining AI with RPA",
-    icon: Workflow,
-    gradient: "from-rose-500 to-pink-600",
+    image: aiAutomationIcon,
+    gradient: "from-rose-500/20 to-pink-600/20",
     features: ["Document Processing", "Decision Automation", "Workflow AI"]
   }
 ];
@@ -117,7 +125,6 @@ export const AIShowcaseSection = () => {
         {/* AI Services Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           {aiServices.map((service, index) => {
-            const Icon = service.icon;
             return (
               <motion.div
                 key={service.slug}
@@ -127,11 +134,16 @@ export const AIShowcaseSection = () => {
               >
                 <Link
                   to={`/services/${service.slug}`}
-                  className="group block h-full bg-card border border-border rounded-2xl p-6 hover:border-primary/50 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300"
+                  className="group block h-full bg-card border border-border rounded-2xl p-6 hover:border-primary/50 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 overflow-hidden"
                 >
-                  {/* Icon */}
-                  <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${service.gradient} flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300`}>
-                    <Icon className="w-7 h-7 text-white" />
+                  {/* Custom Illustration */}
+                  <div className={`relative w-20 h-20 rounded-2xl bg-gradient-to-br ${service.gradient} flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300 overflow-hidden`}>
+                    <img 
+                      src={service.image} 
+                      alt={service.name}
+                      className="w-16 h-16 object-contain"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-card/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                   </div>
 
                   {/* Content */}
