@@ -55,7 +55,9 @@ export const servicesData: ServiceDetail[] = [
       "Anomaly detection",
       "Document processing and OCR",
       "AI ethics & responsible AI practices",
-      "Bias detection and fairness audits"
+      "Bias detection and fairness audits",
+      "EU AI Act & GDPR compliance",
+      "AI risk assessment frameworks"
     ],
     benefits: [
       "Automate repetitive tasks",
