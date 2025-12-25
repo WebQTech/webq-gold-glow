@@ -496,71 +496,70 @@ export const servicesData: ServiceDetail[] = [
     ]
   },
   {
-    slug: "agentic-ai",
-    name: "Agentic AI",
-    shortDescription: "Autonomous AI systems that reason, plan, and execute complex tasks independently.",
-    fullDescription: "Build the next generation of AI solutions with agentic architectures that go beyond simple prompts. Our agentic AI systems can reason through complex problems, break down tasks, use tools, and take autonomous actions while maintaining oversight and control.",
+    slug: "agentic-ai-agents-tools",
+    name: "Agentic AI, Agents & Tools",
+    shortDescription: "Autonomous AI systems, intelligent assistants, and MLOps infrastructure for enterprise AI.",
+    fullDescription: "Build and deploy the full spectrum of AI capabilities—from autonomous agents that reason and act independently, to specialized assistants that augment your team, to the MLOps infrastructure that powers it all. We deliver end-to-end AI solutions that scale from prototype to production.",
     icon: Bot,
     category: "Artificial Intelligence",
     features: [
-      "Multi-agent system design",
-      "Autonomous task planning",
-      "Tool use and function calling",
-      "Memory and context management",
-      "Human-in-the-loop workflows",
-      "Chain-of-thought reasoning",
-      "Goal-oriented behavior",
-      "Self-reflection and correction",
-      "Explainability and decision transparency",
-      "AI governance and audit trails",
-      "Guardrails and safety constraints"
+      "Autonomous multi-agent orchestration",
+      "Task planning and goal-oriented execution",
+      "Tool use, function calling, and API integration",
+      "Domain-specific AI assistants",
+      "Voice, text, and multi-modal interactions",
+      "Human-in-the-loop workflows and escalation",
+      "MLOps platform and CI/CD for models",
+      "Experiment tracking and model registry",
+      "Feature stores and data labeling",
+      "Guardrails, governance, and audit trails"
     ],
     benefits: [
       "Automate complex multi-step workflows",
-      "Handle tasks requiring reasoning and judgment",
-      "Scale expert-level decision making",
-      "Reduce human oversight requirements by 70%",
-      "Enable 24/7 autonomous operations"
+      "Deploy 24/7 intelligent assistants",
+      "Scale expertise across your organization",
+      "Accelerate ML development cycles by 50%",
+      "Reduce human oversight requirements by 70%"
     ],
-    technologies: ["LangGraph", "AutoGPT", "CrewAI", "OpenAI Assistants", "Anthropic Claude", "Microsoft Semantic Kernel", "LlamaIndex Agents", "Haystack"],
+    technologies: ["LangGraph", "CrewAI", "OpenAI Assistants", "Anthropic Claude", "MLflow", "Kubeflow", "Weights & Biases", "Langchain", "Vercel AI SDK"],
     pricing: [
       {
-        name: "Agent Starter",
-        price: "$25,000",
-        description: "Single agent implementation",
+        name: "AI Starter",
+        price: "$20,000",
+        description: "Single agent or assistant",
         features: [
-          "One autonomous agent",
+          "One autonomous agent or assistant",
           "Basic tool integration",
-          "Task planning",
+          "Knowledge base setup",
           "Logging and monitoring",
           "30 days support"
         ]
       },
       {
-        name: "Agent Pro",
-        price: "$75,000",
-        description: "Multi-agent system",
+        name: "AI Pro",
+        price: "$65,000",
+        description: "Multi-agent system with MLOps",
         features: [
           "Multi-agent orchestration",
           "Custom tool development",
-          "Advanced memory systems",
+          "MLOps pipeline setup",
           "Human-in-the-loop workflows",
           "90 days support",
-          "Performance tuning"
+          "Performance optimization"
         ],
         popular: true
       },
       {
-        name: "Agent Enterprise",
+        name: "AI Enterprise",
         price: "Custom",
-        description: "Enterprise agent platform",
+        description: "Enterprise AI platform",
         features: [
           "Full agentic platform",
-          "Custom agent frameworks",
-          "Enterprise security",
-          "Observability and tracing",
+          "Multiple specialized agents",
+          "Complete MLOps infrastructure",
+          "Enterprise security and compliance",
           "24/7 support",
-          "Dedicated team"
+          "Dedicated AI team"
         ]
       }
     ],
@@ -569,12 +568,12 @@ export const servicesData: ServiceDetail[] = [
         company: "DataAnalytics Corp",
         industry: "Business Intelligence",
         challenge: "Data analysts spending 80% of time on repetitive report generation and data investigation.",
-        solution: "Deployed autonomous AI agents that investigate data anomalies, generate reports, and proactively surface insights.",
+        solution: "Deployed autonomous AI agents that investigate data anomalies, generate reports, and proactively surface insights with full MLOps infrastructure.",
         results: [
           "Report generation time reduced by 90%",
           "Analysts focus on strategic work",
           "Proactive insights increased 5x",
-          "Data quality issues caught automatically"
+          "Model deployment time reduced from weeks to hours"
         ]
       }
     ],
@@ -584,192 +583,12 @@ export const servicesData: ServiceDetail[] = [
         answer: "We implement multiple safety layers including human-in-the-loop for critical actions, action boundaries and sandboxing, comprehensive logging, and rollback capabilities. Agents operate within defined guardrails while maintaining autonomy."
       },
       {
-        question: "What's the difference between agentic AI and traditional chatbots?",
-        answer: "Traditional chatbots respond to queries. Agentic AI systems can autonomously plan multi-step tasks, use tools, take actions in external systems, and achieve complex goals without constant human direction."
-      }
-    ]
-  },
-  {
-    slug: "ai-agents",
-    name: "AI Agents & Assistants",
-    shortDescription: "Intelligent AI assistants and specialized agents for business operations.",
-    fullDescription: "Deploy AI agents that work alongside your team as intelligent assistants. From customer service agents to specialized domain experts, we build AI agents that understand your business context and help employees and customers accomplish their goals more effectively.",
-    icon: Bot,
-    category: "Artificial Intelligence",
-    features: [
-      "Domain-specific expertise",
-      "Customer service automation",
-      "Sales and support workflows",
-      "Research and analysis capabilities",
-      "Code generation and review",
-      "Knowledge base integration",
-      "Voice-enabled interactions",
-      "Multi-modal support (text, image, voice)"
-    ],
-    benefits: [
-      "24/7 availability for customers",
-      "Consistent quality of responses",
-      "Scale expertise across organization",
-      "Reduce training time for new hires",
-      "Increase team productivity by 40%"
-    ],
-    technologies: ["OpenAI GPT-4", "Anthropic Claude", "Google Gemini", "ElevenLabs", "Whisper", "Langchain", "Vercel AI SDK", "Supabase"],
-    pricing: [
-      {
-        name: "Assistant Starter",
-        price: "$18,000",
-        description: "Basic AI assistant",
-        features: [
-          "Single-purpose assistant",
-          "Knowledge base integration",
-          "Web deployment",
-          "Basic analytics",
-          "30 days support"
-        ]
-      },
-      {
-        name: "Assistant Pro",
-        price: "$55,000",
-        description: "Advanced AI agent",
-        features: [
-          "Multi-purpose agent",
-          "Voice and text support",
-          "CRM integration",
-          "Custom training",
-          "90 days support",
-          "Advanced analytics"
-        ],
-        popular: true
-      },
-      {
-        name: "Assistant Enterprise",
-        price: "Custom",
-        description: "Enterprise agent fleet",
-        features: [
-          "Multiple specialized agents",
-          "Custom model fine-tuning",
-          "Enterprise integrations",
-          "White-label deployment",
-          "24/7 support",
-          "Managed service"
-        ]
-      }
-    ],
-    caseStudies: [
-      {
-        company: "TechSupport Plus",
-        industry: "Technology Services",
-        challenge: "Support team couldn't scale to handle growing customer base across multiple product lines.",
-        solution: "Deployed specialized AI agents for each product line with deep technical knowledge and escalation capabilities.",
-        results: [
-          "80% of tickets resolved by AI",
-          "Average response time under 30 seconds",
-          "Customer satisfaction up 35%",
-          "Support costs reduced 60%"
-        ]
-      }
-    ],
-    faqs: [
-      {
         question: "Can AI agents learn our specific products and processes?",
-        answer: "Yes, we train agents on your documentation, knowledge bases, and historical interactions. Agents become experts in your domain while we maintain mechanisms for continuous learning and improvement."
+        answer: "Yes, we train agents on your documentation, knowledge bases, and historical interactions. Agents become domain experts while we maintain mechanisms for continuous learning and improvement."
       },
       {
-        question: "How do AI agents handle edge cases they can't solve?",
-        answer: "Agents are designed with graceful escalation paths. They recognize their limitations and seamlessly hand off to human experts with full context, ensuring no customer falls through the cracks."
-      }
-    ]
-  },
-  {
-    slug: "ai-ml-tools",
-    name: "AI & ML Tools",
-    shortDescription: "Custom AI tools, platforms, and infrastructure for your development teams.",
-    fullDescription: "Empower your teams with purpose-built AI and ML tools that accelerate development and improve outcomes. From MLOps platforms to custom AI development environments, we build the tooling infrastructure that makes AI development faster, more reliable, and more accessible.",
-    icon: Brain,
-    category: "Artificial Intelligence",
-    features: [
-      "MLOps platform setup",
-      "Model registry and versioning",
-      "Experiment tracking",
-      "Feature stores",
-      "Data labeling tools",
-      "Model monitoring dashboards",
-      "AI development environments",
-      "Evaluation and testing frameworks",
-      "CI/CD pipelines for ML models",
-      "Model governance and compliance"
-    ],
-    benefits: [
-      "Accelerate ML development cycles by 50%",
-      "Improve model reproducibility",
-      "Standardize ML practices across teams",
-      "Reduce time to production",
-      "Enable self-service AI capabilities"
-    ],
-    technologies: ["MLflow", "Kubeflow", "Weights & Biases", "DVC", "Label Studio", "Evidently AI", "Great Expectations", "Feast"],
-    pricing: [
-      {
-        name: "MLTools Starter",
-        price: "$20,000",
-        description: "Basic ML tooling",
-        features: [
-          "Experiment tracking setup",
-          "Model registry",
-          "Basic monitoring",
-          "Documentation",
-          "30 days support"
-        ]
-      },
-      {
-        name: "MLTools Pro",
-        price: "$60,000",
-        description: "Complete MLOps platform",
-        features: [
-          "Full MLOps pipeline",
-          "Feature store",
-          "Advanced monitoring",
-          "CI/CD for ML",
-          "90 days support",
-          "Team training"
-        ],
-        popular: true
-      },
-      {
-        name: "MLTools Enterprise",
-        price: "Custom",
-        description: "Enterprise AI platform",
-        features: [
-          "Custom platform development",
-          "Multi-team support",
-          "Enterprise integrations",
-          "Custom tools development",
-          "24/7 support",
-          "Dedicated team"
-        ]
-      }
-    ],
-    caseStudies: [
-      {
-        company: "FinTech Innovations",
-        industry: "Financial Technology",
-        challenge: "Data science team struggling with ad-hoc processes, no experiment tracking, and slow deployment cycles.",
-        solution: "Implemented comprehensive MLOps platform with experiment tracking, model registry, and automated deployment pipelines.",
-        results: [
-          "Model deployment time reduced from weeks to hours",
-          "Experiment reproducibility achieved 100%",
-          "Team velocity increased 3x",
-          "Model incidents reduced by 80%"
-        ]
-      }
-    ],
-    faqs: [
-      {
-        question: "Do we need a large data science team to benefit from ML tools?",
-        answer: "Not at all. Proper tooling actually helps smaller teams work more efficiently. We scale the solution to your team size, and good practices early prevent technical debt as you grow."
-      },
-      {
-        question: "Can you integrate with our existing tech stack?",
-        answer: "Yes, we select tools that integrate with your cloud provider, data infrastructure, and development workflows. We avoid vendor lock-in and ensure tools work with your existing investments."
+        question: "Do we need a large team to benefit from these tools?",
+        answer: "Not at all. Proper tooling helps smaller teams work efficiently. We scale solutions to your team size, and good practices early prevent technical debt as you grow."
       }
     ]
   },
