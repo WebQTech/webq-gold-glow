@@ -35,15 +35,16 @@ const serviceLinks = [
 
 const footerLinks = {
   Company: [
-    { label: "About Us", href: "#about" },
-    { label: "Leadership", href: "#about" },
-    { label: "Contact", href: "#contact" },
+    { label: "About Us", href: "/about" },
+    { label: "Careers", href: "/careers" },
+    { label: "News", href: "/news" },
+    { label: "Investors", href: "/investors" },
   ],
   Resources: [
-    { label: "Case Studies", href: "#insights" },
-    { label: "Insights", href: "#insights" },
-    { label: "Blog", href: "#" },
-    { label: "Events", href: "#" },
+    { label: "Case Studies", href: "/insights" },
+    { label: "Insights", href: "/insights" },
+    { label: "Blog", href: "/insights" },
+    { label: "Events", href: "/news" },
   ],
 };
 
@@ -134,12 +135,12 @@ export const Footer = () => {
               <ul className="space-y-2">
                 {links.map((link) => (
                   <li key={link.label}>
-                    <a
-                      href={link.href}
+                    <Link
+                      to={link.href}
                       className="text-sm text-white/60 hover:text-white transition-colors"
                     >
                       {link.label}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
