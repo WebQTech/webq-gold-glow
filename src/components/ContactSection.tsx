@@ -1,10 +1,48 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Send } from "lucide-react";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { z } from "zod";
+import { useToast } from "@/hooks/use-toast";
+
+const contactSchema = z.object({
+  fullName: z.string().trim().min(1, "Full name is required").max(100, "Name must be less than 100 characters"),
+  email: z.string().trim().min(1, "Email is required").email("Please enter a valid email address").max(255, "Email must be less than 255 characters"),
+  company: z.string().trim().max(100, "Company name must be less than 100 characters").optional(),
+  topic: z.string().optional(),
+  message: z.string().trim().max(1000, "Message must be less than 1000 characters").optional(),
+});
+
+type ContactFormData = z.infer<typeof contactSchema>;
 
 export const ContactSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const { toast } = useToast();
+
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors, isSubmitting },
+  } = useForm<ContactFormData>({
+    resolver: zodResolver(contactSchema),
+  });
+
+  const onSubmit = async (data: ContactFormData) => {
+    // Simulate API call
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+    
+    console.log("Form submitted:", data);
+    
+    toast({
+      title: "Message sent successfully!",
+      description: "We'll get back to you within 24 hours.",
+    });
+    
+    reset();
+  };
 
   return (
     <section id="contact" ref={ref} className="py-16 lg:py-24 bg-background">
@@ -29,6 +67,7 @@ export const ContactSection = () => {
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.7, delay: 0.2 }}
             className="grid md:grid-cols-2 gap-6"
+            onSubmit={handleSubmit(onSubmit)}
           >
             <div>
               <label className="block text-sm font-medium text-foreground mb-2">
@@ -36,9 +75,15 @@ export const ContactSection = () => {
               </label>
               <input
                 type="text"
-                className="w-full px-4 py-3 bg-muted border border-border rounded-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors"
+                {...register("fullName")}
+                className={`w-full px-4 py-3 bg-muted border rounded-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors ${
+                  errors.fullName ? "border-destructive" : "border-border"
+                }`}
                 placeholder="John Smith"
               />
+              {errors.fullName && (
+                <p className="mt-1 text-sm text-destructive">{errors.fullName.message}</p>
+              )}
             </div>
             <div>
               <label className="block text-sm font-medium text-foreground mb-2">
@@ -46,9 +91,15 @@ export const ContactSection = () => {
               </label>
               <input
                 type="email"
-                className="w-full px-4 py-3 bg-muted border border-border rounded-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors"
+                {...register("email")}
+                className={`w-full px-4 py-3 bg-muted border rounded-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors ${
+                  errors.email ? "border-destructive" : "border-border"
+                }`}
                 placeholder="john@company.com"
               />
+              {errors.email && (
+                <p className="mt-1 text-sm text-destructive">{errors.email.message}</p>
+              )}
             </div>
             <div>
               <label className="block text-sm font-medium text-foreground mb-2">
@@ -56,15 +107,24 @@ export const ContactSection = () => {
               </label>
               <input
                 type="text"
-                className="w-full px-4 py-3 bg-muted border border-border rounded-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors"
+                {...register("company")}
+                className={`w-full px-4 py-3 bg-muted border rounded-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors ${
+                  errors.company ? "border-destructive" : "border-border"
+                }`}
                 placeholder="Company Name"
               />
+              {errors.company && (
+                <p className="mt-1 text-sm text-destructive">{errors.company.message}</p>
+              )}
             </div>
             <div>
               <label className="block text-sm font-medium text-foreground mb-2">
                 Topic of Interest
               </label>
-              <select className="w-full px-4 py-3 bg-muted border border-border rounded-sm text-foreground focus:outline-none focus:border-primary transition-colors">
+              <select
+                {...register("topic")}
+                className="w-full px-4 py-3 bg-muted border border-border rounded-sm text-foreground focus:outline-none focus:border-primary transition-colors"
+              >
                 <option value="">Select a topic</option>
                 <option value="ai">AI Solutions</option>
                 <option value="cloud">Cloud Services</option>
@@ -79,16 +139,23 @@ export const ContactSection = () => {
               </label>
               <textarea
                 rows={4}
-                className="w-full px-4 py-3 bg-muted border border-border rounded-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors resize-none"
+                {...register("message")}
+                className={`w-full px-4 py-3 bg-muted border rounded-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors resize-none ${
+                  errors.message ? "border-destructive" : "border-border"
+                }`}
                 placeholder="Tell us about your project..."
               />
+              {errors.message && (
+                <p className="mt-1 text-sm text-destructive">{errors.message.message}</p>
+              )}
             </div>
             <div className="md:col-span-2">
               <button
                 type="submit"
-                className="inline-flex items-center gap-2 btn-gradient px-8 py-4"
+                disabled={isSubmitting}
+                className="inline-flex items-center gap-2 btn-gradient px-8 py-4 disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                Send Message
+                {isSubmitting ? "Sending..." : "Send Message"}
                 <Send className="w-4 h-4" />
               </button>
             </div>
