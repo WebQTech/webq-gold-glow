@@ -7,6 +7,8 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import Services from "./pages/Services";
 import ServiceDetail from "./pages/ServiceDetail";
+import Industries from "./pages/Industries";
+import IndustryDetail from "./pages/IndustryDetail";
 import { SectionRedirect } from "@/components/SectionRedirect";
 
 const queryClient = new QueryClient();
@@ -21,11 +23,12 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/services" element={<Services />} />
           <Route path="/services/:slug" element={<ServiceDetail />} />
+          <Route path="/industries" element={<Industries />} />
+          <Route path="/industries/:slug" element={<IndustryDetail />} />
 
           {/* Section routes (avoid 404 if someone lands on /process etc.) */}
           <Route path="/products" element={<SectionRedirect hash="#products" />} />
           <Route path="/solutions" element={<SectionRedirect hash="#solutions" />} />
-          <Route path="/industries" element={<SectionRedirect hash="#industries" />} />
           <Route path="/process" element={<SectionRedirect hash="#process" />} />
           <Route path="/about" element={<SectionRedirect hash="#about" />} />
           <Route path="/capabilities" element={<SectionRedirect hash="#capabilities" />} />
