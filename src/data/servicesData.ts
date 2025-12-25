@@ -1,7 +1,7 @@
 import { 
   Code2, Cloud, Server, RefreshCw, TestTube, Headphones, Settings, Database,
   Shield, Smartphone, Brain, Layers, Zap, Users, BarChart3, Lock,
-  LucideIcon
+  LucideIcon, Bot, Sparkles, MessageSquare, Eye, FileText, Workflow
 } from "lucide-react";
 
 export interface PricingTier {
@@ -241,7 +241,7 @@ export const servicesData: ServiceDetail[] = [
     shortDescription: "Intelligent solutions powered by cutting-edge AI and ML technologies.",
     fullDescription: "Harness the power of artificial intelligence to automate processes, gain insights, and create innovative products. Our AI/ML team builds custom models and implements proven AI solutions that deliver measurable business outcomes.",
     icon: Brain,
-    category: "Development & Engineering",
+    category: "Artificial Intelligence",
     features: [
       "Custom ML model development",
       "Natural language processing",
@@ -323,6 +323,370 @@ export const servicesData: ServiceDetail[] = [
       {
         question: "How do you ensure AI model accuracy?",
         answer: "We use rigorous validation methodologies, continuous monitoring, and feedback loops. Models are tested extensively before deployment and monitored for drift in production."
+      }
+    ]
+  },
+  {
+    slug: "generative-ai-solutions",
+    name: "Generative AI Solutions",
+    shortDescription: "Build intelligent applications powered by GPT, Claude, and other large language models.",
+    fullDescription: "Leverage the latest generative AI technologies to transform your business operations. From custom chatbots to content generation systems, we help you harness the power of LLMs to automate complex tasks, enhance customer experiences, and drive innovation.",
+    icon: Sparkles,
+    category: "Artificial Intelligence",
+    features: [
+      "Custom LLM integration (GPT-4, Claude, Gemini)",
+      "RAG (Retrieval-Augmented Generation) systems",
+      "Fine-tuning for domain-specific tasks",
+      "Prompt engineering and optimization",
+      "AI-powered content generation",
+      "Semantic search implementation",
+      "Multi-modal AI applications",
+      "AI safety and guardrails"
+    ],
+    benefits: [
+      "Reduce content creation time by 80%",
+      "Automate customer support interactions",
+      "Extract insights from unstructured data",
+      "Scale personalized communications",
+      "Accelerate research and development"
+    ],
+    technologies: ["OpenAI GPT-4", "Anthropic Claude", "Google Gemini", "Langchain", "LlamaIndex", "Pinecone", "Weaviate", "Hugging Face"],
+    pricing: [
+      {
+        name: "GenAI Starter",
+        price: "$15,000",
+        description: "Basic LLM integration",
+        features: [
+          "Single LLM API integration",
+          "Basic chatbot or assistant",
+          "Prompt library development",
+          "Documentation",
+          "30 days support"
+        ]
+      },
+      {
+        name: "GenAI Pro",
+        price: "$50,000",
+        description: "Advanced RAG systems",
+        features: [
+          "Custom RAG implementation",
+          "Vector database setup",
+          "Fine-tuning pipeline",
+          "Multi-model orchestration",
+          "90 days support",
+          "Performance optimization"
+        ],
+        popular: true
+      },
+      {
+        name: "GenAI Enterprise",
+        price: "Custom",
+        description: "Enterprise AI platform",
+        features: [
+          "Full AI platform development",
+          "Custom model training",
+          "Enterprise security & compliance",
+          "Dedicated AI team",
+          "24/7 support",
+          "Ongoing optimization"
+        ]
+      }
+    ],
+    caseStudies: [
+      {
+        company: "LegalPro Services",
+        industry: "Legal",
+        challenge: "Lawyers spending 60% of time on document review and research.",
+        solution: "Built an AI-powered legal research assistant with RAG for document analysis and case law retrieval.",
+        results: [
+          "Research time reduced by 75%",
+          "Document review 10x faster",
+          "$2M saved annually in billable hours",
+          "Accuracy improved by 40%"
+        ]
+      }
+    ],
+    faqs: [
+      {
+        question: "Which LLM should we use for our project?",
+        answer: "The choice depends on your specific needs. GPT-4 excels at general tasks, Claude is great for long documents and safety, and open-source models offer more control. We help you evaluate and select the best fit."
+      },
+      {
+        question: "How do you ensure AI responses are accurate?",
+        answer: "We implement RAG systems grounded in your data, add verification layers, use prompt engineering for consistency, and build feedback loops for continuous improvement."
+      }
+    ]
+  },
+  {
+    slug: "conversational-ai",
+    name: "Conversational AI & Chatbots",
+    shortDescription: "Intelligent chatbots and virtual assistants that understand and respond naturally.",
+    fullDescription: "Create sophisticated conversational experiences that delight customers and streamline operations. Our conversational AI solutions go beyond simple rule-based bots to deliver truly intelligent, context-aware interactions across multiple channels.",
+    icon: MessageSquare,
+    category: "Artificial Intelligence",
+    features: [
+      "Multi-channel deployment (web, mobile, voice)",
+      "Natural language understanding",
+      "Context and memory management",
+      "Sentiment analysis",
+      "Live agent handoff",
+      "Multi-language support",
+      "Integration with CRM and ticketing systems",
+      "Analytics and conversation insights"
+    ],
+    benefits: [
+      "24/7 customer support availability",
+      "Reduce support costs by 60%",
+      "Handle 80% of queries automatically",
+      "Improve customer satisfaction scores",
+      "Scale support without hiring"
+    ],
+    technologies: ["Dialogflow", "Amazon Lex", "Azure Bot Service", "Rasa", "OpenAI", "Twilio", "Intercom", "Zendesk"],
+    pricing: [
+      {
+        name: "Bot Starter",
+        price: "$12,000",
+        description: "Basic chatbot implementation",
+        features: [
+          "Single channel deployment",
+          "Up to 50 intents",
+          "FAQ automation",
+          "Basic analytics",
+          "30 days support"
+        ]
+      },
+      {
+        name: "Bot Pro",
+        price: "$35,000",
+        description: "Multi-channel intelligent bot",
+        features: [
+          "Multi-channel deployment",
+          "Unlimited intents",
+          "CRM integration",
+          "Sentiment analysis",
+          "90 days support",
+          "Custom training"
+        ],
+        popular: true
+      },
+      {
+        name: "Bot Enterprise",
+        price: "Custom",
+        description: "Enterprise conversational platform",
+        features: [
+          "Full platform deployment",
+          "Voice and text channels",
+          "Advanced analytics",
+          "Custom AI models",
+          "24/7 support",
+          "Dedicated team"
+        ]
+      }
+    ],
+    caseStudies: [
+      {
+        company: "TravelEasy",
+        industry: "Travel & Hospitality",
+        challenge: "Support team overwhelmed with booking inquiries and common questions.",
+        solution: "Deployed an AI chatbot handling bookings, FAQs, and complex itinerary changes across web and WhatsApp.",
+        results: [
+          "70% of inquiries handled automatically",
+          "Support costs reduced by 55%",
+          "Customer satisfaction up 25%",
+          "24/7 availability achieved"
+        ]
+      }
+    ],
+    faqs: [
+      {
+        question: "Can the chatbot handle complex conversations?",
+        answer: "Yes, our conversational AI maintains context across multiple turns, remembers user preferences, and can handle complex multi-step workflows while seamlessly escalating to humans when needed."
+      },
+      {
+        question: "How do you train the chatbot for our business?",
+        answer: "We work with your team to understand your use cases, gather training data from past interactions, and iteratively improve the bot through testing and real-world feedback."
+      }
+    ]
+  },
+  {
+    slug: "computer-vision",
+    name: "Computer Vision & Image AI",
+    shortDescription: "Visual recognition, object detection, and image analysis solutions.",
+    fullDescription: "Transform how your business processes visual information with cutting-edge computer vision technology. From quality control in manufacturing to medical image analysis, we build custom vision solutions that see, understand, and act on visual data.",
+    icon: Eye,
+    category: "Artificial Intelligence",
+    features: [
+      "Object detection and tracking",
+      "Image classification",
+      "Facial recognition",
+      "OCR and document processing",
+      "Video analytics",
+      "Quality inspection automation",
+      "Medical image analysis",
+      "Real-time visual processing"
+    ],
+    benefits: [
+      "Automate visual inspection tasks",
+      "Reduce manual review errors by 95%",
+      "Process images 1000x faster than humans",
+      "Enable new product capabilities",
+      "Improve safety and compliance"
+    ],
+    technologies: ["TensorFlow", "PyTorch", "OpenCV", "YOLO", "AWS Rekognition", "Google Vision AI", "Azure Computer Vision", "NVIDIA CUDA"],
+    pricing: [
+      {
+        name: "Vision Starter",
+        price: "$25,000",
+        description: "Basic vision implementation",
+        features: [
+          "Single use case (classification or detection)",
+          "Pre-trained model adaptation",
+          "API integration",
+          "Documentation",
+          "30 days support"
+        ]
+      },
+      {
+        name: "Vision Pro",
+        price: "$80,000",
+        description: "Custom vision solution",
+        features: [
+          "Custom model development",
+          "Multi-task vision system",
+          "Edge deployment option",
+          "Real-time processing",
+          "90 days support",
+          "Model retraining"
+        ],
+        popular: true
+      },
+      {
+        name: "Vision Enterprise",
+        price: "Custom",
+        description: "Enterprise vision platform",
+        features: [
+          "Multiple vision applications",
+          "Video analytics",
+          "Custom hardware integration",
+          "MLOps infrastructure",
+          "24/7 support",
+          "Ongoing optimization"
+        ]
+      }
+    ],
+    caseStudies: [
+      {
+        company: "AutoParts Manufacturing",
+        industry: "Manufacturing",
+        challenge: "Manual quality inspection missing defects and creating bottlenecks.",
+        solution: "Implemented AI-powered visual inspection system detecting defects in real-time on the production line.",
+        results: [
+          "Defect detection rate improved to 99.5%",
+          "Inspection time reduced by 90%",
+          "Quality returns decreased by 80%",
+          "$3M saved annually in defect costs"
+        ]
+      }
+    ],
+    faqs: [
+      {
+        question: "What kind of camera or hardware do we need?",
+        answer: "Requirements depend on the use case. Many solutions work with standard cameras. For specialized needs like manufacturing inspection, we recommend industrial cameras. We help specify the right hardware for your project."
+      },
+      {
+        question: "Can this work in real-time?",
+        answer: "Yes, we optimize models for real-time performance. Depending on requirements, we can deploy on cloud, edge devices, or specialized hardware like NVIDIA GPUs to achieve sub-second response times."
+      }
+    ]
+  },
+  {
+    slug: "ai-process-automation",
+    name: "AI Process Automation",
+    shortDescription: "Intelligent automation combining AI with RPA for end-to-end process optimization.",
+    fullDescription: "Go beyond traditional automation with AI-powered intelligent process automation. We combine robotic process automation (RPA) with machine learning to create smart workflows that learn, adapt, and make decisions, transforming complex business processes.",
+    icon: Workflow,
+    category: "Artificial Intelligence",
+    features: [
+      "Intelligent document processing",
+      "Email and communication automation",
+      "Decision automation with ML",
+      "Process mining and discovery",
+      "Exception handling with AI",
+      "Workflow orchestration",
+      "Integration with existing RPA tools",
+      "Continuous process improvement"
+    ],
+    benefits: [
+      "Automate 80% of manual processes",
+      "Reduce processing errors by 90%",
+      "Free employees for higher-value work",
+      "Achieve faster turnaround times",
+      "Scale operations without proportional costs"
+    ],
+    technologies: ["UiPath", "Automation Anywhere", "Blue Prism", "Power Automate", "Python", "TensorFlow", "AWS Textract", "Azure Form Recognizer"],
+    pricing: [
+      {
+        name: "IPA Starter",
+        price: "$30,000",
+        description: "Single process automation",
+        features: [
+          "One process automation",
+          "Document processing AI",
+          "Basic exception handling",
+          "Process documentation",
+          "30 days support"
+        ]
+      },
+      {
+        name: "IPA Pro",
+        price: "$100,000",
+        description: "Multi-process automation",
+        features: [
+          "Up to 5 process automations",
+          "AI-powered decision making",
+          "Process orchestration",
+          "Advanced analytics",
+          "90 days support",
+          "Training included"
+        ],
+        popular: true
+      },
+      {
+        name: "IPA Enterprise",
+        price: "Custom",
+        description: "Enterprise automation platform",
+        features: [
+          "Unlimited automations",
+          "Full process mining",
+          "Center of Excellence setup",
+          "Custom AI models",
+          "24/7 support",
+          "Dedicated team"
+        ]
+      }
+    ],
+    caseStudies: [
+      {
+        company: "GlobalBank Financial",
+        industry: "Banking",
+        challenge: "Loan processing taking 2 weeks with extensive manual document review.",
+        solution: "Implemented intelligent document processing with automated data extraction and decision support.",
+        results: [
+          "Loan processing time reduced to 2 days",
+          "Document processing accuracy at 98%",
+          "Staff productivity increased 300%",
+          "$10M saved in operational costs"
+        ]
+      }
+    ],
+    faqs: [
+      {
+        question: "How is this different from traditional RPA?",
+        answer: "Traditional RPA follows rigid rules and breaks when things change. AI-powered automation understands documents, makes decisions, handles exceptions, and improves over time through learning."
+      },
+      {
+        question: "Which processes should we automate first?",
+        answer: "We recommend starting with high-volume, rule-based processes with clear ROI. We conduct process discovery to identify and prioritize the best automation candidates."
       }
     ]
   },
