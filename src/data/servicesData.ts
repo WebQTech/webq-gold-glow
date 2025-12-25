@@ -1,7 +1,7 @@
 import { 
   Code2, Cloud, Server, RefreshCw, TestTube, Headphones, Settings, Database,
   Shield, Smartphone, Brain, Layers, Zap, Users, BarChart3, Lock,
-  LucideIcon, Bot, Sparkles, MessageSquare, Eye, FileText, Workflow
+  LucideIcon, Bot, Sparkles, MessageSquare, Eye, FileText, Workflow, AlertTriangle
 } from "lucide-react";
 
 export interface PricingTier {
@@ -2037,6 +2037,279 @@ export const servicesData: ServiceDetail[] = [
       {
         question: "How do we handle privacy across multiple countries?",
         answer: "We implement a unified privacy framework that meets the strictest requirements (usually GDPR) while accommodating regional variations. This includes proper data transfer mechanisms, local consent requirements, and jurisdiction-specific retention policies."
+      }
+    ]
+  },
+  {
+    slug: "incident-response",
+    name: "Incident Response",
+    shortDescription: "Rapid response and recovery from security incidents and breaches.",
+    fullDescription: "Minimize damage and recover quickly from security incidents with our expert incident response services. We provide 24/7 monitoring, rapid containment, forensic investigation, and recovery support to help organizations respond effectively to cyber threats and resume normal operations.",
+    icon: AlertTriangle,
+    category: "Security",
+    features: [
+      "24/7 incident monitoring & detection",
+      "Rapid incident containment",
+      "Digital forensics investigation",
+      "Malware analysis & removal",
+      "Business continuity support",
+      "Post-incident remediation",
+      "Root cause analysis",
+      "Incident documentation & reporting"
+    ],
+    benefits: [
+      "Reduce incident response time by 80%",
+      "Minimize business disruption and downtime",
+      "Preserve evidence for legal proceedings",
+      "Prevent recurrence of similar incidents",
+      "Meet regulatory breach notification requirements"
+    ],
+    technologies: ["CrowdStrike Falcon", "Carbon Black", "Splunk SOAR", "TheHive", "MISP", "Volatility", "Wireshark", "Autopsy"],
+    pricing: [
+      {
+        name: "IR Retainer Basic",
+        price: "$5,000/month",
+        description: "Essential incident response coverage",
+        features: [
+          "8-hour response SLA",
+          "Remote incident support",
+          "Basic forensics",
+          "Incident documentation",
+          "Quarterly tabletop exercises"
+        ]
+      },
+      {
+        name: "IR Retainer Pro",
+        price: "$15,000/month",
+        description: "Comprehensive IR coverage",
+        features: [
+          "4-hour response SLA",
+          "On-site response capability",
+          "Advanced forensics",
+          "Malware reverse engineering",
+          "Legal coordination support",
+          "Monthly threat briefings"
+        ],
+        popular: true
+      },
+      {
+        name: "IR Retainer Enterprise",
+        price: "Custom",
+        description: "Full-scale enterprise coverage",
+        features: [
+          "1-hour response SLA",
+          "Dedicated IR team",
+          "24/7 SOC integration",
+          "Threat hunting",
+          "Executive crisis support",
+          "Cyber insurance coordination"
+        ]
+      }
+    ],
+    caseStudies: [
+      {
+        company: "FinanceGroup Ltd",
+        industry: "Financial Services",
+        challenge: "Detected ransomware attack during business hours threatening critical financial systems.",
+        solution: "Deployed incident response team within 2 hours, contained the attack, recovered systems from backups, and conducted forensic investigation.",
+        results: [
+          "Attack contained within 4 hours",
+          "Zero ransom paid",
+          "Full recovery in 48 hours",
+          "Identified and closed attack vector"
+        ]
+      }
+    ],
+    faqs: [
+      {
+        question: "What is an incident response retainer?",
+        answer: "A retainer ensures you have guaranteed access to our IR team when an incident occurs. Without a retainer, response times depend on team availability. Retainer clients get priority response, pre-negotiated rates, and proactive services like tabletop exercises."
+      },
+      {
+        question: "How quickly can you respond to an incident?",
+        answer: "Response times depend on your retainer level. Our fastest SLA is 1-hour for Enterprise clients. For non-retainer emergency cases, we aim to begin remote triage within 4-8 hours depending on availability."
+      }
+    ]
+  },
+  {
+    slug: "cloud-security",
+    name: "Cloud Security",
+    shortDescription: "Secure your cloud infrastructure across AWS, Azure, and GCP environments.",
+    fullDescription: "Protect your cloud workloads with comprehensive security solutions designed for modern cloud environments. We help organizations secure their AWS, Azure, and Google Cloud infrastructure through architecture reviews, configuration hardening, continuous monitoring, and cloud-native security tooling.",
+    icon: Cloud,
+    category: "Security",
+    features: [
+      "Cloud security architecture design",
+      "Configuration & compliance scanning",
+      "Cloud workload protection",
+      "Container & Kubernetes security",
+      "Serverless security",
+      "Cloud access security broker (CASB)",
+      "Infrastructure as Code security",
+      "Multi-cloud security management"
+    ],
+    benefits: [
+      "Reduce cloud misconfigurations by 90%",
+      "Achieve cloud compliance certifications",
+      "Secure containers and microservices",
+      "Enable secure DevOps practices",
+      "Visibility across multi-cloud environments"
+    ],
+    technologies: ["AWS Security Hub", "Azure Defender", "Google Security Command Center", "Prisma Cloud", "Wiz", "Lacework", "Aqua Security", "Snyk"],
+    pricing: [
+      {
+        name: "Cloud Security Starter",
+        price: "$12,000",
+        description: "Single cloud assessment",
+        features: [
+          "Cloud security assessment",
+          "Configuration review",
+          "Compliance gap analysis",
+          "Remediation roadmap",
+          "Best practices guide"
+        ]
+      },
+      {
+        name: "Cloud Security Pro",
+        price: "$35,000",
+        description: "Comprehensive cloud security",
+        features: [
+          "Multi-cloud assessment",
+          "CSPM implementation",
+          "Container security setup",
+          "IaC security scanning",
+          "Security automation",
+          "Team training"
+        ],
+        popular: true
+      },
+      {
+        name: "Cloud Security Enterprise",
+        price: "Custom",
+        description: "Enterprise cloud security program",
+        features: [
+          "Full security transformation",
+          "24/7 cloud monitoring",
+          "DevSecOps integration",
+          "Zero trust architecture",
+          "Dedicated cloud security team",
+          "Managed detection & response"
+        ]
+      }
+    ],
+    caseStudies: [
+      {
+        company: "TechScale Inc",
+        industry: "Technology",
+        challenge: "Rapid cloud adoption led to security blind spots and compliance gaps across AWS and Azure environments.",
+        solution: "Implemented unified cloud security platform with automated compliance monitoring, container security, and DevSecOps pipeline integration.",
+        results: [
+          "Reduced critical misconfigurations by 95%",
+          "Achieved SOC 2 cloud compliance",
+          "Container vulnerabilities reduced by 80%",
+          "Security integrated into CI/CD pipeline"
+        ]
+      }
+    ],
+    faqs: [
+      {
+        question: "How do you secure multi-cloud environments?",
+        answer: "We implement a unified security platform that provides visibility and control across AWS, Azure, and GCP. This includes centralized policy management, consistent security controls, and aggregated monitoring across all cloud environments."
+      },
+      {
+        question: "What about container and Kubernetes security?",
+        answer: "We provide comprehensive container security including image scanning, runtime protection, network policies, and Kubernetes-native security controls. This covers the entire container lifecycle from build to runtime."
+      }
+    ]
+  },
+  {
+    slug: "threat-intelligence",
+    name: "Threat Intelligence",
+    shortDescription: "Stay ahead of threats with actionable intelligence and proactive monitoring.",
+    fullDescription: "Leverage threat intelligence to anticipate, detect, and respond to cyber threats before they impact your organization. We provide tailored threat intelligence services that combine global threat data with industry-specific insights to enhance your security posture and decision-making.",
+    icon: Eye,
+    category: "Security",
+    features: [
+      "Threat intelligence feeds",
+      "Dark web monitoring",
+      "Brand & executive protection",
+      "Threat actor profiling",
+      "Indicator of compromise (IoC) management",
+      "Threat hunting services",
+      "Industry-specific intelligence",
+      "Strategic threat briefings"
+    ],
+    benefits: [
+      "Proactively identify emerging threats",
+      "Reduce mean time to detect by 60%",
+      "Protect brand reputation online",
+      "Inform security investment decisions",
+      "Enable proactive defense strategies"
+    ],
+    technologies: ["Recorded Future", "Mandiant", "CrowdStrike Falcon X", "ThreatConnect", "Anomali", "MISP", "VirusTotal", "Shodan"],
+    pricing: [
+      {
+        name: "Intelligence Essentials",
+        price: "$3,000/month",
+        description: "Core threat intelligence",
+        features: [
+          "Curated threat feeds",
+          "Weekly threat reports",
+          "IoC integration",
+          "Basic dark web alerts",
+          "Quarterly briefings"
+        ]
+      },
+      {
+        name: "Intelligence Pro",
+        price: "$8,000/month",
+        description: "Advanced threat intelligence",
+        features: [
+          "Full threat intelligence platform",
+          "Daily threat updates",
+          "Dark web monitoring",
+          "Brand protection",
+          "Threat hunting",
+          "Monthly executive briefings"
+        ],
+        popular: true
+      },
+      {
+        name: "Intelligence Enterprise",
+        price: "Custom",
+        description: "Tailored intelligence program",
+        features: [
+          "Custom intelligence requirements",
+          "Dedicated analyst team",
+          "Real-time alerting",
+          "Threat actor tracking",
+          "Strategic advisory",
+          "Board-level reporting"
+        ]
+      }
+    ],
+    caseStudies: [
+      {
+        company: "GlobalBank Corp",
+        industry: "Financial Services",
+        challenge: "Needed visibility into threats targeting the financial sector and early warning of attacks against their brand.",
+        solution: "Implemented comprehensive threat intelligence program with dark web monitoring, brand protection, and integration with existing security tools.",
+        results: [
+          "Detected credential leak 3 weeks before exploitation",
+          "Identified and took down 15 phishing domains",
+          "Reduced false positives by 40%",
+          "Improved threat detection accuracy by 65%"
+        ]
+      }
+    ],
+    faqs: [
+      {
+        question: "How is threat intelligence different from security monitoring?",
+        answer: "Security monitoring detects threats in your environment. Threat intelligence provides context about threats before they reach you—who the attackers are, what tactics they use, and what they're targeting. Intelligence makes your monitoring more effective by knowing what to look for."
+      },
+      {
+        question: "What is dark web monitoring?",
+        answer: "We monitor dark web forums, marketplaces, and paste sites for mentions of your organization, leaked credentials, stolen data, or planned attacks. This early warning allows you to respond before attackers can use compromised information."
       }
     ]
   }
