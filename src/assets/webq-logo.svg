@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200">
+  <defs>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4A90D9"/>
+      <stop offset="100%" style="stop-color:#2E5A8C"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#64B5F6"/>
+      <stop offset="100%" style="stop-color:#1976D2"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="200" fill="#FFFFFF"/>
+  
+  <!-- Globe/Sphere -->
+  <circle cx="80" cy="100" r="50" fill="url(#blueGrad)"/>
+  
+  <!-- Globe grid lines -->
+  <ellipse cx="80" cy="100" rx="50" ry="20" fill="none" stroke="#FFFFFF" stroke-width="1.5" opacity="0.4"/>
+  <ellipse cx="80" cy="100" rx="35" ry="50" fill="none" stroke="#FFFFFF" stroke-width="1.5" opacity="0.4"/>
+  <line x1="30" y1="100" x2="130" y2="100" stroke="#FFFFFF" stroke-width="1.5" opacity="0.4"/>
+  
+  <!-- Orbital ring -->
+  <ellipse cx="80" cy="100" rx="65" ry="25" fill="none" stroke="url(#accentGrad)" stroke-width="3" 
+           transform="rotate(-20 80 100)"/>
+  
+  <!-- Orbital dot -->
+  <circle cx="142" cy="82" r="6" fill="#64B5F6"/>
+  
+  <!-- W inside globe -->
+  <path d="M55 85 L65 118 L80 95 L95 118 L105 85" 
+        fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Company Name -->
+  <text x="160" y="95" font-family="Georgia, serif" font-size="36" font-weight="bold" fill="#2E5A8C">WebQ</text>
+  <text x="160" y="125" font-family="Arial, sans-serif" font-size="16" fill="#5A5A5A" letter-spacing="3">TECHNOLOGIES</text>
+</svg>
