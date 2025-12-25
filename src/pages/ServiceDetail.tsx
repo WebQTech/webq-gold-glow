@@ -1,10 +1,10 @@
 import { useParams, Link, Navigate } from "react-router-dom";
 import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
-import { ArrowLeft, ArrowRight, Check, Building2, Quote } from "lucide-react";
+import { useRef, useMemo } from "react";
+import { ArrowLeft, ArrowRight, Check, Building2 } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
-import { getServiceBySlug, servicesData } from "@/data/servicesData";
+import { getServiceBySlug, servicesData, ServiceDetail as ServiceDetailType } from "@/data/servicesData";
 import {
   Accordion,
   AccordionContent,
@@ -15,6 +15,14 @@ import {
 const ServiceDetail = () => {
   const { slug } = useParams<{ slug: string }>();
   const service = slug ? getServiceBySlug(slug) : undefined;
+  
+  // Get related services (same category, excluding current)
+  const relatedServices = useMemo(() => {
+    if (!service) return [];
+    return servicesData
+      .filter(s => s.category === service.category && s.slug !== service.slug)
+      .slice(0, 3);
+  }, [service]);
 
   const heroRef = useRef(null);
   const featuresRef = useRef(null);
@@ -273,8 +281,64 @@ const ServiceDetail = () => {
         </div>
       </section>
 
+      {/* Related Services */}
+      {relatedServices.length > 0 && (
+        <section className="py-16 lg:py-24">
+          <div className="container mx-auto px-6 lg:px-12">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl lg:text-4xl font-bold text-foreground">
+                Related Services
+              </h2>
+              <p className="mt-4 text-muted-foreground max-w-2xl mx-auto">
+                Explore more services in {service.category}
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-3 gap-6">
+              {relatedServices.map((related, index) => {
+                const RelatedIcon = related.icon;
+                return (
+                  <motion.div
+                    key={related.slug}
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                  >
+                    <Link
+                      to={`/services/${related.slug}`}
+                      className="group block h-full bg-card border border-border rounded-2xl p-6 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5 transition-all duration-300"
+                    >
+                      <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+                        <RelatedIcon className="w-6 h-6 text-primary" />
+                      </div>
+                      <h3 className="text-lg font-semibold text-foreground group-hover:text-primary transition-colors">
+                        {related.name}
+                      </h3>
+                      <p className="mt-2 text-sm text-muted-foreground line-clamp-2">
+                        {related.shortDescription}
+                      </p>
+                      <div className="mt-4 inline-flex items-center gap-2 text-sm text-primary opacity-0 group-hover:opacity-100 transition-opacity">
+                        Learn more
+                        <ArrowRight className="w-4 h-4" />
+                      </div>
+                    </Link>
+                  </motion.div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* CTA */}
-      <section className="py-16 lg:py-24">
+      <section className="py-16 lg:py-24 bg-muted/30">
         <div className="container mx-auto px-6 lg:px-12 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold text-foreground">
             Ready to Get Started?
