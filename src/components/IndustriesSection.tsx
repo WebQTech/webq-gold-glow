@@ -405,7 +405,7 @@ export const IndustriesSection = () => {
   }, [expandedIndex]);
 
   return (
-    <section id="industries" className="py-8 lg:py-10 bg-cream relative overflow-hidden">
+    <section id="industries" className="py-8 lg:py-10 bg-cream relative overflow-hidden scroll-mt-20">
       {/* Background accents */}
       <div className="absolute inset-0 opacity-30">
         <div className="absolute top-0 right-0 w-96 h-96 bg-primary/10 rounded-full blur-[100px]" />

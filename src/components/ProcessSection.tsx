@@ -29,7 +29,7 @@ export const ProcessSection = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="process" ref={ref} className="py-16 lg:py-20">
+    <section id="process" ref={ref} className="py-16 lg:py-20 scroll-mt-20">
       <div className="container mx-auto px-6 lg:px-12">
         {/* Header */}
         <div className="max-w-2xl mb-16">
