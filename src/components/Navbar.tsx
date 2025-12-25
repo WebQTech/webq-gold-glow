@@ -349,17 +349,85 @@ export const Navbar = () => {
               className="lg:hidden bg-background border-t border-border overflow-hidden"
             >
               <div className="container mx-auto px-6 py-4 max-h-[70vh] overflow-y-auto">
-                {/* Industries */}
-                <a
-                  href={isHomePage ? "#industries" : "/#industries"}
-                  className="block py-3 text-foreground/80 hover:text-primary transition-colors border-b border-border/50"
-                  onClick={(e) => {
-                    handleAnchorClick(isHomePage ? "#industries" : "/#industries")(e);
-                    setIsMobileMenuOpen(false);
-                  }}
-                >
-                  Industries
-                </a>
+                {/* Industries with expandable categories */}
+                <div className="border-b border-border/50">
+                  <a
+                    href={isHomePage ? "#industries" : "/#industries"}
+                    className="block py-3 text-foreground/80 hover:text-primary transition-colors font-medium"
+                    onClick={(e) => {
+                      handleAnchorClick(isHomePage ? "#industries" : "/#industries")(e);
+                      setIsMobileMenuOpen(false);
+                    }}
+                  >
+                    All Industries
+                  </a>
+                  <div className="pb-3 space-y-2">
+                    <div className="pl-4">
+                      <span className="text-xs text-muted-foreground uppercase tracking-wider block py-1">
+                        AI & Technology
+                      </span>
+                      <a href="#industries" onClick={(e) => { handleAnchorClick("#industries")(e); setIsMobileMenuOpen(false); }} className="flex items-center gap-2 py-2 pl-2 text-sm text-foreground/70 hover:text-primary transition-colors">
+                        <Brain className="w-4 h-4 text-primary" />
+                        AI-Based Tech Domain
+                      </a>
+                      <a href="#industries" onClick={(e) => { handleAnchorClick("#industries")(e); setIsMobileMenuOpen(false); }} className="flex items-center gap-2 py-2 pl-2 text-sm text-foreground/70 hover:text-primary transition-colors">
+                        <RefreshCw className="w-4 h-4 text-primary" />
+                        Legacy to AI Transformation
+                      </a>
+                    </div>
+                    <div className="pl-4">
+                      <span className="text-xs text-muted-foreground uppercase tracking-wider block py-1">
+                        Finance
+                      </span>
+                      <a href="#industries" onClick={(e) => { handleAnchorClick("#industries")(e); setIsMobileMenuOpen(false); }} className="flex items-center gap-2 py-2 pl-2 text-sm text-foreground/70 hover:text-primary transition-colors">
+                        <CreditCard className="w-4 h-4 text-primary" />
+                        Banks & FinTech
+                      </a>
+                      <a href="#industries" onClick={(e) => { handleAnchorClick("#industries")(e); setIsMobileMenuOpen(false); }} className="flex items-center gap-2 py-2 pl-2 text-sm text-foreground/70 hover:text-primary transition-colors">
+                        <Landmark className="w-4 h-4 text-primary" />
+                        Capital Markets
+                      </a>
+                    </div>
+                    <div className="pl-4">
+                      <span className="text-xs text-muted-foreground uppercase tracking-wider block py-1">
+                        Public Sector
+                      </span>
+                      <a href="#industries" onClick={(e) => { handleAnchorClick("#industries")(e); setIsMobileMenuOpen(false); }} className="flex items-center gap-2 py-2 pl-2 text-sm text-foreground/70 hover:text-primary transition-colors">
+                        <Heart className="w-4 h-4 text-primary" />
+                        Healthcare Tech
+                      </a>
+                      <a href="#industries" onClick={(e) => { handleAnchorClick("#industries")(e); setIsMobileMenuOpen(false); }} className="flex items-center gap-2 py-2 pl-2 text-sm text-foreground/70 hover:text-primary transition-colors">
+                        <Landmark className="w-4 h-4 text-primary" />
+                        Government
+                      </a>
+                      <a href="#industries" onClick={(e) => { handleAnchorClick("#industries")(e); setIsMobileMenuOpen(false); }} className="flex items-center gap-2 py-2 pl-2 text-sm text-foreground/70 hover:text-primary transition-colors">
+                        <GraduationCap className="w-4 h-4 text-primary" />
+                        EduTech
+                      </a>
+                    </div>
+                    <div className="pl-4">
+                      <span className="text-xs text-muted-foreground uppercase tracking-wider block py-1">
+                        Commerce & Industry
+                      </span>
+                      <a href="#industries" onClick={(e) => { handleAnchorClick("#industries")(e); setIsMobileMenuOpen(false); }} className="flex items-center gap-2 py-2 pl-2 text-sm text-foreground/70 hover:text-primary transition-colors">
+                        <ShoppingCart className="w-4 h-4 text-primary" />
+                        Retail & E-commerce
+                      </a>
+                      <a href="#industries" onClick={(e) => { handleAnchorClick("#industries")(e); setIsMobileMenuOpen(false); }} className="flex items-center gap-2 py-2 pl-2 text-sm text-foreground/70 hover:text-primary transition-colors">
+                        <Factory className="w-4 h-4 text-primary" />
+                        Manufacturing
+                      </a>
+                      <a href="#industries" onClick={(e) => { handleAnchorClick("#industries")(e); setIsMobileMenuOpen(false); }} className="flex items-center gap-2 py-2 pl-2 text-sm text-foreground/70 hover:text-primary transition-colors">
+                        <Truck className="w-4 h-4 text-primary" />
+                        Logistics & Supply Chain
+                      </a>
+                      <a href="#industries" onClick={(e) => { handleAnchorClick("#industries")(e); setIsMobileMenuOpen(false); }} className="flex items-center gap-2 py-2 pl-2 text-sm text-foreground/70 hover:text-primary transition-colors">
+                        <Bolt className="w-4 h-4 text-primary" />
+                        Energy & Utilities
+                      </a>
+                    </div>
+                  </div>
+                </div>
 
                 {/* Services with expandable categories */}
                 <div className="border-b border-border/50">
