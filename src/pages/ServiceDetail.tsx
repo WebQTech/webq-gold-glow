@@ -112,7 +112,7 @@ const ServiceDetail = () => {
               transition={{ duration: 0.6 }}
             >
               <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-6">
-                What's Included
+                Services Offered
               </h2>
               <ul className="space-y-4">
                 {service.features.map((feature, index) => (
