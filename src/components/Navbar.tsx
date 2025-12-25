@@ -1,6 +1,6 @@
 import { useState, useEffect, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Globe, ChevronDown } from "lucide-react";
+import { Menu, X, Globe, ChevronDown, Brain, RefreshCw, CreditCard, Landmark, Heart, GraduationCap, ShoppingCart, Factory, Truck, Bolt } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { servicesData, getAllCategories } from "@/data/servicesData";
 import { AccessibilityPanel } from "@/components/AccessibilityPanel";
@@ -122,25 +122,120 @@ export const Navbar = () => {
 
             {/* Desktop Nav Links */}
             <div className="hidden lg:flex items-center gap-8">
-              {/* Industries link */}
-              <a
-                href={isHomePage ? "#industries" : "/#industries"}
-                onClick={handleAnchorClick(isHomePage ? "#industries" : "/#industries")}
-                className={`text-sm font-medium transition-colors duration-200 relative ${
-                  isHomePage && isActive("industries")
-                    ? "text-primary"
-                    : "text-foreground/80 hover:text-primary"
-                }`}
-              >
-                Industries
-                {isHomePage && isActive("industries") && (
-                  <motion.span
-                    layoutId="activeNav"
-                    className="absolute -bottom-1 left-0 right-0 h-0.5 bg-primary rounded-full"
-                    transition={{ type: "spring", stiffness: 380, damping: 30 }}
-                  />
-                )}
-              </a>
+              {/* Industries Dropdown */}
+              <DropdownMenu>
+                <DropdownMenuTrigger 
+                  className={`flex items-center gap-1 text-sm font-medium transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded-sm relative ${
+                    isHomePage && isActive("industries")
+                      ? "text-primary"
+                      : "text-foreground/80 hover:text-primary"
+                  }`}
+                  aria-label="Industries menu"
+                >
+                  Industries
+                  <ChevronDown className="w-4 h-4 transition-transform duration-200 group-data-[state=open]:rotate-180" />
+                  {isHomePage && isActive("industries") && (
+                    <span className="absolute -bottom-1 left-0 right-0 h-0.5 bg-primary rounded-full" />
+                  )}
+                </DropdownMenuTrigger>
+                <DropdownMenuContent 
+                  align="start" 
+                  className="w-72 max-h-[70vh] overflow-y-auto bg-background border border-border shadow-lg z-50"
+                  sideOffset={8}
+                >
+                  <DropdownMenuItem asChild>
+                    <a 
+                      href={isHomePage ? "#industries" : "/#industries"}
+                      onClick={handleAnchorClick(isHomePage ? "#industries" : "/#industries")}
+                      className="font-medium text-primary focus:bg-primary/10 focus:text-primary"
+                    >
+                      View All Industries
+                    </a>
+                  </DropdownMenuItem>
+                  <DropdownMenuSeparator />
+                  <DropdownMenuLabel className="text-xs text-muted-foreground uppercase tracking-wider">
+                    AI & Technology
+                  </DropdownMenuLabel>
+                  <DropdownMenuItem asChild>
+                    <a href="#industries" onClick={handleAnchorClick("#industries")} className="flex items-center gap-2 cursor-pointer focus:bg-primary/10 focus:text-primary">
+                      <Brain className="w-4 h-4 text-primary" />
+                      <span>AI-Based Tech Domain</span>
+                    </a>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <a href="#industries" onClick={handleAnchorClick("#industries")} className="flex items-center gap-2 cursor-pointer focus:bg-primary/10 focus:text-primary">
+                      <RefreshCw className="w-4 h-4 text-primary" />
+                      <span>Legacy to AI Transformation</span>
+                    </a>
+                  </DropdownMenuItem>
+                  <DropdownMenuSeparator />
+                  <DropdownMenuLabel className="text-xs text-muted-foreground uppercase tracking-wider">
+                    Finance
+                  </DropdownMenuLabel>
+                  <DropdownMenuItem asChild>
+                    <a href="#industries" onClick={handleAnchorClick("#industries")} className="flex items-center gap-2 cursor-pointer focus:bg-primary/10 focus:text-primary">
+                      <CreditCard className="w-4 h-4 text-primary" />
+                      <span>Banks & FinTech</span>
+                    </a>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <a href="#industries" onClick={handleAnchorClick("#industries")} className="flex items-center gap-2 cursor-pointer focus:bg-primary/10 focus:text-primary">
+                      <Landmark className="w-4 h-4 text-primary" />
+                      <span>Capital Markets</span>
+                    </a>
+                  </DropdownMenuItem>
+                  <DropdownMenuSeparator />
+                  <DropdownMenuLabel className="text-xs text-muted-foreground uppercase tracking-wider">
+                    Public Sector
+                  </DropdownMenuLabel>
+                  <DropdownMenuItem asChild>
+                    <a href="#industries" onClick={handleAnchorClick("#industries")} className="flex items-center gap-2 cursor-pointer focus:bg-primary/10 focus:text-primary">
+                      <Heart className="w-4 h-4 text-primary" />
+                      <span>Healthcare Tech</span>
+                    </a>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <a href="#industries" onClick={handleAnchorClick("#industries")} className="flex items-center gap-2 cursor-pointer focus:bg-primary/10 focus:text-primary">
+                      <Landmark className="w-4 h-4 text-primary" />
+                      <span>Government</span>
+                    </a>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <a href="#industries" onClick={handleAnchorClick("#industries")} className="flex items-center gap-2 cursor-pointer focus:bg-primary/10 focus:text-primary">
+                      <GraduationCap className="w-4 h-4 text-primary" />
+                      <span>EduTech</span>
+                    </a>
+                  </DropdownMenuItem>
+                  <DropdownMenuSeparator />
+                  <DropdownMenuLabel className="text-xs text-muted-foreground uppercase tracking-wider">
+                    Commerce & Industry
+                  </DropdownMenuLabel>
+                  <DropdownMenuItem asChild>
+                    <a href="#industries" onClick={handleAnchorClick("#industries")} className="flex items-center gap-2 cursor-pointer focus:bg-primary/10 focus:text-primary">
+                      <ShoppingCart className="w-4 h-4 text-primary" />
+                      <span>Retail & E-commerce</span>
+                    </a>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <a href="#industries" onClick={handleAnchorClick("#industries")} className="flex items-center gap-2 cursor-pointer focus:bg-primary/10 focus:text-primary">
+                      <Factory className="w-4 h-4 text-primary" />
+                      <span>Manufacturing</span>
+                    </a>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <a href="#industries" onClick={handleAnchorClick("#industries")} className="flex items-center gap-2 cursor-pointer focus:bg-primary/10 focus:text-primary">
+                      <Truck className="w-4 h-4 text-primary" />
+                      <span>Logistics & Supply Chain</span>
+                    </a>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <a href="#industries" onClick={handleAnchorClick("#industries")} className="flex items-center gap-2 cursor-pointer focus:bg-primary/10 focus:text-primary">
+                      <Bolt className="w-4 h-4 text-primary" />
+                      <span>Energy & Utilities</span>
+                    </a>
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
 
               {/* Services Dropdown */}
               <DropdownMenu>
