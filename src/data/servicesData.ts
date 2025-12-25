@@ -53,7 +53,9 @@ export const servicesData: ServiceDetail[] = [
       "Recommendation engines",
       "Chatbots and virtual assistants",
       "Anomaly detection",
-      "Document processing and OCR"
+      "Document processing and OCR",
+      "AI ethics & responsible AI practices",
+      "Bias detection and fairness audits"
     ],
     benefits: [
       "Automate repetitive tasks",
@@ -690,7 +692,9 @@ export const servicesData: ServiceDetail[] = [
       "Data labeling tools",
       "Model monitoring dashboards",
       "AI development environments",
-      "Evaluation and testing frameworks"
+      "Evaluation and testing frameworks",
+      "CI/CD pipelines for ML models",
+      "Model governance and compliance"
     ],
     benefits: [
       "Accelerate ML development cycles by 50%",
