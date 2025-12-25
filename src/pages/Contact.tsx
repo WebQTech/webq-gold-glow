@@ -9,6 +9,34 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
 import { Mail, Phone, MapPin, Clock, Send } from "lucide-react";
+import { z } from "zod";
+
+const contactSchema = z.object({
+  name: z
+    .string()
+    .trim()
+    .min(1, "Name is required")
+    .max(100, "Name must be less than 100 characters"),
+  email: z
+    .string()
+    .trim()
+    .min(1, "Email is required")
+    .email("Please enter a valid email address")
+    .max(255, "Email must be less than 255 characters"),
+  subject: z
+    .string()
+    .trim()
+    .min(1, "Subject is required")
+    .max(200, "Subject must be less than 200 characters"),
+  message: z
+    .string()
+    .trim()
+    .min(10, "Message must be at least 10 characters")
+    .max(2000, "Message must be less than 2000 characters"),
+});
+
+type ContactFormData = z.infer<typeof contactSchema>;
+type FormErrors = Partial<Record<keyof ContactFormData, string>>;
 
 const contactInfo = [
   {
@@ -40,22 +68,43 @@ const contactInfo = [
 const Contact = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<ContactFormData>({
     name: "",
     email: "",
     subject: "",
     message: "",
   });
+  const [errors, setErrors] = useState<FormErrors>({});
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
+    // Clear error when user starts typing
+    if (errors[name as keyof ContactFormData]) {
+      setErrors((prev) => ({ ...prev, [name]: undefined }));
+    }
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Validate form data
+    const result = contactSchema.safeParse(formData);
+    
+    if (!result.success) {
+      const fieldErrors: FormErrors = {};
+      result.error.errors.forEach((error) => {
+        const field = error.path[0] as keyof ContactFormData;
+        if (!fieldErrors[field]) {
+          fieldErrors[field] = error.message;
+        }
+      });
+      setErrors(fieldErrors);
+      return;
+    }
+
     setIsSubmitting(true);
 
     // Simulate form submission
@@ -67,6 +116,7 @@ const Contact = () => {
     });
 
     setFormData({ name: "", email: "", subject: "", message: "" });
+    setErrors({});
     setIsSubmitting(false);
   };
 
@@ -163,10 +213,14 @@ const Contact = () => {
                         value={formData.name}
                         onChange={handleChange}
                         placeholder="John Doe"
-                        required
                         maxLength={100}
-                        className="bg-background border-border focus:border-primary"
+                        className={`bg-background border-border focus:border-primary ${
+                          errors.name ? "border-destructive" : ""
+                        }`}
                       />
+                      {errors.name && (
+                        <p className="text-sm text-destructive">{errors.name}</p>
+                      )}
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="email">Email Address</Label>
@@ -177,10 +231,14 @@ const Contact = () => {
                         value={formData.email}
                         onChange={handleChange}
                         placeholder="john@example.com"
-                        required
                         maxLength={255}
-                        className="bg-background border-border focus:border-primary"
+                        className={`bg-background border-border focus:border-primary ${
+                          errors.email ? "border-destructive" : ""
+                        }`}
                       />
+                      {errors.email && (
+                        <p className="text-sm text-destructive">{errors.email}</p>
+                      )}
                     </div>
                   </div>
 
@@ -192,10 +250,14 @@ const Contact = () => {
                       value={formData.subject}
                       onChange={handleChange}
                       placeholder="How can we help you?"
-                      required
                       maxLength={200}
-                      className="bg-background border-border focus:border-primary"
+                      className={`bg-background border-border focus:border-primary ${
+                        errors.subject ? "border-destructive" : ""
+                      }`}
                     />
+                    {errors.subject && (
+                      <p className="text-sm text-destructive">{errors.subject}</p>
+                    )}
                   </div>
 
                   <div className="space-y-2">
@@ -206,11 +268,15 @@ const Contact = () => {
                       value={formData.message}
                       onChange={handleChange}
                       placeholder="Tell us about your project or inquiry..."
-                      required
                       maxLength={2000}
                       rows={6}
-                      className="bg-background border-border focus:border-primary resize-none"
+                      className={`bg-background border-border focus:border-primary resize-none ${
+                        errors.message ? "border-destructive" : ""
+                      }`}
                     />
+                    {errors.message && (
+                      <p className="text-sm text-destructive">{errors.message}</p>
+                    )}
                   </div>
 
                   <Button
