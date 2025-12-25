@@ -12,19 +12,21 @@ import BackToTopButton from "@/components/BackToTopButton";
 
 const Index = () => {
   return (
-    <main className="relative overflow-hidden bg-background">
+    <div className="relative overflow-hidden bg-background">
       <Navbar />
-      <HeroSection />
-      <ValueProposition />
-      <FeaturedSection />
-      <CaseStudiesSection />
-      <AboutSection />
-      <InsightBanner />
-      <NewsSection />
-      <ContactSection />
+      <main id="main-content" className="focus:outline-none" tabIndex={-1}>
+        <HeroSection />
+        <ValueProposition />
+        <FeaturedSection />
+        <CaseStudiesSection />
+        <AboutSection />
+        <InsightBanner />
+        <NewsSection />
+        <ContactSection />
+      </main>
       <Footer />
       <BackToTopButton />
-    </main>
+    </div>
   );
 };
 

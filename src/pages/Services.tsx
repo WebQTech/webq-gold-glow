@@ -46,8 +46,8 @@ const Services = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
-      
-      {/* Hero Section */}
+      <main id="main-content" className="focus:outline-none" tabIndex={-1}>
+        {/* Hero Section */}
       <section ref={heroRef} className="py-16 lg:py-24 bg-gradient-to-b from-primary/5 to-background">
         <div className="container mx-auto px-6 lg:px-12">
           <motion.div
@@ -125,6 +125,7 @@ const Services = () => {
         </div>
       </section>
 
+      </main>
       <Footer />
     </div>
   );
