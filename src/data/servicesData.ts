@@ -964,14 +964,14 @@ export const servicesData: ServiceDetail[] = [
     icon: Cloud,
     category: "Cloud & Infrastructure",
     features: [
-      "Migration readiness assessment",
-      "AWS, Azure, and Google Cloud",
-      "Zero-downtime migration",
+      "Readiness assessment & planning",
+      "AWS, Azure, and GCP expertise",
+      "Zero-downtime transitions",
       "Cost optimization strategies",
-      "Multi-cloud and hybrid solutions",
-      "Containerization and orchestration",
+      "Multi-cloud and hybrid architectures",
+      "Containerization with Docker & Kubernetes",
       "Data migration and validation",
-      "Security and compliance setup"
+      "Post-migration optimization"
     ],
     benefits: [
       "Reduce infrastructure costs by 30-50%",
@@ -1055,14 +1055,14 @@ export const servicesData: ServiceDetail[] = [
     icon: Server,
     category: "Cloud & Infrastructure",
     features: [
-      "24/7 infrastructure monitoring",
+      "Proactive system monitoring",
       "Server & network administration",
-      "Disaster recovery planning",
-      "Vendor management",
-      "Capacity planning",
-      "Performance optimization",
-      "Security patching",
-      "Backup management"
+      "Disaster recovery & business continuity",
+      "Vendor coordination & management",
+      "Capacity planning & forecasting",
+      "Performance tuning & optimization",
+      "Patch management & updates",
+      "Backup & restore operations"
     ],
     benefits: [
       "99.9%+ uptime guarantee",
@@ -1146,14 +1146,14 @@ export const servicesData: ServiceDetail[] = [
     icon: Settings,
     category: "Cloud & Infrastructure",
     features: [
-      "CI/CD pipeline implementation",
-      "Infrastructure as Code",
-      "Kubernetes orchestration",
-      "SLO/SLI management",
-      "Observability stack setup",
-      "GitOps workflows",
-      "Automated testing",
-      "Release management"
+      "Automated build & deploy pipelines",
+      "Infrastructure as Code (Terraform, Pulumi)",
+      "Container orchestration",
+      "SLO/SLI definition & tracking",
+      "Full-stack observability",
+      "GitOps workflows & practices",
+      "Automated quality gates",
+      "Blue-green & canary deployments"
     ],
     benefits: [
       "Deploy 10x more frequently",
@@ -1419,15 +1419,14 @@ export const servicesData: ServiceDetail[] = [
     icon: Shield,
     category: "Security",
     features: [
-      "Security audits & assessments",
-      "Penetration testing",
-      "Vulnerability management",
-      "SIEM implementation",
-      "Zero trust architecture",
-      "Identity & access management (SSO, MFA, RBAC)",
-      "Incident response & forensics",
-      "Threat intelligence & hunting",
-      "Security awareness training"
+      "Comprehensive security assessments",
+      "Penetration testing & red teaming",
+      "Vulnerability scanning & remediation",
+      "SIEM deployment & tuning",
+      "Zero trust architecture design",
+      "Identity & access controls (SSO, MFA, RBAC)",
+      "Incident response planning",
+      "Security awareness programs"
     ],
     benefits: [
       "Reduce security risks",
@@ -2056,14 +2055,14 @@ export const servicesData: ServiceDetail[] = [
     icon: FileText,
     category: "Security",
     features: [
-      "SOC 2 Type I & II certification",
-      "GDPR compliance implementation",
-      "HIPAA compliance programs",
-      "PCI-DSS certification",
+      "SOC 2 Type I & II programs",
+      "GDPR readiness & implementation",
+      "HIPAA compliance frameworks",
+      "PCI-DSS certification support",
       "ISO 27001 implementation",
-      "Policy & procedure development",
-      "Risk management frameworks",
-      "Audit preparation & support"
+      "Policy development & documentation",
+      "Risk assessment frameworks",
+      "Audit preparation & remediation"
     ],
     benefits: [
       "Achieve regulatory compliance",
@@ -2148,13 +2147,13 @@ export const servicesData: ServiceDetail[] = [
     category: "Security",
     features: [
       "Data discovery & classification",
-      "Privacy impact assessments",
-      "Consent management systems",
-      "Data subject request automation",
-      "Data retention & deletion policies",
-      "Cross-border data transfer compliance",
-      "Privacy-by-design implementation",
-      "Data breach response planning"
+      "Privacy impact assessments (PIA/DPIA)",
+      "Consent management platforms",
+      "Automated data subject requests",
+      "Retention & deletion automation",
+      "Cross-border transfer mechanisms",
+      "Privacy-by-design consulting",
+      "Breach notification procedures"
     ],
     benefits: [
       "Protect customer trust and brand reputation",
@@ -2238,14 +2237,14 @@ export const servicesData: ServiceDetail[] = [
     icon: Cloud,
     category: "Security",
     features: [
-      "Cloud security architecture design",
-      "Configuration & compliance scanning",
-      "Cloud workload protection",
-      "Container & Kubernetes security",
-      "Serverless security",
-      "Cloud access security broker (CASB)",
-      "Infrastructure as Code security",
-      "Multi-cloud security management"
+      "Security architecture reviews",
+      "Configuration & posture management",
+      "Workload protection platforms",
+      "Container & Kubernetes hardening",
+      "Serverless security controls",
+      "Cloud access broker (CASB) setup",
+      "IaC security scanning",
+      "Unified multi-cloud visibility"
     ],
     benefits: [
       "Reduce cloud misconfigurations by 90%",
