@@ -37,7 +37,6 @@ export const Navbar = () => {
   }, []);
 
   const navLinks = [
-    { label: "Industries", href: isHomePage ? "#industries" : "/#industries", isExternal: false },
     { label: "Insights", href: isHomePage ? "#insights" : "/#insights", isExternal: false },
     { label: "About", href: isHomePage ? "#about" : "/#about", isExternal: false },
   ];
