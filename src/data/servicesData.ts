@@ -50,14 +50,14 @@ export const servicesData: ServiceDetail[] = [
       "Predictive analytics & forecasting",
       "Recommendation engines",
       "Anomaly detection systems",
-      "Document processing and OCR",
-      "Data pipeline automation",
+      "Object detection and image classification",
+      "Video analytics and real-time processing",
+      "Quality inspection automation",
       "Model serving APIs (REST & gRPC)",
       "Containerized model deployment",
       "Auto-scaling inference infrastructure",
       "A/B testing and canary releases",
-      "Model versioning and rollback",
-      "AI ethics & responsible AI practices"
+      "Model versioning and rollback"
     ],
     benefits: [
       "Automate repetitive tasks",
@@ -146,8 +146,10 @@ export const servicesData: ServiceDetail[] = [
       "Fine-tuning for domain-specific tasks",
       "Prompt engineering and optimization",
       "AI-powered content generation",
-      "Semantic search implementation",
-      "Multi-modal AI applications",
+      "Multi-channel chatbots (web, mobile, voice)",
+      "Natural language understanding and sentiment analysis",
+      "Live agent handoff and CRM integration",
+      "Multi-language support",
       "AI safety and guardrails"
     ],
     benefits: [
@@ -221,188 +223,6 @@ export const servicesData: ServiceDetail[] = [
       {
         question: "How do you ensure AI responses are accurate?",
         answer: "We implement RAG systems grounded in your data, add verification layers, use prompt engineering for consistency, and build feedback loops for continuous improvement."
-      }
-    ]
-  },
-  {
-    slug: "conversational-ai",
-    name: "Conversational AI & Chatbots",
-    shortDescription: "Intelligent chatbots and virtual assistants that understand and respond naturally.",
-    fullDescription: "Create sophisticated conversational experiences that delight customers and streamline operations. Our conversational AI solutions go beyond simple rule-based bots to deliver truly intelligent, context-aware interactions across multiple channels.",
-    icon: MessageSquare,
-    category: "Artificial Intelligence",
-    features: [
-      "Multi-channel deployment (web, mobile, voice)",
-      "Natural language understanding",
-      "Context and memory management",
-      "Sentiment analysis",
-      "Live agent handoff",
-      "Multi-language support",
-      "Integration with CRM and ticketing systems",
-      "Analytics and conversation insights"
-    ],
-    benefits: [
-      "24/7 customer support availability",
-      "Reduce support costs by 60%",
-      "Handle 80% of queries automatically",
-      "Improve customer satisfaction scores",
-      "Scale support without hiring"
-    ],
-    technologies: ["Dialogflow", "Amazon Lex", "Azure Bot Service", "Rasa", "OpenAI", "Twilio", "Intercom", "Zendesk"],
-    pricing: [
-      {
-        name: "Bot Starter",
-        price: "$12,000",
-        description: "Basic chatbot implementation",
-        features: [
-          "Single channel deployment",
-          "Up to 50 intents",
-          "FAQ automation",
-          "Basic analytics",
-          "30 days support"
-        ]
-      },
-      {
-        name: "Bot Pro",
-        price: "$35,000",
-        description: "Multi-channel intelligent bot",
-        features: [
-          "Multi-channel deployment",
-          "Unlimited intents",
-          "CRM integration",
-          "Sentiment analysis",
-          "90 days support",
-          "Custom training"
-        ],
-        popular: true
-      },
-      {
-        name: "Bot Enterprise",
-        price: "Custom",
-        description: "Enterprise conversational platform",
-        features: [
-          "Full platform deployment",
-          "Voice and text channels",
-          "Advanced analytics",
-          "Custom AI models",
-          "24/7 support",
-          "Dedicated team"
-        ]
-      }
-    ],
-    caseStudies: [
-      {
-        company: "TravelEasy",
-        industry: "Travel & Hospitality",
-        challenge: "Support team overwhelmed with booking inquiries and common questions.",
-        solution: "Deployed an AI chatbot handling bookings, FAQs, and complex itinerary changes across web and WhatsApp.",
-        results: [
-          "70% of inquiries handled automatically",
-          "Support costs reduced by 55%",
-          "Customer satisfaction up 25%",
-          "24/7 availability achieved"
-        ]
-      }
-    ],
-    faqs: [
-      {
-        question: "Can the chatbot handle complex conversations?",
-        answer: "Yes, our conversational AI maintains context across multiple turns, remembers user preferences, and can handle complex multi-step workflows while seamlessly escalating to humans when needed."
-      },
-      {
-        question: "How do you train the chatbot for our business?",
-        answer: "We work with your team to understand your use cases, gather training data from past interactions, and iteratively improve the bot through testing and real-world feedback."
-      }
-    ]
-  },
-  {
-    slug: "computer-vision",
-    name: "Computer Vision & Image AI",
-    shortDescription: "Visual recognition, object detection, and image analysis solutions.",
-    fullDescription: "Transform how your business processes visual information with cutting-edge computer vision technology. From quality control in manufacturing to medical image analysis, we build custom vision solutions that see, understand, and act on visual data.",
-    icon: Eye,
-    category: "Artificial Intelligence",
-    features: [
-      "Object detection and tracking",
-      "Image classification",
-      "Facial recognition",
-      "OCR and document processing",
-      "Video analytics",
-      "Quality inspection automation",
-      "Medical image analysis",
-      "Real-time visual processing"
-    ],
-    benefits: [
-      "Automate visual inspection tasks",
-      "Reduce manual review errors by 95%",
-      "Process images 1000x faster than humans",
-      "Enable new product capabilities",
-      "Improve safety and compliance"
-    ],
-    technologies: ["TensorFlow", "PyTorch", "OpenCV", "YOLO", "AWS Rekognition", "Google Vision AI", "Azure Computer Vision", "NVIDIA CUDA"],
-    pricing: [
-      {
-        name: "Vision Starter",
-        price: "$25,000",
-        description: "Basic vision implementation",
-        features: [
-          "Single use case (classification or detection)",
-          "Pre-trained model adaptation",
-          "API integration",
-          "Documentation",
-          "30 days support"
-        ]
-      },
-      {
-        name: "Vision Pro",
-        price: "$80,000",
-        description: "Custom vision solution",
-        features: [
-          "Custom model development",
-          "Multi-task vision system",
-          "Edge deployment option",
-          "Real-time processing",
-          "90 days support",
-          "Model retraining"
-        ],
-        popular: true
-      },
-      {
-        name: "Vision Enterprise",
-        price: "Custom",
-        description: "Enterprise vision platform",
-        features: [
-          "Multiple vision applications",
-          "Video analytics",
-          "Custom hardware integration",
-          "MLOps infrastructure",
-          "24/7 support",
-          "Ongoing optimization"
-        ]
-      }
-    ],
-    caseStudies: [
-      {
-        company: "AutoParts Manufacturing",
-        industry: "Manufacturing",
-        challenge: "Manual quality inspection missing defects and creating bottlenecks.",
-        solution: "Implemented AI-powered visual inspection system detecting defects in real-time on the production line.",
-        results: [
-          "Defect detection rate improved to 99.5%",
-          "Inspection time reduced by 90%",
-          "Quality returns decreased by 80%",
-          "$3M saved annually in defect costs"
-        ]
-      }
-    ],
-    faqs: [
-      {
-        question: "What kind of camera or hardware do we need?",
-        answer: "Requirements depend on the use case. Many solutions work with standard cameras. For specialized needs like manufacturing inspection, we recommend industrial cameras. We help specify the right hardware for your project."
-      },
-      {
-        question: "Can this work in real-time?",
-        answer: "Yes, we optimize models for real-time performance. Depending on requirements, we can deploy on cloud, edge devices, or specialized hardware like NVIDIA GPUs to achieve sub-second response times."
       }
     ]
   },
