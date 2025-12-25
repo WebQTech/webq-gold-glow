@@ -586,6 +586,97 @@ export const servicesData: ServiceDetail[] = [
     ]
   },
   {
+    slug: "custom-application-development",
+    name: "Custom Application Development",
+    shortDescription: "Tailored web and enterprise applications built to solve your unique business challenges.",
+    fullDescription: "We design and develop custom applications that perfectly align with your business processes and goals. From internal tools to customer-facing platforms, our team creates scalable, secure, and user-friendly applications that drive efficiency and growth.",
+    icon: Code2,
+    category: "Development & Engineering",
+    features: [
+      "Web application development",
+      "Enterprise software solutions",
+      "SaaS platform development",
+      "Internal tools and dashboards",
+      "E-commerce and marketplace platforms",
+      "Real-time collaboration tools",
+      "Workflow automation systems",
+      "Integration with existing systems"
+    ],
+    benefits: [
+      "Solve unique business challenges",
+      "Improve operational efficiency by 50%",
+      "Gain competitive advantage",
+      "Full ownership of your solution",
+      "Scalable architecture for growth"
+    ],
+    technologies: ["React", "Next.js", "Node.js", "Python", "PostgreSQL", "Redis", "GraphQL", "AWS", "Docker"],
+    pricing: [
+      {
+        name: "Starter App",
+        price: "$20,000",
+        description: "Small-scale applications",
+        features: [
+          "Up to 4 months development",
+          "Single developer",
+          "Core functionality",
+          "Basic integrations",
+          "30 days support"
+        ]
+      },
+      {
+        name: "Business App",
+        price: "$60,000",
+        description: "Mid-sized applications",
+        features: [
+          "Up to 8 months development",
+          "Team of 2-4 developers",
+          "Advanced features",
+          "Multiple integrations",
+          "90 days support",
+          "Performance optimization"
+        ],
+        popular: true
+      },
+      {
+        name: "Enterprise App",
+        price: "Custom",
+        description: "Large-scale platforms",
+        features: [
+          "Unlimited timeline",
+          "Full dedicated team",
+          "Complex integrations",
+          "Enterprise security",
+          "24/7 support",
+          "Ongoing development"
+        ]
+      }
+    ],
+    caseStudies: [
+      {
+        company: "LogiTrack Solutions",
+        industry: "Logistics",
+        challenge: "Managing fleet operations across multiple locations with outdated spreadsheets.",
+        solution: "Built a custom fleet management platform with real-time tracking, route optimization, and driver management.",
+        results: [
+          "Fuel costs reduced by 25%",
+          "Delivery times improved by 35%",
+          "Real-time visibility across 500+ vehicles",
+          "Driver productivity increased by 40%"
+        ]
+      }
+    ],
+    faqs: [
+      {
+        question: "What's the difference between custom and off-the-shelf software?",
+        answer: "Custom software is built specifically for your needs, offering perfect fit, flexibility, and competitive advantage. Off-the-shelf is faster to deploy but may require workarounds and lacks differentiation."
+      },
+      {
+        question: "How do you ensure the application scales with our business?",
+        answer: "We design with scalability in mind from day one, using cloud-native architecture, microservices where appropriate, and performance testing to ensure your app grows with you."
+      }
+    ]
+  },
+  {
     slug: "cloud-migration",
     name: "Cloud Migration & Deployment",
     shortDescription: "Seamless transition from legacy systems to modern cloud infrastructure.",
