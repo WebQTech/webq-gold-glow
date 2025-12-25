@@ -1,6 +1,7 @@
 import { Navbar } from "@/components/Navbar";
 import { HeroSection } from "@/components/HeroSection";
 import { ValueProposition } from "@/components/ValueProposition";
+import { AIShowcaseSection } from "@/components/AIShowcaseSection";
 import { FeaturedSection } from "@/components/FeaturedSection";
 import { CaseStudiesSection } from "@/components/CaseStudiesSection";
 import { AboutSection } from "@/components/AboutSection";
@@ -17,6 +18,7 @@ const Index = () => {
       <main id="main-content" className="focus:outline-none" tabIndex={-1}>
         <HeroSection />
         <ValueProposition />
+        <AIShowcaseSection />
         <FeaturedSection />
         <CaseStudiesSection />
         <AboutSection />
