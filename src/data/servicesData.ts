@@ -52,10 +52,12 @@ export const servicesData: ServiceDetail[] = [
       "Anomaly detection systems",
       "Document processing and OCR",
       "Data pipeline automation",
-      "Model optimization & deployment",
-      "AI ethics & responsible AI practices",
-      "EU AI Act & GDPR compliance",
-      "AI risk assessment frameworks"
+      "Model serving APIs (REST & gRPC)",
+      "Containerized model deployment",
+      "Auto-scaling inference infrastructure",
+      "A/B testing and canary releases",
+      "Model versioning and rollback",
+      "AI ethics & responsible AI practices"
     ],
     benefits: [
       "Automate repetitive tasks",
