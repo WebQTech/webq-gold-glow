@@ -2,7 +2,7 @@ import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight, Brain, Sparkles, MessageSquare, Eye, Workflow, Zap } from "lucide-react";
-
+import { NeuralNetworkBackground } from "./NeuralNetworkBackground";
 const aiServices = [
   {
     slug: "ai-machine-learning",
@@ -63,9 +63,11 @@ export const AIShowcaseSection = () => {
       className="py-20 lg:py-32 relative overflow-hidden"
       id="ai-showcase"
     >
-      {/* Background Effects */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-primary/5 to-background" />
-      <div className="absolute inset-0 opacity-30">
+      {/* Neural Network Background */}
+      <NeuralNetworkBackground />
+      
+      {/* Ambient glows */}
+      <div className="absolute inset-0 opacity-30 pointer-events-none">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-3xl" />
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent/20 rounded-full blur-3xl" />
       </div>
