@@ -6,7 +6,7 @@ import { servicesData, getAllCategories } from "@/data/servicesData";
 import { AccessibilityPanel } from "@/components/AccessibilityPanel";
 import { useSmoothScroll } from "@/hooks/useSmoothScroll";
 import { useScrollSpy } from "@/hooks/useScrollSpy";
-import webqIcon from "@/assets/webq-icon.png";
+import webqLogo from "@/assets/webq-logo.svg";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -110,11 +110,8 @@ export const Navbar = () => {
         <div className="container mx-auto px-6 lg:px-12">
           <div className="flex items-center justify-between h-16 lg:h-20">
             {/* Logo */}
-            <Link to="/" className="flex items-center gap-2">
-              <img src={webqIcon} alt="WebQ Technologies" className="h-9 w-auto" />
-              <span className="font-montserrat text-xl font-bold text-foreground tracking-tight hidden sm:inline">
-                WebQ <span className="text-primary">Technologies</span>
-              </span>
+            <Link to="/" className="flex items-center">
+              <img src={webqLogo} alt="WebQ Technologies" className="h-12 w-auto" />
             </Link>
 
             {/* Desktop Nav Links */}
