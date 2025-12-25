@@ -6,7 +6,7 @@ export const CTASection = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="contact" ref={ref} className="py-16 lg:py-20 relative overflow-hidden">
+    <section id="contact" ref={ref} className="py-16 lg:py-20 relative overflow-hidden scroll-mt-20">
       {/* Background gradient effect */}
       <div 
         className="absolute inset-0 -z-10"
