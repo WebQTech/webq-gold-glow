@@ -15,6 +15,7 @@ import About from "./pages/About";
 import Careers from "./pages/Careers";
 import News from "./pages/News";
 import Investors from "./pages/Investors";
+import Contact from "./pages/Contact";
 import { SectionRedirect } from "@/components/SectionRedirect";
 
 const queryClient = new QueryClient();
@@ -37,13 +38,13 @@ const App = () => (
             <Route path="/careers" element={<Careers />} />
             <Route path="/news" element={<News />} />
             <Route path="/investors" element={<Investors />} />
+            <Route path="/contact" element={<Contact />} />
 
             {/* Section routes (avoid 404 if someone lands on /process etc.) */}
             <Route path="/products" element={<SectionRedirect hash="#products" />} />
             <Route path="/solutions" element={<SectionRedirect hash="#solutions" />} />
             <Route path="/process" element={<SectionRedirect hash="#process" />} />
             <Route path="/capabilities" element={<SectionRedirect hash="#capabilities" />} />
-            <Route path="/contact" element={<SectionRedirect hash="#contact" />} />
 
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
