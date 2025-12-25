@@ -267,7 +267,7 @@ export const ServicesSection = () => {
   }, [expandedIndex]);
 
   return (
-    <section id="solutions" ref={ref} className="py-10 lg:py-12">
+    <section id="solutions" ref={ref} className="py-10 lg:py-12 scroll-mt-20">
       <div className="container mx-auto px-6 lg:px-12">
         {/* Header */}
         <div className="max-w-2xl mb-8">
