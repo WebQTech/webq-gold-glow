@@ -1,15 +1,23 @@
 import { motion } from "framer-motion";
 import { Linkedin, Twitter, Youtube, Facebook } from "lucide-react";
+import { Link } from "react-router-dom";
 import logo from "@/assets/logo.png";
 
+const industryLinks = [
+  { label: "AI-Based Tech Domain", href: "/industries/ai-based-tech-domain" },
+  { label: "Legacy to AI Transformation", href: "/industries/legacy-to-ai-transformation" },
+  { label: "Banks & FinTech", href: "/industries/banks-fintech" },
+  { label: "Capital Markets", href: "/industries/capital-markets" },
+  { label: "Healthcare Tech", href: "/industries/healthcare-tech" },
+  { label: "Government", href: "/industries/government" },
+  { label: "EduTech", href: "/industries/edutech" },
+  { label: "Retail & E-commerce", href: "/industries/retail-ecommerce" },
+  { label: "Manufacturing", href: "/industries/manufacturing" },
+  { label: "Logistics & Supply Chain", href: "/industries/logistics-supply-chain" },
+  { label: "Energy & Utilities", href: "/industries/energy-utilities" },
+];
+
 const footerLinks = {
-  Industries: [
-    { label: "Healthcare", href: "#industries" },
-    { label: "Banking & Finance", href: "#industries" },
-    { label: "Retail", href: "#industries" },
-    { label: "Manufacturing", href: "#industries" },
-    { label: "Technology", href: "#industries" },
-  ],
   Company: [
     { label: "About Us", href: "#about" },
     { label: "Leadership", href: "#about" },
@@ -63,7 +71,26 @@ export const Footer = () => {
             </div>
           </div>
 
-          {/* Link Columns */}
+          {/* Industries Column */}
+          <div>
+            <h4 className="text-sm font-semibold uppercase tracking-wider text-white/40 mb-4">
+              Industries
+            </h4>
+            <ul className="space-y-2">
+              {industryLinks.map((link) => (
+                <li key={link.label}>
+                  <Link
+                    to={link.href}
+                    className="text-sm text-white/60 hover:text-white transition-colors"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Other Link Columns */}
           {Object.entries(footerLinks).map(([title, links]) => (
             <div key={title}>
               <h4 className="text-sm font-semibold uppercase tracking-wider text-white/40 mb-4">
