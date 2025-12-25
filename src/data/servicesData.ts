@@ -495,97 +495,6 @@ export const servicesData: ServiceDetail[] = [
   },
   // ==================== DEVELOPMENT & ENGINEERING ====================
   {
-    slug: "mobile-app-development",
-    name: "Mobile App Development",
-    shortDescription: "Native and cross-platform mobile applications for iOS and Android.",
-    fullDescription: "Create powerful mobile experiences that engage your users and drive business growth. Our mobile development team specializes in both native and cross-platform solutions, ensuring your app delivers exceptional performance and user experience on every device.",
-    icon: Smartphone,
-    category: "Development & Engineering",
-    features: [
-      "React Native & Flutter development",
-      "Native iOS (Swift) and Android (Kotlin)",
-      "App Store optimization",
-      "Push notifications & analytics",
-      "Offline-first architecture",
-      "Biometric authentication",
-      "Payment integration",
-      "Real-time synchronization"
-    ],
-    benefits: [
-      "Reach customers on their preferred devices",
-      "Increase user engagement by 60%",
-      "Generate new revenue streams",
-      "Build brand loyalty through mobile presence",
-      "Collect valuable user behavior data"
-    ],
-    technologies: ["React Native", "Flutter", "Swift", "Kotlin", "Firebase", "GraphQL", "Redux", "App Store Connect"],
-    pricing: [
-      {
-        name: "Single Platform",
-        price: "$25,000",
-        description: "iOS or Android app",
-        features: [
-          "One platform (iOS or Android)",
-          "Up to 10 screens",
-          "Basic analytics",
-          "Push notifications",
-          "App store submission"
-        ]
-      },
-      {
-        name: "Cross-Platform",
-        price: "$40,000",
-        description: "Both iOS and Android",
-        features: [
-          "iOS and Android apps",
-          "Up to 20 screens",
-          "Advanced analytics",
-          "Push notifications",
-          "App store optimization",
-          "Backend API included"
-        ],
-        popular: true
-      },
-      {
-        name: "Enterprise Mobile",
-        price: "Custom",
-        description: "Complex enterprise apps",
-        features: [
-          "All platforms",
-          "Unlimited screens",
-          "Enterprise integrations",
-          "Advanced security",
-          "Dedicated support team",
-          "Custom features"
-        ]
-      }
-    ],
-    caseStudies: [
-      {
-        company: "RetailMax",
-        industry: "Retail",
-        challenge: "Needed a mobile commerce platform to compete with larger retailers.",
-        solution: "Built a cross-platform shopping app with personalized recommendations and seamless checkout.",
-        results: [
-          "1M+ downloads in first year",
-          "35% of total sales from mobile",
-          "4.8 star rating on both stores",
-          "Customer retention up 45%"
-        ]
-      }
-    ],
-    faqs: [
-      {
-        question: "Should I choose native or cross-platform development?",
-        answer: "Cross-platform (React Native/Flutter) is cost-effective and faster for most apps. Native development is recommended for apps requiring complex animations, AR/VR features, or maximum performance."
-      },
-      {
-        question: "How long does it take to get an app on the App Store?",
-        answer: "Development typically takes 3-6 months. App Store review takes 1-3 days for iOS and 1-7 days for Google Play. We handle the entire submission process."
-      }
-    ]
-  },
-  {
     slug: "custom-application-development",
     name: "Custom Application Development",
     shortDescription: "Tailored web and enterprise applications built to solve your unique business challenges.",
@@ -673,6 +582,97 @@ export const servicesData: ServiceDetail[] = [
       {
         question: "How do you ensure the application scales with our business?",
         answer: "We design with scalability in mind from day one, using cloud-native architecture, microservices where appropriate, and performance testing to ensure your app grows with you."
+      }
+    ]
+  },
+  {
+    slug: "mobile-app-development",
+    name: "Mobile App Development",
+    shortDescription: "Native and cross-platform mobile applications for iOS and Android.",
+    fullDescription: "Create powerful mobile experiences that engage your users and drive business growth. Our mobile development team specializes in both native and cross-platform solutions, ensuring your app delivers exceptional performance and user experience on every device.",
+    icon: Smartphone,
+    category: "Development & Engineering",
+    features: [
+      "React Native & Flutter development",
+      "Native iOS (Swift) and Android (Kotlin)",
+      "App Store optimization",
+      "Push notifications & analytics",
+      "Offline-first architecture",
+      "Biometric authentication",
+      "Payment integration",
+      "Real-time synchronization"
+    ],
+    benefits: [
+      "Reach customers on their preferred devices",
+      "Increase user engagement by 60%",
+      "Generate new revenue streams",
+      "Build brand loyalty through mobile presence",
+      "Collect valuable user behavior data"
+    ],
+    technologies: ["React Native", "Flutter", "Swift", "Kotlin", "Firebase", "GraphQL", "Redux", "App Store Connect"],
+    pricing: [
+      {
+        name: "Single Platform",
+        price: "$25,000",
+        description: "iOS or Android app",
+        features: [
+          "One platform (iOS or Android)",
+          "Up to 10 screens",
+          "Basic analytics",
+          "Push notifications",
+          "App store submission"
+        ]
+      },
+      {
+        name: "Cross-Platform",
+        price: "$40,000",
+        description: "Both iOS and Android",
+        features: [
+          "iOS and Android apps",
+          "Up to 20 screens",
+          "Advanced analytics",
+          "Push notifications",
+          "App store optimization",
+          "Backend API included"
+        ],
+        popular: true
+      },
+      {
+        name: "Enterprise Mobile",
+        price: "Custom",
+        description: "Complex enterprise apps",
+        features: [
+          "All platforms",
+          "Unlimited screens",
+          "Enterprise integrations",
+          "Advanced security",
+          "Dedicated support team",
+          "Custom features"
+        ]
+      }
+    ],
+    caseStudies: [
+      {
+        company: "RetailMax",
+        industry: "Retail",
+        challenge: "Needed a mobile commerce platform to compete with larger retailers.",
+        solution: "Built a cross-platform shopping app with personalized recommendations and seamless checkout.",
+        results: [
+          "1M+ downloads in first year",
+          "35% of total sales from mobile",
+          "4.8 star rating on both stores",
+          "Customer retention up 45%"
+        ]
+      }
+    ],
+    faqs: [
+      {
+        question: "Should I choose native or cross-platform development?",
+        answer: "Cross-platform (React Native/Flutter) is cost-effective and faster for most apps. Native development is recommended for apps requiring complex animations, AR/VR features, or maximum performance."
+      },
+      {
+        question: "How long does it take to get an app on the App Store?",
+        answer: "Development typically takes 3-6 months. App Store review takes 1-3 days for iOS and 1-7 days for Google Play. We handle the entire submission process."
       }
     ]
   },
