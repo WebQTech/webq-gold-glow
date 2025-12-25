@@ -107,10 +107,12 @@ const IndustryDetail = () => {
                 transition={{ duration: 0.7, delay: 0.2 }}
                 className="relative"
               >
-                <div className="aspect-square max-w-md mx-auto bg-gradient-to-br from-primary/20 to-primary/5 rounded-3xl flex items-center justify-center">
-                  <div className="w-32 h-32 bg-primary rounded-2xl flex items-center justify-center shadow-lg">
-                    <Icon className="w-16 h-16 text-white" />
-                  </div>
+                <div className="aspect-video max-w-lg mx-auto rounded-2xl overflow-hidden shadow-2xl">
+                  <img 
+                    src={industry.heroImage} 
+                    alt={industry.name}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               </motion.div>
             </div>
