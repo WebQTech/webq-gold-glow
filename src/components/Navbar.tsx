@@ -111,7 +111,7 @@ export const Navbar = () => {
           <div className="flex items-center justify-between h-16 lg:h-20">
             {/* Logo */}
             <Link to="/" className="flex items-center gap-3">
-              <img src={logo} alt="WebQ Technologies" className="h-10 w-auto transition-transform duration-200 hover:scale-110" />
+              <img src={logo} alt="WebQ Technologies" className="h-14 w-auto transition-transform duration-200 hover:scale-110" />
             </Link>
 
             {/* Desktop Nav Links */}
