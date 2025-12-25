@@ -1137,7 +1137,7 @@ export const servicesData: ServiceDetail[] = [
     shortDescription: "Protect your digital assets with enterprise-grade security solutions.",
     fullDescription: "Safeguard your business from evolving cyber threats with our comprehensive security services. From vulnerability assessments to managed security operations, we help you build a robust security posture that protects your assets and reputation.",
     icon: Shield,
-    category: "Quality & Security",
+    category: "Security",
     features: [
       "Security audits & assessments",
       "Penetration testing",
@@ -1773,7 +1773,7 @@ export const servicesData: ServiceDetail[] = [
     shortDescription: "Secure authentication and authorization for your applications.",
     fullDescription: "Protect your applications and data with robust identity management. We implement enterprise-grade authentication, authorization, and access control solutions that secure your systems while providing seamless user experiences.",
     icon: Lock,
-    category: "Quality & Security",
+    category: "Security",
     features: [
       "SSO implementation",
       "Multi-factor authentication",
