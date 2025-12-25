@@ -222,7 +222,7 @@ export const CapabilitiesSection = () => {
           className="text-center mb-12 lg:mb-16"
         >
           <h2 className="font-playfair text-3xl md:text-4xl lg:text-[42px] text-navy">
-            The WebQ <span className="italic text-primary">Difference.</span>
+            The WebQ Technologies <span className="italic text-primary">Difference.</span>
           </h2>
           <p className="mt-3 text-sm font-medium tracking-wide text-navy">
             Trust. Expertise. Results.
