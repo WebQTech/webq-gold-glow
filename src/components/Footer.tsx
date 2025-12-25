@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Linkedin, Twitter, Youtube, Facebook } from "lucide-react";
-import webqLogo from "@/assets/webq-logo.png";
+import webqIcon from "@/assets/webq-icon.png";
 
 const footerLinks = {
   Industries: [
@@ -40,7 +40,10 @@ export const Footer = () => {
           {/* Brand Column */}
           <div className="col-span-2 md:col-span-3 lg:col-span-1 mb-8 lg:mb-0">
             <a href="#" className="flex items-center gap-2 mb-6">
-              <img src={webqLogo} alt="WebQ Technologies" className="h-10 w-auto" />
+              <img src={webqIcon} alt="WebQ Technologies" className="h-9 w-auto" />
+              <span className="font-montserrat text-lg font-bold tracking-tight">
+                WebQ <span className="text-primary">Technologies</span>
+              </span>
             </a>
             <p className="text-sm text-white/50 max-w-xs leading-relaxed">
               Enterprise technology solutions that transform businesses and drive innovation.
