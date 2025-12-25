@@ -112,9 +112,12 @@ export const Navbar = () => {
             {/* Logo */}
             <Link to="/" className="flex items-center gap-3 group">
               <img src={logo} alt="WebQ Technologies" className="h-14 w-auto transition-all duration-300 group-hover:scale-110 group-hover:drop-shadow-[0_0_12px_hsl(var(--primary)/0.6)]" />
-              <span className="font-montserrat text-xl font-bold text-foreground tracking-tight">
-                WebQ <span className="text-primary">Technologies</span>
-              </span>
+              <div className="flex flex-col">
+                <span className="font-montserrat text-xl font-bold text-foreground tracking-tight leading-tight">
+                  WebQ <span className="text-primary">Technologies</span>
+                </span>
+                <span className="text-xs text-muted-foreground font-medium tracking-wide">Innovate. Transform. Succeed.</span>
+              </div>
             </Link>
 
             {/* Desktop Nav Links */}
