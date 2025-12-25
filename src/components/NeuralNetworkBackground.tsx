@@ -1,5 +1,5 @@
 import { useMemo, useRef, useEffect, useState } from "react";
-import { motion, useScroll, useTransform, useSpring } from "framer-motion";
+import { motion, useScroll, useTransform, useSpring, useMotionValue } from "framer-motion";
 
 interface Node {
   id: number;
@@ -24,6 +24,24 @@ export const NeuralNetworkBackground = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const [mousePosition, setMousePosition] = useState({ x: 0.5, y: 0.5 });
 
+  // Motion values for smooth rotation
+  const mouseX = useMotionValue(0.5);
+  const mouseY = useMotionValue(0.5);
+
+  // Smooth spring animations for rotation
+  const smoothMouseX = useSpring(mouseX, { stiffness: 50, damping: 30 });
+  const smoothMouseY = useSpring(mouseY, { stiffness: 50, damping: 30 });
+
+  // Rotation transforms for each layer (degrees)
+  const backRotateX = useTransform(smoothMouseY, [0, 1], [8, -8]);
+  const backRotateY = useTransform(smoothMouseX, [0, 1], [-8, 8]);
+  
+  const midRotateX = useTransform(smoothMouseY, [0, 1], [5, -5]);
+  const midRotateY = useTransform(smoothMouseX, [0, 1], [-5, 5]);
+  
+  const frontRotateX = useTransform(smoothMouseY, [0, 1], [2, -2]);
+  const frontRotateY = useTransform(smoothMouseX, [0, 1], [-2, 2]);
+
   // Scroll-based parallax
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -37,7 +55,7 @@ export const NeuralNetworkBackground = () => {
   const midLayerY = useTransform(smoothProgress, [0, 1], [30, -30]);
   const frontLayerY = useTransform(smoothProgress, [0, 1], [10, -10]);
 
-  // Mouse tracking for subtle parallax
+  // Mouse tracking for parallax and rotation
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
       if (!containerRef.current) return;
@@ -45,11 +63,13 @@ export const NeuralNetworkBackground = () => {
       const x = (e.clientX - rect.left) / rect.width;
       const y = (e.clientY - rect.top) / rect.height;
       setMousePosition({ x, y });
+      mouseX.set(x);
+      mouseY.set(y);
     };
 
     window.addEventListener("mousemove", handleMouseMove);
     return () => window.removeEventListener("mousemove", handleMouseMove);
-  }, []);
+  }, [mouseX, mouseY]);
 
   // Mouse parallax offsets (subtle)
   const mouseOffsetX = (mousePosition.x - 0.5) * 20;
@@ -118,16 +138,19 @@ export const NeuralNetworkBackground = () => {
 
   const getLayerStyles = (layer: number) => {
     const parallaxY = layer === 0 ? backLayerY : layer === 1 ? midLayerY : frontLayerY;
+    const rotateX = layer === 0 ? backRotateX : layer === 1 ? midRotateX : frontRotateX;
+    const rotateY = layer === 0 ? backRotateY : layer === 1 ? midRotateY : frontRotateY;
     const mouseMultiplier = layer === 0 ? 0.3 : layer === 1 ? 0.6 : 1;
     const opacity = layer === 0 ? 0.2 : layer === 1 ? 0.4 : 0.6;
     const blur = layer === 0 ? "blur(2px)" : layer === 1 ? "blur(0.5px)" : "none";
     const scale = layer === 0 ? 0.9 : layer === 1 ? 1 : 1.1;
+    const zOffset = layer === 0 ? -100 : layer === 1 ? 0 : 100;
 
-    return { parallaxY, mouseMultiplier, opacity, blur, scale };
+    return { parallaxY, rotateX, rotateY, mouseMultiplier, opacity, blur, scale, zOffset };
   };
 
   const renderLayer = (layer: number) => {
-    const { parallaxY, mouseMultiplier, opacity, blur, scale } = getLayerStyles(layer);
+    const { parallaxY, rotateX, rotateY, mouseMultiplier, opacity, blur, scale, zOffset } = getLayerStyles(layer);
     const layerNodes = nodes.filter((n) => n.layer === layer);
     const layerConnections = connections.filter((c) => c.layer === layer);
 
@@ -138,8 +161,12 @@ export const NeuralNetworkBackground = () => {
         style={{
           y: parallaxY,
           x: mouseOffsetX * mouseMultiplier,
+          rotateX,
+          rotateY,
+          z: zOffset,
           filter: blur,
           scale,
+          transformStyle: "preserve-3d",
         }}
       >
         <svg
@@ -320,7 +347,11 @@ export const NeuralNetworkBackground = () => {
   };
 
   return (
-    <div ref={containerRef} className="absolute inset-0 overflow-hidden pointer-events-none" style={{ perspective: "1000px" }}>
+    <div 
+      ref={containerRef} 
+      className="absolute inset-0 overflow-hidden pointer-events-none" 
+      style={{ perspective: "1200px", perspectiveOrigin: "50% 50%" }}
+    >
       {/* Gradient overlays */}
       <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background z-20" />
       <div className="absolute inset-0 bg-gradient-to-r from-background/80 via-transparent to-background/80 z-20" />
