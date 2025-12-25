@@ -7,7 +7,7 @@ export const ContactSection = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="contact" ref={ref} className="py-16 lg:py-24 bg-[hsl(215,50%,12%)] text-white">
+    <section id="contact" ref={ref} className="py-16 lg:py-24 bg-background">
       <div className="container mx-auto px-6 lg:px-12">
         <div className="max-w-4xl mx-auto">
           <motion.div
@@ -16,10 +16,10 @@ export const ContactSection = () => {
             transition={{ duration: 0.7 }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl lg:text-4xl font-bold">
+            <h2 className="text-3xl lg:text-4xl font-bold text-foreground">
               Ready to transform your business?
             </h2>
-            <p className="mt-4 text-white/70 text-lg max-w-2xl mx-auto">
+            <p className="mt-4 text-muted-foreground text-lg max-w-2xl mx-auto">
               Let's discuss how we can help you achieve your digital transformation goals.
             </p>
           </motion.div>
@@ -31,55 +31,55 @@ export const ContactSection = () => {
             className="grid md:grid-cols-2 gap-6"
           >
             <div>
-              <label className="block text-sm font-medium text-white/70 mb-2">
+              <label className="block text-sm font-medium text-foreground mb-2">
                 Full Name *
               </label>
               <input
                 type="text"
-                className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-sm text-white placeholder:text-white/40 focus:outline-none focus:border-[hsl(195,100%,45%)] transition-colors"
+                className="w-full px-4 py-3 bg-muted border border-border rounded-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors"
                 placeholder="John Smith"
               />
             </div>
             <div>
-              <label className="block text-sm font-medium text-white/70 mb-2">
+              <label className="block text-sm font-medium text-foreground mb-2">
                 Work Email *
               </label>
               <input
                 type="email"
-                className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-sm text-white placeholder:text-white/40 focus:outline-none focus:border-[hsl(195,100%,45%)] transition-colors"
+                className="w-full px-4 py-3 bg-muted border border-border rounded-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors"
                 placeholder="john@company.com"
               />
             </div>
             <div>
-              <label className="block text-sm font-medium text-white/70 mb-2">
+              <label className="block text-sm font-medium text-foreground mb-2">
                 Company
               </label>
               <input
                 type="text"
-                className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-sm text-white placeholder:text-white/40 focus:outline-none focus:border-[hsl(195,100%,45%)] transition-colors"
+                className="w-full px-4 py-3 bg-muted border border-border rounded-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors"
                 placeholder="Company Name"
               />
             </div>
             <div>
-              <label className="block text-sm font-medium text-white/70 mb-2">
+              <label className="block text-sm font-medium text-foreground mb-2">
                 Topic of Interest
               </label>
-              <select className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-sm text-white focus:outline-none focus:border-[hsl(195,100%,45%)] transition-colors">
-                <option value="" className="bg-[hsl(215,50%,12%)]">Select a topic</option>
-                <option value="ai" className="bg-[hsl(215,50%,12%)]">AI Solutions</option>
-                <option value="cloud" className="bg-[hsl(215,50%,12%)]">Cloud Services</option>
-                <option value="digital" className="bg-[hsl(215,50%,12%)]">Digital Transformation</option>
-                <option value="data" className="bg-[hsl(215,50%,12%)]">Data & Analytics</option>
-                <option value="other" className="bg-[hsl(215,50%,12%)]">Other</option>
+              <select className="w-full px-4 py-3 bg-muted border border-border rounded-sm text-foreground focus:outline-none focus:border-primary transition-colors">
+                <option value="">Select a topic</option>
+                <option value="ai">AI Solutions</option>
+                <option value="cloud">Cloud Services</option>
+                <option value="digital">Digital Transformation</option>
+                <option value="data">Data & Analytics</option>
+                <option value="other">Other</option>
               </select>
             </div>
             <div className="md:col-span-2">
-              <label className="block text-sm font-medium text-white/70 mb-2">
+              <label className="block text-sm font-medium text-foreground mb-2">
                 Message
               </label>
               <textarea
                 rows={4}
-                className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-sm text-white placeholder:text-white/40 focus:outline-none focus:border-[hsl(195,100%,45%)] transition-colors resize-none"
+                className="w-full px-4 py-3 bg-muted border border-border rounded-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors resize-none"
                 placeholder="Tell us about your project..."
               />
             </div>
@@ -98,10 +98,10 @@ export const ContactSection = () => {
             initial={{ opacity: 0 }}
             animate={isInView ? { opacity: 1 } : {}}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="mt-8 text-center text-sm text-white/40"
+            className="mt-8 text-center text-sm text-muted-foreground"
           >
             Or email us directly at{" "}
-            <a href="mailto:contact@webqtech.com" className="text-[hsl(195,100%,45%)] hover:underline">
+            <a href="mailto:contact@webqtech.com" className="text-primary hover:underline">
               contact@webqtech.com
             </a>
           </motion.p>
