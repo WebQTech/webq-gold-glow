@@ -1948,6 +1948,97 @@ export const servicesData: ServiceDetail[] = [
         answer: "Not necessarily. With modern GRC platforms and our managed services, small teams can maintain compliance efficiently. We help you determine the right balance of tools, processes, and personnel for your organization."
       }
     ]
+  },
+  {
+    slug: "data-privacy",
+    name: "Data Privacy",
+    shortDescription: "Protect sensitive data and ensure privacy compliance across your organization.",
+    fullDescription: "Safeguard personal and sensitive data with comprehensive privacy programs. We help organizations implement data protection strategies, privacy-by-design principles, and compliance frameworks that protect customer trust while enabling data-driven business operations.",
+    icon: Shield,
+    category: "Security",
+    features: [
+      "Data discovery & classification",
+      "Privacy impact assessments",
+      "Consent management systems",
+      "Data subject request automation",
+      "Data retention & deletion policies",
+      "Cross-border data transfer compliance",
+      "Privacy-by-design implementation",
+      "Data breach response planning"
+    ],
+    benefits: [
+      "Protect customer trust and brand reputation",
+      "Reduce data breach risk by 75%",
+      "Automate privacy compliance workflows",
+      "Enable global data operations",
+      "Avoid regulatory fines up to 4% of revenue"
+    ],
+    technologies: ["OneTrust", "BigID", "Collibra", "Securiti", "TrustArc", "DataGrail", "Osano", "Transcend"],
+    pricing: [
+      {
+        name: "Privacy Foundation",
+        price: "$15,000",
+        description: "Essential privacy program",
+        features: [
+          "Data inventory & mapping",
+          "Privacy policy development",
+          "Basic consent management",
+          "DSR process setup",
+          "Staff awareness training"
+        ]
+      },
+      {
+        name: "Privacy Pro",
+        price: "$45,000",
+        description: "Comprehensive privacy program",
+        features: [
+          "Advanced data discovery",
+          "Privacy platform implementation",
+          "Automated DSR workflows",
+          "Vendor privacy assessments",
+          "Cookie consent management",
+          "Ongoing advisory support"
+        ],
+        popular: true
+      },
+      {
+        name: "Enterprise Privacy",
+        price: "Custom",
+        description: "Global privacy operations",
+        features: [
+          "Enterprise-wide program",
+          "Multi-jurisdiction compliance",
+          "Data governance integration",
+          "Privacy engineering",
+          "DPO-as-a-service",
+          "24/7 breach response"
+        ]
+      }
+    ],
+    caseStudies: [
+      {
+        company: "GlobalRetail Co",
+        industry: "E-commerce",
+        challenge: "Operating in 15 countries with varying privacy laws and struggling to manage customer data requests.",
+        solution: "Implemented unified privacy platform with automated data discovery, consent management, and DSR automation.",
+        results: [
+          "DSR response time reduced from 30 days to 48 hours",
+          "Achieved GDPR, CCPA, and LGPD compliance",
+          "Customer trust score increased 40%",
+          "Zero privacy-related fines or incidents"
+        ]
+      }
+    ],
+    faqs: [
+      {
+        question: "What's the difference between data privacy and data security?",
+        answer: "Data security focuses on protecting data from unauthorized access through technical controls. Data privacy focuses on how data is collected, used, shared, and retained in compliance with regulations and customer expectations. Both are essential and complementary."
+      },
+      {
+        question: "How do we handle privacy across multiple countries?",
+        answer: "We implement a unified privacy framework that meets the strictest requirements (usually GDPR) while accommodating regional variations. This includes proper data transfer mechanisms, local consent requirements, and jurisdiction-specific retention policies."
+      }
+    ]
   }
 ];
 
