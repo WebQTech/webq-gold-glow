@@ -495,8 +495,8 @@ export const servicesData: ServiceDetail[] = [
   },
   // ==================== DEVELOPMENT & ENGINEERING ====================
   {
-    slug: "custom-application-development",
-    name: "Custom Application Development",
+    slug: "custom-app-development",
+    name: "Custom App Development",
     shortDescription: "Tailored web and enterprise applications built to solve your unique business challenges.",
     fullDescription: "We design and develop custom applications that perfectly align with your business processes and goals. From internal tools to customer-facing platforms, our team creates scalable, secure, and user-friendly applications that drive efficiency and growth.",
     icon: Code2,
