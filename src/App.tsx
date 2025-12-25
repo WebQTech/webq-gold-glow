@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import Services from "./pages/Services";
+import ServiceDetail from "./pages/ServiceDetail";
 import { SectionRedirect } from "@/components/SectionRedirect";
 
 const queryClient = new QueryClient();
@@ -19,6 +20,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/services" element={<Services />} />
+          <Route path="/services/:slug" element={<ServiceDetail />} />
 
           {/* Section routes (avoid 404 if someone lands on /process etc.) */}
           <Route path="/products" element={<SectionRedirect hash="#products" />} />
