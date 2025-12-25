@@ -1,6 +1,6 @@
 import { useState, useEffect, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Globe, ChevronDown, Brain, RefreshCw, CreditCard, Landmark, Heart, GraduationCap, ShoppingCart, Factory, Truck, Bolt } from "lucide-react";
+import { Menu, X, Globe, ChevronDown, Brain, RefreshCw, CreditCard, Landmark, Heart, GraduationCap, ShoppingCart, Factory, Truck, Bolt, Lightbulb, FileText, TrendingUp, Users, Building2, Briefcase, Award, Newspaper, BarChart3, DollarSign, Target, BookOpen, Mic, Calendar, UserCheck, MapPin, Gift, Handshake } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { servicesData, getAllCategories } from "@/data/servicesData";
 import { AccessibilityPanel } from "@/components/AccessibilityPanel";
@@ -50,15 +50,47 @@ export const Navbar = () => {
     }));
   }, []);
 
-  const navLinks = [
-    { label: "Insights", href: isHomePage ? "#insights" : "/#insights", sectionId: "insights" },
-    { label: "About", href: isHomePage ? "#about" : "/#about", sectionId: "about" },
+  // Insights dropdown items
+  const insightsItems = [
+    { label: "Industry Reports", href: "#insights", icon: FileText },
+    { label: "Case Studies", href: "#insights", icon: BookOpen },
+    { label: "Whitepapers", href: "#insights", icon: Lightbulb },
+    { label: "Tech Trends", href: "#insights", icon: TrendingUp },
+    { label: "Webinars", href: "#insights", icon: Mic },
+    { label: "Events", href: "#insights", icon: Calendar },
   ];
 
-  const topLinks = [
-    { label: "Careers", href: "#careers" },
-    { label: "News", href: "#news" },
-    { label: "Investors", href: "#investors" },
+  // About dropdown items
+  const aboutItems = [
+    { label: "Our Story", href: "#about", icon: Building2 },
+    { label: "Leadership Team", href: "#about", icon: Users },
+    { label: "Our Values", href: "#about", icon: Award },
+    { label: "Global Presence", href: "#about", icon: MapPin },
+    { label: "Partners", href: "#about", icon: Handshake },
+  ];
+
+  // Careers dropdown items
+  const careersItems = [
+    { label: "Open Positions", href: "#careers", icon: Briefcase },
+    { label: "Life at WebQ", href: "#careers", icon: Users },
+    { label: "Benefits", href: "#careers", icon: Gift },
+    { label: "Internships", href: "#careers", icon: UserCheck },
+  ];
+
+  // News dropdown items
+  const newsItems = [
+    { label: "Press Releases", href: "#news", icon: Newspaper },
+    { label: "Company Updates", href: "#news", icon: FileText },
+    { label: "Media Coverage", href: "#news", icon: Mic },
+    { label: "Blog", href: "#news", icon: BookOpen },
+  ];
+
+  // Investors dropdown items
+  const investorsItems = [
+    { label: "Financial Reports", href: "#investors", icon: BarChart3 },
+    { label: "Stock Information", href: "#investors", icon: TrendingUp },
+    { label: "Governance", href: "#investors", icon: Building2 },
+    { label: "Investor Resources", href: "#investors", icon: DollarSign },
   ];
 
   return (
@@ -75,15 +107,59 @@ export const Navbar = () => {
       <div className="hidden lg:block bg-background border-b border-border/50">
         <div className="container mx-auto px-6 lg:px-12">
           <div className="flex items-center justify-end gap-4 py-2">
-            {topLinks.map((link) => (
-              <a
-                key={link.label}
-                href={link.href}
-                className="text-xs text-foreground/60 hover:text-primary transition-colors"
-              >
-                {link.label}
-              </a>
-            ))}
+            {/* Careers Dropdown */}
+            <DropdownMenu>
+              <DropdownMenuTrigger className="flex items-center gap-1 text-xs text-foreground/60 hover:text-primary transition-colors focus:outline-none">
+                Careers
+                <ChevronDown className="w-3 h-3" />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end" className="w-48 bg-background border border-border shadow-lg z-50">
+                {careersItems.map((item) => (
+                  <DropdownMenuItem key={item.label} asChild>
+                    <a href={item.href} className="flex items-center gap-2 cursor-pointer focus:bg-primary/10 focus:text-primary">
+                      <item.icon className="w-4 h-4 text-primary" />
+                      <span>{item.label}</span>
+                    </a>
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
+
+            {/* News Dropdown */}
+            <DropdownMenu>
+              <DropdownMenuTrigger className="flex items-center gap-1 text-xs text-foreground/60 hover:text-primary transition-colors focus:outline-none">
+                News
+                <ChevronDown className="w-3 h-3" />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end" className="w-48 bg-background border border-border shadow-lg z-50">
+                {newsItems.map((item) => (
+                  <DropdownMenuItem key={item.label} asChild>
+                    <a href={item.href} className="flex items-center gap-2 cursor-pointer focus:bg-primary/10 focus:text-primary">
+                      <item.icon className="w-4 h-4 text-primary" />
+                      <span>{item.label}</span>
+                    </a>
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
+
+            {/* Investors Dropdown */}
+            <DropdownMenu>
+              <DropdownMenuTrigger className="flex items-center gap-1 text-xs text-foreground/60 hover:text-primary transition-colors focus:outline-none">
+                Investors
+                <ChevronDown className="w-3 h-3" />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end" className="w-48 bg-background border border-border shadow-lg z-50">
+                {investorsItems.map((item) => (
+                  <DropdownMenuItem key={item.label} asChild>
+                    <a href={item.href} className="flex items-center gap-2 cursor-pointer focus:bg-primary/10 focus:text-primary">
+                      <item.icon className="w-4 h-4 text-primary" />
+                      <span>{item.label}</span>
+                    </a>
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
             <div className="flex items-center gap-1 text-xs text-foreground/60 cursor-pointer hover:text-primary transition-colors">
               <Globe className="w-3 h-3" />
               <span>US-EN</span>
@@ -291,28 +367,77 @@ export const Navbar = () => {
                 </DropdownMenuContent>
               </DropdownMenu>
 
-              {/* Other nav links */}
-              {navLinks.map((link) => (
-                <a
-                  key={link.label}
-                  href={link.href}
-                  onClick={handleAnchorClick(link.href)}
-                  className={`text-sm font-medium transition-colors duration-200 relative ${
-                    isHomePage && isActive(link.sectionId)
+              {/* Insights Dropdown */}
+              <DropdownMenu>
+                <DropdownMenuTrigger 
+                  className={`flex items-center gap-1 text-sm font-medium transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded-sm relative ${
+                    isHomePage && isActive("insights")
                       ? "text-primary"
                       : "text-foreground/80 hover:text-primary"
                   }`}
+                  aria-label="Insights menu"
                 >
-                  {link.label}
-                  {isHomePage && isActive(link.sectionId) && (
-                    <motion.span
-                      layoutId="activeNav"
-                      className="absolute -bottom-1 left-0 right-0 h-0.5 bg-primary rounded-full"
-                      transition={{ type: "spring", stiffness: 380, damping: 30 }}
-                    />
+                  Insights
+                  <ChevronDown className="w-4 h-4 transition-transform duration-200 group-data-[state=open]:rotate-180" />
+                  {isHomePage && isActive("insights") && (
+                    <span className="absolute -bottom-1 left-0 right-0 h-0.5 bg-primary rounded-full" />
                   )}
-                </a>
-              ))}
+                </DropdownMenuTrigger>
+                <DropdownMenuContent 
+                  align="start" 
+                  className="w-56 bg-background border border-border shadow-lg z-50"
+                  sideOffset={8}
+                >
+                  {insightsItems.map((item) => (
+                    <DropdownMenuItem key={item.label} asChild>
+                      <a 
+                        href={isHomePage ? item.href : `/${item.href}`}
+                        onClick={handleAnchorClick(isHomePage ? item.href : `/${item.href}`)}
+                        className="flex items-center gap-2 cursor-pointer focus:bg-primary/10 focus:text-primary"
+                      >
+                        <item.icon className="w-4 h-4 text-primary" />
+                        <span>{item.label}</span>
+                      </a>
+                    </DropdownMenuItem>
+                  ))}
+                </DropdownMenuContent>
+              </DropdownMenu>
+
+              {/* About Dropdown */}
+              <DropdownMenu>
+                <DropdownMenuTrigger 
+                  className={`flex items-center gap-1 text-sm font-medium transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded-sm relative ${
+                    isHomePage && isActive("about")
+                      ? "text-primary"
+                      : "text-foreground/80 hover:text-primary"
+                  }`}
+                  aria-label="About menu"
+                >
+                  About
+                  <ChevronDown className="w-4 h-4 transition-transform duration-200 group-data-[state=open]:rotate-180" />
+                  {isHomePage && isActive("about") && (
+                    <span className="absolute -bottom-1 left-0 right-0 h-0.5 bg-primary rounded-full" />
+                  )}
+                </DropdownMenuTrigger>
+                <DropdownMenuContent 
+                  align="start" 
+                  className="w-56 bg-background border border-border shadow-lg z-50"
+                  sideOffset={8}
+                >
+                  {aboutItems.map((item) => (
+                    <DropdownMenuItem key={item.label} asChild>
+                      <a 
+                        href={isHomePage ? item.href : `/${item.href}`}
+                        onClick={handleAnchorClick(isHomePage ? item.href : `/${item.href}`)}
+                        className="flex items-center gap-2 cursor-pointer focus:bg-primary/10 focus:text-primary"
+                      >
+                        <item.icon className="w-4 h-4 text-primary" />
+                        <span>{item.label}</span>
+                      </a>
+                    </DropdownMenuItem>
+                  ))}
+                </DropdownMenuContent>
+              </DropdownMenu>
             </div>
 
             {/* Desktop CTA */}
@@ -459,42 +584,116 @@ export const Navbar = () => {
                   </div>
                 </div>
 
-                {/* Other nav links */}
-                {navLinks.map((link) => (
-                  link.href.startsWith("/") && !link.href.startsWith("/#") ? (
-                    <Link
-                      key={link.label}
-                      to={link.href}
-                      className="block py-3 text-foreground/80 hover:text-primary transition-colors border-b border-border/50"
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                      {link.label}
-                    </Link>
-                  ) : (
-                    <a
-                      key={link.label}
-                      href={link.href}
-                      className="block py-3 text-foreground/80 hover:text-primary transition-colors border-b border-border/50"
-                      onClick={(e) => {
-                        handleAnchorClick(link.href)(e);
-                        setIsMobileMenuOpen(false);
-                      }}
-                    >
-                      {link.label}
-                    </a>
-                  )
-                ))}
-                <div className="pt-4 space-y-3">
-                  {topLinks.map((link) => (
-                    <a
-                      key={link.label}
-                      href={link.href}
-                      className="block text-sm text-foreground/60 hover:text-primary transition-colors"
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                      {link.label}
-                    </a>
-                  ))}
+                {/* Insights Section */}
+                <div className="border-b border-border/50">
+                  <a
+                    href={isHomePage ? "#insights" : "/#insights"}
+                    className="block py-3 text-foreground/80 hover:text-primary transition-colors font-medium"
+                    onClick={(e) => {
+                      handleAnchorClick(isHomePage ? "#insights" : "/#insights")(e);
+                      setIsMobileMenuOpen(false);
+                    }}
+                  >
+                    Insights
+                  </a>
+                  <div className="pb-3 pl-4 space-y-1">
+                    {insightsItems.map((item) => (
+                      <a
+                        key={item.label}
+                        href={isHomePage ? item.href : `/${item.href}`}
+                        className="flex items-center gap-2 py-2 pl-2 text-sm text-foreground/70 hover:text-primary transition-colors"
+                        onClick={(e) => {
+                          handleAnchorClick(isHomePage ? item.href : `/${item.href}`)(e);
+                          setIsMobileMenuOpen(false);
+                        }}
+                      >
+                        <item.icon className="w-4 h-4 text-primary" />
+                        {item.label}
+                      </a>
+                    ))}
+                  </div>
+                </div>
+
+                {/* About Section */}
+                <div className="border-b border-border/50">
+                  <a
+                    href={isHomePage ? "#about" : "/#about"}
+                    className="block py-3 text-foreground/80 hover:text-primary transition-colors font-medium"
+                    onClick={(e) => {
+                      handleAnchorClick(isHomePage ? "#about" : "/#about")(e);
+                      setIsMobileMenuOpen(false);
+                    }}
+                  >
+                    About
+                  </a>
+                  <div className="pb-3 pl-4 space-y-1">
+                    {aboutItems.map((item) => (
+                      <a
+                        key={item.label}
+                        href={isHomePage ? item.href : `/${item.href}`}
+                        className="flex items-center gap-2 py-2 pl-2 text-sm text-foreground/70 hover:text-primary transition-colors"
+                        onClick={(e) => {
+                          handleAnchorClick(isHomePage ? item.href : `/${item.href}`)(e);
+                          setIsMobileMenuOpen(false);
+                        }}
+                      >
+                        <item.icon className="w-4 h-4 text-primary" />
+                        {item.label}
+                      </a>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Careers, News, Investors */}
+                <div className="pt-4 space-y-4">
+                  <div>
+                    <span className="text-xs text-muted-foreground uppercase tracking-wider block pb-2">Careers</span>
+                    <div className="pl-2 space-y-1">
+                      {careersItems.map((item) => (
+                        <a
+                          key={item.label}
+                          href={item.href}
+                          className="flex items-center gap-2 py-1.5 text-sm text-foreground/70 hover:text-primary transition-colors"
+                          onClick={() => setIsMobileMenuOpen(false)}
+                        >
+                          <item.icon className="w-4 h-4 text-primary" />
+                          {item.label}
+                        </a>
+                      ))}
+                    </div>
+                  </div>
+                  <div>
+                    <span className="text-xs text-muted-foreground uppercase tracking-wider block pb-2">News</span>
+                    <div className="pl-2 space-y-1">
+                      {newsItems.map((item) => (
+                        <a
+                          key={item.label}
+                          href={item.href}
+                          className="flex items-center gap-2 py-1.5 text-sm text-foreground/70 hover:text-primary transition-colors"
+                          onClick={() => setIsMobileMenuOpen(false)}
+                        >
+                          <item.icon className="w-4 h-4 text-primary" />
+                          {item.label}
+                        </a>
+                      ))}
+                    </div>
+                  </div>
+                  <div>
+                    <span className="text-xs text-muted-foreground uppercase tracking-wider block pb-2">Investors</span>
+                    <div className="pl-2 space-y-1">
+                      {investorsItems.map((item) => (
+                        <a
+                          key={item.label}
+                          href={item.href}
+                          className="flex items-center gap-2 py-1.5 text-sm text-foreground/70 hover:text-primary transition-colors"
+                          onClick={() => setIsMobileMenuOpen(false)}
+                        >
+                          <item.icon className="w-4 h-4 text-primary" />
+                          {item.label}
+                        </a>
+                      ))}
+                    </div>
+                  </div>
                 </div>
                 <div className="pt-4 border-t border-border/50 mt-4">
                   <div className="flex items-center justify-between">
