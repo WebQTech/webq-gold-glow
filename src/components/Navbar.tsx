@@ -110,11 +110,11 @@ export const Navbar = () => {
           <div className="flex items-center justify-between h-16 lg:h-20">
             {/* Logo */}
             <Link to="/" className="flex items-center gap-3">
-              <div className="w-8 h-8 bg-gradient-primary rounded-sm flex items-center justify-center">
-                <span className="text-white font-bold text-sm">W</span>
+              <div className="w-9 h-9 bg-gradient-primary rounded-lg flex items-center justify-center">
+                <span className="text-white font-montserrat font-extrabold text-lg">W</span>
               </div>
-              <span className="font-sora text-xl font-bold text-foreground">
-                webq<span className="text-primary">technologies</span>
+              <span className="font-montserrat text-xl font-bold text-foreground tracking-tight">
+                WebQ <span className="text-primary">Technologies</span>
               </span>
             </Link>
 
