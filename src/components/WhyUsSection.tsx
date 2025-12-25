@@ -35,7 +35,7 @@ export const WhyUsSection = () => {
               transition={{ duration: 0.6 }}
               className="section-label"
             >
-              Why WebQ
+              Why WebQ Technologies
             </motion.span>
 
             <motion.h2
