@@ -1,7 +1,6 @@
 import { useState, useEffect, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Globe, ChevronDown } from "lucide-react";
-import logoSvg from "@/assets/logo.svg";
 import { Link, useLocation } from "react-router-dom";
 import { servicesData, getAllCategories } from "@/data/servicesData";
 import { AccessibilityPanel } from "@/components/AccessibilityPanel";
@@ -110,8 +109,13 @@ export const Navbar = () => {
         <div className="container mx-auto px-6 lg:px-12">
           <div className="flex items-center justify-between h-16 lg:h-20">
             {/* Logo */}
-            <Link to="/" className="flex items-center">
-              <img src={logoSvg} alt="WebQ Technologies" className="h-10 sm:h-12 lg:h-14 w-auto" />
+            <Link to="/" className="flex items-center gap-3">
+              <div className="w-9 h-9 bg-gradient-primary rounded-lg flex items-center justify-center">
+                <span className="text-white font-montserrat font-extrabold text-lg">W</span>
+              </div>
+              <span className="font-montserrat text-xl font-bold text-foreground tracking-tight">
+                WebQ <span className="text-primary">Technologies</span>
+              </span>
             </Link>
 
             {/* Desktop Nav Links */}
