@@ -4,6 +4,7 @@ import { Menu, X, Globe, ChevronDown } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { servicesData, getAllCategories } from "@/data/servicesData";
 import { AccessibilityPanel } from "@/components/AccessibilityPanel";
+import { useSmoothScroll } from "@/hooks/useSmoothScroll";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -18,6 +19,7 @@ export const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
   const isHomePage = location.pathname === "/";
+  const { handleAnchorClick } = useSmoothScroll();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -110,6 +112,7 @@ export const Navbar = () => {
               {/* Industries link */}
               <a
                 href={isHomePage ? "#industries" : "/#industries"}
+                onClick={handleAnchorClick(isHomePage ? "#industries" : "/#industries")}
                 className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors duration-200"
               >
                 Industries
@@ -177,6 +180,7 @@ export const Navbar = () => {
                   <a
                     key={link.label}
                     href={link.href}
+                    onClick={handleAnchorClick(link.href)}
                     className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors duration-200"
                   >
                     {link.label}
@@ -187,12 +191,13 @@ export const Navbar = () => {
 
             {/* Desktop CTA */}
             <div className="hidden lg:flex items-center gap-4">
-              <Link 
-                to={isHomePage ? "#contact" : "/#contact"} 
+              <a 
+                href={isHomePage ? "#contact" : "/#contact"}
+                onClick={handleAnchorClick(isHomePage ? "#contact" : "/#contact")}
                 className="btn-primary text-sm px-6 py-2.5"
               >
                 Contact Us
-              </Link>
+              </a>
             </div>
 
             {/* Mobile Menu Button */}
@@ -219,7 +224,10 @@ export const Navbar = () => {
                 <a
                   href={isHomePage ? "#industries" : "/#industries"}
                   className="block py-3 text-foreground/80 hover:text-primary transition-colors border-b border-border/50"
-                  onClick={() => setIsMobileMenuOpen(false)}
+                  onClick={(e) => {
+                    handleAnchorClick(isHomePage ? "#industries" : "/#industries")(e);
+                    setIsMobileMenuOpen(false);
+                  }}
                 >
                   Industries
                 </a>
@@ -274,7 +282,10 @@ export const Navbar = () => {
                       key={link.label}
                       href={link.href}
                       className="block py-3 text-foreground/80 hover:text-primary transition-colors border-b border-border/50"
-                      onClick={() => setIsMobileMenuOpen(false)}
+                      onClick={(e) => {
+                        handleAnchorClick(link.href)(e);
+                        setIsMobileMenuOpen(false);
+                      }}
                     >
                       {link.label}
                     </a>
@@ -298,13 +309,16 @@ export const Navbar = () => {
                     <AccessibilityPanel />
                   </div>
                 </div>
-                <Link
-                  to={isHomePage ? "#contact" : "/#contact"}
+                <a
+                  href={isHomePage ? "#contact" : "/#contact"}
                   className="block mt-4 btn-primary text-center text-sm"
-                  onClick={() => setIsMobileMenuOpen(false)}
+                  onClick={(e) => {
+                    handleAnchorClick(isHomePage ? "#contact" : "/#contact")(e);
+                    setIsMobileMenuOpen(false);
+                  }}
                 >
                   Contact Us
-                </Link>
+                </a>
               </div>
             </motion.div>
           )}
