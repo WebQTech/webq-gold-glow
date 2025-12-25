@@ -68,6 +68,35 @@
     @apply bg-background text-foreground antialiased;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   }
+
+  /* Global focus-visible styles for keyboard navigation */
+  :focus {
+    outline: none;
+  }
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-primary ring-offset-2 ring-offset-background;
+  }
+
+  /* Interactive elements focus styles */
+  a:focus-visible,
+  button:focus-visible,
+  [role="button"]:focus-visible,
+  input:focus-visible,
+  select:focus-visible,
+  textarea:focus-visible {
+    @apply outline-none ring-2 ring-primary ring-offset-2 ring-offset-background rounded-sm;
+  }
+
+  /* Card and clickable container focus */
+  [tabindex="0"]:focus-visible {
+    @apply outline-none ring-2 ring-primary ring-offset-2 ring-offset-background rounded-md;
+  }
+
+  /* Skip focus styles for main content target */
+  main:focus {
+    outline: none;
+  }
 }
 
 @layer utilities {
@@ -115,6 +144,11 @@
     transform: translateY(-1px);
   }
 
+  .btn-primary:focus-visible {
+    @apply ring-2 ring-offset-2 ring-offset-background;
+    ring-color: hsl(var(--cognizant-cyan));
+  }
+
   .btn-gradient {
     @apply inline-flex items-center justify-center px-8 py-4 font-semibold rounded-sm transition-all duration-300;
     background: linear-gradient(135deg, hsl(var(--cognizant-blue)), hsl(var(--cognizant-cyan)));
@@ -124,6 +158,11 @@
   .btn-gradient:hover {
     transform: translateY(-1px);
     box-shadow: 0 8px 25px hsla(var(--cognizant-blue), 0.3);
+  }
+
+  .btn-gradient:focus-visible {
+    @apply ring-2 ring-offset-2 ring-offset-background;
+    ring-color: hsl(var(--cognizant-cyan));
   }
 
   .btn-outline {
@@ -138,6 +177,11 @@
     color: hsl(0 0% 100%);
   }
 
+  .btn-outline:focus-visible {
+    @apply ring-2 ring-offset-2 ring-offset-background;
+    ring-color: hsl(var(--cognizant-blue));
+  }
+
   .btn-white {
     @apply inline-flex items-center justify-center px-8 py-4 font-semibold rounded-sm transition-all duration-300;
     background-color: hsl(0 0% 100%);
@@ -147,6 +191,12 @@
   .btn-white:hover {
     transform: translateY(-1px);
     box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2);
+  }
+
+  .btn-white:focus-visible {
+    @apply ring-2 ring-offset-2;
+    ring-color: hsl(var(--cognizant-blue));
+    ring-offset-color: hsl(var(--cognizant-dark));
   }
 
   .section-label {
