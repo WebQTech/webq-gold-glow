@@ -3,8 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Globe, ChevronDown } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { servicesData, getAllCategories } from "@/data/servicesData";
-import { HighContrastToggle } from "@/components/HighContrastToggle";
-import { FontSizeControl } from "@/components/FontSizeControl";
+import { AccessibilityPanel } from "@/components/AccessibilityPanel";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -77,9 +76,8 @@ export const Navbar = () => {
               <span>US-EN</span>
               <ChevronDown className="w-3 h-3" />
             </div>
-            <div className="border-l border-border/50 pl-4 flex items-center gap-2">
-              <FontSizeControl />
-              <HighContrastToggle />
+            <div className="border-l border-border/50 pl-4">
+              <AccessibilityPanel />
             </div>
           </div>
         </div>
@@ -296,13 +294,9 @@ export const Navbar = () => {
                   ))}
                 </div>
                 <div className="pt-4 border-t border-border/50 mt-4">
-                  <span className="text-sm text-foreground/60 block mb-2">Accessibility:</span>
-                  <div className="flex items-center gap-4">
-                    <div className="flex items-center gap-2">
-                      <span className="text-xs text-foreground/50">Text size:</span>
-                      <FontSizeControl />
-                    </div>
-                    <HighContrastToggle />
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm text-foreground/60">Accessibility:</span>
+                    <AccessibilityPanel />
                   </div>
                 </div>
                 <Link
