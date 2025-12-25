@@ -510,7 +510,10 @@ export const servicesData: ServiceDetail[] = [
       "Human-in-the-loop workflows",
       "Chain-of-thought reasoning",
       "Goal-oriented behavior",
-      "Self-reflection and correction"
+      "Self-reflection and correction",
+      "Explainability and decision transparency",
+      "AI governance and audit trails",
+      "Guardrails and safety constraints"
     ],
     benefits: [
       "Automate complex multi-step workflows",
