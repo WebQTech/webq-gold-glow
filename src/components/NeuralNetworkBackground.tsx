@@ -92,9 +92,19 @@ export const NeuralNetworkBackground = () => {
             <stop offset="0%" stopColor="hsl(var(--primary))" stopOpacity="0.6" />
             <stop offset="100%" stopColor="hsl(var(--accent))" stopOpacity="0.3" />
           </linearGradient>
+          <linearGradient id="activeLineGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="hsl(var(--primary))" stopOpacity="1" />
+            <stop offset="50%" stopColor="hsl(var(--accent))" stopOpacity="0.9" />
+            <stop offset="100%" stopColor="hsl(var(--primary))" stopOpacity="1" />
+          </linearGradient>
           <radialGradient id="nodeGradient">
             <stop offset="0%" stopColor="hsl(var(--primary))" stopOpacity="1" />
             <stop offset="100%" stopColor="hsl(var(--primary))" stopOpacity="0.4" />
+          </radialGradient>
+          <radialGradient id="pulseGradient">
+            <stop offset="0%" stopColor="hsl(var(--primary))" stopOpacity="1" />
+            <stop offset="50%" stopColor="hsl(var(--accent))" stopOpacity="0.8" />
+            <stop offset="100%" stopColor="hsl(var(--primary))" stopOpacity="0" />
           </radialGradient>
           <filter id="glow">
             <feGaussianBlur stdDeviation="0.5" result="coloredBlur" />
@@ -103,28 +113,51 @@ export const NeuralNetworkBackground = () => {
               <feMergeNode in="SourceGraphic" />
             </feMerge>
           </filter>
+          <filter id="strongGlow">
+            <feGaussianBlur stdDeviation="1" result="coloredBlur" />
+            <feMerge>
+              <feMergeNode in="coloredBlur" />
+              <feMergeNode in="coloredBlur" />
+              <feMergeNode in="SourceGraphic" />
+            </feMerge>
+          </filter>
         </defs>
 
-        {/* Connections */}
+        {/* Base Connections */}
         {connections.map((conn) => (
-          <motion.line
-            key={conn.id}
+          <line
+            key={`base-${conn.id}`}
             x1={conn.x1}
             y1={conn.y1}
             x2={conn.x2}
             y2={conn.y2}
             stroke="url(#lineGradient)"
-            strokeWidth="0.15"
-            initial={{ pathLength: 0, opacity: 0 }}
+            strokeWidth="0.1"
+            opacity="0.3"
+          />
+        ))}
+
+        {/* Active pulsing connections */}
+        {connections.slice(0, 25).map((conn, i) => (
+          <motion.line
+            key={`active-${conn.id}`}
+            x1={conn.x1}
+            y1={conn.y1}
+            x2={conn.x2}
+            y2={conn.y2}
+            stroke="url(#activeLineGradient)"
+            strokeWidth="0.25"
+            filter="url(#strongGlow)"
+            initial={{ opacity: 0 }}
             animate={{ 
-              pathLength: [0, 1, 1, 0],
-              opacity: [0, 0.6, 0.6, 0]
+              opacity: [0, 0.9, 0.9, 0],
+              strokeWidth: [0.15, 0.3, 0.3, 0.15]
             }}
             transition={{
-              duration: 4,
-              delay: conn.delay,
+              duration: 2.5,
+              delay: (i * 0.3) % 5,
               repeat: Infinity,
-              repeatDelay: 2,
+              repeatDelay: 4,
               ease: "easeInOut",
             }}
           />
@@ -154,24 +187,71 @@ export const NeuralNetworkBackground = () => {
         ))}
 
         {/* Data signals traveling along connections */}
-        {connections.slice(0, 15).map((conn, i) => (
+        {connections.slice(0, 20).map((conn, i) => (
+          <g key={`signal-group-${conn.id}`}>
+            {/* Signal trail */}
+            <motion.circle
+              r="0.6"
+              fill="url(#pulseGradient)"
+              filter="url(#strongGlow)"
+              initial={{ opacity: 0 }}
+              animate={{
+                cx: [conn.x1, conn.x2],
+                cy: [conn.y1, conn.y2],
+                opacity: [0, 0.5, 0.5, 0],
+                r: [0.3, 0.8, 0.8, 0.3],
+              }}
+              transition={{
+                duration: 1.5,
+                delay: (i * 0.4) % 6,
+                repeat: Infinity,
+                repeatDelay: 4,
+                ease: "easeOut",
+              }}
+            />
+            {/* Core signal */}
+            <motion.circle
+              r="0.35"
+              fill="hsl(var(--primary))"
+              filter="url(#strongGlow)"
+              initial={{ opacity: 0 }}
+              animate={{
+                cx: [conn.x1, conn.x2],
+                cy: [conn.y1, conn.y2],
+                opacity: [0, 1, 1, 0],
+              }}
+              transition={{
+                duration: 1.5,
+                delay: (i * 0.4) % 6,
+                repeat: Infinity,
+                repeatDelay: 4,
+                ease: "linear",
+              }}
+            />
+          </g>
+        ))}
+
+        {/* Pulse rings at nodes */}
+        {nodes.slice(0, 12).map((node, i) => (
           <motion.circle
-            key={`signal-${conn.id}`}
-            r="0.4"
-            fill="hsl(var(--primary))"
-            filter="url(#glow)"
-            initial={{ opacity: 0 }}
+            key={`pulse-${node.id}`}
+            cx={node.x}
+            cy={node.y}
+            fill="none"
+            stroke="hsl(var(--primary))"
+            strokeWidth="0.1"
+            initial={{ r: 0.5, opacity: 0 }}
             animate={{
-              cx: [conn.x1, conn.x2],
-              cy: [conn.y1, conn.y2],
-              opacity: [0, 1, 1, 0],
+              r: [0.5, 2.5],
+              opacity: [0.8, 0],
+              strokeWidth: [0.15, 0.02],
             }}
             transition={{
               duration: 2,
-              delay: i * 0.5,
+              delay: (i * 0.6) % 4,
               repeat: Infinity,
               repeatDelay: 3,
-              ease: "linear",
+              ease: "easeOut",
             }}
           />
         ))}
