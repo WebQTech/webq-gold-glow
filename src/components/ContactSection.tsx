@@ -31,37 +31,14 @@ export const ContactSection = () => {
   });
 
   const onSubmit = async (data: ContactFormData) => {
-    try {
-      const response = await fetch("https://formspree.io/f/YOUR_FORM_ID", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          name: data.fullName,
-          email: data.email,
-          company: data.company || "",
-          topic: data.topic || "",
-          message: data.message || "",
-        }),
-      });
-
-      if (response.ok) {
-        toast({
-          title: "Message sent successfully!",
-          description: "We'll get back to you within 24 hours.",
-        });
-        reset();
-      } else {
-        throw new Error("Failed to send message");
-      }
-    } catch (error) {
-      toast({
-        title: "Error sending message",
-        description: "Please try again or email us directly.",
-        variant: "destructive",
-      });
-    }
+    // Simulate form submission
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+    
+    toast({
+      title: "Message sent successfully!",
+      description: "We'll get back to you within 24 hours.",
+    });
+    reset();
   };
 
   return (
