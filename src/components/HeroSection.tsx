@@ -6,9 +6,9 @@ import heroAiVisual from "@/assets/hero-ai-visual.png";
 const heroSlides = [
   {
     label: "AI Solutions",
-    title: "Engineering AI for enterprise impact",
-    description: "We help you harness AI's transformative power with enterprise-grade solutions that deliver measurable business outcomes.",
-    cta: "Get started",
+    title: "From AI pilot to production in 8 weeks",
+    description: "We build custom ML models, intelligent automation, and GenAI systems for enterprises ready to move fast — without ripping out what already works.",
+    cta: "Book a free AI assessment",
     ctaLink: "#solutions",
   },
   {
