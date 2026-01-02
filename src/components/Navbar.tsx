@@ -111,6 +111,25 @@ export const Navbar = () => {
             <div className="hidden lg:flex items-center gap-8">
               {/* Services Dropdown */}
               <DropdownMenu>
+              </DropdownMenu>
+
+              {/* Industries Link */}
+              <Link
+                to="/industries"
+                className={`text-sm font-medium transition-colors duration-200 relative ${
+                  location.pathname === "/industries"
+                    ? "text-primary"
+                    : "text-foreground/80 hover:text-primary"
+                }`}
+              >
+                Industries
+                {location.pathname === "/industries" && (
+                  <span className="absolute -bottom-1 left-0 right-0 h-0.5 bg-primary rounded-full" />
+                )}
+              </Link>
+
+              {/* Services Dropdown */}
+              <DropdownMenu>
                 <DropdownMenuTrigger 
                   className={`flex items-center gap-1 text-sm font-medium transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded-sm relative ${
                     isServicesPage
@@ -265,6 +284,17 @@ export const Navbar = () => {
                       </div>
                     ))}
                   </div>
+                </div>
+
+                {/* Industries Link */}
+                <div className="border-b border-border/50">
+                  <Link
+                    to="/industries"
+                    className="block py-3 text-foreground/80 hover:text-primary transition-colors font-medium"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Industries
+                  </Link>
                 </div>
 
                 {/* About Section */}
