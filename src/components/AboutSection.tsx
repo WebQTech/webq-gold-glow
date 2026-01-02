@@ -49,10 +49,17 @@ export const AboutSection = () => {
             innovative approach help clients navigate complexity and achieve their strategic goals.
           </p>
           <a 
-            href="/about"
+            href="#contact"
+            onClick={(e) => {
+              e.preventDefault();
+              const target = document.querySelector('#contact');
+              if (target) {
+                target.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}
             className="inline-flex items-center gap-2 mt-6 text-primary font-semibold hover:gap-3 transition-all"
           >
-            Learn more about us
+            Get in touch
             <ArrowRight className="w-4 h-4" />
           </a>
         </motion.div>

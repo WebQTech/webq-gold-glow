@@ -157,13 +157,20 @@ export const AIShowcaseSection = () => {
           transition={{ duration: 0.6, delay: 0.6 }}
           className="text-center"
         >
-          <Link
-            to="/services"
+          <a
+            href="#contact"
+            onClick={(e) => {
+              e.preventDefault();
+              const target = document.querySelector('#contact');
+              if (target) {
+                target.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}
             className="inline-flex items-center gap-2 btn-gradient px-8 py-4"
           >
-            Explore All AI Services
+            Get Started with AI
             <ArrowRight className="w-5 h-5" />
-          </Link>
+          </a>
         </motion.div>
       </div>
     </section>

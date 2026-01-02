@@ -1,9 +1,6 @@
 import { Navbar } from "@/components/Navbar";
 import { HeroSection } from "@/components/HeroSection";
-import { TrustBar } from "@/components/TrustBar";
-import { ValueProposition } from "@/components/ValueProposition";
 import { AIShowcaseSection } from "@/components/AIShowcaseSection";
-import { FeaturedSection } from "@/components/FeaturedSection";
 import { CaseStudiesSection } from "@/components/CaseStudiesSection";
 import { AboutSection } from "@/components/AboutSection";
 import { ContactSection } from "@/components/ContactSection";
@@ -16,10 +13,7 @@ const Index = () => {
       <Navbar />
       <main id="main-content" className="focus:outline-none" tabIndex={-1}>
         <HeroSection />
-        <TrustBar />
-        <ValueProposition />
         <AIShowcaseSection />
-        <FeaturedSection />
         <CaseStudiesSection />
         <AboutSection />
         <ContactSection />
