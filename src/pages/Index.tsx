@@ -6,8 +6,6 @@ import { AIShowcaseSection } from "@/components/AIShowcaseSection";
 import { FeaturedSection } from "@/components/FeaturedSection";
 import { CaseStudiesSection } from "@/components/CaseStudiesSection";
 import { AboutSection } from "@/components/AboutSection";
-import { InsightBanner } from "@/components/InsightBanner";
-import { NewsSection } from "@/components/NewsSection";
 import { ContactSection } from "@/components/ContactSection";
 import { Footer } from "@/components/Footer";
 import BackToTopButton from "@/components/BackToTopButton";
@@ -24,8 +22,6 @@ const Index = () => {
         <FeaturedSection />
         <CaseStudiesSection />
         <AboutSection />
-        <InsightBanner />
-        <NewsSection />
         <ContactSection />
       </main>
       <Footer />
