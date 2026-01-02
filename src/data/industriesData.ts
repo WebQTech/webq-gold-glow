@@ -30,8 +30,6 @@ export interface IndustryDetail {
   fullDescription: string;
   icon: LucideIcon;
   category: string;
-  stat: string;
-  statLabel: string;
   isNew?: boolean;
   whatWeSolve: string;
   howWeHelp: string[];
@@ -50,8 +48,6 @@ export const industriesData: IndustryDetail[] = [
     fullDescription: "We help technology companies harness the full potential of artificial intelligence. From AI readiness assessment to custom model development and deployment, we provide end-to-end AI solutions that drive innovation and competitive advantage.",
     icon: Brain,
     category: "AI & Technology",
-    stat: "10x",
-    statLabel: "Faster Insights",
     isNew: true,
     whatWeSolve: "Lack of AI expertise, failed AI implementations, unstructured data chaos",
     howWeHelp: [
@@ -95,8 +91,6 @@ export const industriesData: IndustryDetail[] = [
     fullDescription: "Transform your outdated systems into AI-powered platforms without disrupting your operations. We specialize in gradual modernization that extracts value from your existing investments while preparing you for the AI-driven future.",
     icon: RefreshCw,
     category: "AI & Technology",
-    stat: "60%",
-    statLabel: "Process Automation",
     isNew: true,
     whatWeSolve: "Outdated systems that can't support AI, data trapped in legacy databases, slow manual processes",
     howWeHelp: [
@@ -140,8 +134,6 @@ export const industriesData: IndustryDetail[] = [
     fullDescription: "We deliver cutting-edge technology solutions for banks, credit unions, payment processors, and fintech startups. From real-time payment systems to AI-powered fraud detection, we help financial institutions stay competitive and compliant.",
     icon: CreditCard,
     category: "Finance",
-    stat: "$2T+",
-    statLabel: "Transactions Processed",
     whatWeSolve: "Slow transaction processing, fraud vulnerabilities, regulatory complexity",
     howWeHelp: [
       "Real-time payment processing and settlement systems",
@@ -184,8 +176,6 @@ export const industriesData: IndustryDetail[] = [
     fullDescription: "We build high-performance solutions for real estate investment, private equity, asset management, and securities trading. Our platforms handle complex financial operations with the speed, security, and reliability that capital markets demand.",
     icon: Landmark,
     category: "Finance",
-    stat: "$500B+",
-    statLabel: "Assets Managed",
     isNew: true,
     whatWeSolve: "Complex trading operations, regulatory compliance burden, fragmented financial data",
     howWeHelp: [
@@ -229,8 +219,6 @@ export const industriesData: IndustryDetail[] = [
     fullDescription: "We develop HIPAA-compliant healthcare solutions that improve patient outcomes, streamline operations, and reduce costs. From telemedicine platforms to AI-assisted diagnostics, we help healthcare organizations embrace digital transformation.",
     icon: Heart,
     category: "Public Sector",
-    stat: "10M+",
-    statLabel: "Patients Served",
     whatWeSolve: "Fragmented patient data, manual workflows, diagnostic delays",
     howWeHelp: [
       "Electronic health record (EHR) integration and optimization",
@@ -273,8 +261,6 @@ export const industriesData: IndustryDetail[] = [
     fullDescription: "We help government agencies modernize their technology infrastructure and improve citizen services. Our solutions are designed for the unique requirements of public sector organizations, including FedRAMP compliance and accessibility standards.",
     icon: Landmark,
     category: "Public Sector",
-    stat: "50+",
-    statLabel: "Agencies Served",
     whatWeSolve: "Legacy system limitations, citizen service delays, data silos across agencies",
     howWeHelp: [
       "Citizen portal and digital service platforms",
@@ -317,8 +303,6 @@ export const industriesData: IndustryDetail[] = [
     fullDescription: "We create engaging educational technology that improves learning outcomes for K-12, higher education, and corporate training. Our platforms combine modern UX with AI-powered personalization to make learning more effective and accessible.",
     icon: GraduationCap,
     category: "Public Sector",
-    stat: "500M+",
-    statLabel: "Learners Impacted",
     whatWeSolve: "Student engagement, administrative inefficiencies, outdated learning systems",
     howWeHelp: [
       "Learning management systems (LMS) with AI-powered personalization",
@@ -361,8 +345,6 @@ export const industriesData: IndustryDetail[] = [
     fullDescription: "We help retailers and e-commerce businesses create seamless shopping experiences across all channels. From AI-powered recommendations to real-time inventory management, we build solutions that drive sales and customer loyalty.",
     icon: ShoppingCart,
     category: "Commerce & Industry",
-    stat: "99.9%",
-    statLabel: "Uptime Guaranteed",
     whatWeSolve: "Inventory mismanagement, poor customer personalization, disconnected sales channels",
     howWeHelp: [
       "Omnichannel commerce platform integration",
@@ -405,8 +387,6 @@ export const industriesData: IndustryDetail[] = [
     fullDescription: "We enable smart manufacturing with IoT, AI, and automation solutions. From predictive maintenance to quality control, we help manufacturers increase efficiency, reduce downtime, and improve product quality.",
     icon: Factory,
     category: "Commerce & Industry",
-    stat: "40%",
-    statLabel: "Efficiency Gains",
     whatWeSolve: "Production inefficiencies, equipment downtime, supply chain blind spots",
     howWeHelp: [
       "IoT-enabled predictive maintenance systems",
@@ -449,8 +429,6 @@ export const industriesData: IndustryDetail[] = [
     fullDescription: "We optimize logistics and supply chain operations with AI-powered planning, real-time visibility, and automation. Our solutions help 3PLs, freight companies, and shippers reduce costs and improve service levels.",
     icon: Truck,
     category: "Commerce & Industry",
-    stat: "25%",
-    statLabel: "Cost Reduction",
     whatWeSolve: "Shipment visibility gaps, route inefficiencies, warehouse bottlenecks",
     howWeHelp: [
       "End-to-end shipment tracking and visibility platforms",
@@ -493,8 +471,6 @@ export const industriesData: IndustryDetail[] = [
     fullDescription: "We help energy and utility companies modernize their infrastructure with smart grid technology, predictive maintenance, and renewable energy integration. Our solutions improve reliability, reduce costs, and support sustainability goals.",
     icon: Bolt,
     category: "Commerce & Industry",
-    stat: "30%",
-    statLabel: "Energy Savings",
     whatWeSolve: "Grid instability, energy waste, aging infrastructure",
     howWeHelp: [
       "Smart grid monitoring and management systems",

@@ -10,8 +10,6 @@ const industries = [
     icon: Brain, 
     title: 'AI-Based Tech Domain', 
     desc: 'AI strategy, implementation & optimization',
-    stat: '10x',
-    statLabel: 'Faster Insights',
     isNew: true,
     whatWeSolve: 'Lack of AI expertise, failed AI implementations, unstructured data chaos',
     howWeHelp: [
@@ -27,8 +25,6 @@ const industries = [
     icon: RefreshCw, 
     title: 'Legacy to AI Transformation', 
     desc: 'Modernize systems with AI integration',
-    stat: '60%',
-    statLabel: 'Process Automation',
     isNew: true,
     whatWeSolve: 'Outdated systems that can\'t support AI, data trapped in legacy databases, slow manual processes',
     howWeHelp: [
@@ -44,8 +40,6 @@ const industries = [
     icon: CreditCard, 
     title: 'Banks & FinTech', 
     desc: 'Financial services & payment solutions',
-    stat: '$2T+',
-    statLabel: 'Transactions Processed',
     whatWeSolve: 'Slow transaction processing, fraud vulnerabilities, regulatory complexity',
     howWeHelp: [
       'Real-time payment processing and settlement systems',
@@ -60,8 +54,6 @@ const industries = [
     icon: Landmark, 
     title: 'Capital Markets', 
     desc: 'Investment platforms & trading systems',
-    stat: '$500B+',
-    statLabel: 'Assets Managed',
     isNew: true,
     whatWeSolve: 'Complex trading operations, regulatory compliance burden, fragmented financial data',
     howWeHelp: [
@@ -77,8 +69,6 @@ const industries = [
     icon: Heart, 
     title: 'Healthcare Tech', 
     desc: 'Healthcare systems & medical technology',
-    stat: '10M+',
-    statLabel: 'Patients Served',
     whatWeSolve: 'Fragmented patient data, manual workflows, diagnostic delays',
     howWeHelp: [
       'Electronic health record (EHR) integration and optimization',
@@ -93,8 +83,6 @@ const industries = [
     icon: Landmark, 
     title: 'Government', 
     desc: 'Public sector & civic technology',
-    stat: '50+',
-    statLabel: 'Agencies Served',
     whatWeSolve: 'Legacy system limitations, citizen service delays, data silos across agencies',
     howWeHelp: [
       'Citizen portal and digital service platforms',
@@ -109,8 +97,6 @@ const industries = [
     icon: GraduationCap, 
     title: 'EduTech', 
     desc: 'Learning platforms & educational technology',
-    stat: '500M+',
-    statLabel: 'Learners Impacted',
     whatWeSolve: 'Student engagement, administrative inefficiencies, outdated learning systems',
     howWeHelp: [
       'Learning management systems (LMS) with AI-powered personalization',
@@ -125,8 +111,6 @@ const industries = [
     icon: ShoppingCart, 
     title: 'Retail & E-commerce', 
     desc: 'Digital commerce & inventory systems',
-    stat: '99.9%',
-    statLabel: 'Uptime Guaranteed',
     whatWeSolve: 'Inventory mismanagement, poor customer personalization, disconnected sales channels',
     howWeHelp: [
       'Omnichannel commerce platform integration',
@@ -141,8 +125,6 @@ const industries = [
     icon: Factory, 
     title: 'Manufacturing', 
     desc: 'Industrial automation & IoT',
-    stat: '40%',
-    statLabel: 'Efficiency Gains',
     whatWeSolve: 'Production inefficiencies, equipment downtime, supply chain blind spots',
     howWeHelp: [
       'IoT-enabled predictive maintenance systems',
@@ -157,8 +139,6 @@ const industries = [
     icon: Truck, 
     title: 'Logistics & Supply Chain', 
     desc: 'Transportation & distribution systems',
-    stat: '25%',
-    statLabel: 'Cost Reduction',
     whatWeSolve: 'Shipment visibility gaps, route inefficiencies, warehouse bottlenecks',
     howWeHelp: [
       'End-to-end shipment tracking and visibility platforms',
@@ -173,8 +153,6 @@ const industries = [
     icon: Bolt, 
     title: 'Energy & Utilities', 
     desc: 'Smart grid & resource management',
-    stat: '30%',
-    statLabel: 'Energy Savings',
     whatWeSolve: 'Grid instability, energy waste, aging infrastructure',
     howWeHelp: [
       'Smart grid monitoring and management systems',
@@ -299,28 +277,7 @@ const IndustryCard = ({
               transition={{ duration: 0.4, ease: [0.23, 1, 0.32, 1] }}
               className="overflow-hidden"
             >
-              <div className="px-5 pb-5 pt-4">
-                {/* Two Column Layout */}
-                <div className="flex gap-4">
-                  {/* Left Column - Stat */}
-                  <div className="w-[30%] flex flex-col items-center justify-center pr-4 border-r-2 border-gold/30">
-                    <motion.div
-                      initial={{ opacity: 0, scale: 0.8 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      transition={{ delay: 0.1 }}
-                      className="text-center"
-                    >
-                      <span className="block text-3xl md:text-4xl font-bold text-gold">
-                        {industry.stat}
-                      </span>
-                      <span className="block text-xs text-navy/50 mt-1 font-medium">
-                        {industry.statLabel}
-                      </span>
-                    </motion.div>
-                  </div>
-
-                  {/* Right Column - Content */}
-                  <div className="w-[70%] space-y-4">
+              <div className="space-y-4">
                     {/* What we solve */}
                     <motion.div
                       initial={{ opacity: 0, x: 10 }}
@@ -370,8 +327,6 @@ const IndustryCard = ({
                       ))}
                     </motion.div>
                   </div>
-                </div>
-              </div>
             </motion.div>
           )}
         </AnimatePresence>
