@@ -9,7 +9,7 @@ const heroSlides = [
     title: "From AI pilot to production in 8 weeks",
     description: "We build custom ML models, intelligent automation, and GenAI systems for enterprises ready to move fast — without ripping out what already works.",
     cta: "Book a free AI assessment",
-    ctaLink: "#solutions",
+    ctaLink: "#contact",
   },
   {
     label: "Cloud Services",
@@ -109,6 +109,13 @@ export const HeroSection = () => {
           >
             <a 
               href={currentSlide.ctaLink}
+              onClick={(e) => {
+                e.preventDefault();
+                const target = document.querySelector(currentSlide.ctaLink);
+                if (target) {
+                  target.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
               className="inline-flex items-center gap-2 btn-white text-base"
             >
               {currentSlide.cta}
