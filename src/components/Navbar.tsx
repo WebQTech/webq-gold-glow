@@ -1,6 +1,6 @@
 import { useState, useEffect, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Globe, ChevronDown, Brain, RefreshCw, CreditCard, Landmark, Heart, GraduationCap, ShoppingCart, Factory, Truck, Bolt, Lightbulb, FileText, TrendingUp, Users, Building2, Briefcase, Award, Newspaper, BarChart3, DollarSign, Target, BookOpen, Mic, Calendar, UserCheck, MapPin, Gift, Handshake } from "lucide-react";
+import { Menu, X, Globe, ChevronDown, Brain, RefreshCw, CreditCard, Landmark, Heart, GraduationCap, ShoppingCart, Factory, Truck, Bolt, Lightbulb, FileText, TrendingUp, Users, Building2, Award, BookOpen, Mic, Calendar, MapPin, Handshake } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { servicesData, getAllCategories } from "@/data/servicesData";
 import { AccessibilityPanel } from "@/components/AccessibilityPanel";
@@ -69,29 +69,6 @@ export const Navbar = () => {
     { label: "Partners", href: "/about", icon: Handshake },
   ];
 
-  // Careers dropdown items
-  const careersItems = [
-    { label: "Open Positions", href: "/careers#open-positions", icon: Briefcase },
-    { label: "Life at WebQ", href: "/careers", icon: Users },
-    { label: "Benefits", href: "/careers", icon: Gift },
-    { label: "Internships", href: "/careers", icon: UserCheck },
-  ];
-
-  // News dropdown items
-  const newsItems = [
-    { label: "Press Releases", href: "/news", icon: Newspaper },
-    { label: "Company Updates", href: "/news", icon: FileText },
-    { label: "Media Coverage", href: "/news", icon: Mic },
-    { label: "Blog", href: "/news", icon: BookOpen },
-  ];
-
-  // Investors dropdown items
-  const investorsItems = [
-    { label: "Financial Reports", href: "/investors", icon: BarChart3 },
-    { label: "Stock Information", href: "/investors", icon: TrendingUp },
-    { label: "Governance", href: "/investors", icon: Building2 },
-    { label: "Investor Resources", href: "/investors", icon: DollarSign },
-  ];
 
   return (
     <>
@@ -107,59 +84,6 @@ export const Navbar = () => {
       <div className="hidden lg:block bg-background border-b border-border/50">
         <div className="container mx-auto px-6 lg:px-12">
           <div className="flex items-center justify-end gap-4 py-2">
-            {/* Careers Dropdown */}
-            <DropdownMenu>
-              <DropdownMenuTrigger className="flex items-center gap-1 text-xs text-foreground/60 hover:text-primary transition-colors focus:outline-none">
-                Careers
-                <ChevronDown className="w-3 h-3" />
-              </DropdownMenuTrigger>
-              <DropdownMenuContent align="end" className="w-48 bg-background border border-border shadow-lg z-50">
-                {careersItems.map((item) => (
-                  <DropdownMenuItem key={item.label} asChild>
-                    <Link to={item.href} className="flex items-center gap-2 cursor-pointer focus:bg-primary/10 focus:text-primary">
-                      <item.icon className="w-4 h-4 text-primary" />
-                      <span>{item.label}</span>
-                    </Link>
-                  </DropdownMenuItem>
-                ))}
-              </DropdownMenuContent>
-            </DropdownMenu>
-
-            {/* News Dropdown */}
-            <DropdownMenu>
-              <DropdownMenuTrigger className="flex items-center gap-1 text-xs text-foreground/60 hover:text-primary transition-colors focus:outline-none">
-                News
-                <ChevronDown className="w-3 h-3" />
-              </DropdownMenuTrigger>
-              <DropdownMenuContent align="end" className="w-48 bg-background border border-border shadow-lg z-50">
-                {newsItems.map((item) => (
-                  <DropdownMenuItem key={item.label} asChild>
-                    <Link to={item.href} className="flex items-center gap-2 cursor-pointer focus:bg-primary/10 focus:text-primary">
-                      <item.icon className="w-4 h-4 text-primary" />
-                      <span>{item.label}</span>
-                    </Link>
-                  </DropdownMenuItem>
-                ))}
-              </DropdownMenuContent>
-            </DropdownMenu>
-
-            {/* Investors Dropdown */}
-            <DropdownMenu>
-              <DropdownMenuTrigger className="flex items-center gap-1 text-xs text-foreground/60 hover:text-primary transition-colors focus:outline-none">
-                Investors
-                <ChevronDown className="w-3 h-3" />
-              </DropdownMenuTrigger>
-              <DropdownMenuContent align="end" className="w-48 bg-background border border-border shadow-lg z-50">
-                {investorsItems.map((item) => (
-                  <DropdownMenuItem key={item.label} asChild>
-                    <Link to={item.href} className="flex items-center gap-2 cursor-pointer focus:bg-primary/10 focus:text-primary">
-                      <item.icon className="w-4 h-4 text-primary" />
-                      <span>{item.label}</span>
-                    </Link>
-                  </DropdownMenuItem>
-                ))}
-              </DropdownMenuContent>
-            </DropdownMenu>
             <div className="flex items-center gap-1 text-xs text-foreground/60 cursor-pointer hover:text-primary transition-colors">
               <Globe className="w-3 h-3" />
               <span>US-EN</span>
@@ -630,75 +554,6 @@ export const Navbar = () => {
                   </div>
                 </div>
 
-                {/* Careers, News, Investors */}
-                <div className="pt-4 space-y-4">
-                  <div>
-                    <Link 
-                      to="/careers"
-                      className="text-xs text-muted-foreground uppercase tracking-wider block pb-2 hover:text-primary transition-colors"
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                      Careers
-                    </Link>
-                    <div className="pl-2 space-y-1">
-                      {careersItems.map((item) => (
-                        <Link
-                          key={item.label}
-                          to={item.href}
-                          className="flex items-center gap-2 py-1.5 text-sm text-foreground/70 hover:text-primary transition-colors"
-                          onClick={() => setIsMobileMenuOpen(false)}
-                        >
-                          <item.icon className="w-4 h-4 text-primary" />
-                          {item.label}
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-                  <div>
-                    <Link 
-                      to="/news"
-                      className="text-xs text-muted-foreground uppercase tracking-wider block pb-2 hover:text-primary transition-colors"
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                      News
-                    </Link>
-                    <div className="pl-2 space-y-1">
-                      {newsItems.map((item) => (
-                        <Link
-                          key={item.label}
-                          to={item.href}
-                          className="flex items-center gap-2 py-1.5 text-sm text-foreground/70 hover:text-primary transition-colors"
-                          onClick={() => setIsMobileMenuOpen(false)}
-                        >
-                          <item.icon className="w-4 h-4 text-primary" />
-                          {item.label}
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-                  <div>
-                    <Link 
-                      to="/investors"
-                      className="text-xs text-muted-foreground uppercase tracking-wider block pb-2 hover:text-primary transition-colors"
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                      Investors
-                    </Link>
-                    <div className="pl-2 space-y-1">
-                      {investorsItems.map((item) => (
-                        <Link
-                          key={item.label}
-                          to={item.href}
-                          className="flex items-center gap-2 py-1.5 text-sm text-foreground/70 hover:text-primary transition-colors"
-                          onClick={() => setIsMobileMenuOpen(false)}
-                        >
-                          <item.icon className="w-4 h-4 text-primary" />
-                          {item.label}
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-                </div>
                 <div className="pt-4 border-t border-border/50 mt-4">
                   <div className="flex items-center justify-between">
                     <span className="text-sm text-foreground/60">Accessibility:</span>
