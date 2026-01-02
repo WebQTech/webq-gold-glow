@@ -1,12 +1,28 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { ArrowRight, Building2, Users, Globe, Award } from "lucide-react";
+import { ArrowRight, Lightbulb, Target, Zap, Shield } from "lucide-react";
 
-const stats = [
-  { icon: Building2, value: "500+", label: "Enterprise Clients" },
-  { icon: Users, value: "5,000+", label: "Team Members" },
-  { icon: Globe, value: "30+", label: "Countries" },
-  { icon: Award, value: "20+", label: "Years Experience" },
+const values = [
+  { 
+    icon: Lightbulb, 
+    title: "Innovation First", 
+    description: "Cutting-edge solutions that push boundaries" 
+  },
+  { 
+    icon: Target, 
+    title: "Results Driven", 
+    description: "Focused on delivering measurable outcomes" 
+  },
+  { 
+    icon: Zap, 
+    title: "Agile Approach", 
+    description: "Fast, flexible, and adaptive methodologies" 
+  },
+  { 
+    icon: Shield, 
+    title: "Trusted Partner", 
+    description: "Building lasting relationships with integrity" 
+  },
 ];
 
 export const AboutSection = () => {
@@ -33,7 +49,7 @@ export const AboutSection = () => {
             innovative approach help clients navigate complexity and achieve their strategic goals.
           </p>
           <a 
-            href="#"
+            href="/about"
             className="inline-flex items-center gap-2 mt-6 text-primary font-semibold hover:gap-3 transition-all"
           >
             Learn more about us
@@ -41,25 +57,25 @@ export const AboutSection = () => {
           </a>
         </motion.div>
 
-        {/* Stats Grid */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-          {stats.map((stat, index) => (
+        {/* Values Grid */}
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+          {values.map((value, index) => (
             <motion.div
-              key={stat.label}
+              key={value.title}
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.1 * index }}
-              className="text-center"
+              className="p-6 rounded-xl bg-card border border-border/50 hover:border-primary/30 transition-colors"
             >
-              <div className="inline-flex items-center justify-center w-14 h-14 rounded-lg bg-primary/10 text-primary mb-4">
-                <stat.icon className="w-6 h-6" />
+              <div className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-primary/10 text-primary mb-4">
+                <value.icon className="w-5 h-5" />
               </div>
-              <div className="text-3xl lg:text-4xl font-bold text-foreground">
-                {stat.value}
-              </div>
-              <div className="mt-1 text-sm text-foreground/60">
-                {stat.label}
-              </div>
+              <h3 className="text-lg font-semibold text-foreground mb-2">
+                {value.title}
+              </h3>
+              <p className="text-sm text-foreground/60">
+                {value.description}
+              </p>
             </motion.div>
           ))}
         </div>
