@@ -1,7 +1,7 @@
 import { useParams, Link, Navigate } from "react-router-dom";
 import { motion, useInView } from "framer-motion";
 import { useRef, useMemo } from "react";
-import { ArrowLeft, ArrowRight, Check, Building2 } from "lucide-react";
+import { ArrowLeft, ArrowRight, Check, Building2, Rocket, Clock } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { getServiceBySlug, servicesData, ServiceDetail as ServiceDetailType } from "@/data/servicesData";
@@ -176,70 +176,56 @@ const ServiceDetail = () => {
         </div>
       </section>
 
-      {/* Case Studies */}
-      {service.caseStudies.length > 0 && (
-        <section ref={caseStudiesRef} className="py-16 lg:py-24">
-          <div className="container mx-auto px-6 lg:px-12">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={isCaseStudiesInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6 }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl lg:text-4xl font-bold text-foreground">
-                Success Stories
-              </h2>
-              <p className="mt-4 text-muted-foreground max-w-2xl mx-auto">
-                See how we've helped organizations like yours achieve their goals
-              </p>
-            </motion.div>
+      {/* Success Stories - Coming Soon */}
+      <section ref={caseStudiesRef} className="py-16 lg:py-24">
+        <div className="container mx-auto px-6 lg:px-12">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={isCaseStudiesInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl lg:text-4xl font-bold text-foreground">
+              Success Stories
+            </h2>
+            <p className="mt-4 text-muted-foreground max-w-2xl mx-auto">
+              Real results from real clients using our {service.name.toLowerCase()} solutions
+            </p>
+          </motion.div>
 
-            <div className="grid md:grid-cols-2 gap-8">
-              {service.caseStudies.map((caseStudy, index) => (
-                <motion.div
-                  key={caseStudy.company}
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={isCaseStudiesInView ? { opacity: 1, y: 0 } : {}}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-card border border-border rounded-2xl p-8"
-                >
-                  <div className="flex items-center gap-4 mb-6">
-                    <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
-                      <Building2 className="w-6 h-6 text-primary" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-foreground">{caseStudy.company}</h3>
-                      <p className="text-sm text-muted-foreground">{caseStudy.industry}</p>
-                    </div>
-                  </div>
-
-                  <div className="space-y-4">
-                    <div>
-                      <h4 className="text-sm font-medium text-primary mb-1">Challenge</h4>
-                      <p className="text-sm text-muted-foreground">{caseStudy.challenge}</p>
-                    </div>
-                    <div>
-                      <h4 className="text-sm font-medium text-primary mb-1">Solution</h4>
-                      <p className="text-sm text-muted-foreground">{caseStudy.solution}</p>
-                    </div>
-                    <div>
-                      <h4 className="text-sm font-medium text-primary mb-2">Results</h4>
-                      <ul className="grid grid-cols-2 gap-2">
-                        {caseStudy.results.map((result, i) => (
-                          <li key={i} className="flex items-start gap-2 text-sm">
-                            <Check className="w-4 h-4 text-green-500 shrink-0 mt-0.5" />
-                            <span className="text-foreground/80">{result}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={isCaseStudiesInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-primary/10 via-accent/5 to-primary/10 border border-primary/20 p-12 lg:p-16 text-center max-w-3xl mx-auto"
+          >
+            <div className="absolute inset-0 opacity-30">
+              <div className="absolute top-10 left-10 w-32 h-32 bg-primary/20 rounded-full blur-3xl" />
+              <div className="absolute bottom-10 right-10 w-40 h-40 bg-accent/20 rounded-full blur-3xl" />
             </div>
-          </div>
-        </section>
-      )}
+
+            <div className="relative z-10">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-2xl mb-6">
+                <Rocket className="w-8 h-8 text-primary" />
+              </div>
+
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full mb-6">
+                <Clock className="w-4 h-4 text-primary" />
+                <span className="text-sm font-medium text-primary">Coming Soon</span>
+              </div>
+
+              <h3 className="text-xl lg:text-2xl font-bold text-foreground mb-4">
+                Success Stories in the Making
+              </h3>
+
+              <p className="text-muted-foreground max-w-md mx-auto">
+                We're currently working with clients on exciting {service.name.toLowerCase()} projects. 
+                Check back soon to see the transformative results.
+              </p>
+            </div>
+          </motion.div>
+        </div>
+      </section>
 
       {/* FAQs */}
       <section ref={faqRef} className="py-16 lg:py-24 bg-muted/30">
