@@ -3,20 +3,6 @@ import { Linkedin, Twitter, Youtube, Facebook } from "lucide-react";
 import { Link } from "react-router-dom";
 import logo from "@/assets/logo.png";
 
-const industryLinks = [
-  { label: "AI-Based Tech Domain", href: "/industries/ai-based-tech-domain" },
-  { label: "Legacy to AI Transformation", href: "/industries/legacy-to-ai-transformation" },
-  { label: "Banks & FinTech", href: "/industries/banks-fintech" },
-  { label: "Capital Markets", href: "/industries/capital-markets" },
-  { label: "Healthcare Tech", href: "/industries/healthcare-tech" },
-  { label: "Government", href: "/industries/government" },
-  { label: "EduTech", href: "/industries/edutech" },
-  { label: "Retail & E-commerce", href: "/industries/retail-ecommerce" },
-  { label: "Manufacturing", href: "/industries/manufacturing" },
-  { label: "Logistics & Supply Chain", href: "/industries/logistics-supply-chain" },
-  { label: "Energy & Utilities", href: "/industries/energy-utilities" },
-];
-
 const serviceLinks = [
   { label: "AI & Machine Learning", href: "/services/ai-machine-learning" },
   { label: "Generative AI Solutions", href: "/services/generative-ai-solutions" },
@@ -33,29 +19,18 @@ const serviceLinks = [
   { label: "Quality Engineering", href: "/services/quality-engineering" },
 ];
 
-const footerLinks = {
-  Company: [
-    { label: "About Us", href: "/about" },
-    { label: "Careers", href: "/careers" },
-    { label: "News", href: "/news" },
-    { label: "Investors", href: "/investors" },
-    { label: "Contact", href: "/contact" },
-  ],
-  Resources: [
-    { label: "Case Studies", href: "/insights" },
-    { label: "Insights", href: "/insights" },
-    { label: "Blog", href: "/insights" },
-    { label: "Events", href: "/news" },
-  ],
-};
+const companyLinks = [
+  { label: "About Us", href: "/about" },
+  { label: "Contact", href: "/contact" },
+];
 
 export const Footer = () => {
   return (
     <footer className="bg-[hsl(215,50%,8%)] text-white">
       <div className="container mx-auto px-6 lg:px-12 py-16">
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Brand Column */}
-          <div className="col-span-2 md:col-span-3 lg:col-span-1 mb-8 lg:mb-0">
+          <div className="mb-8 lg:mb-0">
             <a href="#" className="flex items-center gap-3 mb-6 group">
               <img src={logo} alt="WebQ Technologies" className="h-14 w-auto transition-all duration-300 group-hover:scale-110 group-hover:drop-shadow-[0_0_12px_hsl(var(--primary)/0.6)]" />
               <div className="flex flex-col">
@@ -89,25 +64,6 @@ export const Footer = () => {
             </div>
           </div>
 
-          {/* Industries Column */}
-          <div>
-            <h4 className="text-sm font-semibold uppercase tracking-wider text-white/40 mb-4">
-              Industries
-            </h4>
-            <ul className="space-y-2">
-              {industryLinks.map((link) => (
-                <li key={link.label}>
-                  <Link
-                    to={link.href}
-                    className="text-sm text-white/60 hover:text-white transition-colors"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
           {/* Services Column */}
           <div>
             <h4 className="text-sm font-semibold uppercase tracking-wider text-white/40 mb-4">
@@ -127,26 +83,24 @@ export const Footer = () => {
             </ul>
           </div>
 
-          {/* Other Link Columns */}
-          {Object.entries(footerLinks).map(([title, links]) => (
-            <div key={title}>
-              <h4 className="text-sm font-semibold uppercase tracking-wider text-white/40 mb-4">
-                {title}
-              </h4>
-              <ul className="space-y-2">
-                {links.map((link) => (
-                  <li key={link.label}>
-                    <Link
-                      to={link.href}
-                      className="text-sm text-white/60 hover:text-white transition-colors"
-                    >
-                      {link.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+          {/* Company Column */}
+          <div>
+            <h4 className="text-sm font-semibold uppercase tracking-wider text-white/40 mb-4">
+              Company
+            </h4>
+            <ul className="space-y-2">
+              {companyLinks.map((link) => (
+                <li key={link.label}>
+                  <Link
+                    to={link.href}
+                    className="text-sm text-white/60 hover:text-white transition-colors"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
 
