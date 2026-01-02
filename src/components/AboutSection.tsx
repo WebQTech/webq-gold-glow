@@ -1,27 +1,27 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { ArrowRight, Lightbulb, Target, Zap, Shield } from "lucide-react";
+import { ArrowRight, Clock, Shield, Plug, Users } from "lucide-react";
 
 const values = [
   { 
-    icon: Lightbulb, 
-    title: "Innovation First", 
-    description: "Cutting-edge solutions that push boundaries" 
-  },
-  { 
-    icon: Target, 
-    title: "Results Driven", 
-    description: "Focused on delivering measurable outcomes" 
-  },
-  { 
-    icon: Zap, 
-    title: "Agile Approach", 
-    description: "Fast, flexible, and adaptive methodologies" 
+    icon: Clock, 
+    title: "8-Week Delivery", 
+    description: "From discovery to production deployment in just 8 weeks" 
   },
   { 
     icon: Shield, 
-    title: "Trusted Partner", 
-    description: "Building lasting relationships with integrity" 
+    title: "Enterprise-Grade Security", 
+    description: "SOC 2 compliant infrastructure with your data privacy guaranteed" 
+  },
+  { 
+    icon: Plug, 
+    title: "Seamless Integration", 
+    description: "Works with your existing stack — Salesforce, SAP, AWS, Azure, and more" 
+  },
+  { 
+    icon: Users, 
+    title: "Dedicated Team", 
+    description: "A senior engineer and AI specialist assigned to your project" 
   },
 ];
 
