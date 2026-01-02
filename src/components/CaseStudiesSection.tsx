@@ -1,34 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { ArrowRight } from "lucide-react";
-
-const caseStudies = [
-  {
-    industry: "HEALTHCARE",
-    title: "AI-powered diagnostics platform modernization",
-    description: "Transformed legacy systems to deliver 10x faster patient insights.",
-    color: "from-blue-600 to-cyan-500",
-  },
-  {
-    industry: "BANKING",
-    title: "Digital banking automation delivers instant customer value",
-    description: "Reduced processing time by 60% using process automation and gen AI.",
-    color: "from-emerald-600 to-teal-500",
-  },
-  {
-    industry: "RETAIL",
-    title: "E-commerce platform achieves global scale",
-    description: "Supported 5M+ concurrent users with cloud-native architecture.",
-    color: "from-orange-600 to-amber-500",
-  },
-  {
-    industry: "CASE STUDIES",
-    title: "Discover more about our work",
-    description: "We engineer technology into your business to help you anticipate and act.",
-    color: "from-primary to-accent",
-    isShowcase: true,
-  },
-];
+import { Rocket, Clock, Sparkles } from "lucide-react";
 
 export const CaseStudiesSection = () => {
   const ref = useRef(null);
@@ -52,62 +24,76 @@ export const CaseStudiesSection = () => {
           </p>
         </motion.div>
 
-        {/* Cards Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {caseStudies.map((study, index) => (
+        {/* Coming Soon Card */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-primary/10 via-accent/5 to-primary/10 border border-primary/20 p-12 lg:p-16 text-center"
+        >
+          {/* Background decoration */}
+          <div className="absolute inset-0 opacity-30">
+            <div className="absolute top-10 left-10 w-32 h-32 bg-primary/20 rounded-full blur-3xl" />
+            <div className="absolute bottom-10 right-10 w-40 h-40 bg-accent/20 rounded-full blur-3xl" />
+          </div>
+
+          <div className="relative z-10">
             <motion.div
-              key={study.title}
-              initial={{ opacity: 0, y: 30 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: 0.1 * index }}
-              className={`case-study-card group cursor-pointer ${
-                study.isShowcase ? 'bg-gradient-to-br ' + study.color + ' text-white' : ''
-              }`}
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={isInView ? { scale: 1, opacity: 1 } : {}}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              className="inline-flex items-center justify-center w-20 h-20 bg-primary/10 rounded-2xl mb-6"
             >
-              {/* Image placeholder */}
-              {!study.isShowcase && (
-                <div className={`aspect-[4/3] bg-gradient-to-br ${study.color}`}>
-                  <div className="w-full h-full flex items-center justify-center">
-                    <div className="w-16 h-16 border-2 border-white/30 rounded-lg flex items-center justify-center">
-                      <span className="text-white text-2xl font-bold">
-                        {study.industry.charAt(0)}
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              )}
+              <Rocket className="w-10 h-10 text-primary" />
+            </motion.div>
 
-              {/* Content */}
-              <div className={`p-6 ${study.isShowcase ? 'h-full flex flex-col justify-between min-h-[280px]' : ''}`}>
-                <div>
-                  <span className={`industry-tag ${study.isShowcase ? 'bg-white/20' : ''}`}>
-                    {study.industry}
-                  </span>
-                  <h3 className={`mt-4 text-lg font-semibold leading-snug ${
-                    study.isShowcase ? 'text-white' : 'text-foreground group-hover:text-primary transition-colors'
-                  }`}>
-                    {study.title}
-                  </h3>
-                  <p className={`mt-2 text-sm ${
-                    study.isShowcase ? 'text-white/80' : 'text-foreground/60'
-                  }`}>
-                    {study.description}
-                  </p>
-                </div>
-
-                {study.isShowcase && (
-                  <a 
-                    href="#"
-                    className="inline-flex items-center gap-2 mt-6 text-white font-medium hover:gap-3 transition-all"
-                  >
-                    View all case studies
-                    <ArrowRight className="w-4 h-4" />
-                  </a>
-                )}
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.5, delay: 0.4 }}
+            >
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full mb-6">
+                <Clock className="w-4 h-4 text-primary" />
+                <span className="text-sm font-medium text-primary">Coming Soon</span>
               </div>
             </motion.div>
-          ))}
-        </div>
+
+            <motion.h3
+              initial={{ opacity: 0, y: 10 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.5, delay: 0.5 }}
+              className="text-2xl lg:text-3xl font-bold text-foreground mb-4"
+            >
+              Success Stories in the Making
+            </motion.h3>
+
+            <motion.p
+              initial={{ opacity: 0, y: 10 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.5, delay: 0.6 }}
+              className="text-muted-foreground max-w-xl mx-auto mb-8"
+            >
+              We're currently working with exciting clients on transformative projects. 
+              Check back soon to see how we're helping businesses innovate and succeed.
+            </motion.p>
+
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.5, delay: 0.7 }}
+              className="flex items-center justify-center gap-6 text-sm text-muted-foreground"
+            >
+              <div className="flex items-center gap-2">
+                <Sparkles className="w-4 h-4 text-primary" />
+                <span>Real client transformations</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Sparkles className="w-4 h-4 text-primary" />
+                <span>Measurable results</span>
+              </div>
+            </motion.div>
+          </div>
+        </motion.div>
       </div>
     </section>
   );
