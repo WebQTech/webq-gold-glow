@@ -6,7 +6,7 @@ import { servicesData, getAllCategories } from "@/data/servicesData";
 import { AccessibilityPanel } from "@/components/AccessibilityPanel";
 import { useSmoothScroll } from "@/hooks/useSmoothScroll";
 import { useScrollSpy } from "@/hooks/useScrollSpy";
-import logo from "@/assets/webq-logo.png";
+import logo from "@/assets/logo.png";
 import {
   DropdownMenu,
   DropdownMenuContent,
