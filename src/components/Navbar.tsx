@@ -1,6 +1,6 @@
 import { useState, useEffect, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Globe, ChevronDown, Building2, Users, Award, MapPin, Handshake } from "lucide-react";
+import { Menu, X, Globe, ChevronDown, Building2, Users, Award, MapPin, Handshake, Briefcase } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { servicesData, getAllCategories } from "@/data/servicesData";
 import { AccessibilityPanel } from "@/components/AccessibilityPanel";
@@ -53,6 +53,7 @@ export const Navbar = () => {
     { label: "Our Story", href: "/about", icon: Building2 },
     { label: "Leadership Team", href: "/about", icon: Users },
     { label: "Our Values", href: "/about", icon: Award },
+    { label: "Careers", href: "/careers", icon: Briefcase },
     { label: "Global Presence", href: "/about", icon: MapPin },
     { label: "Partners", href: "/about", icon: Handshake },
   ];
