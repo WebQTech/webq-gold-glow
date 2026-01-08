@@ -54,6 +54,13 @@ const aiServices = [
   }
 ];
 
+const stats = [
+  { value: "95%", label: "Accuracy Rate" },
+  { value: "10x", label: "Faster Processing" },
+  { value: "60%", label: "Cost Reduction" },
+  { value: "24/7", label: "AI Availability" }
+];
+
 export const AIShowcaseSection = () => {
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef, { once: true, margin: "-100px" });
@@ -95,6 +102,26 @@ export const AIShowcaseSection = () => {
           </p>
         </motion.div>
 
+        {/* Stats Row */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
+        >
+          {stats.map((stat, index) => (
+            <div 
+              key={stat.label}
+              className="text-center p-6 bg-card/50 backdrop-blur-sm border border-border/50 rounded-2xl"
+            >
+              <div className="text-3xl lg:text-4xl font-bold text-primary mb-2">
+                {stat.value}
+              </div>
+              <div className="text-sm text-muted-foreground">{stat.label}</div>
+            </div>
+          ))}
+        </motion.div>
+
         {/* AI Services Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           {aiServices.map((service, index) => {
@@ -103,7 +130,7 @@ export const AIShowcaseSection = () => {
                 key={service.slug}
                 initial={{ opacity: 0, y: 30 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.5, delay: 0.1 + index * 0.1 }}
+                transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
               >
                 <Link
                   to={`/services/${service.slug}`}
@@ -154,23 +181,16 @@ export const AIShowcaseSection = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.6 }}
+          transition={{ duration: 0.6, delay: 0.8 }}
           className="text-center"
         >
-          <a
-            href="#contact"
-            onClick={(e) => {
-              e.preventDefault();
-              const target = document.querySelector('#contact');
-              if (target) {
-                target.scrollIntoView({ behavior: 'smooth' });
-              }
-            }}
+          <Link
+            to="/services"
             className="inline-flex items-center gap-2 btn-gradient px-8 py-4"
           >
-            Get Started with AI
+            Explore All AI Services
             <ArrowRight className="w-5 h-5" />
-          </a>
+          </Link>
         </motion.div>
       </div>
     </section>

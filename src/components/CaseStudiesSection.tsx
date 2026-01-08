@@ -1,110 +1,113 @@
-import { motion } from "framer-motion";
-import { Search, Wrench, Rocket, ArrowRight } from "lucide-react";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
+import { ArrowRight } from "lucide-react";
 
-const steps = [
+const caseStudies = [
   {
-    icon: Search,
-    title: "Discovery",
-    description: "We audit your data, workflows, and existing systems to identify high-impact AI opportunities.",
+    industry: "HEALTHCARE",
+    title: "AI-powered diagnostics platform modernization",
+    description: "Transformed legacy systems to deliver 10x faster patient insights.",
+    color: "from-blue-600 to-cyan-500",
   },
   {
-    icon: Wrench,
-    title: "Build",
-    description: "Our team develops custom AI solutions integrated with your tech stack — no rip-and-replace.",
+    industry: "BANKING",
+    title: "Digital banking automation delivers instant customer value",
+    description: "Reduced processing time by 60% using process automation and gen AI.",
+    color: "from-emerald-600 to-teal-500",
   },
   {
-    icon: Rocket,
-    title: "Deploy",
-    description: "Production-ready deployment in 8 weeks with monitoring, optimization, and ongoing support.",
+    industry: "RETAIL",
+    title: "E-commerce platform achieves global scale",
+    description: "Supported 5M+ concurrent users with cloud-native architecture.",
+    color: "from-orange-600 to-amber-500",
+  },
+  {
+    industry: "CASE STUDIES",
+    title: "Discover more about our work",
+    description: "We engineer technology into your business to help you anticipate and act.",
+    color: "from-primary to-accent",
+    isShowcase: true,
   },
 ];
 
 export const CaseStudiesSection = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
+
   return (
-    <section className="py-20 lg:py-28 bg-background">
+    <section id="insights" ref={ref} className="py-16 lg:py-24 bg-secondary/30">
       <div className="container mx-auto px-6 lg:px-12">
         {/* Header */}
-        <div className="text-center mb-16">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="text-3xl lg:text-4xl font-bold text-foreground mb-4"
-          >
-            How We Work
-          </motion.h2>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-lg text-muted-foreground max-w-2xl mx-auto"
-          >
-            A proven process to get you from idea to production
-          </motion.p>
-        </div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6 }}
+          className="mb-12"
+        >
+          <h2 className="text-3xl lg:text-4xl font-bold text-foreground">
+            Case studies
+          </h2>
+          <p className="mt-3 text-foreground/60 text-lg max-w-2xl">
+            We help companies anticipate and act with insight and speed.
+          </p>
+        </motion.div>
 
-        {/* Steps */}
-        <div className="grid md:grid-cols-3 gap-8 lg:gap-12 mb-12">
-          {steps.map((step, index) => (
+        {/* Cards Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {caseStudies.map((study, index) => (
             <motion.div
-              key={step.title}
+              key={study.title}
               initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.15 }}
-              className="relative text-center"
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.5, delay: 0.1 * index }}
+              className={`case-study-card group cursor-pointer ${
+                study.isShowcase ? 'bg-gradient-to-br ' + study.color + ' text-white' : ''
+              }`}
             >
-              {/* Step number */}
-              <div className="absolute -top-2 left-1/2 -translate-x-1/2 text-6xl font-bold text-muted/20">
-                {index + 1}
-              </div>
-              
-              {/* Icon */}
-              <div className="relative z-10 w-16 h-16 mx-auto mb-6 rounded-2xl bg-primary/10 flex items-center justify-center">
-                <step.icon className="w-8 h-8 text-primary" />
-              </div>
-              
-              {/* Content */}
-              <h3 className="text-xl font-semibold text-foreground mb-3">
-                {step.title}
-              </h3>
-              <p className="text-muted-foreground leading-relaxed">
-                {step.description}
-              </p>
-
-              {/* Connector line (hidden on last item and mobile) */}
-              {index < steps.length - 1 && (
-                <div className="hidden md:block absolute top-8 left-[60%] w-[80%] h-px bg-border" />
+              {/* Image placeholder */}
+              {!study.isShowcase && (
+                <div className={`aspect-[4/3] bg-gradient-to-br ${study.color}`}>
+                  <div className="w-full h-full flex items-center justify-center">
+                    <div className="w-16 h-16 border-2 border-white/30 rounded-lg flex items-center justify-center">
+                      <span className="text-white text-2xl font-bold">
+                        {study.industry.charAt(0)}
+                      </span>
+                    </div>
+                  </div>
+                </div>
               )}
+
+              {/* Content */}
+              <div className={`p-6 ${study.isShowcase ? 'h-full flex flex-col justify-between min-h-[280px]' : ''}`}>
+                <div>
+                  <span className={`industry-tag ${study.isShowcase ? 'bg-white/20' : ''}`}>
+                    {study.industry}
+                  </span>
+                  <h3 className={`mt-4 text-lg font-semibold leading-snug ${
+                    study.isShowcase ? 'text-white' : 'text-foreground group-hover:text-primary transition-colors'
+                  }`}>
+                    {study.title}
+                  </h3>
+                  <p className={`mt-2 text-sm ${
+                    study.isShowcase ? 'text-white/80' : 'text-foreground/60'
+                  }`}>
+                    {study.description}
+                  </p>
+                </div>
+
+                {study.isShowcase && (
+                  <a 
+                    href="#"
+                    className="inline-flex items-center gap-2 mt-6 text-white font-medium hover:gap-3 transition-all"
+                  >
+                    View all case studies
+                    <ArrowRight className="w-4 h-4" />
+                  </a>
+                )}
+              </div>
             </motion.div>
           ))}
         </div>
-
-        {/* CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.5 }}
-          className="text-center"
-        >
-          <a
-            href="#contact"
-            onClick={(e) => {
-              e.preventDefault();
-              const target = document.querySelector('#contact');
-              if (target) {
-                target.scrollIntoView({ behavior: 'smooth' });
-              }
-            }}
-            className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-lg font-medium hover:bg-primary/90 transition-colors"
-          >
-            Start your AI journey
-            <ArrowRight className="w-4 h-4" />
-          </a>
-        </motion.div>
       </div>
     </section>
   );

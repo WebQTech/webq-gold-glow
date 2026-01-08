@@ -1,28 +1,12 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { ArrowRight, Clock, Shield, Plug, Users } from "lucide-react";
+import { ArrowRight, Building2, Users, Globe, Award } from "lucide-react";
 
-const values = [
-  { 
-    icon: Clock, 
-    title: "8-Week Delivery", 
-    description: "From discovery to production deployment in just 8 weeks" 
-  },
-  { 
-    icon: Shield, 
-    title: "Enterprise-Grade Security", 
-    description: "SOC 2 compliant infrastructure with your data privacy guaranteed" 
-  },
-  { 
-    icon: Plug, 
-    title: "Seamless Integration", 
-    description: "Works with your existing stack — Salesforce, SAP, AWS, Azure, and more" 
-  },
-  { 
-    icon: Users, 
-    title: "Dedicated Team", 
-    description: "A senior engineer and AI specialist assigned to your project" 
-  },
+const stats = [
+  { icon: Building2, value: "500+", label: "Enterprise Clients" },
+  { icon: Users, value: "5,000+", label: "Team Members" },
+  { icon: Globe, value: "30+", label: "Countries" },
+  { icon: Award, value: "20+", label: "Years Experience" },
 ];
 
 export const AboutSection = () => {
@@ -49,40 +33,33 @@ export const AboutSection = () => {
             innovative approach help clients navigate complexity and achieve their strategic goals.
           </p>
           <a 
-            href="#contact"
-            onClick={(e) => {
-              e.preventDefault();
-              const target = document.querySelector('#contact');
-              if (target) {
-                target.scrollIntoView({ behavior: 'smooth' });
-              }
-            }}
+            href="#"
             className="inline-flex items-center gap-2 mt-6 text-primary font-semibold hover:gap-3 transition-all"
           >
-            Get in touch
+            Learn more about us
             <ArrowRight className="w-4 h-4" />
           </a>
         </motion.div>
 
-        {/* Values Grid */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
-          {values.map((value, index) => (
+        {/* Stats Grid */}
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+          {stats.map((stat, index) => (
             <motion.div
-              key={value.title}
+              key={stat.label}
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.1 * index }}
-              className="p-6 rounded-xl bg-card border border-border/50 hover:border-primary/30 transition-colors"
+              className="text-center"
             >
-              <div className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-primary/10 text-primary mb-4">
-                <value.icon className="w-5 h-5" />
+              <div className="inline-flex items-center justify-center w-14 h-14 rounded-lg bg-primary/10 text-primary mb-4">
+                <stat.icon className="w-6 h-6" />
               </div>
-              <h3 className="text-lg font-semibold text-foreground mb-2">
-                {value.title}
-              </h3>
-              <p className="text-sm text-foreground/60">
-                {value.description}
-              </p>
+              <div className="text-3xl lg:text-4xl font-bold text-foreground">
+                {stat.value}
+              </div>
+              <div className="mt-1 text-sm text-foreground/60">
+                {stat.label}
+              </div>
             </motion.div>
           ))}
         </div>
