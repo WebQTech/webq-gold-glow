@@ -3,7 +3,7 @@ name: Deploy to AWS S3 (Development)
 on:
   push:
     branches:
-      - main
+      - dev
   workflow_dispatch:
 
 env:
