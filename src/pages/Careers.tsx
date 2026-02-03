@@ -1,7 +1,7 @@
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { motion } from "framer-motion";
-import { Briefcase, Users, Gift, UserCheck, MapPin, Clock, ArrowRight, Heart, Zap, Globe, GraduationCap } from "lucide-react";
+import { Briefcase, Users, Gift, UserCheck, MapPin, Clock, ArrowRight, Heart, Zap, Globe, GraduationCap, Mail } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 
 const benefits = [
@@ -252,6 +252,28 @@ const Careers = () => {
                   </motion.div>
                 ))}
               </div>
+
+              {/* Send Resume CTA */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                className="mt-10 p-6 bg-primary/5 rounded-xl border border-primary/20 text-center"
+              >
+                <h3 className="text-lg font-semibold text-foreground mb-2">
+                  Don't see a role that fits?
+                </h3>
+                <p className="text-muted-foreground mb-4">
+                  We're always looking for talented individuals. Send us your resume and we'll keep you in mind for future opportunities.
+                </p>
+                <a
+                  href="mailto:contact@webqtech.com?subject=Resume%20Submission&body=Hi%20WebQ%20Team%2C%0A%0APlease%20find%20my%20resume%20attached.%0A%0ABest%20regards"
+                  className="btn-primary inline-flex items-center gap-2"
+                >
+                  <Mail className="w-4 h-4" />
+                  Send Resume to contact@webqtech.com
+                </a>
+              </motion.div>
             </div>
           </section>
 
