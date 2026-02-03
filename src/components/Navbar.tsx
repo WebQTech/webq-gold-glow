@@ -85,13 +85,6 @@ export const Navbar = () => {
     { label: "Blog", href: "/news", icon: BookOpen },
   ];
 
-  // Investors dropdown items
-  const investorsItems = [
-    { label: "Financial Reports", href: "/investors", icon: BarChart3 },
-    { label: "Stock Information", href: "/investors", icon: TrendingUp },
-    { label: "Governance", href: "/investors", icon: Building2 },
-    { label: "Investor Resources", href: "/investors", icon: DollarSign },
-  ];
 
   return (
     <>
@@ -143,23 +136,6 @@ export const Navbar = () => {
               </DropdownMenuContent>
             </DropdownMenu>
 
-            {/* Investors Dropdown */}
-            <DropdownMenu>
-              <DropdownMenuTrigger className="flex items-center gap-1 text-xs text-foreground/60 hover:text-primary transition-colors focus:outline-none">
-                Investors
-                <ChevronDown className="w-3 h-3" />
-              </DropdownMenuTrigger>
-              <DropdownMenuContent align="end" className="w-48 bg-background border border-border shadow-lg z-50">
-                {investorsItems.map((item) => (
-                  <DropdownMenuItem key={item.label} asChild>
-                    <Link to={item.href} className="flex items-center gap-2 cursor-pointer focus:bg-primary/10 focus:text-primary">
-                      <item.icon className="w-4 h-4 text-primary" />
-                      <span>{item.label}</span>
-                    </Link>
-                  </DropdownMenuItem>
-                ))}
-              </DropdownMenuContent>
-            </DropdownMenu>
             <div className="flex items-center gap-1 text-xs text-foreground/60 cursor-pointer hover:text-primary transition-colors">
               <Globe className="w-3 h-3" />
               <span>US-EN</span>
@@ -671,28 +647,6 @@ export const Navbar = () => {
                     </Link>
                     <div className="pl-2 space-y-1">
                       {newsItems.map((item) => (
-                        <Link
-                          key={item.label}
-                          to={item.href}
-                          className="flex items-center gap-2 py-1.5 text-sm text-foreground/70 hover:text-primary transition-colors"
-                          onClick={() => setIsMobileMenuOpen(false)}
-                        >
-                          <item.icon className="w-4 h-4 text-primary" />
-                          {item.label}
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-                  <div>
-                    <Link 
-                      to="/investors"
-                      className="text-xs text-muted-foreground uppercase tracking-wider block pb-2 hover:text-primary transition-colors"
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                      Investors
-                    </Link>
-                    <div className="pl-2 space-y-1">
-                      {investorsItems.map((item) => (
                         <Link
                           key={item.label}
                           to={item.href}
