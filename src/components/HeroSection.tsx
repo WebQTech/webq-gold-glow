@@ -1,35 +1,7 @@
 import { motion } from "framer-motion";
-import { useState } from "react";
 import { ArrowRight, ChevronDown } from "lucide-react";
 
-const heroSlides = [
-  {
-    label: "AI Solutions",
-    title: "Engineering AI for enterprise impact",
-    description: "We help you harness AI's transformative power with enterprise-grade solutions that deliver measurable business outcomes.",
-    cta: "Get started",
-    ctaLink: "#solutions",
-  },
-  {
-    label: "Cloud Services",
-    title: "Accelerate your cloud transformation",
-    description: "Modernize your infrastructure with our comprehensive cloud migration and management services across AWS, Azure, and GCP.",
-    cta: "Explore now",
-    ctaLink: "#solutions",
-  },
-  {
-    label: "Digital Transformation",
-    title: "Reimagine your business processes",
-    description: "Transform legacy systems into agile, scalable platforms that drive innovation and competitive advantage.",
-    cta: "Learn more",
-    ctaLink: "#solutions",
-  },
-];
-
 export const HeroSection = () => {
-  const [activeTab, setActiveTab] = useState(0);
-  const currentSlide = heroSlides[activeTab];
-
   return (
     <section className="relative min-h-[600px] lg:min-h-[700px] overflow-hidden">
       {/* Dark blue background with geometric pattern */}
@@ -138,88 +110,69 @@ export const HeroSection = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-6 lg:px-12 pt-16 lg:pt-24">
+      <div className="relative z-10 container mx-auto px-6 lg:px-12 pt-24 lg:pt-32 pb-16">
         <div className="max-w-2xl">
           {/* Label */}
           <motion.div
-            key={`label-${activeTab}`}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             className="mb-4"
           >
             <span className="text-[hsl(195,100%,45%)] text-sm font-medium tracking-wide">
-              {currentSlide.label}
+              AI-Powered Enterprise Technology
             </span>
           </motion.div>
 
           {/* Title */}
           <motion.h1
-            key={`title-${activeTab}`}
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white leading-tight"
           >
-            {currentSlide.title}
+            We build technology that transforms{" "}
+            <span className="text-gradient font-serif italic">Businesses.</span>
           </motion.h1>
 
           {/* Description */}
           <motion.p
-            key={`desc-${activeTab}`}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
             className="mt-6 text-lg text-white/70 max-w-lg leading-relaxed"
           >
-            {currentSlide.description}
+            Harness AI's transformative power with enterprise-grade solutions that deliver measurable business outcomes.
           </motion.p>
 
           {/* CTA */}
           <motion.div
-            key={`cta-${activeTab}`}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
             className="mt-8"
           >
             <a 
-              href={currentSlide.ctaLink}
+              href="#solutions"
               className="inline-flex items-center gap-2 btn-white text-base"
             >
-              {currentSlide.cta}
+              Get started
               <ArrowRight className="w-4 h-4" />
             </a>
           </motion.div>
         </div>
       </div>
 
-      {/* Bottom tab navigation */}
-      <div className="absolute bottom-0 left-0 right-0 z-20">
+      {/* Scroll indicator */}
+      <div className="absolute bottom-6 left-0 right-0 z-20">
         <div className="container mx-auto px-6 lg:px-12">
-          <div className="flex items-center gap-2 pb-6">
-            {/* Scroll indicator */}
-            <motion.div
-              className="mr-4 text-white/50 hidden lg:block"
-              animate={{ y: [0, 5, 0] }}
-              transition={{ duration: 1.5, repeat: Infinity }}
-            >
-              <ChevronDown className="w-5 h-5" />
-            </motion.div>
-
-            {/* Tabs */}
-            <div className="flex items-center gap-1 bg-white/5 backdrop-blur-sm rounded-sm">
-              {heroSlides.map((slide, index) => (
-                <button
-                  key={index}
-                  onClick={() => setActiveTab(index)}
-                  className={`hero-tab ${activeTab === index ? 'active' : ''}`}
-                >
-                  {slide.label}
-                </button>
-              ))}
-            </div>
-          </div>
+          <motion.div
+            className="text-white/50"
+            animate={{ y: [0, 5, 0] }}
+            transition={{ duration: 1.5, repeat: Infinity }}
+          >
+            <ChevronDown className="w-5 h-5" />
+          </motion.div>
         </div>
       </div>
     </section>
