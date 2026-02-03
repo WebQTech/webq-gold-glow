@@ -34,32 +34,6 @@ const values = [
   },
 ];
 
-const leadership = [
-  {
-    name: "Rajesh Kumar",
-    role: "Chief Executive Officer",
-    bio: "20+ years of experience leading technology transformations for Fortune 500 companies.",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&auto=format&fit=crop",
-  },
-  {
-    name: "Dr. Sarah Chen",
-    role: "Chief Technology Officer",
-    bio: "Former AI research lead at Google, specializing in enterprise AI solutions.",
-    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&auto=format&fit=crop",
-  },
-  {
-    name: "Michael Torres",
-    role: "Chief Operating Officer",
-    bio: "Expert in scaling technology operations across global markets.",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&auto=format&fit=crop",
-  },
-  {
-    name: "Emily Roberts",
-    role: "Chief Financial Officer",
-    bio: "Strategic financial leader with deep experience in technology sector growth.",
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&auto=format&fit=crop",
-  },
-];
 
 const globalPresence = [
   { region: "North America", offices: ["New York", "San Francisco", "Toronto"] },
@@ -242,42 +216,6 @@ const About = () => {
             </div>
           </section>
 
-          {/* Leadership */}
-          <section className="py-10 bg-secondary/30">
-            <div className="container mx-auto px-6 lg:px-12">
-              <div className="text-center max-w-2xl mx-auto mb-12">
-                <span className="text-primary text-sm font-semibold uppercase tracking-wider">Leadership</span>
-                <h2 className="text-3xl font-bold text-foreground mt-4">
-                  Meet Our Executive Team
-                </h2>
-              </div>
-              
-              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                {leadership.map((leader, index) => (
-                  <motion.div
-                    key={leader.name}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    className="bg-card rounded-xl overflow-hidden border border-border hover:border-primary/50 transition-all group"
-                  >
-                    <div className="aspect-square overflow-hidden">
-                      <img
-                        src={leader.image}
-                        alt={leader.name}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                      />
-                    </div>
-                    <div className="p-6">
-                      <h3 className="text-lg font-semibold text-foreground">{leader.name}</h3>
-                      <p className="text-primary text-sm font-medium mb-2">{leader.role}</p>
-                      <p className="text-sm text-muted-foreground">{leader.bio}</p>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
-          </section>
 
           {/* Global Presence */}
           <section className="py-10 lg:py-16">
