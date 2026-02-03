@@ -5,10 +5,9 @@ import { Building2, Users, Award, MapPin, Handshake, Target, Eye, Heart, Globe, 
 import { Helmet } from "react-helmet-async";
 
 const stats = [
-  { value: "15+", label: "Years of Excellence" },
-  { value: "500+", label: "Enterprise Clients" },
-  { value: "2,000+", label: "Projects Delivered" },
-  { value: "25+", label: "Countries Served" },
+  { value: "50+", label: "Enterprise Clients" },
+  { value: "100+", label: "Projects Delivered" },
+  { value: "20+", label: "Countries & Timezones" },
 ];
 
 const values = [
