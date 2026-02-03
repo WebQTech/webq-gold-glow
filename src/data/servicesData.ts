@@ -36,6 +36,47 @@ export interface ServiceDetail {
   faqs: { question: string; answer: string }[];
 }
 
+// Standard pricing approach for all services
+const createContactPricing = (serviceName: string): PricingTier[] => [
+  {
+    name: "Starter",
+    price: "Contact Us",
+    description: "For small teams getting started",
+    features: [
+      "Scoped project assessment",
+      "Tailored implementation plan",
+      "Core functionality delivery",
+      "Documentation & handoff",
+      "Post-launch support"
+    ]
+  },
+  {
+    name: "Growth",
+    price: "Contact Us",
+    description: "For growing businesses",
+    features: [
+      "Comprehensive solution design",
+      "Full implementation",
+      "Integrations included",
+      "Extended support period",
+      "Training & knowledge transfer"
+    ],
+    popular: true
+  },
+  {
+    name: "Enterprise",
+    price: "Contact Us",
+    description: "For large organizations",
+    features: [
+      "Custom architecture",
+      "Dedicated team",
+      "Priority support",
+      "Ongoing optimization",
+      "Strategic consulting"
+    ]
+  }
+];
+
 export const servicesData: ServiceDetail[] = [
   // ==================== ARTIFICIAL INTELLIGENCE ====================
   {
@@ -63,62 +104,22 @@ export const servicesData: ServiceDetail[] = [
       "Automate repetitive tasks",
       "Make data-driven decisions",
       "Personalize customer experiences",
-      "Predict market trends",
-      "Reduce operational costs"
+      "Gain competitive insights",
+      "Improve operational efficiency"
     ],
     technologies: ["Python", "TensorFlow", "PyTorch", "OpenAI", "Langchain", "Hugging Face", "AWS SageMaker", "Azure ML"],
-    pricing: [
-      {
-        name: "AI Starter",
-        price: "$20,000",
-        description: "Basic AI implementation",
-        features: [
-          "Pre-trained model integration",
-          "Basic NLP or vision task",
-          "API development",
-          "Documentation",
-          "30 days support"
-        ]
-      },
-      {
-        name: "Custom AI",
-        price: "$75,000",
-        description: "Custom model development",
-        features: [
-          "Custom model training",
-          "Data pipeline setup",
-          "Model optimization",
-          "A/B testing framework",
-          "90 days support",
-          "Performance monitoring"
-        ],
-        popular: true
-      },
-      {
-        name: "AI Enterprise",
-        price: "Custom",
-        description: "Enterprise AI transformation",
-        features: [
-          "Multiple AI solutions",
-          "MLOps infrastructure",
-          "Continuous learning",
-          "Dedicated AI team",
-          "24/7 support",
-          "Strategy consulting"
-        ]
-      }
-    ],
+    pricing: createContactPricing("AI & Machine Learning"),
     caseStudies: [
       {
-        company: "InsureTech Global",
+        company: "Insurance Client",
         industry: "Insurance",
-        challenge: "Manual claims processing taking weeks and prone to errors.",
+        challenge: "Manual claims processing taking too long and prone to errors.",
         solution: "Implemented AI-powered claims processing with document OCR and fraud detection.",
         results: [
-          "Claims processing time reduced from 2 weeks to 2 hours",
-          "Fraud detection accuracy improved by 85%",
-          "$5M saved in fraudulent claims annually",
-          "Customer satisfaction increased by 40%"
+          "Significantly faster claims processing",
+          "Improved fraud detection accuracy",
+          "Reduced operational overhead",
+          "Better customer satisfaction scores"
         ]
       }
     ],
@@ -153,65 +154,25 @@ export const servicesData: ServiceDetail[] = [
       "AI safety and guardrails"
     ],
     benefits: [
-      "Reduce content creation time by 80%",
+      "Accelerate content creation workflows",
       "Automate customer support interactions",
       "Extract insights from unstructured data",
       "Scale personalized communications",
-      "Accelerate research and development"
+      "Improve research and development efficiency"
     ],
     technologies: ["OpenAI GPT-4", "Anthropic Claude", "Google Gemini", "Langchain", "LlamaIndex", "Pinecone", "Weaviate", "Hugging Face"],
-    pricing: [
-      {
-        name: "GenAI Starter",
-        price: "$15,000",
-        description: "Basic LLM integration",
-        features: [
-          "Single LLM API integration",
-          "Basic chatbot or assistant",
-          "Prompt library development",
-          "Documentation",
-          "30 days support"
-        ]
-      },
-      {
-        name: "GenAI Pro",
-        price: "$50,000",
-        description: "Advanced RAG systems",
-        features: [
-          "Custom RAG implementation",
-          "Vector database setup",
-          "Fine-tuning pipeline",
-          "Multi-model orchestration",
-          "90 days support",
-          "Performance optimization"
-        ],
-        popular: true
-      },
-      {
-        name: "GenAI Enterprise",
-        price: "Custom",
-        description: "Enterprise AI platform",
-        features: [
-          "Full AI platform development",
-          "Custom model training",
-          "Enterprise security & compliance",
-          "Dedicated AI team",
-          "24/7 support",
-          "Ongoing optimization"
-        ]
-      }
-    ],
+    pricing: createContactPricing("Generative AI Solutions"),
     caseStudies: [
       {
-        company: "LegalPro Services",
+        company: "Legal Services Client",
         industry: "Legal",
-        challenge: "Lawyers spending 60% of time on document review and research.",
+        challenge: "Legal team spending significant time on document review and research.",
         solution: "Built an AI-powered legal research assistant with RAG for document analysis and case law retrieval.",
         results: [
-          "Research time reduced by 75%",
-          "Document review 10x faster",
-          "$2M saved annually in billable hours",
-          "Accuracy improved by 40%"
+          "Faster research turnaround",
+          "Improved document review efficiency",
+          "Better accuracy in case preparation",
+          "More time for strategic legal work"
         ]
       }
     ],
@@ -244,65 +205,25 @@ export const servicesData: ServiceDetail[] = [
       "Continuous process improvement"
     ],
     benefits: [
-      "Automate 80% of manual processes",
-      "Reduce processing errors by 90%",
+      "Automate manual processes effectively",
+      "Reduce processing errors significantly",
       "Free employees for higher-value work",
       "Achieve faster turnaround times",
-      "Scale operations without proportional costs"
+      "Scale operations efficiently"
     ],
     technologies: ["UiPath", "Automation Anywhere", "Blue Prism", "Power Automate", "Python", "TensorFlow", "AWS Textract", "Azure Form Recognizer"],
-    pricing: [
-      {
-        name: "IPA Starter",
-        price: "$30,000",
-        description: "Single process automation",
-        features: [
-          "One process automation",
-          "Document processing AI",
-          "Basic exception handling",
-          "Process documentation",
-          "30 days support"
-        ]
-      },
-      {
-        name: "IPA Pro",
-        price: "$100,000",
-        description: "Multi-process automation",
-        features: [
-          "Up to 5 process automations",
-          "AI-powered decision making",
-          "Process orchestration",
-          "Advanced analytics",
-          "90 days support",
-          "Training included"
-        ],
-        popular: true
-      },
-      {
-        name: "IPA Enterprise",
-        price: "Custom",
-        description: "Enterprise automation platform",
-        features: [
-          "Unlimited automations",
-          "Full process mining",
-          "Center of Excellence setup",
-          "Custom AI models",
-          "24/7 support",
-          "Dedicated team"
-        ]
-      }
-    ],
+    pricing: createContactPricing("AI Process Automation"),
     caseStudies: [
       {
-        company: "GlobalBank Financial",
+        company: "Financial Services Client",
         industry: "Banking",
-        challenge: "Loan processing taking 2 weeks with extensive manual document review.",
+        challenge: "Loan processing taking too long with extensive manual document review.",
         solution: "Implemented intelligent document processing with automated data extraction and decision support.",
         results: [
-          "Loan processing time reduced to 2 days",
-          "Document processing accuracy at 98%",
-          "Staff productivity increased 300%",
-          "$10M saved in operational costs"
+          "Faster loan processing turnaround",
+          "High document processing accuracy",
+          "Improved staff productivity",
+          "Reduced operational overhead"
         ]
       }
     ],
@@ -340,62 +261,22 @@ export const servicesData: ServiceDetail[] = [
       "Automate complex multi-step workflows",
       "Deploy 24/7 intelligent assistants",
       "Scale expertise across your organization",
-      "Accelerate ML development cycles by 50%",
-      "Reduce human oversight requirements by 70%"
+      "Accelerate ML development cycles",
+      "Reduce manual oversight requirements"
     ],
     technologies: ["LangGraph", "CrewAI", "OpenAI Assistants", "Anthropic Claude", "MLflow", "Kubeflow", "Weights & Biases", "Langchain", "Vercel AI SDK"],
-    pricing: [
-      {
-        name: "AI Starter",
-        price: "$20,000",
-        description: "Single agent or assistant",
-        features: [
-          "One autonomous agent or assistant",
-          "Basic tool integration",
-          "Knowledge base setup",
-          "Logging and monitoring",
-          "30 days support"
-        ]
-      },
-      {
-        name: "AI Pro",
-        price: "$65,000",
-        description: "Multi-agent system with MLOps",
-        features: [
-          "Multi-agent orchestration",
-          "Custom tool development",
-          "MLOps pipeline setup",
-          "Human-in-the-loop workflows",
-          "90 days support",
-          "Performance optimization"
-        ],
-        popular: true
-      },
-      {
-        name: "AI Enterprise",
-        price: "Custom",
-        description: "Enterprise AI platform",
-        features: [
-          "Full agentic platform",
-          "Multiple specialized agents",
-          "Complete MLOps infrastructure",
-          "Enterprise security and compliance",
-          "24/7 support",
-          "Dedicated AI team"
-        ]
-      }
-    ],
+    pricing: createContactPricing("Agentic AI, Agents & Tools"),
     caseStudies: [
       {
-        company: "DataAnalytics Corp",
+        company: "Analytics Client",
         industry: "Business Intelligence",
-        challenge: "Data analysts spending 80% of time on repetitive report generation and data investigation.",
+        challenge: "Data analysts spending too much time on repetitive report generation.",
         solution: "Deployed autonomous AI agents that investigate data anomalies, generate reports, and proactively surface insights with full MLOps infrastructure.",
         results: [
-          "Report generation time reduced by 90%",
+          "Faster report generation",
           "Analysts focus on strategic work",
-          "Proactive insights increased 5x",
-          "Model deployment time reduced from weeks to hours"
+          "More proactive insights surfaced",
+          "Streamlined model deployment process"
         ]
       }
     ],
@@ -434,64 +315,24 @@ export const servicesData: ServiceDetail[] = [
     ],
     benefits: [
       "Solve unique business challenges",
-      "Improve operational efficiency by 50%",
+      "Improve operational efficiency",
       "Gain competitive advantage",
       "Full ownership of your solution",
       "Scalable architecture for growth"
     ],
     technologies: ["React", "Next.js", "Node.js", "Python", "PostgreSQL", "Redis", "GraphQL", "AWS", "Docker"],
-    pricing: [
-      {
-        name: "Starter App",
-        price: "$20,000",
-        description: "Small-scale applications",
-        features: [
-          "Up to 4 months development",
-          "Single developer",
-          "Core functionality",
-          "Basic integrations",
-          "30 days support"
-        ]
-      },
-      {
-        name: "Business App",
-        price: "$60,000",
-        description: "Mid-sized applications",
-        features: [
-          "Up to 8 months development",
-          "Team of 2-4 developers",
-          "Advanced features",
-          "Multiple integrations",
-          "90 days support",
-          "Performance optimization"
-        ],
-        popular: true
-      },
-      {
-        name: "Enterprise App",
-        price: "Custom",
-        description: "Large-scale platforms",
-        features: [
-          "Unlimited timeline",
-          "Full dedicated team",
-          "Complex integrations",
-          "Enterprise security",
-          "24/7 support",
-          "Ongoing development"
-        ]
-      }
-    ],
+    pricing: createContactPricing("Custom App Development"),
     caseStudies: [
       {
-        company: "LogiTrack Solutions",
+        company: "Logistics Client",
         industry: "Logistics",
         challenge: "Managing fleet operations across multiple locations with outdated spreadsheets.",
         solution: "Built a custom fleet management platform with real-time tracking, route optimization, and driver management.",
         results: [
-          "Fuel costs reduced by 25%",
-          "Delivery times improved by 35%",
-          "Real-time visibility across 500+ vehicles",
-          "Driver productivity increased by 40%"
+          "Reduced fuel costs",
+          "Improved delivery times",
+          "Real-time visibility across fleet",
+          "Better driver productivity"
         ]
       }
     ],
@@ -525,64 +366,24 @@ export const servicesData: ServiceDetail[] = [
     ],
     benefits: [
       "Reach customers on their preferred devices",
-      "Increase user engagement by 60%",
+      "Increase user engagement",
       "Generate new revenue streams",
       "Build brand loyalty through mobile presence",
       "Collect valuable user behavior data"
     ],
     technologies: ["React Native", "Flutter", "Swift", "Kotlin", "Firebase", "GraphQL", "Redux", "App Store Connect"],
-    pricing: [
-      {
-        name: "Single Platform",
-        price: "$25,000",
-        description: "iOS or Android app",
-        features: [
-          "One platform (iOS or Android)",
-          "Up to 10 screens",
-          "Basic analytics",
-          "Push notifications",
-          "App store submission"
-        ]
-      },
-      {
-        name: "Cross-Platform",
-        price: "$40,000",
-        description: "Both iOS and Android",
-        features: [
-          "iOS and Android apps",
-          "Up to 20 screens",
-          "Advanced analytics",
-          "Push notifications",
-          "App store optimization",
-          "Backend API included"
-        ],
-        popular: true
-      },
-      {
-        name: "Enterprise Mobile",
-        price: "Custom",
-        description: "Complex enterprise apps",
-        features: [
-          "All platforms",
-          "Unlimited screens",
-          "Enterprise integrations",
-          "Advanced security",
-          "Dedicated support team",
-          "Custom features"
-        ]
-      }
-    ],
+    pricing: createContactPricing("Mobile App Development"),
     caseStudies: [
       {
-        company: "RetailMax",
+        company: "Retail Client",
         industry: "Retail",
         challenge: "Needed a mobile commerce platform to compete with larger retailers.",
         solution: "Built a cross-platform shopping app with personalized recommendations and seamless checkout.",
         results: [
-          "1M+ downloads in first year",
-          "35% of total sales from mobile",
-          "4.8 star rating on both stores",
-          "Customer retention up 45%"
+          "Strong app downloads post-launch",
+          "Meaningful portion of sales from mobile",
+          "High app store ratings",
+          "Improved customer retention"
         ]
       }
     ],
@@ -615,65 +416,25 @@ export const servicesData: ServiceDetail[] = [
       "Post-migration optimization"
     ],
     benefits: [
-      "Reduce infrastructure costs by 30-50%",
+      "Reduce infrastructure costs",
       "Improve application performance",
       "Enable global scalability",
       "Enhance disaster recovery capabilities",
       "Increase deployment speed"
     ],
     technologies: ["AWS", "Azure", "Google Cloud", "Terraform", "Kubernetes", "Docker", "Ansible", "CloudFormation"],
-    pricing: [
-      {
-        name: "Assessment",
-        price: "$5,000",
-        description: "Cloud readiness evaluation",
-        features: [
-          "Infrastructure audit",
-          "Cost analysis",
-          "Migration roadmap",
-          "Risk assessment",
-          "Recommendations report"
-        ]
-      },
-      {
-        name: "Standard Migration",
-        price: "$35,000",
-        description: "Small to medium workloads",
-        features: [
-          "Up to 10 servers/services",
-          "Data migration",
-          "Basic automation",
-          "Security setup",
-          "Documentation",
-          "30 days hypercare"
-        ],
-        popular: true
-      },
-      {
-        name: "Enterprise Migration",
-        price: "Custom",
-        description: "Large-scale transformations",
-        features: [
-          "Unlimited workloads",
-          "Re-architecture options",
-          "Advanced automation",
-          "24/7 migration support",
-          "Extended hypercare",
-          "Ongoing optimization"
-        ]
-      }
-    ],
+    pricing: createContactPricing("Cloud Migration & Deployment"),
     caseStudies: [
       {
-        company: "MediaStream Inc",
+        company: "Media Client",
         industry: "Media & Entertainment",
         challenge: "On-premise infrastructure couldn't handle streaming traffic spikes during popular events.",
         solution: "Migrated to AWS with auto-scaling architecture and global CDN implementation.",
         results: [
-          "Handled 10x traffic spikes seamlessly",
-          "45% reduction in infrastructure costs",
-          "99.99% uptime achieved",
-          "Global latency reduced by 60%"
+          "Handles traffic spikes seamlessly",
+          "Reduced infrastructure costs",
+          "High uptime achieved",
+          "Improved global latency"
         ]
       }
     ],
@@ -713,58 +474,18 @@ export const servicesData: ServiceDetail[] = [
       "Access to expert IT team"
     ],
     technologies: ["Datadog", "Prometheus", "Grafana", "PagerDuty", "Ansible", "Nagios", "VMware", "Veeam"],
-    pricing: [
-      {
-        name: "Basic",
-        price: "$2,500/mo",
-        description: "Essential monitoring",
-        features: [
-          "Up to 10 servers",
-          "8x5 monitoring",
-          "Email alerts",
-          "Monthly reports",
-          "Basic support"
-        ]
-      },
-      {
-        name: "Professional",
-        price: "$7,500/mo",
-        description: "Comprehensive management",
-        features: [
-          "Up to 50 servers",
-          "24/7 monitoring",
-          "Incident response",
-          "Weekly reports",
-          "Priority support",
-          "Backup management"
-        ],
-        popular: true
-      },
-      {
-        name: "Enterprise",
-        price: "Custom",
-        description: "Full IT outsourcing",
-        features: [
-          "Unlimited infrastructure",
-          "Dedicated team",
-          "Custom SLAs",
-          "On-site support option",
-          "Strategic consulting",
-          "Complete IT management"
-        ]
-      }
-    ],
+    pricing: createContactPricing("IT Infrastructure Management"),
     caseStudies: [
       {
-        company: "LogiTrans Shipping",
+        company: "Logistics Client",
         industry: "Logistics",
         challenge: "Frequent system outages affecting tracking and delivery operations.",
         solution: "Implemented comprehensive monitoring, automated failover, and 24/7 NOC support.",
         results: [
-          "Uptime improved from 95% to 99.95%",
-          "Mean time to recovery reduced by 80%",
+          "Improved system uptime",
+          "Faster recovery times",
           "IT team freed for strategic projects",
-          "Annual savings of $500K in downtime costs"
+          "Reduced downtime costs"
         ]
       }
     ],
@@ -797,65 +518,25 @@ export const servicesData: ServiceDetail[] = [
       "Blue-green & canary deployments"
     ],
     benefits: [
-      "Deploy 10x more frequently",
-      "Reduce deployment failures by 60%",
+      "Deploy more frequently",
+      "Reduce deployment failures",
       "Faster incident recovery",
       "Improved developer productivity",
       "Better system reliability"
     ],
     technologies: ["Jenkins", "GitHub Actions", "GitLab CI", "Terraform", "Kubernetes", "Helm", "ArgoCD", "Prometheus"],
-    pricing: [
-      {
-        name: "Pipeline Setup",
-        price: "$15,000",
-        description: "Basic CI/CD implementation",
-        features: [
-          "CI/CD pipeline design",
-          "Automated testing setup",
-          "Basic IaC templates",
-          "Documentation",
-          "Team training"
-        ]
-      },
-      {
-        name: "DevOps Transformation",
-        price: "$50,000",
-        description: "Complete DevOps adoption",
-        features: [
-          "Full CI/CD implementation",
-          "Infrastructure as Code",
-          "Kubernetes setup",
-          "Monitoring & alerting",
-          "SRE practices",
-          "3 months support"
-        ],
-        popular: true
-      },
-      {
-        name: "Managed DevOps",
-        price: "Custom",
-        description: "Ongoing DevOps support",
-        features: [
-          "Dedicated DevOps engineers",
-          "Continuous improvement",
-          "24/7 on-call support",
-          "Platform maintenance",
-          "Capacity planning",
-          "Cost optimization"
-        ]
-      }
-    ],
+    pricing: createContactPricing("DevOps & Site Reliability Engineering"),
     caseStudies: [
       {
-        company: "SaaS Dynamics",
+        company: "SaaS Client",
         industry: "Software",
-        challenge: "Monthly releases causing extended downtime and customer complaints.",
+        challenge: "Infrequent releases causing extended downtime and customer complaints.",
         solution: "Implemented GitOps, Kubernetes, and comprehensive CI/CD with automated testing.",
         results: [
-          "Deployments increased from monthly to daily",
+          "More frequent deployments",
           "Zero-downtime deployments achieved",
-          "Release failures reduced by 90%",
-          "Developer satisfaction improved significantly"
+          "Fewer release failures",
+          "Better developer satisfaction"
         ]
       }
     ],
@@ -895,58 +576,18 @@ export const servicesData: ServiceDetail[] = [
       "Ensure regulatory compliance"
     ],
     technologies: ["Snowflake", "BigQuery", "Redshift", "Apache Spark", "Airflow", "dbt", "Kafka", "Databricks"],
-    pricing: [
-      {
-        name: "Data Pipeline",
-        price: "$25,000",
-        description: "Basic data integration",
-        features: [
-          "Up to 5 data sources",
-          "ETL pipeline setup",
-          "Basic scheduling",
-          "Data quality checks",
-          "Documentation"
-        ]
-      },
-      {
-        name: "Data Platform",
-        price: "$80,000",
-        description: "Complete data infrastructure",
-        features: [
-          "Unlimited data sources",
-          "Data warehouse setup",
-          "Real-time streaming",
-          "Data governance",
-          "Self-service analytics",
-          "90 days support"
-        ],
-        popular: true
-      },
-      {
-        name: "Enterprise Data",
-        price: "Custom",
-        description: "Enterprise-scale solutions",
-        features: [
-          "Enterprise architecture",
-          "Advanced governance",
-          "ML feature store",
-          "Dedicated data team",
-          "24/7 support",
-          "Strategic consulting"
-        ]
-      }
-    ],
+    pricing: createContactPricing("Data Engineering"),
     caseStudies: [
       {
-        company: "E-Commerce Giant",
+        company: "E-commerce Client",
         industry: "Retail",
-        challenge: "Data scattered across 15+ systems, making reporting take weeks.",
+        challenge: "Data scattered across multiple systems, making reporting slow.",
         solution: "Built unified data platform with Snowflake, real-time pipelines, and self-service BI.",
         results: [
-          "Reporting time reduced from weeks to minutes",
-          "Data freshness improved to near real-time",
-          "Self-service analytics adopted by 500+ users",
-          "Marketing ROI visibility increased 3x"
+          "Faster reporting turnaround",
+          "Improved data freshness",
+          "Self-service analytics adoption",
+          "Better marketing visibility"
         ]
       }
     ],
@@ -986,58 +627,18 @@ export const servicesData: ServiceDetail[] = [
       "Faster insights to action"
     ],
     technologies: ["Tableau", "Power BI", "Looker", "Metabase", "Superset", "Sigma", "ThoughtSpot", "Qlik"],
-    pricing: [
-      {
-        name: "Dashboard Starter",
-        price: "$10,000",
-        description: "Basic BI implementation",
-        features: [
-          "Up to 5 dashboards",
-          "Single data source",
-          "Standard visualizations",
-          "User training",
-          "30 days support"
-        ]
-      },
-      {
-        name: "BI Platform",
-        price: "$35,000",
-        description: "Comprehensive BI solution",
-        features: [
-          "Unlimited dashboards",
-          "Multiple data sources",
-          "Custom visualizations",
-          "Self-service analytics",
-          "Embedded analytics",
-          "90 days support"
-        ],
-        popular: true
-      },
-      {
-        name: "Enterprise BI",
-        price: "Custom",
-        description: "Enterprise-wide analytics",
-        features: [
-          "Enterprise deployment",
-          "Advanced governance",
-          "Custom development",
-          "Dedicated support",
-          "Analytics COE setup",
-          "Ongoing optimization"
-        ]
-      }
-    ],
+    pricing: createContactPricing("Business Intelligence"),
     caseStudies: [
       {
-        company: "National Bank",
+        company: "Financial Services Client",
         industry: "Banking",
         challenge: "Executives lacked real-time visibility into branch performance and customer metrics.",
-        solution: "Deployed Power BI platform with real-time dashboards and mobile access for 200+ executives.",
+        solution: "Deployed Power BI platform with real-time dashboards and mobile access.",
         results: [
-          "Decision-making time reduced by 70%",
-          "Branch performance visibility improved 10x",
-          "Manual reporting eliminated",
-          "Mobile access for all executives"
+          "Faster decision-making",
+          "Improved performance visibility",
+          "Reduced manual reporting",
+          "Mobile access for executives"
         ]
       }
     ],
@@ -1077,58 +678,18 @@ export const servicesData: ServiceDetail[] = [
       "Build customer trust"
     ],
     technologies: ["Splunk", "CrowdStrike", "Okta", "Palo Alto", "Qualys", "Snyk", "HashiCorp Vault", "AWS Security Hub"],
-    pricing: [
-      {
-        name: "Security Assessment",
-        price: "$15,000",
-        description: "Comprehensive security audit",
-        features: [
-          "Vulnerability assessment",
-          "Penetration testing",
-          "Risk analysis",
-          "Compliance gap analysis",
-          "Remediation roadmap"
-        ]
-      },
-      {
-        name: "Security Program",
-        price: "$45,000",
-        description: "Security implementation",
-        features: [
-          "Security architecture design",
-          "Tool implementation",
-          "Policy development",
-          "Team training",
-          "Incident response plan",
-          "90 days support"
-        ],
-        popular: true
-      },
-      {
-        name: "Managed Security",
-        price: "Custom",
-        description: "24/7 security operations",
-        features: [
-          "Dedicated security team",
-          "24/7 SOC monitoring",
-          "Threat hunting",
-          "Incident response",
-          "Continuous assessment",
-          "Executive reporting"
-        ]
-      }
-    ],
+    pricing: createContactPricing("Cybersecurity Services"),
     caseStudies: [
       {
-        company: "MedicalDevices Co",
+        company: "Healthcare Client",
         industry: "Healthcare",
-        challenge: "Needed to achieve HIPAA compliance and improve security posture for FDA approval.",
+        challenge: "Needed to achieve HIPAA compliance and improve security posture for regulatory approval.",
         solution: "Conducted comprehensive security assessment, implemented controls, and established security program.",
         results: [
           "HIPAA compliance achieved",
-          "FDA approval obtained",
-          "Security vulnerabilities reduced by 95%",
-          "Security awareness across organization"
+          "Regulatory approval obtained",
+          "Reduced security vulnerabilities",
+          "Improved security awareness"
         ]
       }
     ],
@@ -1168,58 +729,18 @@ export const servicesData: ServiceDetail[] = [
       "Expert technical support"
     ],
     technologies: ["PagerDuty", "Opsgenie", "ServiceNow", "Datadog", "New Relic", "Splunk", "Jira Service Desk", "Statuspage"],
-    pricing: [
-      {
-        name: "Basic Support",
-        price: "$3,000/mo",
-        description: "Business hours support",
-        features: [
-          "8x5 monitoring",
-          "Email support",
-          "4-hour response SLA",
-          "Monthly reporting",
-          "Up to 5 applications"
-        ]
-      },
-      {
-        name: "Premium Support",
-        price: "$10,000/mo",
-        description: "24/7 comprehensive support",
-        features: [
-          "24/7 monitoring",
-          "Phone & chat support",
-          "1-hour response SLA",
-          "Incident management",
-          "Weekly reporting",
-          "Up to 20 applications"
-        ],
-        popular: true
-      },
-      {
-        name: "Enterprise Support",
-        price: "Custom",
-        description: "Dedicated support team",
-        features: [
-          "Dedicated engineers",
-          "15-min response SLA",
-          "Proactive optimization",
-          "On-site support option",
-          "Custom SLAs",
-          "Unlimited applications"
-        ]
-      }
-    ],
+    pricing: createContactPricing("Production Support"),
     caseStudies: [
       {
-        company: "Trading Platform X",
+        company: "FinTech Platform Client",
         industry: "Financial Services",
         challenge: "Internal team overwhelmed with support requests, impacting development velocity.",
         solution: "Implemented L1/L2 support model with 24/7 coverage and automated incident response.",
         results: [
-          "Developer time on support reduced by 70%",
-          "Mean time to resolution improved by 60%",
-          "Customer complaints reduced by 80%",
-          "99.99% uptime achieved"
+          "Reduced developer time on support",
+          "Faster issue resolution",
+          "Fewer customer complaints",
+          "Improved uptime"
         ]
       }
     ],
@@ -1259,58 +780,18 @@ export const servicesData: ServiceDetail[] = [
       "Organizational readiness"
     ],
     technologies: ["Enterprise Architecture", "Agile", "Design Thinking", "OKRs", "TOGAF", "SAFe", "Lean", "Six Sigma"],
-    pricing: [
-      {
-        name: "Strategy Sprint",
-        price: "$25,000",
-        description: "2-week intensive engagement",
-        features: [
-          "Stakeholder interviews",
-          "Current state assessment",
-          "Vision & roadmap",
-          "Quick wins identification",
-          "Executive presentation"
-        ]
-      },
-      {
-        name: "Transformation Program",
-        price: "$100,000",
-        description: "Comprehensive consulting",
-        features: [
-          "Full digital assessment",
-          "Multi-year roadmap",
-          "Business case development",
-          "Vendor evaluation",
-          "Implementation oversight",
-          "Change management"
-        ],
-        popular: true
-      },
-      {
-        name: "Advisory Retainer",
-        price: "Custom",
-        description: "Ongoing strategic guidance",
-        features: [
-          "Executive advisory",
-          "Board presentations",
-          "Continuous assessment",
-          "Technology radar",
-          "Peer benchmarking",
-          "On-demand expertise"
-        ]
-      }
-    ],
+    pricing: createContactPricing("Digital Transformation Consulting"),
     caseStudies: [
       {
-        company: "Century Manufacturing",
+        company: "Manufacturing Client",
         industry: "Manufacturing",
-        challenge: "100-year-old company struggling to compete with digitally-native competitors.",
-        solution: "Developed 3-year digital transformation roadmap, prioritized initiatives, and led implementation oversight.",
+        challenge: "Established company struggling to compete with digitally-native competitors.",
+        solution: "Developed digital transformation roadmap, prioritized initiatives, and led implementation oversight.",
         results: [
-          "Digital revenue grew from 5% to 35%",
-          "Operational efficiency improved by 45%",
-          "Customer acquisition cost reduced by 40%",
-          "Company valuation increased 2x"
+          "Increased digital revenue",
+          "Improved operational efficiency",
+          "Reduced customer acquisition cost",
+          "Stronger competitive position"
         ]
       }
     ],
@@ -1350,58 +831,18 @@ export const servicesData: ServiceDetail[] = [
       "Lower overhead costs"
     ],
     technologies: ["All major tech stacks", "React", "Node.js", "Python", "Java", ".NET", "AWS", "Azure", "DevOps"],
-    pricing: [
-      {
-        name: "Single Resource",
-        price: "$8,000/mo",
-        description: "One dedicated professional",
-        features: [
-          "Full-time dedication",
-          "Direct communication",
-          "Flexible skills",
-          "2-week replacement guarantee",
-          "Monthly billing"
-        ]
-      },
-      {
-        name: "Team Extension",
-        price: "$30,000/mo",
-        description: "Pod of 4-5 professionals",
-        features: [
-          "Complete pod (devs, QA, PM)",
-          "Self-sufficient team",
-          "Established processes",
-          "Daily standups",
-          "Sprint delivery",
-          "Volume discount"
-        ],
-        popular: true
-      },
-      {
-        name: "Dedicated Center",
-        price: "Custom",
-        description: "Your offshore team",
-        features: [
-          "10+ dedicated resources",
-          "Your branding optional",
-          "Custom facilities",
-          "Dedicated management",
-          "Full HR support",
-          "Maximum cost savings"
-        ]
-      }
-    ],
+    pricing: createContactPricing("Team Augmentation"),
     caseStudies: [
       {
-        company: "FastGrow Startup",
+        company: "Growth Startup Client",
         industry: "Technology",
-        challenge: "Needed to triple engineering capacity in 3 months for product launch.",
-        solution: "Provided 8 senior developers and 2 QA engineers with rapid onboarding and integration.",
+        challenge: "Needed to scale engineering capacity quickly for product launch.",
+        solution: "Provided senior developers and QA engineers with rapid onboarding and integration.",
         results: [
-          "Team scaled in 3 weeks",
+          "Team scaled quickly",
           "Product launched on schedule",
-          "70% cost savings vs. local hiring",
-          "4 augmented resources converted to full-time"
+          "Cost-effective compared to local hiring",
+          "Some augmented resources converted to full-time"
         ]
       }
     ],
@@ -1441,58 +882,18 @@ export const servicesData: ServiceDetail[] = [
       "Accelerate development"
     ],
     technologies: ["Node.js", "Python", "Go", "GraphQL", "REST", "gRPC", "Kong", "AWS API Gateway", "Swagger"],
-    pricing: [
-      {
-        name: "API Development",
-        price: "$20,000",
-        description: "Custom API development",
-        features: [
-          "API design & development",
-          "Up to 20 endpoints",
-          "Documentation (Swagger/OpenAPI)",
-          "Basic security",
-          "30 days support"
-        ]
-      },
-      {
-        name: "Integration Suite",
-        price: "$50,000",
-        description: "Multiple integrations",
-        features: [
-          "Up to 5 integrations",
-          "Custom API development",
-          "Data transformation",
-          "Error handling",
-          "Monitoring setup",
-          "90 days support"
-        ],
-        popular: true
-      },
-      {
-        name: "Enterprise APIs",
-        price: "Custom",
-        description: "Enterprise API platform",
-        features: [
-          "API platform setup",
-          "Unlimited integrations",
-          "Developer portal",
-          "Analytics & monetization",
-          "Dedicated support",
-          "SLA guarantees"
-        ]
-      }
-    ],
+    pricing: createContactPricing("API Development & Integration"),
     caseStudies: [
       {
-        company: "PaymentsPro",
+        company: "FinTech Client",
         industry: "Fintech",
         challenge: "Needed to expose payment services to partners through a secure, scalable API.",
         solution: "Built comprehensive payment API with OAuth security, rate limiting, and developer portal.",
         results: [
-          "50+ partner integrations in first year",
-          "New revenue stream of $2M annually",
-          "99.99% API uptime",
-          "Developer NPS score of 72"
+          "Partner integrations enabled",
+          "New revenue stream created",
+          "High API uptime maintained",
+          "Positive developer feedback"
         ]
       }
     ],
@@ -1525,64 +926,25 @@ export const servicesData: ServiceDetail[] = [
       "Regression testing"
     ],
     benefits: [
-      "Reduce bugs in production by 80%",
+      "Reduce bugs in production",
       "Faster release cycles",
       "Improved user satisfaction",
       "Lower support costs",
       "Confident deployments"
     ],
     technologies: ["Selenium", "Cypress", "Playwright", "JMeter", "Postman", "Appium", "TestRail", "JIRA"],
-    pricing: [
-      {
-        name: "Test Automation",
-        price: "$20,000",
-        description: "Automated test suite setup",
-        features: [
-          "Test framework setup",
-          "Up to 100 test cases",
-          "CI/CD integration",
-          "Documentation",
-          "Team training"
-        ]
-      },
-      {
-        name: "QA Partnership",
-        price: "$8,000/mo",
-        description: "Ongoing QA services",
-        features: [
-          "Dedicated QA engineer",
-          "Manual & automated testing",
-          "Performance testing",
-          "Continuous improvement",
-          "Weekly reports"
-        ],
-        popular: true
-      },
-      {
-        name: "Enterprise QA",
-        price: "Custom",
-        description: "Full QA outsourcing",
-        features: [
-          "Dedicated QA team",
-          "Full test coverage",
-          "All testing types",
-          "24/7 availability",
-          "Custom tools & processes",
-          "QA consulting"
-        ]
-      }
-    ],
+    pricing: createContactPricing("Quality Engineering & Assurance"),
     caseStudies: [
       {
-        company: "TravelBook",
+        company: "Travel Platform Client",
         industry: "Travel",
         challenge: "Frequent production bugs damaging brand reputation and causing booking errors.",
         solution: "Implemented comprehensive test automation with Cypress, performance testing, and CI integration.",
         results: [
-          "Production bugs reduced by 85%",
-          "Release confidence improved dramatically",
-          "Test execution time reduced from days to hours",
-          "Booking error rate dropped to near zero"
+          "Fewer production bugs",
+          "Improved release confidence",
+          "Faster test execution",
+          "Lower error rates"
         ]
       }
     ],
@@ -1622,58 +984,18 @@ export const servicesData: ServiceDetail[] = [
       "Modern developer experience"
     ],
     technologies: ["Docker", "Kubernetes", "React", "Node.js", "PostgreSQL", "MongoDB", "Redis", "Microservices"],
-    pricing: [
-      {
-        name: "Assessment",
-        price: "$10,000",
-        description: "Modernization roadmap",
-        features: [
-          "Code & architecture review",
-          "Technical debt analysis",
-          "Modernization options",
-          "Risk assessment",
-          "Prioritized roadmap"
-        ]
-      },
-      {
-        name: "Modernization",
-        price: "$75,000",
-        description: "System transformation",
-        features: [
-          "Architecture redesign",
-          "Incremental migration",
-          "Database modernization",
-          "Testing & validation",
-          "Documentation",
-          "90 days support"
-        ],
-        popular: true
-      },
-      {
-        name: "Enterprise Modernization",
-        price: "Custom",
-        description: "Large-scale transformation",
-        features: [
-          "Multi-system modernization",
-          "Dedicated team",
-          "Phased approach",
-          "Change management",
-          "Extended support",
-          "Training included"
-        ]
-      }
-    ],
+    pricing: createContactPricing("Technology Modernization"),
     caseStudies: [
       {
-        company: "Insurance Legacy Corp",
+        company: "Insurance Client",
         industry: "Insurance",
-        challenge: "30-year-old COBOL system impossible to maintain, modify, or find developers for.",
-        solution: "Incrementally modernized to microservices with React frontend, preserving 20 years of business rules.",
+        challenge: "Legacy system difficult to maintain, modify, or find developers for.",
+        solution: "Incrementally modernized to microservices with React frontend, preserving business rules.",
         results: [
-          "Development speed increased 5x",
-          "Maintenance costs reduced by 60%",
+          "Faster development cycles",
+          "Reduced maintenance costs",
           "New features now possible",
-          "System reliability improved 3x"
+          "Improved system reliability"
         ]
       }
     ],
@@ -1707,64 +1029,24 @@ export const servicesData: ServiceDetail[] = [
     ],
     benefits: [
       "Achieve regulatory compliance",
-      "Reduce audit preparation time by 60%",
+      "Reduce audit preparation time",
       "Build customer and partner trust",
       "Avoid costly penalties and fines",
       "Enable enterprise sales opportunities"
     ],
     technologies: ["Vanta", "Drata", "Secureframe", "OneTrust", "ServiceNow GRC", "LogicGate", "AuditBoard", "Archer"],
-    pricing: [
-      {
-        name: "Compliance Starter",
-        price: "$20,000",
-        description: "Single framework compliance",
-        features: [
-          "Gap assessment",
-          "Policy templates",
-          "Control implementation",
-          "Documentation",
-          "Audit preparation support"
-        ]
-      },
-      {
-        name: "Compliance Pro",
-        price: "$60,000",
-        description: "Multi-framework compliance",
-        features: [
-          "Multiple frameworks (SOC 2 + GDPR)",
-          "GRC platform setup",
-          "Custom policy development",
-          "Employee training",
-          "Continuous monitoring",
-          "Auditor coordination"
-        ],
-        popular: true
-      },
-      {
-        name: "Enterprise GRC",
-        price: "Custom",
-        description: "Full governance program",
-        features: [
-          "Enterprise-wide GRC",
-          "Risk management program",
-          "Board reporting",
-          "Vendor risk management",
-          "Managed compliance",
-          "Dedicated team"
-        ]
-      }
-    ],
+    pricing: createContactPricing("Compliance & Governance"),
     caseStudies: [
       {
-        company: "SaaSStartup Inc",
+        company: "SaaS Startup Client",
         industry: "Technology",
         challenge: "Needed SOC 2 certification to close enterprise deals but had no compliance program.",
         solution: "Implemented comprehensive SOC 2 program with automated evidence collection and continuous monitoring.",
         results: [
-          "SOC 2 Type II achieved in 4 months",
-          "Closed $2M in enterprise contracts",
-          "Compliance overhead reduced by 70%",
-          "Passed audit with zero exceptions"
+          "SOC 2 certification achieved",
+          "Enabled enterprise deals",
+          "Reduced compliance overhead",
+          "Clean audit results"
         ]
       }
     ],
@@ -1798,64 +1080,24 @@ export const servicesData: ServiceDetail[] = [
     ],
     benefits: [
       "Protect customer trust and brand reputation",
-      "Reduce data breach risk by 75%",
+      "Reduce data breach risk",
       "Automate privacy compliance workflows",
       "Enable global data operations",
-      "Avoid regulatory fines up to 4% of revenue"
+      "Avoid regulatory penalties"
     ],
     technologies: ["OneTrust", "BigID", "Collibra", "Securiti", "TrustArc", "DataGrail", "Osano", "Transcend"],
-    pricing: [
-      {
-        name: "Privacy Foundation",
-        price: "$15,000",
-        description: "Essential privacy program",
-        features: [
-          "Data inventory & mapping",
-          "Privacy policy development",
-          "Basic consent management",
-          "DSR process setup",
-          "Staff awareness training"
-        ]
-      },
-      {
-        name: "Privacy Pro",
-        price: "$45,000",
-        description: "Comprehensive privacy program",
-        features: [
-          "Advanced data discovery",
-          "Privacy platform implementation",
-          "Automated DSR workflows",
-          "Vendor privacy assessments",
-          "Cookie consent management",
-          "Ongoing advisory support"
-        ],
-        popular: true
-      },
-      {
-        name: "Enterprise Privacy",
-        price: "Custom",
-        description: "Global privacy operations",
-        features: [
-          "Enterprise-wide program",
-          "Multi-jurisdiction compliance",
-          "Data governance integration",
-          "Privacy engineering",
-          "DPO-as-a-service",
-          "24/7 breach response"
-        ]
-      }
-    ],
+    pricing: createContactPricing("Data Privacy"),
     caseStudies: [
       {
-        company: "GlobalRetail Co",
+        company: "E-commerce Client",
         industry: "E-commerce",
-        challenge: "Operating in 15 countries with varying privacy laws and struggling to manage customer data requests.",
+        challenge: "Operating across multiple countries with varying privacy laws and struggling to manage customer data requests.",
         solution: "Implemented unified privacy platform with automated data discovery, consent management, and DSR automation.",
         results: [
-          "DSR response time reduced from 30 days to 48 hours",
-          "Achieved GDPR, CCPA, and LGPD compliance",
-          "Customer trust score increased 40%",
-          "Zero privacy-related fines or incidents"
+          "Faster DSR response times",
+          "Multi-jurisdiction compliance achieved",
+          "Improved customer trust",
+          "Zero privacy-related incidents"
         ]
       }
     ],
@@ -1888,64 +1130,24 @@ export const servicesData: ServiceDetail[] = [
       "Unified multi-cloud visibility"
     ],
     benefits: [
-      "Reduce cloud misconfigurations by 90%",
+      "Reduce cloud misconfigurations",
       "Achieve cloud compliance certifications",
       "Secure containers and microservices",
       "Enable secure DevOps practices",
       "Visibility across multi-cloud environments"
     ],
     technologies: ["AWS Security Hub", "Azure Defender", "Google Security Command Center", "Prisma Cloud", "Wiz", "Lacework", "Aqua Security", "Snyk"],
-    pricing: [
-      {
-        name: "Cloud Security Starter",
-        price: "$12,000",
-        description: "Single cloud assessment",
-        features: [
-          "Cloud security assessment",
-          "Configuration review",
-          "Compliance gap analysis",
-          "Remediation roadmap",
-          "Best practices guide"
-        ]
-      },
-      {
-        name: "Cloud Security Pro",
-        price: "$35,000",
-        description: "Comprehensive cloud security",
-        features: [
-          "Multi-cloud assessment",
-          "CSPM implementation",
-          "Container security setup",
-          "IaC security scanning",
-          "Security automation",
-          "Team training"
-        ],
-        popular: true
-      },
-      {
-        name: "Cloud Security Enterprise",
-        price: "Custom",
-        description: "Enterprise cloud security program",
-        features: [
-          "Full security transformation",
-          "24/7 cloud monitoring",
-          "DevSecOps integration",
-          "Zero trust architecture",
-          "Dedicated cloud security team",
-          "Managed detection & response"
-        ]
-      }
-    ],
+    pricing: createContactPricing("Cloud Security"),
     caseStudies: [
       {
-        company: "TechScale Inc",
+        company: "Technology Client",
         industry: "Technology",
-        challenge: "Rapid cloud adoption led to security blind spots and compliance gaps across AWS and Azure environments.",
+        challenge: "Rapid cloud adoption led to security blind spots and compliance gaps across cloud environments.",
         solution: "Implemented unified cloud security platform with automated compliance monitoring, container security, and DevSecOps pipeline integration.",
         results: [
-          "Reduced critical misconfigurations by 95%",
-          "Achieved SOC 2 cloud compliance",
-          "Container vulnerabilities reduced by 80%",
+          "Reduced misconfigurations",
+          "Achieved cloud compliance",
+          "Improved container security",
           "Security integrated into CI/CD pipeline"
         ]
       }
