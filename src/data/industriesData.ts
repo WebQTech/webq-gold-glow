@@ -45,7 +45,7 @@ export interface IndustryDetail {
 export const industriesData: IndustryDetail[] = [
   {
     slug: "ai-solutions",
-    name: "AI Solutions",
+    name: "AI-Centric Digital Innovation",
     shortDescription: "AI strategy, implementation & optimization for technology companies.",
     fullDescription: "We help technology companies harness the full potential of artificial intelligence. From AI readiness assessment to custom model development and deployment, we provide end-to-end AI solutions that drive innovation and competitive advantage.",
     icon: Brain,
