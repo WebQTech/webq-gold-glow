@@ -63,14 +63,14 @@ export const industriesData: IndustryDetail[] = [
     heroImage: aiTechHero,
     caseStudies: [
       {
-        company: "TechVenture Labs",
-        challenge: "Struggling to integrate AI capabilities into their existing SaaS platform.",
+        company: "SaaS Platform Client",
+        challenge: "Struggling to integrate AI capabilities into their existing platform.",
         solution: "Developed a comprehensive AI strategy and implemented custom ML models for predictive analytics.",
         results: [
-          "10x faster data insights",
-          "40% increase in user engagement",
-          "New AI-powered features launched in 3 months",
-          "$2M additional ARR from AI features"
+          "Reduced data processing time significantly",
+          "Improved user engagement metrics",
+          "AI-powered features launched within timeline",
+          "Positive ROI within first quarter"
         ]
       }
     ],
@@ -106,14 +106,14 @@ export const industriesData: IndustryDetail[] = [
     heroImage: legacyTransformHero,
     caseStudies: [
       {
-        company: "Industrial Corp",
-        challenge: "30-year-old ERP system couldn't support modern analytics or AI.",
+        company: "Manufacturing Client",
+        challenge: "Legacy ERP system couldn't support modern analytics or AI.",
         solution: "Created API bridges and data pipelines to enable AI without replacing core systems.",
         results: [
-          "60% of manual processes automated",
-          "Real-time analytics on legacy data",
+          "Majority of manual processes automated",
+          "Real-time analytics now available",
           "Zero downtime during transformation",
-          "$5M saved vs full system replacement"
+          "Significant cost savings vs full replacement"
         ]
       }
     ],
@@ -148,14 +148,14 @@ export const industriesData: IndustryDetail[] = [
     heroImage: fintechHero,
     caseStudies: [
       {
-        company: "Regional Bank Network",
-        challenge: "Fraud losses increasing 30% year-over-year with existing rule-based system.",
+        company: "FinTech Client",
+        challenge: "Fraud losses increasing with existing rule-based system.",
         solution: "Implemented ML-based fraud detection with real-time transaction scoring.",
         results: [
-          "85% reduction in fraud losses",
-          "False positive rate reduced by 60%",
-          "Real-time detection in under 100ms",
-          "$10M saved in first year"
+          "Significant reduction in fraud losses",
+          "Lower false positive rate",
+          "Real-time detection capability",
+          "Improved customer trust and retention"
         ]
       }
     ],
@@ -191,14 +191,14 @@ export const industriesData: IndustryDetail[] = [
     heroImage: capitalMarketsHero,
     caseStudies: [
       {
-        company: "Global Asset Partners",
-        challenge: "Manual portfolio reporting taking 40+ hours per quarter.",
+        company: "Investment Firm Client",
+        challenge: "Manual portfolio reporting consuming significant team hours.",
         solution: "Built automated reporting platform with real-time data aggregation.",
         results: [
-          "Reporting time reduced by 95%",
+          "Reporting time reduced dramatically",
           "Real-time portfolio visibility",
-          "Investor satisfaction increased 50%",
-          "Compliance reporting automated"
+          "Improved investor satisfaction",
+          "Compliance reporting streamlined"
         ]
       }
     ],
@@ -233,14 +233,14 @@ export const industriesData: IndustryDetail[] = [
     heroImage: healthcareHero,
     caseStudies: [
       {
-        company: "Metro Health System",
-        challenge: "Long patient wait times and inefficient scheduling across 12 facilities.",
+        company: "Healthcare Network Client",
+        challenge: "Long patient wait times and inefficient scheduling across facilities.",
         solution: "Implemented AI-powered scheduling optimization with predictive no-show modeling.",
         results: [
-          "Wait times reduced by 40%",
-          "No-show rate decreased 25%",
-          "Provider utilization up 30%",
-          "$3M annual savings"
+          "Reduced patient wait times",
+          "Lower no-show rates",
+          "Improved provider utilization",
+          "Operational cost savings achieved"
         ]
       }
     ],
@@ -275,14 +275,14 @@ export const industriesData: IndustryDetail[] = [
     heroImage: governmentHero,
     caseStudies: [
       {
-        company: "State Department of Revenue",
-        challenge: "Paper-based tax filing causing 6-week processing delays.",
+        company: "Government Agency Client",
+        challenge: "Paper-based filing causing significant processing delays.",
         solution: "Built digital filing platform with automated document processing.",
         results: [
-          "Processing time reduced to 3 days",
-          "80% of filings now digital",
-          "Error rate decreased 70%",
-          "Annual savings of $15M"
+          "Faster processing turnaround",
+          "Higher digital adoption rate",
+          "Reduced error rates",
+          "Improved citizen satisfaction"
         ]
       }
     ],
@@ -317,14 +317,14 @@ export const industriesData: IndustryDetail[] = [
     heroImage: edutechHero,
     caseStudies: [
       {
-        company: "National Learning Academy",
-        challenge: "50% course completion rates and poor student engagement.",
+        company: "EdTech Platform Client",
+        challenge: "Low course completion rates and poor student engagement.",
         solution: "Developed AI-powered adaptive learning platform with gamification.",
         results: [
-          "Completion rates increased to 85%",
-          "Student engagement up 200%",
-          "Learning outcomes improved 40%",
-          "Enrollment grew 60%"
+          "Higher course completion rates",
+          "Improved student engagement",
+          "Better learning outcomes",
+          "Increased platform retention"
         ]
       }
     ],
@@ -359,14 +359,14 @@ export const industriesData: IndustryDetail[] = [
     heroImage: retailHero,
     caseStudies: [
       {
-        company: "Fashion Forward Retail",
-        challenge: "Cart abandonment at 75% with generic product recommendations.",
+        company: "E-commerce Client",
+        challenge: "High cart abandonment with generic product recommendations.",
         solution: "Implemented AI-powered personalization across web and mobile.",
         results: [
-          "Cart abandonment reduced to 45%",
-          "Average order value up 35%",
-          "Conversion rate doubled",
-          "$20M additional annual revenue"
+          "Reduced cart abandonment rate",
+          "Higher average order value",
+          "Improved conversion rates",
+          "Increased customer lifetime value"
         ]
       }
     ],
@@ -401,14 +401,14 @@ export const industriesData: IndustryDetail[] = [
     heroImage: manufacturingHero,
     caseStudies: [
       {
-        company: "Precision Manufacturing Co",
-        challenge: "Unplanned equipment downtime costing $2M annually.",
+        company: "Manufacturing Client",
+        challenge: "Unplanned equipment downtime affecting production.",
         solution: "Deployed IoT sensors with AI-powered predictive maintenance.",
         results: [
-          "Unplanned downtime reduced 80%",
-          "Maintenance costs down 30%",
-          "Equipment lifespan extended 25%",
-          "$1.5M annual savings"
+          "Significantly reduced unplanned downtime",
+          "Lower maintenance costs",
+          "Extended equipment lifespan",
+          "Improved production efficiency"
         ]
       }
     ],
@@ -443,14 +443,14 @@ export const industriesData: IndustryDetail[] = [
     heroImage: logisticsHero,
     caseStudies: [
       {
-        company: "National Logistics Partners",
-        challenge: "Manual route planning costing 20% more than optimal.",
+        company: "Logistics Client",
+        challenge: "Manual route planning leading to inefficiencies.",
         solution: "Built AI-powered route optimization with real-time traffic integration.",
         results: [
-          "Fuel costs reduced 25%",
-          "On-time delivery improved to 98%",
-          "Driver utilization up 30%",
-          "$8M annual savings"
+          "Reduced fuel costs",
+          "Improved on-time delivery rates",
+          "Better driver utilization",
+          "Measurable operational savings"
         ]
       }
     ],
@@ -485,14 +485,14 @@ export const industriesData: IndustryDetail[] = [
     heroImage: energyHero,
     caseStudies: [
       {
-        company: "Regional Power Authority",
+        company: "Utility Client",
         challenge: "Grid instability during peak demand causing outages.",
         solution: "Implemented smart grid monitoring with AI-powered demand prediction.",
         results: [
-          "Outages reduced 70%",
-          "Peak demand managed 30% better",
-          "Energy waste reduced 25%",
-          "Customer satisfaction up 45%"
+          "Reduced outage frequency",
+          "Better peak demand management",
+          "Lower energy waste",
+          "Improved customer satisfaction"
         ]
       }
     ],
@@ -528,14 +528,14 @@ export const industriesData: IndustryDetail[] = [
     heroImage: quantumComputingHero,
     caseStudies: [
       {
-        company: "Global Logistics Corp",
-        challenge: "Route optimization across 10,000+ delivery points taking days with classical methods.",
+        company: "Enterprise Client",
+        challenge: "Complex optimization problems taking too long with classical methods.",
         solution: "Developed quantum-inspired optimization algorithm with hybrid quantum-classical architecture.",
         results: [
-          "Optimization time reduced from 72 hours to 4 minutes",
-          "15% improvement in route efficiency",
-          "Annual fuel savings of $12M",
-          "Carbon footprint reduced by 20%"
+          "Dramatically faster optimization",
+          "Improved route efficiency",
+          "Reduced operational costs",
+          "Lower carbon footprint"
         ]
       }
     ],
