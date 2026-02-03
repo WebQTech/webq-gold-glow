@@ -6,32 +6,35 @@ export const ValueProposition = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section ref={ref} className="py-16 lg:py-24 bg-background">
+    <section ref={ref} className="py-20 lg:py-28 bg-background">
       <div className="container mx-auto px-6 lg:px-12">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8 }}
-          className="max-w-5xl"
-        >
-          <p className="text-2xl sm:text-3xl lg:text-4xl xl:text-[40px] font-normal leading-[1.5] text-foreground/90">
-            <span className="text-foreground font-semibold">WebQ Technologies</span> is a full-service technology solutions company specialized in{" "}
-            <a href="#solutions" className="text-primary font-medium hover:underline underline-offset-4 transition-all">Artificial Intelligence</a>,{" "}
-            <a href="#solutions" className="text-primary font-medium hover:underline underline-offset-4 transition-all">Digital Transformation</a>,{" "}
-            <a href="#solutions" className="text-primary font-medium hover:underline underline-offset-4 transition-all">Cloud</a>,{" "}
-            <a href="#solutions" className="text-primary font-medium hover:underline underline-offset-4 transition-all">Cybersecurity</a>,{" "}
-            <a href="#solutions" className="text-primary font-medium hover:underline underline-offset-4 transition-all">Software Development</a> and{" "}
-            <a href="#solutions" className="text-primary font-medium hover:underline underline-offset-4 transition-all">IT Professional Services</a>.
-          </p>
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.h2
+            initial={{ opacity: 0, y: 30 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.7 }}
+            className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-foreground leading-relaxed tracking-tight"
+          >
+            A full-service technology solutions company specialized in{" "}
+            <span className="text-primary">AI</span>,{" "}
+            <span className="text-primary">Digital Transformation</span>,{" "}
+            <span className="text-primary">Cloud</span>,{" "}
+            <span className="text-primary">Cybersecurity</span>,{" "}
+            <span className="text-primary">Software Development</span> &{" "}
+            <span className="text-primary">IT Services</span>.
+          </motion.h2>
+          
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="mt-8 text-lg lg:text-xl text-muted-foreground max-w-3xl leading-relaxed"
+            transition={{ duration: 0.7, delay: 0.2 }}
+            className="mt-8 text-lg lg:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto"
           >
-            With proven expertise across 11+ industries and 15+ core service offerings, we help organizations harness cutting-edge technology to drive innovation, efficiency, and growth.
+            With expertise across <strong className="text-foreground font-medium">11+ industries</strong> and{" "}
+            <strong className="text-foreground font-medium">15+ core services</strong>, we help organizations 
+            harness cutting-edge technology to drive innovation, efficiency, and growth.
           </motion.p>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
