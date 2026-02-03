@@ -102,16 +102,6 @@ const Industries = () => {
                               {industry.shortDescription}
                             </p>
 
-                            <div className="mt-4 flex items-center gap-4">
-                              <div className="text-center">
-                                <span className="block text-2xl font-bold text-primary">
-                                  {industry.stat}
-                                </span>
-                                <span className="text-xs text-muted-foreground">
-                                  {industry.statLabel}
-                                </span>
-                              </div>
-                            </div>
 
                             <div className="mt-4 flex flex-wrap gap-1">
                               {industry.tags.slice(0, 3).map((tag, i) => (
