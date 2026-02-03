@@ -134,7 +134,7 @@ const Contact = () => {
 
       <main className="min-h-screen bg-background">
         {/* Hero Section */}
-        <section className="relative pt-32 pb-20 overflow-hidden">
+        <section className="relative pt-24 pb-12 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-transparent" />
           <div className="container mx-auto px-6 lg:px-12 relative z-10">
             <motion.div
@@ -160,7 +160,7 @@ const Contact = () => {
         </section>
 
         {/* Contact Info Cards */}
-        <section className="py-12">
+        <section className="py-8">
           <div className="container mx-auto px-6 lg:px-12">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {contactInfo.map((info, index) => (
@@ -186,7 +186,7 @@ const Contact = () => {
         </section>
 
         {/* Contact Form Section */}
-        <section className="py-20">
+        <section className="py-12">
           <div className="container mx-auto px-6 lg:px-12">
             <div className="grid lg:grid-cols-2 gap-16 items-start">
               {/* Form */}

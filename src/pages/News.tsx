@@ -85,7 +85,7 @@ const News = () => {
         
         <main id="main-content">
           {/* Hero Section */}
-          <section className="relative py-20 lg:py-32 bg-gradient-to-b from-primary/5 to-background overflow-hidden">
+          <section className="relative py-12 lg:py-20 bg-gradient-to-b from-primary/5 to-background overflow-hidden">
             <div className="container mx-auto px-6 lg:px-12">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -213,7 +213,7 @@ const News = () => {
           </section>
 
           {/* Media Mentions */}
-          <section className="py-16 bg-secondary/30">
+          <section className="py-10 bg-secondary/30">
             <div className="container mx-auto px-6 lg:px-12">
               <div className="flex items-center gap-2 mb-8">
                 <Mic className="w-5 h-5 text-primary" />
@@ -244,7 +244,7 @@ const News = () => {
           </section>
 
           {/* Press Contact */}
-          <section className="py-16">
+          <section className="py-10">
             <div className="container mx-auto px-6 lg:px-12">
               <div className="bg-primary/5 rounded-2xl p-8 md:p-12 text-center">
                 <h2 className="text-2xl font-bold text-foreground mb-4">Media Inquiries</h2>

@@ -85,7 +85,7 @@ const About = () => {
         
         <main id="main-content">
           {/* Hero Section */}
-          <section className="relative py-20 lg:py-32 bg-gradient-to-b from-primary/5 to-background overflow-hidden">
+          <section className="relative py-12 lg:py-20 bg-gradient-to-b from-primary/5 to-background overflow-hidden">
             <div className="container mx-auto px-6 lg:px-12">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -105,7 +105,7 @@ const About = () => {
           </section>
 
           {/* Stats */}
-          <section className="py-12 bg-primary text-primary-foreground">
+          <section className="py-8 bg-primary text-primary-foreground">
             <div className="container mx-auto px-6 lg:px-12">
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
                 {stats.map((stat, index) => (
@@ -125,7 +125,7 @@ const About = () => {
           </section>
 
           {/* Our Story */}
-          <section className="py-16 lg:py-24">
+          <section className="py-10 lg:py-16">
             <div className="container mx-auto px-6 lg:px-12">
               <div className="grid lg:grid-cols-2 gap-12 items-center">
                 <motion.div
@@ -173,7 +173,7 @@ const About = () => {
           </section>
 
           {/* Mission & Vision */}
-          <section className="py-16 bg-secondary/30">
+          <section className="py-10 bg-secondary/30">
             <div className="container mx-auto px-6 lg:px-12">
               <div className="grid md:grid-cols-2 gap-8">
                 <motion.div
@@ -213,7 +213,7 @@ const About = () => {
           </section>
 
           {/* Values */}
-          <section className="py-16 lg:py-24">
+          <section className="py-10 lg:py-16">
             <div className="container mx-auto px-6 lg:px-12">
               <div className="text-center max-w-2xl mx-auto mb-12">
                 <span className="text-primary text-sm font-semibold uppercase tracking-wider">Our Values</span>
@@ -243,7 +243,7 @@ const About = () => {
           </section>
 
           {/* Leadership */}
-          <section className="py-16 bg-secondary/30">
+          <section className="py-10 bg-secondary/30">
             <div className="container mx-auto px-6 lg:px-12">
               <div className="text-center max-w-2xl mx-auto mb-12">
                 <span className="text-primary text-sm font-semibold uppercase tracking-wider">Leadership</span>
@@ -280,7 +280,7 @@ const About = () => {
           </section>
 
           {/* Global Presence */}
-          <section className="py-16 lg:py-24">
+          <section className="py-10 lg:py-16">
             <div className="container mx-auto px-6 lg:px-12">
               <div className="text-center max-w-2xl mx-auto mb-12">
                 <div className="flex items-center justify-center gap-2 mb-4">
@@ -320,7 +320,7 @@ const About = () => {
           </section>
 
           {/* Partners */}
-          <section className="py-16 bg-secondary/30">
+          <section className="py-10 bg-secondary/30">
             <div className="container mx-auto px-6 lg:px-12">
               <div className="text-center max-w-2xl mx-auto mb-12">
                 <div className="flex items-center justify-center gap-2 mb-4">

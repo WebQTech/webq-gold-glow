@@ -117,7 +117,7 @@ const Careers = () => {
         
         <main id="main-content">
           {/* Hero Section */}
-          <section className="relative py-20 lg:py-32 bg-gradient-to-b from-primary/5 to-background overflow-hidden">
+          <section className="relative py-12 lg:py-20 bg-gradient-to-b from-primary/5 to-background overflow-hidden">
             <div className="container mx-auto px-6 lg:px-12">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -141,7 +141,7 @@ const Careers = () => {
           </section>
 
           {/* Why Join Us */}
-          <section className="py-16 lg:py-24">
+          <section className="py-10 lg:py-16">
             <div className="container mx-auto px-6 lg:px-12">
               <div className="text-center max-w-2xl mx-auto mb-12">
                 <span className="text-primary text-sm font-semibold uppercase tracking-wider">Why WebQ</span>
@@ -174,7 +174,7 @@ const Careers = () => {
           </section>
 
           {/* Life at WebQ */}
-          <section className="py-16 bg-secondary/30">
+          <section className="py-10 bg-secondary/30">
             <div className="container mx-auto px-6 lg:px-12">
               <div className="flex items-center gap-2 mb-8">
                 <Users className="w-5 h-5 text-primary" />
@@ -205,7 +205,7 @@ const Careers = () => {
           </section>
 
           {/* Open Positions */}
-          <section id="open-positions" className="py-16 lg:py-24">
+          <section id="open-positions" className="py-10 lg:py-16">
             <div className="container mx-auto px-6 lg:px-12">
               <div className="flex items-center gap-2 mb-8">
                 <Briefcase className="w-5 h-5 text-primary" />
@@ -256,7 +256,7 @@ const Careers = () => {
           </section>
 
           {/* Internships */}
-          <section className="py-16 bg-secondary/30">
+          <section className="py-10 bg-secondary/30">
             <div className="container mx-auto px-6 lg:px-12">
               <div className="flex items-center gap-2 mb-8">
                 <GraduationCap className="w-5 h-5 text-primary" />

@@ -35,7 +35,7 @@ export const CaseStudiesSection = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="insights" ref={ref} className="py-16 lg:py-24 bg-secondary/30">
+    <section id="insights" ref={ref} className="py-10 lg:py-16 bg-secondary/30">
       <div className="container mx-auto px-6 lg:px-12">
         {/* Header */}
         <motion.div
