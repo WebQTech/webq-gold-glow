@@ -1,6 +1,6 @@
 import { 
   Brain, RefreshCw, CreditCard, Landmark, Heart, GraduationCap, 
-  ShoppingCart, Factory, Truck, Bolt, LucideIcon
+  ShoppingCart, Factory, Truck, Bolt, Atom, LucideIcon
 } from "lucide-react";
 
 // Hero images
@@ -15,6 +15,7 @@ import retailHero from "@/assets/industries/retail-hero.jpg";
 import manufacturingHero from "@/assets/industries/manufacturing-hero.jpg";
 import logisticsHero from "@/assets/industries/logistics-hero.jpg";
 import energyHero from "@/assets/industries/energy-hero.jpg";
+import quantumComputingHero from "@/assets/industries/quantum-computing-hero.jpg";
 
 export interface IndustryCaseStudy {
   company: string;
@@ -527,6 +528,51 @@ export const industriesData: IndustryDetail[] = [
       {
         question: "Can you integrate with legacy SCADA systems?",
         answer: "Yes, we specialize in connecting modern IT systems with legacy OT infrastructure. We use secure gateways and protocol converters to enable data flow while maintaining security."
+      }
+    ]
+  },
+  {
+    slug: "quantum-computing",
+    name: "Quantum Computing",
+    shortDescription: "Quantum solutions for complex computational challenges.",
+    fullDescription: "We pioneer quantum computing applications that solve problems beyond classical computing limits. From quantum algorithm development to hybrid quantum-classical systems, we help forward-thinking organizations harness the power of quantum mechanics for optimization, simulation, and cryptography.",
+    icon: Atom,
+    category: "AI & Technology",
+    stat: "1000x",
+    statLabel: "Faster Optimization",
+    isNew: true,
+    whatWeSolve: "Intractable optimization problems, cryptographic vulnerabilities, complex molecular simulations",
+    howWeHelp: [
+      "Quantum readiness assessment and use case identification",
+      "Quantum algorithm development for specific business problems",
+      "Hybrid quantum-classical system architecture",
+      "Post-quantum cryptography implementation",
+      "Quantum simulation for drug discovery and materials science"
+    ],
+    tags: ["Quantum Algorithms", "Optimization", "Cryptography", "Simulation", "Hybrid Computing"],
+    services: ["AI & Machine Learning", "Custom App Development", "Data & Analytics"],
+    heroImage: quantumComputingHero,
+    caseStudies: [
+      {
+        company: "Global Logistics Corp",
+        challenge: "Route optimization across 10,000+ delivery points taking days with classical methods.",
+        solution: "Developed quantum-inspired optimization algorithm with hybrid quantum-classical architecture.",
+        results: [
+          "Optimization time reduced from 72 hours to 4 minutes",
+          "15% improvement in route efficiency",
+          "Annual fuel savings of $12M",
+          "Carbon footprint reduced by 20%"
+        ]
+      }
+    ],
+    faqs: [
+      {
+        question: "Is quantum computing ready for production use?",
+        answer: "While universal fault-tolerant quantum computers are still developing, specific applications in optimization, simulation, and cryptography can deliver real value today using hybrid quantum-classical approaches and quantum-inspired algorithms."
+      },
+      {
+        question: "What kind of problems benefit from quantum computing?",
+        answer: "Quantum excels at combinatorial optimization (logistics, scheduling), molecular simulation (drug discovery, materials), cryptography, machine learning, and financial modeling where classical computers hit fundamental limits."
       }
     ]
   }

@@ -1,6 +1,6 @@
 import { useState, useEffect, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Globe, ChevronDown, Brain, RefreshCw, CreditCard, Landmark, Heart, GraduationCap, ShoppingCart, Factory, Truck, Bolt, Lightbulb, FileText, TrendingUp, Users, Building2, Briefcase, Award, Newspaper, BarChart3, DollarSign, Target, BookOpen, Mic, Calendar, UserCheck, MapPin, Gift, Handshake } from "lucide-react";
+import { Menu, X, Globe, ChevronDown, Brain, RefreshCw, CreditCard, Landmark, Heart, GraduationCap, ShoppingCart, Factory, Truck, Bolt, Atom, Lightbulb, FileText, TrendingUp, Users, Building2, Briefcase, Award, Newspaper, BarChart3, DollarSign, Target, BookOpen, Mic, Calendar, UserCheck, MapPin, Gift, Handshake } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { servicesData, getAllCategories } from "@/data/servicesData";
 import { AccessibilityPanel } from "@/components/AccessibilityPanel";
@@ -238,6 +238,12 @@ export const Navbar = () => {
                     <Link to="/industries/legacy-to-ai-transformation" className="flex items-center gap-2 cursor-pointer focus:bg-primary/10 focus:text-primary">
                       <RefreshCw className="w-4 h-4 text-primary" />
                       <span>Legacy to AI Transformation</span>
+                    </Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <Link to="/industries/quantum-computing" className="flex items-center gap-2 cursor-pointer focus:bg-primary/10 focus:text-primary">
+                      <Atom className="w-4 h-4 text-primary" />
+                      <span>Quantum Computing</span>
                     </Link>
                   </DropdownMenuItem>
                   <DropdownMenuSeparator />
@@ -489,6 +495,10 @@ export const Navbar = () => {
                       <Link to="/industries/legacy-to-ai-transformation" onClick={() => setIsMobileMenuOpen(false)} className="flex items-center gap-2 py-2 pl-2 text-sm text-foreground/70 hover:text-primary transition-colors">
                         <RefreshCw className="w-4 h-4 text-primary" />
                         Legacy to AI Transformation
+                      </Link>
+                      <Link to="/industries/quantum-computing" onClick={() => setIsMobileMenuOpen(false)} className="flex items-center gap-2 py-2 pl-2 text-sm text-foreground/70 hover:text-primary transition-colors">
+                        <Atom className="w-4 h-4 text-primary" />
+                        Quantum Computing
                       </Link>
                     </div>
                     <div className="pl-4">
