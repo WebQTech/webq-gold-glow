@@ -173,10 +173,7 @@ export const Navbar = () => {
       </div>
 
       {/* Main navbar */}
-      <motion.nav
-        initial={{ y: -100, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.5, ease: "easeOut" }}
+      <nav
         className={`sticky top-0 z-50 transition-all duration-300 ${
           isScrolled 
             ? "bg-background shadow-sm" 
@@ -719,7 +716,7 @@ export const Navbar = () => {
             </motion.div>
           )}
         </AnimatePresence>
-      </motion.nav>
+      </nav>
     </>
   );
 };
