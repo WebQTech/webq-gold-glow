@@ -115,7 +115,7 @@ const About = () => {
                   </h2>
                   <div className="space-y-4 text-muted-foreground">
                     <p>
-                      Founded in 2010, WebQ Technologies began with a simple mission: to make enterprise technology accessible and impactful. What started as a small team of passionate technologists has grown into a global force of over 2,000 experts.
+                      Founded with a simple mission: to make enterprise technology accessible and impactful. What started as a small team of passionate technologists has grown into a global force with 100s of experts and partners.
                     </p>
                     <p>
                       Today, we partner with Fortune 500 companies and innovative startups alike, delivering solutions that drive real business outcomes. Our expertise spans artificial intelligence, cloud computing, cybersecurity, and digital transformation.
