@@ -86,12 +86,6 @@ const IndustryDetail = () => {
                 <p className="mt-6 text-lg text-muted-foreground">
                   {industry.fullDescription}
                 </p>
-                
-                {/* Key Stat */}
-                <div className="mt-8 inline-flex items-center gap-4 bg-primary/10 rounded-xl px-6 py-4">
-                  <span className="text-4xl font-bold text-primary">{industry.stat}</span>
-                  <span className="text-sm text-muted-foreground">{industry.statLabel}</span>
-                </div>
 
                 <div className="mt-8">
                   <Link to="/#contact" className="btn-primary inline-flex items-center gap-2">
