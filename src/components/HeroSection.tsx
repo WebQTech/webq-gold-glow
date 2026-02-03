@@ -196,9 +196,9 @@ export const HeroSection = () => {
             <br />
             that transforms{" "}
             <span className="relative inline-block">
-              <span className="text-gradient font-serif italic">Businesses.</span>
+              <span className="font-serif italic text-[hsl(195,100%,55%)]">Businesses.</span>
               <motion.span 
-                className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-[hsl(210,100%,35%)] to-[hsl(195,100%,45%)] rounded-full"
+                className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-[hsl(210,100%,45%)] to-[hsl(195,100%,55%)] rounded-full"
                 initial={{ scaleX: 0 }}
                 animate={{ scaleX: 1 }}
                 transition={{ duration: 0.8, delay: 0.8 }}
