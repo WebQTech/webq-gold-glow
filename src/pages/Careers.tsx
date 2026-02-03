@@ -75,13 +75,13 @@ const internshipPrograms = [
     title: "Summer Technology Internship",
     duration: "12 weeks",
     areas: ["Software Engineering", "Data Science", "Cloud Engineering"],
-    deadline: "March 15, 2025",
+    deadline: "March 15, 2026",
   },
   {
     title: "Graduate Leadership Program",
     duration: "24 months",
     areas: ["Consulting", "Product Management", "Technical Leadership"],
-    deadline: "April 30, 2025",
+    deadline: "April 30, 2026",
   },
 ];
 
