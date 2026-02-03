@@ -14,7 +14,7 @@ import Insights from "./pages/Insights";
 import About from "./pages/About";
 import Careers from "./pages/Careers";
 import News from "./pages/News";
-import Investors from "./pages/Investors";
+
 import Contact from "./pages/Contact";
 import { SectionRedirect } from "@/components/SectionRedirect";
 
@@ -37,7 +37,7 @@ const App = () => (
             <Route path="/about" element={<About />} />
             <Route path="/careers" element={<Careers />} />
             <Route path="/news" element={<News />} />
-            <Route path="/investors" element={<Investors />} />
+            
             <Route path="/contact" element={<Contact />} />
 
             {/* Section routes (avoid 404 if someone lands on /process etc.) */}
