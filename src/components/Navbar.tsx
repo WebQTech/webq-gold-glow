@@ -229,9 +229,9 @@ export const Navbar = () => {
                     AI & Technology
                   </DropdownMenuLabel>
                   <DropdownMenuItem asChild>
-                    <Link to="/industries/ai-based-tech-domain" className="flex items-center gap-2 cursor-pointer focus:bg-primary/10 focus:text-primary">
+                    <Link to="/industries/ai-solutions" className="flex items-center gap-2 cursor-pointer focus:bg-primary/10 focus:text-primary">
                       <Brain className="w-4 h-4 text-primary" />
-                      <span>AI-Based Tech Domain</span>
+                      <span>AI-Centric Digital Innovation</span>
                     </Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem asChild>
@@ -482,9 +482,9 @@ export const Navbar = () => {
                       <span className="text-xs text-muted-foreground uppercase tracking-wider block py-1">
                         AI & Technology
                       </span>
-                      <Link to="/industries/ai-based-tech-domain" onClick={() => setIsMobileMenuOpen(false)} className="flex items-center gap-2 py-2 pl-2 text-sm text-foreground/70 hover:text-primary transition-colors">
+                      <Link to="/industries/ai-solutions" onClick={() => setIsMobileMenuOpen(false)} className="flex items-center gap-2 py-2 pl-2 text-sm text-foreground/70 hover:text-primary transition-colors">
                         <Brain className="w-4 h-4 text-primary" />
-                        AI-Based Tech Domain
+                        AI-Centric Digital Innovation
                       </Link>
                       <Link to="/industries/legacy-to-ai-transformation" onClick={() => setIsMobileMenuOpen(false)} className="flex items-center gap-2 py-2 pl-2 text-sm text-foreground/70 hover:text-primary transition-colors">
                         <RefreshCw className="w-4 h-4 text-primary" />
