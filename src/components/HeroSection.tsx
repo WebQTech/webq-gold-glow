@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight, ChevronDown } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 export const HeroSection = () => {
   return (
@@ -163,18 +163,6 @@ export const HeroSection = () => {
         </div>
       </div>
 
-      {/* Scroll indicator */}
-      <div className="absolute bottom-6 left-0 right-0 z-20">
-        <div className="container mx-auto px-6 lg:px-12">
-          <motion.div
-            className="text-white/50"
-            animate={{ y: [0, 5, 0] }}
-            transition={{ duration: 1.5, repeat: Infinity }}
-          >
-            <ChevronDown className="w-5 h-5" />
-          </motion.div>
-        </div>
-      </div>
     </section>
   );
 };
