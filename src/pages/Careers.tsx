@@ -271,7 +271,7 @@ const Careers = () => {
                   className="btn-primary inline-flex items-center gap-2"
                 >
                   <Mail className="w-4 h-4" />
-                  Send Resume to contact@webqtech.com
+                  Send Resume to <span className="underline">contact@webqtech.com</span>
                 </a>
               </motion.div>
             </div>
