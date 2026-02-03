@@ -48,7 +48,7 @@ const Services = () => {
       <Navbar />
       <main id="main-content" className="focus:outline-none" tabIndex={-1}>
         {/* Hero Section */}
-      <section ref={heroRef} className="py-16 lg:py-24 bg-gradient-to-b from-primary/5 to-background">
+      <section ref={heroRef} className="py-10 lg:py-16 bg-gradient-to-b from-primary/5 to-background">
         <div className="container mx-auto px-6 lg:px-12">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -107,7 +107,7 @@ const Services = () => {
       })}
 
       {/* CTA Section */}
-      <section className="py-16 lg:py-24 bg-primary/5">
+      <section className="py-10 lg:py-16 bg-primary/5">
         <div className="container mx-auto px-6 lg:px-12 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold text-foreground">
             Ready to Transform Your Business?

@@ -104,7 +104,7 @@ const Insights = () => {
         
         <main id="main-content">
           {/* Hero Section */}
-          <section className="relative py-20 lg:py-32 bg-gradient-to-b from-primary/5 to-background overflow-hidden">
+          <section className="relative py-12 lg:py-20 bg-gradient-to-b from-primary/5 to-background overflow-hidden">
             <div className="container mx-auto px-6 lg:px-12">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -147,7 +147,7 @@ const Insights = () => {
           </section>
 
           {/* Featured Insights Grid */}
-          <section className="py-16 lg:py-24">
+          <section className="py-10 lg:py-16">
             <div className="container mx-auto px-6 lg:px-12">
               <h2 className="text-2xl font-bold text-foreground mb-8">Featured Insights</h2>
               
@@ -202,7 +202,7 @@ const Insights = () => {
           </section>
 
           {/* Upcoming Webinars */}
-          <section className="py-16 bg-secondary/30">
+          <section className="py-10 bg-secondary/30">
             <div className="container mx-auto px-6 lg:px-12">
               <h2 className="text-2xl font-bold text-foreground mb-8">Upcoming Webinars</h2>
               

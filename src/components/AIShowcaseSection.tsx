@@ -68,7 +68,7 @@ export const AIShowcaseSection = () => {
   return (
     <section 
       ref={sectionRef}
-      className="py-20 lg:py-32 relative overflow-hidden"
+      className="py-12 lg:py-20 relative overflow-hidden"
       id="ai-showcase"
     >
       {/* Neural Network Background */}

@@ -106,7 +106,7 @@ const Investors = () => {
         
         <main id="main-content">
           {/* Hero Section */}
-          <section className="relative py-20 lg:py-32 bg-gradient-to-b from-primary/5 to-background overflow-hidden">
+          <section className="relative py-12 lg:py-20 bg-gradient-to-b from-primary/5 to-background overflow-hidden">
             <div className="container mx-auto px-6 lg:px-12">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -158,7 +158,7 @@ const Investors = () => {
           </section>
 
           {/* Financial Highlights */}
-          <section className="py-16 lg:py-24">
+          <section className="py-10 lg:py-16">
             <div className="container mx-auto px-6 lg:px-12">
               <div className="flex items-center gap-2 mb-8">
                 <BarChart3 className="w-5 h-5 text-primary" />
@@ -185,7 +185,7 @@ const Investors = () => {
           </section>
 
           {/* Reports & Events */}
-          <section className="py-16 bg-secondary/30">
+          <section className="py-10 bg-secondary/30">
             <div className="container mx-auto px-6 lg:px-12">
               <div className="grid lg:grid-cols-2 gap-12">
                 {/* Financial Reports */}
@@ -258,7 +258,7 @@ const Investors = () => {
           </section>
 
           {/* Governance */}
-          <section className="py-16 lg:py-24">
+          <section className="py-10 lg:py-16">
             <div className="container mx-auto px-6 lg:px-12">
               <div className="flex items-center gap-2 mb-8">
                 <Building2 className="w-5 h-5 text-primary" />

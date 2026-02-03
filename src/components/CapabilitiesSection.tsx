@@ -193,7 +193,7 @@ export const CapabilitiesSection = () => {
     <section 
       id="capabilities" 
       ref={ref} 
-      className="py-16 lg:py-20 relative overflow-hidden scroll-mt-20"
+      className="py-10 lg:py-14 relative overflow-hidden scroll-mt-20"
       style={{ background: '#FFFCF7' }}
     >
       {/* Subtle background accents */}

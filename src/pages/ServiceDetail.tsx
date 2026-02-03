@@ -48,7 +48,7 @@ const ServiceDetail = () => {
       <Navbar />
       <main id="main-content" className="focus:outline-none" tabIndex={-1}>
         {/* Hero Section */}
-      <section ref={heroRef} className="py-16 lg:py-24 bg-gradient-to-b from-primary/5 to-background">
+      <section ref={heroRef} className="py-10 lg:py-16 bg-gradient-to-b from-primary/5 to-background">
         <div className="container mx-auto px-6 lg:px-12">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -102,7 +102,7 @@ const ServiceDetail = () => {
       </section>
 
       {/* Features & Benefits */}
-      <section ref={featuresRef} className="py-16 lg:py-24">
+      <section ref={featuresRef} className="py-10 lg:py-16">
         <div className="container mx-auto px-6 lg:px-12">
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Features */}
@@ -178,7 +178,7 @@ const ServiceDetail = () => {
 
       {/* Case Studies */}
       {service.caseStudies.length > 0 && (
-        <section ref={caseStudiesRef} className="py-16 lg:py-24">
+        <section ref={caseStudiesRef} className="py-10 lg:py-16">
           <div className="container mx-auto px-6 lg:px-12">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -242,7 +242,7 @@ const ServiceDetail = () => {
       )}
 
       {/* FAQs */}
-      <section ref={faqRef} className="py-16 lg:py-24 bg-muted/30">
+      <section ref={faqRef} className="py-10 lg:py-16 bg-muted/30">
         <div className="container mx-auto px-6 lg:px-12">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -283,7 +283,7 @@ const ServiceDetail = () => {
 
       {/* Related Services */}
       {relatedServices.length > 0 && (
-        <section className="py-16 lg:py-24">
+        <section className="py-10 lg:py-16">
           <div className="container mx-auto px-6 lg:px-12">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -338,7 +338,7 @@ const ServiceDetail = () => {
       )}
 
       {/* CTA */}
-      <section className="py-16 lg:py-24 bg-muted/30">
+      <section className="py-10 lg:py-16 bg-muted/30">
         <div className="container mx-auto px-6 lg:px-12 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold text-foreground">
             Ready to Get Started?

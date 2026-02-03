@@ -13,7 +13,7 @@ const Industries = () => {
       <Navbar />
       <main id="main-content" className="focus:outline-none" tabIndex={-1}>
         {/* Hero Section */}
-        <section className="py-16 lg:py-24 bg-gradient-to-b from-primary/5 to-background">
+        <section className="py-10 lg:py-16 bg-gradient-to-b from-primary/5 to-background">
           <div className="container mx-auto px-6 lg:px-12">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -42,7 +42,7 @@ const Industries = () => {
           return (
             <section 
               key={category} 
-              className={`py-16 lg:py-20 ${categoryIndex % 2 === 1 ? 'bg-muted/30' : ''}`}
+              className={`py-10 lg:py-14 ${categoryIndex % 2 === 1 ? 'bg-muted/30' : ''}`}
             >
               <div className="container mx-auto px-6 lg:px-12">
                 <motion.div
@@ -135,7 +135,7 @@ const Industries = () => {
         })}
 
         {/* CTA Section */}
-        <section className="py-16 lg:py-24 bg-primary/5">
+        <section className="py-10 lg:py-16 bg-primary/5">
           <div className="container mx-auto px-6 lg:px-12 text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
