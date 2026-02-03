@@ -1,83 +1,82 @@
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { motion } from "framer-motion";
-import { Newspaper, FileText, Mic, BookOpen, Calendar, ArrowRight, ExternalLink } from "lucide-react";
+import { Mic, Calendar, ArrowRight, ExternalLink } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 
 const newsCategories = [
-  { id: "all", label: "All News", count: 48 },
-  { id: "press", label: "Press Releases", count: 24 },
-  { id: "updates", label: "Company Updates", count: 12 },
-  { id: "media", label: "Media Coverage", count: 8 },
-  { id: "blog", label: "Blog", count: 36 },
+  { id: "all", label: "All News", count: 8 },
+  { id: "updates", label: "Company Updates", count: 4 },
+  { id: "blog", label: "Blog", count: 3 },
+  { id: "announcements", label: "Announcements", count: 1 },
 ];
 
 const featuredNews = {
-  title: "WebQ Technologies Announces Strategic Partnership with Microsoft for AI Solutions",
-  excerpt: "The partnership will combine WebQ's enterprise AI expertise with Microsoft's Azure cloud platform to deliver next-generation AI solutions for Fortune 500 companies.",
-  date: "December 20, 2025",
-  category: "Press Releases",
+  title: "WebQ Technologies Launches AI-Powered Solutions for Growing Businesses",
+  excerpt: "We're excited to announce our new suite of AI tools designed to help startups and SMBs automate workflows, reduce costs, and scale faster.",
+  date: "January 15, 2026",
+  category: "Announcements",
   image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&auto=format&fit=crop",
 };
 
 const newsItems = [
   {
-    title: "WebQ Recognized as Leader in Gartner Magic Quadrant for AI Services",
-    excerpt: "Our AI capabilities and client success stories have positioned us as a market leader.",
-    date: "December 18, 2025",
-    category: "Press Releases",
+    title: "How We're Helping Local Businesses Embrace AI",
+    excerpt: "A look at our recent projects helping small and medium businesses integrate AI into their operations.",
+    date: "January 10, 2026",
+    category: "Blog",
     image: "https://images.unsplash.com/photo-1551434678-e076c223a692?w=600&auto=format&fit=crop",
   },
   {
-    title: "Expanding Our Global Footprint: New Office in Singapore",
-    excerpt: "Strengthening our presence in the Asia-Pacific region to better serve our growing client base.",
-    date: "December 15, 2025",
+    title: "Welcome to Our Growing Team: New Hires in Q1",
+    excerpt: "Introducing the talented individuals joining WebQ as we expand our capabilities.",
+    date: "January 5, 2026",
     category: "Company Updates",
-    image: "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&auto=format&fit=crop",
   },
   {
-    title: "CEO Rajesh Kumar Featured in Forbes: The Future of Enterprise AI",
-    excerpt: "An in-depth interview discussing the transformative potential of AI in business operations.",
-    date: "December 12, 2025",
-    category: "Media Coverage",
+    title: "5 Ways AI Can Transform Your Business Operations",
+    excerpt: "Practical insights on implementing AI solutions without breaking the bank.",
+    date: "December 28, 2025",
+    category: "Blog",
     image: "https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=600&auto=format&fit=crop",
   },
   {
-    title: "How We Helped a Fortune 100 Retailer Achieve 40% Cost Reduction",
-    excerpt: "A deep dive into our cloud migration strategy that delivered exceptional results.",
-    date: "December 10, 2025",
-    category: "Blog",
+    title: "Our First Year: Lessons Learned Building an AI Startup",
+    excerpt: "Reflections on our journey, challenges faced, and milestones achieved.",
+    date: "December 20, 2025",
+    category: "Company Updates",
     image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&auto=format&fit=crop",
   },
   {
-    title: "WebQ Named to Inc. 5000 Fastest Growing Companies List",
-    excerpt: "Recognition of our sustained growth and commitment to innovation.",
-    date: "December 8, 2025",
-    category: "Press Releases",
+    title: "Partnering with Local Tech Incubators",
+    excerpt: "Announcing our collaboration with regional innovation hubs to support emerging startups.",
+    date: "December 15, 2025",
+    category: "Company Updates",
     image: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=600&auto=format&fit=crop",
   },
   {
-    title: "Introducing Our New AI-Powered Security Platform",
-    excerpt: "Advanced threat detection and response capabilities for enterprise clients.",
-    date: "December 5, 2025",
-    category: "Company Updates",
+    title: "Building Secure AI Solutions: Our Approach",
+    excerpt: "How we prioritize security and data privacy in every solution we deliver.",
+    date: "December 10, 2025",
+    category: "Blog",
     image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=600&auto=format&fit=crop",
   },
 ];
 
 const mediaMentions = [
-  { outlet: "Forbes", title: "Top 50 AI Companies to Watch", date: "Dec 2025" },
-  { outlet: "TechCrunch", title: "Enterprise AI Market Analysis", date: "Nov 2025" },
-  { outlet: "Bloomberg", title: "Digital Transformation Trends", date: "Nov 2025" },
-  { outlet: "Wall Street Journal", title: "Future of Cloud Computing", date: "Oct 2025" },
+  { outlet: "Local Tech Weekly", title: "Startups to Watch in AI", date: "Jan 2026" },
+  { outlet: "Innovation Hub", title: "Emerging AI Solutions", date: "Dec 2025" },
+  { outlet: "Business Insider India", title: "New Age Tech Companies", date: "Dec 2025" },
+  { outlet: "Startup Digest", title: "AI for SMBs", date: "Nov 2025" },
 ];
 
 const News = () => {
   return (
     <>
       <Helmet>
-        <title>News | WebQ Technologies - Press Releases, Updates & Media Coverage</title>
-        <meta name="description" content="Stay updated with the latest news, press releases, company updates, and media coverage from WebQ Technologies." />
+        <title>News | WebQ Technologies - Updates & Announcements</title>
+        <meta name="description" content="Stay updated with the latest news, company updates, and announcements from WebQ Technologies." />
       </Helmet>
       
       <div className="min-h-screen bg-background">
@@ -95,17 +94,17 @@ const News = () => {
               >
                 <span className="text-primary text-sm font-semibold uppercase tracking-wider">News</span>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mt-4 mb-6">
-                  Latest <span className="text-primary">News</span> & Updates
+                  Latest <span className="text-primary">Updates</span>
                 </h1>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  Stay informed about WebQ Technologies' latest announcements, partnerships, and industry recognition.
+                  Stay informed about what we're building, our team updates, and insights from our journey.
                 </p>
               </motion.div>
             </div>
           </section>
 
           {/* Categories */}
-          <section className="py-8 border-b border-border">
+          <section className="py-6 border-b border-border">
             <div className="container mx-auto px-6 lg:px-12">
               <div className="flex flex-wrap gap-3">
                 {newsCategories.map((category, index) => (
@@ -131,7 +130,7 @@ const News = () => {
           </section>
 
           {/* Featured News */}
-          <section className="py-12">
+          <section className="py-10">
             <div className="container mx-auto px-6 lg:px-12">
               <motion.article
                 initial={{ opacity: 0, y: 20 }}
@@ -171,7 +170,7 @@ const News = () => {
           </section>
 
           {/* News Grid */}
-          <section className="py-12">
+          <section className="py-10">
             <div className="container mx-auto px-6 lg:px-12">
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {newsItems.map((item, index) => (
@@ -202,24 +201,17 @@ const News = () => {
                   </motion.article>
                 ))}
               </div>
-
-              <div className="text-center mt-12">
-                <button className="btn-primary inline-flex items-center gap-2">
-                  Load More News
-                  <ArrowRight className="w-4 h-4" />
-                </button>
-              </div>
             </div>
           </section>
 
           {/* Media Mentions */}
-          <section className="py-10 bg-secondary/30">
+          <section className="py-8 bg-secondary/30">
             <div className="container mx-auto px-6 lg:px-12">
-              <div className="flex items-center gap-2 mb-8">
+              <div className="flex items-center gap-2 mb-6">
                 <Mic className="w-5 h-5 text-primary" />
-                <span className="text-primary text-sm font-semibold uppercase tracking-wider">Media Coverage</span>
+                <span className="text-primary text-sm font-semibold uppercase tracking-wider">Mentions</span>
               </div>
-              <h2 className="text-2xl font-bold text-foreground mb-8">Featured In</h2>
+              <h2 className="text-2xl font-bold text-foreground mb-6">Where We've Been Featured</h2>
               
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
                 {mediaMentions.map((mention, index) => (
@@ -243,16 +235,16 @@ const News = () => {
             </div>
           </section>
 
-          {/* Press Contact */}
+          {/* Contact */}
           <section className="py-10">
             <div className="container mx-auto px-6 lg:px-12">
               <div className="bg-primary/5 rounded-2xl p-8 md:p-12 text-center">
-                <h2 className="text-2xl font-bold text-foreground mb-4">Media Inquiries</h2>
+                <h2 className="text-2xl font-bold text-foreground mb-4">Get in Touch</h2>
                 <p className="text-muted-foreground mb-6 max-w-xl mx-auto">
-                  For press inquiries, interview requests, or media assets, please contact our communications team.
+                  For media inquiries, partnership opportunities, or general questions, we'd love to hear from you.
                 </p>
-                <a href="mailto:press@webqtech.com" className="btn-primary inline-flex items-center gap-2">
-                  Contact Press Team
+                <a href="mailto:contact@weqtech.com" className="btn-primary inline-flex items-center gap-2">
+                  Contact Us
                   <ArrowRight className="w-4 h-4" />
                 </a>
               </div>
