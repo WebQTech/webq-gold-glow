@@ -1,7 +1,7 @@
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { motion } from "framer-motion";
-import { Briefcase, Users, Gift, UserCheck, MapPin, Clock, ArrowRight, Heart, Zap, Globe, GraduationCap } from "lucide-react";
+import { Briefcase, Users, Gift, UserCheck, MapPin, Clock, ArrowRight, Heart, Zap, Globe, GraduationCap, Mail } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 
 const benefits = [
@@ -75,13 +75,13 @@ const internshipPrograms = [
     title: "Summer Technology Internship",
     duration: "12 weeks",
     areas: ["Software Engineering", "Data Science", "Cloud Engineering"],
-    deadline: "March 15, 2025",
+    deadline: "March 15, 2026",
   },
   {
     title: "Graduate Leadership Program",
     duration: "24 months",
     areas: ["Consulting", "Product Management", "Technical Leadership"],
-    deadline: "April 30, 2025",
+    deadline: "April 30, 2026",
   },
 ];
 
@@ -117,7 +117,7 @@ const Careers = () => {
         
         <main id="main-content">
           {/* Hero Section */}
-          <section className="relative py-20 lg:py-32 bg-gradient-to-b from-primary/5 to-background overflow-hidden">
+          <section className="relative py-12 lg:py-20 bg-gradient-to-b from-primary/5 to-background overflow-hidden">
             <div className="container mx-auto px-6 lg:px-12">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -141,7 +141,7 @@ const Careers = () => {
           </section>
 
           {/* Why Join Us */}
-          <section className="py-16 lg:py-24">
+          <section className="py-10 lg:py-16">
             <div className="container mx-auto px-6 lg:px-12">
               <div className="text-center max-w-2xl mx-auto mb-12">
                 <span className="text-primary text-sm font-semibold uppercase tracking-wider">Why WebQ</span>
@@ -174,7 +174,7 @@ const Careers = () => {
           </section>
 
           {/* Life at WebQ */}
-          <section className="py-16 bg-secondary/30">
+          <section className="py-10 bg-secondary/30">
             <div className="container mx-auto px-6 lg:px-12">
               <div className="flex items-center gap-2 mb-8">
                 <Users className="w-5 h-5 text-primary" />
@@ -205,7 +205,7 @@ const Careers = () => {
           </section>
 
           {/* Open Positions */}
-          <section id="open-positions" className="py-16 lg:py-24">
+          <section id="open-positions" className="py-10 lg:py-16">
             <div className="container mx-auto px-6 lg:px-12">
               <div className="flex items-center gap-2 mb-8">
                 <Briefcase className="w-5 h-5 text-primary" />
@@ -252,11 +252,33 @@ const Careers = () => {
                   </motion.div>
                 ))}
               </div>
+
+              {/* Send Resume CTA */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                className="mt-10 p-6 bg-primary/5 rounded-xl border border-primary/20 text-center"
+              >
+                <h3 className="text-lg font-semibold text-foreground mb-2">
+                  Don't see a role that fits?
+                </h3>
+                <p className="text-muted-foreground mb-4">
+                  We're always looking for talented individuals. Send us your resume and we'll keep you in mind for future opportunities.
+                </p>
+                <a
+                  href="mailto:contact@webqtech.com?subject=Resume%20Submission&body=Hi%20WebQ%20Team%2C%0A%0APlease%20find%20my%20resume%20attached.%0A%0ABest%20regards"
+                  className="btn-primary inline-flex items-center gap-2"
+                >
+                  <Mail className="w-4 h-4" />
+                  Send Resume to <span className="underline">contact@webqtech.com</span>
+                </a>
+              </motion.div>
             </div>
           </section>
 
           {/* Internships */}
-          <section className="py-16 bg-secondary/30">
+          <section className="py-10 bg-secondary/30">
             <div className="container mx-auto px-6 lg:px-12">
               <div className="flex items-center gap-2 mb-8">
                 <GraduationCap className="w-5 h-5 text-primary" />

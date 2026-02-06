@@ -5,10 +5,9 @@ import { Building2, Users, Award, MapPin, Handshake, Target, Eye, Heart, Globe, 
 import { Helmet } from "react-helmet-async";
 
 const stats = [
-  { value: "15+", label: "Years of Excellence" },
-  { value: "500+", label: "Enterprise Clients" },
-  { value: "2,000+", label: "Projects Delivered" },
-  { value: "25+", label: "Countries Served" },
+  { value: "50+", label: "Enterprise Clients" },
+  { value: "100+", label: "Projects Delivered" },
+  { value: "20+", label: "Countries & Timezones" },
 ];
 
 const values = [
@@ -34,32 +33,6 @@ const values = [
   },
 ];
 
-const leadership = [
-  {
-    name: "Rajesh Kumar",
-    role: "Chief Executive Officer",
-    bio: "20+ years of experience leading technology transformations for Fortune 500 companies.",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&auto=format&fit=crop",
-  },
-  {
-    name: "Dr. Sarah Chen",
-    role: "Chief Technology Officer",
-    bio: "Former AI research lead at Google, specializing in enterprise AI solutions.",
-    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&auto=format&fit=crop",
-  },
-  {
-    name: "Michael Torres",
-    role: "Chief Operating Officer",
-    bio: "Expert in scaling technology operations across global markets.",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&auto=format&fit=crop",
-  },
-  {
-    name: "Emily Roberts",
-    role: "Chief Financial Officer",
-    bio: "Strategic financial leader with deep experience in technology sector growth.",
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&auto=format&fit=crop",
-  },
-];
 
 const globalPresence = [
   { region: "North America", offices: ["New York", "San Francisco", "Toronto"] },
@@ -85,7 +58,7 @@ const About = () => {
         
         <main id="main-content">
           {/* Hero Section */}
-          <section className="relative py-20 lg:py-32 bg-gradient-to-b from-primary/5 to-background overflow-hidden">
+          <section className="relative py-12 lg:py-20 bg-gradient-to-b from-primary/5 to-background overflow-hidden">
             <div className="container mx-auto px-6 lg:px-12">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -105,7 +78,7 @@ const About = () => {
           </section>
 
           {/* Stats */}
-          <section className="py-12 bg-primary text-primary-foreground">
+          <section className="py-8 bg-primary text-primary-foreground">
             <div className="container mx-auto px-6 lg:px-12">
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
                 {stats.map((stat, index) => (
@@ -125,7 +98,7 @@ const About = () => {
           </section>
 
           {/* Our Story */}
-          <section className="py-16 lg:py-24">
+          <section className="py-10 lg:py-16">
             <div className="container mx-auto px-6 lg:px-12">
               <div className="grid lg:grid-cols-2 gap-12 items-center">
                 <motion.div
@@ -142,7 +115,7 @@ const About = () => {
                   </h2>
                   <div className="space-y-4 text-muted-foreground">
                     <p>
-                      Founded in 2010, WebQ Technologies began with a simple mission: to make enterprise technology accessible and impactful. What started as a small team of passionate technologists has grown into a global force of over 2,000 experts.
+                      Founded with a simple mission: to make enterprise technology accessible and impactful. What started as a small team of passionate technologists has grown into a global force with 100s of experts and partners.
                     </p>
                     <p>
                       Today, we partner with Fortune 500 companies and innovative startups alike, delivering solutions that drive real business outcomes. Our expertise spans artificial intelligence, cloud computing, cybersecurity, and digital transformation.
@@ -173,7 +146,7 @@ const About = () => {
           </section>
 
           {/* Mission & Vision */}
-          <section className="py-16 bg-secondary/30">
+          <section className="py-10 bg-secondary/30">
             <div className="container mx-auto px-6 lg:px-12">
               <div className="grid md:grid-cols-2 gap-8">
                 <motion.div
@@ -213,7 +186,7 @@ const About = () => {
           </section>
 
           {/* Values */}
-          <section className="py-16 lg:py-24">
+          <section className="py-10 lg:py-16">
             <div className="container mx-auto px-6 lg:px-12">
               <div className="text-center max-w-2xl mx-auto mb-12">
                 <span className="text-primary text-sm font-semibold uppercase tracking-wider">Our Values</span>
@@ -242,45 +215,9 @@ const About = () => {
             </div>
           </section>
 
-          {/* Leadership */}
-          <section className="py-16 bg-secondary/30">
-            <div className="container mx-auto px-6 lg:px-12">
-              <div className="text-center max-w-2xl mx-auto mb-12">
-                <span className="text-primary text-sm font-semibold uppercase tracking-wider">Leadership</span>
-                <h2 className="text-3xl font-bold text-foreground mt-4">
-                  Meet Our Executive Team
-                </h2>
-              </div>
-              
-              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                {leadership.map((leader, index) => (
-                  <motion.div
-                    key={leader.name}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    className="bg-card rounded-xl overflow-hidden border border-border hover:border-primary/50 transition-all group"
-                  >
-                    <div className="aspect-square overflow-hidden">
-                      <img
-                        src={leader.image}
-                        alt={leader.name}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                      />
-                    </div>
-                    <div className="p-6">
-                      <h3 className="text-lg font-semibold text-foreground">{leader.name}</h3>
-                      <p className="text-primary text-sm font-medium mb-2">{leader.role}</p>
-                      <p className="text-sm text-muted-foreground">{leader.bio}</p>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
-          </section>
 
           {/* Global Presence */}
-          <section className="py-16 lg:py-24">
+          <section className="py-10 lg:py-16">
             <div className="container mx-auto px-6 lg:px-12">
               <div className="text-center max-w-2xl mx-auto mb-12">
                 <div className="flex items-center justify-center gap-2 mb-4">
@@ -320,7 +257,7 @@ const About = () => {
           </section>
 
           {/* Partners */}
-          <section className="py-16 bg-secondary/30">
+          <section className="py-10 bg-secondary/30">
             <div className="container mx-auto px-6 lg:px-12">
               <div className="text-center max-w-2xl mx-auto mb-12">
                 <div className="flex items-center justify-center gap-2 mb-4">

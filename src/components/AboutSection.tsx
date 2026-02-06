@@ -1,12 +1,29 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { ArrowRight, Building2, Users, Globe, Award } from "lucide-react";
+import { ArrowRight, Cpu, Cloud, Code2, Shield } from "lucide-react";
+import { Link } from "react-router-dom";
 
-const stats = [
-  { icon: Building2, value: "500+", label: "Enterprise Clients" },
-  { icon: Users, value: "5,000+", label: "Team Members" },
-  { icon: Globe, value: "30+", label: "Countries" },
-  { icon: Award, value: "20+", label: "Years Experience" },
+const capabilities = [
+  { 
+    icon: Cpu, 
+    title: "AI & Machine Learning",
+    description: "Custom ML models and intelligent automation"
+  },
+  { 
+    icon: Cloud, 
+    title: "Cloud Infrastructure",
+    description: "AWS, Azure, GCP migration and management"
+  },
+  { 
+    icon: Code2, 
+    title: "Software Development",
+    description: "Full-stack enterprise applications"
+  },
+  { 
+    icon: Shield, 
+    title: "Cybersecurity",
+    description: "Threat protection and compliance"
+  },
 ];
 
 export const AboutSection = () => {
@@ -14,54 +31,62 @@ export const AboutSection = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="about" ref={ref} className="py-16 lg:py-24 bg-background scroll-mt-20">
+    <section id="about" ref={ref} className="py-16 lg:py-24 bg-secondary/30 scroll-mt-20">
       <div className="container mx-auto px-6 lg:px-12">
-        {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.7 }}
-          className="max-w-3xl mb-16"
-        >
-          <span className="section-label">About WebQ Technologies</span>
-          <h2 className="mt-4 text-3xl lg:text-4xl font-bold text-foreground">
-            We engineer technology for lasting business impact
-          </h2>
-          <p className="mt-4 text-foreground/70 text-lg leading-relaxed">
-            WebQ Technologies partners with enterprises worldwide to modernize technology, 
-            reimagine processes, and transform experiences. Our deep industry expertise and 
-            innovative approach help clients navigate complexity and achieve their strategic goals.
-          </p>
-          <a 
-            href="#"
-            className="inline-flex items-center gap-2 mt-6 text-primary font-semibold hover:gap-3 transition-all"
+        <div className="grid lg:grid-cols-2 gap-16 items-start">
+          {/* Left Column - Content */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.7 }}
           >
-            Learn more about us
-            <ArrowRight className="w-4 h-4" />
-          </a>
-        </motion.div>
-
-        {/* Stats Grid */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-          {stats.map((stat, index) => (
-            <motion.div
-              key={stat.label}
-              initial={{ opacity: 0, y: 30 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: 0.1 * index }}
-              className="text-center"
+            <span className="section-label">About Us</span>
+            <h2 className="mt-4 text-3xl lg:text-4xl xl:text-5xl font-bold text-foreground leading-tight">
+              Your strategic
+              <br />
+              <span className="text-gradient font-serif italic">technology partner.</span>
+            </h2>
+            <p className="mt-6 text-foreground/70 text-lg leading-relaxed">
+              WebQ Technologies partners with enterprises worldwide to modernize technology, 
+              reimagine processes, and transform experiences. Our deep industry expertise and 
+              innovative approach help clients navigate complexity and achieve their strategic goals.
+            </p>
+            <p className="mt-4 text-foreground/60 leading-relaxed">
+              Our integrated approach ensures seamless alignment between business goals and technical execution, 
+              delivering measurable results that drive sustainable growth.
+            </p>
+            <Link 
+              to="/about"
+              className="inline-flex items-center gap-2 mt-8 text-primary font-semibold hover:gap-3 transition-all group"
             >
-              <div className="inline-flex items-center justify-center w-14 h-14 rounded-lg bg-primary/10 text-primary mb-4">
-                <stat.icon className="w-6 h-6" />
-              </div>
-              <div className="text-3xl lg:text-4xl font-bold text-foreground">
-                {stat.value}
-              </div>
-              <div className="mt-1 text-sm text-foreground/60">
-                {stat.label}
-              </div>
-            </motion.div>
-          ))}
+              Learn more about us
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </motion.div>
+
+          {/* Right Column - Capabilities */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.7, delay: 0.2 }}
+            className="grid sm:grid-cols-2 gap-6"
+          >
+            {capabilities.map((item, index) => (
+              <motion.div
+                key={item.title}
+                initial={{ opacity: 0, y: 20 }}
+                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
+                className="p-6 bg-background rounded-xl border border-border/50 hover:border-primary/30 hover:shadow-lg transition-all duration-300 group"
+              >
+                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+                  <item.icon className="w-6 h-6 text-primary" />
+                </div>
+                <h3 className="font-semibold text-foreground mb-2">{item.title}</h3>
+                <p className="text-sm text-muted-foreground">{item.description}</p>
+              </motion.div>
+            ))}
+          </motion.div>
         </div>
       </div>
     </section>

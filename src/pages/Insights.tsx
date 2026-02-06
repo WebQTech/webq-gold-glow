@@ -3,6 +3,7 @@ import { Footer } from "@/components/Footer";
 import { motion } from "framer-motion";
 import { FileText, BookOpen, Lightbulb, TrendingUp, Mic, Calendar, ArrowRight, Clock, User } from "lucide-react";
 import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 
 const insightCategories = [
   { id: "reports", label: "Industry Reports", icon: FileText, count: 24 },
@@ -104,7 +105,7 @@ const Insights = () => {
         
         <main id="main-content">
           {/* Hero Section */}
-          <section className="relative py-20 lg:py-32 bg-gradient-to-b from-primary/5 to-background overflow-hidden">
+          <section className="relative py-12 lg:py-20 bg-gradient-to-b from-primary/5 to-background overflow-hidden">
             <div className="container mx-auto px-6 lg:px-12">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -147,48 +148,53 @@ const Insights = () => {
           </section>
 
           {/* Featured Insights Grid */}
-          <section className="py-16 lg:py-24">
+          <section className="py-10 lg:py-16">
             <div className="container mx-auto px-6 lg:px-12">
               <h2 className="text-2xl font-bold text-foreground mb-8">Featured Insights</h2>
               
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {featuredInsights.map((insight, index) => (
-                  <motion.article
+                  <Link
                     key={insight.title}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    className="group bg-card rounded-xl overflow-hidden border border-border hover:border-primary/50 transition-all hover:shadow-lg"
+                    to={`/insights/${insight.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')}`}
+                    className="block"
                   >
-                    <div className="aspect-video overflow-hidden">
-                      <img
-                        src={insight.image}
-                        alt={insight.title}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                      />
-                    </div>
-                    <div className="p-6">
-                      <span className="text-xs font-semibold text-primary uppercase tracking-wider">
-                        {insight.category}
-                      </span>
-                      <h3 className="text-lg font-semibold text-foreground mt-2 mb-3 group-hover:text-primary transition-colors line-clamp-2">
-                        {insight.title}
-                      </h3>
-                      <p className="text-sm text-muted-foreground mb-4 line-clamp-2">
-                        {insight.excerpt}
-                      </p>
-                      <div className="flex items-center justify-between text-xs text-muted-foreground">
-                        <div className="flex items-center gap-2">
-                          <User className="w-3 h-3" />
-                          <span>{insight.author}</span>
-                        </div>
-                        <div className="flex items-center gap-2">
-                          <Clock className="w-3 h-3" />
-                          <span>{insight.readTime}</span>
+                    <motion.article
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.5, delay: index * 0.1 }}
+                      className="group bg-card rounded-xl overflow-hidden border border-border hover:border-primary/50 transition-all hover:shadow-lg cursor-pointer h-full"
+                    >
+                      <div className="aspect-video overflow-hidden">
+                        <img
+                          src={insight.image}
+                          alt={insight.title}
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        />
+                      </div>
+                      <div className="p-6">
+                        <span className="text-xs font-semibold text-primary uppercase tracking-wider">
+                          {insight.category}
+                        </span>
+                        <h3 className="text-lg font-semibold text-foreground mt-2 mb-3 group-hover:text-primary transition-colors line-clamp-2">
+                          {insight.title}
+                        </h3>
+                        <p className="text-sm text-muted-foreground mb-4 line-clamp-2">
+                          {insight.excerpt}
+                        </p>
+                        <div className="flex items-center justify-between text-xs text-muted-foreground">
+                          <div className="flex items-center gap-2">
+                            <User className="w-3 h-3" />
+                            <span>{insight.author}</span>
+                          </div>
+                          <div className="flex items-center gap-2">
+                            <Clock className="w-3 h-3" />
+                            <span>{insight.readTime}</span>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  </motion.article>
+                    </motion.article>
+                  </Link>
                 ))}
               </div>
 
@@ -202,7 +208,7 @@ const Insights = () => {
           </section>
 
           {/* Upcoming Webinars */}
-          <section className="py-16 bg-secondary/30">
+          <section className="py-10 bg-secondary/30">
             <div className="container mx-auto px-6 lg:px-12">
               <h2 className="text-2xl font-bold text-foreground mb-8">Upcoming Webinars</h2>
               

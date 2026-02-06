@@ -25,7 +25,7 @@ export const NewsSection = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="news" ref={ref} className="py-16 lg:py-24 bg-background">
+    <section id="news" ref={ref} className="py-10 lg:py-16 bg-background">
       <div className="container mx-auto px-6 lg:px-12">
         <div className="grid lg:grid-cols-[1fr_2fr] gap-12">
           {/* Header */}

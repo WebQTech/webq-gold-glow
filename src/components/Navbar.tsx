@@ -1,6 +1,6 @@
 import { useState, useEffect, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Globe, ChevronDown, Brain, RefreshCw, CreditCard, Landmark, Heart, GraduationCap, ShoppingCart, Factory, Truck, Bolt, Lightbulb, FileText, TrendingUp, Users, Building2, Briefcase, Award, Newspaper, BarChart3, DollarSign, Target, BookOpen, Mic, Calendar, UserCheck, MapPin, Gift, Handshake } from "lucide-react";
+import { Menu, X, Globe, ChevronDown, Brain, RefreshCw, CreditCard, Landmark, Heart, GraduationCap, ShoppingCart, Factory, Truck, Bolt, Atom, Lightbulb, FileText, TrendingUp, Users, Building2, Briefcase, Award, Newspaper, BarChart3, DollarSign, Target, BookOpen, Mic, Calendar, UserCheck, MapPin, Gift, Handshake } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { servicesData, getAllCategories } from "@/data/servicesData";
 import { AccessibilityPanel } from "@/components/AccessibilityPanel";
@@ -85,13 +85,6 @@ export const Navbar = () => {
     { label: "Blog", href: "/news", icon: BookOpen },
   ];
 
-  // Investors dropdown items
-  const investorsItems = [
-    { label: "Financial Reports", href: "/investors", icon: BarChart3 },
-    { label: "Stock Information", href: "/investors", icon: TrendingUp },
-    { label: "Governance", href: "/investors", icon: Building2 },
-    { label: "Investor Resources", href: "/investors", icon: DollarSign },
-  ];
 
   return (
     <>
@@ -143,23 +136,6 @@ export const Navbar = () => {
               </DropdownMenuContent>
             </DropdownMenu>
 
-            {/* Investors Dropdown */}
-            <DropdownMenu>
-              <DropdownMenuTrigger className="flex items-center gap-1 text-xs text-foreground/60 hover:text-primary transition-colors focus:outline-none">
-                Investors
-                <ChevronDown className="w-3 h-3" />
-              </DropdownMenuTrigger>
-              <DropdownMenuContent align="end" className="w-48 bg-background border border-border shadow-lg z-50">
-                {investorsItems.map((item) => (
-                  <DropdownMenuItem key={item.label} asChild>
-                    <Link to={item.href} className="flex items-center gap-2 cursor-pointer focus:bg-primary/10 focus:text-primary">
-                      <item.icon className="w-4 h-4 text-primary" />
-                      <span>{item.label}</span>
-                    </Link>
-                  </DropdownMenuItem>
-                ))}
-              </DropdownMenuContent>
-            </DropdownMenu>
             <div className="flex items-center gap-1 text-xs text-foreground/60 cursor-pointer hover:text-primary transition-colors">
               <Globe className="w-3 h-3" />
               <span>US-EN</span>
@@ -173,10 +149,7 @@ export const Navbar = () => {
       </div>
 
       {/* Main navbar */}
-      <motion.nav
-        initial={{ y: -100, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.5, ease: "easeOut" }}
+      <nav
         className={`sticky top-0 z-50 transition-all duration-300 ${
           isScrolled 
             ? "bg-background shadow-sm" 
@@ -232,15 +205,21 @@ export const Navbar = () => {
                     AI & Technology
                   </DropdownMenuLabel>
                   <DropdownMenuItem asChild>
-                    <Link to="/industries/ai-based-tech-domain" className="flex items-center gap-2 cursor-pointer focus:bg-primary/10 focus:text-primary">
+                    <Link to="/industries/ai-solutions" className="flex items-center gap-2 cursor-pointer focus:bg-primary/10 focus:text-primary">
                       <Brain className="w-4 h-4 text-primary" />
-                      <span>AI-Based Tech Domain</span>
+                      <span>AI-Centric Digital Innovation</span>
                     </Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem asChild>
                     <Link to="/industries/legacy-to-ai-transformation" className="flex items-center gap-2 cursor-pointer focus:bg-primary/10 focus:text-primary">
                       <RefreshCw className="w-4 h-4 text-primary" />
                       <span>Legacy to AI Transformation</span>
+                    </Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <Link to="/industries/quantum-computing" className="flex items-center gap-2 cursor-pointer focus:bg-primary/10 focus:text-primary">
+                      <Atom className="w-4 h-4 text-primary" />
+                      <span>Quantum Computing</span>
                     </Link>
                   </DropdownMenuItem>
                   <DropdownMenuSeparator />
@@ -485,13 +464,17 @@ export const Navbar = () => {
                       <span className="text-xs text-muted-foreground uppercase tracking-wider block py-1">
                         AI & Technology
                       </span>
-                      <Link to="/industries/ai-based-tech-domain" onClick={() => setIsMobileMenuOpen(false)} className="flex items-center gap-2 py-2 pl-2 text-sm text-foreground/70 hover:text-primary transition-colors">
+                      <Link to="/industries/ai-solutions" onClick={() => setIsMobileMenuOpen(false)} className="flex items-center gap-2 py-2 pl-2 text-sm text-foreground/70 hover:text-primary transition-colors">
                         <Brain className="w-4 h-4 text-primary" />
-                        AI-Based Tech Domain
+                        AI-Centric Digital Innovation
                       </Link>
                       <Link to="/industries/legacy-to-ai-transformation" onClick={() => setIsMobileMenuOpen(false)} className="flex items-center gap-2 py-2 pl-2 text-sm text-foreground/70 hover:text-primary transition-colors">
                         <RefreshCw className="w-4 h-4 text-primary" />
                         Legacy to AI Transformation
+                      </Link>
+                      <Link to="/industries/quantum-computing" onClick={() => setIsMobileMenuOpen(false)} className="flex items-center gap-2 py-2 pl-2 text-sm text-foreground/70 hover:text-primary transition-colors">
+                        <Atom className="w-4 h-4 text-primary" />
+                        Quantum Computing
                       </Link>
                     </div>
                     <div className="pl-4">
@@ -676,28 +659,6 @@ export const Navbar = () => {
                       ))}
                     </div>
                   </div>
-                  <div>
-                    <Link 
-                      to="/investors"
-                      className="text-xs text-muted-foreground uppercase tracking-wider block pb-2 hover:text-primary transition-colors"
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                      Investors
-                    </Link>
-                    <div className="pl-2 space-y-1">
-                      {investorsItems.map((item) => (
-                        <Link
-                          key={item.label}
-                          to={item.href}
-                          className="flex items-center gap-2 py-1.5 text-sm text-foreground/70 hover:text-primary transition-colors"
-                          onClick={() => setIsMobileMenuOpen(false)}
-                        >
-                          <item.icon className="w-4 h-4 text-primary" />
-                          {item.label}
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
                 </div>
                 <div className="pt-4 border-t border-border/50 mt-4">
                   <div className="flex items-center justify-between">
@@ -719,7 +680,7 @@ export const Navbar = () => {
             </motion.div>
           )}
         </AnimatePresence>
-      </motion.nav>
+      </nav>
     </>
   );
 };

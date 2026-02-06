@@ -38,7 +38,6 @@ const footerLinks = {
     { label: "About Us", href: "/about" },
     { label: "Careers", href: "/careers" },
     { label: "News", href: "/news" },
-    { label: "Investors", href: "/investors" },
     { label: "Contact", href: "/contact" },
   ],
   Resources: [
@@ -52,7 +51,7 @@ const footerLinks = {
 export const Footer = () => {
   return (
     <footer className="bg-[hsl(215,50%,8%)] text-white">
-      <div className="container mx-auto px-6 lg:px-12 py-16">
+      <div className="container mx-auto px-6 lg:px-12 py-12">
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
           {/* Brand Column */}
           <div className="col-span-2 md:col-span-3 lg:col-span-1 mb-8 lg:mb-0">

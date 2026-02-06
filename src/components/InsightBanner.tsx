@@ -7,7 +7,7 @@ export const InsightBanner = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section ref={ref} className="py-16 lg:py-20 bg-secondary/50">
+    <section ref={ref} className="py-10 lg:py-14 bg-secondary/50">
       <div className="container mx-auto px-6 lg:px-12">
         <div className="grid lg:grid-cols-[2fr_3fr] gap-8 items-center">
           {/* Image */}
