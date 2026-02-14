@@ -1,0 +1,182 @@
+name: Multi-Environment Deployment
+
+on:
+  push:
+    branches:
+      - dev
+      - qa
+      - production
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Environment to deploy'
+        required: true
+        type: choice
+        options:
+          - dev
+          - qa
+          - prod
+
+env:
+  AWS_DEFAULT_REGION: us-east-1
+  NODE_VERSION: '20'
+
+jobs:
+  determine-environment:
+    runs-on: ubuntu-latest
+    outputs:
+      environment: ${{ steps.set-env.outputs.environment }}
+      domain: ${{ steps.set-env.outputs.domain }}
+      s3_bucket: ${{ steps.set-env.outputs.s3_bucket }}
+      cloudfront_id: ${{ steps.set-env.outputs.cloudfront_id }}
+    steps:
+      - name: Set environment based on branch or manual input
+        id: set-env
+        run: |
+          if [ "${{ github.event_name }}" == "workflow_dispatch" ]; then
+            ENV="${{ github.event.inputs.environment }}"
+          elif [ "${{ github.ref }}" == "refs/heads/dev" ]; then
+            ENV="dev"
+          elif [ "${{ github.ref }}" == "refs/heads/qa" ]; then
+            ENV="qa"
+          elif [ "${{ github.ref }}" == "refs/heads/production" ]; then
+            ENV="prod"
+          else
+            echo "Unknown branch: ${{ github.ref }}"
+            exit 1
+          fi
+          
+          echo "environment=$ENV" >> $GITHUB_OUTPUT
+          
+          case $ENV in
+            dev)
+              echo "domain=dev.webqtech.com" >> $GITHUB_OUTPUT
+              echo "s3_bucket=${{ secrets.S3_BUCKET }}" >> $GITHUB_OUTPUT
+              echo "cloudfront_id=${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}" >> $GITHUB_OUTPUT
+              ;;
+            qa)
+              echo "domain=qa.webqtech.com" >> $GITHUB_OUTPUT
+              echo "s3_bucket=${{ secrets.QA_S3_BUCKET }}" >> $GITHUB_OUTPUT
+              echo "cloudfront_id=${{ secrets.QA_CLOUDFRONT_DISTRIBUTION_ID }}" >> $GITHUB_OUTPUT
+              ;;
+            prod)
+              echo "domain=www.webqtech.com" >> $GITHUB_OUTPUT
+              echo "s3_bucket=${{ secrets.PROD_S3_BUCKET }}" >> $GITHUB_OUTPUT
+              echo "cloudfront_id=${{ secrets.PROD_CLOUDFRONT_DISTRIBUTION_ID }}" >> $GITHUB_OUTPUT
+              ;;
+          esac
+
+  deploy:
+    needs: determine-environment
+    runs-on: ubuntu-latest
+    environment:
+      name: ${{ needs.determine-environment.outputs.environment }}
+      url: https://${{ needs.determine-environment.outputs.domain }}
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Create environment file
+        run: |
+          echo "Creating environment file for ${{ needs.determine-environment.outputs.environment }} environment"
+          echo "VITE_SUPABASE_URL=${{ secrets.VITE_SUPABASE_URL }}" > .env
+          echo "VITE_SUPABASE_PUBLISHABLE_KEY=${{ secrets.VITE_SUPABASE_PUBLISHABLE_KEY }}" >> .env
+          echo "VITE_SUPABASE_PROJECT_ID=${{ secrets.VITE_SUPABASE_PROJECT_ID }}" >> .env
+          echo "VITE_ENVIRONMENT=${{ needs.determine-environment.outputs.environment }}" >> .env
+          echo "Environment file created"
+
+      - name: Build project
+        run: npm run build
+        env:
+          NODE_ENV: production
+
+      - name: Display build info
+        run: |
+          echo "========================================="
+          echo "Build Information"
+          echo "========================================="
+          echo "Environment: ${{ needs.determine-environment.outputs.environment }}"
+          echo "Domain: ${{ needs.determine-environment.outputs.domain }}"
+          echo "S3 Bucket: ${{ needs.determine-environment.outputs.s3_bucket }}"
+          echo "Branch: ${{ github.ref_name }}"
+          echo "Commit: ${{ github.sha }}"
+          echo "========================================="
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ secrets.AWS_REGION }}
+
+      - name: Deploy to S3
+        run: |
+          echo "Deploying to S3 bucket: ${{ needs.determine-environment.outputs.s3_bucket }}"
+          
+          aws s3 sync dist/ s3://${{ needs.determine-environment.outputs.s3_bucket }}/ \
+            --exclude "index.html" \
+            --delete \
+            --cache-control "max-age=31536000,public"
+          
+          aws s3 cp dist/index.html s3://${{ needs.determine-environment.outputs.s3_bucket }}/index.html \
+            --cache-control "max-age=0,no-cache,no-store,must-revalidate" \
+            --content-type "text/html"
+          
+          echo "Files deployed to S3"
+
+      - name: Invalidate CloudFront cache
+        continue-on-error: true
+        run: |
+          if [ -n "${{ needs.determine-environment.outputs.cloudfront_id }}" ]; then
+            echo "Invalidating CloudFront cache"
+            aws cloudfront create-invalidation \
+              --distribution-id ${{ needs.determine-environment.outputs.cloudfront_id }} \
+              --paths "/*"
+            echo "CloudFront cache invalidated"
+          else
+            echo "CloudFront distribution ID not configured for ${{ needs.determine-environment.outputs.environment }}"
+          fi
+
+      - name: Deployment Summary
+        run: |
+          echo "========================================="
+          echo "Deployment Successful"
+          echo "========================================="
+          echo "Environment: ${{ needs.determine-environment.outputs.environment }}"
+          echo "S3 Bucket: ${{ needs.determine-environment.outputs.s3_bucket }}"
+          echo "Website URL: https://${{ needs.determine-environment.outputs.domain }}"
+          echo "Deployed from: ${{ github.ref_name }} branch"
+          echo "Commit: ${{ github.sha }}"
+          echo "========================================="
+          
+          if [ -n "${{ needs.determine-environment.outputs.cloudfront_id }}" ]; then
+            echo "CloudFront: Configured"
+            echo "Distribution ID: ${{ needs.determine-environment.outputs.cloudfront_id }}"
+          else
+            echo "CloudFront: Not configured"
+          fi
+          echo "========================================="
+
+  notify:
+    needs: [determine-environment, deploy]
+    runs-on: ubuntu-latest
+    if: always()
+    steps:
+      - name: Deployment notification
+        run: |
+          if [ "${{ needs.deploy.result }}" == "success" ]; then
+            echo "Successfully deployed to ${{ needs.determine-environment.outputs.environment }}"
+            echo "https://${{ needs.determine-environment.outputs.domain }}"
+          else
+            echo "Deployment to ${{ needs.determine-environment.outputs.environment }} failed"
+          fi
