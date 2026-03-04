@@ -18,6 +18,7 @@ import News from "./pages/News";
 
 import Contact from "./pages/Contact";
 import { SectionRedirect } from "@/components/SectionRedirect";
+import { ScrollToTop } from "@/components/ScrollToTop";
 
 const queryClient = new QueryClient();
 
@@ -28,6 +29,7 @@ const App = () => (
         <Toaster />
         <Sonner />
         <BrowserRouter>
+          <ScrollToTop />
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/services" element={<Services />} />
