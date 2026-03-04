@@ -7,36 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { useToast } from "@/hooks/use-toast";
 import { Mail, Phone, MapPin, Clock, Send } from "lucide-react";
-import { z } from "zod";
-
-const contactSchema = z.object({
-  name: z
-    .string()
-    .trim()
-    .min(1, "Name is required")
-    .max(100, "Name must be less than 100 characters"),
-  email: z
-    .string()
-    .trim()
-    .min(1, "Email is required")
-    .email("Please enter a valid email address")
-    .max(255, "Email must be less than 255 characters"),
-  subject: z
-    .string()
-    .trim()
-    .min(1, "Subject is required")
-    .max(200, "Subject must be less than 200 characters"),
-  message: z
-    .string()
-    .trim()
-    .min(10, "Message must be at least 10 characters")
-    .max(2000, "Message must be less than 2000 characters"),
-});
-
-type ContactFormData = z.infer<typeof contactSchema>;
-type FormErrors = Partial<Record<keyof ContactFormData, string>>;
 
 const contactInfo = [
   {
@@ -66,58 +37,11 @@ const contactInfo = [
 ];
 
 const Contact = () => {
-  const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [formData, setFormData] = useState<ContactFormData>({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
-  });
-  const [errors, setErrors] = useState<FormErrors>({});
 
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-    // Clear error when user starts typing
-    if (errors[name as keyof ContactFormData]) {
-      setErrors((prev) => ({ ...prev, [name]: undefined }));
-    }
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    // Validate form data
-    const result = contactSchema.safeParse(formData);
-    
-    if (!result.success) {
-      const fieldErrors: FormErrors = {};
-      result.error.errors.forEach((error) => {
-        const field = error.path[0] as keyof ContactFormData;
-        if (!fieldErrors[field]) {
-          fieldErrors[field] = error.message;
-        }
-      });
-      setErrors(fieldErrors);
-      return;
-    }
-
+  const handleSubmit = () => {
     setIsSubmitting(true);
-
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1500));
-
-    toast({
-      title: "Message Sent!",
-      description: "Thank you for contacting us. We'll get back to you soon.",
-    });
-
-    setFormData({ name: "", email: "", subject: "", message: "" });
-    setErrors({});
-    setIsSubmitting(false);
+    // Form will submit to Zoho and redirect to thank-you page
   };
 
   return (
@@ -189,7 +113,7 @@ const Contact = () => {
         <section className="py-12">
           <div className="container mx-auto px-6 lg:px-12">
             <div className="grid lg:grid-cols-2 gap-16 items-start">
-              {/* Form */}
+              {/* Form - Zoho Desk Integration */}
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -203,42 +127,48 @@ const Contact = () => {
                   possible.
                 </p>
 
-                <form onSubmit={handleSubmit} className="space-y-6">
+                <form 
+                  name="zsWebToCase_161155000001039003" 
+                  id="zsWebToCase_161155000001039003" 
+                  action="https://desk.zoho.in/support/WebToCase" 
+                  method="POST"
+                  onSubmit={handleSubmit}
+                  encType="multipart/form-data"
+                  className="space-y-6"
+                >
+                  {/* Hidden Zoho Fields */}
+                  <input type="hidden" name="xnQsjsdp" value="edbsn17fe34adbbb3eaacda29f3a0cf04f228" />
+                  <input type="hidden" name="xmIwtLD" value="edbsn18a4fc5e6675ce19261a7bb9659100a6562083b76b7a809f0fed5bd07dcd06c3" />
+                  <input type="hidden" name="xJdfEaS" value="" />
+                  <input type="hidden" name="actionType" value="Q2FzZXM=" />
+                  <input type="hidden" id="property(module)" value="Cases" />
+                  <input type="hidden" id="dependent_field_values_Cases" value='{"JSON_VALUES":{},"JSON_SELECT_VALUES":{},"JSON_MAP_DEP_LABELS":[]}' />
+                  <input type="hidden" name="returnURL" value="https://www.webqtech.com/thank-you" />
+
                   <div className="grid md:grid-cols-2 gap-6">
                     <div className="space-y-2">
-                      <Label htmlFor="name">Full Name</Label>
+                      <Label htmlFor="contactName">Full Name</Label>
                       <Input
-                        id="name"
-                        name="name"
-                        value={formData.name}
-                        onChange={handleChange}
+                        id="contactName"
+                        name="Contact Name"
+                        type="text"
+                        required
+                        maxLength={120}
                         placeholder="John Doe"
-                        maxLength={100}
-                        className={`bg-background border-border focus:border-primary ${
-                          errors.name ? "border-destructive" : ""
-                        }`}
+                        className="bg-background border-border focus:border-primary"
                       />
-                      {errors.name && (
-                        <p className="text-sm text-destructive">{errors.name}</p>
-                      )}
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="email">Email Address</Label>
                       <Input
                         id="email"
-                        name="email"
+                        name="Email"
                         type="email"
-                        value={formData.email}
-                        onChange={handleChange}
+                        required
+                        maxLength={120}
                         placeholder="john@example.com"
-                        maxLength={255}
-                        className={`bg-background border-border focus:border-primary ${
-                          errors.email ? "border-destructive" : ""
-                        }`}
+                        className="bg-background border-border focus:border-primary"
                       />
-                      {errors.email && (
-                        <p className="text-sm text-destructive">{errors.email}</p>
-                      )}
                     </div>
                   </div>
 
@@ -246,37 +176,25 @@ const Contact = () => {
                     <Label htmlFor="subject">Subject</Label>
                     <Input
                       id="subject"
-                      name="subject"
-                      value={formData.subject}
-                      onChange={handleChange}
+                      name="Subject"
+                      type="text"
+                      required
+                      maxLength={255}
                       placeholder="How can we help you?"
-                      maxLength={200}
-                      className={`bg-background border-border focus:border-primary ${
-                        errors.subject ? "border-destructive" : ""
-                      }`}
+                      className="bg-background border-border focus:border-primary"
                     />
-                    {errors.subject && (
-                      <p className="text-sm text-destructive">{errors.subject}</p>
-                    )}
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="message">Message</Label>
+                    <Label htmlFor="description">Message</Label>
                     <Textarea
-                      id="message"
-                      name="message"
-                      value={formData.message}
-                      onChange={handleChange}
-                      placeholder="Tell us about your project or inquiry..."
-                      maxLength={2000}
+                      id="description"
+                      name="Description"
+                      maxLength={3000}
                       rows={6}
-                      className={`bg-background border-border focus:border-primary resize-none ${
-                        errors.message ? "border-destructive" : ""
-                      }`}
+                      placeholder="Tell us about your project or inquiry..."
+                      className="bg-background border-border focus:border-primary resize-none"
                     />
-                    {errors.message && (
-                      <p className="text-sm text-destructive">{errors.message}</p>
-                    )}
                   </div>
 
                   <Button
