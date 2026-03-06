@@ -7,6 +7,9 @@ export const ContactSection = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
+  // Automatically detect the current domain for returnURL
+  const returnURL = `${window.location.origin}/thank-you`;
+
   const handleSubmit = () => {
     setIsSubmitting(true);
   };
@@ -46,7 +49,7 @@ export const ContactSection = () => {
             <input type="hidden" name="actionType" value="Q2FzZXM=" />
             <input type="hidden" id="property(module)" value="Cases" />
             <input type="hidden" id="dependent_field_values_Cases" value='{"JSON_VALUES":{},"JSON_SELECT_VALUES":{},"JSON_MAP_DEP_LABELS":[]}' />
-            <input type="hidden" name="returnURL" value="https://www.webqtech.com/thank-you" />
+            <input type="hidden" name="returnURL" value={returnURL} />
 
             <div>
               <label className="block text-sm font-medium text-foreground mb-2">
