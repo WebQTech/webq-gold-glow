@@ -15,8 +15,8 @@ import InsightDetail from "./pages/InsightDetail";
 import About from "./pages/About";
 import Careers from "./pages/Careers";
 import News from "./pages/News";
-
 import Contact from "./pages/Contact";
+import ThankYou from "./pages/ThankYou";
 import { SectionRedirect } from "@/components/SectionRedirect";
 import { ScrollToTop } from "@/components/ScrollToTop";
 
@@ -43,6 +43,7 @@ const App = () => (
             <Route path="/news" element={<News />} />
             
             <Route path="/contact" element={<Contact />} />
+            <Route path="/thank-you" element={<ThankYou />} />
 
             {/* Section routes (avoid 404 if someone lands on /process etc.) */}
             <Route path="/products" element={<SectionRedirect hash="#products" />} />
