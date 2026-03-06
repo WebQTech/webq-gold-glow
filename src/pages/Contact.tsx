@@ -1,124 +1,58 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Mail, Phone, MapPin, Clock, Send } from "lucide-react";
 
 const contactInfo = [
-  {
-    icon: Mail,
-    title: "Email Us",
-    details: "contact@webqtech.com",
-    subtext: "We'll respond within 24 hours",
-  },
-  {
-    icon: Phone,
-    title: "Call Us",
-    details: "+1 (555) 123-4567",
-    subtext: "Mon-Fri, 9am-6pm EST",
-  },
-  {
-    icon: MapPin,
-    title: "Visit Us",
-    details: "123 Innovation Drive",
-    subtext: "San Francisco, CA 94105",
-  },
-  {
-    icon: Clock,
-    title: "Business Hours",
-    details: "Monday - Friday",
-    subtext: "9:00 AM - 6:00 PM EST",
-  },
+  { icon: Mail, title: "Email Us", details: "contact@webqtech.com", subtext: "We'll respond within 24 hours" },
+  { icon: Phone, title: "Call Us", details: "+1 (555) 123-4567", subtext: "Mon-Fri, 9am-6pm EST" },
+  { icon: MapPin, title: "Visit Us", details: "123 Innovation Drive", subtext: "San Francisco, CA 94105" },
+  { icon: Clock, title: "Business Hours", details: "Monday - Friday", subtext: "9:00 AM - 6:00 PM EST" },
 ];
 
 const Contact = () => {
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
-  // CRITICAL: This effect loads the Zoho script required for the form to actually send
   useEffect(() => {
+    // This loads the mandatory Zoho script for security validation
     const script = document.createElement("script");
     script.src = "https://static.zohocdn.com/zohodeskstatic/app/js/jqueryandencoder.ef05974972bf3bca1b87.js";
     script.async = true;
     document.body.appendChild(script);
-
-    return () => {
-      document.body.removeChild(script);
-    };
+    return () => { document.body.removeChild(script); };
   }, []);
-
-  const handleSubmit = () => {
-    setIsSubmitting(true);
-    // The form will now naturally POST to Zoho Desk and redirect to your thank-you page
-  };
 
   return (
     <>
       <Helmet>
         <title>Contact Us | WebQ Technologies</title>
-        <meta
-          name="description"
-          content="Get in touch with WebQ Technologies. Contact us for enterprise technology solutions, AI consulting, and digital transformation services."
-        />
       </Helmet>
-
       <Navbar />
-
       <main className="min-h-screen bg-background">
-        <section className="relative pt-24 pb-12 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-transparent" />
-          <div className="container mx-auto px-6 lg:px-12 relative z-10">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="text-center max-w-3xl mx-auto"
-            >
-              <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
-                Get In Touch
-              </span>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
-                Let's Start a{" "}
-                <span className="text-primary">Conversation</span>
-              </h1>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                Have a project in mind? Reach out and let's explore how we
-                can transform your business together.
-              </p>
-            </motion.div>
+        <section className="relative pt-24 pb-12">
+          <div className="container mx-auto px-6 text-center">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">Let's Start a <span className="text-primary">Conversation</span></h1>
           </div>
         </section>
 
         <section className="py-12">
           <div className="container mx-auto px-6 lg:px-12">
-            <div className="grid lg:grid-cols-2 gap-16 items-start">
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-              >
-                <h2 className="text-3xl font-bold text-foreground mb-2">
-                  Send Us a Message
-                </h2>
-                <p className="text-muted-foreground mb-8">
-                  Fill out the form below to create a ticket in our support system.
-                </p>
+            <div className="grid lg:grid-cols-2 gap-16">
+              <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }}>
+                <h2 className="text-3xl font-bold mb-8">Send Us a Message</h2>
 
-                {/* UPDATED FORM TAG WITH ZOHO ENDPOINT */}
+                {/* The 'action' must be the Zoho URL and we let the browser handle the submit */}
                 <form 
                   name="zsWebToCase_161155000001039003" 
                   id="zsWebToCase_161155000001039003" 
                   action="https://desk.zoho.in/support/WebToCase" 
                   method="POST"
-                  onSubmit={handleSubmit}
                   encType="multipart/form-data"
                   className="space-y-6"
                 >
-                  {/* HIDDEN SECURITY TOKENS FROM YOUR UPLOADED FILE */}
+                  {/* HIDDEN ZOHO TOKENS - DO NOT REMOVE */}
                   <input type="hidden" name="xnQsjsdp" value="edbsn17fe34adbbb3eaacda29f3a0cf04f228" />
                   <input type="hidden" name="xmIwtLD" value="edbsn18a4fc5e6675ce19261a7bb9659100a6562083b76b7a809f0fed5bd07dcd06c3" />
                   <input type="hidden" name="xJdfEaS" value="" />
@@ -129,96 +63,62 @@ const Contact = () => {
 
                   <div className="grid md:grid-cols-2 gap-6">
                     <div className="space-y-2">
-                      <Label htmlFor="contactName">Full Name</Label>
-                      <Input
-                        id="contactName"
+                      <Label>Full Name *</Label>
+                      <input
                         name="Contact Name"
                         type="text"
                         required
-                        maxLength={120}
-                        placeholder="Amresh Kumar"
-                        className="bg-background border-border focus:border-primary"
+                        className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary"
                       />
                     </div>
                     <div className="space-y-2">
-                      <Label htmlFor="email">Work Email</Label>
-                      <Input
-                        id="email"
+                      <Label>Work Email *</Label>
+                      <input
                         name="Email"
                         type="email"
                         required
-                        maxLength={120}
-                        placeholder="a.kumar1nav@gmail.com"
-                        className="bg-background border-border focus:border-primary"
+                        className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary"
                       />
                     </div>
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="subject">Topic of Interest</Label>
-                    <Input
-                      id="subject"
+                    <Label>Topic of Interest *</Label>
+                    <input
                       name="Subject"
                       type="text"
                       required
-                      maxLength={255}
-                      placeholder="Cloud Services, AI, etc."
-                      className="bg-background border-border focus:border-primary"
+                      className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary"
                     />
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="description">Message</Label>
-                    <Textarea
-                      id="description"
+                    <Label>Message</Label>
+                    <textarea
                       name="Description"
-                      maxLength={3000}
-                      rows={6}
-                      placeholder="Need AI integration with cloud..."
-                      className="bg-background border-border focus:border-primary resize-none"
-                    />
+                      rows={5}
+                      className="flex w-full rounded-md border border-input bg-background px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary resize-none"
+                    ></textarea>
                   </div>
 
-                  <Button
-                    type="submit"
-                    size="lg"
-                    id="zsSubmitButton_161155000001039003"
-                    disabled={isSubmitting}
-                    className="w-full md:w-auto"
-                  >
-                    {isSubmitting ? "Sending..." : "Send Message"}
+                  <Button type="submit" size="lg" id="zsSubmitButton_161155000001039003" className="w-full md:w-auto">
+                    Send Message <Send className="ml-2 w-4 h-4" />
                   </Button>
                 </form>
               </motion.div>
 
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                className="space-y-8"
-              >
-                <div className="aspect-[4/3] rounded-2xl bg-muted/50 border border-border overflow-hidden relative">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-center">
-                      <MapPin className="w-12 h-12 text-primary/50 mx-auto mb-4" />
-                      <p className="text-muted-foreground">123 Innovation Drive, San Francisco, CA</p>
-                    </div>
+              <div className="space-y-8">
+                <div className="aspect-[4/3] rounded-2xl bg-muted/50 border border-border flex items-center justify-center">
+                  <div className="text-center">
+                    <MapPin className="w-12 h-12 text-primary/50 mx-auto mb-4" />
+                    <p className="text-muted-foreground">San Francisco, CA 94105</p>
                   </div>
                 </div>
-
-                <div className="bg-card border border-border rounded-2xl p-8">
-                  <h3 className="text-xl font-semibold text-foreground mb-4">FAQ</h3>
-                  <div className="space-y-4 text-sm">
-                    <p><strong>Response Time:</strong> Within 24 business hours.</p>
-                    <p><strong>Consultations:</strong> Complimentary 30-minute sessions available.</p>
-                  </div>
-                </div>
-              </motion.div>
+              </div>
             </div>
           </div>
         </section>
       </main>
-
       <Footer />
     </>
   );
