@@ -1,4 +1,3 @@
-import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { Mic, Calendar, ArrowRight, Clock, User } from "lucide-react";
 import { Helmet } from "react-helmet-async";

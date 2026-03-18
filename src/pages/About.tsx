@@ -1,4 +1,3 @@
-import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { motion } from "framer-motion";
 import { Building2, Users, Award, MapPin, Handshake, Target, Eye, Heart, Globe, CheckCircle } from "lucide-react";
