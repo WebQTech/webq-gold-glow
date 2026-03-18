@@ -13,7 +13,6 @@ const News = () => {
       </Helmet>
       
       <div className="min-h-screen bg-background">
-        <Navbar />
         
         <main id="main-content">
           {/* Hero Section */}

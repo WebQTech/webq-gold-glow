@@ -43,7 +43,6 @@ const InsightDetail = () => {
       </Helmet>
 
       <div className="min-h-screen bg-background">
-        <Navbar />
         <main id="main-content" className="focus:outline-none" tabIndex={-1}>
           {/* Hero Section */}
           <section ref={heroRef} className="py-10 lg:py-16 bg-gradient-to-b from-primary/5 to-background">

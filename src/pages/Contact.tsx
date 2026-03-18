@@ -130,7 +130,7 @@ const Contact = () => {
         />
       </Helmet>
 
-      <Navbar />
+      
 
       <main className="min-h-screen bg-background">
         {/* Hero Section */}
