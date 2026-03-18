@@ -13,23 +13,19 @@ const Industries = () => {
         {/* Hero Section */}
         <section className="py-10 lg:py-16 bg-gradient-to-b from-primary/5 to-background">
           <div className="container mx-auto px-6 lg:px-12">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="text-center max-w-3xl mx-auto"
-            >
-              <span className="text-sm font-semibold tracking-widest text-primary uppercase">
+            <div className="max-w-3xl">
+              <span className="section-label">
                 Industries We Serve
               </span>
               <h1 className="mt-4 text-4xl lg:text-5xl font-bold text-foreground leading-tight">
-                Transforming Businesses Across Every Sector
+                Transforming Businesses{" "}
+                <span className="text-primary">Across Every Sector</span>
               </h1>
               <p className="mt-6 text-lg text-muted-foreground">
                 From startups to enterprises, we deliver tailored technology solutions 
                 that address the unique challenges of your industry.
               </p>
-            </motion.div>
+            </div>
           </div>
         </section>
 
