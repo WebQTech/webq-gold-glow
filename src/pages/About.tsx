@@ -1,4 +1,3 @@
-import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { motion } from "framer-motion";
 import { Building2, Users, Award, MapPin, Handshake, Target, Eye, Heart, Globe, CheckCircle } from "lucide-react";
@@ -52,11 +51,9 @@ const About = () => {
         <title>About Us | WebQ Technologies - Our Story, Leadership & Values</title>
         <meta name="description" content="Learn about WebQ Technologies' mission, leadership team, core values, and global presence. 15+ years of delivering enterprise technology solutions." />
       </Helmet>
-      
+
       <div className="min-h-screen bg-background">
-        <Navbar />
-        
-        <main id="main-content">
+        <main id="main-content" className="focus:outline-none" tabIndex={-1}>
           {/* Hero Section */}
           <section className="relative py-12 lg:py-20 bg-gradient-to-b from-primary/5 to-background overflow-hidden">
             <div className="container mx-auto px-6 lg:px-12">

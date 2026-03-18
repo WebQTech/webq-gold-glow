@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
-import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { industriesData, getAllIndustryCategories } from "@/data/industriesData";
 
@@ -10,7 +9,6 @@ const Industries = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <Navbar />
       <main id="main-content" className="focus:outline-none" tabIndex={-1}>
         {/* Hero Section */}
         <section className="py-10 lg:py-16 bg-gradient-to-b from-primary/5 to-background">
