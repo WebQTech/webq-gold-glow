@@ -51,7 +51,7 @@ const About = () => {
         <title>About Us | WebQ Technologies - Our Story, Leadership & Values</title>
         <meta name="description" content="Learn about WebQ Technologies' mission, leadership team, core values, and global presence. 15+ years of delivering enterprise technology solutions." />
       </Helmet>
-      
+
       <div className="min-h-screen bg-background">
         <main id="main-content" className="focus:outline-none" tabIndex={-1}>
           {/* Hero Section */}

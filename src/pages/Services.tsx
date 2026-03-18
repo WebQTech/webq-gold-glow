@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
-import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { getAllCategories, getServicesByCategory } from "@/data/servicesData";
 
@@ -9,7 +8,6 @@ const Services = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <Navbar />
       <main id="main-content" className="focus:outline-none" tabIndex={-1}>
         <section className="py-10 lg:py-16 bg-gradient-to-b from-primary/5 to-background">
           <div className="container mx-auto px-6 lg:px-12">
