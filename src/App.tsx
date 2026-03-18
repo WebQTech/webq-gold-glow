@@ -21,18 +21,10 @@ import { SectionRedirect } from "@/components/SectionRedirect";
 import { ScrollToTop } from "@/components/ScrollToTop";
 
 const queryClient = new QueryClient();
-// Pages that render their own Navbar (detail pages, careers, news, contact)
-const selfNavbarRoutes = new Set(["/careers", "/news", "/contact"]);
-
 const AppRoutes = () => {
-  const { pathname } = useLocation();
-  // Show persistent navbar for all routes except those with their own, and detail pages
-  const isDetailPage = pathname.startsWith("/services/") || pathname.startsWith("/industries/") || pathname.startsWith("/insights/");
-  const hasSelfNavbar = selfNavbarRoutes.has(pathname) || isDetailPage;
-
   return (
     <>
-      {!hasSelfNavbar && <Navbar />}
+      <Navbar />
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<Index />} />
