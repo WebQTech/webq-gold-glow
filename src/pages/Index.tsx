@@ -1,11 +1,9 @@
 import { Navbar } from "@/components/Navbar";
 import { HeroSection } from "@/components/HeroSection";
-import { ValueProposition } from "@/components/ValueProposition";
-import { AIShowcaseSection } from "@/components/AIShowcaseSection";
-import { FeaturedSection } from "@/components/FeaturedSection";
-import { CaseStudiesSection } from "@/components/CaseStudiesSection";
+import { CoreServicesGrid } from "@/components/CoreServicesGrid";
+import { MissionBanner } from "@/components/MissionBanner";
 import { AboutSection } from "@/components/AboutSection";
-import { InsightBanner } from "@/components/InsightBanner";
+import { CaseStudiesSection } from "@/components/CaseStudiesSection";
 import { NewsSection } from "@/components/NewsSection";
 import { ContactSection } from "@/components/ContactSection";
 import { Footer } from "@/components/Footer";
@@ -17,12 +15,10 @@ const Index = () => {
       <Navbar />
       <main id="main-content" className="focus:outline-none" tabIndex={-1}>
         <HeroSection />
-        <ValueProposition />
-        <AIShowcaseSection />
-        <FeaturedSection />
-        <CaseStudiesSection />
+        <CoreServicesGrid />
+        <MissionBanner />
         <AboutSection />
-        <InsightBanner />
+        <CaseStudiesSection />
         <NewsSection />
         <ContactSection />
       </main>
