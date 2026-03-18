@@ -2,7 +2,7 @@ import { useParams, Link, Navigate } from "react-router-dom";
 import { motion, useInView } from "framer-motion";
 import { useRef, useMemo } from "react";
 import { ArrowLeft, ArrowRight, Check, Building2 } from "lucide-react";
-import { Navbar } from "@/components/Navbar";
+
 import { Footer } from "@/components/Footer";
 import { getServiceBySlug, servicesData, ServiceDetail as ServiceDetailType } from "@/data/servicesData";
 import {
