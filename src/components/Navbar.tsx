@@ -47,7 +47,7 @@ export const Navbar = () => {
               <img
                 src={logo}
                 alt="WebQ Technologies"
-                className="h-14 w-auto transition-all duration-300 group-hover:scale-105"
+                className="h-14 w-auto"
               />
               <div className="flex flex-col">
                 <span className="font-montserrat text-xl font-bold text-foreground tracking-tight leading-tight whitespace-nowrap">
