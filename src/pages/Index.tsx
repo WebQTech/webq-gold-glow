@@ -1,4 +1,3 @@
-import { Navbar } from "@/components/Navbar";
 import { HeroSection } from "@/components/HeroSection";
 import { CoreServicesGrid } from "@/components/CoreServicesGrid";
 import { SolutionsSection } from "@/components/SolutionsSection";
@@ -13,7 +12,6 @@ import BackToTopButton from "@/components/BackToTopButton";
 const Index = () => {
   return (
     <div className="relative overflow-hidden bg-background">
-      <Navbar />
       <main id="main-content" className="focus:outline-none" tabIndex={-1}>
         <HeroSection />
         <SolutionsSection />
