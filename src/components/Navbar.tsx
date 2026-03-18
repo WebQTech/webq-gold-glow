@@ -42,26 +42,6 @@ export const Navbar = () => {
         Skip to main content
       </a>
 
-      {/* Top utility bar */}
-      <div className="hidden lg:block bg-background border-b border-border/50">
-        <div className="container mx-auto px-6 lg:px-12">
-          <div className="flex items-center justify-end gap-4 py-2">
-            <Link to="/careers" className="text-xs text-foreground/60 hover:text-primary transition-colors">
-              Careers
-            </Link>
-            <Link to="/news" className="text-xs text-foreground/60 hover:text-primary transition-colors">
-              News
-            </Link>
-            <div className="flex items-center gap-1 text-xs text-foreground/60 cursor-pointer hover:text-primary transition-colors">
-              <Globe className="w-3 h-3" />
-              <span>US-EN</span>
-            </div>
-            <div className="border-l border-border/50 pl-4">
-              <AccessibilityPanel />
-            </div>
-          </div>
-        </div>
-      </div>
 
       {/* Main navbar */}
       <nav
