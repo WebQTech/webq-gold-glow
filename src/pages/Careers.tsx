@@ -1,4 +1,4 @@
-import { Navbar } from "@/components/Navbar";
+import { Footer } from "@/components/Footer";
 import { Footer } from "@/components/Footer";
 import { motion } from "framer-motion";
 import { Briefcase, Users, Gift, UserCheck, MapPin, Clock, ArrowRight, Heart, Zap, Globe, GraduationCap, Mail } from "lucide-react";
