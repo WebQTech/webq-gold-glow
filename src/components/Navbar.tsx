@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Globe } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { AccessibilityPanel } from "@/components/AccessibilityPanel";
 import { useSmoothScroll } from "@/hooks/useSmoothScroll";
@@ -27,14 +26,17 @@ export const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    setIsMobileMenuOpen(false);
+  }, [location.pathname]);
+
   const isActiveLink = (href: string) => {
-    if (href.startsWith("/#")) return false; // hash links don't highlight
+    if (href.startsWith("/#")) return false;
     return location.pathname === href || location.pathname.startsWith(href + "/");
   };
 
   return (
     <>
-      {/* Skip to main content */}
       <a
         href="#main-content"
         className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-primary focus:text-primary-foreground focus:rounded-md"
@@ -42,8 +44,6 @@ export const Navbar = () => {
         Skip to main content
       </a>
 
-
-      {/* Main navbar */}
       <nav
         className={`sticky top-0 z-50 transition-all duration-300 ${
           isScrolled ? "bg-background shadow-sm" : "bg-background"
@@ -51,7 +51,6 @@ export const Navbar = () => {
       >
         <div className="container mx-auto px-6 lg:px-12">
           <div className="flex items-center justify-between h-16 lg:h-20">
-            {/* Logo */}
             <Link to="/" className="flex items-center gap-3 group">
               <img
                 src={logo}
@@ -68,12 +67,11 @@ export const Navbar = () => {
               </div>
             </Link>
 
-            {/* Desktop Nav — flat links like Datavail */}
             <div className="hidden lg:flex items-center gap-10">
               {navLinks.map((link) => {
                 const active = isActiveLink(link.href);
                 const isHash = link.href.startsWith("/#");
-                
+
                 if (isHash) {
                   const hash = link.href.replace("/", "");
                   return (
@@ -102,7 +100,6 @@ export const Navbar = () => {
               })}
             </div>
 
-            {/* Contact Us CTA */}
             <div className="hidden lg:flex items-center">
               <Link
                 to="/contact"
@@ -112,92 +109,68 @@ export const Navbar = () => {
               </Link>
             </div>
 
-            {/* Mobile Menu Button */}
             <button
               className="lg:hidden text-foreground p-2"
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              onClick={() => setIsMobileMenuOpen((prev) => !prev)}
               aria-label="Toggle menu"
+              aria-expanded={isMobileMenuOpen}
             >
               {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
         </div>
 
-        {/* Mobile Menu */}
-        <AnimatePresence>
-          {isMobileMenuOpen && (
-            <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: "auto" }}
-              exit={{ opacity: 0, height: 0 }}
-              className="lg:hidden bg-background border-t border-border overflow-hidden"
-            >
-              <div className="container mx-auto px-6 py-6 space-y-1">
-                {navLinks.map((link) => {
-                  const isHash = link.href.startsWith("/#");
-                  if (isHash) {
-                    const hash = link.href.replace("/", "");
-                    return (
-                      <a
-                        key={link.label}
-                        href={isHomePage ? hash : link.href}
-                        onClick={(e) => {
-                          if (isHomePage) handleAnchorClick(hash)(e);
-                          setIsMobileMenuOpen(false);
-                        }}
-                        className="block py-3 text-sm font-semibold uppercase tracking-wider text-foreground/70 hover:text-primary transition-colors border-b border-border/30"
-                      >
-                        {link.label}
-                      </a>
-                    );
-                  }
+        {isMobileMenuOpen && (
+          <div className="lg:hidden bg-background border-t border-border">
+            <div className="container mx-auto px-6 py-6 space-y-1">
+              {navLinks.map((link) => {
+                const isHash = link.href.startsWith("/#");
+                if (isHash) {
+                  const hash = link.href.replace("/", "");
                   return (
-                    <Link
+                    <a
                       key={link.label}
-                      to={link.href}
-                      onClick={() => setIsMobileMenuOpen(false)}
-                      className={`block py-3 text-sm font-semibold uppercase tracking-wider transition-colors border-b border-border/30 ${
-                        isActiveLink(link.href) ? "text-primary" : "text-foreground/70 hover:text-primary"
-                      }`}
+                      href={isHomePage ? hash : link.href}
+                      onClick={(e) => {
+                        if (isHomePage) handleAnchorClick(hash)(e);
+                        setIsMobileMenuOpen(false);
+                      }}
+                      className="block py-3 text-sm font-semibold uppercase tracking-wider text-foreground/70 hover:text-primary transition-colors border-b border-border/30"
                     >
                       {link.label}
-                    </Link>
+                    </a>
                   );
-                })}
+                }
 
-                <div className="pt-4 space-y-3">
+                return (
                   <Link
-                    to="/careers"
+                    key={link.label}
+                    to={link.href}
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="block text-sm text-foreground/60 hover:text-primary transition-colors"
+                    className={`block py-3 text-sm font-semibold uppercase tracking-wider transition-colors border-b border-border/30 ${
+                      isActiveLink(link.href) ? "text-primary" : "text-foreground/70 hover:text-primary"
+                    }`}
                   >
-                    Careers
+                    {link.label}
                   </Link>
-                  <Link
-                    to="/news"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                    className="block text-sm text-foreground/60 hover:text-primary transition-colors"
-                  >
-                    News
-                  </Link>
-                </div>
+                );
+              })}
 
-                <div className="pt-4 border-t border-border/50 mt-4 flex items-center justify-between">
-                  <span className="text-sm text-foreground/60">Accessibility:</span>
-                  <AccessibilityPanel />
-                </div>
-
-                <Link
-                  to="/contact"
-                  className="block mt-4 btn-primary text-center text-sm uppercase font-semibold tracking-wider"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  Contact Us
-                </Link>
+              <div className="pt-4 border-t border-border/50 mt-4 flex items-center justify-between">
+                <span className="text-sm text-foreground/60">Accessibility:</span>
+                <AccessibilityPanel />
               </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
+
+              <Link
+                to="/contact"
+                className="block mt-4 btn-primary text-center text-sm uppercase font-semibold tracking-wider"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Contact Us
+              </Link>
+            </div>
+          </div>
+        )}
       </nav>
     </>
   );
