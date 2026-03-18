@@ -2,7 +2,7 @@ import { useParams, Link, Navigate } from "react-router-dom";
 import { motion, useInView } from "framer-motion";
 import { useRef, useMemo } from "react";
 import { ArrowLeft, ArrowRight, Clock, User, Calendar, Tag } from "lucide-react";
-import { Navbar } from "@/components/Navbar";
+
 import { Footer } from "@/components/Footer";
 import { getInsightBySlug, insightsData } from "@/data/insightsData";
 import { Helmet } from "react-helmet-async";
