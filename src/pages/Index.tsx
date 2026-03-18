@@ -16,8 +16,8 @@ const Index = () => {
       <Navbar />
       <main id="main-content" className="focus:outline-none" tabIndex={-1}>
         <HeroSection />
-        <CoreServicesGrid />
         <SolutionsSection />
+        <CoreServicesGrid />
         <MissionBanner />
         <AboutSection />
         <CaseStudiesSection />
