@@ -21,6 +21,7 @@ import { SectionRedirect } from "@/components/SectionRedirect";
 import { ScrollToTop } from "@/components/ScrollToTop";
 
 const queryClient = new QueryClient();
+
 const AppRoutes = () => {
   return (
     <>
