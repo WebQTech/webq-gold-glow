@@ -38,6 +38,36 @@ const ServiceCard = ({ service, index }: { service: typeof servicesData[0]; inde
   );
 };
 
+const CategorySection = ({ category }: { category: string }) => {
+  const categoryServices = getServicesByCategory(category);
+  const categoryRef = useRef(null);
+  const isCategoryInView = useInView(categoryRef, { once: true, margin: "-100px" });
+
+  return (
+    <section ref={categoryRef} className="py-12 lg:py-16">
+      <div className="container mx-auto px-6 lg:px-12">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={isCategoryInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6 }}
+          className="mb-8"
+        >
+          <h2 className="text-2xl lg:text-3xl font-bold text-foreground">
+            {category}
+          </h2>
+          <div className="mt-2 w-16 h-1 bg-primary rounded-full" />
+        </motion.div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          {categoryServices.map((service, index) => (
+            <ServiceCard key={service.slug} service={service} index={index} />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
 const Services = () => {
   const heroRef = useRef(null);
   const isHeroInView = useInView(heroRef, { once: true });
@@ -76,36 +106,9 @@ const Services = () => {
       </section>
 
       {/* Services by Category */}
-      {categories.map((category) => {
-        const categoryServices = getServicesByCategory(category);
-        const categoryRef = useRef(null);
-        const isCategoryInView = useInView(categoryRef, { once: true, margin: "-100px" });
-
-        return (
-          <section key={category} ref={categoryRef} className="py-12 lg:py-16">
-            <div className="container mx-auto px-6 lg:px-12">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={isCategoryInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6 }}
-                className="mb-8"
-              >
-                <h2 className="text-2xl lg:text-3xl font-bold text-foreground">
-                  {category}
-                </h2>
-                <div className="mt-2 w-16 h-1 bg-primary rounded-full" />
-              </motion.div>
-
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                {categoryServices.map((service, index) => (
-                  <ServiceCard key={service.slug} service={service} index={index} />
-                ))}
-              </div>
-            </div>
-          </section>
-        );
-      })}
-
+      {categories.map((category) => (
+        <CategorySection key={category} category={category} />
+      ))}
       {/* CTA Section */}
       <section className="py-10 lg:py-16 bg-primary/5">
         <div className="container mx-auto px-6 lg:px-12 text-center">
