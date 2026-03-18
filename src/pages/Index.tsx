@@ -1,6 +1,7 @@
 import { Navbar } from "@/components/Navbar";
 import { HeroSection } from "@/components/HeroSection";
 import { CoreServicesGrid } from "@/components/CoreServicesGrid";
+import { SolutionsSection } from "@/components/SolutionsSection";
 import { MissionBanner } from "@/components/MissionBanner";
 import { AboutSection } from "@/components/AboutSection";
 import { CaseStudiesSection } from "@/components/CaseStudiesSection";
@@ -16,6 +17,7 @@ const Index = () => {
       <main id="main-content" className="focus:outline-none" tabIndex={-1}>
         <HeroSection />
         <CoreServicesGrid />
+        <SolutionsSection />
         <MissionBanner />
         <AboutSection />
         <CaseStudiesSection />
