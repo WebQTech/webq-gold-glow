@@ -2,7 +2,7 @@ import { useParams, Link, Navigate } from "react-router-dom";
 import { motion, useInView } from "framer-motion";
 import { useRef, useMemo } from "react";
 import { ArrowLeft, ArrowRight, Clock, User, Calendar, Tag } from "lucide-react";
-import { Navbar } from "@/components/Navbar";
+
 import { Footer } from "@/components/Footer";
 import { getInsightBySlug, insightsData } from "@/data/insightsData";
 import { Helmet } from "react-helmet-async";
@@ -43,7 +43,6 @@ const InsightDetail = () => {
       </Helmet>
 
       <div className="min-h-screen bg-background">
-        <Navbar />
         <main id="main-content" className="focus:outline-none" tabIndex={-1}>
           {/* Hero Section */}
           <section ref={heroRef} className="py-10 lg:py-16 bg-gradient-to-b from-primary/5 to-background">

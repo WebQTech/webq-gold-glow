@@ -1,4 +1,3 @@
-import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { motion } from "framer-motion";
 import { Bell, ArrowRight } from "lucide-react";
@@ -14,7 +13,6 @@ const News = () => {
       </Helmet>
       
       <div className="min-h-screen bg-background">
-        <Navbar />
         
         <main id="main-content">
           {/* Hero Section */}

@@ -1,4 +1,3 @@
-import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { motion } from "framer-motion";
 import { Briefcase, Users, Gift, UserCheck, MapPin, Clock, ArrowRight, Heart, Zap, Globe, GraduationCap, Mail } from "lucide-react";
@@ -113,9 +112,7 @@ const Careers = () => {
       </Helmet>
       
       <div className="min-h-screen bg-background">
-        <Navbar />
-        
-        <main id="main-content">
+        <main id="main-content" className="focus:outline-none" tabIndex={-1}>
           {/* Hero Section */}
           <section className="relative py-12 lg:py-20 bg-gradient-to-b from-primary/5 to-background overflow-hidden">
             <div className="container mx-auto px-6 lg:px-12">
