@@ -1277,8 +1277,11 @@ export const solutionsData: SolutionDetail[] = [
     technologies: ["Datadog", "Grafana", "Prometheus", "OpenTelemetry", "Jaeger", "Loki", "Elastic Stack (ELK)", "PagerDuty", "New Relic", "Splunk Observability"],
     caseStudies: [
       {
-        title: "Full-Stack Observability for E-Commerce Platform",
-        description: "Implemented OpenTelemetry-based distributed tracing and Grafana dashboards across 120+ microservices, reducing mean time to detection (MTTD) by 75% and mean time to resolution (MTTR) by 55%."
+        company: "E-Commerce Platform",
+        industry: "Retail",
+        challenge: "120+ microservices with no unified observability, leading to long incident resolution times.",
+        solution: "Implemented OpenTelemetry-based distributed tracing and Grafana dashboards across the entire stack.",
+        results: ["75% reduction in mean time to detection", "55% reduction in mean time to resolution", "Unified observability across 120+ services"]
       }
     ],
     faqs: [
