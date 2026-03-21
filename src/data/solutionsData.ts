@@ -2,7 +2,7 @@ import {
   Code2, Cloud, Server, RefreshCw, TestTube, Headphones, Settings, Database,
   Gauge, Network, GitBranch, Container, Zap, Shield, Wrench, ClipboardList,
   BarChart3, Brain, Smartphone, Plug, Lock, ShieldCheck, FileCode, CloudCog, KeyRound,
-  LucideIcon
+  ShieldAlert, Scale, LucideIcon
 } from "lucide-react";
 
 export interface SolutionDetail {
@@ -1055,6 +1055,94 @@ export const solutionsData: SolutionDetail[] = [
       { question: "How long does SSO implementation take?", answer: "Core SSO with major applications typically takes 4-8 weeks. Full rollout across all applications depends on integration complexity — we prioritize high-risk and high-usage apps first." },
       { question: "What MFA methods do you support?", answer: "We implement phishing-resistant MFA including FIDO2/WebAuthn hardware keys, authenticator apps, push notifications, and biometrics. SMS-based MFA is discouraged due to SIM-swap risks." },
       { question: "How do you handle third-party/contractor access?", answer: "We implement time-bound, just-in-time access with approval workflows, separate identity stores for external users, and automated expiration policies to prevent access creep." }
+    ]
+  },
+  {
+    slug: "cybersecurity-consulting",
+    name: "Cybersecurity Consulting",
+    shortDescription: "Strategic cybersecurity advisory services including risk assessments, incident response planning, and security architecture design.",
+    fullDescription: "Our cybersecurity consulting practice helps organizations build resilient security postures through strategic advisory, risk assessments, incident response planning, and security architecture design. We combine deep technical expertise with business acumen to protect your most critical assets.",
+    icon: ShieldAlert,
+    features: [
+      "Cybersecurity maturity assessments",
+      "Risk quantification & prioritization",
+      "Security roadmap development",
+      "Incident response plan development",
+      "Tabletop exercises & simulations",
+      "Digital forensics & investigation",
+      "Zero-trust architecture design",
+      "Network segmentation strategy",
+      "Threat hunting programs",
+      "Dark web monitoring",
+      "Attack surface management",
+      "Adversary emulation & red teaming"
+    ],
+    benefits: [
+      "Proactive risk identification before breaches occur",
+      "Reduced incident response time with tested playbooks",
+      "Board-level visibility into security posture",
+      "Alignment with industry frameworks (NIST, ISO, CIS)",
+      "Optimized security spending based on risk priorities",
+      "Regulatory compliance readiness"
+    ],
+    technologies: ["MITRE ATT&CK", "NIST CSF", "CrowdStrike", "Mandiant", "Recorded Future", "Palo Alto Cortex", "Splunk SOAR", "Carbon Black"],
+    caseStudies: [
+      {
+        company: "SecureBank Corp",
+        industry: "Financial Services",
+        challenge: "A regional bank experienced a sophisticated phishing attack and lacked a formal incident response plan, leading to delayed containment and regulatory scrutiny.",
+        solution: "Conducted a full cybersecurity maturity assessment, developed and tested an incident response playbook, implemented threat hunting capabilities, and established a security operations center (SOC) partnership.",
+        results: ["Incident response time reduced from 72 hours to 4 hours", "Achieved NIST CSF Tier 3 maturity within 12 months", "Zero successful breaches in 18 months post-engagement", "Regulatory confidence restored with documented security posture"]
+      }
+    ],
+    faqs: [
+      { question: "What does a cybersecurity maturity assessment involve?", answer: "We evaluate your security posture across people, processes, and technology using frameworks like NIST CSF or CIS Controls. The result is a prioritized roadmap with quick wins and strategic improvements." },
+      { question: "How often should we conduct red team exercises?", answer: "We recommend annual red team engagements with quarterly tabletop exercises. High-risk industries like finance and healthcare may benefit from semi-annual red team assessments." },
+      { question: "Do you provide managed security services?", answer: "We focus on strategic consulting and architecture. For ongoing managed SOC services, we help you select and onboard the right MSSP partner and ensure seamless integration with your security stack." }
+    ]
+  },
+  {
+    slug: "compliance-governance",
+    name: "Compliance & Governance",
+    shortDescription: "Navigate complex regulatory landscapes with comprehensive compliance programs, audit preparation, and governance frameworks.",
+    fullDescription: "We help organizations navigate complex regulatory requirements and build sustainable compliance programs. From SOC 2 and HIPAA to GDPR and PCI DSS, our experts design governance frameworks, automate evidence collection, and prepare you for audits with confidence.",
+    icon: Scale,
+    features: [
+      "SOC 2 Type I & II readiness",
+      "GDPR & CCPA compliance programs",
+      "HIPAA security & privacy compliance",
+      "PCI DSS assessment & remediation",
+      "ISO 27001 certification preparation",
+      "IT governance framework design",
+      "Policy & procedure development",
+      "Third-party risk management",
+      "Internal audit program development",
+      "Evidence collection automation",
+      "Continuous compliance monitoring",
+      "Privacy impact assessments"
+    ],
+    benefits: [
+      "Accelerated compliance certification timelines",
+      "Reduced audit preparation effort by up to 60%",
+      "Unified control framework across multiple standards",
+      "Automated evidence collection and monitoring",
+      "Increased enterprise customer confidence",
+      "Reduced risk of regulatory fines and penalties"
+    ],
+    technologies: ["Vanta", "Drata", "OneTrust", "ServiceNow GRC", "BigID", "Qualys", "Archer", "TrustArc"],
+    caseStudies: [
+      {
+        company: "MedFlow Health",
+        industry: "Healthcare SaaS",
+        challenge: "A fast-growing health-tech startup needed SOC 2 Type II and HIPAA compliance to close enterprise deals but had no formal compliance program or dedicated security staff.",
+        solution: "Implemented Vanta for automated compliance monitoring, developed comprehensive security policies, established a risk management framework, and prepared the organization for SOC 2 Type II and HIPAA audits within 6 months.",
+        results: ["SOC 2 Type II achieved in 5 months from zero baseline", "HIPAA compliance validated with zero critical findings", "Enterprise deal pipeline increased by 300%", "Ongoing compliance maintained with 90% automation"]
+      }
+    ],
+    faqs: [
+      { question: "How long does SOC 2 Type II certification take?", answer: "From zero baseline, SOC 2 Type I typically takes 3-4 months and Type II requires an additional 6-12 month observation period. With automation tools like Vanta or Drata, we can accelerate readiness significantly." },
+      { question: "Which compliance framework should we start with?", answer: "It depends on your industry and customers. B2B SaaS companies typically start with SOC 2, healthcare with HIPAA, e-commerce with PCI DSS, and companies with EU customers with GDPR. We help you prioritize based on business impact." },
+      { question: "Can you help with multiple compliance frameworks simultaneously?", answer: "Yes — many controls overlap across frameworks. We implement a unified control framework that maps to multiple standards, reducing duplicate effort by 40-60% compared to addressing each framework separately." }
     ]
   }
 ];

@@ -26,7 +26,7 @@ const solutionCategories = [
   },
   {
     title: "Security",
-    items: ["data-security", "information-security", "code-security", "cloud-instance-security", "identity-access-management"],
+    items: ["data-security", "information-security", "code-security", "cloud-instance-security", "identity-access-management", "cybersecurity-consulting", "compliance-governance"],
   },
   {
     title: "Operations & Support",
