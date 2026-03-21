@@ -1280,6 +1280,12 @@ export const solutionsData: SolutionDetail[] = [
       "SLI/SLO/SLA definition & tracking",
       "Cost-optimized telemetry pipelines"
     ],
+    benefits: [
+      "Proactive incident detection & response",
+      "Reduced mean time to resolution (MTTR)",
+      "Deep visibility into system behavior",
+      "Data-driven performance optimization"
+    ],
     technologies: ["Datadog", "Grafana", "Prometheus", "OpenTelemetry", "Jaeger", "Loki", "Elastic Stack (ELK)", "PagerDuty", "New Relic", "Splunk Observability"],
     caseStudies: [
       {
