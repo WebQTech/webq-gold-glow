@@ -18,7 +18,7 @@ const solutionCategories = [
   },
   {
     title: "Quality Assurance",
-    items: ["qa-testing", "performance-testing", "security-testing"],
+    items: ["qa-testing", "performance-testing", "security-testing", "test-automation-framework", "accessibility-testing"],
   },
   {
     title: "Analytics & Data Management",

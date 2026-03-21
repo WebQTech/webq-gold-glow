@@ -1375,6 +1375,81 @@ export const solutionsData: SolutionDetail[] = [
       { question: "How do you handle cold starts?", answer: "We use strategies like provisioned concurrency, code optimization, lightweight runtimes, and architectural patterns that minimize cold start impact on user experience." }
     ]
   }
+  },
+  {
+    slug: "test-automation-framework",
+    name: "Test Automation Framework",
+    shortDescription: "End-to-end test automation frameworks for faster, more reliable software releases.",
+    fullDescription: "We design and implement scalable test automation frameworks that integrate seamlessly into your CI/CD pipelines. From UI and API testing to mobile and cross-browser validation, we build maintainable automation suites that catch defects early, reduce manual effort, and accelerate your release cycles.",
+    icon: Cog,
+    features: [
+      "Custom test automation framework design",
+      "UI & end-to-end test automation",
+      "API & service-level test automation",
+      "Mobile test automation (iOS & Android)",
+      "Cross-browser & cross-device testing",
+      "Data-driven & keyword-driven testing",
+      "Test reporting & analytics dashboards",
+      "CI/CD pipeline integration"
+    ],
+    benefits: [
+      "80%+ reduction in manual testing effort",
+      "Faster feedback loops for developers",
+      "Consistent & repeatable test execution",
+      "Earlier defect detection in the SDLC"
+    ],
+    technologies: ["Selenium", "Cypress", "Playwright", "Appium", "TestNG", "Jest", "Robot Framework", "Cucumber", "BrowserStack", "Sauce Labs"],
+    caseStudies: [
+      {
+        company: "Insurance Provider",
+        industry: "Financial Services",
+        challenge: "Manual regression testing took 3 weeks per release, creating a bottleneck for quarterly deployments.",
+        solution: "Built a Playwright-based automation framework with 1,200+ tests integrated into CI/CD, enabling daily regression runs.",
+        results: ["Regression cycle reduced from 3 weeks to 4 hours", "85% test automation coverage", "Release frequency increased from quarterly to bi-weekly"]
+      }
+    ],
+    faqs: [
+      { question: "Which automation tool do you recommend?", answer: "It depends on your stack. We recommend Playwright for modern web apps, Cypress for JavaScript-heavy SPAs, Selenium for legacy or multi-browser needs, and Appium for mobile. We evaluate your specific requirements before recommending." },
+      { question: "How do you ensure test maintainability?", answer: "We use Page Object Model patterns, modular design, centralized test data management, and self-healing locator strategies to minimize maintenance overhead as your application evolves." }
+    ]
+  },
+  {
+    slug: "accessibility-testing",
+    name: "Accessibility Testing",
+    shortDescription: "Ensure your digital products are inclusive and compliant with WCAG and ADA standards.",
+    fullDescription: "We provide comprehensive accessibility testing services to ensure your web and mobile applications are usable by everyone, including people with disabilities. From automated scanning and manual expert audits to assistive technology testing and remediation guidance, we help you achieve WCAG compliance and deliver truly inclusive digital experiences.",
+    icon: Accessibility,
+    features: [
+      "WCAG 2.1/2.2 compliance auditing",
+      "Automated accessibility scanning",
+      "Manual expert accessibility review",
+      "Screen reader & assistive technology testing",
+      "Keyboard navigation testing",
+      "Color contrast & visual accessibility",
+      "ARIA implementation review",
+      "Accessibility remediation guidance & training"
+    ],
+    benefits: [
+      "WCAG & ADA compliance assurance",
+      "Broader audience reach & inclusivity",
+      "Reduced legal risk from non-compliance",
+      "Improved SEO & overall user experience"
+    ],
+    technologies: ["axe-core", "WAVE", "Lighthouse", "NVDA", "JAWS", "VoiceOver", "Pa11y", "Deque Axe DevTools", "Accessibility Insights", "Tenon.io"],
+    caseStudies: [
+      {
+        company: "Government Agency",
+        industry: "Public Sector",
+        challenge: "Public-facing portal had 500+ WCAG violations, risking ADA non-compliance lawsuits and excluding users with disabilities.",
+        solution: "Conducted comprehensive accessibility audit, prioritized critical violations, and guided remediation with developer training sessions.",
+        results: ["100% WCAG 2.1 AA compliance achieved", "500+ violations remediated across 80 pages", "Accessibility integrated into CI/CD with automated checks"]
+      }
+    ],
+    faqs: [
+      { question: "What level of WCAG compliance should we target?", answer: "Most organizations target WCAG 2.1 Level AA, which is the standard required by most regulations including ADA, Section 508, and the European Accessibility Act. Level AAA is aspirational but not typically required." },
+      { question: "Can accessibility testing be automated?", answer: "Automated tools can catch about 30-40% of accessibility issues (color contrast, missing alt text, ARIA errors). Manual testing with assistive technologies is essential to catch the remaining issues like keyboard navigation, screen reader experience, and cognitive accessibility." }
+    ]
+  }
 ];
 
 export const getSolutionBySlug = (slug: string): SolutionDetail | undefined => {
