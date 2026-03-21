@@ -90,7 +90,7 @@ export const SolutionsSection = () => {
               transition={{ duration: 0.4, delay: index * 0.05 }}
             >
               <Link
-                to={`/services/${solution.slug}`}
+                to={`/solutions/${solution.slug}`}
                 className="group flex items-center gap-6 py-5 px-4 -mx-4 rounded-lg transition-all duration-300 hover:bg-muted hover:pl-8"
               >
                 <span className="text-sm font-mono font-bold text-primary opacity-60 group-hover:opacity-100 transition-opacity w-8 shrink-0">
