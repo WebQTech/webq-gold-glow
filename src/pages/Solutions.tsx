@@ -3,6 +3,25 @@ import { ArrowRight } from "lucide-react";
 import { Footer } from "@/components/Footer";
 import { solutionsData } from "@/data/solutionsData";
 
+const solutionCategories = [
+  {
+    title: "Application Development",
+    items: ["custom-app-development", "technology-modernization"],
+  },
+  {
+    title: "Cloud & Infrastructure",
+    items: ["cloud-migration", "it-infrastructure"],
+  },
+  {
+    title: "DevOps & Quality",
+    items: ["devops-sre", "qa-testing"],
+  },
+  {
+    title: "Data & Operations",
+    items: ["data-analytics", "production-support"],
+  },
+];
+
 const Solutions = () => {
   return (
     <div className="min-h-screen bg-background">
@@ -30,32 +49,33 @@ const Solutions = () => {
           </div>
         </section>
 
-        {/* Solutions Grid - Datavail-style with icon + title + description */}
+        {/* Solutions by Category - Datavail-style */}
         <section className="py-12 lg:py-16">
           <div className="container mx-auto px-6 lg:px-12">
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-10">
-              {solutionsData.map((solution) => {
-                const Icon = solution.icon;
-                return (
-                  <Link
-                    key={solution.slug}
-                    to={`/solutions/${solution.slug}`}
-                    className="group flex items-start gap-5"
-                  >
-                    <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-primary transition-colors">
-                      <Icon className="w-7 h-7 text-primary group-hover:text-primary-foreground transition-colors" />
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-semibold text-primary group-hover:underline underline-offset-4 transition-colors">
-                        {solution.name}
-                      </h3>
-                      <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
-                        {solution.shortDescription}
-                      </p>
-                    </div>
-                  </Link>
-                );
-              })}
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-x-12 gap-y-12">
+              {solutionCategories.map((category) => (
+                <div key={category.title}>
+                  <h3 className="text-base font-black text-foreground uppercase tracking-wider mb-5 border-b border-border pb-3">
+                    {category.title}
+                  </h3>
+                  <ul className="space-y-3">
+                    {category.items.map((slug) => {
+                      const solution = solutionsData.find((s) => s.slug === slug);
+                      if (!solution) return null;
+                      return (
+                        <li key={slug}>
+                          <Link
+                            to={`/solutions/${slug}`}
+                            className="text-primary hover:underline underline-offset-4 transition-colors text-[15px] leading-relaxed"
+                          >
+                            {solution.name}
+                          </Link>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </div>
+              ))}
             </div>
           </div>
         </section>
