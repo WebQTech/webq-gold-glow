@@ -1226,6 +1226,62 @@ export const solutionsData: SolutionDetail[] = [
       { question: "Which compliance framework should we start with?", answer: "It depends on your industry and customers. B2B SaaS companies typically start with SOC 2, healthcare with HIPAA, e-commerce with PCI DSS, and companies with EU customers with GDPR. We help you prioritize based on business impact." },
       { question: "Can you help with multiple compliance frameworks simultaneously?", answer: "Yes — many controls overlap across frameworks. We implement a unified control framework that maps to multiple standards, reducing duplicate effort by 40-60% compared to addressing each framework separately." }
     ]
+  },
+  {
+    slug: "platform-engineering",
+    name: "Platform Engineering",
+    shortDescription: "Build internal developer platforms that accelerate delivery and reduce cognitive load.",
+    fullDescription: "We design and implement Internal Developer Platforms (IDPs) that give your engineering teams self-service capabilities for infrastructure provisioning, environment management, and deployment workflows. By abstracting complexity behind golden paths and developer portals, we help organizations scale their engineering productivity while maintaining governance and security standards.",
+    icon: Layers,
+    features: [
+      "Internal Developer Platform (IDP) design & implementation",
+      "Developer portal & service catalog (Backstage)",
+      "Golden paths & scaffolding templates",
+      "Self-service infrastructure provisioning",
+      "Platform API & CLI tooling",
+      "Developer experience (DevEx) optimization",
+      "Multi-tenant platform architecture",
+      "Platform observability & usage analytics"
+    ],
+    technologies: ["Backstage", "Crossplane", "Kratix", "Port", "Humanitec", "Kubernetes", "Argo Workflows", "Score", "Terraform", "Pulumi"],
+    caseStudies: [
+      {
+        title: "Enterprise IDP for FinTech Company",
+        description: "Built a Backstage-based developer portal with self-service provisioning, reducing new service onboarding from 2 weeks to 30 minutes and improving developer satisfaction scores by 60%."
+      }
+    ],
+    faqs: [
+      { question: "What is platform engineering?", answer: "Platform engineering is the discipline of designing and building toolchains and workflows that enable self-service capabilities for software engineering organizations in the cloud-native era." },
+      { question: "How does this differ from DevOps?", answer: "While DevOps focuses on culture and practices, platform engineering focuses on building the actual platforms and tools that make DevOps practices easy to adopt at scale." }
+    ]
+  },
+  {
+    slug: "observability-monitoring",
+    name: "Observability & Monitoring",
+    shortDescription: "Full-stack observability with metrics, logs, and traces for proactive incident management.",
+    fullDescription: "We implement comprehensive observability strategies that give your teams deep visibility into application performance, infrastructure health, and user experience. From distributed tracing and log aggregation to custom dashboards and intelligent alerting, we build the monitoring foundation that enables proactive incident response and data-driven optimization.",
+    icon: Activity,
+    features: [
+      "Distributed tracing implementation",
+      "Log aggregation & centralized logging",
+      "Metrics collection & custom dashboards",
+      "APM (Application Performance Monitoring)",
+      "Synthetic monitoring & uptime checks",
+      "Intelligent alerting & on-call management",
+      "SLI/SLO/SLA definition & tracking",
+      "Cost-optimized telemetry pipelines"
+    ],
+    technologies: ["Datadog", "Grafana", "Prometheus", "OpenTelemetry", "Jaeger", "Loki", "Elastic Stack (ELK)", "PagerDuty", "New Relic", "Splunk Observability"],
+    caseStudies: [
+      {
+        title: "Full-Stack Observability for E-Commerce Platform",
+        description: "Implemented OpenTelemetry-based distributed tracing and Grafana dashboards across 120+ microservices, reducing mean time to detection (MTTD) by 75% and mean time to resolution (MTTR) by 55%."
+      }
+    ],
+    faqs: [
+      { question: "What is the difference between monitoring and observability?", answer: "Monitoring tells you when something is wrong; observability helps you understand why. Observability uses metrics, logs, and traces (the three pillars) to provide deep insights into system behavior." },
+      { question: "Do you support OpenTelemetry?", answer: "Yes, we strongly advocate for OpenTelemetry as a vendor-neutral standard. It provides flexibility to switch between observability backends without re-instrumenting your applications." }
+    ]
   }
 ];
 
