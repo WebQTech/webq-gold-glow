@@ -1374,7 +1374,6 @@ export const solutionsData: SolutionDetail[] = [
       { question: "When should we use serverless vs. containers?", answer: "Serverless is ideal for event-driven workloads, intermittent traffic, and when you want zero ops overhead. Containers are better for long-running processes, workloads needing consistent performance, or when you need full control over the runtime." },
       { question: "How do you handle cold starts?", answer: "We use strategies like provisioned concurrency, code optimization, lightweight runtimes, and architectural patterns that minimize cold start impact on user experience." }
     ]
-  }
   },
   {
     slug: "test-automation-framework",
