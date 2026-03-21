@@ -1,6 +1,6 @@
 import {
   Code2, Cloud, Server, RefreshCw, TestTube, Headphones, Settings, Database,
-  Gauge, Network, GitBranch, Container,
+  Gauge, Network, GitBranch, Container, Zap, Shield, Wrench, ClipboardList,
   LucideIcon
 } from "lucide-react";
 
