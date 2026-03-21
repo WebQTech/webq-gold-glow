@@ -9,12 +9,16 @@ const solutionCategories = [
     items: ["custom-app-development", "technology-modernization"],
   },
   {
-    title: "Cloud & Infrastructure",
+    title: "Cloud Services",
     items: ["cloud-migration", "it-infrastructure"],
   },
   {
-    title: "DevOps & Quality",
-    items: ["devops-sre", "qa-testing"],
+    title: "DevOps",
+    items: ["devops-sre"],
+  },
+  {
+    title: "Quality Assurance",
+    items: ["qa-testing"],
   },
   {
     title: "Analytics & Data Management",
