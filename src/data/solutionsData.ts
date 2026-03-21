@@ -1301,6 +1301,81 @@ export const solutionsData: SolutionDetail[] = [
       { question: "Do you support OpenTelemetry?", answer: "Yes, we strongly advocate for OpenTelemetry as a vendor-neutral standard. It provides flexibility to switch between observability backends without re-instrumenting your applications." }
     ]
   }
+  },
+  {
+    slug: "finops",
+    name: "FinOps & Cloud Cost Optimization",
+    shortDescription: "Gain visibility and control over cloud spending with data-driven financial operations.",
+    fullDescription: "We implement FinOps practices and tooling that give your organization full visibility into cloud costs, enable accurate forecasting, and drive continuous optimization. From tagging strategies and showback/chargeback models to automated rightsizing and reserved instance planning, we help you maximize cloud ROI while maintaining performance.",
+    icon: DollarSign,
+    features: [
+      "Cloud cost visibility & reporting dashboards",
+      "Tagging strategy & cost allocation",
+      "Showback & chargeback models",
+      "Rightsizing & instance optimization",
+      "Reserved instance & savings plan management",
+      "Anomaly detection & budget alerting",
+      "Multi-cloud cost consolidation",
+      "FinOps culture & team enablement"
+    ],
+    benefits: [
+      "Reduced cloud spend by 20-40%",
+      "Accurate cost forecasting & budgeting",
+      "Accountability across engineering teams",
+      "Data-driven infrastructure decisions"
+    ],
+    technologies: ["CloudHealth", "Apptio Cloudability", "AWS Cost Explorer", "Azure Cost Management", "Spot by NetApp", "Kubecost", "Infracost", "Vantage", "nOps", "Cast AI"],
+    caseStudies: [
+      {
+        company: "SaaS Enterprise",
+        industry: "Technology",
+        challenge: "Cloud costs growing 30% quarter-over-quarter with no visibility into spend drivers across 200+ AWS accounts.",
+        solution: "Implemented FinOps framework with CloudHealth, automated tagging, rightsizing recommendations, and team-level chargeback dashboards.",
+        results: ["35% reduction in annual cloud spend", "Full cost attribution across 40 engineering teams", "Automated anomaly detection preventing $50K+ monthly overruns"]
+      }
+    ],
+    faqs: [
+      { question: "What is FinOps?", answer: "FinOps is a cloud financial management discipline that brings financial accountability to cloud spending. It combines people, processes, and tools to help organizations understand and optimize their cloud costs." },
+      { question: "How quickly can we see cost savings?", answer: "Most organizations see 15-25% savings within the first 90 days through quick wins like rightsizing, eliminating waste, and optimizing reserved capacity." }
+    ]
+  },
+  {
+    slug: "serverless-architecture",
+    name: "Serverless Architecture",
+    shortDescription: "Build event-driven, auto-scaling applications with zero infrastructure management overhead.",
+    fullDescription: "We design and implement serverless architectures that let your teams focus on business logic while the cloud handles scaling, availability, and infrastructure management. From API backends and event processing to full serverless web applications, we help you leverage Functions-as-a-Service and managed services for maximum agility and cost efficiency.",
+    icon: CloudLightning,
+    features: [
+      "Serverless API & microservices design",
+      "Event-driven architecture patterns",
+      "Step functions & workflow orchestration",
+      "Serverless data processing pipelines",
+      "Edge computing & CDN functions",
+      "Serverless database integration",
+      "Cold start optimization strategies",
+      "Serverless security & IAM best practices"
+    ],
+    benefits: [
+      "Zero infrastructure management",
+      "Auto-scaling from zero to millions of requests",
+      "Pay-per-use cost model",
+      "Faster time-to-market for new features"
+    ],
+    technologies: ["AWS Lambda", "Azure Functions", "Google Cloud Functions", "AWS Step Functions", "API Gateway", "EventBridge", "DynamoDB", "Cloudflare Workers", "Vercel Edge Functions", "AWS SAM"],
+    caseStudies: [
+      {
+        company: "Media Streaming Company",
+        industry: "Media & Entertainment",
+        challenge: "Needed to process millions of real-time events daily for content recommendations with unpredictable traffic spikes.",
+        solution: "Built a fully serverless event-driven pipeline using Lambda, EventBridge, and DynamoDB with automatic scaling.",
+        results: ["Processing 5M+ events/day with zero ops overhead", "70% cost reduction vs. always-on infrastructure", "Sub-second response times during peak traffic"]
+      }
+    ],
+    faqs: [
+      { question: "When should we use serverless vs. containers?", answer: "Serverless is ideal for event-driven workloads, intermittent traffic, and when you want zero ops overhead. Containers are better for long-running processes, workloads needing consistent performance, or when you need full control over the runtime." },
+      { question: "How do you handle cold starts?", answer: "We use strategies like provisioned concurrency, code optimization, lightweight runtimes, and architectural patterns that minimize cold start impact on user experience." }
+    ]
+  }
 ];
 
 export const getSolutionBySlug = (slug: string): SolutionDetail | undefined => {
