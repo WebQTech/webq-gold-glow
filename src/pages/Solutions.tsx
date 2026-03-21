@@ -10,7 +10,7 @@ const solutionCategories = [
   },
   {
     title: "Cloud Services",
-    items: ["cloud-migration", "it-infrastructure", "cloud-optimization", "hybrid-multi-cloud"],
+    items: ["cloud-migration", "it-infrastructure", "cloud-optimization", "hybrid-multi-cloud", "finops", "serverless-architecture"],
   },
   {
     title: "DevOps",
