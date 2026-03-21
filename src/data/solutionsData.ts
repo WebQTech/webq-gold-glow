@@ -1,7 +1,7 @@
 import {
   Code2, Cloud, Server, RefreshCw, TestTube, Headphones, Settings, Database,
   Gauge, Network, GitBranch, Container, Zap, Shield, Wrench, ClipboardList,
-  BarChart3, Brain, Smartphone, Plug,
+  BarChart3, Brain, Smartphone, Plug, Lock, ShieldCheck, FileCode, CloudCog, KeyRound,
   LucideIcon
 } from "lucide-react";
 
@@ -855,6 +855,206 @@ export const solutionsData: SolutionDetail[] = [
       { question: "REST or GraphQL — which should we use?", answer: "REST is simpler and widely supported — great for CRUD-heavy APIs. GraphQL is ideal when clients need flexible queries or you're serving multiple frontends. We often recommend a hybrid approach." },
       { question: "How do you ensure API security?", answer: "We implement OAuth 2.0, rate limiting, input validation, encryption in transit, and API key management. Every API goes through security review before deployment." },
       { question: "Can you help with legacy system integration?", answer: "Yes, we specialize in wrapping legacy systems with modern APIs — enabling them to participate in your digital ecosystem without costly rewrites." }
+    ]
+  },
+  {
+    slug: "data-security",
+    name: "Data Security",
+    shortDescription: "Protect sensitive data across its lifecycle with encryption, masking, classification, and loss prevention strategies.",
+    fullDescription: "Our data security solutions safeguard your organization's most valuable asset — its data. We implement comprehensive protection strategies covering data at rest, in transit, and in use, ensuring regulatory compliance while enabling secure data sharing and collaboration across teams and partners.",
+    icon: Lock,
+    features: [
+      "Data encryption (AES-256, TLS 1.3, envelope encryption)",
+      "Data loss prevention (DLP) implementation",
+      "Data classification and discovery",
+      "Database activity monitoring and auditing",
+      "Tokenization and data masking",
+      "Backup encryption and secure recovery",
+      "Data retention and secure destruction policies",
+      "Cross-border data transfer compliance"
+    ],
+    benefits: [
+      "Prevent unauthorized access to sensitive information",
+      "Meet regulatory requirements (GDPR, CCPA, HIPAA, PCI DSS)",
+      "Minimize breach impact with layered encryption",
+      "Enable secure data sharing with partners",
+      "Maintain customer trust and brand integrity",
+      "Comprehensive audit trails for compliance reporting"
+    ],
+    technologies: ["Varonis", "Informatica Data Privacy", "BigID", "Imperva", "Thales CipherTrust", "HashiCorp Vault", "AWS KMS", "Azure Purview", "Google DLP API", "Symantec DLP", "Digital Guardian", "Protegrity"],
+    caseStudies: [
+      {
+        company: "FinGuard Banking",
+        industry: "Financial Services",
+        challenge: "Unclassified sensitive data spread across 50+ databases with no encryption strategy, putting the organization at risk of regulatory penalties and data breaches.",
+        solution: "Deployed automated data discovery and classification, implemented column-level encryption for PII/PCI data, and established DLP policies across all endpoints and cloud storage.",
+        results: ["100% of sensitive data classified and encrypted", "PCI DSS Level 1 compliance achieved", "Zero data leakage incidents post-implementation", "Audit preparation time reduced by 70%"]
+      }
+    ],
+    faqs: [
+      { question: "What data should we encrypt first?", answer: "Start with PII, payment data, health records, and intellectual property. We perform a data discovery and risk assessment to prioritize based on regulatory exposure and business impact." },
+      { question: "Does encryption impact application performance?", answer: "Modern encryption algorithms have minimal overhead. We optimize key management and use hardware-accelerated encryption where needed to ensure negligible performance impact." },
+      { question: "How do you handle encryption key management?", answer: "We implement centralized key management using HSMs or cloud KMS services with key rotation, access controls, and separation of duties — ensuring keys are as protected as the data." }
+    ]
+  },
+  {
+    slug: "information-security",
+    name: "Information Security",
+    shortDescription: "Establish enterprise-wide security programs with risk management, governance frameworks, and incident response.",
+    fullDescription: "Our information security services help organizations build and maintain robust security programs aligned with industry frameworks. From risk assessments and policy development to security operations and incident response, we provide end-to-end protection for your information assets and business processes.",
+    icon: ShieldCheck,
+    features: [
+      "Security risk assessment and gap analysis",
+      "ISMS implementation (ISO 27001, NIST CSF, SOC 2)",
+      "Security policy and procedure development",
+      "Security Operations Center (SOC) setup",
+      "Threat intelligence and monitoring",
+      "Incident response planning and tabletop exercises",
+      "Vulnerability management programs",
+      "Security awareness training and phishing simulations"
+    ],
+    benefits: [
+      "Proactive threat detection and rapid response",
+      "Framework-aligned security posture (ISO 27001, NIST)",
+      "Reduced risk of breaches and associated costs",
+      "Cultivate a security-first organizational culture",
+      "Board-ready security reporting and metrics",
+      "Streamlined audit and certification processes"
+    ],
+    technologies: ["Splunk SIEM", "Microsoft Sentinel", "CrowdStrike Falcon", "Palo Alto Cortex XSOAR", "Qualys", "Tenable Nessus", "KnowBe4", "Rapid7 InsightVM", "Elastic Security", "Carbon Black", "Wiz", "SentinelOne"],
+    caseStudies: [
+      {
+        company: "GlobalTech Enterprises",
+        industry: "Technology",
+        challenge: "No formal security program, ad-hoc incident handling, and failed SOC 2 audit blocking enterprise sales pipeline worth $20M.",
+        solution: "Built an ISMS from the ground up — risk assessment, policy framework, 24/7 SOC with SIEM deployment, vulnerability management program, and employee security training.",
+        results: ["SOC 2 Type II certification in 6 months", "$20M enterprise pipeline unblocked", "Mean time to detect threats reduced to 15 minutes", "95% employee phishing test pass rate"]
+      }
+    ],
+    faqs: [
+      { question: "Which security framework should we adopt?", answer: "It depends on your industry and goals. SOC 2 is essential for SaaS companies, ISO 27001 for global enterprises, NIST CSF for US government contractors, and HIPAA for healthcare. We help you choose and implement the right framework." },
+      { question: "Do we need a 24/7 SOC?", answer: "For organizations with sensitive data or regulatory requirements, 24/7 monitoring is critical. We offer managed SOC services or help you build an in-house capability based on your scale and budget." },
+      { question: "How often should we conduct risk assessments?", answer: "At minimum annually, plus after significant changes to infrastructure, applications, or business processes. Continuous risk monitoring is recommended for mature security programs." }
+    ]
+  },
+  {
+    slug: "code-security",
+    name: "Code Security",
+    shortDescription: "Embed security into your development lifecycle with secure coding practices, SAST/DAST, and supply chain protection.",
+    fullDescription: "Our code security services integrate security directly into your software development lifecycle (SDLC). We implement shift-left security practices, automate vulnerability scanning in CI/CD pipelines, and protect your software supply chain — ensuring every line of code that reaches production is secure by design.",
+    icon: FileCode,
+    features: [
+      "Static Application Security Testing (SAST)",
+      "Dynamic Application Security Testing (DAST)",
+      "Software Composition Analysis (SCA)",
+      "Secure code review and developer training",
+      "CI/CD pipeline security gate integration",
+      "Software Bill of Materials (SBOM) generation",
+      "Container image scanning and hardening",
+      "Secret detection and management in repositories"
+    ],
+    benefits: [
+      "Catch vulnerabilities before they reach production",
+      "Reduce remediation costs with shift-left approach",
+      "Protect against supply chain attacks",
+      "Build developer security competency",
+      "Automated compliance evidence from pipelines",
+      "Faster secure releases with integrated tooling"
+    ],
+    technologies: ["SonarQube", "Snyk", "Checkmarx", "Veracode", "Semgrep", "GitHub Advanced Security", "GitLab SAST", "Trivy", "Grype", "Gitleaks", "OWASP Dependency-Check", "Sigstore", "Syft"],
+    caseStudies: [
+      {
+        company: "CloudPay Systems",
+        industry: "FinTech",
+        challenge: "Critical vulnerabilities discovered in production code and third-party dependencies, with no automated scanning in the CI/CD pipeline — manual reviews missed 60% of issues.",
+        solution: "Implemented SAST, DAST, and SCA tools as CI/CD gates, established secure coding standards, deployed secret scanning across all repositories, and trained 80 developers on secure practices.",
+        results: ["92% of vulnerabilities caught pre-production", "Third-party dependency risks reduced by 85%", "Zero critical CVEs in production for 12 months", "Developer security proficiency doubled"]
+      }
+    ],
+    faqs: [
+      { question: "What's the difference between SAST, DAST, and SCA?", answer: "SAST analyzes source code for flaws without running it. DAST tests running applications for runtime vulnerabilities. SCA identifies known vulnerabilities in open-source dependencies. Together they provide comprehensive coverage." },
+      { question: "Will security scanning slow down our CI/CD pipeline?", answer: "Incremental scanning adds minimal time (1-3 minutes). We optimize by running fast scans on every commit and full scans on PRs/releases, balancing speed with thorough coverage." },
+      { question: "How do you handle false positives?", answer: "We tune scanning rules to your codebase, create suppression policies for verified false positives, and implement triage workflows so developers focus only on real issues." }
+    ]
+  },
+  {
+    slug: "cloud-instance-security",
+    name: "Cloud Instance Security",
+    shortDescription: "Secure your cloud workloads with posture management, runtime protection, and compliance automation.",
+    fullDescription: "Our cloud instance security services protect your compute workloads across AWS, Azure, and GCP. We implement cloud security posture management (CSPM), workload protection platforms (CWPP), and automated compliance checks to ensure every cloud resource is configured securely and monitored continuously.",
+    icon: CloudCog,
+    features: [
+      "Cloud Security Posture Management (CSPM)",
+      "Cloud Workload Protection Platform (CWPP)",
+      "Instance hardening and CIS benchmark compliance",
+      "Network segmentation and micro-segmentation",
+      "Runtime threat detection and response",
+      "Automated compliance remediation",
+      "Multi-cloud security policy unification",
+      "Serverless and container security"
+    ],
+    benefits: [
+      "Eliminate misconfigurations — the #1 cloud breach cause",
+      "Continuous compliance across all cloud accounts",
+      "Unified security view across multi-cloud environments",
+      "Automated detection and remediation of drift",
+      "Reduced attack surface with least-privilege policies",
+      "Real-time visibility into cloud resource posture"
+    ],
+    technologies: ["Wiz", "Prisma Cloud", "AWS Security Hub", "Azure Defender", "Google Security Command Center", "Lacework", "Orca Security", "Aqua Security", "Falco", "AWS GuardDuty", "CloudTrail", "Terraform Sentinel"],
+    caseStudies: [
+      {
+        company: "ScaleUp SaaS",
+        industry: "Technology",
+        challenge: "Rapid cloud expansion led to 3,000+ unaudited instances across 12 AWS accounts with misconfigured security groups, public S3 buckets, and no centralized visibility.",
+        solution: "Deployed CSPM across all accounts, remediated 500+ critical misconfigurations, implemented automated guardrails via IaC policies, and established continuous compliance monitoring.",
+        results: ["500+ critical misconfigurations remediated in 4 weeks", "100% visibility across 12 AWS accounts", "CIS benchmark compliance improved from 42% to 97%", "Automated remediation for 80% of common drift issues"]
+      }
+    ],
+    faqs: [
+      { question: "What are the most common cloud security risks?", answer: "Misconfigured storage buckets, overly permissive IAM roles, unencrypted data, exposed management ports, and missing logging. Our CSPM tools continuously scan for these and 200+ other risk patterns." },
+      { question: "Can you secure multi-cloud environments?", answer: "Yes, we deploy unified security policies across AWS, Azure, and GCP using tools like Wiz or Prisma Cloud, providing a single pane of glass for posture management." },
+      { question: "How do you handle auto-remediation safely?", answer: "We implement graduated responses — alerting for critical resources, auto-remediation for well-understood issues with rollback capability, and approval workflows for sensitive changes." }
+    ]
+  },
+  {
+    slug: "identity-access-management",
+    name: "Identity & Access Management",
+    shortDescription: "Control who accesses what with zero-trust IAM, SSO, MFA, and privileged access management.",
+    fullDescription: "Our Identity & Access Management solutions help organizations implement zero-trust security models with centralized identity governance. We deploy SSO, MFA, privileged access management, and role-based access controls to ensure the right people have the right access at the right time — and nothing more.",
+    icon: KeyRound,
+    features: [
+      "Single Sign-On (SSO) implementation",
+      "Multi-Factor Authentication (MFA) deployment",
+      "Privileged Access Management (PAM)",
+      "Role-Based Access Control (RBAC) design",
+      "Identity governance and lifecycle management",
+      "Zero-trust architecture implementation",
+      "Directory services and federation",
+      "Access certification and recertification campaigns"
+    ],
+    benefits: [
+      "Eliminate password fatigue with seamless SSO",
+      "Block 99.9% of credential-based attacks with MFA",
+      "Enforce least-privilege access across all systems",
+      "Automated provisioning and deprovisioning",
+      "Complete audit trail of access decisions",
+      "Regulatory compliance for access controls"
+    ],
+    technologies: ["Okta", "Azure AD / Entra ID", "CyberArk", "Ping Identity", "Auth0", "AWS IAM Identity Center", "SailPoint", "OneLogin", "BeyondTrust", "HashiCorp Boundary", "Keycloak", "ForgeRock"],
+    caseStudies: [
+      {
+        company: "Continental Healthcare Network",
+        industry: "Healthcare",
+        challenge: "150+ applications with separate credentials, no centralized access governance, and failed HIPAA audit due to orphaned accounts and excessive privileges.",
+        solution: "Implemented Okta SSO with MFA across all applications, deployed CyberArk PAM for privileged accounts, and established automated joiner/mover/leaver workflows tied to HR systems.",
+        results: ["Login time reduced from 45 minutes to 2 minutes daily per user", "100% MFA coverage across all applications", "Orphaned accounts eliminated with automated deprovisioning", "HIPAA access control audit passed with zero findings"]
+      }
+    ],
+    faqs: [
+      { question: "How long does SSO implementation take?", answer: "Core SSO with major applications typically takes 4-8 weeks. Full rollout across all applications depends on integration complexity — we prioritize high-risk and high-usage apps first." },
+      { question: "What MFA methods do you support?", answer: "We implement phishing-resistant MFA including FIDO2/WebAuthn hardware keys, authenticator apps, push notifications, and biometrics. SMS-based MFA is discouraged due to SIM-swap risks." },
+      { question: "How do you handle third-party/contractor access?", answer: "We implement time-bound, just-in-time access with approval workflows, separate identity stores for external users, and automated expiration policies to prevent access creep." }
     ]
   }
 ];
