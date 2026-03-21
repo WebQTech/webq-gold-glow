@@ -30,7 +30,7 @@ const solutionCategories = [
   },
   {
     title: "Operations & Support",
-    items: ["production-support", "managed-services", "it-service-management"],
+    items: ["production-support", "managed-services", "it-service-management", "it-asset-management", "disaster-recovery"],
   },
 ];
 
