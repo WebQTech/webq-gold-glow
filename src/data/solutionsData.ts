@@ -535,6 +535,166 @@ export const solutionsData: SolutionDetail[] = [
       { question: "Which IaC tool should we use?", answer: "It depends on your stack. Terraform is ideal for multi-cloud, Pulumi if your team prefers general-purpose languages, and CloudFormation/Bicep for single-cloud AWS/Azure shops. We help you choose and implement the right tool." },
       { question: "Can IaC work with existing manually created infrastructure?", answer: "Yes, we can import existing resources into Terraform state and gradually bring your infrastructure under code management without disruption." }
     ]
+  },
+  {
+    slug: "performance-testing",
+    name: "Performance & Load Testing",
+    shortDescription: "Ensure your applications perform flawlessly under any load with comprehensive performance engineering.",
+    fullDescription: "Our performance testing services identify bottlenecks, validate scalability, and ensure your applications deliver exceptional user experiences under peak traffic. We combine automated load testing with deep performance analysis to optimize response times, throughput, and resource utilization.",
+    icon: Zap,
+    features: [
+      "Load, stress, and endurance testing",
+      "Scalability and capacity planning",
+      "Application performance monitoring (APM)",
+      "Database query optimization",
+      "Front-end performance auditing",
+      "API response time benchmarking",
+      "Cloud auto-scaling validation",
+      "Performance regression testing in CI/CD"
+    ],
+    benefits: [
+      "Identify bottlenecks before they impact users",
+      "Confidently handle traffic spikes and growth",
+      "Optimize infrastructure costs with right-sizing",
+      "Improve user satisfaction with faster load times",
+      "Data-driven capacity planning decisions",
+      "Reduced downtime from performance failures"
+    ],
+    technologies: ["JMeter", "Gatling", "K6", "Locust", "BlazeMeter", "Datadog APM", "New Relic", "Lighthouse", "WebPageTest", "Grafana", "InfluxDB"],
+    caseStudies: [
+      {
+        company: "ShopStream",
+        industry: "E-Commerce",
+        challenge: "Platform crashes during seasonal sales events, losing millions in revenue due to inability to handle 10x normal traffic.",
+        solution: "Implemented comprehensive performance testing suite simulating peak loads, identified critical database and caching bottlenecks, and established auto-scaling strategies.",
+        results: ["Handled 15x normal traffic during Black Friday", "Page load time reduced from 4.2s to 1.1s", "Zero downtime during peak sales", "$2.5M additional revenue captured"]
+      }
+    ],
+    faqs: [
+      { question: "When should we start performance testing?", answer: "Ideally, performance testing begins early in development with component-level benchmarks. Full load testing should happen before every major release and capacity changes." },
+      { question: "How do you simulate realistic load?", answer: "We analyze production traffic patterns, user journeys, and data volumes to create realistic test scenarios that mirror actual usage, including geographic distribution and device mix." },
+      { question: "Can you test cloud auto-scaling?", answer: "Yes, we validate that auto-scaling policies trigger correctly, scale fast enough, and handle scale-down gracefully — ensuring cost efficiency and availability." }
+    ]
+  },
+  {
+    slug: "security-testing",
+    name: "Security Testing & Compliance",
+    shortDescription: "Protect your applications with thorough security assessments, penetration testing, and compliance validation.",
+    fullDescription: "Our security testing services help organizations identify vulnerabilities, validate security controls, and achieve compliance with industry standards. We combine automated scanning with manual penetration testing to provide comprehensive coverage across your application stack.",
+    icon: Shield,
+    features: [
+      "Penetration testing (web, mobile, API)",
+      "OWASP Top 10 vulnerability assessment",
+      "Static and dynamic application security testing (SAST/DAST)",
+      "Compliance validation (SOC 2, HIPAA, PCI DSS, GDPR)",
+      "Security code review",
+      "Cloud security posture assessment",
+      "Third-party dependency scanning",
+      "Security awareness training"
+    ],
+    benefits: [
+      "Identify and remediate vulnerabilities proactively",
+      "Achieve and maintain regulatory compliance",
+      "Protect customer data and brand reputation",
+      "Reduce risk of costly data breaches",
+      "Security-first development culture",
+      "Comprehensive audit-ready documentation"
+    ],
+    technologies: ["Burp Suite", "OWASP ZAP", "SonarQube", "Snyk", "Veracode", "Checkmarx", "Nessus", "Qualys", "AWS Security Hub", "Trivy", "Dependabot"],
+    caseStudies: [
+      {
+        company: "MedSecure Health",
+        industry: "Healthcare",
+        challenge: "Needed to achieve HIPAA compliance for a new patient portal while addressing multiple security vulnerabilities found in a previous audit.",
+        solution: "Conducted comprehensive penetration testing, implemented SAST/DAST in CI/CD pipeline, remediated all critical findings, and established ongoing security monitoring.",
+        results: ["100% of critical vulnerabilities remediated", "HIPAA compliance achieved in 8 weeks", "Passed external audit with zero findings", "50% reduction in security incidents year-over-year"]
+      }
+    ],
+    faqs: [
+      { question: "How often should we conduct penetration testing?", answer: "We recommend at least annually, plus after significant application changes. Continuous automated scanning should complement periodic manual testing." },
+      { question: "What compliance frameworks do you support?", answer: "We support SOC 2, HIPAA, PCI DSS, GDPR, ISO 27001, and FedRAMP. Our team tailors assessments to your specific regulatory requirements." },
+      { question: "Do you provide remediation support?", answer: "Yes, we don't just find vulnerabilities — we help your team fix them with detailed remediation guidance, code-level recommendations, and verification retesting." }
+    ]
+  },
+  {
+    slug: "managed-services",
+    name: "Managed IT Services",
+    shortDescription: "End-to-end management of your IT infrastructure, applications, and cloud environments.",
+    fullDescription: "Our managed services provide comprehensive, ongoing management of your technology landscape. From infrastructure and cloud to applications and databases, we take ownership of day-to-day operations so your team can focus on innovation and business growth.",
+    icon: Wrench,
+    features: [
+      "Infrastructure management (on-prem & cloud)",
+      "Application management and support",
+      "Database administration (DBA as a Service)",
+      "Patch management and updates",
+      "Backup and disaster recovery",
+      "Capacity planning and optimization",
+      "Vendor management and coordination",
+      "Monthly reporting and strategic reviews"
+    ],
+    benefits: [
+      "Predictable monthly IT costs",
+      "Access to certified expert teams",
+      "Reduced operational burden on internal staff",
+      "Improved system reliability and uptime",
+      "Scalable resources on demand",
+      "Strategic IT guidance and roadmap planning"
+    ],
+    technologies: ["AWS", "Azure", "GCP", "VMware", "Oracle", "SQL Server", "PostgreSQL", "MongoDB", "Ansible", "Terraform", "ServiceNow", "Zabbix"],
+    caseStudies: [
+      {
+        company: "Midwest Manufacturing Co.",
+        industry: "Manufacturing",
+        challenge: "Small IT team overwhelmed by maintaining 200+ servers, multiple databases, and legacy ERP systems while trying to drive digital transformation.",
+        solution: "Transitioned infrastructure and database management to our managed services team, freeing internal staff to focus on strategic initiatives.",
+        results: ["35% reduction in IT operational costs", "99.95% system uptime achieved", "Internal team refocused on digital initiatives", "Successful ERP modernization completed on schedule"]
+      }
+    ],
+    faqs: [
+      { question: "What's included in managed services?", answer: "Our managed services cover monitoring, maintenance, patching, performance tuning, incident response, backup management, and strategic reviews — customized to your environment." },
+      { question: "Can you manage hybrid environments?", answer: "Yes, we manage complex hybrid environments spanning on-premises data centers, private clouds, and multiple public cloud providers as a unified service." },
+      { question: "How do you handle knowledge transfer?", answer: "We maintain comprehensive documentation, runbooks, and architecture diagrams. All knowledge is shared transparently, ensuring no vendor lock-in." }
+    ]
+  },
+  {
+    slug: "it-service-management",
+    name: "IT Service Management (ITSM)",
+    shortDescription: "Streamline IT operations with ITIL-aligned service management processes and automation.",
+    fullDescription: "Our ITSM solutions help organizations establish structured, efficient IT service delivery. We implement ITIL best practices, deploy service management platforms, and automate workflows to improve service quality, reduce costs, and enhance user satisfaction.",
+    icon: ClipboardList,
+    features: [
+      "ITIL process design and implementation",
+      "Service desk setup and optimization",
+      "Incident, problem, and change management",
+      "Service catalog and request fulfillment",
+      "Configuration management (CMDB)",
+      "Knowledge management systems",
+      "SLA management and reporting",
+      "Workflow automation and self-service portals"
+    ],
+    benefits: [
+      "Standardized and repeatable IT processes",
+      "Faster incident resolution and fewer escalations",
+      "Improved user satisfaction scores",
+      "Better visibility into IT operations",
+      "Reduced manual effort through automation",
+      "Data-driven continuous improvement"
+    ],
+    technologies: ["ServiceNow", "Jira Service Management", "Freshservice", "BMC Helix", "PagerDuty", "Confluence", "Power Automate", "Zapier", "Slack", "Teams"],
+    caseStudies: [
+      {
+        company: "National Credit Union",
+        industry: "Financial Services",
+        challenge: "Inconsistent IT service delivery across 50 branches with no centralized ticketing, leading to poor user satisfaction and untracked SLAs.",
+        solution: "Implemented ServiceNow-based ITSM platform with automated workflows, self-service portal, and comprehensive reporting across all branches.",
+        results: ["User satisfaction improved from 62% to 91%", "First-call resolution increased to 78%", "Mean time to resolve reduced by 45%", "Full SLA visibility across all branches"]
+      }
+    ],
+    faqs: [
+      { question: "Do we need to adopt all ITIL processes at once?", answer: "No, we recommend a phased approach starting with incident and request management, then expanding to problem, change, and other processes as maturity grows." },
+      { question: "Which ITSM platform do you recommend?", answer: "It depends on your scale and needs. ServiceNow is ideal for large enterprises, Jira Service Management for agile teams, and Freshservice for mid-market organizations." },
+      { question: "Can you integrate ITSM with our existing tools?", answer: "Absolutely. We integrate ITSM platforms with monitoring tools, CI/CD pipelines, cloud providers, and communication platforms for seamless operations." }
+    ]
   }
 ];
 
