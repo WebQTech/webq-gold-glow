@@ -25,6 +25,10 @@ const solutionCategories = [
     items: ["data-analytics", "data-management", "business-intelligence", "ai-ml-solutions"],
   },
   {
+    title: "Security",
+    items: ["data-security", "information-security", "code-security", "cloud-instance-security", "identity-access-management"],
+  },
+  {
     title: "Operations & Support",
     items: ["production-support", "managed-services", "it-service-management"],
   },
