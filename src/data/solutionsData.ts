@@ -2,7 +2,7 @@ import {
   Code2, Cloud, Server, RefreshCw, TestTube, Headphones, Settings, Database,
   Gauge, Network, GitBranch, Container, Zap, Shield, Wrench, ClipboardList,
   BarChart3, Brain, Smartphone, Plug, Lock, ShieldCheck, FileCode, CloudCog, KeyRound,
-  ShieldAlert, Scale, LucideIcon
+  ShieldAlert, Scale, PackageSearch, HardDriveDownload, LucideIcon
 } from "lucide-react";
 
 export interface SolutionDetail {
@@ -695,6 +695,88 @@ export const solutionsData: SolutionDetail[] = [
       { question: "Do we need to adopt all ITIL processes at once?", answer: "No, we recommend a phased approach starting with incident and request management, then expanding to problem, change, and other processes as maturity grows." },
       { question: "Which ITSM platform do you recommend?", answer: "It depends on your scale and needs. ServiceNow is ideal for large enterprises, Jira Service Management for agile teams, and Freshservice for mid-market organizations." },
       { question: "Can you integrate ITSM with our existing tools?", answer: "Absolutely. We integrate ITSM platforms with monitoring tools, CI/CD pipelines, cloud providers, and communication platforms for seamless operations." }
+    ]
+  },
+  {
+    slug: "it-asset-management",
+    name: "IT Asset Management",
+    shortDescription: "Gain full visibility into hardware, software, and cloud assets with lifecycle tracking, license optimization, and compliance reporting.",
+    fullDescription: "Our IT Asset Management services provide end-to-end visibility and control over your technology investments. From procurement to retirement, we help you track hardware, software, and cloud assets, optimize license spend, ensure compliance, and make data-driven decisions about your IT estate.",
+    icon: PackageSearch,
+    features: [
+      "Hardware asset discovery and inventory",
+      "Software license management and optimization",
+      "Cloud asset tracking and cost management",
+      "Asset lifecycle management (procure to retire)",
+      "License compliance and audit readiness",
+      "Vendor contract management",
+      "Automated asset provisioning and deprovisioning",
+      "CMDB integration and data enrichment"
+    ],
+    benefits: [
+      "Eliminate wasted spend on unused licenses",
+      "Full visibility into IT asset estate",
+      "Audit-ready compliance reporting",
+      "Reduced risk of shadow IT",
+      "Optimized hardware refresh cycles",
+      "Data-driven procurement decisions"
+    ],
+    technologies: ["ServiceNow ITAM", "Flexera", "Snow Software", "Lansweeper", "Oomnitza", "Microsoft Intune", "Jamf", "AWS Cost Explorer", "Azure Cost Management", "Cloudability"],
+    caseStudies: [
+      {
+        company: "Continental Logistics",
+        industry: "Logistics & Transportation",
+        challenge: "A logistics company with 5,000+ endpoints had no centralized asset tracking, leading to over-provisioned software licenses and surprise audit penalties.",
+        solution: "Deployed ServiceNow ITAM with automated discovery, integrated Flexera for license optimization, and established lifecycle workflows from procurement to disposal.",
+        results: ["$1.2M annual savings from license reclamation", "100% asset visibility across all locations", "Software audit penalties eliminated", "Hardware refresh cycle optimized, extending useful life by 18 months"]
+      }
+    ],
+    faqs: [
+      { question: "How do you discover assets across our environment?", answer: "We use agentless and agent-based discovery tools that scan your network, cloud environments, and endpoints to build a comprehensive inventory — including shadow IT and unauthorized software." },
+      { question: "Can you help with software audit defense?", answer: "Yes. We establish effective license positions (ELPs) for major vendors like Microsoft, Oracle, and Adobe, ensuring you're audit-ready with documented proof of compliance." },
+      { question: "How does ITAM integrate with our existing ITSM?", answer: "ITAM and ITSM work best together. We integrate asset data with your service desk so technicians see asset details on tickets, and changes are automatically reflected in the CMDB." }
+    ]
+  },
+  {
+    slug: "disaster-recovery",
+    name: "Disaster Recovery & Business Continuity",
+    shortDescription: "Protect your operations with comprehensive disaster recovery planning, automated failover, and business continuity strategies.",
+    fullDescription: "Our Disaster Recovery and Business Continuity services ensure your organization can withstand and rapidly recover from any disruption — whether cyberattack, natural disaster, or infrastructure failure. We design, implement, and test comprehensive DR strategies that minimize downtime and data loss.",
+    icon: HardDriveDownload,
+    features: [
+      "Business impact analysis (BIA)",
+      "Disaster recovery plan design and documentation",
+      "Automated failover and failback solutions",
+      "Cloud-based disaster recovery (DRaaS)",
+      "Backup strategy design and implementation",
+      "Recovery time objective (RTO) optimization",
+      "Recovery point objective (RPO) minimization",
+      "DR testing and simulation exercises",
+      "Ransomware recovery planning",
+      "Multi-region redundancy architecture"
+    ],
+    benefits: [
+      "Minimize business downtime during disruptions",
+      "Protect against data loss with tested backup strategies",
+      "Meet regulatory requirements for business continuity",
+      "Reduce recovery costs with automated failover",
+      "Confidence through regular DR testing",
+      "Ransomware resilience with immutable backups"
+    ],
+    technologies: ["AWS Elastic Disaster Recovery", "Azure Site Recovery", "Veeam", "Zerto", "Commvault", "Druva", "Rubrik", "VMware SRM", "Cloudflare", "HashiCorp Terraform"],
+    caseStudies: [
+      {
+        company: "MediCare Systems",
+        industry: "Healthcare",
+        challenge: "A healthcare provider had no formal DR plan and experienced a ransomware attack that caused 72 hours of downtime, impacting patient care and costing over $2M in losses.",
+        solution: "Designed a multi-region DR architecture on AWS with automated failover, implemented Veeam with immutable backups, and established quarterly DR testing with documented runbooks.",
+        results: ["RTO reduced from 72 hours to 45 minutes", "RPO improved from 24 hours to 15 minutes", "Zero data loss in subsequent DR tests", "Full compliance with HIPAA business continuity requirements"]
+      }
+    ],
+    faqs: [
+      { question: "What's the difference between DR and business continuity?", answer: "Disaster recovery focuses on restoring IT systems and data after a disruption. Business continuity is broader — it encompasses maintaining all critical business functions, including people, processes, and communications, during and after a crisis." },
+      { question: "How often should we test our DR plan?", answer: "We recommend full DR failover tests at least twice a year, with tabletop exercises quarterly. Critical systems may warrant monthly automated failover testing to ensure readiness." },
+      { question: "Is cloud-based DR cost-effective for small businesses?", answer: "Yes — DRaaS eliminates the need for a secondary data center. You pay only for standby resources that scale up during failover, making enterprise-grade DR accessible at a fraction of traditional costs." }
     ]
   },
   {
