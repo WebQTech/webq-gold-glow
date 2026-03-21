@@ -1,7 +1,7 @@
 import { useParams, Link, Navigate } from "react-router-dom";
 import { motion, useInView } from "framer-motion";
 import { useRef, useMemo } from "react";
-import { ArrowLeft, ArrowRight, Check, Building2 } from "lucide-react";
+import { ArrowLeft, ArrowRight, Check, Building2, ChevronRight, Home } from "lucide-react";
 
 import { Footer } from "@/components/Footer";
 import { getServiceBySlug, servicesData, ServiceDetail as ServiceDetailType } from "@/data/servicesData";
@@ -49,19 +49,32 @@ const ServiceDetail = () => {
         {/* Hero Section */}
       <section ref={heroRef} className="py-10 lg:py-16 bg-gradient-to-b from-primary/5 to-background">
         <div className="container mx-auto px-6 lg:px-12">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={isHeroInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.5 }}
-          >
-            <Link 
-              to="/services" 
-              className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors mb-6"
+          <motion.nav
+              aria-label="Breadcrumb"
+              initial={{ opacity: 0, y: 20 }}
+              animate={isHeroInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.5 }}
+              className="mb-6"
             >
-              <ArrowLeft className="w-4 h-4" />
-              Back to Services
-            </Link>
-          </motion.div>
+              <ol className="flex items-center gap-1.5 text-sm text-muted-foreground">
+                <li>
+                  <Link to="/" className="inline-flex items-center gap-1 hover:text-primary transition-colors">
+                    <Home className="w-3.5 h-3.5" />
+                    Home
+                  </Link>
+                </li>
+                <li><ChevronRight className="w-3.5 h-3.5" /></li>
+                <li>
+                  <Link to="/services" className="hover:text-primary transition-colors">
+                    Services
+                  </Link>
+                </li>
+                <li><ChevronRight className="w-3.5 h-3.5" /></li>
+                <li className="text-foreground font-medium truncate max-w-[200px] sm:max-w-none">
+                  {service.name}
+                </li>
+              </ol>
+            </motion.nav>
 
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div
