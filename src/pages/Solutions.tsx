@@ -1,6 +1,5 @@
-import { useState, useMemo } from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight, Search, X } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Footer } from "@/components/Footer";
 import { solutionsData } from "@/data/solutionsData";
 
