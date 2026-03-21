@@ -63,21 +63,35 @@ const solutions = [
 
 export const SolutionsSection = () => {
   return (
-    <section id="solutions" className="py-20 bg-background scroll-mt-24">
+    <section id="solutions" className="py-20 bg-gradient-to-b from-primary/5 to-background scroll-mt-24">
       <div className="max-w-6xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="mb-12"
+          className="mb-12 max-w-3xl"
         >
-          <p className="text-sm font-semibold tracking-widest uppercase text-primary mb-2">
+          <p className="text-sm font-semibold tracking-widest uppercase text-primary mb-4">
             What We Deliver
           </p>
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground">
-            Solutions
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight">
+            End-to-End Solutions for{" "}
+            <span className="text-primary">Digital Transformation</span>
           </h2>
+          <p className="mt-6 text-lg text-muted-foreground">
+            From custom software development to cloud infrastructure and DevOps,
+            we deliver scalable solutions that modernize your operations and accelerate growth.
+          </p>
+          <div className="mt-8">
+            <Link
+              to="/contact"
+              className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-md font-semibold hover:bg-primary/90 transition-colors"
+            >
+              Get Started
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
         </motion.div>
 
         <div className="divide-y divide-border">
