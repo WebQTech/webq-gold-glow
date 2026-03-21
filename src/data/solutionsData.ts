@@ -1448,6 +1448,80 @@ export const solutionsData: SolutionDetail[] = [
       { question: "What level of WCAG compliance should we target?", answer: "Most organizations target WCAG 2.1 Level AA, which is the standard required by most regulations including ADA, Section 508, and the European Accessibility Act. Level AAA is aspirational but not typically required." },
       { question: "Can accessibility testing be automated?", answer: "Automated tools can catch about 30-40% of accessibility issues (color contrast, missing alt text, ARIA errors). Manual testing with assistive technologies is essential to catch the remaining issues like keyboard navigation, screen reader experience, and cognitive accessibility." }
     ]
+  },
+  {
+    slug: "low-code-no-code",
+    name: "Low-Code / No-Code Development",
+    shortDescription: "Accelerate application delivery with visual development platforms and citizen developer enablement.",
+    fullDescription: "We help organizations leverage low-code and no-code platforms to rapidly build business applications, automate workflows, and empower citizen developers. From platform selection and governance to complex integrations and enterprise-grade solutions, we ensure you get the speed benefits of visual development without sacrificing scalability or security.",
+    icon: Blocks,
+    features: [
+      "Platform evaluation & selection",
+      "Enterprise low-code application development",
+      "Citizen developer enablement & training",
+      "Workflow & process automation",
+      "Low-code governance & best practices",
+      "Custom component & plugin development",
+      "Integration with enterprise systems",
+      "Migration from legacy to low-code platforms"
+    ],
+    benefits: [
+      "10x faster application delivery",
+      "Reduced dependency on specialized developers",
+      "Empowered business users & citizen developers",
+      "Lower total cost of ownership"
+    ],
+    technologies: ["Microsoft Power Platform", "OutSystems", "Mendix", "Appian", "Retool", "Bubble", "ServiceNow App Engine", "Salesforce Lightning", "Google AppSheet", "Zoho Creator"],
+    caseStudies: [
+      {
+        company: "Healthcare Network",
+        industry: "Healthcare",
+        challenge: "IT backlog of 200+ application requests from business units with an average 6-month delivery timeline.",
+        solution: "Implemented Microsoft Power Platform with governance framework, trained 50 citizen developers, and built a center of excellence.",
+        results: ["IT backlog reduced by 70% in 6 months", "Average app delivery time dropped from 6 months to 2 weeks", "50 citizen developers building production apps"]
+      }
+    ],
+    faqs: [
+      { question: "Is low-code suitable for enterprise applications?", answer: "Yes, modern enterprise low-code platforms like OutSystems, Mendix, and Power Platform support complex business logic, enterprise integrations, scalability, and security requirements needed for mission-critical applications." },
+      { question: "How do you prevent low-code sprawl?", answer: "We establish governance frameworks including platform standards, naming conventions, security policies, review processes, and a Center of Excellence to ensure quality and consistency across all citizen-developed applications." }
+    ]
+  },
+  {
+    slug: "ui-ux-design",
+    name: "UI/UX Design Services",
+    shortDescription: "Human-centered design that delivers intuitive, engaging, and conversion-optimized digital experiences.",
+    fullDescription: "Our UI/UX design services combine user research, interaction design, and visual design to create digital experiences that delight users and drive business outcomes. From discovery and wireframing to high-fidelity prototypes and design systems, we follow a research-driven approach to ensure every design decision is backed by user insights and aligned with your business goals.",
+    icon: Palette,
+    features: [
+      "User research & persona development",
+      "Information architecture & user flows",
+      "Wireframing & interactive prototyping",
+      "Visual design & brand-aligned UI",
+      "Design system & component library creation",
+      "Usability testing & heuristic evaluation",
+      "Responsive & adaptive design",
+      "Conversion rate optimization (CRO)"
+    ],
+    benefits: [
+      "Increased user engagement & satisfaction",
+      "Higher conversion rates & revenue",
+      "Reduced development rework costs",
+      "Consistent brand experience across touchpoints"
+    ],
+    technologies: ["Figma", "Adobe XD", "Sketch", "InVision", "Storybook", "Zeplin", "Hotjar", "Maze", "UserTesting", "Optimal Workshop"],
+    caseStudies: [
+      {
+        company: "B2B SaaS Platform",
+        industry: "Technology",
+        challenge: "Complex enterprise dashboard with poor usability scores, high support ticket volume, and 40% feature abandonment rate.",
+        solution: "Conducted user research with 30+ interviews, redesigned the dashboard with simplified navigation and a new design system in Figma.",
+        results: ["User satisfaction score increased from 3.2 to 4.6/5", "Support tickets reduced by 45%", "Feature adoption increased by 60%"]
+      }
+    ],
+    faqs: [
+      { question: "Do you work with existing brand guidelines?", answer: "Absolutely. We integrate with your existing brand identity, extending it thoughtfully into the digital experience while ensuring consistency. If you don't have established guidelines, we can help create them." },
+      { question: "How do you measure design success?", answer: "We define measurable KPIs upfront — task completion rates, time-on-task, System Usability Scale (SUS) scores, conversion rates, and NPS. We conduct usability testing to validate designs before development begins." }
+    ]
   }
 ];
 
