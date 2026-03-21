@@ -1243,6 +1243,12 @@ export const solutionsData: SolutionDetail[] = [
       "Multi-tenant platform architecture",
       "Platform observability & usage analytics"
     ],
+    benefits: [
+      "Faster developer onboarding",
+      "Reduced cognitive load for engineering teams",
+      "Consistent environments & governance",
+      "Improved developer productivity & satisfaction"
+    ],
     technologies: ["Backstage", "Crossplane", "Kratix", "Port", "Humanitec", "Kubernetes", "Argo Workflows", "Score", "Terraform", "Pulumi"],
     caseStudies: [
       {
