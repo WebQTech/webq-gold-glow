@@ -1056,6 +1056,100 @@ export const solutionsData: SolutionDetail[] = [
       { question: "What MFA methods do you support?", answer: "We implement phishing-resistant MFA including FIDO2/WebAuthn hardware keys, authenticator apps, push notifications, and biometrics. SMS-based MFA is discouraged due to SIM-swap risks." },
       { question: "How do you handle third-party/contractor access?", answer: "We implement time-bound, just-in-time access with approval workflows, separate identity stores for external users, and automated expiration policies to prevent access creep." }
     ]
+  },
+  {
+    slug: "cybersecurity-consulting",
+    name: "Cybersecurity Consulting",
+    shortDescription: "Strategic cybersecurity advisory services including risk assessments, incident response planning, and security architecture design.",
+    icon: "ShieldAlert",
+    features: [
+      {
+        category: "Risk Assessment & Strategy",
+        items: ["Cybersecurity maturity assessments", "Risk quantification & prioritization", "Security roadmap development", "Board-level security reporting", "Threat landscape analysis"]
+      },
+      {
+        category: "Incident Response",
+        items: ["Incident response plan development", "Tabletop exercises & simulations", "Digital forensics & investigation", "Breach notification management", "Post-incident remediation"]
+      },
+      {
+        category: "Security Architecture",
+        items: ["Zero-trust architecture design", "Network segmentation strategy", "Defense-in-depth planning", "Security reference architectures", "Vendor & tool selection advisory"]
+      },
+      {
+        category: "Threat Intelligence",
+        items: ["Threat hunting programs", "Dark web monitoring", "Attack surface management", "Adversary emulation & red teaming", "Threat intelligence feeds integration"]
+      }
+    ],
+    technologies: [
+      { name: "MITRE ATT&CK", description: "Adversarial tactics & techniques framework" },
+      { name: "NIST CSF", description: "Cybersecurity framework for risk management" },
+      { name: "CrowdStrike", description: "Endpoint detection & response platform" },
+      { name: "Mandiant", description: "Threat intelligence & incident response" },
+      { name: "Recorded Future", description: "AI-powered threat intelligence" },
+      { name: "Palo Alto Cortex", description: "Extended detection & response (XDR)" },
+      { name: "Splunk SOAR", description: "Security orchestration & automation" },
+      { name: "Carbon Black", description: "Endpoint security & threat hunting" }
+    ],
+    caseStudies: [
+      {
+        industry: "Financial Services",
+        challenge: "A regional bank experienced a sophisticated phishing attack and lacked a formal incident response plan, leading to delayed containment and regulatory scrutiny.",
+        solution: "Conducted a full cybersecurity maturity assessment, developed and tested an incident response playbook, implemented threat hunting capabilities, and established a security operations center (SOC) partnership.",
+        results: ["Incident response time reduced from 72 hours to 4 hours", "Achieved NIST CSF Tier 3 maturity within 12 months", "Zero successful breaches in 18 months post-engagement", "Regulatory confidence restored with documented security posture"]
+      }
+    ],
+    faqs: [
+      { question: "What does a cybersecurity maturity assessment involve?", answer: "We evaluate your security posture across people, processes, and technology using frameworks like NIST CSF or CIS Controls. The result is a prioritized roadmap with quick wins and strategic improvements." },
+      { question: "How often should we conduct red team exercises?", answer: "We recommend annual red team engagements with quarterly tabletop exercises. High-risk industries like finance and healthcare may benefit from semi-annual red team assessments." },
+      { question: "Do you provide managed security services?", answer: "We focus on strategic consulting and architecture. For ongoing managed SOC services, we help you select and onboard the right MSSP partner and ensure seamless integration with your security stack." }
+    ]
+  },
+  {
+    slug: "compliance-governance",
+    name: "Compliance & Governance",
+    shortDescription: "Navigate complex regulatory landscapes with comprehensive compliance programs, audit preparation, and governance frameworks.",
+    icon: "Scale",
+    features: [
+      {
+        category: "Regulatory Compliance",
+        items: ["SOC 2 Type I & II readiness", "GDPR & CCPA compliance programs", "HIPAA security & privacy compliance", "PCI DSS assessment & remediation", "ISO 27001 certification preparation"]
+      },
+      {
+        category: "Governance Frameworks",
+        items: ["IT governance framework design", "Policy & procedure development", "Risk management programs", "Third-party risk management", "Data governance & classification"]
+      },
+      {
+        category: "Audit & Assurance",
+        items: ["Internal audit program development", "Audit readiness assessments", "Evidence collection automation", "Continuous compliance monitoring", "Gap analysis & remediation planning"]
+      },
+      {
+        category: "Privacy & Data Protection",
+        items: ["Privacy impact assessments", "Data mapping & inventory", "Consent management implementation", "Data subject request workflows", "Cross-border data transfer compliance"]
+      }
+    ],
+    technologies: [
+      { name: "Vanta", description: "Automated security & compliance platform" },
+      { name: "Drata", description: "Continuous compliance automation" },
+      { name: "OneTrust", description: "Privacy & data governance platform" },
+      { name: "ServiceNow GRC", description: "Governance, risk & compliance management" },
+      { name: "BigID", description: "Data intelligence & privacy platform" },
+      { name: "Qualys", description: "Cloud security & compliance scanning" },
+      { name: "Archer", description: "Integrated risk management platform" },
+      { name: "TrustArc", description: "Privacy compliance & management" }
+    ],
+    caseStudies: [
+      {
+        industry: "Healthcare SaaS",
+        challenge: "A fast-growing health-tech startup needed SOC 2 Type II and HIPAA compliance to close enterprise deals but had no formal compliance program or dedicated security staff.",
+        solution: "Implemented Vanta for automated compliance monitoring, developed comprehensive security policies, established a risk management framework, and prepared the organization for SOC 2 Type II and HIPAA audits within 6 months.",
+        results: ["SOC 2 Type II achieved in 5 months from zero baseline", "HIPAA compliance validated with zero critical findings", "Enterprise deal pipeline increased by 300%", "Ongoing compliance maintained with 90% automation"]
+      }
+    ],
+    faqs: [
+      { question: "How long does SOC 2 Type II certification take?", answer: "From zero baseline, SOC 2 Type I typically takes 3-4 months and Type II requires an additional 6-12 month observation period. With automation tools like Vanta or Drata, we can accelerate readiness significantly." },
+      { question: "Which compliance framework should we start with?", answer: "It depends on your industry and customers. B2B SaaS companies typically start with SOC 2, healthcare with HIPAA, e-commerce with PCI DSS, and companies with EU customers with GDPR. We help you prioritize based on business impact." },
+      { question: "Can you help with multiple compliance frameworks simultaneously?", answer: "Yes — many controls overlap across frameworks. We implement a unified control framework that maps to multiple standards, reducing duplicate effort by 40-60% compared to addressing each framework separately." }
+    ]
   }
 ];
 
