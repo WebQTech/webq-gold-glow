@@ -1064,37 +1064,34 @@ export const solutionsData: SolutionDetail[] = [
     slug: "cybersecurity-consulting",
     name: "Cybersecurity Consulting",
     shortDescription: "Strategic cybersecurity advisory services including risk assessments, incident response planning, and security architecture design.",
-    icon: "ShieldAlert",
+    fullDescription: "Our cybersecurity consulting practice helps organizations build resilient security postures through strategic advisory, risk assessments, incident response planning, and security architecture design. We combine deep technical expertise with business acumen to protect your most critical assets.",
+    icon: ShieldAlert,
     features: [
-      {
-        category: "Risk Assessment & Strategy",
-        items: ["Cybersecurity maturity assessments", "Risk quantification & prioritization", "Security roadmap development", "Board-level security reporting", "Threat landscape analysis"]
-      },
-      {
-        category: "Incident Response",
-        items: ["Incident response plan development", "Tabletop exercises & simulations", "Digital forensics & investigation", "Breach notification management", "Post-incident remediation"]
-      },
-      {
-        category: "Security Architecture",
-        items: ["Zero-trust architecture design", "Network segmentation strategy", "Defense-in-depth planning", "Security reference architectures", "Vendor & tool selection advisory"]
-      },
-      {
-        category: "Threat Intelligence",
-        items: ["Threat hunting programs", "Dark web monitoring", "Attack surface management", "Adversary emulation & red teaming", "Threat intelligence feeds integration"]
-      }
+      "Cybersecurity maturity assessments",
+      "Risk quantification & prioritization",
+      "Security roadmap development",
+      "Incident response plan development",
+      "Tabletop exercises & simulations",
+      "Digital forensics & investigation",
+      "Zero-trust architecture design",
+      "Network segmentation strategy",
+      "Threat hunting programs",
+      "Dark web monitoring",
+      "Attack surface management",
+      "Adversary emulation & red teaming"
     ],
-    technologies: [
-      { name: "MITRE ATT&CK", description: "Adversarial tactics & techniques framework" },
-      { name: "NIST CSF", description: "Cybersecurity framework for risk management" },
-      { name: "CrowdStrike", description: "Endpoint detection & response platform" },
-      { name: "Mandiant", description: "Threat intelligence & incident response" },
-      { name: "Recorded Future", description: "AI-powered threat intelligence" },
-      { name: "Palo Alto Cortex", description: "Extended detection & response (XDR)" },
-      { name: "Splunk SOAR", description: "Security orchestration & automation" },
-      { name: "Carbon Black", description: "Endpoint security & threat hunting" }
+    benefits: [
+      "Proactive risk identification before breaches occur",
+      "Reduced incident response time with tested playbooks",
+      "Board-level visibility into security posture",
+      "Alignment with industry frameworks (NIST, ISO, CIS)",
+      "Optimized security spending based on risk priorities",
+      "Regulatory compliance readiness"
     ],
+    technologies: ["MITRE ATT&CK", "NIST CSF", "CrowdStrike", "Mandiant", "Recorded Future", "Palo Alto Cortex", "Splunk SOAR", "Carbon Black"],
     caseStudies: [
       {
+        company: "SecureBank Corp",
         industry: "Financial Services",
         challenge: "A regional bank experienced a sophisticated phishing attack and lacked a formal incident response plan, leading to delayed containment and regulatory scrutiny.",
         solution: "Conducted a full cybersecurity maturity assessment, developed and tested an incident response playbook, implemented threat hunting capabilities, and established a security operations center (SOC) partnership.",
@@ -1111,37 +1108,34 @@ export const solutionsData: SolutionDetail[] = [
     slug: "compliance-governance",
     name: "Compliance & Governance",
     shortDescription: "Navigate complex regulatory landscapes with comprehensive compliance programs, audit preparation, and governance frameworks.",
-    icon: "Scale",
+    fullDescription: "We help organizations navigate complex regulatory requirements and build sustainable compliance programs. From SOC 2 and HIPAA to GDPR and PCI DSS, our experts design governance frameworks, automate evidence collection, and prepare you for audits with confidence.",
+    icon: Scale,
     features: [
-      {
-        category: "Regulatory Compliance",
-        items: ["SOC 2 Type I & II readiness", "GDPR & CCPA compliance programs", "HIPAA security & privacy compliance", "PCI DSS assessment & remediation", "ISO 27001 certification preparation"]
-      },
-      {
-        category: "Governance Frameworks",
-        items: ["IT governance framework design", "Policy & procedure development", "Risk management programs", "Third-party risk management", "Data governance & classification"]
-      },
-      {
-        category: "Audit & Assurance",
-        items: ["Internal audit program development", "Audit readiness assessments", "Evidence collection automation", "Continuous compliance monitoring", "Gap analysis & remediation planning"]
-      },
-      {
-        category: "Privacy & Data Protection",
-        items: ["Privacy impact assessments", "Data mapping & inventory", "Consent management implementation", "Data subject request workflows", "Cross-border data transfer compliance"]
-      }
+      "SOC 2 Type I & II readiness",
+      "GDPR & CCPA compliance programs",
+      "HIPAA security & privacy compliance",
+      "PCI DSS assessment & remediation",
+      "ISO 27001 certification preparation",
+      "IT governance framework design",
+      "Policy & procedure development",
+      "Third-party risk management",
+      "Internal audit program development",
+      "Evidence collection automation",
+      "Continuous compliance monitoring",
+      "Privacy impact assessments"
     ],
-    technologies: [
-      { name: "Vanta", description: "Automated security & compliance platform" },
-      { name: "Drata", description: "Continuous compliance automation" },
-      { name: "OneTrust", description: "Privacy & data governance platform" },
-      { name: "ServiceNow GRC", description: "Governance, risk & compliance management" },
-      { name: "BigID", description: "Data intelligence & privacy platform" },
-      { name: "Qualys", description: "Cloud security & compliance scanning" },
-      { name: "Archer", description: "Integrated risk management platform" },
-      { name: "TrustArc", description: "Privacy compliance & management" }
+    benefits: [
+      "Accelerated compliance certification timelines",
+      "Reduced audit preparation effort by up to 60%",
+      "Unified control framework across multiple standards",
+      "Automated evidence collection and monitoring",
+      "Increased enterprise customer confidence",
+      "Reduced risk of regulatory fines and penalties"
     ],
+    technologies: ["Vanta", "Drata", "OneTrust", "ServiceNow GRC", "BigID", "Qualys", "Archer", "TrustArc"],
     caseStudies: [
       {
+        company: "MedFlow Health",
         industry: "Healthcare SaaS",
         challenge: "A fast-growing health-tech startup needed SOC 2 Type II and HIPAA compliance to close enterprise deals but had no formal compliance program or dedicated security staff.",
         solution: "Implemented Vanta for automated compliance monitoring, developed comprehensive security policies, established a risk management framework, and prepared the organization for SOC 2 Type II and HIPAA audits within 6 months.",
