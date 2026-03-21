@@ -1,5 +1,6 @@
 import {
   Code2, Cloud, Server, RefreshCw, TestTube, Headphones, Settings, Database,
+  Gauge, Network, GitBranch, Container,
   LucideIcon
 } from "lucide-react";
 

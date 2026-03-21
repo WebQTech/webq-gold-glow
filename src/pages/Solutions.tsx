@@ -10,11 +10,11 @@ const solutionCategories = [
   },
   {
     title: "Cloud Services",
-    items: ["cloud-migration", "it-infrastructure"],
+    items: ["cloud-migration", "it-infrastructure", "cloud-optimization", "hybrid-multi-cloud"],
   },
   {
     title: "DevOps",
-    items: ["devops-sre"],
+    items: ["devops-sre", "ci-cd-automation", "infrastructure-as-code"],
   },
   {
     title: "Quality Assurance",
