@@ -345,6 +345,51 @@ export const solutionsData: SolutionDetail[] = [
       { question: "Can you build real-time analytics?", answer: "Yes. We implement streaming architectures using Kafka, Spark Streaming, or Flink for real-time data processing and dashboard updates." },
       { question: "How do you handle data governance?", answer: "We implement data catalogs, lineage tracking, access controls, and quality monitoring to ensure your data is trustworthy, compliant, and well-documented." }
     ]
+  },
+  {
+    slug: "data-management",
+    name: "Data Management",
+    shortDescription: "Comprehensive data management solutions including master data management, data integration, and data quality.",
+    fullDescription: "Our Data Management solutions help organizations take control of their data assets. We implement master data management (MDM), data integration platforms, data quality frameworks, and metadata management systems that ensure your data is accurate, consistent, accessible, and secure across the enterprise.",
+    icon: Database,
+    features: [
+      "Master Data Management (MDM) implementation",
+      "Data integration and ETL/ELT pipelines",
+      "Data quality monitoring and cleansing",
+      "Metadata management and data cataloging",
+      "Data lifecycle management",
+      "Database administration and optimization",
+      "Data migration and consolidation",
+      "Data security and compliance frameworks"
+    ],
+    benefits: [
+      "Single source of truth across the enterprise",
+      "Improved data accuracy and consistency",
+      "Faster data-driven decision making",
+      "Reduced data silos and redundancy",
+      "Regulatory compliance readiness",
+      "Lower storage and management costs"
+    ],
+    technologies: ["Informatica", "Talend", "Apache NiFi", "Collibra", "Alation", "SQL Server", "PostgreSQL", "Oracle", "MongoDB", "Snowflake", "Databricks"],
+    caseStudies: [
+      {
+        company: "National Insurance Group",
+        industry: "Insurance",
+        challenge: "Fragmented customer data across 12 legacy systems causing policy errors and compliance risks.",
+        solution: "Implemented an MDM platform with automated data quality rules and a unified customer data hub.",
+        results: [
+          "95% improvement in data accuracy",
+          "60% reduction in policy processing errors",
+          "Full regulatory compliance achieved",
+          "$2M annual savings from decommissioned redundant systems"
+        ]
+      }
+    ],
+    faqs: [
+      { question: "What is Master Data Management?", answer: "MDM is a discipline that ensures an organization has a single, consistent, and accurate view of its critical business data — such as customers, products, and locations — across all systems." },
+      { question: "How long does a data management implementation take?", answer: "Depending on scope, initial implementations typically take 3–6 months, with ongoing optimization. We use phased approaches to deliver value incrementally." },
+      { question: "Can you work with our existing databases?", answer: "Absolutely. We integrate with all major database platforms including SQL Server, Oracle, PostgreSQL, MongoDB, and cloud-native databases like Snowflake and BigQuery." }
+    ]
   }
 ];
 

@@ -17,8 +17,12 @@ const solutionCategories = [
     items: ["devops-sre", "qa-testing"],
   },
   {
-    title: "Data & Operations",
-    items: ["data-analytics", "production-support"],
+    title: "Analytics & Data Management",
+    items: ["data-analytics", "data-management"],
+  },
+  {
+    title: "Operations & Support",
+    items: ["production-support"],
   },
 ];
 
