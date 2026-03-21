@@ -1300,7 +1300,6 @@ export const solutionsData: SolutionDetail[] = [
       { question: "What is the difference between monitoring and observability?", answer: "Monitoring tells you when something is wrong; observability helps you understand why. Observability uses metrics, logs, and traces (the three pillars) to provide deep insights into system behavior." },
       { question: "Do you support OpenTelemetry?", answer: "Yes, we strongly advocate for OpenTelemetry as a vendor-neutral standard. It provides flexibility to switch between observability backends without re-instrumenting your applications." }
     ]
-  }
   },
   {
     slug: "finops",
