@@ -697,6 +697,87 @@ export const solutionsData: SolutionDetail[] = [
       { question: "Can you integrate ITSM with our existing tools?", answer: "Absolutely. We integrate ITSM platforms with monitoring tools, CI/CD pipelines, cloud providers, and communication platforms for seamless operations." }
     ]
   }
+  },
+  {
+    slug: "business-intelligence",
+    name: "Business Intelligence & Reporting",
+    shortDescription: "Transform raw data into actionable insights with interactive dashboards, reports, and self-service analytics.",
+    fullDescription: "Our Business Intelligence services empower organizations to make data-driven decisions through intuitive dashboards, automated reporting, and self-service analytics platforms. We design and implement end-to-end BI solutions that connect disparate data sources, establish single sources of truth, and deliver real-time insights to every stakeholder.",
+    icon: BarChart3,
+    features: [
+      "Interactive dashboard design and development",
+      "Self-service analytics platforms",
+      "Automated report generation and distribution",
+      "Data warehouse design and optimization",
+      "KPI framework and metrics definition",
+      "Real-time and streaming analytics",
+      "Embedded analytics for SaaS products",
+      "Data storytelling and visualization best practices"
+    ],
+    benefits: [
+      "Faster, data-driven decision making across the organization",
+      "Single source of truth for all business metrics",
+      "Reduced dependency on IT for ad-hoc reports",
+      "Real-time visibility into business performance",
+      "Improved forecasting accuracy",
+      "Democratized data access for all teams"
+    ],
+    technologies: ["Power BI", "Tableau", "Looker", "Apache Superset", "Snowflake", "BigQuery", "Redshift", "dbt", "Metabase", "Sisense", "Fivetran", "Airbyte"],
+    caseStudies: [
+      {
+        company: "RetailMax Group",
+        industry: "Retail",
+        challenge: "Executives relied on weekly static spreadsheets for decision-making, with no real-time visibility into sales performance, inventory, or customer behavior across 150 stores.",
+        solution: "Built a cloud data warehouse consolidating POS, inventory, and CRM data, with role-based Power BI dashboards delivering real-time insights to store managers and C-suite.",
+        results: ["Decision cycle reduced from 7 days to real-time", "15% improvement in inventory turnover", "$4M annual savings from optimized stock management", "Self-service adoption by 90% of managers"]
+      }
+    ],
+    faqs: [
+      { question: "Which BI platform do you recommend?", answer: "It depends on your ecosystem. Power BI integrates deeply with Microsoft tools, Tableau excels in visualization, and Looker is ideal for data-savvy teams wanting a code-first approach. We help you evaluate and choose." },
+      { question: "How long does a BI implementation take?", answer: "A foundational dashboard with core KPIs typically takes 4-6 weeks. A full enterprise BI platform with data warehouse, governance, and self-service capabilities is usually 3-6 months." },
+      { question: "Can you work with our existing data infrastructure?", answer: "Absolutely. We integrate with any data source — databases, APIs, SaaS platforms, flat files — and can enhance your existing data warehouse or build a new one." }
+    ]
+  },
+  {
+    slug: "ai-ml-solutions",
+    name: "AI & Machine Learning Solutions",
+    shortDescription: "Leverage artificial intelligence and machine learning to automate processes, predict outcomes, and unlock new value.",
+    fullDescription: "Our AI & ML solutions help businesses harness the power of artificial intelligence to solve complex problems, automate decision-making, and create competitive advantages. From predictive analytics and NLP to computer vision and generative AI, we deliver production-ready ML systems that drive measurable business impact.",
+    icon: Brain,
+    features: [
+      "Predictive analytics and forecasting",
+      "Natural language processing (NLP & LLMs)",
+      "Computer vision and image recognition",
+      "Recommendation engines",
+      "Generative AI integration (ChatGPT, custom models)",
+      "MLOps and model lifecycle management",
+      "Anomaly detection and fraud prevention",
+      "AI-powered process automation"
+    ],
+    benefits: [
+      "Automate complex decisions at scale",
+      "Predict trends and customer behavior accurately",
+      "Unlock insights from unstructured data (text, images, audio)",
+      "Reduce manual effort with intelligent automation",
+      "Create personalized customer experiences",
+      "Gain competitive advantage through AI-first strategies"
+    ],
+    technologies: ["Python", "TensorFlow", "PyTorch", "Scikit-learn", "OpenAI API", "LangChain", "Hugging Face", "AWS SageMaker", "Azure ML", "Vertex AI", "MLflow", "Kubeflow", "Ray"],
+    caseStudies: [
+      {
+        company: "InsureRight",
+        industry: "Insurance",
+        challenge: "Claims processing took an average of 14 days with high error rates, leading to poor customer satisfaction and increased operational costs.",
+        solution: "Developed an AI-powered claims processing pipeline using NLP for document extraction, ML models for fraud detection, and automated decisioning for straightforward claims.",
+        results: ["Claims processing time reduced to 2 days", "Fraud detection accuracy improved by 40%", "60% of simple claims auto-approved", "$8M annual savings in operational costs"]
+      }
+    ],
+    faqs: [
+      { question: "Do we need large datasets to start with AI?", answer: "Not necessarily. We can start with transfer learning, pre-trained models, or synthetic data augmentation. Even small, well-curated datasets can deliver meaningful results for focused use cases." },
+      { question: "How do you ensure AI models are trustworthy?", answer: "We implement explainability (SHAP, LIME), bias detection, model monitoring, and human-in-the-loop workflows. Responsible AI practices are built into every project." },
+      { question: "Can you integrate AI into our existing applications?", answer: "Yes, we deploy models as APIs, embed them in existing workflows, or build standalone AI-powered features — always designed for production scale and reliability." }
+    ]
+  }
 ];
 
 export const getSolutionBySlug = (slug: string): SolutionDetail | undefined => {
