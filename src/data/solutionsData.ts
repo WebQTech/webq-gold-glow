@@ -1,7 +1,7 @@
 import {
   Code2, Cloud, Server, RefreshCw, TestTube, Headphones, Settings, Database,
   Gauge, Network, GitBranch, Container, Zap, Shield, Wrench, ClipboardList,
-  BarChart3, Brain, Smartphone, Plug,
+  BarChart3, Brain, Smartphone, Plug, Lock, ShieldCheck, FileCode, CloudCog, KeyRound,
   LucideIcon
 } from "lucide-react";
 
