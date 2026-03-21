@@ -26,31 +26,8 @@ const Solutions = () => {
   return (
     <div className="min-h-screen bg-background">
       <main id="main-content" className="focus:outline-none" tabIndex={-1}>
-        {/* Hero */}
-        <section className="py-10 lg:py-16 bg-gradient-to-b from-primary/5 to-background">
-          <div className="container mx-auto px-6 lg:px-12">
-            <div className="max-w-3xl">
-              <span className="section-label">What We Deliver</span>
-              <h1 className="mt-4 text-4xl lg:text-5xl font-bold text-foreground leading-tight">
-                End-to-End Solutions for{" "}
-                <span className="text-primary">Digital Transformation</span>
-              </h1>
-              <p className="mt-6 text-lg text-muted-foreground">
-                From custom software development to cloud infrastructure and DevOps,
-                we deliver scalable solutions that modernize your operations and accelerate growth.
-              </p>
-              <div className="mt-8 flex flex-wrap gap-4">
-                <Link to="/contact" className="btn-primary inline-flex items-center gap-2">
-                  Get Started
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* Solutions by Category - Datavail-style */}
-        <section className="py-12 lg:py-16">
+        <section className="py-10 lg:py-16">
           <div className="container mx-auto px-6 lg:px-12">
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-x-12 gap-y-12">
               {solutionCategories.map((category) => (
