@@ -46,19 +46,32 @@ const SolutionDetail = () => {
         {/* Hero */}
         <section ref={heroRef} className="py-10 lg:py-16 bg-gradient-to-b from-primary/5 to-background">
           <div className="container mx-auto px-6 lg:px-12">
-            <motion.div
+            <motion.nav
+              aria-label="Breadcrumb"
               initial={{ opacity: 0, y: 20 }}
               animate={isHeroInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5 }}
+              className="mb-6"
             >
-              <Link
-                to="/solutions"
-                className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors mb-6"
-              >
-                <ArrowLeft className="w-4 h-4" />
-                Back to Solutions
-              </Link>
-            </motion.div>
+              <ol className="flex items-center gap-1.5 text-sm text-muted-foreground">
+                <li>
+                  <Link to="/" className="inline-flex items-center gap-1 hover:text-primary transition-colors">
+                    <Home className="w-3.5 h-3.5" />
+                    Home
+                  </Link>
+                </li>
+                <li><ChevronRight className="w-3.5 h-3.5" /></li>
+                <li>
+                  <Link to="/solutions" className="hover:text-primary transition-colors">
+                    Solutions
+                  </Link>
+                </li>
+                <li><ChevronRight className="w-3.5 h-3.5" /></li>
+                <li className="text-foreground font-medium truncate max-w-[200px] sm:max-w-none">
+                  {solution.name}
+                </li>
+              </ol>
+            </motion.nav>
 
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <motion.div
