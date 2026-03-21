@@ -2,10 +2,7 @@ import {
   Code2, Cloud, Server, RefreshCw, TestTube, Headphones, Settings, Database,
   Gauge, Network, GitBranch, Container, Zap, Shield, Wrench, ClipboardList,
   BarChart3, Brain, Smartphone, Plug, Lock, ShieldCheck, FileCode, CloudCog, KeyRound,
-  ShieldAlert, Scale,
-  Gauge, Network, GitBranch, Container, Zap, Shield, Wrench, ClipboardList,
-  BarChart3, Brain, Smartphone, Plug, Lock, ShieldCheck, FileCode, CloudCog, KeyRound,
-  LucideIcon
+  ShieldAlert, Scale, LucideIcon
 } from "lucide-react";
 
 export interface SolutionDetail {
