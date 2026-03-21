@@ -18,7 +18,7 @@ const solutionCategories = [
   },
   {
     title: "Quality Assurance",
-    items: ["qa-testing"],
+    items: ["qa-testing", "performance-testing", "security-testing"],
   },
   {
     title: "Analytics & Data Management",
@@ -26,7 +26,7 @@ const solutionCategories = [
   },
   {
     title: "Operations & Support",
-    items: ["production-support"],
+    items: ["production-support", "managed-services", "it-service-management"],
   },
 ];
 
