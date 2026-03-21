@@ -6,7 +6,7 @@ import { solutionsData } from "@/data/solutionsData";
 const solutionCategories = [
   {
     title: "Application Development",
-    items: ["custom-app-development", "technology-modernization"],
+    items: ["custom-app-development", "technology-modernization", "mobile-app-development", "api-integration"],
   },
   {
     title: "Cloud Services",
