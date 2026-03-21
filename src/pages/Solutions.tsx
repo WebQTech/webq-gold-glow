@@ -14,7 +14,7 @@ const solutionCategories = [
   },
   {
     title: "DevOps",
-    items: ["devops-sre", "ci-cd-automation", "infrastructure-as-code"],
+    items: ["devops-sre", "ci-cd-automation", "infrastructure-as-code", "platform-engineering", "observability-monitoring"],
   },
   {
     title: "Quality Assurance",
