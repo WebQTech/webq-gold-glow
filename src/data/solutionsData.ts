@@ -776,6 +776,86 @@ export const solutionsData: SolutionDetail[] = [
       { question: "How do you ensure AI models are trustworthy?", answer: "We implement explainability (SHAP, LIME), bias detection, model monitoring, and human-in-the-loop workflows. Responsible AI practices are built into every project." },
       { question: "Can you integrate AI into our existing applications?", answer: "Yes, we deploy models as APIs, embed them in existing workflows, or build standalone AI-powered features — always designed for production scale and reliability." }
     ]
+  },
+  {
+    slug: "mobile-app-development",
+    name: "Mobile App Development",
+    shortDescription: "Build high-performance native and cross-platform mobile applications for iOS and Android.",
+    fullDescription: "Our mobile app development services deliver intuitive, high-performance applications across iOS and Android platforms. Whether you need a native app for maximum performance or a cross-platform solution for faster time-to-market, we design and build mobile experiences that engage users and drive business results.",
+    icon: Smartphone,
+    features: [
+      "Native iOS and Android development",
+      "Cross-platform development (React Native, Flutter)",
+      "UI/UX design for mobile experiences",
+      "Offline-first architecture",
+      "Push notifications and real-time messaging",
+      "Mobile backend and API development",
+      "App Store and Play Store deployment",
+      "Mobile analytics and crash reporting"
+    ],
+    benefits: [
+      "Reach users on their preferred devices",
+      "Faster time-to-market with cross-platform frameworks",
+      "Consistent brand experience across platforms",
+      "Higher user engagement with native-feel interactions",
+      "Scalable architecture for growing user bases",
+      "Ongoing maintenance and feature updates"
+    ],
+    technologies: ["React Native", "Flutter", "Swift", "Kotlin", "Xcode", "Android Studio", "Firebase", "Expo", "Fastlane", "Detox", "Appium", "CodePush"],
+    caseStudies: [
+      {
+        company: "FitTrack Pro",
+        industry: "Health & Wellness",
+        challenge: "Needed a unified mobile experience for iOS and Android with real-time health data syncing, wearable integration, and offline workout tracking.",
+        solution: "Built a cross-platform app using React Native with offline-first architecture, real-time syncing via WebSockets, and integration with Apple Health and Google Fit APIs.",
+        results: ["Launched on both platforms in 4 months", "500K+ downloads in first quarter", "4.8-star average app store rating", "Daily active users grew 30% month-over-month"]
+      }
+    ],
+    faqs: [
+      { question: "Should we build native or cross-platform?", answer: "Cross-platform (React Native, Flutter) is ideal for most business apps — faster development, shared codebase, near-native performance. Native is recommended for hardware-intensive apps like games or AR experiences." },
+      { question: "How do you handle app store approvals?", answer: "We manage the entire submission process — guidelines compliance, metadata optimization, screenshot preparation, and review response — for both App Store and Google Play." },
+      { question: "Can you integrate with our existing backend?", answer: "Absolutely. We build mobile apps that integrate seamlessly with your existing APIs, databases, and authentication systems." }
+    ]
+  },
+  {
+    slug: "api-integration",
+    name: "API Development & Integration",
+    shortDescription: "Design, build, and integrate robust APIs to connect systems, automate workflows, and enable digital ecosystems.",
+    fullDescription: "Our API development and integration services help organizations connect disparate systems, enable seamless data flow, and build extensible digital platforms. We design RESTful and GraphQL APIs, implement third-party integrations, and establish API governance frameworks that scale with your business.",
+    icon: Plug,
+    features: [
+      "RESTful and GraphQL API design",
+      "Third-party API integration (CRM, ERP, payment, etc.)",
+      "API gateway and management platforms",
+      "Microservices architecture and inter-service communication",
+      "Webhook and event-driven integrations",
+      "API documentation and developer portals",
+      "OAuth 2.0 and API security implementation",
+      "Legacy system API wrappers"
+    ],
+    benefits: [
+      "Seamless connectivity between all business systems",
+      "Faster partner and vendor onboarding",
+      "Reusable APIs accelerate future development",
+      "Improved data consistency across platforms",
+      "Scalable architecture for growing ecosystems",
+      "Revenue opportunities through API monetization"
+    ],
+    technologies: ["Node.js", "Python", "Java", "GraphQL", "Apollo", "Kong", "Apigee", "AWS API Gateway", "Swagger/OpenAPI", "Postman", "MuleSoft", "Zapier"],
+    caseStudies: [
+      {
+        company: "LogiChain Solutions",
+        industry: "Logistics",
+        challenge: "Disconnected systems across warehousing, transportation, and order management created data silos, manual reconciliation, and delayed shipment tracking.",
+        solution: "Designed a unified API layer connecting WMS, TMS, and OMS platforms with real-time event-driven architecture, enabling end-to-end supply chain visibility.",
+        results: ["Order processing time reduced by 60%", "Real-time tracking for 100% of shipments", "Partner onboarding reduced from weeks to days", "$1.2M saved annually in manual reconciliation"]
+      }
+    ],
+    faqs: [
+      { question: "REST or GraphQL — which should we use?", answer: "REST is simpler and widely supported — great for CRUD-heavy APIs. GraphQL is ideal when clients need flexible queries or you're serving multiple frontends. We often recommend a hybrid approach." },
+      { question: "How do you ensure API security?", answer: "We implement OAuth 2.0, rate limiting, input validation, encryption in transit, and API key management. Every API goes through security review before deployment." },
+      { question: "Can you help with legacy system integration?", answer: "Yes, we specialize in wrapping legacy systems with modern APIs — enabling them to participate in your digital ecosystem without costly rewrites." }
+    ]
   }
 ];
 
