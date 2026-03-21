@@ -696,7 +696,6 @@ export const solutionsData: SolutionDetail[] = [
       { question: "Which ITSM platform do you recommend?", answer: "It depends on your scale and needs. ServiceNow is ideal for large enterprises, Jira Service Management for agile teams, and Freshservice for mid-market organizations." },
       { question: "Can you integrate ITSM with our existing tools?", answer: "Absolutely. We integrate ITSM platforms with monitoring tools, CI/CD pipelines, cloud providers, and communication platforms for seamless operations." }
     ]
-  }
   },
   {
     slug: "business-intelligence",
