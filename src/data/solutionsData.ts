@@ -1246,8 +1246,11 @@ export const solutionsData: SolutionDetail[] = [
     technologies: ["Backstage", "Crossplane", "Kratix", "Port", "Humanitec", "Kubernetes", "Argo Workflows", "Score", "Terraform", "Pulumi"],
     caseStudies: [
       {
-        title: "Enterprise IDP for FinTech Company",
-        description: "Built a Backstage-based developer portal with self-service provisioning, reducing new service onboarding from 2 weeks to 30 minutes and improving developer satisfaction scores by 60%."
+        company: "FinTech Company",
+        industry: "Financial Services",
+        challenge: "New service onboarding took 2 weeks with heavy manual configuration and inconsistent environments.",
+        solution: "Built a Backstage-based internal developer portal with self-service provisioning and golden path templates.",
+        results: ["Onboarding reduced from 2 weeks to 30 minutes", "60% improvement in developer satisfaction", "Standardized service templates across 15 teams"]
       }
     ],
     faqs: [
