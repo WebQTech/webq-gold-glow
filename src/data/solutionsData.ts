@@ -391,6 +391,150 @@ export const solutionsData: SolutionDetail[] = [
       { question: "How long does a data management implementation take?", answer: "Depending on scope, initial implementations typically take 3–6 months, with ongoing optimization. We use phased approaches to deliver value incrementally." },
       { question: "Can you work with our existing databases?", answer: "Absolutely. We integrate with all major database platforms including SQL Server, Oracle, PostgreSQL, MongoDB, and cloud-native databases like Snowflake and BigQuery." }
     ]
+  },
+  {
+    slug: "cloud-optimization",
+    name: "Cloud Cost Optimization",
+    shortDescription: "Maximize cloud ROI with cost analysis, rightsizing, and FinOps best practices.",
+    fullDescription: "Our Cloud Cost Optimization services help organizations reduce cloud spend while maintaining performance. We analyze your cloud footprint, identify waste, implement rightsizing strategies, and establish FinOps practices for ongoing cost governance across AWS, Azure, and GCP.",
+    icon: Gauge,
+    features: [
+      "Cloud spend analysis and cost attribution",
+      "Resource rightsizing and auto-scaling optimization",
+      "Reserved instance and savings plan management",
+      "FinOps framework implementation",
+      "Multi-cloud cost governance dashboards",
+      "Idle resource detection and cleanup"
+    ],
+    benefits: [
+      "30–50% reduction in cloud costs",
+      "Full visibility into cloud spending",
+      "Optimized resource utilization",
+      "Predictable budgeting with FinOps practices",
+      "Automated cost anomaly detection"
+    ],
+    technologies: ["AWS Cost Explorer", "Azure Cost Management", "GCP Billing", "CloudHealth", "Spot.io", "Kubecost", "Terraform", "Infracost"],
+    caseStudies: [
+      {
+        company: "Digital Media Corp",
+        industry: "Media & Entertainment",
+        challenge: "Cloud costs growing 40% year-over-year with limited visibility into spend drivers.",
+        solution: "Implemented FinOps practices, rightsized instances, and automated scheduling for non-production environments.",
+        results: ["42% reduction in monthly cloud spend", "Real-time cost dashboards for engineering teams", "Automated savings of $15K/month from idle resources"]
+      }
+    ],
+    faqs: [
+      { question: "How quickly can we see cost savings?", answer: "Quick wins like idle resource cleanup and rightsizing typically deliver 15–25% savings within the first month. Long-term optimization through reserved instances and architectural changes follow." },
+      { question: "Do you support multi-cloud environments?", answer: "Yes, we optimize across AWS, Azure, and GCP with unified dashboards and governance policies." }
+    ]
+  },
+  {
+    slug: "hybrid-multi-cloud",
+    name: "Hybrid & Multi-Cloud Solutions",
+    shortDescription: "Unified management of hybrid and multi-cloud environments for flexibility and resilience.",
+    fullDescription: "We design and implement hybrid and multi-cloud architectures that give you the flexibility to run workloads wherever they perform best. Our solutions ensure seamless connectivity, consistent security, and unified management across on-premises, private cloud, and public cloud environments.",
+    icon: Network,
+    features: [
+      "Hybrid cloud architecture design",
+      "Multi-cloud workload orchestration",
+      "Cross-cloud networking and connectivity",
+      "Unified identity and access management",
+      "Disaster recovery across cloud providers",
+      "Cloud-agnostic container orchestration"
+    ],
+    benefits: [
+      "Avoid vendor lock-in",
+      "Optimized workload placement",
+      "Enhanced disaster recovery and resilience",
+      "Consistent security posture across clouds",
+      "Flexibility to leverage best-of-breed services"
+    ],
+    technologies: ["Kubernetes", "Anthos", "Azure Arc", "AWS Outposts", "Terraform", "Consul", "Istio", "HashiCorp Vault"],
+    caseStudies: [
+      {
+        company: "Global Trading Firm",
+        industry: "Financial Services",
+        challenge: "Needed low-latency workloads on-premises with burst capacity to cloud during peak trading hours.",
+        solution: "Designed a hybrid architecture with Kubernetes-based workload portability and automated burst-to-cloud during peak periods.",
+        results: ["99.99% uptime achieved", "60% cost reduction during off-peak periods", "Sub-millisecond latency for critical workloads"]
+      }
+    ],
+    faqs: [
+      { question: "Is hybrid cloud more expensive than single cloud?", answer: "Not necessarily. Hybrid cloud lets you place workloads where they're most cost-effective, often reducing overall spend while improving performance." },
+      { question: "How do you handle security across multiple clouds?", answer: "We implement unified IAM, network segmentation, and centralized security monitoring across all environments using tools like HashiCorp Vault and cloud-native security services." }
+    ]
+  },
+  {
+    slug: "ci-cd-automation",
+    name: "CI/CD Automation",
+    shortDescription: "Automated build, test, and deployment pipelines for faster, reliable software delivery.",
+    fullDescription: "Our CI/CD Automation services streamline your software delivery lifecycle from code commit to production deployment. We design and implement automated pipelines that build, test, and deploy your applications with speed, consistency, and reliability — reducing manual effort and accelerating time to market.",
+    icon: GitBranch,
+    features: [
+      "Automated build and deployment pipelines",
+      "Automated testing integration (unit, integration, E2E)",
+      "Blue-green and canary deployment strategies",
+      "GitOps-based workflow implementation",
+      "Artifact management and versioning",
+      "Pipeline security scanning (SAST/DAST)"
+    ],
+    benefits: [
+      "10x faster release cycles",
+      "Reduced deployment failures and rollbacks",
+      "Consistent, repeatable deployments",
+      "Early bug detection through automated testing",
+      "Improved developer productivity"
+    ],
+    technologies: ["Jenkins", "GitHub Actions", "GitLab CI", "Azure DevOps", "ArgoCD", "Tekton", "SonarQube", "Artifactory", "Docker", "Helm"],
+    caseStudies: [
+      {
+        company: "FinTech Startup",
+        industry: "Financial Services",
+        challenge: "Manual deployments taking 4+ hours with frequent rollbacks and production incidents.",
+        solution: "Built fully automated CI/CD pipelines with GitOps, canary deployments, and integrated security scanning.",
+        results: ["Deployments reduced from 4 hours to 12 minutes", "Zero-downtime releases achieved", "90% reduction in production incidents", "50+ deployments per week"]
+      }
+    ],
+    faqs: [
+      { question: "Can you work with our existing CI/CD tools?", answer: "Yes, we integrate with all major CI/CD platforms including Jenkins, GitHub Actions, GitLab CI, and Azure DevOps. We can also help you migrate to a more modern toolchain." },
+      { question: "How do you handle database migrations in CI/CD?", answer: "We implement automated database migration strategies using tools like Flyway or Liquibase, integrated into the pipeline with rollback capabilities." }
+    ]
+  },
+  {
+    slug: "infrastructure-as-code",
+    name: "Infrastructure as Code",
+    shortDescription: "Manage and provision infrastructure through code for consistency, speed, and auditability.",
+    fullDescription: "We help organizations adopt Infrastructure as Code (IaC) practices to manage cloud and on-premises infrastructure through version-controlled, repeatable code. This eliminates manual configuration drift, enables rapid environment provisioning, and provides a complete audit trail of infrastructure changes.",
+    icon: Container,
+    features: [
+      "Terraform and Pulumi implementation",
+      "Cloud infrastructure templating",
+      "Configuration management (Ansible, Chef)",
+      "Environment provisioning automation",
+      "Drift detection and remediation",
+      "IaC testing and validation frameworks"
+    ],
+    benefits: [
+      "Eliminate configuration drift",
+      "Provision environments in minutes, not days",
+      "Full audit trail of infrastructure changes",
+      "Consistent environments across dev, staging, and production",
+      "Reduced operational overhead"
+    ],
+    technologies: ["Terraform", "Pulumi", "AWS CloudFormation", "Azure Bicep", "Ansible", "Crossplane", "Terragrunt", "Checkov", "tfsec"],
+    caseStudies: [
+      {
+        company: "Healthcare SaaS Provider",
+        industry: "Healthcare",
+        challenge: "Manual infrastructure provisioning taking weeks, with configuration inconsistencies across environments causing production bugs.",
+        solution: "Implemented Terraform modules with automated testing, GitOps workflows, and drift detection across 200+ cloud resources.",
+        results: ["Environment provisioning reduced from 2 weeks to 30 minutes", "Zero configuration drift incidents", "100% infrastructure audit compliance", "40% reduction in infrastructure team workload"]
+      }
+    ],
+    faqs: [
+      { question: "Which IaC tool should we use?", answer: "It depends on your stack. Terraform is ideal for multi-cloud, Pulumi if your team prefers general-purpose languages, and CloudFormation/Bicep for single-cloud AWS/Azure shops. We help you choose and implement the right tool." },
+      { question: "Can IaC work with existing manually created infrastructure?", answer: "Yes, we can import existing resources into Terraform state and gradually bring your infrastructure under code management without disruption." }
+    ]
   }
 ];
 
