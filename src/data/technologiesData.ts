@@ -673,7 +673,7 @@ export const technologiesData: TechnologyDetail[] = [
     category: "Security",
     icon: Bug,
     shortDescription: "Continuous code quality and security analysis.",
-    fullDescription: "SonarQube scans code for bugs, vulnerabilities, and code smells. We integrate it into CI/CD pipelines for automated quality gates and security checks.",
+    fullDescription: "SonarQube continuously scans code for bugs, security vulnerabilities, and code smells, providing automated quality gates that prevent problematic code from reaching production. We integrate it into CI/CD pipelines for every project to maintain consistently high code quality standards. For businesses, SonarQube reduces production defects by catching issues early when they're cheapest to fix — preventing costly post-release patches and security incidents. Its multi-language support covers 30+ programming languages, providing unified quality metrics across diverse technology stacks. Security hotspot detection identifies code patterns that could lead to vulnerabilities, while technical debt tracking quantifies maintenance costs. We leverage AI-powered code analysis, automated fix suggestions, and intelligent quality trend monitoring to maintain world-class code standards — delivering software that's secure, maintainable, and built to\u00A0last.",
     useCases: ["Code Quality Gates", "Security Vulnerability Scanning", "Technical Debt Tracking", "Code Review Automation", "Compliance Enforcement"],
     features: ["Multi-language support", "Quality gates", "Security hotspots", "Branch analysis", "IDE integration"],
     relatedTechnologies: ["Jenkins", "GitHub Actions", "GitLab CI/CD"],
