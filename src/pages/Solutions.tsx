@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { Footer } from "@/components/Footer";
 import { solutionsData } from "@/data/solutionsData";
 import { motion } from "framer-motion";
+import { HoverCard, HoverCardTrigger, HoverCardContent } from "@/components/ui/hover-card";
 
 const solutionCategories = [
   {
