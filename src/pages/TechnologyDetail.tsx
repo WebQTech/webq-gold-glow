@@ -38,7 +38,7 @@ const springBootSnippets = [
     language: "Java",
     badge: "⚡ Performance",
     badgeColor: "#f9e2af",
-    description: "Cacheable queries with Spring's @Cacheable reduce DB hits. Pagination via Pageable prevents full-table scans on large datasets.",
+    description: "Cacheable queries and paginated responses to minimize DB load. At WebQ, we profile every service layer — applying Redis-backed caching and lazy-loading strategies that cut response times by up to 60%.",
     lines: [
       '@Service',
       'public class UserService {',
