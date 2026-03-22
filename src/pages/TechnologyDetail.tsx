@@ -4,6 +4,75 @@ import { ArrowLeft, ArrowRight, Check, ChevronRight, Home, Zap } from "lucide-re
 import { GoBackButton } from "@/components/GoBackButton";
 import { Footer } from "@/components/Footer";
 import { getTechnologyBySlug, technologiesData } from "@/data/technologiesData";
+import { CodeTypingAnimation } from "@/components/CodeTypingAnimation";
+
+const springBootSnippets = [
+  {
+    title: "UserController.java",
+    language: "Java",
+    lines: [
+      '@RestController',
+      '@RequestMapping("/api/users")',
+      'public class UserController {',
+      '',
+      '    @Autowired',
+      '    private UserService userService;',
+      '',
+      '    @GetMapping("/{id}")',
+      '    public ResponseEntity<User> getUser(',
+      '            @PathVariable Long id) {',
+      '        return ResponseEntity.ok(',
+      '            userService.findById(id));',
+      '    }',
+      '}',
+    ],
+  },
+  {
+    title: "UserService.java",
+    language: "Java",
+    lines: [
+      '@Service',
+      'public class UserService {',
+      '',
+      '    @Autowired',
+      '    private UserRepository repo;',
+      '',
+      '    public User findById(Long id) {',
+      '        return repo.findById(id)',
+      '            .orElseThrow(() ->',
+      '                new ResourceNotFoundException(',
+      '                    "User not found: " + id));',
+      '    }',
+      '',
+      '    public List<User> findAll() {',
+      '        return repo.findAll();',
+      '    }',
+      '}',
+    ],
+  },
+  {
+    title: "User.java",
+    language: "Java",
+    lines: [
+      '@Entity',
+      '@Table(name = "users")',
+      'public class User {',
+      '',
+      '    @Id',
+      '    @GeneratedValue',
+      '    private Long id;',
+      '',
+      '    @Column(nullable = false)',
+      '    private String name;',
+      '',
+      '    @Column(unique = true)',
+      '    private String email;',
+      '',
+      '    // getters and setters',
+      '}',
+    ],
+  },
+];
 
 const TechnologyDetail = () => {
   const { slug } = useParams<{ slug: string }>();
