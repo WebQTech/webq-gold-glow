@@ -161,7 +161,7 @@ function colorize(text: string): React.ReactNode {
     [/^("(?:[^"\\]|\\.)*")/, "#a6e3a1"], // strings
     [/^(@\w+)/, "#f9e2af"],              // annotations
     [/^(import|package|public|private|class|interface|return|new|void|static|final|throws|if|else|try|catch)\b/, "#cba6f7"], // keywords
-    [/^(String|int|long|boolean|List|Map|Optional|ResponseEntity|RestController|GetMapping|PostMapping|RequestBody|PathVariable|Autowired|Service|Repository|Entity|Id|GeneratedValue|Column|Table)\b/, "#89b4fa"], // types
+    [/^(String|int|long|boolean|List|Map|Optional|Page|Pageable|ResponseEntity|RestController|GetMapping|PostMapping|RequestBody|PathVariable|Autowired|Service|Repository|Entity|Id|GeneratedValue|Column|Table|Configuration|Bean|Valid|Cacheable|CreatedDate|LocalDateTime|SecurityFilterChain|HttpSecurity)\b/, "#89b4fa"], // types
     [/^(\d+)/, "#fab387"],               // numbers
     [/^([{}()\[\];,.<>:=+\-*\/!&|])/, "#94e2d5"], // punctuation
     [/^(\w+)/, "#cdd6f4"],              // identifiers
