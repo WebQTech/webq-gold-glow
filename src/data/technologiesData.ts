@@ -640,7 +640,7 @@ export const technologiesData: TechnologyDetail[] = [
     category: "Security",
     icon: Search,
     shortDescription: "SIEM and observability platform for security operations.",
-    fullDescription: "Splunk ingests and analyzes machine data for security monitoring, incident investigation, and compliance. We deploy Splunk for SOC operations and security analytics.",
+    fullDescription: "Splunk ingests and analyzes machine data for security monitoring, incident investigation, and compliance across entire IT environments. We deploy Splunk for SOC operations, security analytics, and application performance monitoring. For businesses, Splunk transforms overwhelming volumes of log data into actionable security intelligence — detecting threats in real-time, automating incident response, and providing the audit trails that regulatory compliance demands. Its Search Processing Language (SPL) enables complex queries across terabytes of data in seconds. SOAR integration automates repetitive security tasks, freeing analysts for high-value threat hunting. Splunk's machine learning toolkit identifies anomalies that rule-based systems miss. We leverage AI-powered correlation rules, automated alert tuning, and intelligent dashboard design to maximize SOC efficiency — reducing mean time to detect and respond to security incidents\u00A0dramatically.",
     useCases: ["SIEM Operations", "Log Analysis", "Compliance Monitoring", "Incident Investigation", "Application Monitoring"],
     features: ["Search Processing Language (SPL)", "Dashboards & alerts", "SOAR integration", "Machine learning toolkit", "Data models"],
     relatedTechnologies: ["CrowdStrike", "Palo Alto Networks"],
