@@ -2,7 +2,7 @@ import {
   Code2, Cloud, Server, RefreshCw, TestTube, Headphones, Settings, Database,
   Gauge, Network, GitBranch, Container, Zap, Shield, Wrench, ClipboardList,
   BarChart3, Brain, Smartphone, Plug, Lock, ShieldCheck, FileCode, CloudCog, KeyRound,
-  ShieldAlert, Scale, PackageSearch, HardDriveDownload, Layers, Activity, DollarSign, CloudLightning, Cog, Accessibility, Blocks, Palette, Bot, Workflow, FlaskConical, Building2, Users, Cable, RotateCcw, TabletSmartphone, Truck, FileStack, BookCheck, Warehouse, ArrowRightLeft, ShoppingCart, FileText, HardDrive, Headset, Radio, GitPullRequest, ShieldPlus, LucideIcon
+  ShieldAlert, Scale, PackageSearch, HardDriveDownload, Layers, Activity, DollarSign, CloudLightning, Cog, Accessibility, Blocks, Palette, Bot, Workflow, FlaskConical, Building2, Users, Cable, RotateCcw, TabletSmartphone, Truck, FileStack, BookCheck, Warehouse, ArrowRightLeft, ShoppingCart, FileText, HardDrive, Headset, Radio, GitPullRequest, ShieldPlus, Radar, Crosshair, Fingerprint, LucideIcon
 } from "lucide-react";
 
 export interface SolutionDetail {
@@ -2261,6 +2261,117 @@ export const solutionsData: SolutionDetail[] = [
     faqs: [
       { question: "How is BCP different from Disaster Recovery?", answer: "Disaster Recovery (DR) focuses specifically on restoring IT systems and data after an outage. Business Continuity Planning is broader — it encompasses all critical business functions including people, processes, facilities, and technology, ensuring the entire organization can continue operating during and after a disruption." },
       { question: "How often should we test our continuity plans?", answer: "We recommend quarterly tabletop exercises for critical functions, semi-annual simulation tests, and annual full-scale exercises. Plans should also be reviewed and updated after any significant organizational change, incident, or at minimum annually." }
+    ]
+  },
+  {
+    slug: "soc-as-a-service",
+    name: "SOC as a Service",
+    shortDescription: "Fully managed Security Operations Center providing 24/7 threat monitoring, detection, and response.",
+    fullDescription: "Our SOC as a Service delivers enterprise-grade security operations without the cost and complexity of building an in-house SOC. Our team of certified security analysts monitors your environment around the clock using advanced SIEM, SOAR, and threat intelligence platforms to detect, investigate, and respond to security threats in real time. We provide continuous protection against evolving cyber threats while giving you full visibility through dashboards and detailed reporting.",
+    icon: Radar,
+    features: [
+      "24/7/365 security monitoring and alerting",
+      "SIEM deployment, tuning, and management",
+      "Threat hunting and advanced analytics",
+      "Incident response and containment",
+      "SOAR automation for rapid response",
+      "Threat intelligence integration and reporting"
+    ],
+    benefits: [
+      "Enterprise-grade security at a fraction of in-house SOC costs",
+      "Reduce mean time to detect (MTTD) threats to under 15 minutes",
+      "Access to certified security analysts (CISSP, GCIA, GCIH)",
+      "Eliminate alert fatigue with intelligent triage and correlation",
+      "Meet compliance requirements for continuous monitoring",
+      "Scalable coverage as your environment grows"
+    ],
+    technologies: ["Splunk", "Microsoft Sentinel", "CrowdStrike", "Palo Alto Cortex XSOAR", "IBM QRadar", "Elastic Security"],
+    caseStudies: [
+      {
+        company: "Mid-Market SaaS Provider",
+        industry: "Technology",
+        challenge: "Lacked dedicated security staff and suffered a data breach that went undetected for 3 months.",
+        solution: "Deployed managed SOC with 24/7 monitoring, SIEM integration across cloud and on-prem environments, and automated incident response playbooks.",
+        results: ["Mean time to detect reduced from 90 days to 8 minutes", "Blocked 12,000+ threats in the first quarter", "Achieved SOC 2 Type II compliance within 6 months"]
+      }
+    ],
+    faqs: [
+      { question: "How is SOC as a Service different from an MSSP?", answer: "While traditional MSSPs primarily focus on alert forwarding and basic monitoring, our SOC as a Service provides deep investigation, threat hunting, incident response, and continuous tuning. We act as an extension of your team, not just a notification service." },
+      { question: "What data sources do you monitor?", answer: "We integrate with cloud platforms (AWS, Azure, GCP), endpoints (EDR), network devices, firewalls, identity providers, email security, SaaS applications, and custom applications. Our SIEM correlates events across all sources for comprehensive threat visibility." }
+    ]
+  },
+  {
+    slug: "penetration-testing",
+    name: "Penetration Testing",
+    shortDescription: "Comprehensive offensive security testing to identify vulnerabilities before attackers exploit them.",
+    fullDescription: "Our Penetration Testing services simulate real-world cyberattacks against your applications, networks, and infrastructure to identify exploitable vulnerabilities. Our certified ethical hackers use the same techniques as malicious actors — combined with industry frameworks like OWASP, PTES, and NIST — to uncover security weaknesses, validate existing controls, and provide actionable remediation guidance. We offer network, web application, mobile, API, cloud, and social engineering assessments.",
+    icon: Crosshair,
+    features: [
+      "Network and infrastructure penetration testing",
+      "Web and mobile application security testing",
+      "API and microservices security assessment",
+      "Cloud environment penetration testing (AWS, Azure, GCP)",
+      "Social engineering and phishing simulations",
+      "Red team / purple team exercises"
+    ],
+    benefits: [
+      "Identify critical vulnerabilities before attackers do",
+      "Validate effectiveness of existing security controls",
+      "Meet compliance requirements (PCI DSS, HIPAA, SOC 2)",
+      "Detailed remediation guidance prioritized by risk",
+      "Executive-level reporting for leadership visibility",
+      "Strengthen security posture with regular testing cadence"
+    ],
+    technologies: ["Burp Suite", "Metasploit", "Nessus", "Cobalt Strike", "OWASP ZAP", "Kali Linux"],
+    caseStudies: [
+      {
+        company: "E-Commerce Platform",
+        industry: "Retail",
+        challenge: "Required PCI DSS compliance but had never conducted a formal penetration test on their payment processing infrastructure.",
+        solution: "Performed comprehensive penetration testing across web application, API layer, and network infrastructure with focus on payment card data flows.",
+        results: ["Identified 14 critical and 32 high-severity vulnerabilities", "All critical findings remediated within 30 days", "Successfully passed PCI DSS compliance audit"]
+      }
+    ],
+    faqs: [
+      { question: "How often should we conduct penetration tests?", answer: "We recommend at least annual penetration testing, with additional tests after major application releases, infrastructure changes, or mergers/acquisitions. Compliance frameworks like PCI DSS require quarterly network scans and annual penetration tests." },
+      { question: "Will penetration testing disrupt our production systems?", answer: "We carefully scope and schedule tests to minimize impact. For production environments, we use controlled techniques and coordinate timing with your team. We can also test against staging environments first and limit destructive techniques to maintenance windows." }
+    ]
+  },
+  {
+    slug: "zero-trust-security",
+    name: "Zero Trust Security",
+    shortDescription: "Design and implement zero trust architectures that verify every user, device, and connection.",
+    fullDescription: "Our Zero Trust Security services help organizations transition from traditional perimeter-based security to a modern 'never trust, always verify' architecture. We design and implement comprehensive zero trust frameworks that enforce strict identity verification, least-privilege access, micro-segmentation, and continuous validation for every user, device, and network flow — regardless of location. This approach dramatically reduces attack surface and limits lateral movement in the event of a breach.",
+    icon: Fingerprint,
+    features: [
+      "Zero trust architecture assessment and roadmap",
+      "Identity-centric security and MFA implementation",
+      "Micro-segmentation and network access control",
+      "Device trust and endpoint compliance validation",
+      "Secure access service edge (SASE) implementation",
+      "Continuous monitoring and adaptive access policies"
+    ],
+    benefits: [
+      "Reduce attack surface by eliminating implicit trust",
+      "Prevent lateral movement during security breaches",
+      "Enable secure remote work without VPN complexity",
+      "Improve compliance posture across frameworks",
+      "Granular visibility into all access requests and decisions",
+      "Adaptive security that responds to real-time risk signals"
+    ],
+    technologies: ["Zscaler", "Okta", "CrowdStrike Falcon", "Microsoft Entra ID", "Palo Alto Prisma", "Cloudflare Zero Trust"],
+    caseStudies: [
+      {
+        company: "Federal Government Agency",
+        industry: "Government",
+        challenge: "Executive order mandated zero trust adoption across all systems within 24 months, with legacy infrastructure spanning 30+ years.",
+        solution: "Developed phased zero trust roadmap, implemented identity-centric access controls, micro-segmented critical networks, and deployed SASE for remote workforce.",
+        results: ["Achieved zero trust maturity level 3 within 18 months", "Eliminated 85% of VPN-related security incidents", "Passed federal zero trust compliance assessment ahead of deadline"]
+      }
+    ],
+    faqs: [
+      { question: "How long does zero trust implementation take?", answer: "Zero trust is a journey, not a one-time project. We typically implement it in phases over 12–24 months, starting with identity and access management, then progressing to network segmentation, device trust, and continuous monitoring. Quick wins can be achieved within the first 90 days." },
+      { question: "Does zero trust replace our existing security tools?", answer: "Not necessarily. Zero trust is an architecture and philosophy that often leverages and enhances your existing investments. We integrate with your current identity providers, firewalls, endpoint protection, and SIEM platforms while adding the policy engine and orchestration layer needed for zero trust enforcement." }
     ]
   }
 ];
