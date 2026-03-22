@@ -741,7 +741,7 @@ export const technologiesData: TechnologyDetail[] = [
     category: "Enterprise Platforms",
     icon: Headset,
     shortDescription: "IT service management and digital workflow platform.",
-    fullDescription: "We implement ServiceNow for ITSM, ITOM, HR service delivery, and custom workflow applications. Our certified developers build integrations and custom apps on the Now Platform.",
+    fullDescription: "We implement ServiceNow for ITSM, ITOM, HR service delivery, and custom workflow applications that digitize and automate enterprise operations. Our certified developers build integrations and custom apps on the Now Platform. For businesses, ServiceNow transforms manual, email-driven processes into structured, automated workflows that reduce resolution times by up to 60%. Its Virtual Agent provides AI-powered self-service that deflects common requests, reducing service desk costs. The CMDB provides a single system of record for IT infrastructure, enabling impact analysis and change management. Performance Analytics delivers real-time KPI tracking and predictive intelligence. We leverage AI-assisted workflow design, automated integration development, and intelligent process mining to accelerate ServiceNow implementations — delivering digital transformation of service operations that measurably improves efficiency and employee\u00A0satisfaction.",
     useCases: ["ITSM & ITOM", "HR Service Delivery", "Customer Service Management", "Security Operations", "Custom Workflow Apps"],
     features: ["Now Platform", "Flow Designer", "Virtual Agent", "CMDB", "Performance Analytics"],
     relatedTechnologies: ["Salesforce", "Jira / Atlassian"],
