@@ -26,7 +26,7 @@ const solutionCategories = [
   },
   {
     title: "AI & Machine Learning",
-    items: ["ai-ml-solutions", "generative-ai", "agentic-ai", "mlops"],
+    items: ["ai-ml-solutions", "generative-ai", "agentic-ai", "mlops", "nlp-services", "rag-solutions", "computer-vision"],
   },
   {
     title: "Security",
