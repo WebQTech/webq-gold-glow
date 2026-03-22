@@ -4,15 +4,15 @@ const s = (c: string) => c.split("\n");
 
 const createEnterpriseTech = (name: string, lang: string, snippetData: { t: string; c: string }[]): TechSnippetData => ({
   snippets: [
-    { title: snippetData[0].t, language: lang, badge: "🔒 Secure Code", badgeColor: "#f38ba8", description: `Enterprise security configuration for ${name}. At WebQ, we enforce strict access controls and encryption for all ${name} deployments.`, lines: s(snippetData[0].c) },
-    { title: snippetData[1].t, language: lang, badge: "⚡ Performance", badgeColor: "#a6e3a1", description: `Performance optimization for ${name}. At WebQ, we tune ${name} for maximum throughput and responsiveness.`, lines: s(snippetData[1].c) },
+    { title: snippetData[0].t, language: lang, badge: "🔒 Secure Code", badgeColor: "#89b4fa", description: `Enterprise security configuration for ${name}. At WebQ, we enforce strict access controls and encryption for all ${name} deployments.`, lines: s(snippetData[0].c) },
+    { title: snippetData[1].t, language: lang, badge: "⚡ Performance", badgeColor: "#89b4fa", description: `Performance optimization for ${name}. At WebQ, we tune ${name} for maximum throughput and responsiveness.`, lines: s(snippetData[1].c) },
     { title: snippetData[2].t, language: lang, badge: "🧪 Testing", badgeColor: "#89b4fa", description: `Integration testing for ${name}. At WebQ, we validate all ${name} configurations in staging before production.`, lines: s(snippetData[2].c) },
-    { title: snippetData[3].t, language: lang, badge: "📝 Logging", badgeColor: "#f9e2af", description: `Audit logging for ${name}. At WebQ, we capture comprehensive audit trails for compliance and troubleshooting.`, lines: s(snippetData[3].c) },
-    { title: snippetData[4].t, language: lang, badge: "🛡️ Exception Handling", badgeColor: "#cba6f7", description: `Error handling and recovery for ${name}. At WebQ, we implement graceful degradation and automated recovery.`, lines: s(snippetData[4].c) },
-    { title: snippetData[5].t, language: lang, badge: "👤 User-Friendly", badgeColor: "#94e2d5", description: `User experience optimization for ${name}. At WebQ, we design intuitive interfaces and streamlined workflows.`, lines: s(snippetData[5].c) },
-    { title: snippetData[6].t, language: lang, badge: "📐 Best Practice", badgeColor: "#fab387", description: `${name} best practices and architecture. At WebQ, we follow industry standards for scalable, maintainable solutions.`, lines: s(snippetData[6].c) },
-    { title: snippetData[7].t, language: lang, badge: "🔄 Event-Driven", badgeColor: "#74c7ec", description: `Integration and automation for ${name}. At WebQ, we build event-driven workflows and system integrations.`, lines: s(snippetData[7].c) },
-    { title: snippetData[8].t, language: "Markdown", badge: "📖 Documentation", badgeColor: "#f5c2e7", description: `${name} implementation documentation. At WebQ, we maintain comprehensive runbooks for every deployment.`, lines: s(snippetData[8].c) },
+    { title: snippetData[3].t, language: lang, badge: "📝 Logging", badgeColor: "#89b4fa", description: `Audit logging for ${name}. At WebQ, we capture comprehensive audit trails for compliance and troubleshooting.`, lines: s(snippetData[3].c) },
+    { title: snippetData[4].t, language: lang, badge: "🛡️ Exception Handling", badgeColor: "#89b4fa", description: `Error handling and recovery for ${name}. At WebQ, we implement graceful degradation and automated recovery.`, lines: s(snippetData[4].c) },
+    { title: snippetData[5].t, language: lang, badge: "👤 User-Friendly", badgeColor: "#89b4fa", description: `User experience optimization for ${name}. At WebQ, we design intuitive interfaces and streamlined workflows.`, lines: s(snippetData[5].c) },
+    { title: snippetData[6].t, language: lang, badge: "📐 Best Practice", badgeColor: "#89b4fa", description: `${name} best practices and architecture. At WebQ, we follow industry standards for scalable, maintainable solutions.`, lines: s(snippetData[6].c) },
+    { title: snippetData[7].t, language: lang, badge: "🔄 Event-Driven", badgeColor: "#89b4fa", description: `Integration and automation for ${name}. At WebQ, we build event-driven workflows and system integrations.`, lines: s(snippetData[7].c) },
+    { title: snippetData[8].t, language: "Markdown", badge: "📖 Documentation", badgeColor: "#89b4fa", description: `${name} implementation documentation. At WebQ, we maintain comprehensive runbooks for every deployment.`, lines: s(snippetData[8].c) },
   ],
   metrics: [],
   industries: [],
