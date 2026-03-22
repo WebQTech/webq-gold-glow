@@ -763,7 +763,7 @@ export const technologiesData: TechnologyDetail[] = [
     category: "Enterprise Platforms",
     icon: Building2,
     shortDescription: "Cloud-based ERP for finance, procurement, and project management.",
-    fullDescription: "Oracle ERP Cloud provides comprehensive enterprise resource planning with AI-powered finance, procurement, and project management capabilities.",
+    fullDescription: "Oracle ERP Cloud provides comprehensive enterprise resource planning with AI-powered finance, procurement, and project management capabilities designed for the modern enterprise. For businesses, Oracle ERP's cloud-native architecture eliminates costly on-premises infrastructure while delivering continuous innovation through quarterly updates. Its AI-powered financial close automation reduces month-end processing from days to hours, while intelligent procurement optimizes spending across the supply chain. Built-in risk management and automated compliance features address regulatory requirements across 200+ jurisdictions. Global localization supports multinational operations with country-specific tax and reporting requirements. We leverage AI-assisted implementation methodologies, automated configuration, and intelligent business process redesign to accelerate Oracle ERP deployments — delivering enterprise-grade financial management that drives operational excellence and strategic\u00A0growth.",
     useCases: ["Financial Management", "Procurement", "Project Management", "Risk Management", "Enterprise Performance"],
     features: ["Cloud-native", "AI-powered insights", "Automated compliance", "Global localization", "Mobile-ready"],
     relatedTechnologies: ["Oracle Cloud", "SAP"],
