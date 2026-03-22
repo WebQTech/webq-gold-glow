@@ -47,17 +47,6 @@ const Solutions = () => {
   return (
     <div className="min-h-screen bg-background">
       <main id="main-content" className="focus:outline-none" tabIndex={-1}>
-        {/* Hero */}
-        <section className="py-10 lg:py-14 border-b border-border">
-          <div className="container mx-auto px-6 lg:px-12">
-            <h1 className="text-3xl lg:text-4xl font-bold text-foreground leading-tight">
-              Our Solutions
-            </h1>
-            <p className="mt-2 text-base text-muted-foreground max-w-2xl">
-              From ready-to-deploy products to custom implementations — explore our full range of technology capabilities across {solutionCategories.length} practice areas.
-            </p>
-          </div>
-        </section>
 
         {/* Category grid */}
         <section className="py-10 lg:py-14">
