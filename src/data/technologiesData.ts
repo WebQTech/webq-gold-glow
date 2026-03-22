@@ -146,7 +146,7 @@ export const technologiesData: TechnologyDetail[] = [
     shortDescription: "Enterprise-grade language for high-performance applications.",
     fullDescription: "Java remains the backbone of enterprise software. We use it with Spring Boot for microservices, event-driven architectures, and high-throughput transaction processing systems.",
     useCases: ["Enterprise Microservices", "Banking Systems", "Payment Processing", "High-frequency Trading", "Android Apps", "ERP Systems"],
-    features: ["JVM performance", "Spring Boot ecosystem", "Strong typing", "Multithreading", "Backward compatibility"],
+    features: ["JVM performance", "Spring Boot ecosystem", "Strong typing", "Multithreading", "Backward compatibility", "Garbage collection tuning", "Platform independence", "Mature security APIs", "Rich concurrency libraries"],
     relatedTechnologies: ["Spring Boot", "Kubernetes", "PostgreSQL", "Apache Kafka"],
   },
   {
