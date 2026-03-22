@@ -225,10 +225,10 @@ const SolutionDetail = () => {
                       </div>
                       <div>
                         <h4 className="text-sm font-medium text-primary mb-2">Results</h4>
-                        <ul className="grid grid-cols-2 gap-1.5">
+                        <ul className="grid grid-cols-2 gap-2">
                           {caseStudy.results.map((result, i) => (
-                            <li key={i} className="flex items-start gap-1.5 text-xs">
-                              <Check className="w-3.5 h-3.5 text-emerald-500 shrink-0 mt-0.5" />
+                            <li key={i} className="flex items-start gap-2 text-sm">
+                              <Check className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" />
                               <span className="text-foreground/80">{result}</span>
                             </li>
                           ))}
