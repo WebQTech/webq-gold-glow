@@ -32,7 +32,7 @@ export const technologiesData: TechnologyDetail[] = [
     category: "Frontend",
     icon: Code2,
     shortDescription: "Component-based UI library for building interactive user interfaces.",
-    fullDescription: "React is our primary frontend framework for building high-performance, interactive web applications. We leverage React's virtual DOM, hooks, and component architecture to create scalable SPAs and complex enterprise dashboards.",
+    fullDescription: "React is our primary frontend framework for building high-performance, interactive web applications. We leverage React's virtual DOM, hooks, and component architecture to create scalable single-page applications and complex enterprise dashboards that drive user engagement and business growth. Its massive ecosystem of libraries and tools reduces development overhead, while server-side rendering with Next.js ensures SEO visibility and faster load times — directly impacting conversion rates. React's component reusability cuts development costs by up to 40% across projects. We also leverage AI-powered code generation and intelligent component suggestions to accelerate React development cycles and maintain consistent code\u00A0quality.",
     useCases: ["Single Page Applications", "Enterprise Dashboards", "E-commerce Storefronts", "Customer Portals", "Admin Panels", "Real-time Collaboration Tools"],
     features: ["Component-based architecture", "Virtual DOM for performance", "Rich ecosystem of libraries", "Server-side rendering with Next.js", "React Native for mobile"],
     relatedTechnologies: ["TypeScript", "Next.js", "Tailwind CSS", "React Native"],
