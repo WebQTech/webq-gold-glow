@@ -2,6 +2,7 @@ import { useParams, Link, Navigate } from "react-router-dom";
 import { motion, useInView } from "framer-motion";
 import { useRef, useMemo } from "react";
 import { ArrowLeft, ArrowRight, Check, Building2, ChevronRight, Home } from "lucide-react";
+import { GoBackButton } from "@/components/GoBackButton";
 
 import { Footer } from "@/components/Footer";
 import { getServiceBySlug, servicesData, ServiceDetail as ServiceDetailType } from "@/data/servicesData";
@@ -49,6 +50,7 @@ const ServiceDetail = () => {
         {/* Hero Section */}
       <section ref={heroRef} className="py-10 lg:py-16 bg-gradient-to-b from-primary/5 to-background">
         <div className="container mx-auto px-6 lg:px-12">
+          <GoBackButton />
           <motion.nav
               aria-label="Breadcrumb"
               initial={{ opacity: 0, y: 20 }}
