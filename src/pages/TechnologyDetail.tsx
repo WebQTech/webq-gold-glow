@@ -316,18 +316,18 @@ const TechnologyDetail = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className={slug === "spring-boot" ? "grid lg:grid-cols-2 gap-10 items-start" : "max-w-3xl"}
+              className={slug === "spring-boot" ? "grid lg:grid-cols-2 gap-8 items-start" : "max-w-3xl"}
             >
               <div>
                 <span className="text-xs font-black tracking-widest text-primary uppercase">{tech.category}</span>
-                <div className="flex items-center gap-4 mt-3">
-                  <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center">
-                    <Icon className="w-7 h-7 text-primary" />
+                <div className="flex items-center gap-3 mt-2">
+                  <div className={`bg-primary/10 rounded-xl flex items-center justify-center ${slug === "spring-boot" ? "w-10 h-10" : "w-14 h-14"}`}>
+                    <Icon className={`text-primary ${slug === "spring-boot" ? "w-5 h-5" : "w-7 h-7"}`} />
                   </div>
-                  <h1 className="text-4xl lg:text-5xl font-bold text-foreground">{tech.name}</h1>
+                  <h1 className={`font-bold text-foreground ${slug === "spring-boot" ? "text-3xl lg:text-4xl" : "text-4xl lg:text-5xl"}`}>{tech.name}</h1>
                 </div>
-                <p className="mt-6 text-lg text-muted-foreground">{tech.fullDescription}</p>
-                <div className="mt-8">
+                <p className={`text-muted-foreground ${slug === "spring-boot" ? "mt-3 text-base" : "mt-6 text-lg"}`}>{tech.fullDescription}</p>
+                <div className={slug === "spring-boot" ? "mt-4" : "mt-8"}>
                   <Link to="/contact" className="btn-primary inline-flex items-center gap-2">
                     Discuss Your Project <ArrowRight className="w-4 h-4" />
                   </Link>
