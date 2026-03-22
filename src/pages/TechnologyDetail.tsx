@@ -95,7 +95,7 @@ const springBootSnippets = [
     language: "Java",
     badge: "📐 Best Practice",
     badgeColor: "#89b4fa",
-    description: "JPA entity with proper constraints — non-nullable fields, unique indexes, and auto-generated IDs. Clean separation of persistence logic from business rules.",
+    description: "JPA entities with proper constraints and audit fields. At WebQ, every data model follows our engineering playbook — unique indexes, non-nullable fields, and Flyway-managed migrations for safe schema evolution.",
     lines: [
       '@Entity',
       '@Table(name = "users")',
