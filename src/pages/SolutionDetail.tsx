@@ -132,7 +132,7 @@ const SolutionDetail = () => {
                   <Layers className="w-5 h-5 text-primary" />
                   <h2 className="text-2xl lg:text-3xl font-bold text-foreground">What We Deliver</h2>
                 </div>
-                <ul className="space-y-3">
+                <ul className="space-y-4">
                   {solution.features.map((feature, index) => (
                     <motion.li
                       key={index}
