@@ -19,9 +19,17 @@ export const CodeTypingAnimation = ({ snippets }: CodeTypingAnimationProps) => {
   const [visibleLines, setVisibleLines] = useState(0);
   const [currentText, setCurrentText] = useState("");
   const [isTyping, setIsTyping] = useState(true);
+  const codeAreaRef = useRef<HTMLDivElement>(null);
 
   const snippet = snippets[snippetIndex];
   const totalLines = snippet.lines.length;
+
+  // Auto-scroll to bottom as new lines appear
+  useEffect(() => {
+    if (codeAreaRef.current) {
+      codeAreaRef.current.scrollTop = codeAreaRef.current.scrollHeight;
+    }
+  }, [visibleLines, currentText]);
 
   const advanceSnippet = useCallback(() => {
     setIsTyping(false);
