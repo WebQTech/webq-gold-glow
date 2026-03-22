@@ -30,7 +30,7 @@ const solutionCategories = [
   },
   {
     title: "Security",
-    items: ["data-security", "information-security", "code-security", "cloud-instance-security", "identity-access-management", "cybersecurity-consulting", "compliance-governance"],
+    items: ["data-security", "information-security", "code-security", "cloud-instance-security", "identity-access-management", "cybersecurity-consulting", "compliance-governance", "soc-as-a-service", "penetration-testing", "zero-trust-security"],
   },
   {
     title: "Operations & Support",
