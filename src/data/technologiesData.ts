@@ -526,7 +526,7 @@ export const technologiesData: TechnologyDetail[] = [
     category: "AI & Machine Learning",
     icon: BarChart3,
     shortDescription: "Google Cloud's unified MLOps platform.",
-    fullDescription: "Vertex AI provides end-to-end ML lifecycle management on GCP — from data prep and training to deployment and monitoring. We use it for enterprise MLOps workflows.",
+    fullDescription: "Vertex AI provides end-to-end ML lifecycle management on Google Cloud — from data preparation and model training to deployment and continuous monitoring. We use it for enterprise MLOps workflows that demand reproducibility, governance, and scalability. For businesses, Vertex AI's AutoML capabilities enable teams without deep ML expertise to build production-quality models, while custom training supports advanced architectures for specialized requirements. Its Feature Store ensures consistent feature computation across training and serving, eliminating training-serving skew. The Model Registry provides versioned model management with automated deployment pipelines. Vertex AI's integration with BigQuery enables seamless analytics-to-ML workflows. We leverage AI-powered experiment management, automated model retraining, and intelligent monitoring to maintain model accuracy over time — delivering enterprise MLOps that scales from prototype to production\u00A0seamlessly.",
     useCases: ["MLOps Pipelines", "AutoML", "Model Monitoring", "Feature Store", "Batch Predictions"],
     features: ["AutoML", "Custom training", "Model registry", "Feature Store", "Prediction serving"],
     relatedTechnologies: ["GCP", "TensorFlow", "Python"],
