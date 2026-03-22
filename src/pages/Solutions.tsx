@@ -11,6 +11,14 @@ const solutionCategories = [
     items: ["custom-app-development", "technology-modernization", "mobile-app-development", "api-integration", "low-code-no-code", "ui-ux-design"],
   },
   {
+    title: "Analytics & Data Management",
+    items: ["data-analytics", "data-management", "business-intelligence", "data-governance", "data-warehousing", "etl-data-pipelines"],
+  },
+  {
+    title: "AI & Machine Learning",
+    items: ["ai-ml-solutions", "generative-ai", "agentic-ai", "mlops", "nlp-services", "rag-solutions", "computer-vision"],
+  },
+  {
     title: "Cloud Services",
     items: ["cloud-migration", "it-infrastructure", "cloud-optimization", "hybrid-multi-cloud", "finops", "serverless-architecture"],
   },
@@ -21,14 +29,6 @@ const solutionCategories = [
   {
     title: "Quality Assurance",
     items: ["qa-testing", "performance-testing", "security-testing", "test-automation-framework", "accessibility-testing"],
-  },
-  {
-    title: "Analytics & Data Management",
-    items: ["data-analytics", "data-management", "business-intelligence", "data-governance", "data-warehousing", "etl-data-pipelines"],
-  },
-  {
-    title: "AI & Machine Learning",
-    items: ["ai-ml-solutions", "generative-ai", "agentic-ai", "mlops", "nlp-services", "rag-solutions", "computer-vision"],
   },
   {
     title: "Security",
