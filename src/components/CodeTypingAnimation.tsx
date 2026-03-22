@@ -95,7 +95,7 @@ export const CodeTypingAnimation = ({ snippets }: CodeTypingAnimationProps) => {
                   {snippet.badge}
                 </span>
                 <p className="text-xs text-[#a6adc8] leading-relaxed">
-                  {snippet.description}
+                  {highlightWebQ(snippet.description || "", snippet.badgeColor || "#89b4fa")}
                 </p>
               </div>
             </motion.div>
@@ -191,4 +191,26 @@ function colorize(text: string): React.ReactNode {
   }
 
   return <>{parts}</>;
+}
+
+function highlightWebQ(text: string, badgeColor: string): React.ReactNode {
+  const regex = /(At WebQ)/g;
+  const parts = text.split(regex);
+  return (
+    <>
+      {parts.map((part, i) =>
+        part === "At WebQ" ? (
+          <span
+            key={i}
+            className="inline-block px-1.5 py-0.5 rounded font-bold text-[#1e1e2e] mx-0.5"
+            style={{ backgroundColor: badgeColor }}
+          >
+            {part}
+          </span>
+        ) : (
+          <span key={i}>{part}</span>
+        )
+      )}
+    </>
+  );
 }
