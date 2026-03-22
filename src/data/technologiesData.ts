@@ -684,7 +684,7 @@ export const technologiesData: TechnologyDetail[] = [
     category: "Security",
     icon: ScanLine,
     shortDescription: "Developer-first security for code, dependencies, and containers.",
-    fullDescription: "Snyk finds and fixes vulnerabilities in open-source dependencies, container images, and IaC templates. We integrate it into developer workflows for shift-left security.",
+    fullDescription: "Snyk finds and fixes vulnerabilities in open-source dependencies, container images, and infrastructure-as-code templates before they reach production. We integrate it into developer workflows for shift-left security that catches issues at the earliest possible stage. For businesses, Snyk reduces security remediation costs by up to 100x by finding vulnerabilities during development rather than after deployment. Its intelligent fix suggestions provide actionable pull requests that developers can merge with confidence. Priority scoring based on exploit maturity and reachability ensures teams focus on the vulnerabilities that matter most. SBOM generation provides complete supply chain visibility for compliance requirements. We leverage AI-powered vulnerability analysis, automated dependency updates, and intelligent risk assessment to maintain a proactive security posture — protecting applications from supply chain attacks while minimizing developer\u00A0friction.",
     useCases: ["Dependency Scanning", "Container Image Scanning", "IaC Security", "License Compliance", "SBOM Generation"],
     features: ["IDE integration", "CLI scanning", "PR/MR checks", "Fix suggestions", "Priority scoring"],
     relatedTechnologies: ["GitHub Actions", "Docker", "Kubernetes"],
