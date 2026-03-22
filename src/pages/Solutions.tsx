@@ -49,7 +49,7 @@ const Solutions = () => {
       <main id="main-content" className="focus:outline-none" tabIndex={-1}>
 
         {/* Running text marquee */}
-        <div className="overflow-hidden bg-[hsl(var(--gold))] py-3">
+        <div className="overflow-hidden py-3" style={{ backgroundColor: '#E5B94E' }}>
           <motion.div
             className="flex whitespace-nowrap"
             animate={{ x: ["0%", "-50%"] }}
