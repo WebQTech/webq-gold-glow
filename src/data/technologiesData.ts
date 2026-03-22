@@ -98,7 +98,7 @@ export const technologiesData: TechnologyDetail[] = [
     category: "Frontend",
     icon: Smartphone,
     shortDescription: "Google's UI toolkit for natively compiled cross-platform apps.",
-    fullDescription: "Flutter lets us build beautiful, natively compiled applications for mobile, web, and desktop from a single codebase using Dart. It delivers near-native performance with expressive UI.",
+    fullDescription: "Flutter lets us build beautiful, natively compiled applications for mobile, web, and desktop from a single Dart codebase. It delivers near-native performance with expressive, customizable widgets that create pixel-perfect experiences across platforms. For businesses, Flutter slashes development costs by maintaining one codebase instead of separate iOS and Android teams — reducing time-to-market by up to 50%. Its hot reload feature accelerates iteration cycles, allowing rapid prototyping and real-time design adjustments. Flutter's growing adoption by enterprises like Google, BMW, and Toyota validates its production readiness. We integrate AI-powered testing and automated widget generation to further accelerate Flutter development and ensure consistent quality across all\u00A0platforms.",
     useCases: ["Cross-platform Mobile Apps", "MVP Development", "Fintech Apps", "Healthcare Apps", "E-commerce Mobile Apps"],
     features: ["Single codebase for iOS/Android", "Hot reload", "Custom widgets", "Native performance", "Web & desktop support"],
     relatedTechnologies: ["React Native", "Firebase"],
