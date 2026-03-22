@@ -133,7 +133,7 @@ export const technologiesData: TechnologyDetail[] = [
     category: "Backend",
     icon: Hash,
     shortDescription: "Versatile language for AI/ML, data science, and web development.",
-    fullDescription: "Python is our go-to for AI/ML, data engineering, automation, and backend services. Its rich ecosystem of libraries (Django, FastAPI, pandas, scikit-learn) makes it the most versatile language in our stack.",
+    fullDescription: "Python is our go-to language for AI/ML, data engineering, automation, and backend services. Its rich ecosystem of libraries — Django, FastAPI, pandas, scikit-learn — makes it the most versatile language in our stack. For businesses, Python's readability and rapid development cycle mean faster prototyping and shorter time-to-market for data-driven products. It powers everything from intelligent recommendation engines to automated financial reporting pipelines. Python's dominance in the AI/ML space ensures access to cutting-edge models and research that drive competitive advantage. We leverage AI-powered coding assistants to accelerate Python development, auto-generate data pipelines, and optimize algorithm performance — transforming complex business requirements into production-ready solutions at\u00A0scale.",
     useCases: ["AI & Machine Learning", "Data Pipelines", "API Development", "Automation Scripts", "Scientific Computing", "Web Scraping"],
     features: ["Extensive ML/AI libraries", "Django & FastAPI frameworks", "Data science ecosystem", "Simple readable syntax", "Cross-platform"],
     relatedTechnologies: ["TensorFlow", "PyTorch", "PostgreSQL", "Docker"],
