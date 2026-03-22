@@ -12,7 +12,7 @@ const springBootSnippets = [
     language: "Java",
     badge: "🔒 Secure Code",
     badgeColor: "#f38ba8",
-    description: "OAuth2 + JWT authentication with role-based route protection. CSRF disabled for stateless APIs, public endpoints whitelisted, all others require valid tokens.",
+    description: "OAuth2 + JWT authentication with role-based route protection. At WebQ, we enforce zero-trust security from day one — every API ships with token validation, scoped permissions, and OWASP-compliant configurations.",
     lines: [
       '@Configuration',
       'public class SecurityConfig {',
