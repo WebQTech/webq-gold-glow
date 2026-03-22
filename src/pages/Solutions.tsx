@@ -48,23 +48,6 @@ const Solutions = () => {
     <div className="min-h-screen bg-background">
       <main id="main-content" className="focus:outline-none" tabIndex={-1}>
 
-        {/* Running text marquee */}
-        <div className="overflow-hidden py-3" style={{ backgroundColor: '#E5B94E' }}>
-          <motion.div
-            className="flex whitespace-nowrap"
-            animate={{ x: ["0%", "-50%"] }}
-            transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-          >
-            {[...Array(6)].map((_, i) => (
-              <span key={i} className="text-2xl lg:text-3xl font-bold mx-12 shrink-0" style={{ fontFamily: "'Montserrat', sans-serif" }}>
-                <span className="text-foreground">Comprehensive IT Solutions for </span>
-                <span className="text-primary">Modern Enterprises</span>
-                <span className="text-foreground mx-8">•</span>
-              </span>
-            ))}
-          </motion.div>
-        </div>
-
         {/* Category grid */}
         <section className="py-10 lg:py-14">
           <div className="container mx-auto px-6 lg:px-12">
