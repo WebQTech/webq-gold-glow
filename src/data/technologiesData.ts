@@ -381,7 +381,7 @@ export const technologiesData: TechnologyDetail[] = [
     category: "Databases",
     icon: Leaf,
     shortDescription: "Document database for flexible, scalable data models.",
-    fullDescription: "MongoDB's document model is ideal for applications with evolving schemas, nested data, and horizontal scaling requirements. We use it for content platforms, IoT, and real-time analytics.",
+    fullDescription: "MongoDB's flexible document model is ideal for applications with evolving schemas, deeply nested data, and horizontal scaling requirements. We use it for content platforms, IoT data ingestion, real-time analytics, and applications where data structures change frequently. For businesses, MongoDB eliminates the costly schema migration cycles that slow down feature delivery in traditional databases, enabling agile development that keeps pace with market demands. Its horizontal scaling through sharding handles petabyte-scale data across distributed clusters. MongoDB Atlas provides a fully managed cloud service with automated backups, monitoring, and global distribution. We enhance MongoDB development with AI-powered schema design recommendations, automated index optimization, and intelligent data modeling — delivering flexible, scalable data architectures that evolve with your\u00A0business.",
     useCases: ["Content Management", "IoT Data Storage", "Real-time Analytics", "Product Catalogs", "User Profiles", "Mobile Backends"],
     features: ["Flexible schema", "Horizontal scaling (sharding)", "Aggregation framework", "Atlas cloud service", "Change streams"],
     relatedTechnologies: ["Node.js", "Python", "Docker"],
