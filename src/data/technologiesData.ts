@@ -269,7 +269,7 @@ export const technologiesData: TechnologyDetail[] = [
     category: "DevOps & CI/CD",
     icon: Container,
     shortDescription: "Containerization platform for consistent application deployment.",
-    fullDescription: "Docker enables us to package applications and dependencies into portable containers, ensuring consistency across development, testing, and production environments.",
+    fullDescription: "Docker enables us to package applications and all their dependencies into portable containers, ensuring absolute consistency across development, testing, and production environments. For businesses, this eliminates the 'works on my machine' problem and reduces deployment failures by up to 90%. Docker's lightweight containers start in seconds compared to minutes for traditional VMs, enabling faster scaling and more efficient resource utilization. Its multi-stage builds produce optimized production images, while Docker Compose orchestrates complex multi-service applications locally. The Docker Hub registry provides access to thousands of pre-built images that accelerate development. We leverage AI-powered container analysis to optimize image sizes, detect security vulnerabilities, and automate deployment configurations — delivering containerized applications with maximum efficiency and\u00A0security.",
     useCases: ["Application Containerization", "Development Environments", "Microservices Deployment", "CI/CD Pipelines", "Testing Isolation"],
     features: ["Container images", "Docker Compose", "Multi-stage builds", "Layer caching", "Docker Hub registry"],
     relatedTechnologies: ["Kubernetes", "AWS", "GitHub Actions"],
