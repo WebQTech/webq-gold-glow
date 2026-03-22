@@ -35,54 +35,14 @@ const solutionCategories = [
 ];
 
 const Solutions = () => {
-  const [activeFilter, setActiveFilter] = useState<string | null>(null);
-
-  const displayedCategories = useMemo(() => {
-    if (!activeFilter) return solutionCategories;
-    return solutionCategories.filter((cat) => cat.title === activeFilter);
-  }, [activeFilter]);
-
   return (
     <div className="min-h-screen bg-background">
       <main id="main-content" className="focus:outline-none" tabIndex={-1}>
-        {/* Filter Chips */}
-        <section className="pt-10 lg:pt-14 pb-2">
-          <div className="container mx-auto px-6 lg:px-12">
-            <div className="flex flex-wrap gap-2">
-              <button
-                onClick={() => setActiveFilter(null)}
-                className={`px-4 py-2 rounded-full text-sm font-medium border transition-colors ${
-                  activeFilter === null
-                    ? "bg-primary text-primary-foreground border-primary"
-                    : "bg-background text-muted-foreground border-border hover:border-primary hover:text-primary"
-                }`}
-              >
-                All
-              </button>
-              {solutionCategories.map((cat) => (
-                <button
-                  key={cat.title}
-                  onClick={() =>
-                    setActiveFilter(activeFilter === cat.title ? null : cat.title)
-                  }
-                  className={`px-4 py-2 rounded-full text-sm font-medium border transition-colors ${
-                    activeFilter === cat.title
-                      ? "bg-primary text-primary-foreground border-primary"
-                      : "bg-background text-muted-foreground border-border hover:border-primary hover:text-primary"
-                  }`}
-                >
-                  {cat.title}
-                </button>
-              ))}
-            </div>
-          </div>
-        </section>
-
         {/* Solutions by Category */}
-        <section className="py-6 lg:py-10">
+        <section className="py-10 lg:py-16">
           <div className="container mx-auto px-6 lg:px-12">
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-x-12 gap-y-12">
-              {displayedCategories.map((category) => (
+              {solutionCategories.map((category) => (
                 <div key={category.title}>
                   <h3 className="text-base font-black text-foreground uppercase tracking-wider mb-5 border-b border-border pb-3">
                     {category.title}
