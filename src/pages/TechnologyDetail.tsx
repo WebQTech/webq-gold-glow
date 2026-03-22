@@ -12,7 +12,7 @@ const springBootSnippets = [
     language: "Java",
     badge: "🔒 Secure Code",
     badgeColor: "#f38ba8",
-    description: "OAuth2 + JWT authentication with role-based route protection. CSRF disabled for stateless APIs, public endpoints whitelisted, all others require valid tokens.",
+    description: "OAuth2 + JWT authentication with role-based route protection. At WebQ, we enforce zero-trust security from day one — every API ships with token validation, scoped permissions, and OWASP-compliant configurations.",
     lines: [
       '@Configuration',
       'public class SecurityConfig {',
@@ -38,7 +38,7 @@ const springBootSnippets = [
     language: "Java",
     badge: "⚡ Performance",
     badgeColor: "#f9e2af",
-    description: "Cacheable queries with Spring's @Cacheable reduce DB hits. Pagination via Pageable prevents full-table scans on large datasets.",
+    description: "Cacheable queries and paginated responses to minimize DB load. At WebQ, we profile every service layer — applying Redis-backed caching and lazy-loading strategies that cut response times by up to 60%.",
     lines: [
       '@Service',
       'public class UserService {',
@@ -65,7 +65,7 @@ const springBootSnippets = [
     language: "Java",
     badge: "🧑‍💻 User-Friendly API",
     badgeColor: "#a6e3a1",
-    description: "Clean REST endpoints with proper HTTP status codes, validated request bodies, and paginated responses — making the API intuitive for frontend consumers.",
+    description: "Clean REST endpoints with validation and proper status codes. At WebQ, we design APIs contract-first using OpenAPI specs — ensuring frontend and backend teams work in parallel with zero ambiguity.",
     lines: [
       '@RestController',
       '@RequestMapping("/api/users")',
@@ -95,7 +95,7 @@ const springBootSnippets = [
     language: "Java",
     badge: "📐 Best Practice",
     badgeColor: "#89b4fa",
-    description: "JPA entity with proper constraints — non-nullable fields, unique indexes, and auto-generated IDs. Clean separation of persistence logic from business rules.",
+    description: "JPA entities with proper constraints and audit fields. At WebQ, every data model follows our engineering playbook — unique indexes, non-nullable fields, and Flyway-managed migrations for safe schema evolution.",
     lines: [
       '@Entity',
       '@Table(name = "users")',
@@ -123,7 +123,7 @@ const springBootSnippets = [
     language: "YAML",
     badge: "🛠️ Production Config",
     badgeColor: "#cba6f7",
-    description: "Environment-driven configuration with externalized secrets, Hibernate validation mode (no auto-DDL), and Actuator health/metrics endpoints for observability.",
+    description: "Environment-driven config with externalized secrets and Actuator endpoints. At WebQ, we templatize configs per environment (dev/staging/prod) with Vault-backed secrets and health checks wired into our monitoring stack.",
     lines: [
       'spring:',
       '  datasource:',
@@ -150,7 +150,7 @@ const springBootSnippets = [
     language: "Java",
     badge: "🛡️ Error Handling",
     badgeColor: "#eba0ac",
-    description: "Centralized exception handling with @ControllerAdvice. Returns consistent JSON error responses with proper HTTP status codes — no raw stack traces leak to clients.",
+    description: "Centralized exception handling with structured error responses. At WebQ, we implement a standardized error contract across all microservices — consistent codes, messages, and traceability IDs that simplify debugging for clients.",
     lines: [
       '@ControllerAdvice',
       'public class GlobalExceptionHandler {',
@@ -180,7 +180,7 @@ const springBootSnippets = [
     language: "Java",
     badge: "🧪 Testing",
     badgeColor: "#94e2d5",
-    description: "Integration test with @SpringBootTest and MockMvc. Verifies API contracts, response status codes, and JSON structure — ensuring reliable deployments.",
+    description: "Integration tests verifying API contracts and JSON structure. At WebQ, we enforce 85%+ test coverage with CI-gated builds — every PR runs automated tests against staging databases before merge.",
     lines: [
       '@SpringBootTest',
       '@AutoConfigureMockMvc',
@@ -208,7 +208,7 @@ const springBootSnippets = [
     language: "Java",
     badge: "📊 Logging",
     badgeColor: "#74c7ec",
-    description: "AOP-based structured logging with MDC correlation IDs. Captures method entry/exit, execution time, and request tracing — essential for debugging in production.",
+    description: "AOP-based structured logging with correlation IDs. At WebQ, we pipe all logs into our ELK stack with distributed tracing — giving ops teams full request visibility across microservices in under 30 seconds.",
     lines: [
       '@Aspect',
       '@Component',
@@ -239,7 +239,7 @@ const springBootSnippets = [
     language: "Java",
     badge: "📡 Event-Driven",
     badgeColor: "#fab387",
-    description: "Decoupled architecture using Spring's ApplicationEventPublisher. Domain events trigger async listeners for email, audit, and analytics — keeping services loosely coupled.",
+    description: "Decoupled architecture using domain events with async listeners. At WebQ, we design event-driven systems with Kafka/RabbitMQ backing — enabling independent scaling of notification, audit, and analytics pipelines.",
     lines: [
       '@Service',
       'public class UserEventPublisher {',
