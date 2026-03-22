@@ -313,7 +313,7 @@ export const technologiesData: TechnologyDetail[] = [
     category: "DevOps & CI/CD",
     icon: Cog,
     shortDescription: "Open-source automation server for CI/CD pipelines.",
-    fullDescription: "Jenkins orchestrates complex CI/CD workflows with its extensive plugin ecosystem. We configure pipelines for building, testing, and deploying across environments.",
+    fullDescription: "Jenkins orchestrates complex CI/CD workflows with its extensive plugin ecosystem of over 1,800 integrations. We configure pipelines for building, testing, and deploying applications across multiple environments with full traceability. For businesses, Jenkins automates the entire software delivery lifecycle — from code commit to production deployment — reducing release cycles from weeks to hours. Its Pipeline-as-Code approach with Jenkinsfile ensures build configurations are version-controlled and reproducible. Distributed builds enable parallel execution across multiple agents, dramatically reducing build times. Jenkins' open-source nature eliminates vendor lock-in and licensing costs. We enhance Jenkins pipelines with AI-powered build optimization, intelligent test selection, and automated failure analysis — maximizing development velocity while maintaining release\u00A0quality.",
     useCases: ["CI/CD Pipelines", "Automated Testing", "Build Automation", "Deployment Orchestration", "Scheduled Jobs"],
     features: ["Pipeline as Code", "1800+ plugins", "Distributed builds", "Blue Ocean UI", "Shared libraries"],
     relatedTechnologies: ["Docker", "Kubernetes", "GitHub Actions"],
