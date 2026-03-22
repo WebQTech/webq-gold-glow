@@ -4,6 +4,9 @@ import { motion, AnimatePresence } from "framer-motion";
 interface CodeSnippet {
   title: string;
   language: string;
+  badge?: string;
+  badgeColor?: string;
+  description?: string;
   lines: string[];
 }
 
@@ -76,6 +79,28 @@ export const CodeTypingAnimation = ({ snippets }: CodeTypingAnimationProps) => {
             <span className="text-xs text-[#6c7086] font-mono">{snippet.language}</span>
           </div>
 
+          {/* Badge + Description */}
+          {snippet.badge && (
+            <motion.div
+              initial={{ opacity: 0, y: -5 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: 0.2 }}
+              className="px-4 pt-3 pb-2 bg-[#1e1e2e] border-b border-[#313244]"
+            >
+              <div className="flex items-start gap-2.5">
+                <span
+                  className="shrink-0 px-2.5 py-1 rounded-md text-xs font-bold text-[#1e1e2e] whitespace-nowrap"
+                  style={{ backgroundColor: snippet.badgeColor || "#89b4fa" }}
+                >
+                  {snippet.badge}
+                </span>
+                <p className="text-xs text-[#a6adc8] leading-relaxed">
+                  {snippet.description}
+                </p>
+              </div>
+            </motion.div>
+          )}
+
           {/* Code area */}
           <div className="p-5 font-mono text-sm leading-relaxed min-h-[280px] overflow-hidden">
             {snippet.lines.slice(0, visibleLines).map((line, i) => (
@@ -136,7 +161,7 @@ function colorize(text: string): React.ReactNode {
     [/^("(?:[^"\\]|\\.)*")/, "#a6e3a1"], // strings
     [/^(@\w+)/, "#f9e2af"],              // annotations
     [/^(import|package|public|private|class|interface|return|new|void|static|final|throws|if|else|try|catch)\b/, "#cba6f7"], // keywords
-    [/^(String|int|long|boolean|List|Map|Optional|ResponseEntity|RestController|GetMapping|PostMapping|RequestBody|PathVariable|Autowired|Service|Repository|Entity|Id|GeneratedValue|Column|Table)\b/, "#89b4fa"], // types
+    [/^(String|int|long|boolean|List|Map|Optional|Page|Pageable|ResponseEntity|RestController|GetMapping|PostMapping|RequestBody|PathVariable|Autowired|Service|Repository|Entity|Id|GeneratedValue|Column|Table|Configuration|Bean|Valid|Cacheable|CreatedDate|LocalDateTime|SecurityFilterChain|HttpSecurity)\b/, "#89b4fa"], // types
     [/^(\d+)/, "#fab387"],               // numbers
     [/^([{}()\[\];,.<>:=+\-*\/!&|])/, "#94e2d5"], // punctuation
     [/^(\w+)/, "#cdd6f4"],              // identifiers
