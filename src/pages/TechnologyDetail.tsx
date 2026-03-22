@@ -5,268 +5,9 @@ import { GoBackButton } from "@/components/GoBackButton";
 import { Footer } from "@/components/Footer";
 import { getTechnologyBySlug, technologiesData } from "@/data/technologiesData";
 import { CodeTypingAnimation } from "@/components/CodeTypingAnimation";
+import { getTechSnippets } from "@/data/technologySnippets";
 
-const springBootSnippets = [
-  {
-    title: "SecurityConfig.java",
-    language: "Java",
-    badge: "🔒 Secure Code",
-    badgeColor: "#f38ba8",
-    description: "OAuth2 + JWT authentication with role-based route protection. At WebQ, we enforce zero-trust security from day one — every API ships with token validation, scoped permissions, and OWASP-compliant configurations.",
-    lines: [
-      '@Configuration',
-      'public class SecurityConfig {',
-      '',
-      '    @Bean',
-      '    public SecurityFilterChain filterChain(',
-      '            HttpSecurity http) throws Exception {',
-      '        http.csrf().disable()',
-      '            .authorizeHttpRequests(auth ->',
-      '                auth.requestMatchers("/api/public/**")',
-      '                    .permitAll()',
-      '                    .anyRequest()',
-      '                    .authenticated())',
-      '            .oauth2ResourceServer()',
-      '            .jwt();',
-      '        return http.build();',
-      '    }',
-      '}',
-    ],
-  },
-  {
-    title: "UserService.java",
-    language: "Java",
-    badge: "⚡ Performance",
-    badgeColor: "#f9e2af",
-    description: "Cacheable queries and paginated responses to minimize DB load. At WebQ, we profile every service layer — applying Redis-backed caching and lazy-loading strategies that cut response times by up to 60%.",
-    lines: [
-      '@Service',
-      'public class UserService {',
-      '',
-      '    @Autowired',
-      '    private UserRepository repo;',
-      '',
-      '    @Cacheable("users")',
-      '    public User findById(Long id) {',
-      '        return repo.findById(id)',
-      '            .orElseThrow(() ->',
-      '                new ResourceNotFoundException(',
-      '                    "User not found: " + id));',
-      '    }',
-      '',
-      '    public Page<User> findAll(Pageable page) {',
-      '        return repo.findAll(page);',
-      '    }',
-      '}',
-    ],
-  },
-  {
-    title: "UserController.java",
-    language: "Java",
-    badge: "🧑‍💻 User-Friendly API",
-    badgeColor: "#a6e3a1",
-    description: "Clean REST endpoints with validation and proper status codes. At WebQ, we design APIs contract-first using OpenAPI specs — ensuring frontend and backend teams work in parallel with zero ambiguity.",
-    lines: [
-      '@RestController',
-      '@RequestMapping("/api/users")',
-      'public class UserController {',
-      '',
-      '    @Autowired',
-      '    private UserService userService;',
-      '',
-      '    @GetMapping("/{id}")',
-      '    public ResponseEntity<User> getUser(',
-      '            @PathVariable Long id) {',
-      '        return ResponseEntity.ok(',
-      '            userService.findById(id));',
-      '    }',
-      '',
-      '    @PostMapping',
-      '    public ResponseEntity<User> create(',
-      '            @Valid @RequestBody UserDto dto) {',
-      '        return ResponseEntity.status(201)',
-      '            .body(userService.create(dto));',
-      '    }',
-      '}',
-    ],
-  },
-  {
-    title: "User.java",
-    language: "Java",
-    badge: "📐 Best Practice",
-    badgeColor: "#89b4fa",
-    description: "JPA entities with proper constraints and audit fields. At WebQ, every data model follows our engineering playbook — unique indexes, non-nullable fields, and Flyway-managed migrations for safe schema evolution.",
-    lines: [
-      '@Entity',
-      '@Table(name = "users")',
-      'public class User {',
-      '',
-      '    @Id',
-      '    @GeneratedValue',
-      '    private Long id;',
-      '',
-      '    @Column(nullable = false)',
-      '    private String name;',
-      '',
-      '    @Column(unique = true)',
-      '    private String email;',
-      '',
-      '    @CreatedDate',
-      '    private LocalDateTime createdAt;',
-      '',
-      '    // getters and setters',
-      '}',
-    ],
-  },
-  {
-    title: "application.yml",
-    language: "YAML",
-    badge: "🛠️ Production Config",
-    badgeColor: "#cba6f7",
-    description: "Environment-driven config with externalized secrets and Actuator endpoints. At WebQ, we templatize configs per environment (dev/staging/prod) with Vault-backed secrets and health checks wired into our monitoring stack.",
-    lines: [
-      'spring:',
-      '  datasource:',
-      '    url: jdbc:postgresql://localhost:5432/mydb',
-      '    username: ${DB_USER}',
-      '    password: ${DB_PASS}',
-      '  jpa:',
-      '    hibernate:',
-      '      ddl-auto: validate',
-      '    show-sql: false',
-      '',
-      'server:',
-      '  port: 8080',
-      '',
-      'management:',
-      '  endpoints:',
-      '    web:',
-      '      exposure:',
-      '        include: health,metrics',
-    ],
-  },
-  {
-    title: "GlobalExceptionHandler.java",
-    language: "Java",
-    badge: "🛡️ Error Handling",
-    badgeColor: "#eba0ac",
-    description: "Centralized exception handling with structured error responses. At WebQ, we implement a standardized error contract across all microservices — consistent codes, messages, and traceability IDs that simplify debugging for clients.",
-    lines: [
-      '@ControllerAdvice',
-      'public class GlobalExceptionHandler {',
-      '',
-      '    @ExceptionHandler(ResourceNotFoundException.class)',
-      '    public ResponseEntity<ErrorResponse> handleNotFound(',
-      '            ResourceNotFoundException ex) {',
-      '        ErrorResponse error = new ErrorResponse(',
-      '            404, ex.getMessage());',
-      '        return ResponseEntity.status(404)',
-      '            .body(error);',
-      '    }',
-      '',
-      '    @ExceptionHandler(Exception.class)',
-      '    public ResponseEntity<ErrorResponse> handleGeneral(',
-      '            Exception ex) {',
-      '        log.error("Unexpected error", ex);',
-      '        return ResponseEntity.status(500)',
-      '            .body(new ErrorResponse(',
-      '                500, "Internal server error"));',
-      '    }',
-      '}',
-    ],
-  },
-  {
-    title: "UserServiceTest.java",
-    language: "Java",
-    badge: "🧪 Testing",
-    badgeColor: "#94e2d5",
-    description: "Integration tests verifying API contracts and JSON structure. At WebQ, we enforce 85%+ test coverage with CI-gated builds — every PR runs automated tests against staging databases before merge.",
-    lines: [
-      '@SpringBootTest',
-      '@AutoConfigureMockMvc',
-      'public class UserServiceTest {',
-      '',
-      '    @Autowired',
-      '    private MockMvc mockMvc;',
-      '',
-      '    @Test',
-      '    void shouldReturnUser() throws Exception {',
-      '        mockMvc.perform(',
-      '            get("/api/users/1")',
-      '                .contentType(MediaType.APPLICATION_JSON))',
-      '            .andExpect(status().isOk())',
-      '            .andExpect(jsonPath("$.name")',
-      '                .value("John Doe"))',
-      '            .andExpect(jsonPath("$.email")',
-      '                .exists());',
-      '    }',
-      '}',
-    ],
-  },
-  {
-    title: "LoggingAspect.java",
-    language: "Java",
-    badge: "📊 Logging",
-    badgeColor: "#74c7ec",
-    description: "AOP-based structured logging with correlation IDs. At WebQ, we pipe all logs into our ELK stack with distributed tracing — giving ops teams full request visibility across microservices in under 30 seconds.",
-    lines: [
-      '@Aspect',
-      '@Component',
-      'public class LoggingAspect {',
-      '',
-      '    private static final Logger log =',
-      '        LoggerFactory.getLogger(LoggingAspect.class);',
-      '',
-      '    @Around("@within(RestController)")',
-      '    public Object logRequests(ProceedingJoinPoint jp)',
-      '            throws Throwable {',
-      '        String method = jp.getSignature().getName();',
-      '        MDC.put("traceId", UUID.randomUUID()',
-      '            .toString().substring(0, 8));',
-      '        log.info(">> {} started", method);',
-      '        long start = System.currentTimeMillis();',
-      '        Object result = jp.proceed();',
-      '        log.info("<< {} completed in {}ms",',
-      '            method, System.currentTimeMillis() - start);',
-      '        MDC.clear();',
-      '        return result;',
-      '    }',
-      '}',
-    ],
-  },
-  {
-    title: "UserEventPublisher.java",
-    language: "Java",
-    badge: "📡 Event-Driven",
-    badgeColor: "#fab387",
-    description: "Decoupled architecture using domain events with async listeners. At WebQ, we design event-driven systems with Kafka/RabbitMQ backing — enabling independent scaling of notification, audit, and analytics pipelines.",
-    lines: [
-      '@Service',
-      'public class UserEventPublisher {',
-      '',
-      '    @Autowired',
-      '    private ApplicationEventPublisher publisher;',
-      '',
-      '    public void onUserCreated(User user) {',
-      '        publisher.publishEvent(',
-      '            new UserCreatedEvent(user));',
-      '    }',
-      '}',
-      '',
-      '@Component',
-      'public class UserEventListener {',
-      '',
-      '    @Async',
-      '    @EventListener',
-      '    public void handle(UserCreatedEvent event) {',
-      '        log.info("New user: {}",',
-      '            event.getUser().getEmail());',
-      '        // send welcome email, audit log...',
-      '    }',
-      '}',
-    ],
-  },
-];
+const metricIcons = [TrendingUp, Globe, Star, Users, BarChart3, Building2, Zap, Globe];
 
 const TechnologyDetail = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -281,19 +22,21 @@ const TechnologyDetail = () => {
   const prevTech = currentIndex > 0 ? technologiesData[currentIndex - 1] : null;
   const nextTech = currentIndex < technologiesData.length - 1 ? technologiesData[currentIndex + 1] : null;
 
-  // Related technologies
   const related = tech.relatedTechnologies
     .map(name => technologiesData.find(t => t.name === name))
     .filter(Boolean)
     .slice(0, 4);
 
+  const snippetData = slug ? getTechSnippets(slug) : undefined;
+  const hasSnippets = !!snippetData;
+
   return (
     <div className="min-h-screen bg-background">
       <main id="main-content" className="focus:outline-none" tabIndex={-1}>
         {/* Hero */}
-        <section className={`bg-gradient-to-b from-primary/5 to-background ${slug === "spring-boot" ? "py-2 lg:py-3" : "py-10 lg:py-16"}`}>
+        <section className={`bg-gradient-to-b from-primary/5 to-background ${hasSnippets ? "py-2 lg:py-3" : "py-10 lg:py-16"}`}>
           <div className="container mx-auto px-6 lg:px-12">
-            <div className={slug === "spring-boot" ? "flex items-center gap-4 mb-1" : "mb-4"}>
+            <div className={hasSnippets ? "flex items-center gap-4 mb-1" : "mb-4"}>
               <GoBackButton />
               <nav aria-label="Breadcrumb">
                 <ol className="flex items-center gap-1.5 text-sm text-muted-foreground">
@@ -316,31 +59,31 @@ const TechnologyDetail = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className={slug === "spring-boot" ? "grid lg:grid-cols-2 gap-6 items-start" : "max-w-3xl"}
+              className={hasSnippets ? "grid lg:grid-cols-2 gap-6 items-start" : "max-w-3xl"}
             >
               <div>
                 <span className="text-xs font-black tracking-widest text-primary uppercase">{tech.category}</span>
                 <div className="flex items-center gap-3 mt-1">
-                  <div className={`bg-primary/10 rounded-xl flex items-center justify-center ${slug === "spring-boot" ? "w-9 h-9" : "w-14 h-14"}`}>
-                    <Icon className={`text-primary ${slug === "spring-boot" ? "w-5 h-5" : "w-7 h-7"}`} />
+                  <div className={`bg-primary/10 rounded-xl flex items-center justify-center ${hasSnippets ? "w-9 h-9" : "w-14 h-14"}`}>
+                    <Icon className={`text-primary ${hasSnippets ? "w-5 h-5" : "w-7 h-7"}`} />
                   </div>
-                  <h1 className={`font-bold text-foreground ${slug === "spring-boot" ? "text-2xl lg:text-3xl" : "text-4xl lg:text-5xl"}`}>{tech.name}</h1>
+                  <h1 className={`font-bold text-foreground ${hasSnippets ? "text-2xl lg:text-3xl" : "text-4xl lg:text-5xl"}`}>{tech.name}</h1>
                 </div>
-                <p className={`text-muted-foreground ${slug === "spring-boot" ? "mt-2 text-sm line-clamp-3" : "mt-6 text-lg"}`}>{tech.fullDescription}</p>
-                <div className={slug === "spring-boot" ? "mt-3" : "mt-8"}>
+                <p className={`text-muted-foreground ${hasSnippets ? "mt-2 text-sm line-clamp-3" : "mt-6 text-lg"}`}>{tech.fullDescription}</p>
+                <div className={hasSnippets ? "mt-3" : "mt-8"}>
                   <Link to="/contact" className="btn-primary inline-flex items-center gap-2 text-sm py-2 px-5">
                     Discuss Your Project <ArrowRight className="w-4 h-4" />
                   </Link>
                 </div>
               </div>
 
-              {slug === "spring-boot" && (
+              {hasSnippets && (
                 <motion.div
                   initial={{ opacity: 0, x: 30 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.6, delay: 0.3 }}
                 >
-                  <CodeTypingAnimation snippets={springBootSnippets} />
+                  <CodeTypingAnimation snippets={snippetData!.snippets} />
                 </motion.div>
               )}
             </motion.div>
@@ -351,7 +94,6 @@ const TechnologyDetail = () => {
         <section className="py-10 lg:py-16">
           <div className="container mx-auto px-6 lg:px-12">
             <div className="grid lg:grid-cols-2 gap-12">
-              {/* Use Cases */}
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -375,7 +117,6 @@ const TechnologyDetail = () => {
                 </ul>
               </motion.div>
 
-              {/* Key Features */}
               <motion.div
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -395,7 +136,6 @@ const TechnologyDetail = () => {
                   ))}
                 </ul>
 
-                {/* Related Technologies */}
                 {related.length > 0 && (
                   <div className="mt-8 pt-6 border-t border-border">
                     <h3 className="text-sm font-semibold text-foreground mb-3">Related Technologies</h3>
@@ -417,8 +157,8 @@ const TechnologyDetail = () => {
           </div>
         </section>
 
-        {/* Spring Boot Metrics & Industry Popularity */}
-        {slug === "spring-boot" && (
+        {/* Metrics & Industry Popularity (dynamic) */}
+        {snippetData && (
           <>
             {/* Key Metrics */}
             <section className="py-10 lg:py-14 bg-primary/5">
@@ -429,33 +169,27 @@ const TechnologyDetail = () => {
                   viewport={{ once: true }}
                   className="text-2xl lg:text-3xl font-bold text-foreground text-center mb-10"
                 >
-                  Spring Boot by the Numbers
+                  {tech.name} by the Numbers
                 </motion.h2>
                 <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
-                  {[
-                    { icon: TrendingUp, value: "75%", label: "Java Developers Use It", detail: "Most popular Java framework" },
-                    { icon: Globe, value: "1M+", label: "Apps in Production", detail: "Worldwide deployments" },
-                    { icon: Star, value: "#1", label: "Stack Overflow Rank", detail: "Top Java framework since 2018" },
-                    { icon: Users, value: "900+", label: "Contributors", detail: "Active open-source community" },
-                    { icon: BarChart3, value: "58%", label: "Enterprise Adoption", detail: "Fortune 500 companies" },
-                    { icon: Building2, value: "3.x", label: "Latest Major Version", detail: "GraalVM native support" },
-                    { icon: Zap, value: "40ms", label: "Avg. Startup Time", detail: "With native compilation" },
-                    { icon: Globe, value: "200K+", label: "GitHub Stars", detail: "Spring ecosystem total" },
-                  ].map((metric, i) => (
-                    <motion.div
-                      key={i}
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.4, delay: i * 0.05 }}
-                      className="bg-card border border-border rounded-xl p-5 text-center hover:shadow-md transition-shadow"
-                    >
-                      <metric.icon className="w-6 h-6 text-primary mx-auto mb-2" />
-                      <p className="text-2xl lg:text-3xl font-bold text-foreground">{metric.value}</p>
-                      <p className="text-sm font-semibold text-foreground/80 mt-1">{metric.label}</p>
-                      <p className="text-xs text-muted-foreground mt-0.5">{metric.detail}</p>
-                    </motion.div>
-                  ))}
+                  {snippetData.metrics.map((metric, i) => {
+                    const MetricIcon = metricIcons[i % metricIcons.length];
+                    return (
+                      <motion.div
+                        key={i}
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.4, delay: i * 0.05 }}
+                        className="bg-card border border-border rounded-xl p-5 text-center hover:shadow-md transition-shadow"
+                      >
+                        <MetricIcon className="w-6 h-6 text-primary mx-auto mb-2" />
+                        <p className="text-2xl lg:text-3xl font-bold text-foreground">{metric.value}</p>
+                        <p className="text-sm font-semibold text-foreground/80 mt-1">{metric.label}</p>
+                        <p className="text-xs text-muted-foreground mt-0.5">{metric.detail}</p>
+                      </motion.div>
+                    );
+                  })}
                 </div>
               </div>
             </section>
@@ -472,17 +206,10 @@ const TechnologyDetail = () => {
                   Industry Adoption
                 </motion.h2>
                 <p className="text-center text-muted-foreground mb-10 max-w-2xl mx-auto">
-                  Spring Boot powers mission-critical systems across every major industry vertical.
+                  {tech.name} powers mission-critical systems across every major industry vertical.
                 </p>
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-                  {[
-                    { industry: "Banking & Financial Services", adoption: 92, use: "Core banking platforms, payment gateways, risk engines, and regulatory reporting systems." },
-                    { industry: "Healthcare & Life Sciences", adoption: 78, use: "EHR integrations, HIPAA-compliant APIs, clinical trial data pipelines, and telemedicine backends." },
-                    { industry: "E-Commerce & Retail", adoption: 85, use: "Product catalogs, order management, inventory sync, and real-time pricing engines." },
-                    { industry: "Insurance & FinTech", adoption: 80, use: "Claims processing, underwriting automation, KYC workflows, and fraud detection APIs." },
-                    { industry: "Telecommunications", adoption: 73, use: "Subscriber management, billing microservices, network monitoring, and provisioning systems." },
-                    { industry: "Government & Public Sector", adoption: 65, use: "Citizen portals, tax filing systems, inter-agency data exchange, and compliance platforms." },
-                  ].map((item, i) => (
+                  {snippetData.industries.map((item, i) => (
                     <motion.div
                       key={i}
                       initial={{ opacity: 0, y: 20 }}
@@ -524,9 +251,9 @@ const TechnologyDetail = () => {
                       <Building2 className="w-6 h-6 text-primary" />
                     </div>
                     <div>
-                      <h3 className="text-lg font-bold text-foreground mb-2">How WebQ Technologies Delivers with Spring Boot</h3>
+                      <h3 className="text-lg font-bold text-foreground mb-2">How WebQ Technologies Delivers with {tech.name}</h3>
                       <p className="text-sm text-muted-foreground leading-relaxed">
-                        At WebQ, Spring Boot is our go-to framework for building enterprise-grade microservices. We've deployed 50+ production Spring Boot applications across banking, healthcare, and e-commerce — with sub-100ms response times, 99.99% uptime SLAs, and fully automated CI/CD pipelines. Our engineering playbook includes security-first configurations, distributed tracing, and event-driven architectures that scale from startup MVPs to Fortune 500 workloads.
+                        {snippetData.webqCallout}
                       </p>
                     </div>
                   </div>
