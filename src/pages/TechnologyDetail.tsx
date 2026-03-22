@@ -70,11 +70,6 @@ const TechnologyDetail = () => {
                   <h1 className={`font-bold text-foreground ${hasSnippets ? "text-2xl lg:text-3xl" : "text-4xl lg:text-5xl"}`}>{tech.name}</h1>
                 </div>
                 <p className={`text-muted-foreground ${hasSnippets ? "mt-2 text-sm" : "mt-6 text-lg"}`}>{tech.fullDescription}</p>
-                <div className={hasSnippets ? "mt-3" : "mt-8"}>
-                  <Link to="/contact" className="btn-primary inline-flex items-center gap-2 text-sm py-2 px-5">
-                    Discuss Your Project <ArrowRight className="w-4 h-4" />
-                  </Link>
-                </div>
               </div>
 
               {hasSnippets && (
