@@ -752,7 +752,7 @@ export const technologiesData: TechnologyDetail[] = [
     category: "Enterprise Platforms",
     icon: Wrench,
     shortDescription: "Microsoft's integrated CRM and ERP cloud suite.",
-    fullDescription: "We implement Dynamics 365 for sales, customer service, finance, and operations. Its deep Microsoft 365 and Azure integration makes it ideal for Microsoft-centric enterprises.",
+    fullDescription: "We implement Microsoft Dynamics 365 for sales, customer service, finance, and operations — a unified CRM and ERP suite deeply integrated with the Microsoft ecosystem. Its seamless connection with Microsoft 365, Azure, and Power Platform makes it ideal for Microsoft-centric enterprises seeking end-to-end business process automation. For businesses, Dynamics 365's modular licensing means you pay only for the capabilities you need, with the flexibility to add modules as requirements evolve. Copilot AI integration brings generative AI directly into business workflows for intelligent insights and automation. Dataverse provides a unified data platform that eliminates integration complexity across applications. We leverage AI-powered implementation planning, automated data migration, and intelligent business process optimization to accelerate Dynamics 365 deployments — delivering integrated CRM and ERP solutions that maximize Microsoft ecosystem\u00A0investments.",
     useCases: ["CRM & Sales", "Finance & Operations", "Customer Service", "Field Service", "Supply Chain"],
     features: ["Power Platform integration", "Azure Synapse link", "Copilot AI", "Dataverse", "LinkedIn integration"],
     relatedTechnologies: ["Microsoft Azure", "Power BI", "SAP"],
