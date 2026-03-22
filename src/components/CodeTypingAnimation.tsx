@@ -89,12 +89,12 @@ export const CodeTypingAnimation = ({ snippets }: CodeTypingAnimationProps) => {
             >
               <div className="flex items-start gap-2">
                 <span
-                  className="shrink-0 px-2 py-0.5 rounded-md text-[11px] font-bold text-[#1e1e2e] whitespace-nowrap mt-0.5"
+                  className="shrink-0 px-2.5 py-0.5 rounded-md text-xs font-bold text-[#1e1e2e] whitespace-nowrap mt-0.5"
                   style={{ backgroundColor: snippet.badgeColor || "#89b4fa" }}
                 >
                   {snippet.badge}
                 </span>
-                <p className="text-[11px] text-[#a6adc8] leading-snug line-clamp-2">
+                <p className="text-xs text-[#a6adc8] leading-snug line-clamp-2">
                   {highlightWebQ(snippet.description || "", snippet.badgeColor || "#89b4fa")}
                 </p>
               </div>
