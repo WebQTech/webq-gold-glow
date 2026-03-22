@@ -414,7 +414,7 @@ export const technologiesData: TechnologyDetail[] = [
     category: "Databases",
     icon: CloudLightning,
     shortDescription: "AWS managed NoSQL database for high-scale applications.",
-    fullDescription: "DynamoDB delivers single-digit millisecond performance at any scale. We use it for serverless applications, gaming backends, and IoT workloads on AWS.",
+    fullDescription: "DynamoDB delivers single-digit millisecond performance at any scale with fully managed infrastructure that requires zero database administration. We use it for serverless applications, gaming backends, IoT workloads, and session stores on AWS. For businesses, DynamoDB's auto-scaling eliminates capacity planning guesswork — you pay only for the throughput you consume, with costs that scale linearly with usage. Its global tables provide multi-region replication with sub-second consistency, enabling globally distributed applications. DynamoDB Streams integrate seamlessly with Lambda for event-driven architectures. Amazon.com itself runs on DynamoDB, processing millions of requests per second during peak events like Prime Day. We leverage AI-powered access pattern analysis, automated capacity optimization, and intelligent partition key design to maximize DynamoDB performance while minimizing\u00A0costs.",
     useCases: ["Serverless Backends", "Gaming Leaderboards", "IoT Data", "Session Stores", "Ad Tech"],
     features: ["Fully managed", "Auto-scaling", "Global tables", "DynamoDB Streams", "DAX caching"],
     relatedTechnologies: ["AWS", "Node.js", "Python"],
