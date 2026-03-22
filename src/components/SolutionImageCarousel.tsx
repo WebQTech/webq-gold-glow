@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 interface SolutionImageCarouselProps {
@@ -7,8 +7,9 @@ interface SolutionImageCarouselProps {
   interval?: number;
 }
 
-const SolutionImageCarousel = ({ images, alt, interval = 4000 }: SolutionImageCarouselProps) => {
+const SolutionImageCarousel = ({ images, alt, interval = 10000 }: SolutionImageCarouselProps) => {
   const [current, setCurrent] = useState(0);
+  const [expanded, setExpanded] = useState(false);
 
   useEffect(() => {
     if (images.length <= 1) return;
@@ -18,8 +19,18 @@ const SolutionImageCarousel = ({ images, alt, interval = 4000 }: SolutionImageCa
     return () => clearInterval(timer);
   }, [images.length, interval]);
 
+  const toggleExpand = useCallback(() => {
+    setExpanded((prev) => !prev);
+  }, []);
+
   return (
-    <div className="relative w-full aspect-[5/4] rounded-2xl overflow-hidden bg-muted/30">
+    <motion.div
+      className="relative w-full aspect-[5/4] rounded-2xl overflow-hidden bg-muted/30 cursor-pointer"
+      animate={{ scale: expanded ? 1.15 : 1 }}
+      transition={{ duration: 0.35, ease: "easeInOut" }}
+      onClick={toggleExpand}
+      style={{ zIndex: expanded ? 10 : 1 }}
+    >
       <AnimatePresence mode="wait">
         <motion.img
           key={current}
@@ -38,7 +49,7 @@ const SolutionImageCarousel = ({ images, alt, interval = 4000 }: SolutionImageCa
         {images.map((_, index) => (
           <button
             key={index}
-            onClick={() => setCurrent(index)}
+            onClick={(e) => { e.stopPropagation(); setCurrent(index); }}
             className={`w-2 h-2 rounded-full transition-all duration-300 ${
               index === current
                 ? "bg-primary w-5"
@@ -48,7 +59,7 @@ const SolutionImageCarousel = ({ images, alt, interval = 4000 }: SolutionImageCa
           />
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 };
 
