@@ -38,7 +38,7 @@ const solutionCategories = [
   },
   {
     title: "Enterprise Application Management",
-    items: ["erp-management", "crm-implementation", "enterprise-integration", "legacy-modernization", "enterprise-mobility"],
+    items: ["erp-management", "crm-implementation", "enterprise-integration", "legacy-modernization", "enterprise-mobility", "supply-chain-management", "enterprise-content-management"],
   },
 ];
 
