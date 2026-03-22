@@ -76,7 +76,7 @@ export const technologiesData: TechnologyDetail[] = [
     category: "Frontend",
     icon: FileJson,
     shortDescription: "Typed superset of JavaScript for safer, scalable code.",
-    fullDescription: "TypeScript is our standard for all frontend and Node.js projects. It catches errors at compile time, improves refactoring, and enables better tooling and documentation across teams.",
+    fullDescription: "TypeScript is our standard for all frontend and Node.js projects, bringing compile-time safety to JavaScript's dynamic world. It catches errors before they reach production, dramatically reducing bug-related downtime and support costs. For enterprises, TypeScript's strong typing and interface contracts enable large teams to collaborate on shared codebases with confidence, while IDE autocompletion and refactoring tools boost developer productivity by up to 30%. Its seamless backward compatibility with JavaScript means businesses can adopt it incrementally without disrupting existing workflows. We leverage AI-powered type inference and intelligent code completion to accelerate TypeScript development, automate complex type definitions, and maintain pristine code architecture across\u00A0projects.",
     useCases: ["Large-scale Applications", "Team Collaboration Projects", "API Client Libraries", "Enterprise Software", "Open Source Libraries"],
     features: ["Static type checking", "IDE autocompletion", "Interface and generics", "Backward compatible with JS", "Declaration files for libraries"],
     relatedTechnologies: ["React", "Angular", "Node.js", "Next.js"],
