@@ -471,7 +471,7 @@ export const technologiesData: TechnologyDetail[] = [
     category: "AI & Machine Learning",
     icon: Bot,
     shortDescription: "GPT and DALL·E APIs for generative AI applications.",
-    fullDescription: "We integrate OpenAI's GPT, DALL·E, and Whisper APIs to build intelligent chatbots, content generators, code assistants, and multimodal AI applications.",
+    fullDescription: "We integrate OpenAI's GPT, DALL·E, and Whisper APIs to build intelligent chatbots, content generators, code assistants, and multimodal AI applications that transform how businesses operate. For organizations, OpenAI's models enable automation of knowledge work — from customer support that resolves 80% of queries without human intervention to content generation that scales marketing output exponentially. Function calling and structured outputs enable reliable integration with existing business systems and databases. Fine-tuning capabilities allow customization for industry-specific terminology and workflows. OpenAI's embeddings power semantic search and recommendation systems that understand context, not just keywords. We leverage our deep integration expertise to build production-grade AI solutions with guardrails, monitoring, and cost optimization — delivering transformative AI capabilities while maintaining enterprise control and\u00A0compliance.",
     useCases: ["AI Chatbots", "Content Generation", "Code Assistants", "Document Summarization", "Customer Support Automation"],
     features: ["GPT-4 & GPT-4o", "Function calling", "Fine-tuning", "Embeddings", "Vision & audio APIs"],
     relatedTechnologies: ["LangChain", "Python", "Node.js"],
