@@ -203,7 +203,7 @@ const SolutionDetail = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={isCaseStudiesInView ? { opacity: 1, y: 0 } : {}}
                     transition={{ duration: 0.4, delay: index * 0.1 }}
-                    className="bg-card border border-border rounded-xl p-6"
+                    className="bg-card border border-border rounded-2xl p-8"
                   >
                     <div className="flex items-center gap-3 mb-4">
                       <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
