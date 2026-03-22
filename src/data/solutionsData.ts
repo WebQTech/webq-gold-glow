@@ -2387,37 +2387,60 @@ export const solutionsData: SolutionDetail[] = [
     slug: "zero-trust-security",
     name: "Zero Trust Security",
     shortDescription: "Design and implement zero trust architectures that verify every user, device, and connection.",
-    fullDescription: "Our Zero Trust Security services help organizations transition from traditional perimeter-based security to a modern 'never trust, always verify' architecture. We design and implement comprehensive zero trust frameworks that enforce strict identity verification, least-privilege access, micro-segmentation, and continuous validation for every user, device, and network flow — regardless of location. This approach dramatically reduces attack surface and limits lateral movement in the event of a breach.",
+    fullDescription: "Our Zero Trust Security services help organizations transition from traditional perimeter-based security to a modern 'never trust, always verify' architecture. We design and implement comprehensive zero trust frameworks aligned with NIST 800-207, CISA's Zero Trust Maturity Model, and Forrester's ZTX framework. Our approach enforces strict identity verification, least-privilege access, micro-segmentation, and continuous validation for every user, device, and network flow — regardless of location. Whether you're responding to executive mandates, securing a remote workforce, or protecting critical infrastructure, we deliver a pragmatic, phased roadmap that reduces attack surface and limits lateral movement.",
     icon: Fingerprint,
     features: [
-      "Zero trust architecture assessment and roadmap",
-      "Identity-centric security and MFA implementation",
-      "Micro-segmentation and network access control",
-      "Device trust and endpoint compliance validation",
-      "Secure access service edge (SASE) implementation",
-      "Continuous monitoring and adaptive access policies"
+      "Zero trust maturity assessment and strategic roadmap",
+      "Identity-centric security with MFA, SSO, and passwordless authentication",
+      "Micro-segmentation and software-defined perimeter (SDP)",
+      "Device trust scoring and endpoint compliance validation",
+      "Secure access service edge (SASE) and ZTNA implementation",
+      "Continuous monitoring and adaptive, risk-based access policies",
+      "Data-centric security with classification and encryption",
+      "API and workload identity protection",
+      "Privileged access management (PAM) integration",
+      "Zero trust governance, metrics, and maturity tracking"
     ],
     benefits: [
-      "Reduce attack surface by eliminating implicit trust",
-      "Prevent lateral movement during security breaches",
-      "Enable secure remote work without VPN complexity",
-      "Improve compliance posture across frameworks",
-      "Granular visibility into all access requests and decisions",
-      "Adaptive security that responds to real-time risk signals"
+      "Reduce attack surface by eliminating implicit trust across all environments",
+      "Prevent lateral movement — contain breaches to single micro-segments",
+      "Enable secure remote and hybrid work without legacy VPN complexity",
+      "Achieve compliance across NIST, CMMC, HIPAA, PCI DSS, and FedRAMP",
+      "Granular visibility into every access request, decision, and anomaly",
+      "Adaptive security that responds to real-time risk signals and context",
+      "Reduce breach impact by 80% through least-privilege enforcement",
+      "Future-proof security architecture for cloud, hybrid, and multi-cloud"
     ],
-    technologies: ["Zscaler", "Okta", "CrowdStrike Falcon", "Microsoft Entra ID", "Palo Alto Prisma", "Cloudflare Zero Trust"],
+    technologies: ["Zscaler ZPA/ZIA", "Okta / Auth0", "CrowdStrike Falcon Zero Trust", "Microsoft Entra ID", "Palo Alto Prisma Access", "Cloudflare Zero Trust", "Netskope", "Illumio", "CyberArk", "HashiCorp Boundary"],
     caseStudies: [
       {
         company: "Federal Government Agency",
         industry: "Government",
-        challenge: "Executive order mandated zero trust adoption across all systems within 24 months, with legacy infrastructure spanning 30+ years.",
-        solution: "Developed phased zero trust roadmap, implemented identity-centric access controls, micro-segmented critical networks, and deployed SASE for remote workforce.",
+        challenge: "Executive order mandated zero trust adoption across all systems within 24 months, with legacy infrastructure spanning 30+ years and 15,000+ employees.",
+        solution: "Developed phased zero trust roadmap aligned with CISA maturity model, implemented identity-centric access controls with phishing-resistant MFA, micro-segmented critical networks, and deployed SASE for the remote workforce.",
         results: ["Achieved zero trust maturity level 3 within 18 months", "Eliminated 85% of VPN-related security incidents", "Passed federal zero trust compliance assessment ahead of deadline"]
+      },
+      {
+        company: "Global Investment Bank",
+        industry: "Financial Services",
+        challenge: "Post-breach remediation required zero trust implementation across 40,000 endpoints, 200+ applications, and operations in 30 countries — while maintaining uninterrupted trading operations.",
+        solution: "Implemented identity-first zero trust with risk-based adaptive access, micro-segmented trading floor networks from corporate IT, deployed ZTNA for third-party vendor access, and integrated PAM for privileged accounts.",
+        results: ["Lateral movement attack paths reduced by 94%", "Third-party access incidents dropped to zero", "Achieved SOC 2 and PCI DSS compliance simultaneously"]
+      },
+      {
+        company: "National Healthcare Provider",
+        industry: "Healthcare",
+        challenge: "Rapid shift to telehealth exposed 50,000+ clinical devices and remote endpoints with no unified access controls, creating HIPAA compliance gaps.",
+        solution: "Deployed zero trust architecture with device trust scoring for clinical endpoints, SASE for telehealth practitioners, micro-segmentation of EMR systems, and continuous compliance monitoring.",
+        results: ["100% HIPAA-compliant remote access for 12,000 clinicians", "Device compliance enforcement reduced unmanaged endpoint access by 97%", "Mean time to detect unauthorized access reduced from hours to 30 seconds"]
       }
     ],
     faqs: [
-      { question: "How long does zero trust implementation take?", answer: "Zero trust is a journey, not a one-time project. We typically implement it in phases over 12–24 months, starting with identity and access management, then progressing to network segmentation, device trust, and continuous monitoring. Quick wins can be achieved within the first 90 days." },
-      { question: "Does zero trust replace our existing security tools?", answer: "Not necessarily. Zero trust is an architecture and philosophy that often leverages and enhances your existing investments. We integrate with your current identity providers, firewalls, endpoint protection, and SIEM platforms while adding the policy engine and orchestration layer needed for zero trust enforcement." }
+      { question: "How long does zero trust implementation take?", answer: "Zero trust is a journey, not a one-time project. We typically implement it in phases over 12–24 months, starting with identity and access management, then progressing to network segmentation, device trust, data protection, and continuous monitoring. Quick wins — like phishing-resistant MFA and ZTNA for remote access — can be achieved within the first 90 days." },
+      { question: "Does zero trust replace our existing security tools?", answer: "Not necessarily. Zero trust is an architecture and philosophy that enhances your existing investments. We integrate with your current identity providers, firewalls, endpoint protection, SIEM, and PAM platforms while adding the policy engine, orchestration layer, and continuous verification needed for zero trust enforcement." },
+      { question: "How does zero trust differ from traditional perimeter security?", answer: "Traditional security trusts everything inside the network perimeter. Zero trust assumes breach and verifies every access request regardless of location — checking identity, device health, behavior patterns, and context before granting least-privilege access. This is critical in today's world of cloud apps, remote work, and sophisticated attackers who bypass perimeter defenses." },
+      { question: "What's the ROI of zero trust?", answer: "Organizations implementing zero trust report 50–80% reduction in breach impact costs, 60–85% fewer security incidents from lateral movement, and significant savings from VPN infrastructure retirement. Forrester's TEI studies show 92% ROI over 3 years for enterprise zero trust deployments. We help you build a business case with projected savings specific to your environment." },
+      { question: "How do you handle legacy applications that can't support modern authentication?", answer: "We use application proxies, identity-aware gateways, and protocol translation to wrap legacy applications in zero trust controls without modifying the application itself. Solutions like Azure AD App Proxy, Zscaler Private Access, or Cloudflare Access can front legacy apps with modern MFA and conditional access policies." }
     ]
   },
   {
