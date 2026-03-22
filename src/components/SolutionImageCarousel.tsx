@@ -26,7 +26,7 @@ const SolutionImageCarousel = ({ images, alt, interval = 10000 }: SolutionImageC
   return (
     <motion.div
       className="relative w-full aspect-[5/4] rounded-2xl overflow-hidden bg-muted/30 cursor-pointer"
-      animate={{ scale: expanded ? 1.15 : 1 }}
+      animate={{ scale: expanded ? 1.35 : 1 }}
       transition={{ duration: 0.35, ease: "easeInOut" }}
       onClick={toggleExpand}
       style={{ zIndex: expanded ? 10 : 1 }}
