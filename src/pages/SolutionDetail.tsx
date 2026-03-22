@@ -291,8 +291,8 @@ const SolutionDetail = () => {
                 transition={{ duration: 0.5 }}
                 className="mb-8"
               >
-                <h2 className="text-2xl lg:text-3xl font-bold text-foreground">Related Solutions</h2>
-                <p className="mt-2 text-sm text-muted-foreground">
+                <h2 className="text-3xl lg:text-4xl font-bold text-foreground">Related Solutions</h2>
+                <p className="mt-4 text-muted-foreground max-w-2xl">
                   Explore more solutions to transform your business
                 </p>
               </motion.div>
