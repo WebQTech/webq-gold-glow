@@ -110,7 +110,7 @@ export const CodeTypingAnimation = ({ snippets }: CodeTypingAnimationProps) => {
           )}
 
           {/* Code area */}
-          <div ref={codeAreaRef} className="p-3 font-mono text-xs leading-relaxed max-h-[340px] overflow-y-auto [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-thumb]:bg-[#45475a] [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-track]:bg-transparent">
+          <div ref={codeAreaRef} className="p-3 font-mono text-xs leading-relaxed max-h-[340px] overflow-y-auto [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-thumb]:bg-[#585b70] [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:hover:bg-[#6c7086] [&::-webkit-scrollbar-track]:bg-[#252535]">
             {snippet.lines.slice(0, visibleLines).map((line, i) => (
               <div key={i} className="flex">
                 <span className="text-[#6c7086] w-8 text-right mr-4 select-none text-xs leading-relaxed">
