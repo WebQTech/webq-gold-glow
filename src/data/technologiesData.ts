@@ -359,7 +359,7 @@ export const technologiesData: TechnologyDetail[] = [
     category: "Databases",
     icon: DbIcon,
     shortDescription: "Advanced open-source relational database.",
-    fullDescription: "PostgreSQL is our default relational database. Its ACID compliance, extensibility, JSON support, and powerful query optimizer make it ideal for complex applications.",
+    fullDescription: "PostgreSQL is our default relational database, trusted by enterprises worldwide for its unmatched combination of ACID compliance, extensibility, and advanced query capabilities. Its native JSONB support bridges the gap between relational and document databases, while PostGIS and pgvector extensions enable geospatial and AI-powered applications on a single platform. For businesses, PostgreSQL's open-source nature eliminates licensing costs that can run into millions with proprietary databases, without sacrificing enterprise features like partitioning, replication, and full-text search. Its proven scalability handles billions of rows with predictable performance. We leverage AI-powered query optimization, automated index recommendations, and intelligent performance tuning to maximize PostgreSQL efficiency — delivering robust data infrastructure at a fraction of proprietary database\u00A0costs.",
     useCases: ["Transactional Systems", "Geospatial Applications", "Time-series Data", "Financial Systems", "SaaS Backends", "Analytics"],
     features: ["ACID compliance", "JSONB support", "Full-text search", "Partitioning", "Extensions (PostGIS, pgvector)"],
     relatedTechnologies: ["Node.js", "Python", "Docker", "AWS"],
