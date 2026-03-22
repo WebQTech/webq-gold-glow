@@ -293,22 +293,24 @@ const TechnologyDetail = () => {
         {/* Hero */}
         <section className={`bg-gradient-to-b from-primary/5 to-background ${slug === "spring-boot" ? "py-4 lg:py-6" : "py-10 lg:py-16"}`}>
           <div className="container mx-auto px-6 lg:px-12">
-            <div className={slug === "spring-boot" ? "flex items-center gap-4 mb-2" : ""}>
+            <div className={slug === "spring-boot" ? "flex items-center gap-4 mb-2" : "mb-4"}>
               <GoBackButton />
-              <ol className="flex items-center gap-1.5 text-sm text-muted-foreground">
-                <li>
-                  <Link to="/" className="inline-flex items-center gap-1 hover:text-primary transition-colors">
-                    <Home className="w-3.5 h-3.5" />Home
-                  </Link>
-                </li>
-                <li><ChevronRight className="w-3.5 h-3.5" /></li>
-                <li>
-                  <Link to="/technologies" className="hover:text-primary transition-colors">Technologies</Link>
-                </li>
-                <li><ChevronRight className="w-3.5 h-3.5" /></li>
-                <li className="text-foreground font-medium truncate max-w-[200px] sm:max-w-none">{tech.name}</li>
-              </ol>
-            </nav>
+              <nav aria-label="Breadcrumb">
+                <ol className="flex items-center gap-1.5 text-sm text-muted-foreground">
+                  <li>
+                    <Link to="/" className="inline-flex items-center gap-1 hover:text-primary transition-colors">
+                      <Home className="w-3.5 h-3.5" />Home
+                    </Link>
+                  </li>
+                  <li><ChevronRight className="w-3.5 h-3.5" /></li>
+                  <li>
+                    <Link to="/technologies" className="hover:text-primary transition-colors">Technologies</Link>
+                  </li>
+                  <li><ChevronRight className="w-3.5 h-3.5" /></li>
+                  <li className="text-foreground font-medium truncate max-w-[200px] sm:max-w-none">{tech.name}</li>
+                </ol>
+              </nav>
+            </div>
 
             <motion.div
               initial={{ opacity: 0, y: 30 }}
