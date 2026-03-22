@@ -695,7 +695,7 @@ export const technologiesData: TechnologyDetail[] = [
     category: "Security",
     icon: Crosshair,
     shortDescription: "Open-source web application security scanner.",
-    fullDescription: "OWASP ZAP performs automated security testing of web applications, finding vulnerabilities like XSS, SQL injection, and broken authentication.",
+    fullDescription: "OWASP ZAP performs automated security testing of web applications, identifying vulnerabilities like cross-site scripting (XSS), SQL injection, broken authentication, and other OWASP Top 10 risks. We integrate it into CI/CD pipelines for continuous security validation of every deployment. For businesses, OWASP ZAP provides enterprise-grade web application security testing at zero licensing cost — making comprehensive security accessible regardless of budget constraints. Its active and passive scanning modes balance thoroughness with speed, while API testing capabilities secure modern microservices architectures. The extensive add-on ecosystem extends scanning capabilities for specific frameworks and protocols. We leverage AI-enhanced vulnerability correlation, automated false positive reduction, and intelligent scan configuration to maximize testing effectiveness — ensuring web applications are secure against the most common and dangerous attack vectors before they go\u00A0live.",
     useCases: ["Web App Penetration Testing", "API Security Testing", "CI/CD Security Scans", "Compliance Testing", "Bug Bounty Programs"],
     features: ["Automated scanning", "Active & passive scanning", "API support", "CI/CD integration", "Extensive add-ons"],
     relatedTechnologies: ["Jenkins", "Docker", "GitHub Actions"],
