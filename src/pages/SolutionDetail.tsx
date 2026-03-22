@@ -111,18 +111,25 @@ const SolutionDetail = () => {
                 </div>
               </motion.div>
 
-              {/* Right: Icon */}
+              {/* Right: Image carousel or Icon */}
               <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={isHeroInView ? { opacity: 1, scale: 1 } : {}}
                 transition={{ duration: 0.6, delay: 0.15 }}
                 className="lg:col-span-2 flex justify-center"
               >
-                <div className="w-48 h-48 lg:w-56 lg:h-56 bg-gradient-to-br from-primary/15 to-primary/5 rounded-3xl flex items-center justify-center">
-                  <div className="w-24 h-24 lg:w-28 lg:h-28 bg-primary rounded-2xl flex items-center justify-center shadow-lg shadow-primary/20">
-                    <Icon className="w-12 h-12 lg:w-14 lg:h-14 text-primary-foreground" />
+                {slug && solutionImages[slug] ? (
+                  <SolutionImageCarousel
+                    images={solutionImages[slug]}
+                    alt={solution.name}
+                  />
+                ) : (
+                  <div className="w-48 h-48 lg:w-56 lg:h-56 bg-gradient-to-br from-primary/15 to-primary/5 rounded-3xl flex items-center justify-center">
+                    <div className="w-24 h-24 lg:w-28 lg:h-28 bg-primary rounded-2xl flex items-center justify-center shadow-lg shadow-primary/20">
+                      <Icon className="w-12 h-12 lg:w-14 lg:h-14 text-primary-foreground" />
+                    </div>
                   </div>
-                </div>
+                )}
               </motion.div>
             </div>
           </div>
