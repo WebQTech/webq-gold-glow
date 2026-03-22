@@ -651,7 +651,7 @@ export const technologiesData: TechnologyDetail[] = [
     category: "Security",
     icon: Lock,
     shortDescription: "Next-gen firewalls and cloud security solutions.",
-    fullDescription: "Palo Alto Networks provides network security, cloud security (Prisma Cloud), and security operations (Cortex) for comprehensive enterprise protection.",
+    fullDescription: "Palo Alto Networks provides next-generation firewalls, cloud security with Prisma Cloud, and security operations through Cortex for comprehensive enterprise protection across network, cloud, and endpoint. For businesses, Palo Alto's unified security platform reduces tool sprawl and integration complexity while providing consistent policy enforcement across hybrid environments. Its next-gen firewalls inspect encrypted traffic without performance degradation, while Prisma Cloud secures multi-cloud workloads from code to runtime. Cortex XDR correlates data across endpoints, network, and cloud for faster threat detection. Zero Trust architecture implementation eliminates implicit trust and verifies every access request. We leverage AI-powered threat prevention, automated security policy optimization, and intelligent network segmentation to build defense-in-depth architectures — protecting enterprise assets while enabling secure digital\u00A0transformation.",
     useCases: ["Network Security", "Cloud Security Posture", "Zero Trust Architecture", "SD-WAN", "SOC Automation"],
     features: ["Next-gen firewalls", "Prisma Cloud", "Cortex XDR", "Threat Prevention", "URL filtering"],
     relatedTechnologies: ["CrowdStrike", "Splunk"],
