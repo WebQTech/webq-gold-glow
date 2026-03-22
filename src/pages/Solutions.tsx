@@ -36,6 +36,10 @@ const solutionCategories = [
     title: "Operations & Support",
     items: ["production-support", "managed-services", "it-service-management", "it-asset-management", "disaster-recovery"],
   },
+  {
+    title: "Enterprise Application Management",
+    items: ["erp-management", "crm-implementation", "enterprise-integration", "legacy-modernization", "enterprise-mobility"],
+  },
 ];
 
 const Solutions = () => {
