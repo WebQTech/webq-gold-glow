@@ -2327,37 +2327,60 @@ export const solutionsData: SolutionDetail[] = [
     slug: "penetration-testing",
     name: "Penetration Testing",
     shortDescription: "Comprehensive offensive security testing to identify vulnerabilities before attackers exploit them.",
-    fullDescription: "Our Penetration Testing services simulate real-world cyberattacks against your applications, networks, and infrastructure to identify exploitable vulnerabilities. Our certified ethical hackers use the same techniques as malicious actors — combined with industry frameworks like OWASP, PTES, and NIST — to uncover security weaknesses, validate existing controls, and provide actionable remediation guidance. We offer network, web application, mobile, API, cloud, and social engineering assessments.",
+    fullDescription: "Our Penetration Testing services simulate real-world cyberattacks against your applications, networks, and infrastructure to identify exploitable vulnerabilities. Our certified ethical hackers (OSCP, OSCE, GPEN, GXPN) use the same tactics, techniques, and procedures as advanced threat actors — combined with industry frameworks like OWASP Top 10, PTES, NIST 800-115, and MITRE ATT&CK — to uncover security weaknesses, validate existing controls, and provide prioritized remediation guidance. We offer black-box, grey-box, and white-box assessments across network, web application, mobile, API, cloud, IoT, and social engineering attack surfaces.",
     icon: Crosshair,
     features: [
-      "Network and infrastructure penetration testing",
-      "Web and mobile application security testing",
-      "API and microservices security assessment",
-      "Cloud environment penetration testing (AWS, Azure, GCP)",
-      "Social engineering and phishing simulations",
-      "Red team / purple team exercises"
+      "External and internal network infrastructure testing",
+      "Web application security assessment (OWASP Top 10)",
+      "Mobile application testing (iOS and Android)",
+      "API and microservices security evaluation",
+      "Cloud environment testing (AWS, Azure, GCP misconfigurations)",
+      "Social engineering and phishing campaign simulations",
+      "Red team and purple team adversary emulation exercises",
+      "Wireless network penetration testing",
+      "IoT and embedded device security assessment",
+      "Source code-assisted (white-box) security review"
     ],
     benefits: [
-      "Identify critical vulnerabilities before attackers do",
-      "Validate effectiveness of existing security controls",
-      "Meet compliance requirements (PCI DSS, HIPAA, SOC 2)",
-      "Detailed remediation guidance prioritized by risk",
-      "Executive-level reporting for leadership visibility",
-      "Strengthen security posture with regular testing cadence"
+      "Identify critical vulnerabilities before attackers exploit them",
+      "Validate effectiveness of firewalls, IDS/IPS, and security controls",
+      "Meet compliance mandates (PCI DSS, HIPAA, SOC 2, FedRAMP, ISO 27001)",
+      "Prioritized remediation roadmap ranked by exploitability and business impact",
+      "Executive-level reporting with risk scoring for leadership visibility",
+      "Strengthen security posture through regular testing cadence",
+      "Reduce breach risk with real-world attack simulation",
+      "Build security awareness through social engineering findings"
     ],
-    technologies: ["Burp Suite", "Metasploit", "Nessus", "Cobalt Strike", "OWASP ZAP", "Kali Linux"],
+    technologies: ["Burp Suite Pro", "Metasploit Framework", "Nessus / Tenable", "Cobalt Strike", "OWASP ZAP", "Kali Linux", "Nuclei", "BloodHound", "Nmap", "Hashcat"],
     caseStudies: [
       {
         company: "E-Commerce Platform",
         industry: "Retail",
-        challenge: "Required PCI DSS compliance but had never conducted a formal penetration test on their payment processing infrastructure.",
-        solution: "Performed comprehensive penetration testing across web application, API layer, and network infrastructure with focus on payment card data flows.",
-        results: ["Identified 14 critical and 32 high-severity vulnerabilities", "All critical findings remediated within 30 days", "Successfully passed PCI DSS compliance audit"]
+        challenge: "Required PCI DSS compliance but had never conducted a formal penetration test on their payment processing infrastructure handling 2M+ transactions monthly.",
+        solution: "Performed comprehensive penetration testing across web application, API layer, and network infrastructure with focus on payment card data flows, session management, and encryption.",
+        results: ["Identified 14 critical and 32 high-severity vulnerabilities", "All critical findings remediated within 30 days", "Successfully passed PCI DSS compliance audit on first attempt"]
+      },
+      {
+        company: "Fortune 500 Financial Services Firm",
+        industry: "Financial Services",
+        challenge: "Board-mandated security assessment after industry peer suffered a $200M breach. Needed to evaluate resilience against advanced persistent threats across a complex hybrid environment.",
+        solution: "Conducted a 4-week red team engagement simulating APT tactics including spear-phishing, lateral movement, privilege escalation, and data exfiltration across on-prem and cloud infrastructure.",
+        results: ["Achieved domain admin access within 72 hours through chained vulnerabilities", "Identified 6 critical attack paths to sensitive financial data", "Remediation of findings prevented an actual attack attempt 3 months later"]
+      },
+      {
+        company: "Healthcare SaaS Company",
+        industry: "Healthcare",
+        challenge: "Launching a patient portal handling PHI data with HIPAA compliance requirements and zero tolerance for data exposure.",
+        solution: "Performed white-box application security assessment including source code review, API fuzzing, authentication bypass testing, and HIPAA-specific data flow analysis.",
+        results: ["Discovered 3 critical authentication bypass vulnerabilities pre-launch", "Identified insecure direct object references exposing patient records", "Achieved clean HIPAA security assessment post-remediation"]
       }
     ],
     faqs: [
-      { question: "How often should we conduct penetration tests?", answer: "We recommend at least annual penetration testing, with additional tests after major application releases, infrastructure changes, or mergers/acquisitions. Compliance frameworks like PCI DSS require quarterly network scans and annual penetration tests." },
-      { question: "Will penetration testing disrupt our production systems?", answer: "We carefully scope and schedule tests to minimize impact. For production environments, we use controlled techniques and coordinate timing with your team. We can also test against staging environments first and limit destructive techniques to maintenance windows." }
+      { question: "How often should we conduct penetration tests?", answer: "We recommend at least annual penetration testing, with additional tests after major application releases, significant infrastructure changes, or mergers/acquisitions. Compliance frameworks like PCI DSS require quarterly network scans and annual penetration tests. High-risk environments benefit from semi-annual or continuous testing programs." },
+      { question: "Will penetration testing disrupt our production systems?", answer: "We carefully scope and schedule tests to minimize impact. For production environments, we use controlled techniques, coordinate timing with your team, and maintain a real-time communication channel. We can test against staging environments first and limit potentially disruptive techniques to maintenance windows. In 15+ years, we've never caused unplanned downtime." },
+      { question: "What's the difference between black-box, grey-box, and white-box testing?", answer: "Black-box simulates an external attacker with no prior knowledge. Grey-box provides partial information like user credentials or architecture docs, simulating an insider or compromised account. White-box includes full access to source code, architecture, and credentials for the deepest possible analysis. We recommend grey-box for the best balance of realism and coverage." },
+      { question: "How do you prioritize findings?", answer: "We use a risk-based scoring model combining CVSS scores, exploitability (proof-of-concept vs. theoretical), business impact, data sensitivity, and attack complexity. Findings are categorized as Critical, High, Medium, Low, and Informational with specific, actionable remediation steps for each." },
+      { question: "Do you provide retesting after remediation?", answer: "Yes, every engagement includes a complimentary retest window (typically 90 days) where we validate that remediated vulnerabilities are properly fixed. We provide an updated report reflecting the improved security posture, which is valuable for compliance evidence and stakeholder reporting." }
     ]
   },
   {
