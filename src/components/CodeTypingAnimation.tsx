@@ -4,6 +4,9 @@ import { motion, AnimatePresence } from "framer-motion";
 interface CodeSnippet {
   title: string;
   language: string;
+  badge?: string;
+  badgeColor?: string;
+  description?: string;
   lines: string[];
 }
 
