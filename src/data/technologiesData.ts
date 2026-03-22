@@ -245,7 +245,7 @@ export const technologiesData: TechnologyDetail[] = [
     category: "Cloud Platforms",
     icon: DbIcon,
     shortDescription: "Enterprise cloud optimized for Oracle databases and applications.",
-    fullDescription: "Oracle Cloud Infrastructure provides high-performance computing for Oracle database workloads, ERP systems, and enterprise applications with competitive pricing.",
+    fullDescription: "Oracle Cloud Infrastructure provides high-performance computing optimized for Oracle database workloads, ERP systems, and enterprise applications with competitive pricing that undercuts major competitors. For businesses running mission-critical Oracle databases, OCI delivers up to 8x better price-performance than other clouds, with Autonomous Database eliminating manual DBA tasks through self-driving, self-securing, and self-repairing capabilities. Its bare metal instances provide dedicated hardware for workloads requiring maximum performance and isolation. OCI's integrated Fusion Applications suite modernizes ERP, HCM, and SCM without complex migrations. We leverage AI-powered automation to optimize Oracle workloads, predict capacity needs, and streamline enterprise application management — reducing operational costs while maximizing database performance and\u00A0availability.",
     useCases: ["Oracle Database Hosting", "ERP Cloud Migration", "High-performance Computing", "Enterprise Workloads"],
     features: ["Autonomous Database", "OCI Compute", "Oracle Fusion Apps", "Competitive pricing", "Bare metal instances"],
     relatedTechnologies: ["Oracle ERP", "Java", "Kubernetes"],
