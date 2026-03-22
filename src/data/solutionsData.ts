@@ -1633,6 +1633,191 @@ export const solutionsData: SolutionDetail[] = [
       { question: "What is MLOps?", answer: "MLOps (Machine Learning Operations) applies DevOps principles to machine learning — automating the end-to-end ML lifecycle from data preparation and model training to deployment, monitoring, and retraining." },
       { question: "Do we need MLOps if we only have a few models?", answer: "Even with a few models, MLOps practices like version control, automated testing, and monitoring prevent common issues like model drift, reproducibility failures, and deployment bottlenecks. The investment pays off quickly as your ML practice grows." }
     ]
+  },
+  {
+    slug: "erp-management",
+    name: "ERP Management & Implementation",
+    shortDescription: "End-to-end ERP implementation, customization, and management for streamlined business operations.",
+    fullDescription: "We provide comprehensive ERP management services covering implementation, customization, migration, and ongoing support. Whether you're deploying a new ERP system or optimizing an existing one, we ensure seamless integration with your business processes and maximize your return on investment.",
+    icon: Building2,
+    features: [
+      "ERP implementation & deployment",
+      "Custom module development & configuration",
+      "ERP migration & data conversion",
+      "Business process mapping & optimization",
+      "Multi-site & multi-currency setup",
+      "ERP performance tuning & optimization",
+      "User training & change management",
+      "Ongoing support & managed services"
+    ],
+    benefits: [
+      "Streamlined business operations across departments",
+      "Real-time visibility into financials & operations",
+      "Reduced manual processes & data silos",
+      "Improved decision-making with unified data"
+    ],
+    technologies: ["SAP S/4HANA", "Oracle ERP Cloud", "Microsoft Dynamics 365", "NetSuite", "Infor CloudSuite", "Workday", "Epicor", "Odoo", "Acumatica", "IFS"],
+    caseStudies: [
+      {
+        company: "Manufacturing Enterprise",
+        industry: "Manufacturing",
+        challenge: "Operating on a 15-year-old legacy ERP with fragmented data across 8 plants and manual reconciliation processes.",
+        solution: "Migrated to SAP S/4HANA with unified data model, automated inter-plant workflows, and real-time financial consolidation.",
+        results: ["40% reduction in month-end close time", "Unified operations across 8 manufacturing plants", "Real-time inventory visibility reducing stockouts by 60%"]
+      }
+    ],
+    faqs: [
+      { question: "How long does an ERP implementation typically take?", answer: "Timelines vary by scope — a mid-size implementation typically takes 6-12 months, while large enterprises may require 12-24 months. We use phased rollouts to deliver value incrementally." },
+      { question: "Can you integrate ERP with our existing systems?", answer: "Yes, we specialize in integrating ERPs with CRM, SCM, HR, e-commerce, and other enterprise systems using APIs, middleware, and iPaaS platforms." }
+    ]
+  },
+  {
+    slug: "crm-implementation",
+    name: "CRM Implementation & Optimization",
+    shortDescription: "Deploy and optimize CRM platforms to enhance customer relationships and drive revenue growth.",
+    fullDescription: "We implement, customize, and optimize CRM solutions that align with your sales, marketing, and customer service strategies. From platform selection and data migration to workflow automation and analytics, we help you build a 360-degree view of your customers and maximize the value of every interaction.",
+    icon: Users,
+    features: [
+      "CRM platform selection & implementation",
+      "Sales pipeline & workflow automation",
+      "Marketing automation integration",
+      "Customer 360 & data unification",
+      "Custom reporting & analytics dashboards",
+      "Third-party app & API integrations",
+      "Data migration & cleansing",
+      "User adoption & training programs"
+    ],
+    benefits: [
+      "360-degree customer visibility",
+      "Increased sales productivity & conversion rates",
+      "Automated marketing & lead nurturing workflows",
+      "Data-driven customer engagement strategies"
+    ],
+    technologies: ["Salesforce", "HubSpot", "Microsoft Dynamics 365 CRM", "Zoho CRM", "Freshsales", "Pipedrive", "SugarCRM", "Monday CRM", "SAP CRM", "Oracle CX"],
+    caseStudies: [
+      {
+        company: "B2B Technology Company",
+        industry: "Technology",
+        challenge: "Sales team using spreadsheets and disconnected tools, losing 30% of leads due to lack of follow-up and no pipeline visibility.",
+        solution: "Implemented Salesforce with automated lead scoring, pipeline management, marketing automation integration, and custom dashboards.",
+        results: ["45% increase in lead conversion rates", "Complete pipeline visibility for leadership", "20% revenue growth in first year post-implementation"]
+      }
+    ],
+    faqs: [
+      { question: "Which CRM platform do you recommend?", answer: "It depends on your needs — Salesforce for enterprise scale, HubSpot for marketing-heavy mid-market, Dynamics 365 for Microsoft-centric organizations. We evaluate your requirements before recommending." },
+      { question: "How do you ensure CRM adoption?", answer: "We focus on user-centered design, role-based training, executive sponsorship, and measuring adoption KPIs. Poor adoption is the #1 reason CRM projects fail, so we prioritize it from day one." }
+    ]
+  },
+  {
+    slug: "enterprise-integration",
+    name: "Enterprise Integration & Middleware",
+    shortDescription: "Connect disparate systems with robust integration platforms, APIs, and middleware solutions.",
+    fullDescription: "We design and implement enterprise integration architectures that connect your applications, data sources, and business processes into a cohesive ecosystem. From API management and ESB implementation to event-driven architectures and iPaaS solutions, we eliminate data silos and enable seamless information flow across your organization.",
+    icon: Cable,
+    features: [
+      "Enterprise integration strategy & architecture",
+      "API management & gateway implementation",
+      "iPaaS (Integration Platform as a Service) setup",
+      "Event-driven integration patterns",
+      "ESB (Enterprise Service Bus) implementation",
+      "B2B/EDI integration",
+      "Data synchronization & real-time replication",
+      "Integration monitoring & error handling"
+    ],
+    benefits: [
+      "Eliminated data silos across the organization",
+      "Real-time data flow between systems",
+      "Reduced integration maintenance overhead",
+      "Scalable architecture for future growth"
+    ],
+    technologies: ["MuleSoft", "Dell Boomi", "Workato", "Apache Kafka", "Azure Integration Services", "AWS EventBridge", "Informatica", "Talend", "IBM App Connect", "Kong Gateway"],
+    caseStudies: [
+      {
+        company: "Retail Chain",
+        industry: "Retail",
+        challenge: "12 disconnected systems (POS, ERP, e-commerce, WMS) with manual data transfers causing 48-hour delays in inventory updates.",
+        solution: "Implemented MuleSoft-based integration platform with real-time event-driven architecture connecting all systems.",
+        results: ["Real-time inventory sync across all channels", "48-hour data delay eliminated", "50% reduction in integration maintenance effort"]
+      }
+    ],
+    faqs: [
+      { question: "What is iPaaS?", answer: "iPaaS (Integration Platform as a Service) is a cloud-based platform that enables organizations to connect applications, data, and processes without managing integration infrastructure. Examples include MuleSoft, Boomi, and Workato." },
+      { question: "API-first vs ESB — which approach is better?", answer: "API-first is the modern standard for most integrations — it's more flexible, scalable, and developer-friendly. ESBs still have a role in complex legacy environments. We typically recommend API-first with event-driven patterns." }
+    ]
+  },
+  {
+    slug: "legacy-modernization",
+    name: "Legacy Application Modernization",
+    shortDescription: "Transform legacy enterprise applications into modern, scalable, and maintainable systems.",
+    fullDescription: "We help organizations modernize aging enterprise applications through strategic approaches including re-platforming, refactoring, re-architecting, and cloud migration. We assess your legacy portfolio, define a modernization roadmap, and execute the transformation while minimizing business disruption and preserving critical business logic.",
+    icon: RotateCcw,
+    features: [
+      "Legacy application assessment & portfolio analysis",
+      "Modernization strategy & roadmap planning",
+      "Monolith to microservices decomposition",
+      "Re-platforming to cloud-native architectures",
+      "Database modernization & migration",
+      "UI/UX modernization for legacy interfaces",
+      "Automated code conversion & refactoring",
+      "Phased migration with zero-downtime cutover"
+    ],
+    benefits: [
+      "Reduced technical debt & maintenance costs",
+      "Improved system performance & scalability",
+      "Enhanced agility for new feature development",
+      "Extended application lifespan with modern architecture"
+    ],
+    technologies: ["Kubernetes", "Docker", "AWS App2Container", "Azure Migrate", "Strangler Fig Pattern", "Spring Boot", ".NET Core", "React", "PostgreSQL", "MongoDB"],
+    caseStudies: [
+      {
+        company: "Insurance Corporation",
+        industry: "Insurance",
+        challenge: "Core policy management system built on COBOL mainframe — costly to maintain, impossible to integrate with modern digital channels.",
+        solution: "Applied strangler fig pattern to incrementally modernize into microservices on Kubernetes while keeping the mainframe running during transition.",
+        results: ["70% reduction in infrastructure costs", "New feature delivery accelerated from months to weeks", "Seamless integration with mobile app and partner portals"]
+      }
+    ],
+    faqs: [
+      { question: "Should we rewrite or refactor our legacy application?", answer: "It depends on the application's complexity, business value, and timeline. We use a 6R framework (Retain, Retire, Rehost, Replatform, Refactor, Rebuild) to determine the optimal approach for each application in your portfolio." },
+      { question: "How do you minimize risk during modernization?", answer: "We use incremental approaches like the strangler fig pattern, maintain parallel systems during transition, implement comprehensive testing, and plan rollback strategies at every phase." }
+    ]
+  },
+  {
+    slug: "enterprise-mobility",
+    name: "Enterprise Mobility Solutions",
+    shortDescription: "Empower your workforce with secure mobile solutions, MDM, and enterprise app management.",
+    fullDescription: "We deliver enterprise mobility solutions that enable your workforce to stay productive and connected from anywhere. From mobile device management and enterprise app deployment to secure mobile workspaces and BYOD policies, we help organizations embrace mobility while maintaining security and compliance.",
+    icon: TabletSmartphone,
+    features: [
+      "Mobile Device Management (MDM/UEM)",
+      "Enterprise mobile app development & deployment",
+      "Secure mobile workspace & containerization",
+      "BYOD policy design & implementation",
+      "Mobile application management (MAM)",
+      "Mobile security & threat defense",
+      "Mobile analytics & usage monitoring",
+      "Cross-platform enterprise app distribution"
+    ],
+    benefits: [
+      "Secure, productive mobile workforce",
+      "Unified endpoint management across devices",
+      "Flexible BYOD with enterprise-grade security",
+      "Streamlined enterprise app distribution"
+    ],
+    technologies: ["Microsoft Intune", "VMware Workspace ONE", "Jamf", "MobileIron", "Samsung Knox", "Citrix Endpoint Management", "IBM MaaS360", "Lookout", "Zimperium", "AppConfig"],
+    caseStudies: [
+      {
+        company: "Healthcare System",
+        industry: "Healthcare",
+        challenge: "5,000+ clinicians using personal devices to access patient data with no security controls or compliance framework.",
+        solution: "Deployed Microsoft Intune with BYOD containerization, conditional access policies, and HIPAA-compliant mobile workspace.",
+        results: ["100% HIPAA compliance for mobile access", "5,000 devices enrolled and secured in 8 weeks", "Zero data breach incidents since deployment"]
+      }
+    ],
+    faqs: [
+      { question: "What is UEM and how does it differ from MDM?", answer: "UEM (Unified Endpoint Management) is the evolution of MDM — it manages not just mobile devices but all endpoints including laptops, desktops, IoT devices, and wearables from a single platform." },
+      { question: "How do you handle BYOD security?", answer: "We implement containerization to separate work and personal data, conditional access policies, app-level VPN, remote wipe capabilities for corporate data only, and compliance-based access controls." }
+    ]
   }
 ];
 
