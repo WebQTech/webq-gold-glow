@@ -539,7 +539,7 @@ export const technologiesData: TechnologyDetail[] = [
     category: "Data & Analytics",
     icon: Radio,
     shortDescription: "Distributed event streaming platform for real-time data.",
-    fullDescription: "Kafka is our backbone for real-time data pipelines, event-driven architectures, and stream processing. We design and manage Kafka clusters for mission-critical data flows.",
+    fullDescription: "Apache Kafka is our backbone for real-time data pipelines, event-driven architectures, and stream processing that handles trillions of events daily across distributed systems. We design and manage Kafka clusters for mission-critical data flows that demand zero data loss and sub-second latency. For businesses, Kafka decouples systems and enables real-time reactions to business events — from fraud detection in milliseconds to inventory updates across global supply chains. Its partitioned log architecture provides both massive throughput and strong ordering guarantees. Kafka Connect integrates with hundreds of data sources without custom coding. Companies like LinkedIn, Netflix, and Uber process billions of events daily on Kafka. We leverage AI-powered cluster optimization, intelligent partition management, and automated consumer lag monitoring to ensure Kafka pipelines deliver reliable, real-time data at enterprise\u00A0scale.",
     useCases: ["Event-driven Architecture", "Real-time Data Pipelines", "Log Aggregation", "CDC (Change Data Capture)", "Microservices Communication"],
     features: ["High throughput", "Partitioned logs", "Consumer groups", "Kafka Streams", "Kafka Connect"],
     relatedTechnologies: ["Java", "Apache Flink", "Kubernetes"],
