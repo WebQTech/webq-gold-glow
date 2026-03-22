@@ -87,7 +87,7 @@ export const technologiesData: TechnologyDetail[] = [
     category: "Frontend",
     icon: Paintbrush,
     shortDescription: "Utility-first CSS framework for rapid UI development.",
-    fullDescription: "Tailwind CSS enables our designers and developers to build custom, responsive UIs rapidly without leaving HTML. It promotes consistency through design tokens and eliminates unused CSS in production.",
+    fullDescription: "Tailwind CSS enables our designers and developers to build custom, responsive UIs rapidly without context-switching between HTML and separate stylesheets. It promotes consistency through design tokens and eliminates unused CSS in production, resulting in smaller bundle sizes and faster page loads. For businesses, this means brand-consistent interfaces delivered in less time, with design systems that scale across products without CSS bloat. Tailwind's utility-first approach reduces styling bugs and makes responsive design effortless across devices. We enhance our Tailwind workflow with AI-assisted design generation and intelligent class suggestions — translating design mockups into pixel-perfect implementations faster than\u00A0ever.",
     useCases: ["Responsive Web Design", "Design Systems", "Marketing Pages", "Component Libraries", "Rapid Prototyping"],
     features: ["Utility-first classes", "Responsive design built-in", "Dark mode support", "PurgeCSS for small bundles", "Customizable design tokens"],
     relatedTechnologies: ["React", "Vue.js", "Next.js"],
