@@ -234,7 +234,7 @@ export const technologiesData: TechnologyDetail[] = [
     category: "Cloud Platforms",
     icon: Cloud,
     shortDescription: "Google's cloud for data analytics, ML, and Kubernetes workloads.",
-    fullDescription: "GCP excels in data analytics, machine learning, and containerized workloads. We use BigQuery, Vertex AI, and GKE to build data-driven, AI-powered applications.",
+    fullDescription: "Google Cloud Platform excels in data analytics, machine learning, and containerized workloads, powered by the same infrastructure that runs Google Search and YouTube. We use BigQuery, Vertex AI, and GKE to build data-driven, AI-powered applications that transform raw data into competitive advantage. For businesses, GCP's serverless-first approach reduces operational overhead, while BigQuery's ability to analyze petabytes of data in seconds enables real-time business intelligence at any scale. Its Anthos platform enables true multi-cloud strategies without vendor lock-in. GCP's sustainability commitment with carbon-neutral operations aligns with modern ESG goals. We leverage AI-powered development and operations tools to optimize cloud architectures, automate data pipelines, and deliver intelligent applications with unmatched analytical\u00A0power.",
     useCases: ["Big Data Analytics", "ML Model Training", "Kubernetes Workloads", "Data Warehousing", "Streaming Analytics"],
     features: ["BigQuery analytics", "Vertex AI platform", "Google Kubernetes Engine", "Cloud Spanner", "Anthos for hybrid cloud"],
     relatedTechnologies: ["Kubernetes", "TensorFlow", "Terraform"],
