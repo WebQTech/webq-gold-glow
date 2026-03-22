@@ -2,7 +2,7 @@ import {
   Code2, Cloud, Server, RefreshCw, TestTube, Headphones, Settings, Database,
   Gauge, Network, GitBranch, Container, Zap, Shield, Wrench, ClipboardList,
   BarChart3, Brain, Smartphone, Plug, Lock, ShieldCheck, FileCode, CloudCog, KeyRound,
-  ShieldAlert, Scale, PackageSearch, HardDriveDownload, Layers, Activity, DollarSign, CloudLightning, Cog, Accessibility, Blocks, Palette, Bot, Workflow, FlaskConical, Building2, Users, Cable, RotateCcw, TabletSmartphone, Truck, FileStack, BookCheck, Warehouse, ArrowRightLeft, ShoppingCart, FileText, HardDrive, Headset, Radio, GitPullRequest, ShieldPlus, Radar, Crosshair, Fingerprint, Flame, Flag, LucideIcon
+  ShieldAlert, Scale, PackageSearch, HardDriveDownload, Layers, Activity, DollarSign, CloudLightning, Cog, Accessibility, Blocks, Palette, Bot, Workflow, FlaskConical, Building2, Users, Cable, RotateCcw, TabletSmartphone, Truck, FileStack, BookCheck, Warehouse, ArrowRightLeft, ShoppingCart, FileText, HardDrive, Headset, Radio, GitPullRequest, ShieldPlus, Radar, Crosshair, Fingerprint, Flame, Flag, MessageSquare, BookOpen, Eye, LucideIcon
 } from "lucide-react";
 
 export interface SolutionDetail {
@@ -2520,6 +2520,117 @@ export const solutionsData: SolutionDetail[] = [
     faqs: [
       { question: "How do you manage feature flag technical debt?", answer: "We implement feature flag lifecycle governance — every flag has an owner, expiration date, and cleanup criteria. We provide dashboards showing stale flags, automated alerts for expired flags, and integrate cleanup tasks into sprint workflows to prevent flag sprawl." },
       { question: "Can feature flags impact application performance?", answer: "Modern feature flag SDKs evaluate flags locally with cached configurations, adding negligible latency (typically <1ms). We design flag architectures that minimize network calls, use efficient data structures, and implement edge-side evaluation for latency-sensitive applications." }
+    ]
+  },
+  {
+    slug: "nlp-services",
+    name: "Natural Language Processing (NLP)",
+    shortDescription: "AI-powered text analysis, language understanding, and conversational intelligence solutions.",
+    fullDescription: "Our NLP Services help organizations extract meaning, intent, and insights from unstructured text data at scale. We build and deploy custom NLP models and pipelines for sentiment analysis, named entity recognition, text classification, summarization, language translation, and conversational AI. Whether you need to automate document processing, build intelligent chatbots, or analyze customer feedback, our NLP solutions turn language into actionable intelligence.",
+    icon: MessageSquare,
+    features: [
+      "Sentiment analysis and opinion mining",
+      "Named entity recognition (NER) and relation extraction",
+      "Text classification and topic modeling",
+      "Automated document summarization",
+      "Multilingual NLP and translation services",
+      "Conversational AI and intent recognition"
+    ],
+    benefits: [
+      "Automate processing of thousands of documents per hour",
+      "Extract actionable insights from customer feedback at scale",
+      "Reduce manual review time by 80% with intelligent classification",
+      "Support 100+ languages with multilingual models",
+      "Improve customer experience with intelligent conversational AI",
+      "Unlock value from previously inaccessible unstructured data"
+    ],
+    technologies: ["Hugging Face Transformers", "spaCy", "OpenAI GPT", "Google Cloud NLP", "AWS Comprehend", "LangChain"],
+    caseStudies: [
+      {
+        company: "Global Pharmaceutical Company",
+        industry: "Healthcare",
+        challenge: "Manually reviewing 50,000+ adverse event reports annually, taking an average of 45 minutes per report with inconsistent categorization.",
+        solution: "Built a custom NLP pipeline for automated report classification, entity extraction (drugs, symptoms, outcomes), and severity scoring with human-in-the-loop validation.",
+        results: ["Report processing time reduced from 45 minutes to 3 minutes", "Classification accuracy of 94% matching expert reviewers", "Annual cost savings of $2.1M in manual review labor"]
+      }
+    ],
+    faqs: [
+      { question: "Do you use pre-built models or custom-trained models?", answer: "We use a hybrid approach. We start with state-of-the-art pre-trained models (GPT, BERT, etc.) and fine-tune them on your domain-specific data for optimal accuracy. For specialized use cases, we train custom models from scratch when pre-trained models don't meet performance requirements." },
+      { question: "How do you handle multilingual content?", answer: "We leverage multilingual transformer models that support 100+ languages natively, and we can fine-tune language-specific models for higher accuracy in your target languages. Our pipelines include automatic language detection and routing to the appropriate model." }
+    ]
+  },
+  {
+    slug: "rag-solutions",
+    name: "Retrieval-Augmented Generation (RAG)",
+    shortDescription: "Combine your enterprise knowledge with AI to deliver accurate, grounded, and context-aware responses.",
+    fullDescription: "Our RAG Solutions bridge the gap between powerful large language models and your organization's proprietary knowledge. We design and implement retrieval-augmented generation systems that ground AI responses in your actual data — documents, wikis, databases, and knowledge bases — eliminating hallucinations and ensuring accuracy. From internal knowledge assistants and customer support bots to research tools and compliance Q&A, our RAG architectures deliver trustworthy AI that knows your business.",
+    icon: BookOpen,
+    features: [
+      "Enterprise knowledge base ingestion and indexing",
+      "Vector database design and optimization",
+      "Hybrid search (semantic + keyword) implementation",
+      "Multi-modal RAG (text, images, tables, PDFs)",
+      "Citation and source attribution for transparency",
+      "Guardrails, filtering, and hallucination prevention"
+    ],
+    benefits: [
+      "Eliminate AI hallucinations with grounded, cited responses",
+      "Unlock institutional knowledge trapped in documents and wikis",
+      "Reduce employee time searching for information by 60%",
+      "Keep AI responses current without retraining models",
+      "Maintain data privacy — your data stays in your environment",
+      "Scale knowledge access across the entire organization"
+    ],
+    technologies: ["Pinecone", "Weaviate", "ChromaDB", "LangChain", "LlamaIndex", "OpenAI Embeddings"],
+    caseStudies: [
+      {
+        company: "International Law Firm",
+        industry: "Legal",
+        challenge: "Attorneys spent 30% of billable time searching through 2M+ documents across case files, precedents, and regulatory databases.",
+        solution: "Deployed a RAG-powered legal research assistant that indexes all firm documents, provides cited answers, and surfaces relevant precedents with source attribution.",
+        results: ["Research time reduced by 65%", "95% accuracy rate with full source citations", "$4.5M annual increase in billable hours recovered"]
+      }
+    ],
+    faqs: [
+      { question: "How do you prevent AI hallucinations?", answer: "Our RAG architecture retrieves relevant source documents before generating responses, grounding every answer in your actual data. We implement confidence scoring, citation requirements, and fallback mechanisms that say 'I don't know' rather than fabricating answers. Regular evaluation benchmarks ensure accuracy." },
+      { question: "How do you handle document updates?", answer: "We implement incremental indexing pipelines that automatically detect and process new or modified documents. Changes are reflected in the knowledge base within minutes, ensuring the AI always has access to the latest information without requiring full re-indexing." }
+    ]
+  },
+  {
+    slug: "computer-vision",
+    name: "Computer Vision Solutions",
+    shortDescription: "AI-powered image and video analysis for object detection, recognition, and visual intelligence.",
+    fullDescription: "Our Computer Vision Solutions enable organizations to extract actionable intelligence from images and video streams. We build and deploy custom vision models for object detection, image classification, facial recognition, OCR, quality inspection, and video analytics. From manufacturing quality control and retail analytics to medical imaging and autonomous systems, our computer vision expertise turns visual data into business value.",
+    icon: Eye,
+    features: [
+      "Object detection and instance segmentation",
+      "Image classification and visual search",
+      "Optical character recognition (OCR) and document digitization",
+      "Video analytics and real-time stream processing",
+      "Quality inspection and anomaly detection",
+      "Edge deployment for real-time inference"
+    ],
+    benefits: [
+      "Automate visual inspection with 99%+ accuracy",
+      "Process thousands of images per minute at scale",
+      "Reduce defect escape rates by 90% in manufacturing",
+      "Enable real-time decision-making with edge inference",
+      "Digitize paper documents and handwritten forms automatically",
+      "Unlock insights from CCTV, drone, and satellite imagery"
+    ],
+    technologies: ["PyTorch", "TensorFlow", "YOLO", "OpenCV", "AWS Rekognition", "Google Vision AI"],
+    caseStudies: [
+      {
+        company: "Automotive Manufacturer",
+        industry: "Manufacturing",
+        challenge: "Manual quality inspection of painted surfaces caught only 82% of defects, resulting in costly rework and warranty claims.",
+        solution: "Deployed edge-based computer vision system with custom-trained defect detection models on the production line, inspecting every unit in real time.",
+        results: ["Defect detection rate improved from 82% to 99.6%", "Inspection throughput increased by 300%", "Warranty claims reduced by 45% in the first year"]
+      }
+    ],
+    faqs: [
+      { question: "How much training data do we need?", answer: "It depends on complexity. For transfer learning with pre-trained models, often 100–500 labeled images per class suffice. For highly specialized tasks, we may need 1,000–10,000+ images. We also use data augmentation, synthetic data generation, and active learning to maximize performance with limited data." },
+      { question: "Can models run on edge devices?", answer: "Yes. We optimize models for edge deployment using techniques like quantization, pruning, and knowledge distillation. Our models run on NVIDIA Jetson, Intel NCS, mobile devices, and industrial cameras for real-time inference without cloud latency." }
     ]
   }
 ];
