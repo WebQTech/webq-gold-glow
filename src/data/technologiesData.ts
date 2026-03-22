@@ -594,7 +594,7 @@ export const technologiesData: TechnologyDetail[] = [
     category: "Data & Analytics",
     icon: Eye,
     shortDescription: "Google Cloud BI platform with LookML modeling.",
-    fullDescription: "Looker provides a semantic modeling layer (LookML) for consistent, governed analytics. We use it for self-service BI, embedded analytics, and data applications.",
+    fullDescription: "Looker provides a semantic modeling layer through LookML that ensures consistent, governed analytics across the entire organization. We use it for self-service BI, embedded analytics, and building data applications that turn insights into action. For businesses, Looker's 'single source of truth' approach eliminates conflicting metrics that plague traditional BI tools — ensuring every team works from the same data definitions. Its API-first architecture enables custom data applications and embedded analytics that bring insights directly into customer-facing products. Looker's Git-based version control brings software engineering rigor to analytics development. Integration with Google Cloud's ecosystem provides seamless access to BigQuery and Vertex AI. We leverage AI-powered LookML generation, automated explore optimization, and intelligent usage analytics to maximize Looker adoption — delivering governed, self-service analytics that scale across the\u00A0enterprise.",
     useCases: ["Self-service Analytics", "Embedded Dashboards", "Data Applications", "Customer-facing Analytics", "Governed Metrics"],
     features: ["LookML modeling", "Explores for ad-hoc", "API-first architecture", "Embedded analytics", "Git-based version control"],
     relatedTechnologies: ["GCP", "Snowflake", "BigQuery"],
