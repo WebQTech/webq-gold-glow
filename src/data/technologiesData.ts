@@ -370,7 +370,7 @@ export const technologiesData: TechnologyDetail[] = [
     category: "Databases",
     icon: DbIcon,
     shortDescription: "World's most popular open-source relational database.",
-    fullDescription: "MySQL powers millions of web applications worldwide. We use it for read-heavy workloads, content management systems, and applications requiring wide hosting compatibility.",
+    fullDescription: "MySQL powers millions of web applications worldwide and remains the most widely deployed open-source relational database. We use it for read-heavy workloads, content management systems, and applications requiring broad hosting compatibility across cloud providers. For businesses, MySQL's battle-proven reliability — trusted by Facebook, Twitter, and Netflix — provides confidence for mission-critical data storage. Its InnoDB engine delivers full ACID compliance with row-level locking for high-concurrency environments. MySQL's replication capabilities enable read scaling and disaster recovery with minimal configuration. The familiar SQL interface and massive developer community ensure low hiring costs and abundant talent availability. We leverage AI-driven query analysis, automated replication tuning, and intelligent capacity planning to optimize MySQL deployments — ensuring peak database performance at\u00A0scale.",
     useCases: ["Web Applications", "Content Management", "E-commerce", "Data Warehousing", "Replication Setups"],
     features: ["InnoDB storage engine", "Replication", "Partitioning", "MySQL Workbench", "High availability"],
     relatedTechnologies: ["PHP / Laravel", "Node.js", "Docker"],
