@@ -205,13 +205,13 @@ const SolutionDetail = () => {
                     transition={{ duration: 0.4, delay: index * 0.1 }}
                     className="bg-card border border-border rounded-2xl p-8"
                   >
-                    <div className="flex items-center gap-3 mb-4">
-                      <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
-                        <Building2 className="w-5 h-5 text-primary" />
+                    <div className="flex items-center gap-4 mb-6">
+                      <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
+                        <Building2 className="w-6 h-6 text-primary" />
                       </div>
                       <div>
-                        <h3 className="font-semibold text-foreground text-sm">{caseStudy.company}</h3>
-                        <p className="text-xs text-muted-foreground">{caseStudy.industry}</p>
+                        <h3 className="font-semibold text-foreground">{caseStudy.company}</h3>
+                        <p className="text-sm text-muted-foreground">{caseStudy.industry}</p>
                       </div>
                     </div>
                     <div className="space-y-3">
