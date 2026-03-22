@@ -166,7 +166,7 @@ export const technologiesData: TechnologyDetail[] = [
     category: "Backend",
     icon: Cpu,
     shortDescription: "Microsoft's framework for cross-platform enterprise applications.",
-    fullDescription: ".NET (C#) is our choice for Microsoft-centric enterprises. We build high-performance APIs, desktop applications, and cloud services on Azure with .NET's mature ecosystem.",
+    fullDescription: ".NET (C#) is our choice for Microsoft-centric enterprises that need high-performance APIs, desktop applications, and cloud services on Azure. The framework's cross-platform capabilities with .NET Core enable deployment on Linux, Windows, and macOS, eliminating platform lock-in while maintaining the rich Microsoft ecosystem advantages. For businesses, .NET's mature Entity Framework ORM, Blazor for web UI, and seamless Azure integration reduce infrastructure complexity and operational costs. Its enterprise-grade security features and compliance certifications make it ideal for regulated industries like finance and healthcare. We enhance .NET development with AI-powered code analysis, automated testing, and intelligent performance tuning — enabling faster delivery of secure, scalable enterprise applications across any\u00A0platform.",
     useCases: ["Enterprise Applications", "Azure Cloud Services", "Windows Desktop Apps", "Game Backends", "Financial Systems"],
     features: ["Cross-platform with .NET Core", "Azure integration", "Entity Framework ORM", "Blazor for web UI", "High performance"],
     relatedTechnologies: ["Microsoft Azure", "PostgreSQL", "Docker"],
