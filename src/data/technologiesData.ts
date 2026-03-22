@@ -785,7 +785,7 @@ export const technologiesData: TechnologyDetail[] = [
     category: "Enterprise Platforms",
     icon: ShoppingCart,
     shortDescription: "Inbound marketing, sales, and CRM platform.",
-    fullDescription: "HubSpot provides an all-in-one platform for marketing automation, sales CRM, and customer service. We implement, customize, and integrate HubSpot for growing businesses.",
+    fullDescription: "HubSpot provides an all-in-one platform for marketing automation, sales CRM, and customer service that scales with growing businesses. We implement, customize, and integrate HubSpot for organizations seeking to unify their go-to-market operations. For businesses, HubSpot's integrated approach eliminates the data silos between marketing, sales, and service teams — enabling personalized customer journeys from first touch to loyal advocacy. Its freemium model allows businesses to start small and expand capabilities as they grow, with predictable pricing. The CMS Hub enables marketers to build and optimize websites without developer dependencies. Operations Hub automates data quality and business process workflows. We leverage AI-powered marketing optimization, automated lead scoring, and intelligent content recommendations to maximize HubSpot ROI — delivering unified revenue operations that accelerate growth and improve customer\u00A0lifetime value.",
     useCases: ["Inbound Marketing", "Sales Pipeline Management", "Email Marketing", "Customer Support", "Content Management"],
     features: ["Marketing Hub", "Sales Hub", "Service Hub", "CMS Hub", "Operations Hub"],
     relatedTechnologies: ["Salesforce", "Node.js"],
