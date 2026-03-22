@@ -157,7 +157,7 @@ const SolutionDetail = () => {
               >
                 <div className="flex items-center gap-2 mb-5">
                   <Check className="w-5 h-5 text-emerald-500" />
-                  <h2 className="text-xl lg:text-2xl font-bold text-foreground">Key Benefits</h2>
+                  <h2 className="text-2xl lg:text-3xl font-bold text-foreground">Key Benefits</h2>
                 </div>
                 <ul className="space-y-3">
                   {solution.benefits.map((benefit, index) => (
