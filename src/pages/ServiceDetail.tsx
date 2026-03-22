@@ -88,7 +88,7 @@ const ServiceDetail = () => {
               <h1 className="mt-4 text-4xl lg:text-5xl font-bold text-foreground leading-tight">
                 {service.name}
               </h1>
-              <p className="mt-6 text-lg text-muted-foreground">
+              <p className="mt-6 text-base text-foreground/70 text-justify leading-relaxed font-[Inter]">
                 {service.fullDescription}
               </p>
               <div className="mt-8">

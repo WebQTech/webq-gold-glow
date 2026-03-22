@@ -23,7 +23,7 @@ export const solutionsData: SolutionDetail[] = [
     slug: "custom-app-development",
     name: "Custom Software Development",
     shortDescription: "Tailored web, mobile, and enterprise applications built for your unique business needs.",
-    fullDescription: "We design, build, and deploy custom software solutions that align with your business goals. From responsive web applications and cross-platform mobile apps to complex enterprise systems, our engineering teams deliver scalable, maintainable software using modern architectures and agile methodologies.",
+    fullDescription: "We design, build, and deploy custom software solutions that align with your business goals. From responsive web applications and cross-platform mobile apps to complex enterprise systems, our engineering teams deliver scalable, maintainable software using modern architectures and agile methodologies. For businesses, custom development eliminates the compromise of off-the-shelf solutions — you get exactly what your workflows demand, with full ownership of intellectual property. Our component-based approach enables code reuse across projects, reducing costs by up to 40%. We leverage AI-assisted development tools for code generation, automated testing, and intelligent debugging — accelerating delivery while maintaining enterprise-grade quality and security.",
     icon: Code2,
     features: [
       "Full-stack web application development",
@@ -71,7 +71,7 @@ export const solutionsData: SolutionDetail[] = [
     slug: "cloud-migration",
     name: "Cloud Migration & Deployment",
     shortDescription: "Seamless transition from legacy systems to modern, scalable cloud infrastructure.",
-    fullDescription: "We help organizations migrate workloads to the cloud with minimal disruption. Our structured approach covers assessment, planning, migration execution, and post-migration optimization — ensuring your applications run efficiently on modern cloud platforms.",
+    fullDescription: "We help organizations migrate workloads to the cloud with minimal disruption and maximum business value. Our structured approach covers assessment, planning, migration execution, and post-migration optimization — ensuring your applications run efficiently on modern cloud platforms. For businesses, cloud migration eliminates capital expenditure on aging hardware, provides elastic scalability for seasonal demands, and improves disaster recovery capabilities. Our Well-Architected reviews ensure every migrated workload meets security, reliability, and cost-optimization benchmarks. We leverage AI-powered migration tools to auto-discover dependencies, predict risks, and optimize resource sizing — reducing migration timelines by up to 50% while ensuring zero data loss and minimal downtime.",
     icon: Cloud,
     features: [
       "Cloud readiness assessment and strategy",
@@ -112,7 +112,7 @@ export const solutionsData: SolutionDetail[] = [
     slug: "it-infrastructure",
     name: "IT Infrastructure Management",
     shortDescription: "End-to-end monitoring, management, and optimization of your technology infrastructure.",
-    fullDescription: "Our IT infrastructure management services provide comprehensive monitoring, proactive maintenance, and strategic optimization of your entire technology ecosystem — from servers and networks to cloud resources and security systems.",
+    fullDescription: "Our IT infrastructure management services provide comprehensive monitoring, proactive maintenance, and strategic optimization of your entire technology ecosystem — from servers and networks to cloud resources and security systems. For businesses, this means predictable IT costs, reduced downtime, and the freedom to focus internal teams on strategic initiatives rather than firefighting infrastructure issues. Our 24/7 NOC operations detect and resolve problems before they impact users, maintaining 99.9%+ uptime across environments. Structured incident management and root cause analysis systematically eliminate recurring issues. We leverage AI-powered monitoring and predictive analytics to anticipate failures, automate remediation, and continuously optimize infrastructure performance — reducing operational costs by 30-50% while improving service reliability.",
     icon: Server,
     features: [
       "24/7 infrastructure monitoring and alerting",
@@ -152,7 +152,7 @@ export const solutionsData: SolutionDetail[] = [
     slug: "technology-modernization",
     name: "Technology Modernization",
     shortDescription: "Transform legacy systems into modern, maintainable, and high-performing platforms.",
-    fullDescription: "We help organizations break free from legacy constraints by modernizing applications, databases, and architectures. Our approach balances business continuity with progressive transformation — delivering modern, cloud-ready systems without disrupting operations.",
+    fullDescription: "We help organizations break free from legacy constraints by modernizing applications, databases, and architectures using proven patterns that balance business continuity with progressive transformation. For businesses, legacy systems represent mounting technical debt — increasing maintenance costs, limiting feature velocity, and creating security vulnerabilities. Our strangler fig approach gradually replaces legacy components while keeping systems running, eliminating the risk of big-bang rewrites. We modernize monoliths into microservices, upgrade outdated frontends to React or Angular, and migrate databases to cloud-native platforms. We leverage AI-assisted code analysis to map legacy dependencies, auto-generate modern equivalents, and validate data integrity during migration — delivering modern, cloud-ready systems without disrupting operations.",
     icon: RefreshCw,
     features: [
       "Legacy application assessment and roadmapping",
@@ -192,7 +192,7 @@ export const solutionsData: SolutionDetail[] = [
     slug: "qa-testing",
     name: "Quality Assurance & Test Automation",
     shortDescription: "Comprehensive QA strategies with automated testing pipelines for reliable releases.",
-    fullDescription: "Our QA and test automation services ensure your software meets the highest quality standards. We build robust testing frameworks, implement CI/CD-integrated test pipelines, and provide end-to-end coverage across functional, performance, and security testing.",
+    fullDescription: "Our QA and test automation services ensure your software meets the highest quality standards through comprehensive testing strategies integrated into your development lifecycle. We build robust testing frameworks, implement CI/CD-integrated test pipelines, and provide end-to-end coverage across functional, performance, and security testing. For businesses, automated testing reduces release cycles from weeks to days while catching defects 10x earlier when they're cheapest to fix. Our framework-agnostic approach means we select the best tools for your stack — Selenium, Cypress, Playwright, or Appium for mobile. We leverage AI-powered test generation, intelligent test selection, and self-healing locator strategies to maintain automation suites that evolve with your application — delivering reliable releases with 80% less manual testing effort.",
     icon: TestTube,
     features: [
       "Test strategy and planning",
@@ -232,7 +232,7 @@ export const solutionsData: SolutionDetail[] = [
     slug: "production-support",
     name: "Production Support & Monitoring",
     shortDescription: "24/7 application monitoring, incident management, and performance optimization.",
-    fullDescription: "Our production support services provide round-the-clock monitoring, rapid incident response, and continuous optimization of your applications and infrastructure. We ensure your business-critical systems stay performant, available, and secure.",
+    fullDescription: "Our production support services provide round-the-clock monitoring, rapid incident response, and continuous optimization of your applications and infrastructure — ensuring your business-critical systems stay performant, available, and secure. For businesses, unplanned downtime costs an average of $5,600 per minute; our proactive monitoring and structured escalation processes prevent incidents before they impact revenue. Tiered support (L1-L3) ensures the right expertise handles each issue, while automated runbooks accelerate resolution of common scenarios. Monthly health reports and SLA tracking provide full transparency into service quality. We leverage AI-enhanced incident correlation, predictive alerting, and automated root cause analysis to continuously reduce MTTR — delivering production stability that enables confident business growth.",
     icon: Headphones,
     features: [
       "24/7/365 application monitoring",
@@ -272,7 +272,7 @@ export const solutionsData: SolutionDetail[] = [
     slug: "devops-sre",
     name: "DevOps & Site Reliability Engineering",
     shortDescription: "CI/CD pipelines, infrastructure as code, Kubernetes, and observability at scale.",
-    fullDescription: "We help engineering teams adopt DevOps practices and SRE principles to deliver software faster, more reliably, and at scale. From CI/CD pipeline design to Kubernetes orchestration and full-stack observability, we build the foundation for engineering excellence.",
+    fullDescription: "We help engineering teams adopt DevOps practices and SRE principles to deliver software faster, more reliably, and at scale. From CI/CD pipeline design to Kubernetes orchestration and full-stack observability, we build the foundation for engineering excellence. For businesses, DevOps transformation means 10x faster deployment frequency, sub-hour lead times for changes, and reduced change failure rates below 5%. Our SRE implementation introduces SLOs, error budgets, and toil reduction strategies that balance innovation velocity with system reliability. Chaos engineering practices build confidence through controlled failure experiments. We leverage AI-powered pipeline optimization, intelligent alerting, and automated incident response to accelerate software delivery — creating a culture of shared ownership that drives engineering productivity and system resilience.",
     icon: Settings,
     features: [
       "CI/CD pipeline design and implementation",
@@ -312,7 +312,7 @@ export const solutionsData: SolutionDetail[] = [
     slug: "data-analytics",
     name: "Data Engineering & Analytics",
     shortDescription: "Data pipelines, warehousing, BI dashboards, streaming, and governance solutions.",
-    fullDescription: "We build end-to-end data solutions that turn raw data into actionable insights. From designing scalable data pipelines and warehouses to building real-time analytics dashboards, we help organizations become truly data-driven.",
+    fullDescription: "We build end-to-end data solutions that turn raw data into actionable insights, empowering organizations to make faster, smarter decisions. From designing scalable data pipelines and warehouses to building real-time analytics dashboards, we help organizations become truly data-driven. For businesses, unified data platforms eliminate the costly data silos that cause delayed and inaccurate decisions — our clients typically see 20-30% improvement in operational efficiency within months. Our modern data stack approach using dbt, Airflow, and cloud warehouses ensures data quality, governance, and self-service access for business users. We leverage AI-powered data quality monitoring, automated pipeline optimization, and intelligent anomaly detection to maintain trustworthy data infrastructure — delivering insights that drive measurable business outcomes.",
     icon: Database,
     features: [
       "Data pipeline design and orchestration",
@@ -352,7 +352,7 @@ export const solutionsData: SolutionDetail[] = [
     slug: "data-management",
     name: "Data Management",
     shortDescription: "Comprehensive data management solutions including master data management, data integration, and data quality.",
-    fullDescription: "Our Data Management solutions help organizations take control of their data assets. We implement master data management (MDM), data integration platforms, data quality frameworks, and metadata management systems that ensure your data is accurate, consistent, accessible, and secure across the enterprise.",
+    fullDescription: "Our Data Management solutions help organizations take control of their data assets through master data management (MDM), data integration platforms, data quality frameworks, and metadata management systems. We ensure your data is accurate, consistent, accessible, and secure across the enterprise. For businesses, poor data quality costs organizations an average of $12.9 million annually; our systematic approach to data governance eliminates redundancy, resolves conflicts, and establishes single sources of truth. Automated data quality rules catch issues at ingestion, while comprehensive data catalogs enable self-service discovery. We leverage AI-powered data matching, intelligent deduplication, and automated lineage tracking to maintain enterprise data integrity — reducing compliance risk while accelerating time-to-insight for every stakeholder.",
     icon: Database,
     features: [
       "Master Data Management (MDM) implementation",
@@ -397,7 +397,7 @@ export const solutionsData: SolutionDetail[] = [
     slug: "cloud-optimization",
     name: "Cloud Cost Optimization",
     shortDescription: "Maximize cloud ROI with cost analysis, rightsizing, and FinOps best practices.",
-    fullDescription: "Our Cloud Cost Optimization services help organizations reduce cloud spend while maintaining performance. We analyze your cloud footprint, identify waste, implement rightsizing strategies, and establish FinOps practices for ongoing cost governance across AWS, Azure, and GCP.",
+    fullDescription: "Our Cloud Cost Optimization services help organizations reduce cloud spend while maintaining or improving performance. We analyze your cloud footprint, identify waste, implement rightsizing strategies, and establish FinOps practices for ongoing cost governance across AWS, Azure, and GCP. For businesses, most organizations waste 30-35% of their cloud spend on over-provisioned, idle, or unoptimized resources — our structured approach recovers this waste within weeks. We implement automated scheduling for non-production environments, optimize reserved instance coverage, and establish team-level cost accountability dashboards. We leverage AI-driven cost anomaly detection, intelligent rightsizing recommendations, and predictive spend forecasting to maintain continuous optimization — ensuring every cloud dollar delivers maximum business value.",
     icon: Gauge,
     features: [
       "Cloud spend analysis and cost attribution",
@@ -433,7 +433,7 @@ export const solutionsData: SolutionDetail[] = [
     slug: "hybrid-multi-cloud",
     name: "Hybrid & Multi-Cloud Solutions",
     shortDescription: "Unified management of hybrid and multi-cloud environments for flexibility and resilience.",
-    fullDescription: "We design and implement hybrid and multi-cloud architectures that give you the flexibility to run workloads wherever they perform best. Our solutions ensure seamless connectivity, consistent security, and unified management across on-premises, private cloud, and public cloud environments.",
+    fullDescription: "We design and implement hybrid and multi-cloud architectures that give you the flexibility to run workloads wherever they perform best — on-premises, in private clouds, or across public cloud providers. Our solutions ensure seamless connectivity, consistent security, and unified management across all environments. For businesses, hybrid and multi-cloud strategies eliminate vendor lock-in, optimize costs by placing workloads on the most cost-effective platform, and enhance disaster recovery with geographic redundancy. Our Kubernetes-based approach enables true workload portability across clouds. We leverage AI-powered workload placement optimization, automated policy enforcement, and intelligent traffic routing to maintain operational efficiency across complex multi-cloud environments — delivering the agility of cloud with the control of on-premises infrastructure.",
     icon: Network,
     features: [
       "Hybrid cloud architecture design",
@@ -469,7 +469,7 @@ export const solutionsData: SolutionDetail[] = [
     slug: "ci-cd-automation",
     name: "CI/CD Automation",
     shortDescription: "Automated build, test, and deployment pipelines for faster, reliable software delivery.",
-    fullDescription: "Our CI/CD Automation services streamline your software delivery lifecycle from code commit to production deployment. We design and implement automated pipelines that build, test, and deploy your applications with speed, consistency, and reliability — reducing manual effort and accelerating time to market.",
+    fullDescription: "Our CI/CD Automation services streamline your software delivery lifecycle from code commit to production deployment. We design and implement automated pipelines that build, test, and deploy your applications with speed, consistency, and reliability — reducing manual effort and accelerating time to market. For businesses, automated CI/CD reduces deployment failures by up to 90% and enables release frequencies from weekly to multiple times daily. Our pipelines include integrated security scanning, quality gates, and automated rollback capabilities. GitOps-based workflows ensure every deployment is traceable and auditable. We leverage AI-powered build optimization, intelligent test selection, and automated failure diagnosis to maximize pipeline efficiency — transforming software delivery from a bottleneck into a competitive advantage.",
     icon: GitBranch,
     features: [
       "Automated build and deployment pipelines",
@@ -505,7 +505,7 @@ export const solutionsData: SolutionDetail[] = [
     slug: "infrastructure-as-code",
     name: "Infrastructure as Code",
     shortDescription: "Manage and provision infrastructure through code for consistency, speed, and auditability.",
-    fullDescription: "We help organizations adopt Infrastructure as Code (IaC) practices to manage cloud and on-premises infrastructure through version-controlled, repeatable code. This eliminates manual configuration drift, enables rapid environment provisioning, and provides a complete audit trail of infrastructure changes.",
+    fullDescription: "We help organizations adopt Infrastructure as Code (IaC) practices to manage cloud and on-premises infrastructure through version-controlled, repeatable code. This eliminates manual configuration drift, enables rapid environment provisioning, and provides a complete audit trail of infrastructure changes. For businesses, IaC reduces environment provisioning from weeks to minutes while ensuring consistency across development, staging, and production — preventing the configuration inconsistencies that cause costly production incidents. Our modular Terraform and Pulumi implementations promote reuse across teams and projects. We leverage AI-assisted infrastructure design, automated compliance validation, and intelligent drift detection to maintain infrastructure integrity — delivering reproducible, secure, and fully auditable infrastructure management at enterprise scale.",
     icon: Container,
     features: [
       "Terraform and Pulumi implementation",
@@ -541,7 +541,7 @@ export const solutionsData: SolutionDetail[] = [
     slug: "performance-testing",
     name: "Performance & Load Testing",
     shortDescription: "Ensure your applications perform flawlessly under any load with comprehensive performance engineering.",
-    fullDescription: "Our performance testing services identify bottlenecks, validate scalability, and ensure your applications deliver exceptional user experiences under peak traffic. We combine automated load testing with deep performance analysis to optimize response times, throughput, and resource utilization.",
+    fullDescription: "Our performance testing services identify bottlenecks, validate scalability, and ensure your applications deliver exceptional user experiences under peak traffic conditions. We combine automated load testing with deep performance analysis to optimize response times, throughput, and resource utilization. For businesses, performance failures during peak events can cost millions in lost revenue and damaged brand reputation — our proactive approach prevents these costly scenarios. We simulate realistic production loads including geographic distribution and device diversity. Our continuous performance regression testing integrates into CI/CD pipelines for ongoing protection. We leverage AI-powered bottleneck detection, intelligent load pattern generation, and predictive capacity planning to optimize application performance — ensuring your systems scale confidently to meet any demand surge.",
     icon: Zap,
     features: [
       "Load, stress, and endurance testing",
@@ -581,7 +581,7 @@ export const solutionsData: SolutionDetail[] = [
     slug: "security-testing",
     name: "Security Testing & Compliance",
     shortDescription: "Protect your applications with thorough security assessments, penetration testing, and compliance validation.",
-    fullDescription: "Our security testing services help organizations identify vulnerabilities, validate security controls, and achieve compliance with industry standards. We combine automated scanning with manual penetration testing to provide comprehensive coverage across your application stack.",
+    fullDescription: "Our security testing services help organizations identify vulnerabilities, validate security controls, and achieve compliance with industry standards through comprehensive assessment methodologies. We combine automated scanning with expert manual penetration testing to provide complete coverage across your application stack. For businesses, the average cost of a data breach exceeds $4.45 million — our proactive security testing identifies and remediates vulnerabilities before attackers can exploit them. Our assessments cover OWASP Top 10, API security, mobile applications, and cloud configurations. Compliance mapping to SOC 2, HIPAA, PCI DSS, and GDPR accelerates certification timelines. We leverage AI-enhanced vulnerability correlation, automated false positive reduction, and intelligent risk prioritization to maximize testing effectiveness — protecting your business from evolving cyber threats while maintaining development velocity.",
     icon: Shield,
     features: [
       "Penetration testing (web, mobile, API)",
@@ -621,7 +621,7 @@ export const solutionsData: SolutionDetail[] = [
     slug: "managed-services",
     name: "Managed IT Services",
     shortDescription: "End-to-end management of your IT infrastructure, applications, and cloud environments.",
-    fullDescription: "Our managed services provide comprehensive, ongoing management of your technology landscape. From infrastructure and cloud to applications and databases, we take ownership of day-to-day operations so your team can focus on innovation and business growth.",
+    fullDescription: "Our managed services provide comprehensive, ongoing management of your technology landscape — from infrastructure and cloud to applications and databases. We take ownership of day-to-day operations so your team can focus on innovation and business growth. For businesses, managed services convert unpredictable IT costs into predictable monthly investments while providing access to certified expert teams across multiple technology domains. Our proactive approach prevents issues before they impact users, maintaining 99.95%+ uptime through continuous monitoring and optimization. Strategic quarterly reviews align IT operations with evolving business priorities. We leverage AI-powered infrastructure monitoring, predictive maintenance, and automated remediation to deliver superior managed services — reducing IT operational costs by 35% while improving system reliability and freeing your team for strategic initiatives.",
     icon: Wrench,
     features: [
       "Infrastructure management (on-prem & cloud)",
@@ -661,7 +661,7 @@ export const solutionsData: SolutionDetail[] = [
     slug: "it-service-management",
     name: "IT Service Management (ITSM)",
     shortDescription: "Streamline IT operations with ITIL-aligned service management processes and automation.",
-    fullDescription: "Our ITSM solutions help organizations establish structured, efficient IT service delivery. We implement ITIL best practices, deploy service management platforms, and automate workflows to improve service quality, reduce costs, and enhance user satisfaction.",
+    fullDescription: "Our ITSM solutions help organizations establish structured, efficient IT service delivery aligned with ITIL best practices. We deploy service management platforms, automate workflows, and implement knowledge management to improve service quality, reduce costs, and enhance user satisfaction. For businesses, mature ITSM practices reduce incident volumes by up to 40% through problem management and knowledge sharing, while self-service portals deflect routine requests from the service desk. Automated workflows eliminate manual routing and approval delays. SLA management and reporting provide full visibility into IT performance. We leverage AI-powered ticket classification, intelligent routing, and predictive analytics to continuously improve service delivery — transforming IT from a cost center into a strategic business enabler that drives productivity and user satisfaction.",
     icon: ClipboardList,
     features: [
       "ITIL process design and implementation",
@@ -701,7 +701,7 @@ export const solutionsData: SolutionDetail[] = [
     slug: "it-asset-management",
     name: "IT Asset Management",
     shortDescription: "Gain full visibility into hardware, software, and cloud assets with lifecycle tracking, license optimization, and compliance reporting.",
-    fullDescription: "Our IT Asset Management services provide end-to-end visibility and control over your technology investments. From procurement to retirement, we help you track hardware, software, and cloud assets, optimize license spend, ensure compliance, and make data-driven decisions about your IT estate.",
+    fullDescription: "Our IT Asset Management services provide end-to-end visibility and control over your technology investments across their entire lifecycle. From procurement to retirement, we help you track hardware, software, and cloud assets, optimize license spend, ensure compliance, and make data-driven decisions about your IT estate. For businesses, organizations typically over-spend 25-30% on software licenses due to poor visibility — our systematic approach recovers this waste while ensuring audit readiness. Automated discovery tools identify shadow IT and unauthorized software. Lifecycle management extends hardware useful life and optimizes refresh cycles. We leverage AI-powered license optimization, predictive lifecycle analytics, and automated compliance monitoring to maximize the value of every technology investment — eliminating waste while ensuring regulatory compliance.",
     icon: PackageSearch,
     features: [
       "Hardware asset discovery and inventory",
@@ -741,7 +741,7 @@ export const solutionsData: SolutionDetail[] = [
     slug: "disaster-recovery",
     name: "Disaster Recovery & Business Continuity",
     shortDescription: "Protect your operations with comprehensive disaster recovery planning, automated failover, and business continuity strategies.",
-    fullDescription: "Our Disaster Recovery and Business Continuity services ensure your organization can withstand and rapidly recover from any disruption — whether cyberattack, natural disaster, or infrastructure failure. We design, implement, and test comprehensive DR strategies that minimize downtime and data loss.",
+    fullDescription: "Our Disaster Recovery and Business Continuity services ensure your organization can withstand and rapidly recover from any disruption — whether cyberattack, natural disaster, or infrastructure failure. We design, implement, and test comprehensive DR strategies that minimize downtime and data loss. For businesses, unplanned downtime costs an average of $300,000 per hour for enterprise organizations — our automated failover solutions reduce recovery times from days to minutes. Immutable backup strategies protect against ransomware attacks, while multi-region architectures ensure geographic resilience. Regular DR testing validates recovery procedures and identifies gaps before real disasters strike. We leverage AI-powered risk assessment, automated failover orchestration, and intelligent recovery prioritization to build resilient infrastructure — ensuring your business operations continue without interruption regardless of the disruption.",
     icon: HardDriveDownload,
     features: [
       "Business impact analysis (BIA)",
@@ -783,7 +783,7 @@ export const solutionsData: SolutionDetail[] = [
     slug: "business-intelligence",
     name: "Business Intelligence & Reporting",
     shortDescription: "Transform raw data into actionable insights with interactive dashboards, reports, and self-service analytics.",
-    fullDescription: "Our Business Intelligence services empower organizations to make data-driven decisions through intuitive dashboards, automated reporting, and self-service analytics platforms. We design and implement end-to-end BI solutions that connect disparate data sources, establish single sources of truth, and deliver real-time insights to every stakeholder.",
+    fullDescription: "Our Business Intelligence services empower organizations to make data-driven decisions through intuitive dashboards, automated reporting, and self-service analytics platforms. We design and implement end-to-end BI solutions that connect disparate data sources, establish single sources of truth, and deliver real-time insights to every stakeholder. For businesses, organizations with mature BI capabilities make decisions 5x faster than competitors and see measurable improvements in revenue and operational efficiency. Our approach democratizes data access — empowering business users to answer their own questions without IT bottlenecks. Embedded analytics capabilities bring insights directly into existing workflows and products. We leverage AI-powered insight discovery, automated report generation, and natural language querying to maximize BI adoption — transforming complex datasets into clear, actionable narratives that drive confident business decisions.",
     icon: BarChart3,
     features: [
       "Interactive dashboard design and development",
@@ -823,7 +823,7 @@ export const solutionsData: SolutionDetail[] = [
     slug: "ai-ml-solutions",
     name: "AI & Machine Learning Solutions",
     shortDescription: "Leverage artificial intelligence and machine learning to automate processes, predict outcomes, and unlock new value.",
-    fullDescription: "Our AI & ML solutions help businesses harness the power of artificial intelligence to solve complex problems, automate decision-making, and create competitive advantages. From predictive analytics and NLP to computer vision and generative AI, we deliver production-ready ML systems that drive measurable business impact.",
+    fullDescription: "Our AI & ML solutions help businesses harness the power of artificial intelligence to solve complex problems, automate decision-making, and create competitive advantages that transform industries. From predictive analytics and NLP to computer vision and generative AI, we deliver production-ready ML systems that drive measurable business impact. For businesses, AI-powered automation typically delivers 3-5x ROI within the first year through reduced manual effort, improved accuracy, and faster processing. Our MLOps practices ensure models maintain accuracy over time with continuous monitoring and retraining. Industry-specific solutions address challenges in healthcare, finance, retail, and manufacturing. We leverage cutting-edge model architectures, automated hyperparameter tuning, and intelligent feature engineering to build AI systems that learn and improve continuously — turning your data into a sustainable competitive advantage.",
     icon: Brain,
     features: [
       "Predictive analytics and forecasting",
@@ -863,7 +863,7 @@ export const solutionsData: SolutionDetail[] = [
     slug: "mobile-app-development",
     name: "Mobile App Development",
     shortDescription: "Build high-performance native and cross-platform mobile applications for iOS and Android.",
-    fullDescription: "Our mobile app development services deliver intuitive, high-performance applications across iOS and Android platforms. Whether you need a native app for maximum performance or a cross-platform solution for faster time-to-market, we design and build mobile experiences that engage users and drive business results.",
+    fullDescription: "Our mobile app development services deliver intuitive, high-performance applications across iOS and Android platforms that engage users and drive business results. Whether you need a native app for maximum performance or a cross-platform solution for faster time-to-market, we design and build mobile experiences that users love. For businesses, mobile apps drive 3x higher engagement than mobile websites, with push notifications increasing retention by up to 88%. Our cross-platform approach using React Native and Flutter shares up to 90% of code between iOS and Android, cutting development costs significantly. App store optimization ensures maximum visibility and downloads. We leverage AI-powered testing, intelligent performance profiling, and automated accessibility validation to deliver flawless mobile experiences — creating engaging apps that drive user retention and measurable business growth.",
     icon: Smartphone,
     features: [
       "Native iOS and Android development",
@@ -903,7 +903,7 @@ export const solutionsData: SolutionDetail[] = [
     slug: "api-integration",
     name: "API Development & Integration",
     shortDescription: "Design, build, and integrate robust APIs to connect systems, automate workflows, and enable digital ecosystems.",
-    fullDescription: "Our API development and integration services help organizations connect disparate systems, enable seamless data flow, and build extensible digital platforms. We design RESTful and GraphQL APIs, implement third-party integrations, and establish API governance frameworks that scale with your business.",
+    fullDescription: "Our API development and integration services help organizations connect disparate systems, enable seamless data flow, and build extensible digital platforms that power modern business operations. We design RESTful and GraphQL APIs, implement third-party integrations, and establish API governance frameworks that scale with your business. For businesses, well-designed APIs accelerate partner onboarding from weeks to days and create new revenue opportunities through API monetization. Our microservices architecture enables independent team scaling and faster feature delivery. Comprehensive API documentation and developer portals drive external adoption. We leverage AI-powered API design optimization, intelligent error handling, and automated performance monitoring to build robust integration ecosystems — connecting your business systems for seamless operations and accelerated digital transformation.",
     icon: Plug,
     features: [
       "RESTful and GraphQL API design",
@@ -943,7 +943,7 @@ export const solutionsData: SolutionDetail[] = [
     slug: "data-security",
     name: "Data Security",
     shortDescription: "Protect sensitive data across its lifecycle with encryption, masking, classification, and loss prevention strategies.",
-    fullDescription: "Our data security solutions safeguard your organization's most valuable asset — its data. We implement comprehensive protection strategies covering data at rest, in transit, and in use, ensuring regulatory compliance while enabling secure data sharing and collaboration across teams and partners.",
+    fullDescription: "Our data security solutions safeguard your organization's most valuable asset — its data. We implement comprehensive protection strategies covering data at rest, in transit, and in use, ensuring regulatory compliance while enabling secure data sharing and collaboration across teams and partners. For businesses, the average cost of a data breach now exceeds $4.45 million; our layered defense approach prevents unauthorized access while maintaining operational efficiency. Automated data classification identifies sensitive information across all repositories, while DLP policies prevent accidental or malicious data exfiltration. Encryption strategies protect data without impacting application performance. We leverage AI-powered data discovery, intelligent threat detection, and automated compliance monitoring to maintain comprehensive data protection — safeguarding customer trust and brand reputation while meeting regulatory requirements.",
     icon: Lock,
     features: [
       "Data encryption (AES-256, TLS 1.3, envelope encryption)",
@@ -983,7 +983,7 @@ export const solutionsData: SolutionDetail[] = [
     slug: "information-security",
     name: "Information Security",
     shortDescription: "Establish enterprise-wide security programs with risk management, governance frameworks, and incident response.",
-    fullDescription: "Our information security services help organizations build and maintain robust security programs aligned with industry frameworks. From risk assessments and policy development to security operations and incident response, we provide end-to-end protection for your information assets and business processes.",
+    fullDescription: "Our information security services help organizations build and maintain robust security programs aligned with industry frameworks including ISO 27001, NIST CSF, and SOC 2. From risk assessments and policy development to security operations and incident response, we provide end-to-end protection for your information assets and business processes. For businesses, a mature security program not only prevents breaches but also unlocks enterprise sales opportunities — 82% of enterprises require vendor security certifications before procurement. Our SOC operations provide 24/7 threat detection with mean time to detect under 15 minutes. Employee security training reduces phishing susceptibility by up to 90%. We leverage AI-enhanced threat intelligence, automated vulnerability management, and intelligent incident response to build resilient security postures — protecting your organization while enabling confident business growth.",
     icon: ShieldCheck,
     features: [
       "Security risk assessment and gap analysis",
@@ -1023,7 +1023,7 @@ export const solutionsData: SolutionDetail[] = [
     slug: "code-security",
     name: "Code Security",
     shortDescription: "Embed security into your development lifecycle with secure coding practices, SAST/DAST, and supply chain protection.",
-    fullDescription: "Our code security services integrate security directly into your software development lifecycle (SDLC). We implement shift-left security practices, automate vulnerability scanning in CI/CD pipelines, and protect your software supply chain — ensuring every line of code that reaches production is secure by design.",
+    fullDescription: "Our code security services integrate security directly into your software development lifecycle (SDLC), ensuring every line of code that reaches production is secure by design. We implement shift-left security practices, automate vulnerability scanning in CI/CD pipelines, and protect your software supply chain from emerging threats. For businesses, fixing vulnerabilities in production costs 100x more than catching them during development — our shift-left approach dramatically reduces remediation costs and deployment delays. SAST, DAST, and SCA tools run as automated pipeline gates, preventing insecure code from progressing. SBOM generation provides complete supply chain transparency for compliance requirements. We leverage AI-powered vulnerability triage, automated fix suggestions, and intelligent code analysis to maintain secure development velocity — protecting your software without slowing down your engineering teams.",
     icon: FileCode,
     features: [
       "Static Application Security Testing (SAST)",
@@ -1063,7 +1063,7 @@ export const solutionsData: SolutionDetail[] = [
     slug: "cloud-instance-security",
     name: "Cloud Instance Security",
     shortDescription: "Secure your cloud workloads with posture management, runtime protection, and compliance automation.",
-    fullDescription: "Our cloud instance security services protect your compute workloads across AWS, Azure, and GCP. We implement cloud security posture management (CSPM), workload protection platforms (CWPP), and automated compliance checks to ensure every cloud resource is configured securely and monitored continuously.",
+    fullDescription: "Our cloud instance security services protect your compute workloads across AWS, Azure, and GCP with comprehensive posture management and runtime protection. We implement cloud security posture management (CSPM), workload protection platforms (CWPP), and automated compliance checks to ensure every cloud resource is configured securely and monitored continuously. For businesses, cloud misconfigurations are the #1 cause of cloud breaches — our automated scanning identifies and remediates vulnerabilities across thousands of instances in minutes. CIS benchmark compliance ensures industry-standard hardening across all workloads. Multi-cloud policy unification provides consistent security governance regardless of provider. We leverage AI-powered anomaly detection, automated remediation, and intelligent compliance mapping to maintain cloud security at scale — eliminating configuration drift while enabling rapid cloud adoption with confidence.",
     icon: CloudCog,
     features: [
       "Cloud Security Posture Management (CSPM)",
@@ -1103,7 +1103,7 @@ export const solutionsData: SolutionDetail[] = [
     slug: "identity-access-management",
     name: "Identity & Access Management",
     shortDescription: "Control who accesses what with zero-trust IAM, SSO, MFA, and privileged access management.",
-    fullDescription: "Our Identity & Access Management solutions help organizations implement zero-trust security models with centralized identity governance. We deploy SSO, MFA, privileged access management, and role-based access controls to ensure the right people have the right access at the right time — and nothing more.",
+    fullDescription: "Our Identity & Access Management solutions help organizations implement zero-trust security models with centralized identity governance across all applications and infrastructure. We deploy SSO, MFA, privileged access management, and role-based access controls to ensure the right people have the right access at the right time — and nothing more. For businesses, compromised credentials are responsible for 80% of data breaches; our zero-trust approach eliminates implicit trust and verifies every access request. SSO reduces login time from 45 minutes to 2 minutes daily per user while improving security. Automated provisioning and deprovisioning tied to HR systems eliminates orphaned accounts. We leverage AI-powered behavioral analytics, adaptive authentication, and intelligent access certification to build identity-first security — protecting your organization while delivering seamless user experiences across all platforms.",
     icon: KeyRound,
     features: [
       "Single Sign-On (SSO) implementation",
@@ -1143,7 +1143,7 @@ export const solutionsData: SolutionDetail[] = [
     slug: "cybersecurity-consulting",
     name: "Cybersecurity Consulting",
     shortDescription: "Strategic cybersecurity advisory services including risk assessments, incident response planning, and security architecture design.",
-    fullDescription: "Our cybersecurity consulting practice helps organizations build resilient security postures through strategic advisory, risk assessments, incident response planning, and security architecture design. We combine deep technical expertise with business acumen to protect your most critical assets.",
+    fullDescription: "Our cybersecurity consulting practice helps organizations build resilient security postures through strategic advisory, risk assessments, incident response planning, and security architecture design. We combine deep technical expertise with business acumen to protect your most critical assets while enabling digital transformation. For businesses, cybersecurity incidents cost organizations an average of $4.45 million per breach — our proactive consulting identifies and mitigates risks before they materialize into costly incidents. Board-level security reporting translates technical risks into business language for informed decision-making. Incident response tabletop exercises prepare teams for real-world scenarios. We leverage AI-enhanced threat modeling, automated risk quantification, and intelligent security architecture analysis to deliver strategic cybersecurity guidance — building organizational resilience that protects your business and stakeholder trust.",
     icon: ShieldAlert,
     features: [
       "Cybersecurity maturity assessments",
@@ -1187,7 +1187,7 @@ export const solutionsData: SolutionDetail[] = [
     slug: "compliance-governance",
     name: "Compliance & Governance",
     shortDescription: "Navigate complex regulatory landscapes with comprehensive compliance programs, audit preparation, and governance frameworks.",
-    fullDescription: "We help organizations navigate complex regulatory requirements and build sustainable compliance programs. From SOC 2 and HIPAA to GDPR and PCI DSS, our experts design governance frameworks, automate evidence collection, and prepare you for audits with confidence.",
+    fullDescription: "We help organizations navigate complex regulatory requirements and build sustainable compliance programs that protect the business while enabling growth. From SOC 2 and HIPAA to GDPR and PCI DSS, our experts design governance frameworks, automate evidence collection, and prepare you for audits with confidence. For businesses, compliance certifications unlock enterprise sales pipelines and demonstrate trustworthiness to customers and partners — our streamlined approach achieves certification 40% faster than traditional methods. Unified control frameworks address multiple standards simultaneously, reducing duplicate effort. Automated continuous monitoring replaces manual point-in-time assessments. We leverage AI-powered compliance mapping, automated evidence collection, and intelligent gap analysis to accelerate certification timelines — transforming compliance from a burden into a business enabler that builds customer trust and opens new markets.",
     icon: Scale,
     features: [
       "SOC 2 Type I & II readiness",
@@ -1231,7 +1231,7 @@ export const solutionsData: SolutionDetail[] = [
     slug: "platform-engineering",
     name: "Platform Engineering",
     shortDescription: "Build internal developer platforms that accelerate delivery and reduce cognitive load.",
-    fullDescription: "We design and implement Internal Developer Platforms (IDPs) that give your engineering teams self-service capabilities for infrastructure provisioning, environment management, and deployment workflows. By abstracting complexity behind golden paths and developer portals, we help organizations scale their engineering productivity while maintaining governance and security standards.",
+    fullDescription: "We design and implement Internal Developer Platforms (IDPs) that give your engineering teams self-service capabilities for infrastructure provisioning, environment management, and deployment workflows. By abstracting complexity behind golden paths and developer portals, we help organizations scale their engineering productivity while maintaining governance and security standards. For businesses, platform engineering reduces new service onboarding from weeks to minutes while ensuring consistent environments across all teams. Backstage-based developer portals provide unified service catalogs, documentation, and tooling. Standardized templates encode best practices into every new project automatically. We leverage AI-powered platform optimization, intelligent resource provisioning, and automated governance enforcement to build platforms that empower developers — increasing engineering productivity by up to 60% while maintaining enterprise-grade standards.",
     icon: Layers,
     features: [
       "Internal Developer Platform (IDP) design & implementation",
@@ -1268,7 +1268,7 @@ export const solutionsData: SolutionDetail[] = [
     slug: "observability-monitoring",
     name: "Observability & Monitoring",
     shortDescription: "Full-stack observability with metrics, logs, and traces for proactive incident management.",
-    fullDescription: "We implement comprehensive observability strategies that give your teams deep visibility into application performance, infrastructure health, and user experience. From distributed tracing and log aggregation to custom dashboards and intelligent alerting, we build the monitoring foundation that enables proactive incident response and data-driven optimization.",
+    fullDescription: "We implement comprehensive observability strategies that give your teams deep visibility into application performance, infrastructure health, and user experience across distributed systems. From distributed tracing and log aggregation to custom dashboards and intelligent alerting, we build the monitoring foundation that enables proactive incident response and data-driven optimization. For businesses, organizations with mature observability practices reduce MTTR by 75% and prevent 60% of incidents from impacting users through early detection. OpenTelemetry-based instrumentation provides vendor-neutral telemetry collection. SLI/SLO frameworks translate technical metrics into business-meaningful objectives. We leverage AI-powered anomaly detection, intelligent alert correlation, and automated root cause analysis to transform observability data into actionable insights — enabling teams to proactively maintain system reliability and performance at scale.",
     icon: Activity,
     features: [
       "Distributed tracing implementation",
@@ -1305,7 +1305,7 @@ export const solutionsData: SolutionDetail[] = [
     slug: "finops",
     name: "FinOps & Cloud Cost Optimization",
     shortDescription: "Gain visibility and control over cloud spending with data-driven financial operations.",
-    fullDescription: "We implement FinOps practices and tooling that give your organization full visibility into cloud costs, enable accurate forecasting, and drive continuous optimization. From tagging strategies and showback/chargeback models to automated rightsizing and reserved instance planning, we help you maximize cloud ROI while maintaining performance.",
+    fullDescription: "We implement FinOps practices and tooling that give your organization full visibility into cloud costs, enable accurate forecasting, and drive continuous optimization across all cloud providers. From tagging strategies and showback/chargeback models to automated rightsizing and reserved instance planning, we help you maximize cloud ROI while maintaining performance. For businesses, most organizations waste 30-35% of their cloud spend; our FinOps framework recovers this waste through data-driven cost accountability and automated optimization. Team-level cost dashboards create a culture of financial accountability across engineering organizations. Anomaly detection prevents budget overruns before they happen. We leverage AI-driven cost prediction, intelligent rightsizing recommendations, and automated reservation management to continuously optimize cloud spend — delivering measurable savings while empowering teams to make informed infrastructure decisions.",
     icon: DollarSign,
     features: [
       "Cloud cost visibility & reporting dashboards",
@@ -1342,7 +1342,7 @@ export const solutionsData: SolutionDetail[] = [
     slug: "serverless-architecture",
     name: "Serverless Architecture",
     shortDescription: "Build event-driven, auto-scaling applications with zero infrastructure management overhead.",
-    fullDescription: "We design and implement serverless architectures that let your teams focus on business logic while the cloud handles scaling, availability, and infrastructure management. From API backends and event processing to full serverless web applications, we help you leverage Functions-as-a-Service and managed services for maximum agility and cost efficiency.",
+    fullDescription: "We design and implement serverless architectures that let your teams focus on business logic while the cloud handles scaling, availability, and infrastructure management automatically. From API backends and event processing to full serverless web applications, we help you leverage Functions-as-a-Service and managed services for maximum agility and cost efficiency. For businesses, serverless eliminates infrastructure management overhead entirely while providing auto-scaling from zero to millions of requests with a pure pay-per-use cost model. Event-driven patterns enable reactive systems that respond to business events in real-time. Cold start optimization ensures consistent user experiences. We leverage AI-powered architecture design, intelligent function optimization, and automated cost analysis to build efficient serverless solutions — delivering maximum business agility with minimal operational complexity.",
     icon: CloudLightning,
     features: [
       "Serverless API & microservices design",
@@ -1379,7 +1379,7 @@ export const solutionsData: SolutionDetail[] = [
     slug: "test-automation-framework",
     name: "Test Automation Framework",
     shortDescription: "End-to-end test automation frameworks for faster, more reliable software releases.",
-    fullDescription: "We design and implement scalable test automation frameworks that integrate seamlessly into your CI/CD pipelines. From UI and API testing to mobile and cross-browser validation, we build maintainable automation suites that catch defects early, reduce manual effort, and accelerate your release cycles.",
+    fullDescription: "We design and implement scalable test automation frameworks that integrate seamlessly into your CI/CD pipelines, catching defects early and accelerating your release cycles. From UI and API testing to mobile and cross-browser validation, we build maintainable automation suites that reduce manual effort by 80% or more. For businesses, manual testing bottlenecks are the #1 cause of delayed releases — our automation frameworks transform testing from a release gate into a continuous quality assurance engine. Page Object Model patterns and self-healing locators ensure long-term maintainability as your application evolves. Parallel execution across browsers and devices maximizes coverage while minimizing execution time. We leverage AI-powered test generation, intelligent failure analysis, and self-healing test maintenance to keep automation suites reliable and efficient — delivering confidence in every release with minimal manual intervention.",
     icon: Cog,
     features: [
       "Custom test automation framework design",
@@ -1416,7 +1416,7 @@ export const solutionsData: SolutionDetail[] = [
     slug: "accessibility-testing",
     name: "Accessibility Testing",
     shortDescription: "Ensure your digital products are inclusive and compliant with WCAG and ADA standards.",
-    fullDescription: "We provide comprehensive accessibility testing services to ensure your web and mobile applications are usable by everyone, including people with disabilities. From automated scanning and manual expert audits to assistive technology testing and remediation guidance, we help you achieve WCAG compliance and deliver truly inclusive digital experiences.",
+    fullDescription: "We provide comprehensive accessibility testing services to ensure your web and mobile applications are usable by everyone, including people with disabilities — achieving WCAG compliance and delivering truly inclusive digital experiences. From automated scanning and manual expert audits to assistive technology testing and remediation guidance, we cover every aspect of digital accessibility. For businesses, accessibility compliance protects against ADA litigation risk while expanding your addressable market by 15-20% — one billion people worldwide live with disabilities. Accessible design also improves SEO, mobile usability, and overall user experience for all users. CI/CD-integrated accessibility checks prevent regressions in every release. We leverage AI-powered accessibility scanning, intelligent violation prioritization, and automated remediation suggestions to accelerate compliance — building inclusive products that reach every user and reflect your organization's values of equity and inclusion.",
     icon: Accessibility,
     features: [
       "WCAG 2.1/2.2 compliance auditing",
@@ -1453,7 +1453,7 @@ export const solutionsData: SolutionDetail[] = [
     slug: "low-code-no-code",
     name: "Low-Code / No-Code Development",
     shortDescription: "Accelerate application delivery with visual development platforms and citizen developer enablement.",
-    fullDescription: "We help organizations leverage low-code and no-code platforms to rapidly build business applications, automate workflows, and empower citizen developers. From platform selection and governance to complex integrations and enterprise-grade solutions, we ensure you get the speed benefits of visual development without sacrificing scalability or security.",
+    fullDescription: "We help organizations leverage low-code and no-code platforms to rapidly build business applications, automate workflows, and empower citizen developers to solve their own challenges. From platform selection and governance to complex integrations and enterprise-grade solutions, we ensure you get the speed benefits of visual development without sacrificing scalability or security. For businesses, low-code platforms deliver applications 10x faster than traditional development while reducing reliance on specialized engineering talent. Citizen developer enablement transforms business users into application builders with proper governance guardrails. Enterprise-grade integrations ensure low-code apps connect seamlessly with existing systems. We leverage AI-powered development assistants, intelligent process automation, and automated testing within low-code platforms to maximize development velocity — democratizing application creation while maintaining enterprise security and governance standards.",
     icon: Blocks,
     features: [
       "Platform evaluation & selection",
@@ -1490,7 +1490,7 @@ export const solutionsData: SolutionDetail[] = [
     slug: "ui-ux-design",
     name: "UI/UX Design Services",
     shortDescription: "Human-centered design that delivers intuitive, engaging, and conversion-optimized digital experiences.",
-    fullDescription: "Our UI/UX design services combine user research, interaction design, and visual design to create digital experiences that delight users and drive business outcomes. From discovery and wireframing to high-fidelity prototypes and design systems, we follow a research-driven approach to ensure every design decision is backed by user insights and aligned with your business goals.",
+    fullDescription: "Our UI/UX design services combine user research, interaction design, and visual design to create digital experiences that delight users and drive business metrics. From discovery workshops and wireframing to high-fidelity prototypes and design systems, we craft interfaces that balance aesthetics with usability. For businesses, every dollar invested in UX returns $100, and well-designed interfaces reduce support costs by up to 50% through intuitive self-service. Our user research methods uncover real user needs and pain points before a single line of code is written. Design systems ensure brand consistency and accelerate development across all products. Accessibility-first design reaches the broadest possible audience. We leverage AI-powered design tools, intelligent user behavior analysis, and automated usability testing to create exceptional digital experiences — driving user adoption, engagement, and conversion rates that deliver measurable business impact.",
     icon: Palette,
     features: [
       "User research & persona development",
@@ -1527,7 +1527,7 @@ export const solutionsData: SolutionDetail[] = [
     slug: "generative-ai",
     name: "Generative AI Solutions",
     shortDescription: "Harness the power of generative AI for content creation, conversational interfaces, and intelligent automation.",
-    fullDescription: "We help organizations adopt generative AI technologies to transform customer experiences, automate content workflows, and build intelligent applications. From LLM fine-tuning and RAG architectures to conversational AI chatbots and AI-powered content generation, we deliver production-ready generative AI solutions tailored to your business needs.",
+    fullDescription: "We help organizations adopt generative AI technologies to transform content creation, customer engagement, and knowledge management at scale. From custom GPT integrations and RAG systems to fine-tuned models for domain-specific tasks, we deliver production-ready generative AI solutions with enterprise guardrails. For businesses, generative AI can automate 60-70% of knowledge work tasks — from drafting documents and analyzing contracts to generating personalized marketing content and answering customer queries. RAG architectures ground AI responses in your proprietary data for accurate, relevant outputs. Prompt engineering and safety guardrails ensure responsible AI usage aligned with brand voice and compliance requirements. We leverage cutting-edge LLM technologies, intelligent retrieval systems, and automated quality monitoring to build generative AI solutions that scale — augmenting your workforce with AI capabilities that drive productivity and innovation.",
     icon: Bot,
     features: [
       "Large Language Model (LLM) integration & fine-tuning",
@@ -1564,7 +1564,7 @@ export const solutionsData: SolutionDetail[] = [
     slug: "agentic-ai",
     name: "Agentic AI, Agents & Tools",
     shortDescription: "Build autonomous AI agents that reason, plan, and execute complex multi-step tasks.",
-    fullDescription: "We design and implement agentic AI systems — autonomous agents that can reason, plan, use tools, and collaborate to accomplish complex business objectives. From single-agent task automation to multi-agent orchestration systems, we build AI solutions that go beyond simple Q&A to take meaningful actions on behalf of your organization.",
+    fullDescription: "We design and implement agentic AI systems — autonomous agents capable of reasoning, planning, and executing complex multi-step tasks with minimal human oversight. From customer service agents that resolve inquiries end-to-end to research agents that synthesize insights from vast data sources, we build AI that acts independently and intelligently. For businesses, agentic AI represents the next frontier of automation — handling complex workflows that traditional rule-based automation cannot address. Multi-agent architectures enable specialized agents to collaborate on complex problems, while human-in-the-loop controls maintain oversight for critical decisions. Tool use and API integration enable agents to interact with real-world systems and databases. We leverage advanced reasoning frameworks, intelligent orchestration, and comprehensive safety systems to build reliable autonomous agents — transforming complex business processes with AI that thinks, plans, and executes with enterprise-grade reliability.",
     icon: Workflow,
     features: [
       "Autonomous AI agent design & development",
@@ -1601,7 +1601,7 @@ export const solutionsData: SolutionDetail[] = [
     slug: "mlops",
     name: "MLOps & AI Infrastructure",
     shortDescription: "Operationalize machine learning with scalable pipelines, model management, and automated retraining.",
-    fullDescription: "We build the infrastructure and processes needed to take machine learning models from experimentation to production at scale. From ML pipeline automation and model versioning to monitoring, drift detection, and automated retraining, we implement MLOps best practices that ensure your AI investments deliver consistent, reliable business value.",
+    fullDescription: "We build the infrastructure and processes needed to take machine learning from prototype to production at scale, ensuring models deliver consistent value over time. From model versioning and automated training pipelines to deployment, monitoring, and continuous retraining, we implement comprehensive MLOps practices that bridge the gap between data science and production engineering. For businesses, 87% of ML projects never make it to production — our MLOps framework ensures your AI investments deliver real business value with reliable, scalable model serving. Feature stores ensure consistent feature computation across training and inference. Model monitoring detects accuracy drift before it impacts business outcomes. We leverage AI-powered experiment management, automated pipeline orchestration, and intelligent model selection to accelerate the ML lifecycle — transforming experimental models into production assets that continuously learn and improve at scale.",
     icon: FlaskConical,
     features: [
       "ML pipeline design & automation",
@@ -1638,7 +1638,7 @@ export const solutionsData: SolutionDetail[] = [
     slug: "erp-management",
     name: "ERP Management & Implementation",
     shortDescription: "End-to-end ERP implementation, customization, and management for streamlined business operations.",
-    fullDescription: "We provide comprehensive ERP management services covering implementation, customization, migration, and ongoing support. Whether you're deploying a new ERP system or optimizing an existing one, we ensure seamless integration with your business processes and maximize your return on investment.",
+    fullDescription: "We provide comprehensive ERP management services covering implementation, customization, integration, and ongoing optimization of enterprise resource planning systems. Whether you're deploying SAP S/4HANA, Oracle ERP Cloud, or Microsoft Dynamics 365, our certified consultants ensure your ERP investment delivers maximum business value. For businesses, a well-implemented ERP system eliminates data silos between finance, supply chain, HR, and manufacturing — providing a single source of truth for enterprise-wide decision-making. Our phased implementation approach reduces risk and delivers incremental value. Integration with existing systems ensures seamless data flow across the organization. We leverage AI-powered implementation accelerators, automated data migration, and intelligent process optimization to reduce ERP deployment timelines — delivering transformative enterprise solutions with lower risk and faster return on investment.",
     icon: Building2,
     features: [
       "ERP implementation & deployment",
@@ -1675,7 +1675,7 @@ export const solutionsData: SolutionDetail[] = [
     slug: "crm-implementation",
     name: "CRM Implementation & Optimization",
     shortDescription: "Deploy and optimize CRM platforms to enhance customer relationships and drive revenue growth.",
-    fullDescription: "We implement, customize, and optimize CRM solutions that align with your sales, marketing, and customer service strategies. From platform selection and data migration to workflow automation and analytics, we help you build a 360-degree view of your customers and maximize the value of every interaction.",
+    fullDescription: "We implement, customize, and optimize CRM solutions that align with your sales processes, customer journeys, and business objectives. From Salesforce and Dynamics 365 to HubSpot and industry-specific platforms, our certified consultants maximize your CRM investment for measurable revenue growth. For businesses, companies with mature CRM implementations see 29% increase in sales revenue and 34% improvement in customer satisfaction — our approach ensures you achieve these outcomes through proper data modeling, workflow automation, and user adoption strategies. 360-degree customer views unify sales, service, and marketing data for personalized engagement. Automated lead scoring and pipeline management accelerate deal velocity. We leverage AI-powered customer insights, intelligent workflow automation, and predictive analytics to build CRM solutions that drive revenue — transforming customer relationships into measurable business growth.",
     icon: Users,
     features: [
       "CRM platform selection & implementation",
@@ -1712,7 +1712,7 @@ export const solutionsData: SolutionDetail[] = [
     slug: "enterprise-integration",
     name: "Enterprise Integration & Middleware",
     shortDescription: "Connect disparate systems with robust integration platforms, APIs, and middleware solutions.",
-    fullDescription: "We design and implement enterprise integration architectures that connect your applications, data sources, and business processes into a cohesive ecosystem. From API management and ESB implementation to event-driven architectures and iPaaS solutions, we eliminate data silos and enable seamless information flow across your organization.",
+    fullDescription: "We design and implement enterprise integration architectures that seamlessly connect your critical business systems — ERP, CRM, HR, supply chain, and custom applications — for unified data flow and process automation. Our approach eliminates data silos, reduces manual data entry, and enables real-time business intelligence across the organization. For businesses, disconnected systems cost organizations 20-30% in lost productivity through manual reconciliation, data inconsistencies, and delayed information access. Our API-first integration approach creates reusable connectivity that scales with your digital ecosystem. Event-driven architectures enable real-time synchronization across all platforms. We leverage AI-powered data mapping, intelligent error handling, and automated integration monitoring to build resilient enterprise integration — connecting your business systems for seamless operations and accelerated digital transformation.",
     icon: Cable,
     features: [
       "Enterprise integration strategy & architecture",
@@ -1749,7 +1749,7 @@ export const solutionsData: SolutionDetail[] = [
     slug: "legacy-modernization",
     name: "Legacy Application Modernization",
     shortDescription: "Transform legacy enterprise applications into modern, scalable, and maintainable systems.",
-    fullDescription: "We help organizations modernize aging enterprise applications through strategic approaches including re-platforming, refactoring, re-architecting, and cloud migration. We assess your legacy portfolio, define a modernization roadmap, and execute the transformation while minimizing business disruption and preserving critical business logic.",
+    fullDescription: "We help organizations modernize aging enterprise applications without disrupting critical business operations. Our proven methodologies transform monolithic systems into cloud-native architectures while preserving business logic, data integrity, and institutional knowledge. For businesses, legacy systems consume up to 80% of IT budgets in maintenance alone, leaving little room for innovation. Our incremental approach extracts high-value functionality as modern microservices, wraps legacy systems with APIs, and progressively migrates users to improved interfaces. Comprehensive testing ensures zero functionality regression during transformation. We leverage AI-assisted code analysis, automated dependency mapping, and intelligent refactoring to accelerate legacy modernization — delivering modern, maintainable systems that reduce operational costs by up to 60% while unlocking the agility needed for digital transformation.",
     icon: RotateCcw,
     features: [
       "Legacy application assessment & portfolio analysis",
@@ -1786,7 +1786,7 @@ export const solutionsData: SolutionDetail[] = [
     slug: "enterprise-mobility",
     name: "Enterprise Mobility Solutions",
     shortDescription: "Empower your workforce with secure mobile solutions, MDM, and enterprise app management.",
-    fullDescription: "We deliver enterprise mobility solutions that enable your workforce to stay productive and connected from anywhere. From mobile device management and enterprise app deployment to secure mobile workspaces and BYOD policies, we help organizations embrace mobility while maintaining security and compliance.",
+    fullDescription: "We deliver enterprise mobility solutions that enable your workforce to be productive from anywhere, on any device, without compromising security or data governance. From mobile application development and MDM deployment to BYOD policies and secure access, we create comprehensive mobility strategies aligned with your business objectives. For businesses, mobile-enabled workforces are 23% more productive and report 18% higher job satisfaction — our solutions balance employee flexibility with enterprise security requirements. Unified endpoint management provides consistent policy enforcement across company-owned and personal devices. Secure containerization separates corporate data from personal applications. We leverage AI-powered threat detection, intelligent access management, and automated compliance monitoring to build secure mobility solutions — empowering your workforce with anywhere-access while maintaining the security standards your organization demands.",
     icon: TabletSmartphone,
     features: [
       "Mobile Device Management (MDM/UEM)",
@@ -1823,7 +1823,7 @@ export const solutionsData: SolutionDetail[] = [
     slug: "supply-chain-management",
     name: "Supply Chain Management Solutions",
     shortDescription: "Optimize end-to-end supply chain operations with intelligent planning, visibility, and automation.",
-    fullDescription: "We implement and optimize supply chain management solutions that provide end-to-end visibility, demand forecasting, inventory optimization, and logistics automation. From warehouse management and procurement to last-mile delivery and supplier collaboration, we help organizations build resilient, efficient, and data-driven supply chains.",
+    fullDescription: "We implement and optimize supply chain management solutions that provide end-to-end visibility, intelligent planning, and automated execution across your entire supply network. From demand forecasting and inventory optimization to logistics management and supplier collaboration, we help organizations build resilient, efficient supply chains. For businesses, supply chain optimization typically delivers 15-25% reduction in logistics costs and 20-30% improvement in inventory turnover — our data-driven approach transforms supply chain operations from reactive to predictive. Real-time visibility across suppliers, warehouses, and logistics partners enables proactive issue resolution. Digital twin simulations model scenarios before implementation. We leverage AI-powered demand forecasting, intelligent route optimization, and automated exception handling to build smart supply chains — delivering operational excellence that reduces costs while improving service levels and customer satisfaction.",
     icon: Truck,
     features: [
       "Supply chain visibility & control tower",
@@ -1860,7 +1860,7 @@ export const solutionsData: SolutionDetail[] = [
     slug: "enterprise-content-management",
     name: "Enterprise Content Management",
     shortDescription: "Manage, store, and govern enterprise content with intelligent document management and workflow automation.",
-    fullDescription: "We implement enterprise content management solutions that help organizations capture, manage, store, and deliver content across the enterprise. From document management and records retention to intelligent content processing and workflow automation, we enable digital-first operations with proper governance and compliance.",
+    fullDescription: "We implement enterprise content management solutions that help organizations capture, store, manage, and deliver documents and digital content across the enterprise efficiently and securely. From document digitization and workflow automation to records management and compliance archiving, we transform how businesses handle information. For businesses, employees spend an average of 2.5 hours daily searching for information — our ECM solutions reduce this dramatically with intelligent search, automated classification, and structured workflows. Document-centric processes like approvals, reviews, and compliance checks become automated and auditable. Retention policies and legal hold capabilities ensure regulatory compliance. We leverage AI-powered document classification, intelligent content extraction, and automated workflow orchestration to build modern content management solutions — transforming document-heavy processes into streamlined digital workflows that improve productivity and compliance.",
     icon: FileStack,
     features: [
       "Document management & digital archiving",
@@ -1897,7 +1897,7 @@ export const solutionsData: SolutionDetail[] = [
     slug: "data-governance",
     name: "Data Governance & Quality",
     shortDescription: "Establish data governance frameworks that ensure data accuracy, consistency, and regulatory compliance.",
-    fullDescription: "We implement comprehensive data governance programs that define ownership, policies, standards, and processes to ensure your data is accurate, consistent, secure, and compliant. From data cataloging and lineage to quality monitoring and stewardship, we help organizations treat data as a strategic asset.",
+    fullDescription: "We implement comprehensive data governance programs that define policies, standards, and processes for managing data as a strategic business asset. From data ownership and stewardship frameworks to quality metrics and compliance monitoring, we help organizations build trust in their data while enabling innovation. For businesses, organizations with mature data governance see 40% faster time-to-insight and significantly reduced compliance risk — our framework balances control with agility to avoid governance becoming a bottleneck. Data quality scorecards provide visibility into data health across all systems. Automated policy enforcement ensures compliance without manual overhead. We leverage AI-powered data cataloging, intelligent lineage tracking, and automated quality monitoring to build practical data governance — enabling trusted, accessible data that drives confident decisions while meeting regulatory requirements.",
     icon: BookCheck,
     features: [
       "Data governance framework & policy design",
@@ -1934,7 +1934,7 @@ export const solutionsData: SolutionDetail[] = [
     slug: "data-warehousing",
     name: "Data Warehousing & Data Lakes",
     shortDescription: "Design and implement modern data warehouses and data lakes for scalable analytics and reporting.",
-    fullDescription: "We design and build modern data warehousing and data lake solutions that centralize your data for analytics, reporting, and AI/ML workloads. From cloud-native data warehouses and lakehouse architectures to data modeling and performance optimization, we create the data foundation that powers your business intelligence and advanced analytics initiatives.",
+    fullDescription: "We design and build modern data warehousing and data lake solutions that consolidate your organization's data into a unified, queryable platform for analytics and decision-making. From schema design and ETL/ELT pipelines to performance optimization and governance, we create data infrastructure that scales with your needs. For businesses, a well-architected data warehouse reduces reporting time from days to seconds while enabling self-service analytics for business users — our clients typically achieve 10x faster analytics query performance. Lakehouse architectures combine the flexibility of data lakes with the governance of warehouses. Incremental processing reduces compute costs by up to 80%. We leverage AI-powered query optimization, automated data quality checks, and intelligent partitioning strategies to build high-performance data platforms — turning raw data into an accessible, trustworthy foundation for enterprise analytics and AI initiatives.",
     icon: Warehouse,
     features: [
       "Cloud data warehouse design & implementation",
@@ -1971,7 +1971,7 @@ export const solutionsData: SolutionDetail[] = [
     slug: "etl-data-pipelines",
     name: "ETL & Data Pipelines",
     shortDescription: "Build reliable, scalable data pipelines for extracting, transforming, and loading data across systems.",
-    fullDescription: "We design and implement robust ETL/ELT data pipelines that move data reliably across your ecosystem. From batch and real-time ingestion to complex transformations and orchestration, we build data pipelines that are scalable, observable, and maintainable — ensuring your downstream analytics and applications always have fresh, accurate data.",
+    fullDescription: "We design and implement robust ETL/ELT data pipelines that move, transform, and orchestrate data across your organization's systems with reliability, scalability, and full observability. From batch processing and real-time streaming to change data capture and data quality validation, we build the data plumbing that powers modern analytics and AI. For businesses, broken data pipelines cause delayed reports, inaccurate analytics, and missed business opportunities — our production-grade pipelines include monitoring, alerting, and self-healing capabilities that ensure continuous data flow. Incremental processing handles growing data volumes efficiently. Data quality checks catch issues at ingestion rather than in downstream reports. We leverage AI-powered pipeline optimization, intelligent error handling, and automated schema evolution to build resilient data pipelines — ensuring your analytics and AI systems always have fresh, accurate data for informed decision-making.",
     icon: ArrowRightLeft,
     features: [
       "ETL/ELT pipeline design & development",
@@ -2008,7 +2008,7 @@ export const solutionsData: SolutionDetail[] = [
     slug: "procurement-services",
     name: "IT Procurement Services",
     shortDescription: "Strategic sourcing and procurement of technology products, services, and solutions at competitive prices.",
-    fullDescription: "Our IT Procurement Services streamline the acquisition of hardware, software, and technology services through strategic vendor partnerships, competitive bidding, and centralized purchasing. We leverage volume discounts, negotiate favorable terms, and manage the entire procurement lifecycle — from requirements gathering and vendor evaluation to purchase order management and delivery coordination.",
+    fullDescription: "Our IT Procurement Services streamline the acquisition of hardware, software, and cloud services — leveraging our vendor relationships and market expertise to secure the best pricing, terms, and support for your organization. From needs assessment and vendor evaluation to contract negotiation and delivery coordination, we manage the entire procurement lifecycle. For businesses, IT procurement inefficiencies typically add 15-25% in unnecessary costs through suboptimal licensing, missed volume discounts, and fragmented vendor management — our strategic approach eliminates this waste. Vendor-neutral recommendations ensure you get the right solutions, not the most profitable ones for resellers. License optimization identifies existing entitlements that can be repurposed. We leverage AI-powered market analysis, intelligent contract optimization, and automated procurement workflows to maximize the value of every IT investment — reducing costs while accelerating time to deployment.",
     icon: ShoppingCart,
     features: [
       "Strategic vendor evaluation and selection",
@@ -2045,7 +2045,7 @@ export const solutionsData: SolutionDetail[] = [
     slug: "software-licensing",
     name: "Software Licensing Management",
     shortDescription: "Comprehensive software license management, optimization, and compliance services.",
-    fullDescription: "Our Software Licensing Management services help organizations optimize their software investments, ensure license compliance, and reduce costs. We provide end-to-end license lifecycle management — from initial assessment and right-sizing to renewal negotiation and ongoing compliance monitoring. Our experts navigate complex licensing models across major vendors including Microsoft, Oracle, SAP, Adobe, and more.",
+    fullDescription: "Our Software Licensing Management services help organizations optimize their software investments, ensure compliance, and avoid costly audit penalties across all major vendors. From license harvesting and optimization to audit defense and renewal strategy, we manage the complexity of enterprise software licensing. For businesses, organizations typically over-spend 25-30% on software licenses due to poor visibility and complex licensing models — our systematic approach recovers this waste while maintaining full compliance. Effective license position (ELP) reports provide clear visibility into entitlements versus deployments. Proactive audit defense preparation eliminates surprise penalties. Cloud licensing optimization ensures you're not paying for on-premises entitlements in cloud migrations. We leverage AI-powered license analytics, automated compliance monitoring, and intelligent optimization recommendations to maximize software ROI — transforming licensing from a compliance burden into a strategic cost advantage.",
     icon: FileText,
     features: [
       "Software asset inventory and discovery",
@@ -2082,7 +2082,7 @@ export const solutionsData: SolutionDetail[] = [
     slug: "bulk-hardware-services",
     name: "Bulk Hardware Services",
     shortDescription: "Large-scale hardware procurement, deployment, and lifecycle management for enterprise environments.",
-    fullDescription: "Our Bulk Hardware Services provide end-to-end management of large-scale hardware acquisitions — from sourcing and configuration to deployment, maintenance, and end-of-life disposal. Whether you're refreshing thousands of endpoints, building out data center infrastructure, or equipping a new office, we handle logistics, imaging, staging, and rollout with precision and efficiency.",
+    fullDescription: "Our Bulk Hardware Services provide end-to-end management of large-scale hardware deployments — from procurement and configuration to staging, deployment, and lifecycle management across distributed locations. Whether you're refreshing 5,000 endpoints, deploying edge infrastructure, or managing seasonal hardware needs, we deliver with precision and scale. For businesses, poorly managed hardware deployments cause project delays, employee productivity loss, and excessive costs — our logistics-grade approach ensures on-time delivery with zero-touch provisioning at any scale. Pre-configured imaging and automated deployment reduce per-device setup from hours to minutes. Asset tracking ensures full visibility from warehouse to end user. We leverage AI-powered logistics planning, intelligent inventory management, and automated configuration to execute flawless hardware deployments — delivering enterprise-scale rollouts on time and on budget with minimal disruption to operations.",
     icon: HardDrive,
     features: [
       "Bulk hardware sourcing and competitive bidding",
@@ -2119,7 +2119,7 @@ export const solutionsData: SolutionDetail[] = [
     slug: "help-desk-support",
     name: "Help Desk & End-User Support",
     shortDescription: "24/7 multi-tiered help desk and end-user support services for seamless IT operations.",
-    fullDescription: "Our Help Desk & End-User Support services provide round-the-clock, multi-tiered technical assistance to keep your workforce productive. From L1 ticket resolution and password resets to L2/L3 escalation for complex issues, we deliver responsive, SLA-driven support through phone, email, chat, and self-service portals. Our ITIL-aligned processes ensure consistent service quality and continuous improvement.",
+    fullDescription: "Our Help Desk & End-User Support services provide round-the-clock technical assistance to your employees, ensuring technology issues are resolved quickly and efficiently so your workforce stays productive. From tier-1 troubleshooting and password resets to complex application support and device management, we deliver responsive, knowledgeable support. For businesses, IT issues cost employees an average of 22 minutes per incident in lost productivity — our efficient resolution processes minimize this impact with first-call resolution rates exceeding 75%. Self-service portals and knowledge bases empower users to resolve common issues independently. Automated ticket routing ensures the right expertise handles each issue immediately. We leverage AI-powered chatbots, intelligent ticket classification, and predictive issue detection to deliver superior end-user support — reducing resolution times while improving employee satisfaction and productivity.",
     icon: Headset,
     features: [
       "24/7/365 multi-channel support (phone, email, chat, portal)",
@@ -2156,7 +2156,7 @@ export const solutionsData: SolutionDetail[] = [
     slug: "network-operations",
     name: "Network Operations (NOC)",
     shortDescription: "Proactive network monitoring, management, and optimization for maximum uptime and performance.",
-    fullDescription: "Our Network Operations Center (NOC) services deliver continuous monitoring, management, and optimization of your entire network infrastructure. We proactively detect and resolve issues before they impact business operations, ensuring maximum uptime, optimal performance, and robust security across LAN, WAN, SD-WAN, wireless, and cloud networks.",
+    fullDescription: "Our Network Operations Center (NOC) services deliver continuous monitoring, management, and optimization of your network infrastructure to ensure maximum uptime and performance. From proactive fault detection and capacity management to change implementation and incident response, our NOC teams keep your network running at peak efficiency. For businesses, network downtime impacts every aspect of operations — our 24/7 monitoring with sub-minute alerting detects issues before users are impacted, maintaining 99.99% network availability. Capacity planning ensures your network scales ahead of demand. Automated remediation handles common issues without human intervention. We leverage AI-powered network analytics, intelligent traffic optimization, and automated fault correlation to deliver superior network operations — ensuring your connectivity infrastructure supports business operations with the reliability and performance your organization demands.",
     icon: Radio,
     features: [
       "24/7 network monitoring and alerting",
@@ -2193,7 +2193,7 @@ export const solutionsData: SolutionDetail[] = [
     slug: "change-management",
     name: "Change & Release Management",
     shortDescription: "Structured change and release management processes to minimize risk and ensure smooth deployments.",
-    fullDescription: "Our Change & Release Management services bring discipline and predictability to your IT environment. We implement ITIL-aligned processes for evaluating, approving, scheduling, and executing changes across your infrastructure and applications. From minor configuration updates to major system deployments, our structured approach minimizes risk, reduces downtime, and ensures stakeholder alignment.",
+    fullDescription: "Our Change & Release Management services bring discipline and automation to your software and infrastructure change processes — reducing risk while accelerating delivery velocity. From change advisory boards and risk assessment frameworks to automated approval workflows and release orchestration, we implement mature change management aligned with ITIL best practices. For businesses, uncontrolled changes are the leading cause of production incidents — our structured approach reduces change-related failures by up to 80% while actually increasing change velocity. Automated risk scoring categorizes changes and routes approvals efficiently. Release orchestration ensures coordinated deployments across dependent systems. We leverage AI-powered change impact analysis, intelligent scheduling optimization, and automated rollback capabilities to manage change at enterprise scale — enabling faster innovation while maintaining the stability your business depends on.",
     icon: GitPullRequest,
     features: [
       "ITIL-aligned change management processes",
@@ -2230,7 +2230,7 @@ export const solutionsData: SolutionDetail[] = [
     slug: "business-continuity",
     name: "Business Continuity Planning",
     shortDescription: "Comprehensive business continuity strategies to ensure resilience and rapid recovery from disruptions.",
-    fullDescription: "Our Business Continuity Planning (BCP) services help organizations prepare for, respond to, and recover from disruptions — whether caused by natural disasters, cyberattacks, system failures, or pandemics. We develop comprehensive continuity strategies, conduct business impact analyses, design recovery procedures, and run regular testing exercises to ensure your organization can maintain critical operations under any circumstances.",
+    fullDescription: "Our Business Continuity Planning (BCP) services help organizations prepare for, respond to, and recover from disruptions that threaten critical business operations. From business impact analysis and recovery strategy development to crisis communication plans and regular testing, we build comprehensive resilience programs. For businesses, 40% of organizations that experience a major disruption without a continuity plan fail within five years — our systematic approach ensures operational resilience across all scenarios. Crisis communication plans coordinate stakeholder messaging during incidents. Supply chain diversification reduces dependency on single points of failure. Regular tabletop exercises validate plans and build organizational muscle memory. We leverage AI-powered risk modeling, intelligent scenario simulation, and automated notification systems to build resilient organizations — ensuring your business can maintain critical operations and recover quickly from any disruption.",
     icon: ShieldPlus,
     features: [
       "Business impact analysis (BIA) and risk assessment",
@@ -2267,7 +2267,7 @@ export const solutionsData: SolutionDetail[] = [
     slug: "soc-as-a-service",
     name: "SOC as a Service",
     shortDescription: "Fully managed Security Operations Center providing 24/7 threat monitoring, detection, and response.",
-    fullDescription: "Our SOC as a Service delivers enterprise-grade security operations without the cost and complexity of building an in-house SOC. Our team of certified security analysts monitors your environment around the clock using advanced SIEM, SOAR, and threat intelligence platforms to detect, investigate, and respond to security threats in real time. We provide tiered SOC models — from co-managed augmentation to fully outsourced operations — tailored to your organization's maturity, risk profile, and compliance requirements. Our service includes proactive threat hunting, digital forensics, dark web monitoring, and executive-level reporting with full visibility through real-time dashboards.",
+    fullDescription: "Our SOC as a Service delivers enterprise-grade security operations without the cost and complexity of building an in-house Security Operations Center. We provide 24/7 threat monitoring, incident detection and response, threat hunting, and security analytics — staffed by certified security analysts using industry-leading SIEM and SOAR platforms. For businesses, building an in-house SOC costs $1-3 million annually with 18+ months to operationalize — our managed SOC delivers equivalent capabilities in weeks at a fraction of the cost. Continuous threat intelligence feeds keep detection rules current against emerging threats. Automated playbooks accelerate incident response for common attack patterns. We leverage AI-enhanced threat detection, automated incident triage, and intelligent threat hunting to deliver superior security outcomes — protecting your organization around the clock with expert security operations that scale with your needs.",
     icon: Radar,
     features: [
       "24/7/365 security monitoring, alerting, and triage",
@@ -2353,7 +2353,7 @@ export const solutionsData: SolutionDetail[] = [
     slug: "penetration-testing",
     name: "Penetration Testing",
     shortDescription: "Comprehensive offensive security testing to identify vulnerabilities before attackers exploit them.",
-    fullDescription: "Our Penetration Testing services simulate real-world cyberattacks against your applications, networks, and infrastructure to identify exploitable vulnerabilities. Our certified ethical hackers (OSCP, OSCE, GPEN, GXPN) use the same tactics, techniques, and procedures as advanced threat actors — combined with industry frameworks like OWASP Top 10, PTES, NIST 800-115, and MITRE ATT&CK — to uncover security weaknesses, validate existing controls, and provide prioritized remediation guidance. We offer black-box, grey-box, and white-box assessments across network, web application, mobile, API, cloud, IoT, and social engineering attack surfaces.",
+    fullDescription: "Our Penetration Testing services simulate real-world cyberattacks against your applications, networks, and cloud infrastructure to identify exploitable vulnerabilities before malicious actors find them. From web application and API testing to network penetration and social engineering assessments, our certified ethical hackers provide comprehensive security validation. For businesses, penetration testing is no longer optional — it's required by SOC 2, PCI DSS, HIPAA, and insurance carriers, and provides the most realistic assessment of your security posture. Our detailed reports include exploitation evidence, business impact analysis, and prioritized remediation guidance. Retesting validates that fixes are effective. We leverage AI-enhanced reconnaissance, automated vulnerability correlation, and intelligent attack path analysis to deliver thorough penetration testing — identifying the real-world risks that automated scanners miss and providing actionable guidance to eliminate them.",
     icon: Crosshair,
     features: [
       "External and internal network infrastructure testing",
@@ -2413,7 +2413,7 @@ export const solutionsData: SolutionDetail[] = [
     slug: "zero-trust-security",
     name: "Zero Trust Security",
     shortDescription: "Design and implement zero trust architectures that verify every user, device, and connection.",
-    fullDescription: "Our Zero Trust Security services help organizations transition from traditional perimeter-based security to a modern 'never trust, always verify' architecture. We design and implement comprehensive zero trust frameworks aligned with NIST 800-207, CISA's Zero Trust Maturity Model, and Forrester's ZTX framework. Our approach enforces strict identity verification, least-privilege access, micro-segmentation, and continuous validation for every user, device, and network flow — regardless of location. Whether you're responding to executive mandates, securing a remote workforce, or protecting critical infrastructure, we deliver a pragmatic, phased roadmap that reduces attack surface and limits lateral movement.",
+    fullDescription: "Our Zero Trust Security services help organizations transition from perimeter-based security to identity-centric, never-trust-always-verify architectures that protect against modern threats. We design and implement comprehensive zero trust frameworks encompassing identity, devices, networks, applications, and data — ensuring every access request is authenticated, authorized, and encrypted. For businesses, traditional perimeter security is insufficient in cloud-first, remote-work environments — zero trust reduces breach impact by 50% by eliminating lateral movement opportunities. Micro-segmentation limits blast radius even if credentials are compromised. Continuous verification adapts access decisions based on real-time risk signals. We leverage AI-powered behavioral analytics, adaptive access policies, and automated compliance enforcement to build practical zero trust architectures — protecting your organization with security that adapts to the modern threat landscape without impeding user productivity.",
     icon: Fingerprint,
     features: [
       "Zero trust maturity assessment and strategic roadmap",
@@ -2473,7 +2473,7 @@ export const solutionsData: SolutionDetail[] = [
     slug: "container-orchestration",
     name: "Container Orchestration",
     shortDescription: "Containerization, Kubernetes orchestration, and service mesh for scalable cloud-native applications.",
-    fullDescription: "Our Container Orchestration services help organizations adopt and optimize containerized workloads using Kubernetes and modern orchestration platforms. We design, deploy, and manage production-grade container environments — from initial containerization strategy and Docker migration to multi-cluster Kubernetes management, service mesh implementation, and auto-scaling. Our approach ensures your applications are portable, resilient, and efficiently utilizing infrastructure resources.",
+    fullDescription: "Our Container Orchestration services help organizations adopt Kubernetes and modern container platforms for scalable, resilient application deployment across any environment. From cluster architecture and service mesh implementation to security hardening and day-2 operations, we build production-grade container platforms. For businesses, containerization reduces infrastructure costs by up to 50% while enabling 10x faster deployment cycles — our production-ready Kubernetes platforms handle auto-scaling, self-healing, and zero-downtime deployments automatically. Service mesh technologies like Istio provide sophisticated traffic management and observability. Multi-cluster strategies enable hybrid and multi-cloud deployment flexibility. We leverage AI-powered cluster optimization, intelligent resource scheduling, and automated security scanning to build resilient container platforms — enabling your teams to deploy with confidence while maintaining enterprise-grade reliability and security.",
     icon: Container,
     features: [
       "Application containerization and Docker migration",
@@ -2510,7 +2510,7 @@ export const solutionsData: SolutionDetail[] = [
     slug: "gitops-continuous-delivery",
     name: "GitOps & Continuous Delivery",
     shortDescription: "Git-centric deployment workflows for declarative, auditable, and automated continuous delivery.",
-    fullDescription: "Our GitOps & Continuous Delivery services implement a modern deployment paradigm where Git is the single source of truth for your infrastructure and application configurations. Using tools like Argo CD and Flux, we automate the reconciliation between your desired state in Git and your actual environment, enabling fully auditable, repeatable, and self-healing deployments. Combined with advanced delivery strategies like canary releases and blue-green deployments, we help teams ship with confidence.",
+    fullDescription: "Our GitOps & Continuous Delivery services implement a modern deployment paradigm where Git serves as the single source of truth for both application code and infrastructure configuration. We deploy ArgoCD, Flux, and related tools to enable declarative, auditable, and automated deployments to Kubernetes and cloud environments. For businesses, GitOps eliminates manual deployment errors and provides complete audit trails — every change is tracked, reviewable, and reversible through standard Git workflows. Automated drift detection ensures production always matches the desired state defined in Git. Progressive delivery strategies like canary releases and feature flags reduce deployment risk. We leverage AI-powered deployment risk assessment, intelligent sync strategies, and automated rollback decisions to implement reliable GitOps workflows — delivering continuous delivery that combines developer velocity with enterprise-grade governance and traceability.",
     icon: GitBranch,
     features: [
       "GitOps workflow design and implementation",
@@ -2547,7 +2547,7 @@ export const solutionsData: SolutionDetail[] = [
     slug: "chaos-engineering",
     name: "Chaos Engineering",
     shortDescription: "Proactive resilience testing through controlled fault injection to build confidence in system reliability.",
-    fullDescription: "Our Chaos Engineering services help organizations proactively identify weaknesses in their systems by introducing controlled failures and observing how the system responds. Based on principles pioneered at Netflix, we design and execute chaos experiments — from simple resource stress tests to complex multi-service failure scenarios — to validate resilience, uncover hidden dependencies, and build confidence that your systems can withstand real-world disruptions.",
+    fullDescription: "Our Chaos Engineering services help organizations proactively discover system weaknesses by introducing controlled failures into production and pre-production environments. From game day exercises and automated chaos experiments to steady-state monitoring and blast radius analysis, we build confidence in your system's resilience. For businesses, finding failures proactively through chaos engineering costs 10x less than discovering them during real incidents — our approach systematically eliminates single points of failure before they cause outages. Automated experiments run continuously, validating that recent changes haven't introduced new failure modes. Blast radius analysis ensures chaos experiments don't impact customers. We leverage AI-powered failure injection, intelligent experiment design, and automated resilience scoring to build system confidence — ensuring your infrastructure handles real-world failures gracefully with predictable, minimal impact on business operations.",
     icon: Flame,
     features: [
       "Chaos experiment design and hypothesis formulation",
@@ -2584,7 +2584,7 @@ export const solutionsData: SolutionDetail[] = [
     slug: "release-engineering",
     name: "Release Engineering",
     shortDescription: "Feature flags, canary deployments, and progressive rollouts for safe, controlled software releases.",
-    fullDescription: "Our Release Engineering services enable organizations to decouple deployment from release, giving teams precise control over feature exposure and rollout strategies. We implement feature flag management, canary deployments, A/B testing infrastructure, and progressive rollout capabilities that let you ship code to production confidently while controlling who sees what, when. This approach dramatically reduces release risk and accelerates experimentation.",
+    fullDescription: "Our Release Engineering services enable organizations to decouple deployments from releases, implementing feature flags, progressive rollouts, and release management strategies that reduce risk while accelerating delivery. From feature flag platforms and release orchestration to deployment verification and rollback automation, we build mature release processes. For businesses, decoupling deploy from release means shipping code to production daily while controlling exactly when features become visible to users — reducing release anxiety and enabling data-driven launch decisions. Feature flags enable A/B testing and gradual rollouts that validate changes with real users. Deployment verification testing catches issues before they reach the full user base. We leverage AI-powered rollout optimization, intelligent canary analysis, and automated feature flag lifecycle management to build sophisticated release engineering — enabling your teams to ship faster with confidence and complete control over the user experience.",
     icon: Flag,
     features: [
       "Feature flag management and lifecycle governance",
@@ -2621,7 +2621,7 @@ export const solutionsData: SolutionDetail[] = [
     slug: "nlp-services",
     name: "Natural Language Processing (NLP)",
     shortDescription: "AI-powered text analysis, language understanding, and conversational intelligence solutions.",
-    fullDescription: "Our NLP Services help organizations extract meaning, intent, and insights from unstructured text data at scale. We build and deploy custom NLP models and pipelines for sentiment analysis, named entity recognition, text classification, summarization, language translation, and conversational AI. Whether you need to automate document processing, build intelligent chatbots, or analyze customer feedback, our NLP solutions turn language into actionable intelligence.",
+    fullDescription: "Our NLP Services help organizations extract meaning, intent, and insights from unstructured text data at scale — transforming documents, conversations, and communications into structured, actionable intelligence. From sentiment analysis and entity extraction to document classification and language translation, we build production-ready NLP solutions. For businesses, 80% of enterprise data is unstructured text — our NLP solutions unlock this hidden value for customer understanding, competitive intelligence, and operational efficiency. Custom models trained on domain-specific data outperform generic solutions for industry terminology and context. Multi-language support enables global operations without language barriers. We leverage cutting-edge transformer architectures, intelligent model fine-tuning, and automated pipeline orchestration to deliver enterprise-grade NLP — turning unstructured data into structured insights that drive smarter business decisions.",
     icon: MessageSquare,
     features: [
       "Sentiment analysis and opinion mining",
@@ -2658,7 +2658,7 @@ export const solutionsData: SolutionDetail[] = [
     slug: "rag-solutions",
     name: "Retrieval-Augmented Generation (RAG)",
     shortDescription: "Combine your enterprise knowledge with AI to deliver accurate, grounded, and context-aware responses.",
-    fullDescription: "Our RAG Solutions bridge the gap between powerful large language models and your organization's proprietary knowledge. We design and implement retrieval-augmented generation systems that ground AI responses in your actual data — documents, wikis, databases, and knowledge bases — eliminating hallucinations and ensuring accuracy. From internal knowledge assistants and customer support bots to research tools and compliance Q&A, our RAG architectures deliver trustworthy AI that knows your business.",
+    fullDescription: "Our RAG Solutions bridge the gap between powerful large language models and your organization's proprietary knowledge, creating AI systems that deliver accurate, contextual responses grounded in your actual data. From knowledge base ingestion and vector store architecture to retrieval optimization and response quality monitoring, we build enterprise-grade RAG systems. For businesses, RAG eliminates the hallucination problem that makes generic AI unreliable for business use — our solutions ensure AI responses are grounded in verified, up-to-date organizational knowledge. Hybrid search combining semantic and keyword retrieval maximizes answer accuracy. Source attribution provides transparency and verifiability for every response. We leverage advanced embedding models, intelligent chunking strategies, and automated quality evaluation to build RAG systems that deliver — transforming your organization's knowledge into an accessible, AI-powered resource that employees and customers can trust.",
     icon: BookOpen,
     features: [
       "Enterprise knowledge base ingestion and indexing",
@@ -2695,7 +2695,7 @@ export const solutionsData: SolutionDetail[] = [
     slug: "computer-vision",
     name: "Computer Vision Solutions",
     shortDescription: "AI-powered image and video analysis for object detection, recognition, and visual intelligence.",
-    fullDescription: "Our Computer Vision Solutions enable organizations to extract actionable intelligence from images and video streams. We build and deploy custom vision models for object detection, image classification, facial recognition, OCR, quality inspection, and video analytics. From manufacturing quality control and retail analytics to medical imaging and autonomous systems, our computer vision expertise turns visual data into business value.",
+    fullDescription: "Our Computer Vision Solutions enable organizations to extract meaningful insights from images, video, and visual data using deep learning and AI technologies. From quality inspection and object detection to facial recognition and document processing, we build production-ready vision systems that automate visual analysis at scale. For businesses, computer vision automates manual visual inspection tasks that are tedious, error-prone, and difficult to scale — our solutions achieve 99%+ accuracy while processing thousands of images per second. Real-time video analytics enable immediate response to detected events. Edge deployment brings inference capabilities directly to cameras and IoT devices. We leverage state-of-the-art vision architectures, intelligent model optimization, and automated training pipelines to build scalable computer vision solutions — transforming visual data into actionable insights that improve quality, safety, and operational efficiency across your organization.",
     icon: Eye,
     features: [
       "Object detection and instance segmentation",
