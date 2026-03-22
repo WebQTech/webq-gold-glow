@@ -2,7 +2,7 @@ import {
   Code2, Cloud, Server, RefreshCw, TestTube, Headphones, Settings, Database,
   Gauge, Network, GitBranch, Container, Zap, Shield, Wrench, ClipboardList,
   BarChart3, Brain, Smartphone, Plug, Lock, ShieldCheck, FileCode, CloudCog, KeyRound,
-  ShieldAlert, Scale, PackageSearch, HardDriveDownload, Layers, Activity, DollarSign, CloudLightning, Cog, Accessibility, Blocks, Palette, Bot, Workflow, FlaskConical, Building2, Users, Cable, RotateCcw, TabletSmartphone, LucideIcon
+  ShieldAlert, Scale, PackageSearch, HardDriveDownload, Layers, Activity, DollarSign, CloudLightning, Cog, Accessibility, Blocks, Palette, Bot, Workflow, FlaskConical, Building2, Users, Cable, RotateCcw, TabletSmartphone, Truck, FileStack, LucideIcon
 } from "lucide-react";
 
 export interface SolutionDetail {
@@ -1817,6 +1817,80 @@ export const solutionsData: SolutionDetail[] = [
     faqs: [
       { question: "What is UEM and how does it differ from MDM?", answer: "UEM (Unified Endpoint Management) is the evolution of MDM — it manages not just mobile devices but all endpoints including laptops, desktops, IoT devices, and wearables from a single platform." },
       { question: "How do you handle BYOD security?", answer: "We implement containerization to separate work and personal data, conditional access policies, app-level VPN, remote wipe capabilities for corporate data only, and compliance-based access controls." }
+    ]
+  },
+  {
+    slug: "supply-chain-management",
+    name: "Supply Chain Management Solutions",
+    shortDescription: "Optimize end-to-end supply chain operations with intelligent planning, visibility, and automation.",
+    fullDescription: "We implement and optimize supply chain management solutions that provide end-to-end visibility, demand forecasting, inventory optimization, and logistics automation. From warehouse management and procurement to last-mile delivery and supplier collaboration, we help organizations build resilient, efficient, and data-driven supply chains.",
+    icon: Truck,
+    features: [
+      "Supply chain visibility & control tower",
+      "Demand forecasting & planning",
+      "Inventory optimization & management",
+      "Warehouse Management System (WMS) implementation",
+      "Procurement & supplier relationship management",
+      "Logistics & transportation management",
+      "Supply chain analytics & reporting",
+      "Supply chain risk management & resilience"
+    ],
+    benefits: [
+      "End-to-end supply chain visibility",
+      "Reduced inventory carrying costs by 20-35%",
+      "Improved demand forecast accuracy",
+      "Faster order fulfillment & delivery"
+    ],
+    technologies: ["SAP SCM", "Oracle SCM Cloud", "Blue Yonder", "Kinaxis RapidResponse", "Manhattan Associates", "Coupa", "Anaplan", "o9 Solutions", "E2open", "FourKites"],
+    caseStudies: [
+      {
+        company: "Consumer Goods Manufacturer",
+        industry: "Consumer Goods",
+        challenge: "Frequent stockouts and overstocking across 500+ SKUs due to inaccurate demand forecasting and fragmented supply chain visibility.",
+        solution: "Implemented Blue Yonder demand planning with AI-driven forecasting, integrated with SAP for real-time inventory visibility across 12 distribution centers.",
+        results: ["30% reduction in inventory carrying costs", "Stockout incidents reduced by 65%", "Demand forecast accuracy improved from 60% to 88%"]
+      }
+    ],
+    faqs: [
+      { question: "Can you integrate SCM with our existing ERP?", answer: "Yes, we specialize in integrating supply chain solutions with SAP, Oracle, Dynamics 365, and other ERPs. We ensure seamless data flow between procurement, inventory, manufacturing, and logistics modules." },
+      { question: "How do you handle supply chain disruptions?", answer: "We implement risk management frameworks with real-time monitoring, alternative supplier networks, scenario planning tools, and AI-powered early warning systems to detect and respond to disruptions proactively." }
+    ]
+  },
+  {
+    slug: "enterprise-content-management",
+    name: "Enterprise Content Management",
+    shortDescription: "Manage, store, and govern enterprise content with intelligent document management and workflow automation.",
+    fullDescription: "We implement enterprise content management solutions that help organizations capture, manage, store, and deliver content across the enterprise. From document management and records retention to intelligent content processing and workflow automation, we enable digital-first operations with proper governance and compliance.",
+    icon: FileStack,
+    features: [
+      "Document management & digital archiving",
+      "Intelligent document processing (IDP)",
+      "Records management & retention policies",
+      "Content workflow automation",
+      "Enterprise search & knowledge discovery",
+      "Digital signature & e-forms",
+      "Compliance & regulatory document management",
+      "Content migration & consolidation"
+    ],
+    benefits: [
+      "Eliminated paper-based processes",
+      "Faster document retrieval & processing",
+      "Regulatory compliance with audit trails",
+      "Reduced storage costs & content sprawl"
+    ],
+    technologies: ["SharePoint", "OpenText", "Hyland OnBase", "Box", "M-Files", "DocuSign", "ABBYY", "Laserfiche", "Alfresco", "Google Workspace"],
+    caseStudies: [
+      {
+        company: "Government Department",
+        industry: "Public Sector",
+        challenge: "Processing 50,000+ paper documents monthly with manual data entry, 5-day average processing time, and no digital audit trail.",
+        solution: "Deployed intelligent document processing with ABBYY and Hyland OnBase, automating capture, classification, and routing with digital workflows.",
+        results: ["Document processing time reduced from 5 days to 4 hours", "95% automated data extraction accuracy", "Complete digital audit trail for compliance"]
+      }
+    ],
+    faqs: [
+      { question: "How do you handle legacy document migration?", answer: "We develop a phased migration strategy that includes document inventory, metadata mapping, quality validation, and parallel running. We support migration from file shares, legacy DMS systems, and even physical paper archives." },
+      { question: "Can you integrate ECM with our existing business applications?", answer: "Yes, we integrate with ERP, CRM, HR, and other enterprise systems to embed content management directly into business processes, eliminating context switching and manual document handling." }
     ]
   }
 ];
