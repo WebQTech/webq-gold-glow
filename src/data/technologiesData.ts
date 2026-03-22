@@ -403,7 +403,7 @@ export const technologiesData: TechnologyDetail[] = [
     category: "Databases",
     icon: Search,
     shortDescription: "Distributed search and analytics engine.",
-    fullDescription: "Elasticsearch powers full-text search, log analytics, and application monitoring. We use it with Kibana for observability and with custom search implementations.",
+    fullDescription: "Elasticsearch powers full-text search, log analytics, and application monitoring with distributed architecture that scales horizontally across clusters. We use it with Kibana for observability dashboards and custom search implementations that handle millions of queries per second. For businesses, Elasticsearch transforms unstructured data into actionable insights — enabling product search that understands intent, log analysis that detects anomalies in real-time, and security analytics that identifies threats before they escalate. Its near-real-time indexing ensures freshly ingested data is searchable within seconds. The ELK stack (Elasticsearch, Logstash, Kibana) provides a complete observability solution. We leverage AI-powered relevance tuning, automated index lifecycle management, and intelligent alerting to maximize search quality and operational visibility — turning data into competitive\u00A0advantage.",
     useCases: ["Full-text Search", "Log Analytics", "Application Monitoring", "E-commerce Search", "Security Analytics"],
     features: ["Distributed architecture", "RESTful API", "Kibana visualization", "Real-time indexing", "Aggregations"],
     relatedTechnologies: ["Node.js", "Docker", "Kubernetes"],
