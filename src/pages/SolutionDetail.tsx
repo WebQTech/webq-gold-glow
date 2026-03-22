@@ -267,7 +267,7 @@ const SolutionDetail = () => {
                     value={`faq-${index}`}
                     className="bg-card border border-border rounded-lg px-5"
                   >
-                    <AccordionTrigger className="text-left text-sm font-medium text-foreground hover:no-underline py-4">
+                    <AccordionTrigger className="text-left font-medium text-foreground hover:no-underline">
                       {faq.question}
                     </AccordionTrigger>
                     <AccordionContent className="text-sm text-muted-foreground pb-4">
