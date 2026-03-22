@@ -102,7 +102,7 @@ export const CodeTypingAnimation = ({ snippets }: CodeTypingAnimationProps) => {
           )}
 
           {/* Code area */}
-          <div className="p-5 font-mono text-sm leading-relaxed min-h-[280px] overflow-hidden">
+          <div className="p-4 font-mono text-xs leading-relaxed min-h-[240px] overflow-hidden">
             {snippet.lines.slice(0, visibleLines).map((line, i) => (
               <div key={i} className="flex">
                 <span className="text-[#6c7086] w-8 text-right mr-4 select-none text-xs leading-relaxed">
