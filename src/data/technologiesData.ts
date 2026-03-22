@@ -212,7 +212,7 @@ export const technologiesData: TechnologyDetail[] = [
     category: "Cloud Platforms",
     icon: Cloud,
     shortDescription: "World's leading cloud platform for scalable infrastructure.",
-    fullDescription: "AWS is our primary cloud platform. We architect, migrate, and optimize workloads across EC2, Lambda, S3, RDS, and 200+ services to deliver secure, cost-effective cloud solutions.",
+    fullDescription: "AWS is our primary cloud platform, providing the most comprehensive suite of cloud services available today. We architect, migrate, and optimize workloads across EC2, Lambda, S3, RDS, and 200+ managed services to deliver secure, cost-effective cloud solutions. For businesses, AWS's global infrastructure spanning 30+ regions ensures low-latency experiences for users worldwide, while its pay-as-you-go pricing eliminates capital expenditure on hardware. The Well-Architected Framework guides our designs for reliability, security, and cost optimization. AWS's market leadership means access to the largest ecosystem of partners, certifications, and talent. We leverage AI-powered cloud optimization tools to auto-scale resources, predict costs, and intelligently monitor infrastructure — maximizing ROI while maintaining enterprise-grade performance and\u00A0security.",
     useCases: ["Cloud Migration", "Serverless Applications", "Data Lakes", "AI/ML Workloads", "Disaster Recovery", "IoT Platforms"],
     features: ["200+ managed services", "Global infrastructure", "Pay-as-you-go pricing", "Enterprise-grade security", "Well-Architected Framework"],
     relatedTechnologies: ["Docker", "Kubernetes", "Terraform", "PostgreSQL"],
