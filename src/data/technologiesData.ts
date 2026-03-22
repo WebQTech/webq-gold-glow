@@ -662,7 +662,7 @@ export const technologiesData: TechnologyDetail[] = [
     category: "Security",
     icon: KeyRound,
     shortDescription: "Secrets management and data encryption platform.",
-    fullDescription: "Vault securely stores and manages secrets, encryption keys, and certificates. We integrate it into CI/CD pipelines and applications for dynamic secrets management.",
+    fullDescription: "HashiCorp Vault securely stores and manages secrets, encryption keys, and certificates with identity-based access control and comprehensive audit logging. We integrate it into CI/CD pipelines, Kubernetes clusters, and applications for dynamic secrets management that eliminates static credentials. For businesses, Vault dramatically reduces the risk of credential exposure — the leading cause of data breaches — by generating short-lived, automatically rotating secrets for every service and database connection. Its encryption-as-a-service capabilities protect sensitive data without requiring application-level cryptography expertise. Multi-cloud support ensures consistent secrets management across AWS, Azure, and GCP. We leverage AI-powered access pattern analysis, automated policy generation, and intelligent secret rotation scheduling to maintain zero-trust security posture — protecting sensitive credentials while simplifying operations for development\u00A0teams.",
     useCases: ["Secrets Management", "Dynamic Credentials", "Encryption as a Service", "PKI Management", "Database Credential Rotation"],
     features: ["Dynamic secrets", "Encryption as a service", "Identity-based access", "Audit logging", "Multi-cloud support"],
     relatedTechnologies: ["Terraform", "Kubernetes", "Docker"],
