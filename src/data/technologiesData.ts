@@ -719,7 +719,7 @@ export const technologiesData: TechnologyDetail[] = [
     category: "Enterprise Platforms",
     icon: Cable,
     shortDescription: "Enterprise resource planning and business process management.",
-    fullDescription: "We implement, customize, and integrate SAP solutions including S/4HANA, SuccessFactors, and Ariba for enterprise-wide business process optimization.",
+    fullDescription: "We implement, customize, and integrate SAP solutions including S/4HANA, SuccessFactors, and Ariba for enterprise-wide business process optimization. SAP remains the world's leading ERP platform, powering 77% of global transaction revenue. For businesses, SAP's integrated suite eliminates data silos between finance, supply chain, manufacturing, and HR — providing a single source of truth for enterprise-wide decision-making. S/4HANA's in-memory computing delivers real-time analytics on transactional data, enabling instant business insights. The Business Technology Platform (BTP) extends SAP with custom applications and integrations. Fiori UX modernizes the user experience across all SAP modules. We leverage AI-powered implementation accelerators, automated data migration, and intelligent process optimization to reduce SAP deployment timelines — delivering transformative ERP solutions with lower risk and faster time-to-value for the\u00A0enterprise.",
     useCases: ["ERP Implementation", "Finance & Controlling", "Supply Chain Management", "Human Capital Management", "Procurement"],
     features: ["S/4HANA", "Fiori UX", "Integration Suite", "BTP platform", "Analytics Cloud"],
     relatedTechnologies: ["Oracle Cloud", "Microsoft Dynamics 365"],
