@@ -214,7 +214,7 @@ const SolutionDetail = () => {
                         <p className="text-sm text-muted-foreground">{caseStudy.industry}</p>
                       </div>
                     </div>
-                    <div className="space-y-3">
+                    <div className="space-y-4">
                       <div>
                         <h4 className="text-xs font-semibold text-primary uppercase tracking-wide mb-1">Challenge</h4>
                         <p className="text-sm text-muted-foreground">{caseStudy.challenge}</p>
