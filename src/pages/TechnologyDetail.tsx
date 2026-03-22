@@ -291,10 +291,10 @@ const TechnologyDetail = () => {
     <div className="min-h-screen bg-background">
       <main id="main-content" className="focus:outline-none" tabIndex={-1}>
         {/* Hero */}
-        <section className="py-10 lg:py-16 bg-gradient-to-b from-primary/5 to-background">
+        <section className={`bg-gradient-to-b from-primary/5 to-background ${slug === "spring-boot" ? "py-4 lg:py-6" : "py-10 lg:py-16"}`}>
           <div className="container mx-auto px-6 lg:px-12">
-            <GoBackButton />
-            <nav aria-label="Breadcrumb" className="mb-6">
+            <div className={slug === "spring-boot" ? "flex items-center gap-4 mb-2" : ""}>
+              <GoBackButton />
               <ol className="flex items-center gap-1.5 text-sm text-muted-foreground">
                 <li>
                   <Link to="/" className="inline-flex items-center gap-1 hover:text-primary transition-colors">
