@@ -324,7 +324,7 @@ export const technologiesData: TechnologyDetail[] = [
     category: "DevOps & CI/CD",
     icon: Github,
     shortDescription: "GitHub-native CI/CD for automated workflows.",
-    fullDescription: "GitHub Actions provides CI/CD directly within GitHub repositories. We use it for automated testing, deployment, security scanning, and release management.",
+    fullDescription: "GitHub Actions provides CI/CD directly within GitHub repositories, eliminating the need for separate build servers and simplifying DevOps workflows. We use it for automated testing, container builds, cloud deployments, security scanning, and release management. For businesses, the tight GitHub integration means every pull request automatically triggers quality checks, ensuring only tested code reaches production. Its marketplace offers thousands of pre-built actions that accelerate pipeline creation, while matrix builds enable simultaneous testing across multiple OS and language versions. GitHub Actions' generous free tier and predictable pricing make it cost-effective for teams of all sizes. We leverage AI-powered workflow optimization to auto-generate CI/CD configurations, predict build failures, and intelligently cache dependencies — delivering faster, more reliable software releases with minimal pipeline\u00A0maintenance.",
     useCases: ["Automated Testing", "Container Image Builds", "Cloud Deployments", "Code Quality Checks", "Release Automation"],
     features: ["YAML workflow definitions", "GitHub Marketplace actions", "Matrix builds", "Secrets management", "Self-hosted runners"],
     relatedTechnologies: ["Docker", "AWS", "Terraform"],
