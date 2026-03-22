@@ -35,15 +35,23 @@ export const ServicesSummary = () => {
           transition={{ duration: 0.5, delay: 0.15 }}
           className="flex flex-wrap justify-center gap-3 mb-8"
         >
-          {serviceHighlights.map((service) => (
-            <Link
-              key={service.slug}
-              to={`/services/${service.slug}`}
-              className="px-4 py-2 rounded-full border border-border bg-card text-sm font-medium text-foreground hover:shadow-md hover:border-primary/50 transition-all"
-            >
-              {service.name}
-            </Link>
-          ))}
+          <TooltipProvider delayDuration={200}>
+            {serviceHighlights.map((service) => (
+              <Tooltip key={service.slug}>
+                <TooltipTrigger asChild>
+                  <Link
+                    to={`/services/${service.slug}`}
+                    className="px-4 py-2 rounded-full border border-border bg-card text-sm font-medium text-foreground hover:shadow-md hover:border-primary/50 transition-all"
+                  >
+                    {service.name}
+                  </Link>
+                </TooltipTrigger>
+                <TooltipContent side="bottom" className="max-w-[250px] text-center">
+                  <p>{service.shortDescription}</p>
+                </TooltipContent>
+              </Tooltip>
+            ))}
+          </TooltipProvider>
         </motion.div>
 
         <div className="text-center">

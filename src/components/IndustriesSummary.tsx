@@ -35,15 +35,23 @@ export const IndustriesSummary = () => {
           transition={{ duration: 0.5, delay: 0.15 }}
           className="flex flex-wrap justify-center gap-3 mb-8"
         >
-          {industryHighlights.map((industry) => (
-            <Link
-              key={industry.slug}
-              to={`/industries/${industry.slug}`}
-              className="px-4 py-2 rounded-full border border-border bg-card text-sm font-medium text-foreground hover:shadow-md hover:border-primary/50 transition-all"
-            >
-              {industry.name}
-            </Link>
-          ))}
+          <TooltipProvider delayDuration={200}>
+            {industryHighlights.map((industry) => (
+              <Tooltip key={industry.slug}>
+                <TooltipTrigger asChild>
+                  <Link
+                    to={`/industries/${industry.slug}`}
+                    className="px-4 py-2 rounded-full border border-border bg-card text-sm font-medium text-foreground hover:shadow-md hover:border-primary/50 transition-all"
+                  >
+                    {industry.name}
+                  </Link>
+                </TooltipTrigger>
+                <TooltipContent side="bottom" className="max-w-[250px] text-center">
+                  <p>{industry.shortDescription}</p>
+                </TooltipContent>
+              </Tooltip>
+            ))}
+          </TooltipProvider>
         </motion.div>
 
         <div className="text-center">
