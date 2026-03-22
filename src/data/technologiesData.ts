@@ -223,7 +223,7 @@ export const technologiesData: TechnologyDetail[] = [
     category: "Cloud Platforms",
     icon: CloudCog,
     shortDescription: "Microsoft's enterprise cloud for hybrid and multi-cloud solutions.",
-    fullDescription: "Azure is ideal for Microsoft-centric enterprises. We leverage Azure AD, Azure DevOps, and the full suite of PaaS services for seamless integration with existing Microsoft investments.",
+    fullDescription: "Azure is the ideal cloud platform for Microsoft-centric enterprises seeking seamless integration with existing investments in Active Directory, Office 365, and Windows Server. We leverage Azure AD, Azure DevOps, and the full suite of PaaS services for identity management, CI/CD pipelines, and application hosting. For businesses, Azure's hybrid cloud capabilities enable gradual cloud migration without disrupting on-premises operations — critical for regulated industries. Its Cognitive Services and OpenAI integration provide ready-to-use AI capabilities that accelerate digital transformation. Azure's compliance certifications span 100+ offerings, the most of any cloud provider. We use AI-driven infrastructure management to optimize Azure deployments, automate security configurations, and predict resource needs — delivering cost-efficient, compliant cloud solutions at enterprise\u00A0scale.",
     useCases: ["Hybrid Cloud Deployments", "Enterprise Identity Management", ".NET Application Hosting", "Data Analytics", "AI & Cognitive Services"],
     features: ["Azure AD integration", "Hybrid cloud capabilities", "Azure DevOps", "Cognitive Services", "Azure Kubernetes Service"],
     relatedTechnologies: [".NET", "Kubernetes", "Terraform"],
