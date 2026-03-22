@@ -180,7 +180,7 @@ const springBootSnippets = [
     language: "Java",
     badge: "🧪 Testing",
     badgeColor: "#94e2d5",
-    description: "Integration test with @SpringBootTest and MockMvc. Verifies API contracts, response status codes, and JSON structure — ensuring reliable deployments.",
+    description: "Integration tests verifying API contracts and JSON structure. At WebQ, we enforce 85%+ test coverage with CI-gated builds — every PR runs automated tests against staging databases before merge.",
     lines: [
       '@SpringBootTest',
       '@AutoConfigureMockMvc',
