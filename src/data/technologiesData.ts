@@ -280,7 +280,7 @@ export const technologiesData: TechnologyDetail[] = [
     category: "DevOps & CI/CD",
     icon: Ship,
     shortDescription: "Container orchestration for scalable, resilient deployments.",
-    fullDescription: "Kubernetes automates deployment, scaling, and management of containerized applications. We design and manage K8s clusters on AWS EKS, Azure AKS, and Google GKE.",
+    fullDescription: "Kubernetes automates the deployment, scaling, and management of containerized applications across clusters of machines. We design and manage K8s clusters on AWS EKS, Azure AKS, and Google GKE for mission-critical production workloads. For businesses, Kubernetes provides self-healing infrastructure that automatically restarts failed containers, scales services based on demand, and performs zero-downtime rolling updates — ensuring maximum application availability. Its service mesh capabilities enable sophisticated traffic management and observability across microservices. Kubernetes' declarative approach with Helm charts makes infrastructure reproducible and auditable. We leverage AI-powered cluster optimization to auto-tune resource allocation, predict scaling needs, and intelligently manage multi-cloud deployments — reducing infrastructure costs while maintaining 99.99%\u00A0uptime.",
     useCases: ["Microservices Orchestration", "Auto-scaling Applications", "Blue-green Deployments", "Multi-cloud Strategy", "Service Mesh"],
     features: ["Auto-scaling", "Self-healing", "Rolling updates", "Service discovery", "Helm charts"],
     relatedTechnologies: ["Docker", "Terraform", "ArgoCD", "AWS"],
