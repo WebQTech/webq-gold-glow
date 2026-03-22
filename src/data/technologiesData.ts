@@ -774,7 +774,7 @@ export const technologiesData: TechnologyDetail[] = [
     category: "Enterprise Platforms",
     icon: ClipboardList,
     shortDescription: "Cloud platform for HR, finance, and planning.",
-    fullDescription: "Workday unifies human capital management, financial management, and enterprise planning. We implement and integrate Workday for mid-to-large enterprises.",
+    fullDescription: "Workday unifies human capital management, financial management, and enterprise planning on a single cloud platform built for the modern workforce. We implement and integrate Workday for mid-to-large enterprises seeking to transform their people and finance operations. For businesses, Workday's unified data model eliminates the reconciliation nightmares of disparate HR and finance systems, providing real-time visibility into workforce costs, talent pipelines, and organizational health. Its machine learning insights surface actionable recommendations for retention, compensation, and workforce planning. Prism Analytics enables custom reporting and data blending across Workday and external sources. The Extend framework allows custom applications without disrupting core functionality. We leverage AI-powered implementation accelerators, automated data migration, and intelligent change management to streamline Workday deployments — delivering unified HR and finance solutions that empower strategic workforce\u00A0decisions.",
     useCases: ["Human Capital Management", "Financial Planning", "Talent Acquisition", "Payroll", "Workforce Analytics"],
     features: ["Unified data model", "Machine learning insights", "Prism Analytics", "Extend framework", "Global compliance"],
     relatedTechnologies: ["SAP", "Oracle ERP"],
