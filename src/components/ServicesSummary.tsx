@@ -3,7 +3,7 @@ import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { servicesData } from "@/data/servicesData";
 
-const serviceHighlights = servicesData.slice(0, 14).map(s => s.name);
+const serviceHighlights = servicesData.slice(0, 14);
 
 export const ServicesSummary = () => {
   return (
