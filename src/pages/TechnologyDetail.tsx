@@ -150,7 +150,7 @@ const springBootSnippets = [
     language: "Java",
     badge: "🛡️ Error Handling",
     badgeColor: "#eba0ac",
-    description: "Centralized exception handling with @ControllerAdvice. Returns consistent JSON error responses with proper HTTP status codes — no raw stack traces leak to clients.",
+    description: "Centralized exception handling with structured error responses. At WebQ, we implement a standardized error contract across all microservices — consistent codes, messages, and traceability IDs that simplify debugging for clients.",
     lines: [
       '@ControllerAdvice',
       'public class GlobalExceptionHandler {',
