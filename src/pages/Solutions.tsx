@@ -73,13 +73,33 @@ const Solutions = () => {
                       if (!solution) return null;
                       return (
                         <li key={slug}>
-                          <Link
-                            to={`/solutions/${slug}`}
-                            className="group flex items-center gap-1.5 text-[14px] leading-snug text-primary hover:text-primary/80 transition-colors"
-                          >
-                            <ArrowRight className="w-3 h-3 opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all duration-200" />
-                            {solution.name}
-                          </Link>
+                          <HoverCard openDelay={200} closeDelay={100}>
+                            <HoverCardTrigger asChild>
+                              <Link
+                                to={`/solutions/${slug}`}
+                                className="group flex items-center gap-1.5 text-[14px] leading-snug text-primary hover:text-primary/80 transition-colors"
+                              >
+                                <ArrowRight className="w-3 h-3 opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all duration-200" />
+                                {solution.name}
+                              </Link>
+                            </HoverCardTrigger>
+                            <HoverCardContent side="right" align="start" className="w-80 p-4">
+                              <h4 className="text-sm font-semibold text-foreground mb-1">{solution.name}</h4>
+                              <p className="text-xs text-muted-foreground mb-3">{solution.shortDescription}</p>
+                              <p className="text-xs font-semibold text-foreground mb-2">What We Deliver</p>
+                              <ul className="space-y-1">
+                                {solution.features.slice(0, 5).map((feature, i) => (
+                                  <li key={i} className="flex items-start gap-1.5 text-xs text-muted-foreground">
+                                    <CheckCircle2 className="w-3 h-3 mt-0.5 text-primary shrink-0" />
+                                    {feature}
+                                  </li>
+                                ))}
+                              </ul>
+                              {solution.features.length > 5 && (
+                                <p className="text-xs text-primary mt-2">+{solution.features.length - 5} more →</p>
+                              )}
+                            </HoverCardContent>
+                          </HoverCard>
                         </li>
                       );
                     })}
