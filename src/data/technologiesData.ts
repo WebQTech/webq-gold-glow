@@ -122,7 +122,7 @@ export const technologiesData: TechnologyDetail[] = [
     category: "Backend",
     icon: Terminal,
     shortDescription: "JavaScript runtime for scalable server-side applications.",
-    fullDescription: "Node.js powers our backend APIs, microservices, and real-time applications. Its non-blocking I/O model makes it ideal for data-intensive, event-driven applications.",
+    fullDescription: "Node.js powers our backend APIs, microservices, and real-time applications with its non-blocking I/O model that excels at handling thousands of concurrent connections. For businesses, this translates to highly responsive applications that scale efficiently under load — critical for e-commerce platforms, chat systems, and streaming services. Node.js's JavaScript foundation means full-stack teams can share code between frontend and backend, reducing hiring costs and accelerating feature delivery. Its npm ecosystem, the world's largest package registry, provides battle-ready solutions for virtually every backend challenge. We leverage AI-assisted development to auto-generate API endpoints, optimize database queries, and intelligently monitor application performance — delivering robust backend services faster than\u00A0traditional approaches.",
     useCases: ["REST & GraphQL APIs", "Real-time Chat Systems", "Streaming Applications", "Microservices", "Serverless Functions", "IoT Backends"],
     features: ["Non-blocking I/O", "npm ecosystem", "Express/Fastify frameworks", "WebSocket support", "Serverless compatible"],
     relatedTechnologies: ["TypeScript", "React", "MongoDB", "PostgreSQL"],
