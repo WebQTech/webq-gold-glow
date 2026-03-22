@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { Footer } from "@/components/Footer";
 import { solutionsData } from "@/data/solutionsData";
+import { motion } from "framer-motion";
 
 const solutionCategories = [
   {
@@ -46,15 +47,35 @@ const Solutions = () => {
   return (
     <div className="min-h-screen bg-background">
       <main id="main-content" className="focus:outline-none" tabIndex={-1}>
-
-        {/* Solutions by Category — masonry-style 3-col */}
-        <section className="pb-10 lg:pb-14 pt-2">
+        {/* Hero */}
+        <section className="py-10 lg:py-14 border-b border-border">
           <div className="container mx-auto px-6 lg:px-12">
-            <div className="columns-1 sm:columns-2 lg:columns-3 gap-x-10">
-              {solutionCategories.map((category) => (
-                <div key={category.title} className="break-inside-avoid mb-6">
-                  <h3 className="text-xs font-black text-muted-foreground uppercase tracking-widest mb-3 border-b border-border pb-2">
+            <h1 className="text-3xl lg:text-4xl font-bold text-foreground leading-tight">
+              Our Solutions
+            </h1>
+            <p className="mt-2 text-base text-muted-foreground max-w-2xl">
+              From ready-to-deploy products to custom implementations — explore our full range of technology capabilities across {solutionCategories.length} practice areas.
+            </p>
+          </div>
+        </section>
+
+        {/* Category grid */}
+        <section className="py-10 lg:py-14">
+          <div className="container mx-auto px-6 lg:px-12">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {solutionCategories.map((category, idx) => (
+                <motion.div
+                  key={category.title}
+                  initial={{ opacity: 0, y: 16 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.3, delay: idx * 0.04 }}
+                  className="rounded-lg border border-border bg-card p-5 hover:shadow-md transition-shadow"
+                >
+                  <h3 className="text-sm font-bold text-foreground uppercase tracking-wider mb-4 pb-2 border-b border-border">
                     {category.title}
+                    <span className="ml-2 text-xs font-normal text-muted-foreground lowercase tracking-normal">
+                      {category.items.length} solutions
+                    </span>
                   </h3>
                   <ul className="space-y-1.5">
                     {category.items.map((slug) => {
@@ -64,22 +85,23 @@ const Solutions = () => {
                         <li key={slug}>
                           <Link
                             to={`/solutions/${slug}`}
-                            className="text-primary hover:underline underline-offset-4 transition-colors text-[14px] leading-snug"
+                            className="group flex items-center gap-1.5 text-[14px] leading-snug text-primary hover:text-primary/80 transition-colors"
                           >
+                            <ArrowRight className="w-3 h-3 opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all duration-200" />
                             {solution.name}
                           </Link>
                         </li>
                       );
                     })}
                   </ul>
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>
         </section>
 
         {/* CTA */}
-        <section className="py-8 lg:py-12 bg-primary/5">
+        <section className="py-10 lg:py-14 bg-primary/5">
           <div className="container mx-auto px-6 lg:px-12 text-center">
             <h2 className="text-2xl lg:text-3xl font-bold text-foreground">
               Ready to Transform Your Business?
