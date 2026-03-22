@@ -239,7 +239,7 @@ const springBootSnippets = [
     language: "Java",
     badge: "📡 Event-Driven",
     badgeColor: "#fab387",
-    description: "Decoupled architecture using Spring's ApplicationEventPublisher. Domain events trigger async listeners for email, audit, and analytics — keeping services loosely coupled.",
+    description: "Decoupled architecture using domain events with async listeners. At WebQ, we design event-driven systems with Kafka/RabbitMQ backing — enabling independent scaling of notification, audit, and analytics pipelines.",
     lines: [
       '@Service',
       'public class UserEventPublisher {',
