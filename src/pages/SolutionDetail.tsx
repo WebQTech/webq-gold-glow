@@ -297,7 +297,7 @@ const SolutionDetail = () => {
                 </p>
               </motion.div>
 
-              <div className="grid md:grid-cols-3 gap-5">
+              <div className="grid md:grid-cols-3 gap-6">
                 {relatedSolutions.map((related, index) => {
                   const RelatedIcon = related.icon;
                   return (
