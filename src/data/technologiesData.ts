@@ -449,7 +449,7 @@ export const technologiesData: TechnologyDetail[] = [
     category: "AI & Machine Learning",
     icon: Brain,
     shortDescription: "Open-source ML framework for production-grade AI models.",
-    fullDescription: "TensorFlow powers our deep learning and production ML workloads. From computer vision to NLP, we build, train, and deploy models using TensorFlow's comprehensive ecosystem.",
+    fullDescription: "TensorFlow powers our deep learning and production ML workloads with a comprehensive ecosystem spanning model development, training, and deployment. From computer vision to natural language processing, we build, train, and deploy models that drive real business outcomes. For businesses, TensorFlow's production-grade serving infrastructure enables ML models to handle millions of predictions per second with sub-millisecond latency. TFLite extends these models to mobile and edge devices, bringing intelligence directly to users. Its integration with Google Cloud's Vertex AI provides enterprise-grade MLOps for model monitoring and lifecycle management. TensorFlow's massive community and extensive documentation reduce the risk of adopting AI. We leverage AI-accelerated training pipelines and automated hyperparameter tuning to deliver high-accuracy models faster — transforming business data into intelligent, revenue-generating\u00A0applications.",
     useCases: ["Image Classification", "Natural Language Processing", "Speech Recognition", "Recommendation Systems", "Time-series Forecasting"],
     features: ["Keras high-level API", "TensorFlow Serving", "TFLite for mobile", "TensorBoard visualization", "Distributed training"],
     relatedTechnologies: ["Python", "Vertex AI", "Docker"],
