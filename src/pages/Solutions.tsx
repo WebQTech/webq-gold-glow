@@ -77,7 +77,7 @@ const Solutions = () => {
                             <HoverCardTrigger asChild>
                               <Link
                                 to={`/solutions/${slug}`}
-                                className="group flex items-center gap-1.5 text-[15px] leading-normal text-primary hover:text-primary/80 transition-colors"
+                                className="group flex items-center gap-1.5 text-base leading-normal text-primary hover:text-primary/80 transition-colors"
                               >
                                 <ArrowRight className="w-3 h-3 opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all duration-200" />
                                 {solution.name}
