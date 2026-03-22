@@ -188,7 +188,7 @@ export const technologiesData: TechnologyDetail[] = [
     category: "Backend",
     icon: Gem,
     shortDescription: "Convention-over-configuration framework for rapid web development.",
-    fullDescription: "Rails enables rapid development of web applications with built-in conventions for database, routing, and testing. We use it for startups and MVPs that need to move fast.",
+    fullDescription: "Ruby on Rails enables rapid development of web applications with built-in conventions for database management, routing, and testing. We use it for startups and MVPs that need to move fast without sacrificing code quality. For businesses, Rails' convention-over-configuration philosophy means less decision fatigue and faster feature delivery — getting products to market weeks ahead of competitors. Its rich gem ecosystem provides pre-built solutions for payments, authentication, search, and more, dramatically reducing development costs. Companies like Shopify, GitHub, and Airbnb built their foundations on Rails, proving its scalability. We enhance Rails development with AI-assisted code generation, automated security audits, and intelligent performance profiling — transforming ideas into production-ready applications at startup\u00A0speed.",
     useCases: ["Startup MVPs", "E-commerce Platforms", "Content Management", "SaaS Applications", "API-only Backends"],
     features: ["Convention over configuration", "Active Record ORM", "Built-in testing", "Rich gem ecosystem", "Rapid prototyping"],
     relatedTechnologies: ["PostgreSQL", "Redis", "Docker"],
