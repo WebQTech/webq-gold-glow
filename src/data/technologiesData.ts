@@ -291,7 +291,7 @@ export const technologiesData: TechnologyDetail[] = [
     category: "DevOps & CI/CD",
     icon: Blocks,
     shortDescription: "Infrastructure as Code for multi-cloud provisioning.",
-    fullDescription: "Terraform lets us define infrastructure as code across AWS, Azure, and GCP. We use it for reproducible, version-controlled infrastructure deployments.",
+    fullDescription: "Terraform lets us define infrastructure as code across AWS, Azure, and GCP using a declarative HCL syntax that makes cloud provisioning reproducible, version-controlled, and auditable. For businesses, this eliminates manual infrastructure setup errors and enables disaster recovery in minutes rather than days. Terraform's plan-and-apply workflow provides a clear preview of changes before execution, reducing the risk of costly misconfigurations. Its module system promotes reusable infrastructure patterns that scale across teams and projects. The extensive provider ecosystem supports 3,000+ services beyond just cloud providers. We enhance Terraform workflows with AI-assisted infrastructure design, automated compliance validation, and intelligent drift detection — ensuring infrastructure remains secure, compliant, and cost-optimized at all\u00A0times.",
     useCases: ["Multi-cloud Infrastructure", "Environment Provisioning", "Compliance-as-Code", "Disaster Recovery Setup", "Infrastructure Automation"],
     features: ["Declarative HCL syntax", "State management", "Module reusability", "Plan & apply workflow", "Provider ecosystem"],
     relatedTechnologies: ["AWS", "Azure", "GCP", "Kubernetes"],
