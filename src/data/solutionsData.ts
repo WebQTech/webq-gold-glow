@@ -2,7 +2,7 @@ import {
   Code2, Cloud, Server, RefreshCw, TestTube, Headphones, Settings, Database,
   Gauge, Network, GitBranch, Container, Zap, Shield, Wrench, ClipboardList,
   BarChart3, Brain, Smartphone, Plug, Lock, ShieldCheck, FileCode, CloudCog, KeyRound,
-  ShieldAlert, Scale, PackageSearch, HardDriveDownload, Layers, Activity, DollarSign, CloudLightning, Cog, Accessibility, Blocks, Palette, Bot, Workflow, FlaskConical, Building2, Users, Cable, RotateCcw, TabletSmartphone, Truck, FileStack, BookCheck, Warehouse, ArrowRightLeft, ShoppingCart, FileText, HardDrive, LucideIcon
+  ShieldAlert, Scale, PackageSearch, HardDriveDownload, Layers, Activity, DollarSign, CloudLightning, Cog, Accessibility, Blocks, Palette, Bot, Workflow, FlaskConical, Building2, Users, Cable, RotateCcw, TabletSmartphone, Truck, FileStack, BookCheck, Warehouse, ArrowRightLeft, ShoppingCart, FileText, HardDrive, Headset, Radio, GitPullRequest, ShieldPlus, LucideIcon
 } from "lucide-react";
 
 export interface SolutionDetail {
@@ -2113,6 +2113,154 @@ export const solutionsData: SolutionDetail[] = [
     faqs: [
       { question: "What hardware brands do you support?", answer: "We partner with all major enterprise hardware manufacturers including Dell, HP, Lenovo, Cisco, Apple, and others. We're vendor-agnostic and recommend the best fit based on your requirements, budget, and existing environment." },
       { question: "How do you handle hardware disposal?", answer: "We provide certified IT Asset Disposal (ITAD) services including data sanitization (DoD 5220.22-M or NIST 800-88 compliant), certified destruction when required, environmentally responsible recycling, and full chain-of-custody documentation." }
+    ]
+  },
+  {
+    slug: "help-desk-support",
+    name: "Help Desk & End-User Support",
+    shortDescription: "24/7 multi-tiered help desk and end-user support services for seamless IT operations.",
+    fullDescription: "Our Help Desk & End-User Support services provide round-the-clock, multi-tiered technical assistance to keep your workforce productive. From L1 ticket resolution and password resets to L2/L3 escalation for complex issues, we deliver responsive, SLA-driven support through phone, email, chat, and self-service portals. Our ITIL-aligned processes ensure consistent service quality and continuous improvement.",
+    icon: Headset,
+    features: [
+      "24/7/365 multi-channel support (phone, email, chat, portal)",
+      "Tiered support model (L1, L2, L3 escalation)",
+      "ITIL-aligned incident and request management",
+      "Self-service portal with knowledge base",
+      "Remote desktop support and troubleshooting",
+      "SLA monitoring and performance reporting"
+    ],
+    benefits: [
+      "Reduce average resolution time by 40–60%",
+      "Improve employee satisfaction with responsive IT support",
+      "Scale support capacity without increasing headcount",
+      "Consistent service quality through standardized processes",
+      "Actionable insights from ticket analytics and trends",
+      "Free up internal IT teams for strategic initiatives"
+    ],
+    technologies: ["ServiceNow", "Freshservice", "Zendesk", "Jira Service Management", "ConnectWise", "TeamViewer"],
+    caseStudies: [
+      {
+        company: "Insurance Corporation",
+        industry: "Insurance",
+        challenge: "Internal help desk overwhelmed with 3,000+ monthly tickets and average resolution times exceeding 48 hours.",
+        solution: "Deployed a 24/7 managed help desk with automated triage, self-service knowledge base, and tiered escalation workflows.",
+        results: ["Average resolution time reduced to 4 hours", "First-call resolution rate improved to 78%", "Employee satisfaction scores increased by 35%"]
+      }
+    ],
+    faqs: [
+      { question: "What support channels do you offer?", answer: "We provide omni-channel support including phone, email, live chat, self-service portal, and mobile app. Users can reach us through whichever channel is most convenient, and all interactions are tracked in a unified ticketing system." },
+      { question: "How do you handle after-hours support?", answer: "Our 24/7/365 model includes dedicated overnight and weekend teams with full access to your environment. Critical issues are handled immediately regardless of time, with on-call escalation paths for P1/P2 incidents." }
+    ]
+  },
+  {
+    slug: "network-operations",
+    name: "Network Operations (NOC)",
+    shortDescription: "Proactive network monitoring, management, and optimization for maximum uptime and performance.",
+    fullDescription: "Our Network Operations Center (NOC) services deliver continuous monitoring, management, and optimization of your entire network infrastructure. We proactively detect and resolve issues before they impact business operations, ensuring maximum uptime, optimal performance, and robust security across LAN, WAN, SD-WAN, wireless, and cloud networks.",
+    icon: Radio,
+    features: [
+      "24/7 network monitoring and alerting",
+      "Proactive issue detection and auto-remediation",
+      "Network performance optimization and capacity planning",
+      "Firewall, switch, and router management",
+      "SD-WAN and wireless network management",
+      "Network security monitoring and threat detection"
+    ],
+    benefits: [
+      "Achieve 99.99% network uptime SLAs",
+      "Reduce network-related incidents by 50–70%",
+      "Proactive issue resolution before user impact",
+      "Optimized bandwidth utilization and cost efficiency",
+      "Comprehensive visibility across hybrid network environments",
+      "Faster mean time to resolution (MTTR) for outages"
+    ],
+    technologies: ["SolarWinds", "PRTG", "Cisco Meraki", "Datadog", "Nagios", "Fortinet"],
+    caseStudies: [
+      {
+        company: "Logistics Enterprise",
+        industry: "Logistics",
+        challenge: "Frequent network outages across 80 distribution centers causing operational disruptions and shipment delays.",
+        solution: "Implemented centralized NOC with real-time monitoring, automated alerting, and proactive capacity management across all sites.",
+        results: ["Network uptime improved from 97.2% to 99.95%", "70% reduction in unplanned network outages", "Mean time to resolution reduced from 4 hours to 22 minutes"]
+      }
+    ],
+    faqs: [
+      { question: "What types of networks do you monitor?", answer: "We monitor and manage all network types including LAN, WAN, SD-WAN, wireless/Wi-Fi, VPN, cloud networks (AWS, Azure, GCP), and hybrid environments. Our tools provide unified visibility across your entire network topology." },
+      { question: "How do you handle network security?", answer: "Our NOC integrates security monitoring including firewall management, intrusion detection/prevention, DDoS mitigation, and anomaly detection. We work closely with your security team or our SOC services for coordinated threat response." }
+    ]
+  },
+  {
+    slug: "change-management",
+    name: "Change & Release Management",
+    shortDescription: "Structured change and release management processes to minimize risk and ensure smooth deployments.",
+    fullDescription: "Our Change & Release Management services bring discipline and predictability to your IT environment. We implement ITIL-aligned processes for evaluating, approving, scheduling, and executing changes across your infrastructure and applications. From minor configuration updates to major system deployments, our structured approach minimizes risk, reduces downtime, and ensures stakeholder alignment.",
+    icon: GitPullRequest,
+    features: [
+      "ITIL-aligned change management processes",
+      "Change Advisory Board (CAB) facilitation",
+      "Risk assessment and impact analysis",
+      "Release planning and deployment coordination",
+      "Configuration management database (CMDB) maintenance",
+      "Post-implementation review and continuous improvement"
+    ],
+    benefits: [
+      "Reduce change-related incidents by 60–80%",
+      "Minimize unplanned downtime from failed changes",
+      "Improve stakeholder communication and alignment",
+      "Full audit trail and compliance documentation",
+      "Faster, more predictable release cycles",
+      "Better risk visibility for informed decision-making"
+    ],
+    technologies: ["ServiceNow", "BMC Helix", "Jira Service Management", "Freshservice", "Cherwell", "iTop"],
+    caseStudies: [
+      {
+        company: "Banking Institution",
+        industry: "Financial Services",
+        challenge: "30% of production changes resulted in incidents, causing frequent outages and regulatory concerns.",
+        solution: "Implemented a structured change management framework with automated risk scoring, mandatory testing gates, and CAB review processes.",
+        results: ["Change-related incidents reduced by 75%", "Unplanned downtime decreased by 60%", "Achieved full regulatory audit compliance"]
+      }
+    ],
+    faqs: [
+      { question: "How do you classify changes?", answer: "We use a tiered classification system — Standard (pre-approved, low-risk), Normal (requires CAB review), and Emergency (expedited process for critical fixes). Each tier has appropriate approval workflows, testing requirements, and rollback procedures." },
+      { question: "Can you integrate with our existing CI/CD pipeline?", answer: "Yes, we integrate change management controls directly into your CI/CD pipeline, adding automated approval gates, change ticket creation, and deployment tracking without slowing down your development velocity." }
+    ]
+  },
+  {
+    slug: "business-continuity",
+    name: "Business Continuity Planning",
+    shortDescription: "Comprehensive business continuity strategies to ensure resilience and rapid recovery from disruptions.",
+    fullDescription: "Our Business Continuity Planning (BCP) services help organizations prepare for, respond to, and recover from disruptions — whether caused by natural disasters, cyberattacks, system failures, or pandemics. We develop comprehensive continuity strategies, conduct business impact analyses, design recovery procedures, and run regular testing exercises to ensure your organization can maintain critical operations under any circumstances.",
+    icon: ShieldPlus,
+    features: [
+      "Business impact analysis (BIA) and risk assessment",
+      "Continuity strategy development and documentation",
+      "Crisis communication planning",
+      "Tabletop exercises and simulation testing",
+      "Recovery time objective (RTO) and recovery point objective (RPO) planning",
+      "Regular plan review, updates, and compliance alignment"
+    ],
+    benefits: [
+      "Minimize revenue loss during disruptions",
+      "Meet regulatory and compliance requirements (ISO 22301)",
+      "Reduce recovery time from days to hours",
+      "Protect brand reputation during crisis events",
+      "Build organizational resilience and stakeholder confidence",
+      "Ensure employee safety with clear crisis protocols"
+    ],
+    technologies: ["Fusion Risk Management", "Castellan Solutions", "Archer BCM", "ServiceNow BCM", "Avalution", "RecoveryPlanner"],
+    caseStudies: [
+      {
+        company: "Manufacturing Conglomerate",
+        industry: "Manufacturing",
+        challenge: "A ransomware attack shut down operations for 12 days with no documented recovery procedures.",
+        solution: "Developed comprehensive BCP covering all critical business functions, implemented regular tabletop exercises, and established a crisis command structure.",
+        results: ["Recovery capability improved from 12 days to 6 hours", "Achieved ISO 22301 certification", "Successfully navigated a subsequent facility flood with zero data loss"]
+      }
+    ],
+    faqs: [
+      { question: "How is BCP different from Disaster Recovery?", answer: "Disaster Recovery (DR) focuses specifically on restoring IT systems and data after an outage. Business Continuity Planning is broader — it encompasses all critical business functions including people, processes, facilities, and technology, ensuring the entire organization can continue operating during and after a disruption." },
+      { question: "How often should we test our continuity plans?", answer: "We recommend quarterly tabletop exercises for critical functions, semi-annual simulation tests, and annual full-scale exercises. Plans should also be reviewed and updated after any significant organizational change, incident, or at minimum annually." }
     ]
   }
 ];
