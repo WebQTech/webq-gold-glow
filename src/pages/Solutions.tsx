@@ -46,16 +46,24 @@ const Solutions = () => {
   return (
     <div className="min-h-screen bg-background">
       <main id="main-content" className="focus:outline-none" tabIndex={-1}>
-        {/* Solutions by Category */}
-        <section className="py-10 lg:py-16">
+        {/* Compact header */}
+        <section className="pt-6 pb-2 lg:pt-10 lg:pb-4">
           <div className="container mx-auto px-6 lg:px-12">
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-x-12 gap-y-12">
+            <h1 className="text-2xl lg:text-3xl font-bold text-foreground">Solutions</h1>
+            <p className="mt-1 text-sm text-muted-foreground">Explore our full range of technology services and capabilities.</p>
+          </div>
+        </section>
+
+        {/* Solutions by Category — masonry-style 3-col */}
+        <section className="pb-10 lg:pb-14 pt-2">
+          <div className="container mx-auto px-6 lg:px-12">
+            <div className="columns-1 sm:columns-2 lg:columns-3 gap-x-10">
               {solutionCategories.map((category) => (
-                <div key={category.title}>
-                  <h3 className="text-base font-black text-foreground uppercase tracking-wider mb-5 border-b border-border pb-3">
+                <div key={category.title} className="break-inside-avoid mb-6">
+                  <h3 className="text-xs font-black text-muted-foreground uppercase tracking-widest mb-3 border-b border-border pb-2">
                     {category.title}
                   </h3>
-                  <ul className="space-y-3">
+                  <ul className="space-y-1.5">
                     {category.items.map((slug) => {
                       const solution = solutionsData.find((s) => s.slug === slug);
                       if (!solution) return null;
@@ -63,7 +71,7 @@ const Solutions = () => {
                         <li key={slug}>
                           <Link
                             to={`/solutions/${slug}`}
-                            className="text-primary hover:underline underline-offset-4 transition-colors text-[15px] leading-relaxed"
+                            className="text-primary hover:underline underline-offset-4 transition-colors text-[14px] leading-snug"
                           >
                             {solution.name}
                           </Link>
@@ -78,17 +86,17 @@ const Solutions = () => {
         </section>
 
         {/* CTA */}
-        <section className="py-10 lg:py-16 bg-primary/5">
+        <section className="py-8 lg:py-12 bg-primary/5">
           <div className="container mx-auto px-6 lg:px-12 text-center">
-            <h2 className="text-3xl lg:text-4xl font-bold text-foreground">
+            <h2 className="text-2xl lg:text-3xl font-bold text-foreground">
               Ready to Transform Your Business?
             </h2>
-            <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="mt-3 text-base text-muted-foreground max-w-2xl mx-auto">
               Let&apos;s discuss how our solutions can help you achieve your technology goals.
             </p>
             <Link
               to="/contact"
-              className="mt-8 inline-flex items-center gap-2 btn-primary"
+              className="mt-6 inline-flex items-center gap-2 btn-primary"
             >
               Contact Us Today
               <ArrowRight className="w-4 h-4" />
