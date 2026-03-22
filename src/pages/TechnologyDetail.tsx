@@ -120,21 +120,33 @@ const TechnologyDetail = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="max-w-3xl"
+              className={slug === "spring-boot" ? "grid lg:grid-cols-2 gap-10 items-start" : "max-w-3xl"}
             >
-              <span className="text-xs font-black tracking-widest text-primary uppercase">{tech.category}</span>
-              <div className="flex items-center gap-4 mt-3">
-                <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center">
-                  <Icon className="w-7 h-7 text-primary" />
+              <div>
+                <span className="text-xs font-black tracking-widest text-primary uppercase">{tech.category}</span>
+                <div className="flex items-center gap-4 mt-3">
+                  <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center">
+                    <Icon className="w-7 h-7 text-primary" />
+                  </div>
+                  <h1 className="text-4xl lg:text-5xl font-bold text-foreground">{tech.name}</h1>
                 </div>
-                <h1 className="text-4xl lg:text-5xl font-bold text-foreground">{tech.name}</h1>
+                <p className="mt-6 text-lg text-muted-foreground">{tech.fullDescription}</p>
+                <div className="mt-8">
+                  <Link to="/contact" className="btn-primary inline-flex items-center gap-2">
+                    Discuss Your Project <ArrowRight className="w-4 h-4" />
+                  </Link>
+                </div>
               </div>
-              <p className="mt-6 text-lg text-muted-foreground">{tech.fullDescription}</p>
-              <div className="mt-8">
-                <Link to="/contact" className="btn-primary inline-flex items-center gap-2">
-                  Discuss Your Project <ArrowRight className="w-4 h-4" />
-                </Link>
-              </div>
+
+              {slug === "spring-boot" && (
+                <motion.div
+                  initial={{ opacity: 0, x: 30 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6, delay: 0.3 }}
+                >
+                  <CodeTypingAnimation snippets={springBootSnippets} />
+                </motion.div>
+              )}
             </motion.div>
           </div>
         </section>
