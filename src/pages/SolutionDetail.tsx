@@ -94,7 +94,7 @@ const SolutionDetail = () => {
                 <div className="mt-6">
                   <div className="flex flex-wrap gap-2">
                     {solution.technologies.map((tech, index) => (
-                      <span key={index} className="px-3 py-1 text-xs font-medium bg-primary/8 text-primary border border-primary/15 rounded-full">
+                      <span key={index} className="px-3 py-1 text-sm font-medium bg-primary/8 text-primary border border-primary/15 rounded-full">
                         {tech}
                       </span>
                     ))}
