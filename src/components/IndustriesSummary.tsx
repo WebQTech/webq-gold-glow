@@ -3,7 +3,7 @@ import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { industriesData } from "@/data/industriesData";
 
-const industryHighlights = industriesData.slice(0, 12).map(i => i.name);
+const industryHighlights = industriesData.slice(0, 12);
 
 export const IndustriesSummary = () => {
   return (
