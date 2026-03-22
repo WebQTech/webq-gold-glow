@@ -35,7 +35,7 @@ const springBoot: TechSnippetData = {
       title: "SecurityConfig.java",
       language: "Java",
       badge: "🔒 Secure Code",
-      badgeColor: "#89b4fa",
+      badgeColor: "#0070C0",
       description: "OAuth2 + JWT authentication with role-based route protection. At WebQ, we enforce zero-trust security from day one — every API ships with token validation, scoped permissions, and OWASP-compliant configurations.",
       lines: [
         '@Configuration',
@@ -61,7 +61,7 @@ const springBoot: TechSnippetData = {
       title: "UserService.java",
       language: "Java",
       badge: "⚡ Performance",
-      badgeColor: "#89b4fa",
+      badgeColor: "#0070C0",
       description: "Cacheable queries and paginated responses to minimize DB load. At WebQ, we profile every service layer — applying Redis-backed caching and lazy-loading strategies that cut response times by up to 60%.",
       lines: [
         '@Service',
@@ -88,7 +88,7 @@ const springBoot: TechSnippetData = {
       title: "UserController.java",
       language: "Java",
       badge: "🧑‍💻 User-Friendly API",
-      badgeColor: "#89b4fa",
+      badgeColor: "#0070C0",
       description: "Clean REST endpoints with validation and proper status codes. At WebQ, we design APIs contract-first using OpenAPI specs — ensuring frontend and backend teams work in parallel with zero ambiguity.",
       lines: [
         '@RestController',
@@ -118,7 +118,7 @@ const springBoot: TechSnippetData = {
       title: "User.java",
       language: "Java",
       badge: "📐 Best Practice",
-      badgeColor: "#89b4fa",
+      badgeColor: "#0070C0",
       description: "JPA entities with proper constraints and audit fields. At WebQ, every data model follows our engineering playbook — unique indexes, non-nullable fields, and Flyway-managed migrations for safe schema evolution.",
       lines: [
         '@Entity',
@@ -146,7 +146,7 @@ const springBoot: TechSnippetData = {
       title: "application.yml",
       language: "YAML",
       badge: "🛠️ Production Config",
-      badgeColor: "#89b4fa",
+      badgeColor: "#0070C0",
       description: "Environment-driven config with externalized secrets and Actuator endpoints. At WebQ, we templatize configs per environment (dev/staging/prod) with Vault-backed secrets and health checks wired into our monitoring stack.",
       lines: [
         'spring:',
@@ -173,7 +173,7 @@ const springBoot: TechSnippetData = {
       title: "GlobalExceptionHandler.java",
       language: "Java",
       badge: "🛡️ Error Handling",
-      badgeColor: "#89b4fa",
+      badgeColor: "#0070C0",
       description: "Centralized exception handling with structured error responses. At WebQ, we implement a standardized error contract across all microservices — consistent codes, messages, and traceability IDs that simplify debugging for clients.",
       lines: [
         '@ControllerAdvice',
@@ -203,7 +203,7 @@ const springBoot: TechSnippetData = {
       title: "UserServiceTest.java",
       language: "Java",
       badge: "🧪 Testing",
-      badgeColor: "#89b4fa",
+      badgeColor: "#0070C0",
       description: "Integration tests verifying API contracts and JSON structure. At WebQ, we enforce 85%+ test coverage with CI-gated builds — every PR runs automated tests against staging databases before merge.",
       lines: [
         '@SpringBootTest',
@@ -231,7 +231,7 @@ const springBoot: TechSnippetData = {
       title: "LoggingAspect.java",
       language: "Java",
       badge: "📊 Logging",
-      badgeColor: "#89b4fa",
+      badgeColor: "#0070C0",
       description: "AOP-based structured logging with correlation IDs. At WebQ, we pipe all logs into our ELK stack with distributed tracing — giving ops teams full request visibility across microservices in under 30 seconds.",
       lines: [
         '@Aspect',
@@ -262,7 +262,7 @@ const springBoot: TechSnippetData = {
       title: "UserEventPublisher.java",
       language: "Java",
       badge: "📡 Event-Driven",
-      badgeColor: "#89b4fa",
+      badgeColor: "#0070C0",
       description: "Decoupled architecture using domain events with async listeners. At WebQ, we design event-driven systems with Kafka/RabbitMQ backing — enabling independent scaling of notification, audit, and analytics pipelines.",
       lines: [
         '@Service',
@@ -319,7 +319,7 @@ const react: TechSnippetData = {
       title: "AuthProvider.tsx",
       language: "TypeScript",
       badge: "🔒 Secure Code",
-      badgeColor: "#89b4fa",
+      badgeColor: "#0070C0",
       description: "Context-based auth with protected routes and token refresh. At WebQ, we implement OAuth2/PKCE flows with automatic token rotation and session persistence across tabs.",
       lines: [
         'const AuthContext = createContext<AuthState>(null);',
@@ -348,7 +348,7 @@ const react: TechSnippetData = {
       title: "useQueryOptimized.ts",
       language: "TypeScript",
       badge: "⚡ Performance",
-      badgeColor: "#89b4fa",
+      badgeColor: "#0070C0",
       description: "React Query with stale-while-revalidate and prefetching. At WebQ, we reduce API calls by 70% using intelligent cache invalidation and optimistic updates for instant UI feedback.",
       lines: [
         'export const useUsers = (page: number) => {',
@@ -375,7 +375,7 @@ const react: TechSnippetData = {
       title: "DataTable.tsx",
       language: "TSX",
       badge: "🧑‍💻 User-Friendly",
-      badgeColor: "#89b4fa",
+      badgeColor: "#0070C0",
       description: "Accessible data table with sorting, filtering, and keyboard navigation. At WebQ, we build WCAG 2.1 AA compliant components with screen reader support and focus management.",
       lines: [
         'export const DataTable = ({ data, columns }) => {',
@@ -404,7 +404,7 @@ const react: TechSnippetData = {
       title: "useForm.ts",
       language: "TypeScript",
       badge: "📐 Best Practice",
-      badgeColor: "#89b4fa",
+      badgeColor: "#0070C0",
       description: "Zod schema validation with React Hook Form. At WebQ, every form uses type-safe validation with runtime checks — preventing invalid data from reaching the API layer.",
       lines: [
         'const userSchema = z.object({',
@@ -431,7 +431,7 @@ const react: TechSnippetData = {
       title: "vite.config.ts",
       language: "TypeScript",
       badge: "🛠️ Production Config",
-      badgeColor: "#89b4fa",
+      badgeColor: "#0070C0",
       description: "Optimized Vite config with code splitting and compression. At WebQ, we configure tree-shaking, lazy routes, and CDN-ready builds that achieve 95+ Lighthouse scores.",
       lines: [
         'export default defineConfig({',
@@ -460,7 +460,7 @@ const react: TechSnippetData = {
       title: "ErrorBoundary.tsx",
       language: "TSX",
       badge: "🛡️ Error Handling",
-      badgeColor: "#89b4fa",
+      badgeColor: "#0070C0",
       description: "Graceful error boundaries with fallback UI and error reporting. At WebQ, we wrap every route in error boundaries that log to Sentry and show user-friendly recovery options.",
       lines: [
         'class ErrorBoundary extends Component {',
@@ -491,7 +491,7 @@ const react: TechSnippetData = {
       title: "App.test.tsx",
       language: "TSX",
       badge: "🧪 Testing",
-      badgeColor: "#89b4fa",
+      badgeColor: "#0070C0",
       description: "Component testing with React Testing Library and user events. At WebQ, we test user behavior, not implementation — ensuring components work as real users interact with them.",
       lines: [
         'describe("UserProfile", () => {',
@@ -520,7 +520,7 @@ const react: TechSnippetData = {
       title: "useAnalytics.ts",
       language: "TypeScript",
       badge: "📊 Logging",
-      badgeColor: "#89b4fa",
+      badgeColor: "#0070C0",
       description: "Custom analytics hook with page tracking and event batching. At WebQ, we instrument every user journey with privacy-first analytics — GDPR-compliant tracking with consent management.",
       lines: [
         'export const useAnalytics = () => {',
@@ -550,7 +550,7 @@ const react: TechSnippetData = {
       title: "useWebSocket.ts",
       language: "TypeScript",
       badge: "📡 Real-Time",
-      badgeColor: "#89b4fa",
+      badgeColor: "#0070C0",
       description: "WebSocket hook with auto-reconnect and message queuing. At WebQ, we build real-time dashboards with heartbeat monitoring and graceful degradation to polling when connections drop.",
       lines: [
         'export const useWebSocket = (url: string) => {',
@@ -949,7 +949,7 @@ const typescript: TechSnippetData = {
     { title: "error-types.ts", language: "TypeScript", badge: "🛡️ Error Handling", badgeColor: "#007AB8", description: "Typed error hierarchy with Result pattern. At WebQ, we replace try-catch with a type-safe Result monad — every function signature declares its failure modes, making error handling explicit and compiler-verified.", lines: ['// Result type for explicit error handling', 'type Result<T, E = Error> =', '  | { ok: true; value: T }', '  | { ok: false; error: E };', '', '// Custom error hierarchy', 'class AppError extends Error {', '  constructor(', '    message: string,', '    public code: ErrorCode,', '    public statusCode: number = 500', '  ) { super(message); }', '}', '', 'class ValidationError extends AppError {', '  constructor(public fields: FieldError[]) {', '    super("Validation failed", "VALIDATION", 400);', '  }', '}', '', 'async function createUser(', '  data: UserInput', '): Promise<Result<User, ValidationError>> {', '  const valid = schema.safeParse(data);', '  if (!valid.success) return {', '    ok: false, error: new ValidationError(valid.error)', '  };', '  return { ok: true, value: await db.create(valid.data) };', '}'] },
     { title: "type-tests.ts", language: "TypeScript", badge: "🧪 Testing", badgeColor: "#0080CC", description: "Compile-time type testing with Expect and Equal. At WebQ, we test our type utilities as rigorously as runtime code — ensuring complex generics produce correct types across edge cases.", lines: ['// Type-level testing utilities', 'type Expect<T extends true> = T;', 'type Equal<A, B> =', '  (<T>() => T extends A ? 1 : 2) extends', '  (<T>() => T extends B ? 1 : 2)', '    ? true : false;', '', '// Test cases — compile errors = failures', 'type tests = [', '  Expect<Equal<', '    ApiResponse<"/users">,', '    { users: User[]; total: number }', '  >>,', '', '  Expect<Equal<', '    FormField<{ name: string; age: number }>,', '    { name: { type: "text" }; age: { type: "number" } }', '  >>,', '', '  // Ensures never for invalid routes', '  Expect<Equal<', '    ApiResponse<"/invalid">, never', '  >>,', '];'] },
     { title: "logging-types.ts", language: "TypeScript", badge: "📋 Logging", badgeColor: "#0090D6", description: "Typed structured logging with log level enforcement. At WebQ, we define log schemas as TypeScript interfaces — ensuring every log entry includes required context fields for downstream analysis.", lines: ['interface LogEntry {', '  level: "debug" | "info" | "warn" | "error";', '  message: string;', '  service: string;', '  timestamp: string;', '  correlationId?: string;', '  metadata?: Record<string, unknown>;', '}', '', 'interface Logger {', '  debug(msg: string, meta?: LogMeta): void;', '  info(msg: string, meta?: LogMeta): void;', '  warn(msg: string, meta?: LogMeta): void;', '  error(msg: string, err: Error,', '    meta?: LogMeta): void;', '}', '', 'function createLogger(', '  config: LoggerConfig', '): Logger {', '  return Object.fromEntries(', '    LOG_LEVELS.map(level => [level,', '      (msg, ...args) => ship({ level, msg, ...args })', '    ])', '  ) as Logger;', '}'] },
-    { title: "utility-types.ts", language: "TypeScript", badge: "🔧 Utility Types", badgeColor: "#89b4fa", description: "Advanced utility types for real-world patterns. At WebQ, we maintain a shared utility type library — DeepPartial, StrictOmit, and PathValue types that eliminate boilerplate across 50+ projects.", lines: ['// Deep partial for nested updates', 'type DeepPartial<T> = {', '  [P in keyof T]?: T[P] extends object', '    ? DeepPartial<T[P]>', '    : T[P];', '};', '', '// Strict Omit that errors on invalid keys', 'type StrictOmit<T, K extends keyof T> =', '  Pick<T, Exclude<keyof T, K>>;', '', '// Path-based access for nested objects', 'type PathValue<T, P extends string> =', '  P extends `${infer K}.${infer Rest}`', '    ? K extends keyof T', '      ? PathValue<T[K], Rest>', '      : never', '    : P extends keyof T ? T[P] : never;', '', '// Usage:', 'type Email = PathValue<User, "contact.email">;', '// Result: string'] },
+    { title: "utility-types.ts", language: "TypeScript", badge: "🔧 Utility Types", badgeColor: "#0070C0", description: "Advanced utility types for real-world patterns. At WebQ, we maintain a shared utility type library — DeepPartial, StrictOmit, and PathValue types that eliminate boilerplate across 50+ projects.", lines: ['// Deep partial for nested updates', 'type DeepPartial<T> = {', '  [P in keyof T]?: T[P] extends object', '    ? DeepPartial<T[P]>', '    : T[P];', '};', '', '// Strict Omit that errors on invalid keys', 'type StrictOmit<T, K extends keyof T> =', '  Pick<T, Exclude<keyof T, K>>;', '', '// Path-based access for nested objects', 'type PathValue<T, P extends string> =', '  P extends `${infer K}.${infer Rest}`', '    ? K extends keyof T', '      ? PathValue<T[K], Rest>', '      : never', '    : P extends keyof T ? T[P] : never;', '', '// Usage:', 'type Email = PathValue<User, "contact.email">;', '// Result: string'] },
     { title: "di-container.ts", language: "TypeScript", badge: "🏗️ Architecture", badgeColor: "#1A6BAF", description: "Type-safe dependency injection container. At WebQ, we use TypeScript's type system to build DI containers that resolve dependencies at compile time — no reflection, no decorators, full type safety.", lines: ['interface ServiceMap {', '  database: Database;', '  cache: CacheService;', '  auth: AuthService;', '  logger: Logger;', '}', '', 'class Container {', '  private services = new Map<string, unknown>();', '', '  register<K extends keyof ServiceMap>(', '    key: K, factory: () => ServiceMap[K]', '  ): void {', '    this.services.set(key, factory);', '  }', '', '  resolve<K extends keyof ServiceMap>(', '    key: K', '  ): ServiceMap[K] {', '    const factory = this.services.get(key);', '    if (!factory) throw new Error(', '      `Service ${key} not registered`', '    );', '    return (factory as () => ServiceMap[K])();', '  }', '}'] },
   ],
   metrics: [
