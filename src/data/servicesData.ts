@@ -83,7 +83,7 @@ export const servicesData: ServiceDetail[] = [
     slug: "ai-machine-learning",
     name: "AI & Machine Learning",
     shortDescription: "Intelligent solutions powered by cutting-edge AI and ML technologies.",
-    fullDescription: "Harness the power of artificial intelligence to automate processes, gain insights, and create innovative products. Our AI/ML team builds custom models and implements proven AI solutions that deliver measurable business outcomes.",
+    fullDescription: "Harness the power of artificial intelligence to automate processes, gain insights, and create innovative products that transform how your business operates. Our AI/ML team builds custom models and implements proven AI solutions that deliver measurable business outcomes across industries. For businesses, AI-powered automation typically delivers 3-5x ROI within the first year through reduced manual effort, improved accuracy, and faster decision-making. From predictive analytics and recommendation engines to anomaly detection and computer vision, we cover the full spectrum of ML capabilities. Our MLOps practices ensure models maintain accuracy over time with continuous monitoring and retraining. We leverage cutting-edge frameworks and AI-accelerated development to build production-ready ML systems — turning your data into intelligent applications that drive competitive advantage.",
     icon: Brain,
     category: "Artificial Intelligence",
     features: [
@@ -138,7 +138,7 @@ export const servicesData: ServiceDetail[] = [
     slug: "generative-ai-solutions",
     name: "Generative AI Solutions",
     shortDescription: "Build intelligent applications powered by GPT, Claude, and other large language models.",
-    fullDescription: "Leverage the latest generative AI technologies to transform your business operations. From custom chatbots to content generation systems, we help you harness the power of LLMs to automate complex tasks, enhance customer experiences, and drive innovation.",
+    fullDescription: "Leverage the latest generative AI technologies to transform your business operations at scale. From custom chatbots and content generation systems to RAG-powered knowledge assistants, we help you harness the power of large language models to automate complex tasks, enhance customer experiences, and drive innovation. For businesses, generative AI can automate 60-70% of knowledge work — from drafting documents and analyzing contracts to answering customer queries with human-like accuracy. Our RAG architectures ground AI responses in your proprietary data, ensuring accurate and relevant outputs. Prompt engineering and safety guardrails ensure responsible AI usage aligned with brand voice and compliance. We leverage cutting-edge LLM technologies and AI-powered quality monitoring to build enterprise-grade generative AI solutions — augmenting your workforce with capabilities that drive productivity and innovation.",
     icon: Sparkles,
     category: "Artificial Intelligence",
     features: [
@@ -191,7 +191,7 @@ export const servicesData: ServiceDetail[] = [
     slug: "ai-process-automation",
     name: "AI Process Automation",
     shortDescription: "Intelligent automation combining AI with RPA for end-to-end process optimization.",
-    fullDescription: "Go beyond traditional automation with AI-powered intelligent process automation. We combine robotic process automation (RPA) with machine learning to create smart workflows that learn, adapt, and make decisions, transforming complex business processes.",
+    fullDescription: "Go beyond traditional automation with AI-powered intelligent process automation that combines robotic process automation (RPA) with machine learning to create smart workflows that learn, adapt, and make decisions autonomously. We transform complex business processes from manual and error-prone to intelligent and self-optimizing. For businesses, intelligent automation delivers 40-60% cost reduction in process operations while improving accuracy to near-perfect levels. Document processing, email triage, and decision workflows that once required human judgment can now be handled by AI with appropriate oversight. Our solutions integrate seamlessly with existing enterprise systems without disruptive rearchitecture. We leverage AI-powered workflow optimization, intelligent document processing, and adaptive decision engines to build automation that continuously improves — delivering operational excellence that scales with your business growth.",
     icon: Workflow,
     category: "Artificial Intelligence",
     features: [
@@ -402,7 +402,7 @@ export const servicesData: ServiceDetail[] = [
     slug: "cloud-migration",
     name: "Cloud Migration & Deployment",
     shortDescription: "Seamless transition from legacy systems to modern cloud infrastructure.",
-    fullDescription: "Accelerate your digital transformation with our comprehensive cloud migration services. We help you move to the cloud strategically, minimizing risk and maximizing the benefits of cloud computing including scalability, cost optimization, and improved performance.",
+    fullDescription: "Accelerate your digital transformation with comprehensive cloud migration services that minimize risk and maximize the benefits of cloud computing. We help you move to the cloud strategically — from assessment and planning to execution and optimization — ensuring improved scalability, cost optimization, and enhanced performance. For businesses, cloud migration eliminates capital expenditure on aging hardware and provides elastic scalability that matches demand in real-time. Our Well-Architected reviews ensure every migrated workload meets security, reliability, and cost benchmarks. Automated discovery tools map dependencies to prevent migration surprises. We leverage AI-powered migration planning, intelligent resource sizing, and automated testing to reduce migration timelines by up to 50% — delivering seamless cloud transitions with zero data loss and minimal downtime.",
     icon: Cloud,
     category: "Cloud & Infrastructure",
     features: [
@@ -555,7 +555,7 @@ export const servicesData: ServiceDetail[] = [
     slug: "data-engineering",
     name: "Data Engineering",
     shortDescription: "Build robust data pipelines and warehousing solutions.",
-    fullDescription: "Unlock the value of your data with modern data engineering solutions. We design and build scalable data pipelines, warehouses, and lakes that enable real-time analytics and support data-driven decision making across your organization.",
+    fullDescription: "Unlock the value of your data with modern data engineering solutions that transform raw information into actionable intelligence. We design and build scalable data pipelines, warehouses, and data lakes that enable real-time analytics, support AI/ML initiatives, and drive data-driven decision making across your organization. For businesses, unified data platforms eliminate costly data silos — our clients typically see 20-30% improvement in operational efficiency within months of implementation. Modern data stack approaches using dbt, Airflow, and cloud warehouses ensure data quality, governance, and self-service access. Real-time streaming architectures enable immediate business reactions to events. We leverage AI-powered data quality monitoring, automated pipeline optimization, and intelligent anomaly detection to build trustworthy data infrastructure — delivering the foundation for analytics and AI that drives measurable business outcomes.",
     icon: Database,
     category: "Data & Analytics",
     features: [
@@ -606,7 +606,7 @@ export const servicesData: ServiceDetail[] = [
     slug: "business-intelligence",
     name: "Business Intelligence",
     shortDescription: "Transform data into actionable insights for better decision-making.",
-    fullDescription: "Empower your organization with powerful business intelligence solutions. We build custom dashboards, reports, and analytics platforms that make data accessible and actionable for stakeholders at all levels.",
+    fullDescription: "Empower your organization with powerful business intelligence solutions that make data accessible and actionable for stakeholders at all levels. We build custom dashboards, automated reports, and self-service analytics platforms that transform complex datasets into clear, compelling visual narratives. For businesses, organizations with mature BI capabilities make decisions 5x faster and see measurable improvements in revenue and operational efficiency. Our approach democratizes data access — empowering business users to explore data independently without IT bottlenecks. Embedded analytics bring insights directly into existing workflows and customer-facing products. We leverage AI-powered insight discovery, natural language querying, and automated report generation to maximize BI adoption — turning data into a strategic asset that drives confident, timely decisions across every level of your organization.",
     icon: BarChart3,
     category: "Data & Analytics",
     features: [
@@ -657,7 +657,7 @@ export const servicesData: ServiceDetail[] = [
     slug: "cybersecurity",
     name: "Cybersecurity Services",
     shortDescription: "Protect your digital assets with enterprise-grade security solutions.",
-    fullDescription: "Safeguard your business from evolving cyber threats with our comprehensive security services. From vulnerability assessments to managed security operations, we help you build a robust security posture that protects your assets and reputation.",
+    fullDescription: "Safeguard your business from evolving cyber threats with comprehensive security services that cover every aspect of your digital footprint. From vulnerability assessments and penetration testing to managed security operations and incident response, we help you build a robust security posture that protects your assets and reputation. For businesses, the average cost of a data breach exceeds $4.45 million — our proactive security approach identifies and mitigates vulnerabilities before attackers can exploit them. 24/7 SOC monitoring provides continuous threat detection with mean time to detect under 15 minutes. Employee security training reduces phishing susceptibility by up to 90%. We leverage AI-enhanced threat detection, automated incident response, and intelligent vulnerability prioritization to deliver comprehensive cybersecurity — protecting your organization while enabling confident digital transformation.",
     icon: Shield,
     category: "Security",
     features: [
@@ -708,7 +708,7 @@ export const servicesData: ServiceDetail[] = [
     slug: "production-support",
     name: "Production Support",
     shortDescription: "24/7 application monitoring, incident response, and optimization.",
-    fullDescription: "Keep your applications running smoothly with our production support services. Our experienced team provides round-the-clock monitoring, rapid incident response, and continuous optimization to ensure your systems deliver consistent performance.",
+    fullDescription: "Keep your applications running smoothly with production support services backed by experienced teams and intelligent monitoring. We provide round-the-clock monitoring, rapid incident response, and continuous optimization to ensure your systems deliver consistent performance and availability. For businesses, unplanned downtime costs an average of $5,600 per minute — our proactive monitoring and structured escalation processes prevent incidents before they impact revenue and customer trust. Tiered support (L1-L3) ensures the right expertise handles each issue efficiently. Automated runbooks accelerate resolution of common scenarios. We leverage AI-enhanced incident correlation, predictive alerting, and automated root cause analysis to continuously improve service reliability — delivering production stability that gives your business the confidence to grow without technology constraints.",
     icon: Headphones,
     category: "Support & Consulting",
     features: [
@@ -861,7 +861,7 @@ export const servicesData: ServiceDetail[] = [
     slug: "api-development",
     name: "API Development & Integration",
     shortDescription: "Seamless connectivity between your systems and third-party services.",
-    fullDescription: "Build robust APIs and integrations that connect your systems and unlock new capabilities. We design and develop scalable, secure APIs that enable seamless data flow and power modern applications.",
+    fullDescription: "Build robust APIs and integrations that connect your systems, unlock new capabilities, and power modern digital experiences. We design and develop scalable, secure APIs using RESTful and GraphQL architectures that enable seamless data flow across your organization and partner ecosystem. For businesses, well-designed APIs accelerate partner onboarding from weeks to days and create new revenue opportunities through API monetization. Comprehensive documentation and developer portals drive external adoption. API governance frameworks ensure consistency, security, and performance as your ecosystem grows. We leverage AI-powered API design optimization, intelligent error handling, and automated performance monitoring to build robust integration platforms — connecting your business systems for seamless operations and accelerated digital transformation.",
     icon: Layers,
     category: "Development & Engineering",
     features: [
@@ -1065,7 +1065,7 @@ export const servicesData: ServiceDetail[] = [
     slug: "data-privacy",
     name: "Data Privacy",
     shortDescription: "Protect sensitive data and ensure privacy compliance across your organization.",
-    fullDescription: "Safeguard personal and sensitive data with comprehensive privacy programs. We help organizations implement data protection strategies, privacy-by-design principles, and compliance frameworks that protect customer trust while enabling data-driven business operations.",
+    fullDescription: "Safeguard personal and sensitive data with comprehensive privacy programs that protect customer trust while enabling data-driven business operations. We help organizations implement data protection strategies, privacy-by-design principles, and compliance frameworks for GDPR, CCPA, HIPAA, and emerging privacy regulations worldwide. For businesses, privacy breaches result in an average $4.45 million in costs plus immeasurable brand damage — our proactive privacy programs prevent incidents while demonstrating commitment to customer trust. Data mapping and inventory identify all personal data across your systems. Privacy impact assessments evaluate risks before new projects launch. Consent management and data subject request automation ensure ongoing compliance. We leverage AI-powered data discovery, intelligent classification, and automated compliance monitoring to build practical privacy programs — protecting personal data while enabling the data-driven operations your business needs to compete.",
     icon: Shield,
     category: "Security",
     features: [
@@ -1116,7 +1116,7 @@ export const servicesData: ServiceDetail[] = [
     slug: "cloud-security",
     name: "Cloud Security",
     shortDescription: "Secure your cloud infrastructure across AWS, Azure, and GCP environments.",
-    fullDescription: "Protect your cloud workloads with comprehensive security solutions designed for modern cloud environments. We help organizations secure their AWS, Azure, and Google Cloud infrastructure through architecture reviews, configuration hardening, continuous monitoring, and cloud-native security tooling.",
+    fullDescription: "Protect your cloud workloads with comprehensive security solutions designed for modern multi-cloud environments across AWS, Azure, and Google Cloud. We help organizations secure their cloud infrastructure through architecture reviews, configuration hardening, continuous monitoring, and cloud-native security tooling. For businesses, cloud misconfigurations are the #1 cause of cloud breaches — our automated scanning identifies and remediates vulnerabilities across thousands of resources in minutes. CSPM and CWPP provide continuous posture management and runtime protection. CIS benchmark compliance ensures industry-standard hardening. We leverage AI-powered anomaly detection, automated remediation, and intelligent compliance mapping to maintain cloud security at scale — enabling rapid cloud adoption with confidence that your infrastructure meets the highest security and compliance standards.",
     icon: Cloud,
     category: "Security",
     features: [
