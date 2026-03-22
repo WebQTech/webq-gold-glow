@@ -130,7 +130,7 @@ const SolutionDetail = () => {
               >
                 <div className="flex items-center gap-2 mb-5">
                   <Layers className="w-5 h-5 text-primary" />
-                  <h2 className="text-xl lg:text-2xl font-bold text-foreground">What We Deliver</h2>
+                  <h2 className="text-2xl lg:text-3xl font-bold text-foreground">What We Deliver</h2>
                 </div>
                 <ul className="space-y-3">
                   {solution.features.map((feature, index) => (
