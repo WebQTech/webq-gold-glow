@@ -1,4 +1,3 @@
-import { useState, useMemo } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { Footer } from "@/components/Footer";
