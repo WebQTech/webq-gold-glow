@@ -65,7 +65,7 @@ const springBootSnippets = [
     language: "Java",
     badge: "🧑‍💻 User-Friendly API",
     badgeColor: "#a6e3a1",
-    description: "Clean REST endpoints with proper HTTP status codes, validated request bodies, and paginated responses — making the API intuitive for frontend consumers.",
+    description: "Clean REST endpoints with validation and proper status codes. At WebQ, we design APIs contract-first using OpenAPI specs — ensuring frontend and backend teams work in parallel with zero ambiguity.",
     lines: [
       '@RestController',
       '@RequestMapping("/api/users")',
