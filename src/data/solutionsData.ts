@@ -2004,6 +2004,117 @@ export const solutionsData: SolutionDetail[] = [
       { question: "How do you handle data pipeline failures?", answer: "We implement idempotent pipelines with retry logic, dead-letter queues, comprehensive alerting, data quality checks at each stage, and automated rollback capabilities to ensure reliability." }
     ]
   }
+  {
+    slug: "procurement-services",
+    name: "IT Procurement Services",
+    shortDescription: "Strategic sourcing and procurement of technology products, services, and solutions at competitive prices.",
+    fullDescription: "Our IT Procurement Services streamline the acquisition of hardware, software, and technology services through strategic vendor partnerships, competitive bidding, and centralized purchasing. We leverage volume discounts, negotiate favorable terms, and manage the entire procurement lifecycle — from requirements gathering and vendor evaluation to purchase order management and delivery coordination.",
+    icon: ShoppingCart,
+    features: [
+      "Strategic vendor evaluation and selection",
+      "Volume discount negotiation and cost optimization",
+      "Purchase order management and tracking",
+      "Vendor relationship management",
+      "Contract negotiation and compliance",
+      "Asset lifecycle planning and budgeting"
+    ],
+    benefits: [
+      "Reduce procurement costs by 15–30% through volume leverage",
+      "Streamline purchasing workflows and approval processes",
+      "Access to preferred pricing from top-tier technology vendors",
+      "Ensure compliance with organizational procurement policies",
+      "Reduce time-to-delivery for critical technology purchases",
+      "Centralized visibility into all IT spending"
+    ],
+    technologies: ["SAP Ariba", "Coupa", "Oracle Procurement Cloud", "Jaggaer", "ServiceNow ITAM", "Ivalua"],
+    caseStudies: [
+      {
+        company: "National Retail Chain",
+        industry: "Retail",
+        challenge: "Decentralized purchasing across 200+ locations led to inconsistent pricing and vendor sprawl.",
+        solution: "Implemented a centralized procurement platform with pre-negotiated vendor catalogs and automated approval workflows.",
+        results: ["22% reduction in IT procurement costs", "60% faster purchase-to-delivery cycle", "Consolidated vendor base from 150+ to 40 preferred partners"]
+      }
+    ],
+    faqs: [
+      { question: "How do you negotiate better pricing?", answer: "We aggregate demand across clients and leverage long-standing vendor partnerships to secure volume discounts, enterprise pricing tiers, and favorable contract terms that individual organizations typically cannot access." },
+      { question: "Do you handle international procurement?", answer: "Yes, we manage global procurement including import/export compliance, currency management, regional vendor sourcing, and logistics coordination for multinational deployments." }
+    ]
+  },
+  {
+    slug: "software-licensing",
+    name: "Software Licensing Management",
+    shortDescription: "Comprehensive software license management, optimization, and compliance services.",
+    fullDescription: "Our Software Licensing Management services help organizations optimize their software investments, ensure license compliance, and reduce costs. We provide end-to-end license lifecycle management — from initial assessment and right-sizing to renewal negotiation and ongoing compliance monitoring. Our experts navigate complex licensing models across major vendors including Microsoft, Oracle, SAP, Adobe, and more.",
+    icon: FileText,
+    features: [
+      "Software asset inventory and discovery",
+      "License compliance auditing and remediation",
+      "Renewal management and negotiation",
+      "Cloud subscription optimization (SaaS, IaaS, PaaS)",
+      "True-up and reconciliation support",
+      "Licensing model advisory (perpetual, subscription, hybrid)"
+    ],
+    benefits: [
+      "Avoid costly audit penalties and compliance fines",
+      "Reduce software spend by 20–35% through right-sizing",
+      "Eliminate shelfware and unused license waste",
+      "Proactive renewal management prevents lapses",
+      "Expert guidance on complex enterprise licensing agreements",
+      "Full visibility into software entitlements and usage"
+    ],
+    technologies: ["Flexera", "Snow Software", "ServiceNow SAM", "Zylo", "Aspera SmartTrack", "Microsoft VLSC"],
+    caseStudies: [
+      {
+        company: "Global Financial Institution",
+        industry: "Financial Services",
+        challenge: "Facing a major vendor audit with no visibility into actual license usage across 15,000 endpoints.",
+        solution: "Deployed automated discovery tools, reconciled entitlements, and negotiated a compliant position with the vendor before the audit deadline.",
+        results: ["Avoided $4.2M in potential audit penalties", "Identified $1.8M in unused licenses for reallocation", "Established ongoing compliance monitoring program"]
+      }
+    ],
+    faqs: [
+      { question: "How do you handle cloud and SaaS licensing?", answer: "We monitor SaaS subscription usage, identify underutilized seats, optimize tier selections, and manage renewals to ensure you're only paying for what you actually use across platforms like Microsoft 365, Salesforce, and Adobe Creative Cloud." },
+      { question: "Can you help with vendor audit defense?", answer: "Absolutely. We provide pre-audit assessments, license position analysis, remediation planning, and direct negotiation support to minimize exposure and achieve the best possible outcome during vendor audits." }
+    ]
+  },
+  {
+    slug: "bulk-hardware-services",
+    name: "Bulk Hardware Services",
+    shortDescription: "Large-scale hardware procurement, deployment, and lifecycle management for enterprise environments.",
+    fullDescription: "Our Bulk Hardware Services provide end-to-end management of large-scale hardware acquisitions — from sourcing and configuration to deployment, maintenance, and end-of-life disposal. Whether you're refreshing thousands of endpoints, building out data center infrastructure, or equipping a new office, we handle logistics, imaging, staging, and rollout with precision and efficiency.",
+    icon: HardDrive,
+    features: [
+      "Bulk hardware sourcing and competitive bidding",
+      "Pre-configured imaging and staging services",
+      "Large-scale deployment and rollout management",
+      "Hardware lifecycle and warranty management",
+      "Asset tagging, tracking, and inventory management",
+      "Certified IT asset disposal (ITAD) and recycling"
+    ],
+    benefits: [
+      "Significant volume discounts on enterprise hardware",
+      "Reduced deployment time with pre-staging and imaging",
+      "Simplified logistics for multi-site rollouts",
+      "Extend hardware lifespan with proactive maintenance programs",
+      "Environmentally responsible disposal and recycling",
+      "Single point of contact for all hardware needs"
+    ],
+    technologies: ["Dell Technologies", "HP Enterprise", "Lenovo", "Cisco", "SCCM/Intune", "ManageEngine"],
+    caseStudies: [
+      {
+        company: "Healthcare Network",
+        industry: "Healthcare",
+        challenge: "Needed to deploy 8,000 new workstations across 45 clinical locations within a 90-day window during an EMR migration.",
+        solution: "Coordinated bulk procurement, centralized imaging facility, and phased rollout with minimal disruption to clinical operations.",
+        results: ["8,000 workstations deployed in 78 days", "Zero unplanned clinical downtime during rollout", "18% cost savings vs. individual site procurement"]
+      }
+    ],
+    faqs: [
+      { question: "What hardware brands do you support?", answer: "We partner with all major enterprise hardware manufacturers including Dell, HP, Lenovo, Cisco, Apple, and others. We're vendor-agnostic and recommend the best fit based on your requirements, budget, and existing environment." },
+      { question: "How do you handle hardware disposal?", answer: "We provide certified IT Asset Disposal (ITAD) services including data sanitization (DoD 5220.22-M or NIST 800-88 compliant), certified destruction when required, environmentally responsible recycling, and full chain-of-custody documentation." }
+    ]
+  }
 ];
 
 export const getSolutionBySlug = (slug: string): SolutionDetail | undefined => {
