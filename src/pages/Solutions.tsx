@@ -34,7 +34,7 @@ const solutionCategories = [
   },
   {
     title: "Operations & Support",
-    items: ["production-support", "managed-services", "it-service-management", "it-asset-management", "disaster-recovery"],
+    items: ["production-support", "managed-services", "it-service-management", "it-asset-management", "disaster-recovery", "procurement-services", "software-licensing", "bulk-hardware-services"],
   },
   {
     title: "Enterprise Application Management",
