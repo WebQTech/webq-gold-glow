@@ -515,7 +515,7 @@ export const technologiesData: TechnologyDetail[] = [
     category: "AI & Machine Learning",
     icon: Sparkles,
     shortDescription: "Distributed ML library for large-scale data processing.",
-    fullDescription: "Spark MLlib enables machine learning on massive datasets using distributed computing. We use it for recommendation engines, large-scale feature engineering, and batch predictions.",
+    fullDescription: "Spark MLlib enables machine learning on massive datasets using distributed computing that processes terabytes of data across clusters of machines. We use it for recommendation engines, large-scale feature engineering, batch predictions, and streaming ML that require processing volumes beyond single-machine capacity. For businesses, MLlib eliminates the data size limitations that prevent traditional ML tools from handling enterprise-scale workloads. Its DataFrame-based API provides familiar abstractions for data scientists, while integration with Spark's ecosystem enables end-to-end pipelines from data ingestion to model serving. Databricks' managed Spark environment simplifies cluster management and collaboration. We leverage AI-powered distributed training optimization, automated feature engineering, and intelligent resource allocation to deliver large-scale ML solutions that transform massive datasets into competitive\u00A0intelligence.",
     useCases: ["Large-scale Recommendations", "Batch Predictions", "Feature Engineering", "Graph Analytics", "Streaming ML"],
     features: ["Distributed computing", "DataFrame API", "ML pipelines", "Graph processing", "Streaming support"],
     relatedTechnologies: ["Python", "Databricks", "Apache Kafka"],
