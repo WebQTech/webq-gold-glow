@@ -482,7 +482,7 @@ export const technologiesData: TechnologyDetail[] = [
     category: "AI & Machine Learning",
     icon: Link2,
     shortDescription: "Framework for building LLM-powered applications.",
-    fullDescription: "LangChain provides the building blocks for RAG pipelines, AI agents, and LLM-powered workflows. We use it to connect language models with enterprise data and tools.",
+    fullDescription: "LangChain provides the essential building blocks for RAG pipelines, AI agents, and LLM-powered workflows that connect language models with enterprise data and tools. For businesses, LangChain transforms generic AI models into domain-specific assistants that understand your company's data, policies, and terminology — delivering accurate, context-aware responses rather than generic outputs. Its agent framework enables AI systems that can autonomously research, analyze, and take actions across multiple tools and databases. Vector store integrations enable semantic search across millions of documents with sub-second response times. Memory management creates conversational experiences that maintain context across long interactions. We leverage AI-powered pipeline optimization and intelligent chain composition to build enterprise-grade AI applications that deliver measurable ROI — turning organizational knowledge into accessible, actionable\u00A0intelligence.",
     useCases: ["RAG Applications", "AI Agents", "Document Q&A", "Conversational AI", "Workflow Automation"],
     features: ["Chain composition", "Agent framework", "Vector store integration", "Memory management", "Tool use"],
     relatedTechnologies: ["OpenAI", "Python", "Hugging Face"],
