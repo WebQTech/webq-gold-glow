@@ -4,6 +4,75 @@ import { ArrowLeft, ArrowRight, Check, ChevronRight, Home, Zap } from "lucide-re
 import { GoBackButton } from "@/components/GoBackButton";
 import { Footer } from "@/components/Footer";
 import { getTechnologyBySlug, technologiesData } from "@/data/technologiesData";
+import { CodeTypingAnimation } from "@/components/CodeTypingAnimation";
+
+const springBootSnippets = [
+  {
+    title: "UserController.java",
+    language: "Java",
+    lines: [
+      '@RestController',
+      '@RequestMapping("/api/users")',
+      'public class UserController {',
+      '',
+      '    @Autowired',
+      '    private UserService userService;',
+      '',
+      '    @GetMapping("/{id}")',
+      '    public ResponseEntity<User> getUser(',
+      '            @PathVariable Long id) {',
+      '        return ResponseEntity.ok(',
+      '            userService.findById(id));',
+      '    }',
+      '}',
+    ],
+  },
+  {
+    title: "UserService.java",
+    language: "Java",
+    lines: [
+      '@Service',
+      'public class UserService {',
+      '',
+      '    @Autowired',
+      '    private UserRepository repo;',
+      '',
+      '    public User findById(Long id) {',
+      '        return repo.findById(id)',
+      '            .orElseThrow(() ->',
+      '                new ResourceNotFoundException(',
+      '                    "User not found: " + id));',
+      '    }',
+      '',
+      '    public List<User> findAll() {',
+      '        return repo.findAll();',
+      '    }',
+      '}',
+    ],
+  },
+  {
+    title: "User.java",
+    language: "Java",
+    lines: [
+      '@Entity',
+      '@Table(name = "users")',
+      'public class User {',
+      '',
+      '    @Id',
+      '    @GeneratedValue',
+      '    private Long id;',
+      '',
+      '    @Column(nullable = false)',
+      '    private String name;',
+      '',
+      '    @Column(unique = true)',
+      '    private String email;',
+      '',
+      '    // getters and setters',
+      '}',
+    ],
+  },
+];
 
 const TechnologyDetail = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -51,21 +120,33 @@ const TechnologyDetail = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="max-w-3xl"
+              className={slug === "spring-boot" ? "grid lg:grid-cols-2 gap-10 items-start" : "max-w-3xl"}
             >
-              <span className="text-xs font-black tracking-widest text-primary uppercase">{tech.category}</span>
-              <div className="flex items-center gap-4 mt-3">
-                <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center">
-                  <Icon className="w-7 h-7 text-primary" />
+              <div>
+                <span className="text-xs font-black tracking-widest text-primary uppercase">{tech.category}</span>
+                <div className="flex items-center gap-4 mt-3">
+                  <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center">
+                    <Icon className="w-7 h-7 text-primary" />
+                  </div>
+                  <h1 className="text-4xl lg:text-5xl font-bold text-foreground">{tech.name}</h1>
                 </div>
-                <h1 className="text-4xl lg:text-5xl font-bold text-foreground">{tech.name}</h1>
+                <p className="mt-6 text-lg text-muted-foreground">{tech.fullDescription}</p>
+                <div className="mt-8">
+                  <Link to="/contact" className="btn-primary inline-flex items-center gap-2">
+                    Discuss Your Project <ArrowRight className="w-4 h-4" />
+                  </Link>
+                </div>
               </div>
-              <p className="mt-6 text-lg text-muted-foreground">{tech.fullDescription}</p>
-              <div className="mt-8">
-                <Link to="/contact" className="btn-primary inline-flex items-center gap-2">
-                  Discuss Your Project <ArrowRight className="w-4 h-4" />
-                </Link>
-              </div>
+
+              {slug === "spring-boot" && (
+                <motion.div
+                  initial={{ opacity: 0, x: 30 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6, delay: 0.3 }}
+                >
+                  <CodeTypingAnimation snippets={springBootSnippets} />
+                </motion.div>
+              )}
             </motion.div>
           </div>
         </section>
