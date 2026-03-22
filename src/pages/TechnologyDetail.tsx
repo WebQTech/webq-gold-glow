@@ -1,6 +1,7 @@
 import { useParams, Link, Navigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowLeft, ArrowRight, Check, ChevronRight, Home, Zap } from "lucide-react";
+import { GoBackButton } from "@/components/GoBackButton";
 import { Footer } from "@/components/Footer";
 import { getTechnologyBySlug, technologiesData } from "@/data/technologiesData";
 
