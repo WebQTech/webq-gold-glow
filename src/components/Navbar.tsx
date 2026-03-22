@@ -40,7 +40,35 @@ export const Navbar = () => {
         Skip to main content
       </a>
 
-      <nav className="sticky top-0 z-50 bg-background shadow-sm">
+      <div className="sticky top-0 z-50">
+        {/* Top Utility Bar */}
+        <div className="hidden lg:block bg-muted/50 border-b border-border/50">
+          <div className="container mx-auto px-6 lg:px-12">
+            <div className="flex items-center justify-end h-9 gap-1">
+              <Link
+                to="/careers"
+                className="text-xs font-medium text-muted-foreground hover:text-primary transition-colors px-3 py-1 flex items-center gap-1 no-underline"
+              >
+                Careers <ChevronDown size={12} />
+              </Link>
+              <Link
+                to="/news"
+                className="text-xs font-medium text-muted-foreground hover:text-primary transition-colors px-3 py-1 flex items-center gap-1 no-underline"
+              >
+                News <ChevronDown size={12} />
+              </Link>
+              <button className="text-xs font-medium text-muted-foreground hover:text-primary transition-colors px-3 py-1 flex items-center gap-1">
+                <Globe size={13} />
+                US-EN <ChevronDown size={12} />
+              </button>
+              <div className="ml-1">
+                <AccessibilityPanel />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <nav className="bg-background shadow-sm">
         <div className="container mx-auto px-6 lg:px-12">
           <div className="flex items-center justify-between flex-nowrap h-16 lg:h-20 gap-4">
             <Link to="/" className="flex items-center gap-3 group shrink-0">
