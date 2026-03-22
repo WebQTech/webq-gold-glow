@@ -84,19 +84,12 @@ const ServiceDetail = () => {
               animate={isHeroInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.7 }}
             >
-              <span className="text-base font-black tracking-widest text-primary uppercase">{service.category}</span>
-              <h1 className="mt-4 text-4xl lg:text-5xl font-bold text-foreground leading-tight">
+              <h1 className="text-4xl lg:text-5xl font-bold text-foreground leading-tight">
                 {service.name}
               </h1>
               <p className="mt-6 text-base text-foreground/70 text-justify leading-relaxed font-[Inter]">
                 {service.fullDescription}
               </p>
-              <div className="mt-8">
-                <Link to="/#contact" className="btn-primary inline-flex items-center gap-2">
-                  Get Started
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
-              </div>
             </motion.div>
 
             <motion.div
