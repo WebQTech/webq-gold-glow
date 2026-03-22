@@ -123,7 +123,7 @@ const springBootSnippets = [
     language: "YAML",
     badge: "🛠️ Production Config",
     badgeColor: "#cba6f7",
-    description: "Environment-driven configuration with externalized secrets, Hibernate validation mode (no auto-DDL), and Actuator health/metrics endpoints for observability.",
+    description: "Environment-driven config with externalized secrets and Actuator endpoints. At WebQ, we templatize configs per environment (dev/staging/prod) with Vault-backed secrets and health checks wired into our monitoring stack.",
     lines: [
       'spring:',
       '  datasource:',
