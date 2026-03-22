@@ -730,7 +730,7 @@ export const technologiesData: TechnologyDetail[] = [
     category: "Enterprise Platforms",
     icon: Users,
     shortDescription: "CRM platform for sales, service, and marketing.",
-    fullDescription: "We customize and extend Salesforce for CRM, CPQ, marketing automation, and customer service. Our certified developers build Apex, Lightning, and integration solutions.",
+    fullDescription: "We customize and extend Salesforce for CRM, CPQ, marketing automation, and customer service — the world's #1 CRM platform trusted by over 150,000 companies. Our certified developers build Apex, Lightning, and integration solutions that maximize Salesforce ROI. For businesses, Salesforce's 360-degree customer view unifies sales, service, and marketing data, enabling personalized experiences that drive revenue growth and customer retention. Its Flow automation eliminates manual processes, while AppExchange provides 7,000+ pre-built solutions. Einstein AI brings predictive analytics and intelligent recommendations directly into CRM workflows. The platform's scalability supports organizations from startup to Fortune 500 without re-platforming. We leverage AI-powered Salesforce optimization, automated workflow generation, and intelligent data quality management to maximize platform value — delivering CRM solutions that transform customer relationships into measurable business\u00A0growth.",
     useCases: ["CRM Implementation", "Sales Automation", "Customer Service", "Marketing Automation", "CPQ & Billing"],
     features: ["Lightning platform", "Apex development", "Flow automation", "AppExchange", "Einstein AI"],
     relatedTechnologies: ["HubSpot", "ServiceNow"],
