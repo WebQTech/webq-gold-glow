@@ -291,9 +291,9 @@ const TechnologyDetail = () => {
     <div className="min-h-screen bg-background">
       <main id="main-content" className="focus:outline-none" tabIndex={-1}>
         {/* Hero */}
-        <section className={`bg-gradient-to-b from-primary/5 to-background ${slug === "spring-boot" ? "py-4 lg:py-6" : "py-10 lg:py-16"}`}>
+        <section className={`bg-gradient-to-b from-primary/5 to-background ${slug === "spring-boot" ? "py-2 lg:py-3" : "py-10 lg:py-16"}`}>
           <div className="container mx-auto px-6 lg:px-12">
-            <div className={slug === "spring-boot" ? "flex items-center gap-4 mb-2" : "mb-4"}>
+            <div className={slug === "spring-boot" ? "flex items-center gap-4 mb-1" : "mb-4"}>
               <GoBackButton />
               <nav aria-label="Breadcrumb">
                 <ol className="flex items-center gap-1.5 text-sm text-muted-foreground">
@@ -316,19 +316,19 @@ const TechnologyDetail = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className={slug === "spring-boot" ? "grid lg:grid-cols-2 gap-8 items-start" : "max-w-3xl"}
+              className={slug === "spring-boot" ? "grid lg:grid-cols-2 gap-6 items-start" : "max-w-3xl"}
             >
               <div>
                 <span className="text-xs font-black tracking-widest text-primary uppercase">{tech.category}</span>
-                <div className="flex items-center gap-3 mt-2">
-                  <div className={`bg-primary/10 rounded-xl flex items-center justify-center ${slug === "spring-boot" ? "w-10 h-10" : "w-14 h-14"}`}>
+                <div className="flex items-center gap-3 mt-1">
+                  <div className={`bg-primary/10 rounded-xl flex items-center justify-center ${slug === "spring-boot" ? "w-9 h-9" : "w-14 h-14"}`}>
                     <Icon className={`text-primary ${slug === "spring-boot" ? "w-5 h-5" : "w-7 h-7"}`} />
                   </div>
-                  <h1 className={`font-bold text-foreground ${slug === "spring-boot" ? "text-3xl lg:text-4xl" : "text-4xl lg:text-5xl"}`}>{tech.name}</h1>
+                  <h1 className={`font-bold text-foreground ${slug === "spring-boot" ? "text-2xl lg:text-3xl" : "text-4xl lg:text-5xl"}`}>{tech.name}</h1>
                 </div>
-                <p className={`text-muted-foreground ${slug === "spring-boot" ? "mt-3 text-base" : "mt-6 text-lg"}`}>{tech.fullDescription}</p>
-                <div className={slug === "spring-boot" ? "mt-4" : "mt-8"}>
-                  <Link to="/contact" className="btn-primary inline-flex items-center gap-2">
+                <p className={`text-muted-foreground ${slug === "spring-boot" ? "mt-2 text-sm line-clamp-3" : "mt-6 text-lg"}`}>{tech.fullDescription}</p>
+                <div className={slug === "spring-boot" ? "mt-3" : "mt-8"}>
+                  <Link to="/contact" className="btn-primary inline-flex items-center gap-2 text-sm py-2 px-5">
                     Discuss Your Project <ArrowRight className="w-4 h-4" />
                   </Link>
                 </div>
