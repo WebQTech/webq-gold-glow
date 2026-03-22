@@ -155,18 +155,6 @@ const Technologies = () => {
   return (
     <div className="min-h-screen bg-background">
       <main id="main-content" className="focus:outline-none" tabIndex={-1}>
-        {/* Hero */}
-        <section className="py-10 lg:py-14 border-b border-border">
-          <div className="container mx-auto px-6 lg:px-12 text-center">
-            <h1 className="text-3xl lg:text-4xl font-bold text-foreground mb-3">
-              Technologies We Work With
-            </h1>
-            <p className="text-base text-muted-foreground max-w-2xl mx-auto">
-              We leverage industry-leading tools and platforms to deliver scalable, secure, and high-performance solutions across every layer of the technology stack.
-            </p>
-          </div>
-        </section>
-
         {/* Technology Grid */}
         <section className="py-10 lg:py-14">
           <div className="container mx-auto px-6 lg:px-12">
