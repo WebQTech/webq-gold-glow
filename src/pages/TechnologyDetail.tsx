@@ -208,7 +208,7 @@ const springBootSnippets = [
     language: "Java",
     badge: "📊 Logging",
     badgeColor: "#74c7ec",
-    description: "AOP-based structured logging with MDC correlation IDs. Captures method entry/exit, execution time, and request tracing — essential for debugging in production.",
+    description: "AOP-based structured logging with correlation IDs. At WebQ, we pipe all logs into our ELK stack with distributed tracing — giving ops teams full request visibility across microservices in under 30 seconds.",
     lines: [
       '@Aspect',
       '@Component',
