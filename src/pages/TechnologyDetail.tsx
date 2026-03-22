@@ -30,6 +30,7 @@ const TechnologyDetail = () => {
         {/* Hero */}
         <section className="py-10 lg:py-16 bg-gradient-to-b from-primary/5 to-background">
           <div className="container mx-auto px-6 lg:px-12">
+            <GoBackButton />
             <nav aria-label="Breadcrumb" className="mb-6">
               <ol className="flex items-center gap-1.5 text-sm text-muted-foreground">
                 <li>
