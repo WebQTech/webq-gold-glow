@@ -550,7 +550,7 @@ export const technologiesData: TechnologyDetail[] = [
     category: "Data & Analytics",
     icon: Wind,
     shortDescription: "Workflow orchestration for data engineering pipelines.",
-    fullDescription: "Airflow orchestrates complex data pipelines as directed acyclic graphs (DAGs). We use it for ETL workflows, ML pipeline scheduling, and cross-system data orchestration.",
+    fullDescription: "Apache Airflow orchestrates complex data pipelines as directed acyclic graphs (DAGs), providing visibility and control over every step of data processing workflows. We use it for ETL pipelines, ML model training schedules, and cross-system data orchestration that spans databases, APIs, and cloud services. For businesses, Airflow transforms fragile, manually triggered data processes into reliable, monitored, and automatically retrying workflows that run 24/7. Its extensive operator library integrates with virtually every data tool in the modern stack. Dynamic DAG generation enables pipelines that adapt to changing data sources and business requirements. The web UI provides real-time monitoring and troubleshooting. We leverage AI-assisted DAG optimization, intelligent scheduling, and automated failure remediation to maximize pipeline reliability — ensuring critical business data flows without interruption or manual\u00A0intervention.",
     useCases: ["ETL Pipelines", "ML Pipeline Orchestration", "Data Quality Checks", "Report Generation", "Cross-system Sync"],
     features: ["DAG-based workflows", "Extensive operators", "Web UI monitoring", "Dynamic pipeline generation", "SLA monitoring"],
     relatedTechnologies: ["Python", "Snowflake", "dbt"],
