@@ -43,7 +43,7 @@ export const technologiesData: TechnologyDetail[] = [
     category: "Frontend",
     icon: Globe,
     shortDescription: "Full-featured framework for building enterprise-scale applications.",
-    fullDescription: "Angular provides a comprehensive, opinionated framework ideal for large enterprise applications. We use Angular for projects requiring strong typing, dependency injection, and built-in tooling for forms, routing, and HTTP.",
+    fullDescription: "Angular provides a comprehensive, opinionated framework ideal for large enterprise applications requiring strict architecture and governance. We use Angular for projects demanding strong typing, dependency injection, and built-in tooling for forms, routing, and HTTP communication. Its module-based structure enforces separation of concerns, making it the preferred choice for banking portals, healthcare platforms, and government systems where code maintainability is non-negotiable. Angular's long-term support from Google and predictable release cycles give enterprises confidence in technology longevity. We integrate AI-driven development tools for automated testing, intelligent code refactoring, and performance optimization — ensuring faster delivery without compromising enterprise-grade\u00A0reliability.",
     useCases: ["Enterprise Web Applications", "Banking Portals", "ERP Dashboards", "Healthcare Systems", "Government Platforms"],
     features: ["TypeScript-first", "Dependency injection", "RxJS reactive programming", "Built-in form validation", "Angular CLI tooling"],
     relatedTechnologies: ["TypeScript", "Node.js", ".NET"],
