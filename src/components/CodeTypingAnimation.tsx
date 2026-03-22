@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 interface CodeSnippet {
@@ -19,9 +19,17 @@ export const CodeTypingAnimation = ({ snippets }: CodeTypingAnimationProps) => {
   const [visibleLines, setVisibleLines] = useState(0);
   const [currentText, setCurrentText] = useState("");
   const [isTyping, setIsTyping] = useState(true);
+  const codeAreaRef = useRef<HTMLDivElement>(null);
 
   const snippet = snippets[snippetIndex];
   const totalLines = snippet.lines.length;
+
+  // Auto-scroll to bottom as new lines appear
+  useEffect(() => {
+    if (codeAreaRef.current) {
+      codeAreaRef.current.scrollTop = codeAreaRef.current.scrollHeight;
+    }
+  }, [visibleLines, currentText]);
 
   const advanceSnippet = useCallback(() => {
     setIsTyping(false);
@@ -102,7 +110,7 @@ export const CodeTypingAnimation = ({ snippets }: CodeTypingAnimationProps) => {
           )}
 
           {/* Code area */}
-          <div className="p-3 font-mono text-xs leading-relaxed min-h-[240px] overflow-hidden">
+          <div ref={codeAreaRef} className="p-3 font-mono text-xs leading-relaxed max-h-[340px] overflow-y-auto [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-thumb]:bg-[#45475a] [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-track]:bg-transparent">
             {snippet.lines.slice(0, visibleLines).map((line, i) => (
               <div key={i} className="flex">
                 <span className="text-[#6c7086] w-8 text-right mr-4 select-none text-xs leading-relaxed">
