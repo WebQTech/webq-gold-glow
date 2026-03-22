@@ -436,7 +436,7 @@ export const technologiesData: TechnologyDetail[] = [
     category: "Databases",
     icon: Snowflake,
     shortDescription: "Cloud data warehouse for analytics and data sharing.",
-    fullDescription: "Snowflake separates compute from storage for elastic, cost-effective data warehousing. We use it for enterprise analytics, data sharing, and building data lakehouses.",
+    fullDescription: "Snowflake separates compute from storage for elastic, cost-effective data warehousing that scales independently based on workload demands. We use it for enterprise analytics, secure data sharing, and building modern data lakehouses that unify structured and semi-structured data. For businesses, Snowflake's zero-copy cloning enables instant test environments without duplicating data costs, while its time travel feature provides data recovery and historical analysis without complex backup strategies. Snowflake's data marketplace enables monetization and consumption of third-party datasets. Its near-zero maintenance eliminates the DBA overhead associated with traditional data warehouses. We leverage AI-powered query optimization, automated workload management, and intelligent cost governance to maximize Snowflake ROI — delivering enterprise-grade analytics with predictable costs and unlimited\u00A0scalability.",
     useCases: ["Enterprise Analytics", "Data Warehousing", "Data Sharing", "Data Lakehouse", "BI Reporting"],
     features: ["Separation of compute & storage", "Zero-copy cloning", "Data sharing", "Time travel", "Semi-structured data support"],
     relatedTechnologies: ["dbt", "Apache Airflow", "Tableau", "Power BI"],
