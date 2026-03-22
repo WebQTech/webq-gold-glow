@@ -425,7 +425,7 @@ export const technologiesData: TechnologyDetail[] = [
     category: "Databases",
     icon: Grid3X3,
     shortDescription: "Distributed database for high-availability write-heavy workloads.",
-    fullDescription: "Apache Cassandra handles massive write volumes with multi-datacenter replication. We use it for IoT telemetry, messaging systems, and time-series data.",
+    fullDescription: "Apache Cassandra handles massive write volumes with multi-datacenter replication and linear scalability that grows simply by adding nodes. We use it for IoT telemetry, messaging systems, time-series data, and applications requiring always-on availability. For businesses, Cassandra's peer-to-peer architecture eliminates single points of failure, providing 99.999% availability that mission-critical applications demand. Its tunable consistency model lets teams balance between strong consistency and high availability based on specific use case requirements. Companies like Netflix, Apple, and Instagram rely on Cassandra for their largest-scale data workloads. We enhance Cassandra deployments with AI-driven data modeling, automated compaction tuning, and intelligent cluster monitoring — ensuring optimal write performance and reliability across globally distributed\u00A0deployments.",
     useCases: ["IoT Telemetry", "Messaging Platforms", "Time-series Data", "Product Activity Tracking", "Recommendation Engines"],
     features: ["Linear scalability", "Multi-datacenter replication", "Tunable consistency", "CQL query language", "No single point of failure"],
     relatedTechnologies: ["Java", "Apache Kafka", "Docker"],
