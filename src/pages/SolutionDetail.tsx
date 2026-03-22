@@ -220,7 +220,7 @@ const SolutionDetail = () => {
                         <p className="text-sm text-muted-foreground">{caseStudy.challenge}</p>
                       </div>
                       <div>
-                        <h4 className="text-xs font-semibold text-primary uppercase tracking-wide mb-1">Solution</h4>
+                        <h4 className="text-sm font-medium text-primary mb-1">Solution</h4>
                         <p className="text-sm text-muted-foreground">{caseStudy.solution}</p>
                       </div>
                       <div>
