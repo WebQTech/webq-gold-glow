@@ -190,7 +190,7 @@ const SolutionDetail = () => {
                 transition={{ duration: 0.5 }}
                 className="mb-8"
               >
-                <h2 className="text-2xl lg:text-3xl font-bold text-foreground">Success Stories</h2>
+                <h2 className="text-3xl lg:text-4xl font-bold text-foreground">Success Stories</h2>
                 <p className="mt-2 text-sm text-muted-foreground">
                   Real-world results from our implementations
                 </p>
