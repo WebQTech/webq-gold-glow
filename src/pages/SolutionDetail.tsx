@@ -191,7 +191,7 @@ const SolutionDetail = () => {
                 className="mb-8"
               >
                 <h2 className="text-3xl lg:text-4xl font-bold text-foreground">Success Stories</h2>
-                <p className="mt-2 text-sm text-muted-foreground">
+                <p className="mt-4 text-muted-foreground max-w-2xl">
                   Real-world results from our implementations
                 </p>
               </motion.div>
