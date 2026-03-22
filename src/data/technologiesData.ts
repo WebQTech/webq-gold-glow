@@ -706,7 +706,7 @@ export const technologiesData: TechnologyDetail[] = [
     category: "Security",
     icon: ShieldAlert,
     shortDescription: "Enterprise application security testing platform.",
-    fullDescription: "Fortify provides static (SAST) and dynamic (DAST) application security testing for enterprise environments. We use it for comprehensive security analysis of large codebases.",
+    fullDescription: "Fortify provides static application security testing (SAST) and dynamic application security testing (DAST) for enterprise environments requiring comprehensive security analysis of large codebases. We use it for regulated industries where thorough security validation is mandatory for compliance. For businesses, Fortify's deep code analysis identifies security vulnerabilities that surface-level scanners miss, including complex data flow issues and business logic flaws. Its Software Security Center provides centralized vulnerability management and trend tracking across all applications. IDE plugins enable developers to find and fix issues during coding, not after deployment. Fortify's compliance reporting maps findings to standards like PCI DSS, HIPAA, and SOC 2. We leverage AI-assisted vulnerability triage, automated remediation guidance, and intelligent risk prioritization to streamline enterprise security programs — ensuring regulatory compliance while maintaining development\u00A0velocity.",
     useCases: ["Static Code Analysis (SAST)", "Dynamic Testing (DAST)", "Enterprise Security Programs", "Regulatory Compliance", "Secure SDLC"],
     features: ["SAST & DAST", "Software Security Center", "IDE plugins", "CI/CD integration", "Compliance reporting"],
     relatedTechnologies: ["Jenkins", "SonarQube", "GitHub Actions"],
