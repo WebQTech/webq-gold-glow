@@ -7,20 +7,13 @@ import SolutionImageCarousel from "@/components/SolutionImageCarousel";
 
 import { Footer } from "@/components/Footer";
 import { getSolutionBySlug, solutionsData } from "@/data/solutionsData";
+import { solutionImages } from "@/data/solutionImages";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-
-import customDev1 from "@/assets/solutions/custom-dev-1.jpg";
-import customDev2 from "@/assets/solutions/custom-dev-2.jpg";
-import customDev3 from "@/assets/solutions/custom-dev-3.jpg";
-
-const solutionImages: Record<string, string[]> = {
-  "custom-app-development": [customDev1, customDev2, customDev3],
-};
 
 const SolutionDetail = () => {
   const { slug } = useParams<{ slug: string }>();
