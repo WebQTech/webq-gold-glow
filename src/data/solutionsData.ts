@@ -2,7 +2,7 @@ import {
   Code2, Cloud, Server, RefreshCw, TestTube, Headphones, Settings, Database,
   Gauge, Network, GitBranch, Container, Zap, Shield, Wrench, ClipboardList,
   BarChart3, Brain, Smartphone, Plug, Lock, ShieldCheck, FileCode, CloudCog, KeyRound,
-  ShieldAlert, Scale, PackageSearch, HardDriveDownload, Layers, Activity, DollarSign, CloudLightning, Cog, Accessibility, Blocks, Palette, Bot, Workflow, FlaskConical, Building2, Users, Cable, RotateCcw, TabletSmartphone, Truck, FileStack, BookCheck, Warehouse, ArrowRightLeft, ShoppingCart, FileText, HardDrive, Headset, Radio, GitPullRequest, ShieldPlus, Radar, Crosshair, Fingerprint, Flame, Flag, LucideIcon
+  ShieldAlert, Scale, PackageSearch, HardDriveDownload, Layers, Activity, DollarSign, CloudLightning, Cog, Accessibility, Blocks, Palette, Bot, Workflow, FlaskConical, Building2, Users, Cable, RotateCcw, TabletSmartphone, Truck, FileStack, BookCheck, Warehouse, ArrowRightLeft, ShoppingCart, FileText, HardDrive, Headset, Radio, GitPullRequest, ShieldPlus, Radar, Crosshair, Fingerprint, Flame, Flag, MessageSquare, BookOpen, Eye, LucideIcon
 } from "lucide-react";
 
 export interface SolutionDetail {
