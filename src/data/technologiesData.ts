@@ -155,7 +155,7 @@ export const technologiesData: TechnologyDetail[] = [
     category: "Backend",
     icon: Leaf,
     shortDescription: "Opinionated Java framework for production-ready microservices.",
-    fullDescription: "Spring Boot accelerates Java application development with auto-configuration, embedded servers, and production-ready features. We use it for building robust microservices and enterprise APIs.",
+    fullDescription: "Spring Boot accelerates Java application development with auto-configuration, embedded servers, and production-ready features out of the box. We use it for building robust microservices and enterprise APIs that handle millions of transactions daily. For businesses, Spring Boot's convention-over-configuration approach dramatically reduces boilerplate code and setup time, allowing teams to focus on business logic rather than infrastructure plumbing. Its deep integration with Spring Security, Spring Data, and Spring Cloud provides enterprise-grade authentication, data access, and distributed systems patterns. The framework's actuator endpoints enable real-time health monitoring and operational insights. We leverage AI-assisted development to auto-generate boilerplate, optimize Spring configurations, and intelligently detect performance bottlenecks — delivering enterprise microservices with unmatched speed and\u00A0reliability.",
     useCases: ["Microservices Architecture", "REST APIs", "Event-driven Systems", "Batch Processing", "Enterprise Integration"],
     features: ["Auto-configuration", "Embedded Tomcat/Jetty", "Spring Security", "Spring Data", "Actuator for monitoring"],
     relatedTechnologies: ["Java", "Kubernetes", "Docker", "Apache Kafka"],
