@@ -561,7 +561,7 @@ export const technologiesData: TechnologyDetail[] = [
     category: "Data & Analytics",
     icon: Triangle,
     shortDescription: "SQL-based transformation tool for analytics engineering.",
-    fullDescription: "dbt transforms raw data into analytics-ready models using SQL. We use it for building modular, tested, and documented data transformations in modern data stacks.",
+    fullDescription: "dbt (data build tool) transforms raw data into analytics-ready models using familiar SQL, bringing software engineering best practices to data transformation workflows. We use it for building modular, tested, and documented data transformations in modern data stacks. For businesses, dbt enables data teams to move faster with version-controlled transformations, automated testing, and auto-generated documentation that keeps everyone aligned. Its incremental models process only changed data, reducing warehouse compute costs by up to 80%. dbt's modular approach with refs and macros promotes code reuse across projects, eliminating redundant transformation logic. The dbt Cloud platform provides scheduling, monitoring, and collaboration features. We leverage AI-powered SQL generation, automated data quality checks, and intelligent lineage analysis to accelerate analytics engineering — delivering trustworthy, well-documented data models that drive confident business\u00A0decisions.",
     useCases: ["Data Transformation", "Analytics Engineering", "Data Modeling", "Data Testing", "Documentation Generation"],
     features: ["SQL-based transforms", "Built-in testing", "Documentation", "Incremental models", "dbt Cloud"],
     relatedTechnologies: ["Snowflake", "PostgreSQL", "Apache Airflow"],
