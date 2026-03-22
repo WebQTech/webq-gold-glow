@@ -337,7 +337,7 @@ const SolutionDetail = () => {
         {/* CTA */}
         <section className="py-10 lg:py-14">
           <div className="container mx-auto px-6 lg:px-12 text-center">
-            <h2 className="text-2xl lg:text-3xl font-bold text-foreground">Ready to Get Started?</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold text-foreground">Ready to Get Started?</h2>
             <p className="mt-3 text-muted-foreground max-w-xl mx-auto">
               Let's discuss how our {solution.name.toLowerCase()} can help your business.
             </p>
