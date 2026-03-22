@@ -310,20 +310,20 @@ const SolutionDetail = () => {
                     >
                       <Link
                         to={`/solutions/${related.slug}`}
-                        className="group block h-full bg-card border border-border rounded-xl p-5 hover:border-primary/40 hover:shadow-md transition-all duration-300"
+                        className="group block h-full bg-card border border-border rounded-2xl p-6 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5 transition-all duration-300"
                       >
-                        <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center mb-3 group-hover:bg-primary/20 transition-colors">
-                          <RelatedIcon className="w-5 h-5 text-primary" />
+                        <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+                          <RelatedIcon className="w-6 h-6 text-primary" />
                         </div>
-                        <h3 className="text-base font-semibold text-foreground group-hover:text-primary transition-colors">
+                        <h3 className="text-lg font-semibold text-foreground group-hover:text-primary transition-colors">
                           {related.name}
                         </h3>
-                        <p className="mt-1.5 text-sm text-muted-foreground line-clamp-2">
+                        <p className="mt-2 text-sm text-muted-foreground line-clamp-2">
                           {related.shortDescription}
                         </p>
-                        <div className="mt-3 inline-flex items-center gap-1.5 text-xs font-medium text-primary opacity-0 group-hover:opacity-100 transition-opacity">
+                        <div className="mt-4 inline-flex items-center gap-2 text-sm text-primary opacity-0 group-hover:opacity-100 transition-opacity">
                           Learn more
-                          <ArrowRight className="w-3.5 h-3.5" />
+                          <ArrowRight className="w-4 h-4" />
                         </div>
                       </Link>
                     </motion.div>
