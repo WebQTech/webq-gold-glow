@@ -34,13 +34,14 @@ export const ServicesSummary = () => {
           transition={{ duration: 0.5, delay: 0.15 }}
           className="flex flex-wrap justify-center gap-3 mb-8"
         >
-          {serviceHighlights.map((name) => (
-            <span
-              key={name}
-              className="px-4 py-2 rounded-full border border-border bg-card text-sm font-medium text-foreground hover:shadow-sm transition-shadow"
+          {serviceHighlights.map((service) => (
+            <Link
+              key={service.slug}
+              to={`/services/${service.slug}`}
+              className="px-4 py-2 rounded-full border border-border bg-card text-sm font-medium text-foreground hover:shadow-md hover:border-primary/50 transition-all"
             >
-              {name}
-            </span>
+              {service.name}
+            </Link>
           ))}
         </motion.div>
 
