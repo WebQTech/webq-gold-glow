@@ -2003,7 +2003,7 @@ export const solutionsData: SolutionDetail[] = [
       { question: "ETL vs ELT — which approach should we use?", answer: "ELT (Extract, Load, Transform) is the modern standard for cloud data warehouses — it loads raw data first, then transforms in the warehouse using tools like dbt. ETL is still relevant for legacy systems or when transformations need to happen before loading." },
       { question: "How do you handle data pipeline failures?", answer: "We implement idempotent pipelines with retry logic, dead-letter queues, comprehensive alerting, data quality checks at each stage, and automated rollback capabilities to ensure reliability." }
     ]
-  }
+  },
   {
     slug: "procurement-services",
     name: "IT Procurement Services",
