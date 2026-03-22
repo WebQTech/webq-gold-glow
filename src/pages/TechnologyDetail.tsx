@@ -417,6 +417,125 @@ const TechnologyDetail = () => {
           </div>
         </section>
 
+        {/* Spring Boot Metrics & Industry Popularity */}
+        {slug === "spring-boot" && (
+          <>
+            {/* Key Metrics */}
+            <section className="py-10 lg:py-14 bg-primary/5">
+              <div className="container mx-auto px-6 lg:px-12">
+                <motion.h2
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  className="text-2xl lg:text-3xl font-bold text-foreground text-center mb-10"
+                >
+                  Spring Boot by the Numbers
+                </motion.h2>
+                <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+                  {[
+                    { icon: TrendingUp, value: "75%", label: "Java Developers Use It", detail: "Most popular Java framework" },
+                    { icon: Globe, value: "1M+", label: "Apps in Production", detail: "Worldwide deployments" },
+                    { icon: Star, value: "#1", label: "Stack Overflow Rank", detail: "Top Java framework since 2018" },
+                    { icon: Users, value: "900+", label: "Contributors", detail: "Active open-source community" },
+                    { icon: BarChart3, value: "58%", label: "Enterprise Adoption", detail: "Fortune 500 companies" },
+                    { icon: Building2, value: "3.x", label: "Latest Major Version", detail: "GraalVM native support" },
+                    { icon: Zap, value: "40ms", label: "Avg. Startup Time", detail: "With native compilation" },
+                    { icon: Globe, value: "200K+", label: "GitHub Stars", detail: "Spring ecosystem total" },
+                  ].map((metric, i) => (
+                    <motion.div
+                      key={i}
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.4, delay: i * 0.05 }}
+                      className="bg-card border border-border rounded-xl p-5 text-center hover:shadow-md transition-shadow"
+                    >
+                      <metric.icon className="w-6 h-6 text-primary mx-auto mb-2" />
+                      <p className="text-2xl lg:text-3xl font-bold text-foreground">{metric.value}</p>
+                      <p className="text-sm font-semibold text-foreground/80 mt-1">{metric.label}</p>
+                      <p className="text-xs text-muted-foreground mt-0.5">{metric.detail}</p>
+                    </motion.div>
+                  ))}
+                </div>
+              </div>
+            </section>
+
+            {/* Industry Popularity */}
+            <section className="py-10 lg:py-14">
+              <div className="container mx-auto px-6 lg:px-12">
+                <motion.h2
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  className="text-2xl lg:text-3xl font-bold text-foreground text-center mb-3"
+                >
+                  Industry Adoption
+                </motion.h2>
+                <p className="text-center text-muted-foreground mb-10 max-w-2xl mx-auto">
+                  Spring Boot powers mission-critical systems across every major industry vertical.
+                </p>
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+                  {[
+                    { industry: "Banking & Financial Services", adoption: 92, use: "Core banking platforms, payment gateways, risk engines, and regulatory reporting systems." },
+                    { industry: "Healthcare & Life Sciences", adoption: 78, use: "EHR integrations, HIPAA-compliant APIs, clinical trial data pipelines, and telemedicine backends." },
+                    { industry: "E-Commerce & Retail", adoption: 85, use: "Product catalogs, order management, inventory sync, and real-time pricing engines." },
+                    { industry: "Insurance & FinTech", adoption: 80, use: "Claims processing, underwriting automation, KYC workflows, and fraud detection APIs." },
+                    { industry: "Telecommunications", adoption: 73, use: "Subscriber management, billing microservices, network monitoring, and provisioning systems." },
+                    { industry: "Government & Public Sector", adoption: 65, use: "Citizen portals, tax filing systems, inter-agency data exchange, and compliance platforms." },
+                  ].map((item, i) => (
+                    <motion.div
+                      key={i}
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.4, delay: i * 0.08 }}
+                      className="bg-card border border-border rounded-xl p-6"
+                    >
+                      <div className="flex items-center justify-between mb-3">
+                        <h3 className="text-sm font-bold text-foreground">{item.industry}</h3>
+                        <span className="text-xs font-bold text-primary bg-primary/10 px-2 py-1 rounded-full">
+                          {item.adoption}% adoption
+                        </span>
+                      </div>
+                      <div className="w-full bg-muted rounded-full h-2 mb-3">
+                        <motion.div
+                          initial={{ width: 0 }}
+                          whileInView={{ width: `${item.adoption}%` }}
+                          viewport={{ once: true }}
+                          transition={{ duration: 1, delay: 0.3 + i * 0.1 }}
+                          className="bg-primary h-2 rounded-full"
+                        />
+                      </div>
+                      <p className="text-xs text-muted-foreground leading-relaxed">{item.use}</p>
+                    </motion.div>
+                  ))}
+                </div>
+
+                {/* WebQ callout */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: 0.3 }}
+                  className="mt-10 bg-card border-2 border-primary/20 rounded-2xl p-6 lg:p-8"
+                >
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center shrink-0">
+                      <Building2 className="w-6 h-6 text-primary" />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-bold text-foreground mb-2">How WebQ Technologies Delivers with Spring Boot</h3>
+                      <p className="text-sm text-muted-foreground leading-relaxed">
+                        At WebQ, Spring Boot is our go-to framework for building enterprise-grade microservices. We've deployed 50+ production Spring Boot applications across banking, healthcare, and e-commerce — with sub-100ms response times, 99.99% uptime SLAs, and fully automated CI/CD pipelines. Our engineering playbook includes security-first configurations, distributed tracing, and event-driven architectures that scale from startup MVPs to Fortune 500 workloads.
+                      </p>
+                    </div>
+                  </div>
+                </motion.div>
+              </div>
+            </section>
+          </>
+        )}
+
         {/* CTA */}
         <section className="py-10 lg:py-14 bg-primary/5">
           <div className="container mx-auto px-6 lg:px-12 text-center">
