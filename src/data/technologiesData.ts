@@ -796,7 +796,7 @@ export const technologiesData: TechnologyDetail[] = [
     category: "Enterprise Platforms",
     icon: BookOpen,
     shortDescription: "Project management and team collaboration suite.",
-    fullDescription: "We configure and customize Atlassian tools (Jira, Confluence, Bitbucket) for agile project management, knowledge management, and DevOps workflows.",
+    fullDescription: "We configure and customize Atlassian tools — Jira, Confluence, Bitbucket — for agile project management, knowledge management, and DevOps workflows that keep teams aligned and productive. For businesses, the Atlassian suite provides end-to-end visibility into project status, team capacity, and delivery timelines, enabling data-driven decisions about resource allocation and prioritization. Jira's customizable workflows adapt to any methodology — Scrum, Kanban, or hybrid — while automation rules eliminate repetitive manual tasks. Confluence creates a searchable knowledge base that preserves institutional knowledge and reduces onboarding time. The Atlassian Marketplace offers 5,000+ apps for extended functionality. We leverage AI-powered workflow optimization, automated reporting, and intelligent resource planning to maximize Atlassian platform value — delivering project management solutions that improve team productivity and delivery\u00A0predictability.",
     useCases: ["Agile Project Management", "Bug Tracking", "Knowledge Management", "DevOps Workflows", "IT Service Management"],
     features: ["Scrum & Kanban boards", "Custom workflows", "Automation rules", "Confluence wiki", "Marketplace apps"],
     relatedTechnologies: ["ServiceNow", "GitHub Actions"],
