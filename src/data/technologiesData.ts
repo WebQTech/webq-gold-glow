@@ -177,7 +177,7 @@ export const technologiesData: TechnologyDetail[] = [
     category: "Backend",
     icon: Cog,
     shortDescription: "Fast, concurrent language ideal for cloud infrastructure.",
-    fullDescription: "Go excels at building performant, concurrent backend services. We use it for CLI tools, infrastructure software, high-throughput APIs, and cloud-native applications.",
+    fullDescription: "Go excels at building performant, concurrent backend services with minimal resource consumption. We use it for CLI tools, infrastructure software, high-throughput APIs, and cloud-native applications where every millisecond counts. For businesses, Go's compiled binaries deploy as single files without dependencies, simplifying operations and reducing container image sizes by up to 90%. Its built-in concurrency model with goroutines handles thousands of simultaneous connections effortlessly, making it ideal for real-time systems and microservices. Go powers critical infrastructure at Google, Uber, and Cloudflare, proving its enterprise readiness. We leverage AI-powered development tools to accelerate Go development, auto-generate concurrent patterns, and optimize memory usage — building high-performance systems with exceptional\u00A0efficiency.",
     useCases: ["Cloud Infrastructure Tools", "High-throughput APIs", "CLI Applications", "Network Services", "Container Tooling"],
     features: ["Built-in concurrency (goroutines)", "Fast compilation", "Static binaries", "Standard library", "Minimal syntax"],
     relatedTechnologies: ["Docker", "Kubernetes", "PostgreSQL"],
