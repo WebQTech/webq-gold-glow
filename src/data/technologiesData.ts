@@ -504,7 +504,7 @@ export const technologiesData: TechnologyDetail[] = [
     category: "AI & Machine Learning",
     icon: FlaskConical,
     shortDescription: "Python library for classical machine learning algorithms.",
-    fullDescription: "scikit-learn is our go-to for classical ML — classification, regression, clustering, and feature engineering. It's essential for data science workflows and tabular data analysis.",
+    fullDescription: "scikit-learn is our go-to library for classical machine learning — classification, regression, clustering, and feature engineering — powering data science workflows that deliver measurable business impact. For businesses, scikit-learn enables rapid development of predictive models for customer churn, demand forecasting, fraud detection, and customer segmentation without the complexity and cost of deep learning. Its consistent API and extensive documentation reduce development time and make models explainable to business stakeholders. The pipeline API ensures reproducible, production-ready ML workflows with built-in cross-validation and hyperparameter tuning. scikit-learn integrates seamlessly with pandas and NumPy for end-to-end data science workflows. We leverage AI-powered feature selection, automated model comparison, and intelligent hyperparameter optimization to build accurate predictive models faster — turning business data into actionable forecasts and\u00A0insights.",
     useCases: ["Predictive Analytics", "Customer Segmentation", "Anomaly Detection", "Feature Engineering", "A/B Test Analysis"],
     features: ["Classification & regression", "Clustering", "Dimensionality reduction", "Pipeline API", "Cross-validation"],
     relatedTechnologies: ["Python", "Apache Airflow", "Snowflake"],
