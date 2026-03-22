@@ -7,6 +7,7 @@ import logo from "@/assets/logo.png";
 
 const navLinks = [
   { label: "Solutions", href: "/solutions" },
+  { label: "Technologies", href: "/services" },
   { label: "Services", href: "/services" },
   { label: "Industries", href: "/industries" },
   { label: "Insights", href: "/insights" },
