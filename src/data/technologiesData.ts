@@ -256,7 +256,7 @@ export const technologiesData: TechnologyDetail[] = [
     category: "Cloud Platforms",
     icon: Building2,
     shortDescription: "Enterprise cloud with AI and quantum computing capabilities.",
-    fullDescription: "IBM Cloud serves enterprises needing Watson AI, quantum computing access, and hybrid cloud solutions built on Red Hat OpenShift.",
+    fullDescription: "IBM Cloud serves enterprises needing Watson AI, quantum computing access, and hybrid cloud solutions built on Red Hat OpenShift. For businesses in highly regulated industries like banking, healthcare, and government, IBM Cloud's compliance-first architecture and confidential computing capabilities provide unmatched data security and regulatory adherence. Its hybrid cloud approach, powered by OpenShift, enables seamless workload portability between on-premises and cloud environments. Watson AI services bring enterprise-grade natural language processing, visual recognition, and predictive analytics to business applications. IBM's quantum computing access positions forward-thinking enterprises at the frontier of computational innovation. We leverage AI-driven cloud management to optimize IBM Cloud deployments, automate compliance monitoring, and accelerate enterprise modernization\u00A0initiatives.",
     useCases: ["Watson AI Applications", "Hybrid Cloud", "Regulated Industries", "Mainframe Integration", "Quantum Computing"],
     features: ["Watson AI services", "Red Hat OpenShift", "Quantum computing access", "Mainframe connectivity", "Industry compliance"],
     relatedTechnologies: ["Kubernetes", "Python", "Java"],
