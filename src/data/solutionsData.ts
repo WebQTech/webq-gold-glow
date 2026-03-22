@@ -2279,7 +2279,12 @@ export const solutionsData: SolutionDetail[] = [
       "Vulnerability management and prioritization",
       "Compliance reporting (SOC 2, HIPAA, PCI DSS, NIST, ISO 27001)",
       "Digital forensics and malware analysis",
-      "Executive dashboards and monthly security posture reviews"
+      "Executive dashboards and monthly security posture reviews",
+      "Insider threat detection and user behavior analytics (UBA)",
+      "Cloud-native SOC monitoring for AWS, Azure, and GCP workloads",
+      "Email security monitoring and phishing incident response",
+      "Deception technology and honeypot deployment",
+      "Attack surface management and external exposure monitoring"
     ],
     benefits: [
       "Enterprise-grade security at 40–60% less than building an in-house SOC",
@@ -2289,9 +2294,13 @@ export const solutionsData: SolutionDetail[] = [
       "Eliminate alert fatigue — 95% noise reduction through intelligent triage",
       "Meet regulatory compliance requirements for continuous monitoring",
       "Scalable coverage that grows with your environment",
-      "Proactive threat hunting uncovers hidden threats others miss"
+      "Proactive threat hunting uncovers hidden threats others miss",
+      "Full chain-of-custody evidence preservation for legal proceedings",
+      "Real-time executive visibility with risk-scored threat dashboards",
+      "Seamless onboarding — operational within 2–4 weeks, not months",
+      "Continuous MITRE ATT&CK coverage mapping to eliminate detection gaps"
     ],
-    technologies: ["Splunk", "Microsoft Sentinel", "CrowdStrike Falcon", "Palo Alto Cortex XSOAR", "IBM QRadar", "Elastic Security", "Sumo Logic", "Rapid7 InsightIDR", "Carbon Black", "Recorded Future"],
+    technologies: ["Splunk", "Microsoft Sentinel", "CrowdStrike Falcon", "Palo Alto Cortex XSOAR", "IBM QRadar", "Elastic Security", "Sumo Logic", "Rapid7 InsightIDR", "Carbon Black", "Recorded Future", "Google Chronicle", "Wiz", "SentinelOne Singularity"],
     caseStudies: [
       {
         company: "Mid-Market SaaS Provider",
@@ -2313,6 +2322,20 @@ export const solutionsData: SolutionDetail[] = [
         challenge: "IT/OT convergence created new attack surfaces across industrial control systems with no visibility into operational technology threats.",
         solution: "Deployed hybrid SOC monitoring covering both IT and OT environments, with specialized ICS/SCADA threat detection and purpose-built response playbooks.",
         results: ["Unified visibility across 8 manufacturing plants", "Identified 47 previously unknown OT vulnerabilities", "Zero operational disruptions from cyber incidents post-deployment"]
+      },
+      {
+        company: "National Retail Chain",
+        industry: "Retail",
+        challenge: "Processing 5M+ card transactions monthly with PCI DSS requirements but no dedicated security team — relied solely on firewall logs reviewed weekly.",
+        solution: "Deployed managed SOC with PCI-scoped SIEM, real-time payment system monitoring, point-of-sale endpoint detection, and automated cardholder data exfiltration alerts.",
+        results: ["Detected a POS malware variant within 4 minutes of execution", "Achieved PCI DSS 4.0 continuous monitoring requirement", "Reduced annual security staffing costs by $1.2M"]
+      },
+      {
+        company: "Global Law Firm",
+        industry: "Legal",
+        challenge: "Handling privileged attorney-client communications across 30 offices worldwide with nation-state threat actors actively targeting intellectual property.",
+        solution: "Implemented co-managed SOC with advanced email threat detection, DLP monitoring for privileged documents, dark web surveillance for leaked credentials, and geofenced access anomaly detection.",
+        results: ["Intercepted 2 targeted spear-phishing campaigns within first month", "Zero data breaches involving privileged communications over 18 months", "Client trust audit scores increased by 40%"]
       }
     ],
     faqs: [
@@ -2320,7 +2343,10 @@ export const solutionsData: SolutionDetail[] = [
       { question: "What data sources do you monitor?", answer: "We integrate with cloud platforms (AWS, Azure, GCP), endpoints (EDR/XDR), network devices, firewalls, identity providers (AD, Okta, Entra), email security, SaaS applications, OT/ICS systems, and custom applications. Our SIEM correlates events across all sources for comprehensive threat visibility." },
       { question: "Can we co-manage the SOC with your team?", answer: "Yes, we offer flexible engagement models — fully managed, co-managed, and hybrid. In co-managed mode, your internal team handles day-to-day operations while we provide after-hours coverage, threat hunting, and escalation support. We integrate seamlessly with your existing tools and processes." },
       { question: "How do you handle incident escalation?", answer: "We follow a tiered escalation matrix customized to your organization. P1 critical incidents trigger immediate phone escalation to your designated contacts within 5 minutes. P2/P3 incidents follow defined SLAs with detailed context. All incidents include root cause analysis and remediation recommendations." },
-      { question: "What certifications do your analysts hold?", answer: "Our analysts hold industry-leading certifications including CISSP, GCIA, GCIH, OSCP, CEH, CySA+, and GREM. We maintain a minimum certification standard for each SOC tier and invest in continuous training to stay ahead of evolving threats." }
+      { question: "What certifications do your analysts hold?", answer: "Our analysts hold industry-leading certifications including CISSP, GCIA, GCIH, OSCP, CEH, CySA+, and GREM. We maintain a minimum certification standard for each SOC tier and invest in continuous training to stay ahead of evolving threats." },
+      { question: "How quickly can the SOC be operational?", answer: "Typical onboarding takes 2–4 weeks depending on environment complexity. Week 1 covers discovery and data source integration. Week 2–3 focuses on SIEM tuning, baseline establishment, and playbook customization. By week 4, full 24/7 monitoring is active with tuned alerting and validated escalation paths." },
+      { question: "How do you measure SOC effectiveness?", answer: "We track and report on key metrics monthly including MTTD, MTTR, alert-to-incident ratio, false positive rate, threat hunting findings, MITRE ATT&CK coverage percentage, and analyst utilization. Quarterly business reviews include trend analysis and strategic recommendations for continuous improvement." },
+      { question: "Can you support multi-cloud and hybrid environments?", answer: "Absolutely. Our SOC natively monitors AWS (CloudTrail, GuardDuty), Azure (Sentinel, Defender), GCP (Chronicle, Security Command Center), and on-premise infrastructure simultaneously. We normalize telemetry across all environments into a unified detection and response pipeline." }
     ]
   },
   {
