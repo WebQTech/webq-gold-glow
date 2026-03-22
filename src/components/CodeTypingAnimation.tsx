@@ -95,7 +95,7 @@ export const CodeTypingAnimation = ({ snippets }: CodeTypingAnimationProps) => {
                   {snippet.badge}
                 </span>
                 <p className="text-xs text-[#a6adc8] leading-relaxed">
-                  {snippet.description}
+                  {highlightWebQ(snippet.description || "", snippet.badgeColor || "#89b4fa")}
                 </p>
               </div>
             </motion.div>
