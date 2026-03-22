@@ -335,7 +335,7 @@ export const technologiesData: TechnologyDetail[] = [
     category: "DevOps & CI/CD",
     icon: GitBranch,
     shortDescription: "Integrated DevOps platform with built-in CI/CD.",
-    fullDescription: "GitLab provides a complete DevOps platform with source control, CI/CD, security scanning, and monitoring in a single application.",
+    fullDescription: "GitLab provides a complete DevOps platform with source control, CI/CD, security scanning, and monitoring unified in a single application. For businesses, this eliminates tool sprawl and integration complexity — replacing a dozen separate tools with one cohesive platform. Its built-in security scanning (SAST, DAST, dependency scanning) shifts security left in the development lifecycle, catching vulnerabilities before they reach production. Auto DevOps automatically configures CI/CD pipelines for common frameworks, reducing setup time from days to minutes. GitLab's self-hosted option gives enterprises full control over their source code and compliance requirements. We enhance GitLab workflows with AI-assisted merge request reviews, intelligent pipeline optimization, and automated compliance reporting — streamlining the entire software delivery lifecycle from planning to\u00A0production.",
     useCases: ["End-to-end DevOps", "Security Scanning", "Container Registry", "Auto DevOps", "Compliance Pipelines"],
     features: ["Built-in CI/CD", "Container registry", "Security scanning", "Auto DevOps", "Merge request pipelines"],
     relatedTechnologies: ["Docker", "Kubernetes", "Terraform"],
