@@ -2,6 +2,7 @@ import { useParams, Link, Navigate } from "react-router-dom";
 import { motion, useInView } from "framer-motion";
 import { useRef, useMemo } from "react";
 import { ArrowLeft, ArrowRight, Clock, User, Calendar, Tag, ChevronRight, Home } from "lucide-react";
+import { GoBackButton } from "@/components/GoBackButton";
 
 import { Footer } from "@/components/Footer";
 import { getInsightBySlug, insightsData } from "@/data/insightsData";
