@@ -65,7 +65,7 @@ export const technologiesData: TechnologyDetail[] = [
     category: "Frontend",
     icon: FileCode,
     shortDescription: "React framework for production-grade apps with SSR & SSG.",
-    fullDescription: "Next.js enables us to build SEO-friendly, performant applications with server-side rendering, static site generation, and API routes — all in one framework.",
+    fullDescription: "Next.js enables us to build SEO-friendly, performant applications with server-side rendering, static site generation, and API routes — all in one unified framework. For businesses, this translates to higher search engine rankings, faster page loads, and reduced infrastructure complexity by eliminating the need for separate backend services. Its edge middleware capabilities allow content personalization at the CDN level, dramatically improving user experience across global markets. Next.js's incremental static regeneration ensures content stays fresh without sacrificing performance. We leverage AI-powered development workflows to auto-generate pages, optimize image pipelines, and intelligently pre-render routes — delivering production-ready web experiences in record\u00A0time.",
     useCases: ["SEO-Critical Websites", "E-commerce Platforms", "Content-Heavy Sites", "SaaS Applications", "Marketing Platforms"],
     features: ["Server-side rendering", "Static site generation", "API routes", "Image optimization", "Edge middleware"],
     relatedTechnologies: ["React", "TypeScript", "Tailwind CSS"],
