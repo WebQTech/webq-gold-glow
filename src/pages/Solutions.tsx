@@ -22,7 +22,11 @@ const solutionCategories = [
   },
   {
     title: "Analytics & Data Management",
-    items: ["data-analytics", "data-management", "business-intelligence", "ai-ml-solutions"],
+    items: ["data-analytics", "data-management", "business-intelligence"],
+  },
+  {
+    title: "AI & Machine Learning",
+    items: ["ai-ml-solutions", "generative-ai", "agentic-ai", "mlops"],
   },
   {
     title: "Security",
