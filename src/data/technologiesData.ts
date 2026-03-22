@@ -605,7 +605,7 @@ export const technologiesData: TechnologyDetail[] = [
     category: "Data & Analytics",
     icon: Boxes,
     shortDescription: "Unified analytics platform for data engineering and ML.",
-    fullDescription: "Databricks unifies data engineering, data science, and analytics on a lakehouse architecture. We use it for large-scale data processing, ML training, and collaborative analytics.",
+    fullDescription: "Databricks unifies data engineering, data science, and analytics on a lakehouse architecture that combines the best of data lakes and data warehouses. We use it for large-scale data processing, ML model training, and collaborative analytics across teams. For businesses, Databricks eliminates the complexity of maintaining separate analytics and ML infrastructure, reducing total cost of ownership while accelerating time-to-insight. Its Delta Lake technology provides ACID transactions on data lakes, ensuring data reliability at petabyte scale. Unity Catalog delivers unified governance across all data assets. The Photon engine delivers up to 8x faster query performance. We leverage AI-powered notebook assistance, automated cluster optimization, and intelligent data pipeline management to maximize Databricks productivity — delivering unified analytics and AI capabilities on a single, cost-effective\u00A0platform.",
     useCases: ["Data Lakehouse", "ML Training at Scale", "Streaming Analytics", "Data Engineering", "Collaborative Notebooks"],
     features: ["Delta Lake", "Unity Catalog", "MLflow integration", "Photon engine", "Collaborative notebooks"],
     relatedTechnologies: ["Apache Spark MLlib", "Python", "Apache Kafka"],
