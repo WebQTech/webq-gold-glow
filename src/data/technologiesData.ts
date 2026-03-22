@@ -493,7 +493,7 @@ export const technologiesData: TechnologyDetail[] = [
     category: "AI & Machine Learning",
     icon: Smile,
     shortDescription: "Open-source hub for pre-trained ML models and datasets.",
-    fullDescription: "Hugging Face provides access to thousands of pre-trained models for NLP, vision, and audio. We use it for fine-tuning, model deployment, and building custom AI solutions.",
+    fullDescription: "Hugging Face provides access to over 500,000 pre-trained models for NLP, computer vision, and audio processing — the world's largest open-source AI model hub. We use it for fine-tuning, model deployment, and building custom AI solutions tailored to specific business domains. For businesses, Hugging Face dramatically reduces the cost and time of AI adoption by providing ready-to-use models that can be fine-tuned with minimal data. Its Inference API enables instant model deployment without infrastructure management, while Spaces provides shareable demo environments for stakeholder validation. The Transformers library supports both PyTorch and TensorFlow, providing framework flexibility. We leverage AI-powered model selection, automated fine-tuning pipelines, and intelligent performance benchmarking to deliver custom AI solutions that match or exceed proprietary alternatives — at a fraction of the\u00A0cost.",
     useCases: ["Text Classification", "Named Entity Recognition", "Sentiment Analysis", "Translation", "Image Generation"],
     features: ["Model Hub", "Transformers library", "Datasets library", "Inference API", "Spaces for demos"],
     relatedTechnologies: ["PyTorch", "TensorFlow", "Python"],
