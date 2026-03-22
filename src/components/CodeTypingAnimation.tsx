@@ -79,6 +79,28 @@ export const CodeTypingAnimation = ({ snippets }: CodeTypingAnimationProps) => {
             <span className="text-xs text-[#6c7086] font-mono">{snippet.language}</span>
           </div>
 
+          {/* Badge + Description */}
+          {snippet.badge && (
+            <motion.div
+              initial={{ opacity: 0, y: -5 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: 0.2 }}
+              className="px-4 pt-3 pb-2 bg-[#1e1e2e] border-b border-[#313244]"
+            >
+              <div className="flex items-start gap-2.5">
+                <span
+                  className="shrink-0 px-2.5 py-1 rounded-md text-xs font-bold text-[#1e1e2e] whitespace-nowrap"
+                  style={{ backgroundColor: snippet.badgeColor || "#89b4fa" }}
+                >
+                  {snippet.badge}
+                </span>
+                <p className="text-xs text-[#a6adc8] leading-relaxed">
+                  {snippet.description}
+                </p>
+              </div>
+            </motion.div>
+          )}
+
           {/* Code area */}
           <div className="p-5 font-mono text-sm leading-relaxed min-h-[280px] overflow-hidden">
             {snippet.lines.slice(0, visibleLines).map((line, i) => (
