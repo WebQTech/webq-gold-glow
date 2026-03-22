@@ -2,7 +2,7 @@ import {
   Code2, Cloud, Server, RefreshCw, TestTube, Headphones, Settings, Database,
   Gauge, Network, GitBranch, Container, Zap, Shield, Wrench, ClipboardList,
   BarChart3, Brain, Smartphone, Plug, Lock, ShieldCheck, FileCode, CloudCog, KeyRound,
-  ShieldAlert, Scale, PackageSearch, HardDriveDownload, Layers, Activity, DollarSign, CloudLightning, Cog, Accessibility, Blocks, Palette, LucideIcon
+  ShieldAlert, Scale, PackageSearch, HardDriveDownload, Layers, Activity, DollarSign, CloudLightning, Cog, Accessibility, Blocks, Palette, Bot, Workflow, FlaskConical, LucideIcon
 } from "lucide-react";
 
 export interface SolutionDetail {
@@ -1521,6 +1521,117 @@ export const solutionsData: SolutionDetail[] = [
     faqs: [
       { question: "Do you work with existing brand guidelines?", answer: "Absolutely. We integrate with your existing brand identity, extending it thoughtfully into the digital experience while ensuring consistency. If you don't have established guidelines, we can help create them." },
       { question: "How do you measure design success?", answer: "We define measurable KPIs upfront — task completion rates, time-on-task, System Usability Scale (SUS) scores, conversion rates, and NPS. We conduct usability testing to validate designs before development begins." }
+    ]
+  },
+  {
+    slug: "generative-ai",
+    name: "Generative AI Solutions",
+    shortDescription: "Harness the power of generative AI for content creation, conversational interfaces, and intelligent automation.",
+    fullDescription: "We help organizations adopt generative AI technologies to transform customer experiences, automate content workflows, and build intelligent applications. From LLM fine-tuning and RAG architectures to conversational AI chatbots and AI-powered content generation, we deliver production-ready generative AI solutions tailored to your business needs.",
+    icon: Bot,
+    features: [
+      "Large Language Model (LLM) integration & fine-tuning",
+      "Retrieval-Augmented Generation (RAG) pipelines",
+      "Conversational AI & intelligent chatbots",
+      "AI-powered content generation & summarization",
+      "Prompt engineering & optimization",
+      "AI guardrails & responsible AI frameworks",
+      "Multi-modal AI (text, image, audio, video)",
+      "Enterprise knowledge base & AI search"
+    ],
+    benefits: [
+      "Automated content creation at scale",
+      "Enhanced customer engagement with AI assistants",
+      "Reduced operational costs through intelligent automation",
+      "Faster knowledge discovery & decision-making"
+    ],
+    technologies: ["OpenAI GPT", "Google Gemini", "Anthropic Claude", "LangChain", "LlamaIndex", "Hugging Face", "Pinecone", "Weaviate", "AWS Bedrock", "Azure OpenAI"],
+    caseStudies: [
+      {
+        company: "Legal Services Firm",
+        industry: "Legal",
+        challenge: "Lawyers spent 40% of billable hours on document review and research across millions of case files.",
+        solution: "Built a RAG-based AI assistant using LangChain and GPT-4 with vector search over the firm's document repository.",
+        results: ["60% reduction in document review time", "95% accuracy in legal research queries", "$2M annual savings in billable hour efficiency"]
+      }
+    ],
+    faqs: [
+      { question: "How do you ensure data privacy with generative AI?", answer: "We implement private deployments using Azure OpenAI or AWS Bedrock, ensuring your data never leaves your cloud environment. We also apply data anonymization, access controls, and audit logging." },
+      { question: "Can you fine-tune models on our proprietary data?", answer: "Yes, we offer fine-tuning services for domain-specific use cases. We also implement RAG architectures that augment base models with your proprietary knowledge without the cost and complexity of full fine-tuning." }
+    ]
+  },
+  {
+    slug: "agentic-ai",
+    name: "Agentic AI, Agents & Tools",
+    shortDescription: "Build autonomous AI agents that reason, plan, and execute complex multi-step tasks.",
+    fullDescription: "We design and implement agentic AI systems — autonomous agents that can reason, plan, use tools, and collaborate to accomplish complex business objectives. From single-agent task automation to multi-agent orchestration systems, we build AI solutions that go beyond simple Q&A to take meaningful actions on behalf of your organization.",
+    icon: Workflow,
+    features: [
+      "Autonomous AI agent design & development",
+      "Multi-agent orchestration systems",
+      "Tool-use & API integration for agents",
+      "Agent memory & state management",
+      "Human-in-the-loop workflows",
+      "Agent evaluation & safety frameworks",
+      "Custom tool & plugin development",
+      "Enterprise agent deployment & monitoring"
+    ],
+    benefits: [
+      "End-to-end task automation for complex workflows",
+      "Reduced manual intervention in repetitive processes",
+      "Scalable AI workforce for operational efficiency",
+      "Adaptive systems that improve over time"
+    ],
+    technologies: ["LangGraph", "CrewAI", "AutoGen", "OpenAI Assistants API", "LangChain Agents", "Semantic Kernel", "Haystack", "Prefect", "Temporal", "n8n"],
+    caseStudies: [
+      {
+        company: "Supply Chain Company",
+        industry: "Logistics",
+        challenge: "Complex procurement process requiring coordination across 5 departments with manual handoffs causing 2-week delays.",
+        solution: "Deployed a multi-agent system using LangGraph with specialized agents for vendor evaluation, compliance checking, and approval routing.",
+        results: ["Procurement cycle reduced from 2 weeks to 2 days", "90% reduction in manual handoffs", "30% cost savings through automated vendor negotiation"]
+      }
+    ],
+    faqs: [
+      { question: "What is agentic AI?", answer: "Agentic AI refers to AI systems that can autonomously plan, reason, and take actions to achieve goals. Unlike traditional chatbots, agents can use tools, access APIs, make decisions, and execute multi-step workflows with minimal human intervention." },
+      { question: "How do you ensure agent safety?", answer: "We implement guardrails including action boundaries, human approval gates for critical decisions, comprehensive logging, rollback capabilities, and evaluation frameworks that test agent behavior across edge cases before deployment." }
+    ]
+  },
+  {
+    slug: "mlops",
+    name: "MLOps & AI Infrastructure",
+    shortDescription: "Operationalize machine learning with scalable pipelines, model management, and automated retraining.",
+    fullDescription: "We build the infrastructure and processes needed to take machine learning models from experimentation to production at scale. From ML pipeline automation and model versioning to monitoring, drift detection, and automated retraining, we implement MLOps best practices that ensure your AI investments deliver consistent, reliable business value.",
+    icon: FlaskConical,
+    features: [
+      "ML pipeline design & automation",
+      "Model versioning & experiment tracking",
+      "Feature store implementation",
+      "Model serving & inference optimization",
+      "Model monitoring & drift detection",
+      "Automated retraining pipelines",
+      "GPU infrastructure optimization",
+      "ML governance & compliance"
+    ],
+    benefits: [
+      "Faster model deployment cycles",
+      "Reliable & reproducible ML pipelines",
+      "Reduced model degradation with proactive monitoring",
+      "Scalable AI infrastructure for growing workloads"
+    ],
+    technologies: ["MLflow", "Kubeflow", "Weights & Biases", "DVC", "Feast", "Seldon Core", "BentoML", "Ray", "SageMaker", "Vertex AI"],
+    caseStudies: [
+      {
+        company: "FinTech Startup",
+        industry: "Financial Services",
+        challenge: "Data science team deploying models manually with no versioning, monitoring, or automated retraining — leading to model drift and inconsistent predictions.",
+        solution: "Implemented end-to-end MLOps pipeline using MLflow, Kubeflow, and Seldon Core with automated drift detection and retraining triggers.",
+        results: ["Model deployment time reduced from weeks to hours", "99.5% model uptime with automated monitoring", "30% improvement in prediction accuracy through continuous retraining"]
+      }
+    ],
+    faqs: [
+      { question: "What is MLOps?", answer: "MLOps (Machine Learning Operations) applies DevOps principles to machine learning — automating the end-to-end ML lifecycle from data preparation and model training to deployment, monitoring, and retraining." },
+      { question: "Do we need MLOps if we only have a few models?", answer: "Even with a few models, MLOps practices like version control, automated testing, and monitoring prevent common issues like model drift, reproducibility failures, and deployment bottlenecks. The investment pays off quickly as your ML practice grows." }
     ]
   }
 ];
