@@ -171,7 +171,7 @@ const SolutionDetail = () => {
                       <div className="w-5 h-5 rounded-full bg-emerald-500/10 flex items-center justify-center shrink-0 mt-0.5">
                         <Check className="w-3 h-3 text-emerald-500" />
                       </div>
-                      <span className="text-sm text-foreground/80 leading-relaxed">{benefit}</span>
+                      <span className="text-foreground/80">{benefit}</span>
                     </motion.li>
                   ))}
                 </ul>
