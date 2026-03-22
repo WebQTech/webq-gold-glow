@@ -1,156 +1,103 @@
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { Footer } from "@/components/Footer";
 import { industriesData, getAllIndustryCategories } from "@/data/industriesData";
+import { motion } from "framer-motion";
+import { HoverCard, HoverCardTrigger, HoverCardContent } from "@/components/ui/hover-card";
+
+const industryCategories = getAllIndustryCategories().map(category => ({
+  title: category,
+  items: industriesData.filter(i => i.category === category).map(i => i.slug),
+}));
 
 const Industries = () => {
-  const categories = getAllIndustryCategories();
-
   return (
     <div className="min-h-screen bg-background">
       <main id="main-content" className="focus:outline-none" tabIndex={-1}>
-        {/* Hero Section */}
-        <section className="py-10 lg:py-16 bg-gradient-to-b from-primary/5 to-background">
+        {/* Category grid — same pattern as Solutions */}
+        <section className="py-10 lg:py-14">
           <div className="container mx-auto px-6 lg:px-12">
-            <div className="max-w-3xl">
-              <span className="section-label">
-                Industries We Serve
-              </span>
-              <h1 className="mt-4 text-4xl lg:text-5xl font-bold text-foreground leading-tight">
-                Transforming Businesses{" "}
-                <span className="text-primary">Across Every Sector</span>
-              </h1>
-              <p className="mt-6 text-lg text-muted-foreground">
-                From startups to enterprises, we deliver tailored technology solutions 
-                that address the unique challenges of your industry.
-              </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {industryCategories.map((category, idx) => (
+                <motion.div
+                  key={category.title}
+                  initial={{ opacity: 0, y: 16 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.3, delay: idx * 0.04 }}
+                  className="rounded-lg border border-border bg-card p-5 hover:shadow-md transition-shadow"
+                >
+                  <h3 className="text-sm font-bold text-foreground uppercase tracking-wider mb-4 pb-2 border-b border-border">
+                    {category.title}
+                    <span className="ml-2 text-xs font-normal text-muted-foreground lowercase tracking-normal">
+                      {category.items.length} industries
+                    </span>
+                  </h3>
+                  <ul className="space-y-1.5">
+                    {category.items.map((slug) => {
+                      const industry = industriesData.find(i => i.slug === slug);
+                      if (!industry) return null;
+                      const Icon = industry.icon;
+                      return (
+                        <li key={slug}>
+                          <HoverCard openDelay={200} closeDelay={100}>
+                            <HoverCardTrigger asChild>
+                              <Link
+                                to={`/industries/${slug}`}
+                                className="group flex items-center gap-2 text-base leading-normal text-primary hover:text-primary/80 transition-colors"
+                              >
+                                <Icon className="w-4 h-4 text-primary/70 shrink-0" />
+                                <ArrowRight className="w-3 h-3 opacity-0 -ml-5 group-hover:opacity-100 group-hover:ml-0 transition-all duration-200" />
+                                {industry.name}
+                                {industry.isNew && (
+                                  <span className="px-1.5 py-0.5 text-[10px] font-bold uppercase tracking-wider bg-primary text-primary-foreground rounded-full ml-1">
+                                    New
+                                  </span>
+                                )}
+                              </Link>
+                            </HoverCardTrigger>
+                            <HoverCardContent side="right" align="start" className="w-80 p-4">
+                              <h4 className="text-sm font-semibold text-foreground mb-1">{industry.name}</h4>
+                              <p className="text-xs text-muted-foreground mb-3">{industry.shortDescription}</p>
+                              <p className="text-xs font-semibold text-foreground mb-2">How We Help</p>
+                              <ul className="space-y-1">
+                                {industry.howWeHelp.slice(0, 4).map((item, i) => (
+                                  <li key={i} className="flex items-start gap-1.5 text-xs text-muted-foreground">
+                                    <CheckCircle2 className="w-3 h-3 mt-0.5 text-primary shrink-0" />
+                                    {item}
+                                  </li>
+                                ))}
+                              </ul>
+                              {industry.howWeHelp.length > 4 && (
+                                <p className="text-xs text-primary mt-2">+{industry.howWeHelp.length - 4} more →</p>
+                              )}
+                            </HoverCardContent>
+                          </HoverCard>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </motion.div>
+              ))}
             </div>
           </div>
         </section>
 
-        {/* Industries by Category */}
-        {categories.map((category, categoryIndex) => {
-          const categoryIndustries = industriesData.filter(i => i.category === category);
-          
-          return (
-            <section 
-              key={category} 
-              className={`py-10 lg:py-14 ${categoryIndex % 2 === 1 ? 'bg-muted/30' : ''}`}
-            >
-              <div className="container mx-auto px-6 lg:px-12">
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5 }}
-                  className="mb-10"
-                >
-                  <h2 className="text-2xl lg:text-3xl font-bold text-foreground">
-                    {category}
-                  </h2>
-                  <div className="w-20 h-1 bg-primary mt-4 rounded-full" />
-                </motion.div>
-
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {categoryIndustries.map((industry, index) => {
-                    const Icon = industry.icon;
-                    return (
-                      <motion.div
-                        key={industry.slug}
-                        initial={{ opacity: 0, y: 30 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.5, delay: index * 0.1 }}
-                      >
-                        <Link
-                          to={`/industries/${industry.slug}`}
-                          className="group block h-full bg-card border border-border rounded-2xl overflow-hidden hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5 transition-all duration-300"
-                        >
-                          {/* Hero Image */}
-                          <div className="aspect-video w-full overflow-hidden">
-                            <img 
-                              src={industry.heroImage} 
-                              alt={industry.name}
-                              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                            />
-                          </div>
-
-                          <div className="p-6">
-                            <div className="flex items-start justify-between mb-3">
-                              <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                                <Icon className="w-5 h-5 text-primary" />
-                              </div>
-                              {industry.isNew && (
-                                <span className="px-2 py-1 text-xs font-bold uppercase tracking-wider bg-primary text-primary-foreground rounded-full">
-                                  New
-                                </span>
-                              )}
-                            </div>
-                            
-                            <h3 className="text-xl font-semibold text-foreground group-hover:text-primary transition-colors">
-                              {industry.name}
-                            </h3>
-                            
-                            <p className="mt-2 text-sm text-muted-foreground line-clamp-2">
-                              {industry.shortDescription}
-                            </p>
-
-
-                            <div className="mt-4 flex flex-wrap gap-1">
-                              {industry.tags.slice(0, 3).map((tag, i) => (
-                                <span 
-                                  key={i}
-                                  className="px-2 py-0.5 text-xs bg-muted text-muted-foreground rounded-full"
-                                >
-                                  {tag}
-                                </span>
-                              ))}
-                              {industry.tags.length > 3 && (
-                                <span className="px-2 py-0.5 text-xs bg-muted text-muted-foreground rounded-full">
-                                  +{industry.tags.length - 3}
-                                </span>
-                              )}
-                            </div>
-
-                            <div className="mt-6 inline-flex items-center gap-2 text-sm text-primary opacity-0 group-hover:opacity-100 transition-opacity">
-                              Learn more
-                              <ArrowRight className="w-4 h-4" />
-                            </div>
-                          </div>
-                        </Link>
-                      </motion.div>
-                    );
-                  })}
-                </div>
-              </div>
-            </section>
-          );
-        })}
-
-        {/* CTA Section */}
-        <section className="py-10 lg:py-16 bg-primary/5">
+        {/* CTA */}
+        <section className="py-10 lg:py-14 bg-primary/5">
           <div className="container mx-auto px-6 lg:px-12 text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
+            <h2 className="text-2xl lg:text-3xl font-bold text-foreground">
+              Ready to Transform Your Industry?
+            </h2>
+            <p className="mt-3 text-base text-muted-foreground max-w-2xl mx-auto">
+              Let&apos;s discuss how our industry-specific expertise can help solve your unique challenges.
+            </p>
+            <Link
+              to="/contact"
+              className="mt-6 inline-flex items-center gap-2 btn-primary"
             >
-              <h2 className="text-3xl lg:text-4xl font-bold text-foreground">
-                Ready to Transform Your Industry?
-              </h2>
-              <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-                Let's discuss how our industry-specific expertise can help solve your unique challenges.
-              </p>
-              <Link
-                to="/#contact"
-                className="mt-8 inline-flex items-center gap-2 btn-primary"
-              >
-                Get Started
-                <ArrowRight className="w-4 h-4" />
-              </Link>
-            </motion.div>
+              Get Started
+              <ArrowRight className="w-4 h-4" />
+            </Link>
           </div>
         </section>
       </main>
