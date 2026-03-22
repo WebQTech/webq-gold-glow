@@ -159,7 +159,7 @@ const SolutionDetail = () => {
                   <Check className="w-5 h-5 text-emerald-500" />
                   <h2 className="text-2xl lg:text-3xl font-bold text-foreground">Key Benefits</h2>
                 </div>
-                <ul className="space-y-3">
+                <ul className="space-y-4">
                   {solution.benefits.map((benefit, index) => (
                     <motion.li
                       key={index}
