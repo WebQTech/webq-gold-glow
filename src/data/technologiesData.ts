@@ -460,7 +460,7 @@ export const technologiesData: TechnologyDetail[] = [
     category: "AI & Machine Learning",
     icon: Flame,
     shortDescription: "Dynamic ML framework favored for research and rapid experimentation.",
-    fullDescription: "PyTorch's dynamic computation graph and Pythonic interface make it our choice for research, prototyping, and complex model architectures like transformers and GANs.",
+    fullDescription: "PyTorch's dynamic computation graph and Pythonic interface make it our choice for AI research, rapid prototyping, and complex model architectures like transformers and generative adversarial networks. For businesses, PyTorch's research-first design means access to cutting-edge AI techniques months before they appear in other frameworks — providing a competitive edge in AI-driven markets. Its TorchScript compilation bridges the gap between research and production, enabling seamless model deployment at scale. PyTorch's integration with Hugging Face provides instant access to thousands of pre-trained models for NLP, vision, and audio tasks. Meta, Tesla, and OpenAI rely on PyTorch for their most advanced AI systems. We leverage AI-powered experiment tracking, automated model optimization, and intelligent architecture search to accelerate the journey from prototype to production — delivering state-of-the-art AI solutions with research-grade\u00A0precision.",
     useCases: ["Research Prototyping", "Generative AI", "Computer Vision", "NLP Models", "Reinforcement Learning"],
     features: ["Dynamic computation graph", "TorchScript for production", "Distributed training", "ONNX export", "Hugging Face integration"],
     relatedTechnologies: ["Python", "Hugging Face", "Docker"],
