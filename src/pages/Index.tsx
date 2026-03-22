@@ -3,6 +3,7 @@ import { CoreServicesGrid } from "@/components/CoreServicesGrid";
 import { SolutionsSection } from "@/components/SolutionsSection";
 import { MissionBanner } from "@/components/MissionBanner";
 import { TechnologiesSummary } from "@/components/TechnologiesSummary";
+import { IndustriesSummary } from "@/components/IndustriesSummary";
 import { AboutSection } from "@/components/AboutSection";
 import { CaseStudiesSection } from "@/components/CaseStudiesSection";
 import { NewsSection } from "@/components/NewsSection";
@@ -19,6 +20,7 @@ const Index = () => {
         <CoreServicesGrid />
         <MissionBanner />
         <TechnologiesSummary />
+        <IndustriesSummary />
         <AboutSection />
         <CaseStudiesSection />
         <NewsSection />
