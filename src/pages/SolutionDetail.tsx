@@ -224,7 +224,7 @@ const SolutionDetail = () => {
                         <p className="text-sm text-muted-foreground">{caseStudy.solution}</p>
                       </div>
                       <div>
-                        <h4 className="text-xs font-semibold text-primary uppercase tracking-wide mb-1.5">Results</h4>
+                        <h4 className="text-sm font-medium text-primary mb-2">Results</h4>
                         <ul className="grid grid-cols-2 gap-1.5">
                           {caseStudy.results.map((result, i) => (
                             <li key={i} className="flex items-start gap-1.5 text-xs">
