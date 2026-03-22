@@ -302,7 +302,7 @@ export const technologiesData: TechnologyDetail[] = [
     category: "DevOps & CI/CD",
     icon: Settings,
     shortDescription: "Agentless automation for configuration management and deployment.",
-    fullDescription: "Ansible provides simple, agentless automation for server configuration, application deployment, and orchestration tasks across infrastructure.",
+    fullDescription: "Ansible provides simple, agentless automation for server configuration, application deployment, and orchestration tasks across infrastructure of any size. For businesses, its agentless architecture means no software needs to be installed on managed servers, reducing security surface area and maintenance overhead. Ansible's human-readable YAML playbooks make automation accessible to operations teams without deep programming expertise, lowering the barrier to infrastructure-as-code adoption. Its idempotent design ensures consistent outcomes regardless of how many times playbooks run. Ansible Galaxy provides thousands of pre-built roles for common tasks like security hardening and compliance. We leverage AI-assisted playbook generation and intelligent configuration analysis to automate complex infrastructure tasks — delivering reliable, repeatable operations at enterprise\u00A0scale.",
     useCases: ["Server Configuration", "Application Deployment", "Security Hardening", "Patch Management", "Network Automation"],
     features: ["Agentless architecture", "YAML playbooks", "Idempotent operations", "Ansible Galaxy roles", "Vault for secrets"],
     relatedTechnologies: ["Terraform", "Docker", "AWS"],
