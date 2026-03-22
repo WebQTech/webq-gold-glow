@@ -572,7 +572,7 @@ export const technologiesData: TechnologyDetail[] = [
     category: "Data & Analytics",
     icon: LayoutDashboard,
     shortDescription: "Visual analytics platform for interactive dashboards.",
-    fullDescription: "Tableau enables business users to explore data through interactive visualizations. We build dashboards, embed analytics, and design data stories for decision-making.",
+    fullDescription: "Tableau enables business users to explore data through interactive visualizations that reveal patterns, trends, and opportunities hidden in raw data. We build executive dashboards, embed analytics into applications, and design data stories that drive decision-making across organizations. For businesses, Tableau democratizes data access — empowering non-technical stakeholders to ask and answer their own questions without waiting for engineering teams. Its drag-and-drop interface creates publication-quality visualizations in minutes, while live connections ensure dashboards always reflect current data. Embedded analytics bring insights directly into existing business workflows and customer-facing products. We leverage AI-powered dashboard design, automated insight discovery, and intelligent data blending to maximize the value of Tableau deployments — turning complex datasets into clear, actionable visual narratives that accelerate business\u00A0outcomes.",
     useCases: ["Executive Dashboards", "Sales Analytics", "Financial Reporting", "Embedded Analytics", "Ad-hoc Analysis"],
     features: ["Drag-and-drop interface", "Live & extract connections", "Dashboard embedding", "Calculated fields", "Tableau Server/Cloud"],
     relatedTechnologies: ["Snowflake", "PostgreSQL", "Python"],
