@@ -2267,25 +2267,31 @@ export const solutionsData: SolutionDetail[] = [
     slug: "soc-as-a-service",
     name: "SOC as a Service",
     shortDescription: "Fully managed Security Operations Center providing 24/7 threat monitoring, detection, and response.",
-    fullDescription: "Our SOC as a Service delivers enterprise-grade security operations without the cost and complexity of building an in-house SOC. Our team of certified security analysts monitors your environment around the clock using advanced SIEM, SOAR, and threat intelligence platforms to detect, investigate, and respond to security threats in real time. We provide continuous protection against evolving cyber threats while giving you full visibility through dashboards and detailed reporting.",
+    fullDescription: "Our SOC as a Service delivers enterprise-grade security operations without the cost and complexity of building an in-house SOC. Our team of certified security analysts monitors your environment around the clock using advanced SIEM, SOAR, and threat intelligence platforms to detect, investigate, and respond to security threats in real time. We provide tiered SOC models — from co-managed augmentation to fully outsourced operations — tailored to your organization's maturity, risk profile, and compliance requirements. Our service includes proactive threat hunting, digital forensics, dark web monitoring, and executive-level reporting with full visibility through real-time dashboards.",
     icon: Radar,
     features: [
-      "24/7/365 security monitoring and alerting",
-      "SIEM deployment, tuning, and management",
-      "Threat hunting and advanced analytics",
-      "Incident response and containment",
-      "SOAR automation for rapid response",
-      "Threat intelligence integration and reporting"
+      "24/7/365 security monitoring, alerting, and triage",
+      "SIEM deployment, tuning, log management, and correlation",
+      "Proactive threat hunting and advanced behavioral analytics",
+      "Incident response, containment, and forensic investigation",
+      "SOAR automation with customized response playbooks",
+      "Threat intelligence integration and dark web monitoring",
+      "Vulnerability management and prioritization",
+      "Compliance reporting (SOC 2, HIPAA, PCI DSS, NIST, ISO 27001)",
+      "Digital forensics and malware analysis",
+      "Executive dashboards and monthly security posture reviews"
     ],
     benefits: [
-      "Enterprise-grade security at a fraction of in-house SOC costs",
-      "Reduce mean time to detect (MTTD) threats to under 15 minutes",
-      "Access to certified security analysts (CISSP, GCIA, GCIH)",
-      "Eliminate alert fatigue with intelligent triage and correlation",
-      "Meet compliance requirements for continuous monitoring",
-      "Scalable coverage as your environment grows"
+      "Enterprise-grade security at 40–60% less than building an in-house SOC",
+      "Reduce mean time to detect (MTTD) threats to under 10 minutes",
+      "Reduce mean time to respond (MTTR) to under 30 minutes",
+      "Access to 50+ certified security analysts (CISSP, GCIA, GCIH, OSCP)",
+      "Eliminate alert fatigue — 95% noise reduction through intelligent triage",
+      "Meet regulatory compliance requirements for continuous monitoring",
+      "Scalable coverage that grows with your environment",
+      "Proactive threat hunting uncovers hidden threats others miss"
     ],
-    technologies: ["Splunk", "Microsoft Sentinel", "CrowdStrike", "Palo Alto Cortex XSOAR", "IBM QRadar", "Elastic Security"],
+    technologies: ["Splunk", "Microsoft Sentinel", "CrowdStrike Falcon", "Palo Alto Cortex XSOAR", "IBM QRadar", "Elastic Security", "Sumo Logic", "Rapid7 InsightIDR", "Carbon Black", "Recorded Future"],
     caseStudies: [
       {
         company: "Mid-Market SaaS Provider",
@@ -2293,11 +2299,28 @@ export const solutionsData: SolutionDetail[] = [
         challenge: "Lacked dedicated security staff and suffered a data breach that went undetected for 3 months.",
         solution: "Deployed managed SOC with 24/7 monitoring, SIEM integration across cloud and on-prem environments, and automated incident response playbooks.",
         results: ["Mean time to detect reduced from 90 days to 8 minutes", "Blocked 12,000+ threats in the first quarter", "Achieved SOC 2 Type II compliance within 6 months"]
+      },
+      {
+        company: "Regional Healthcare Network",
+        industry: "Healthcare",
+        challenge: "HIPAA compliance audit revealed insufficient security monitoring across 12 hospitals and 200+ clinics with sensitive patient data at risk.",
+        solution: "Implemented fully managed SOC with HIPAA-compliant SIEM, endpoint detection across all clinical workstations, and automated PHI access monitoring with anomaly detection.",
+        results: ["100% HIPAA security monitoring compliance achieved", "Detected and blocked 3 insider threat incidents within first 60 days", "Reduced security incident response time from 12 hours to 15 minutes"]
+      },
+      {
+        company: "Manufacturing Conglomerate",
+        industry: "Manufacturing",
+        challenge: "IT/OT convergence created new attack surfaces across industrial control systems with no visibility into operational technology threats.",
+        solution: "Deployed hybrid SOC monitoring covering both IT and OT environments, with specialized ICS/SCADA threat detection and purpose-built response playbooks.",
+        results: ["Unified visibility across 8 manufacturing plants", "Identified 47 previously unknown OT vulnerabilities", "Zero operational disruptions from cyber incidents post-deployment"]
       }
     ],
     faqs: [
-      { question: "How is SOC as a Service different from an MSSP?", answer: "While traditional MSSPs primarily focus on alert forwarding and basic monitoring, our SOC as a Service provides deep investigation, threat hunting, incident response, and continuous tuning. We act as an extension of your team, not just a notification service." },
-      { question: "What data sources do you monitor?", answer: "We integrate with cloud platforms (AWS, Azure, GCP), endpoints (EDR), network devices, firewalls, identity providers, email security, SaaS applications, and custom applications. Our SIEM correlates events across all sources for comprehensive threat visibility." }
+      { question: "How is SOC as a Service different from an MSSP?", answer: "While traditional MSSPs primarily focus on alert forwarding and basic monitoring, our SOC as a Service provides deep investigation, threat hunting, incident response, digital forensics, and continuous tuning. We act as an extension of your team with dedicated analysts who understand your environment, not just a notification service." },
+      { question: "What data sources do you monitor?", answer: "We integrate with cloud platforms (AWS, Azure, GCP), endpoints (EDR/XDR), network devices, firewalls, identity providers (AD, Okta, Entra), email security, SaaS applications, OT/ICS systems, and custom applications. Our SIEM correlates events across all sources for comprehensive threat visibility." },
+      { question: "Can we co-manage the SOC with your team?", answer: "Yes, we offer flexible engagement models — fully managed, co-managed, and hybrid. In co-managed mode, your internal team handles day-to-day operations while we provide after-hours coverage, threat hunting, and escalation support. We integrate seamlessly with your existing tools and processes." },
+      { question: "How do you handle incident escalation?", answer: "We follow a tiered escalation matrix customized to your organization. P1 critical incidents trigger immediate phone escalation to your designated contacts within 5 minutes. P2/P3 incidents follow defined SLAs with detailed context. All incidents include root cause analysis and remediation recommendations." },
+      { question: "What certifications do your analysts hold?", answer: "Our analysts hold industry-leading certifications including CISSP, GCIA, GCIH, OSCP, CEH, CySA+, and GREM. We maintain a minimum certification standard for each SOC tier and invest in continuous training to stay ahead of evolving threats." }
     ]
   },
   {
