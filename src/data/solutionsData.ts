@@ -2373,6 +2373,154 @@ export const solutionsData: SolutionDetail[] = [
       { question: "How long does zero trust implementation take?", answer: "Zero trust is a journey, not a one-time project. We typically implement it in phases over 12–24 months, starting with identity and access management, then progressing to network segmentation, device trust, and continuous monitoring. Quick wins can be achieved within the first 90 days." },
       { question: "Does zero trust replace our existing security tools?", answer: "Not necessarily. Zero trust is an architecture and philosophy that often leverages and enhances your existing investments. We integrate with your current identity providers, firewalls, endpoint protection, and SIEM platforms while adding the policy engine and orchestration layer needed for zero trust enforcement." }
     ]
+  },
+  {
+    slug: "container-orchestration",
+    name: "Container Orchestration",
+    shortDescription: "Containerization, Kubernetes orchestration, and service mesh for scalable cloud-native applications.",
+    fullDescription: "Our Container Orchestration services help organizations adopt and optimize containerized workloads using Kubernetes and modern orchestration platforms. We design, deploy, and manage production-grade container environments — from initial containerization strategy and Docker migration to multi-cluster Kubernetes management, service mesh implementation, and auto-scaling. Our approach ensures your applications are portable, resilient, and efficiently utilizing infrastructure resources.",
+    icon: Container,
+    features: [
+      "Application containerization and Docker migration",
+      "Kubernetes cluster design, deployment, and management",
+      "Service mesh implementation (Istio, Linkerd)",
+      "Container security scanning and runtime protection",
+      "Auto-scaling and resource optimization",
+      "Multi-cluster and multi-cloud orchestration"
+    ],
+    benefits: [
+      "Improve deployment frequency by 10x with container workflows",
+      "Reduce infrastructure costs by 30–50% through efficient resource utilization",
+      "Achieve near-zero downtime deployments with rolling updates",
+      "Portable workloads across any cloud or on-premises environment",
+      "Enhanced resilience with self-healing and auto-scaling",
+      "Simplified microservices networking with service mesh"
+    ],
+    technologies: ["Kubernetes", "Docker", "Istio", "Helm", "Rancher", "Amazon EKS / Azure AKS / Google GKE"],
+    caseStudies: [
+      {
+        company: "FinTech Startup",
+        industry: "Financial Services",
+        challenge: "Monolithic application couldn't scale to handle 10x traffic growth, with deployments taking 8+ hours and frequent outages.",
+        solution: "Decomposed the monolith into containerized microservices on Kubernetes with Istio service mesh, automated scaling policies, and rolling deployment strategies.",
+        results: ["Deployment time reduced from 8 hours to 12 minutes", "Auto-scaling handles 15x traffic spikes seamlessly", "99.99% uptime achieved with zero-downtime deployments"]
+      }
+    ],
+    faqs: [
+      { question: "Do we need Kubernetes for containers?", answer: "Not always. For simple workloads, managed container services like AWS ECS or Azure Container Apps may suffice. Kubernetes is ideal when you need multi-cloud portability, complex orchestration, service mesh, or are running dozens of microservices. We help you choose the right platform for your needs." },
+      { question: "How do you handle container security?", answer: "We implement security at every layer — image scanning in CI/CD pipelines, runtime protection with Falco or Aqua, network policies for micro-segmentation, secrets management with Vault, and RBAC policies for cluster access control." }
+    ]
+  },
+  {
+    slug: "gitops-continuous-delivery",
+    name: "GitOps & Continuous Delivery",
+    shortDescription: "Git-centric deployment workflows for declarative, auditable, and automated continuous delivery.",
+    fullDescription: "Our GitOps & Continuous Delivery services implement a modern deployment paradigm where Git is the single source of truth for your infrastructure and application configurations. Using tools like Argo CD and Flux, we automate the reconciliation between your desired state in Git and your actual environment, enabling fully auditable, repeatable, and self-healing deployments. Combined with advanced delivery strategies like canary releases and blue-green deployments, we help teams ship with confidence.",
+    icon: GitBranch,
+    features: [
+      "GitOps workflow design and implementation",
+      "Argo CD and Flux deployment and configuration",
+      "Canary, blue-green, and progressive delivery strategies",
+      "Environment promotion pipelines (dev → staging → prod)",
+      "Drift detection and automatic reconciliation",
+      "Git-based audit trail and compliance documentation"
+    ],
+    benefits: [
+      "Declarative deployments eliminate configuration drift",
+      "Complete audit trail of every change via Git history",
+      "Faster rollbacks — revert a deployment with a single Git commit",
+      "Self-healing infrastructure automatically corrects drift",
+      "Reduced deployment failures with progressive delivery",
+      "Developer-friendly workflows using familiar Git tooling"
+    ],
+    technologies: ["Argo CD", "Flux", "Kustomize", "Helm", "Tekton", "Spinnaker"],
+    caseStudies: [
+      {
+        company: "Digital Media Company",
+        industry: "Media & Entertainment",
+        challenge: "Manual deployments across 200+ microservices caused frequent configuration drift, inconsistent environments, and 2-hour rollback times.",
+        solution: "Implemented GitOps with Argo CD, environment promotion pipelines, and canary deployment strategies across all services.",
+        results: ["Deployment frequency increased from weekly to 50+ per day", "Rollback time reduced from 2 hours to 30 seconds", "Zero configuration drift incidents after implementation"]
+      }
+    ],
+    faqs: [
+      { question: "What's the difference between GitOps and traditional CI/CD?", answer: "Traditional CI/CD pushes changes to environments (push model). GitOps uses a pull model where an operator continuously reconciles the live environment with the desired state in Git. This provides self-healing, drift detection, and a complete audit trail that traditional pipelines lack." },
+      { question: "Can GitOps work with non-Kubernetes workloads?", answer: "While GitOps originated in the Kubernetes ecosystem, the principles apply broadly. Tools like Terraform with Atlantis, Crossplane, and AWS CloudFormation with Git integration enable GitOps workflows for VMs, serverless, databases, and cloud infrastructure." }
+    ]
+  },
+  {
+    slug: "chaos-engineering",
+    name: "Chaos Engineering",
+    shortDescription: "Proactive resilience testing through controlled fault injection to build confidence in system reliability.",
+    fullDescription: "Our Chaos Engineering services help organizations proactively identify weaknesses in their systems by introducing controlled failures and observing how the system responds. Based on principles pioneered at Netflix, we design and execute chaos experiments — from simple resource stress tests to complex multi-service failure scenarios — to validate resilience, uncover hidden dependencies, and build confidence that your systems can withstand real-world disruptions.",
+    icon: Flame,
+    features: [
+      "Chaos experiment design and hypothesis formulation",
+      "Controlled fault injection (network, compute, storage, application)",
+      "Game day planning and facilitation",
+      "Steady-state monitoring and blast radius control",
+      "Resilience scorecard and improvement roadmap",
+      "Automated chaos testing in CI/CD pipelines"
+    ],
+    benefits: [
+      "Discover hidden failure modes before they cause outages",
+      "Build confidence in system resilience and recovery capabilities",
+      "Reduce mean time to recovery (MTTR) through practiced response",
+      "Validate auto-scaling, failover, and redundancy mechanisms",
+      "Foster a culture of reliability and proactive engineering",
+      "Meet SLA commitments with validated resilience"
+    ],
+    technologies: ["Gremlin", "Chaos Monkey", "Litmus", "AWS Fault Injection Simulator", "Chaos Mesh", "Steadybit"],
+    caseStudies: [
+      {
+        company: "Online Travel Platform",
+        industry: "Travel & Hospitality",
+        challenge: "Experienced 3 major outages in 6 months, each lasting 4+ hours, with no clear understanding of cascading failure patterns.",
+        solution: "Implemented chaos engineering program with weekly experiments, game days, and automated resilience tests in staging environments.",
+        results: ["Identified 23 previously unknown failure modes", "MTTR reduced from 4 hours to 18 minutes", "Zero major outages in the 12 months following implementation"]
+      }
+    ],
+    faqs: [
+      { question: "Is it safe to run chaos experiments in production?", answer: "Yes, when done properly. We start with small blast radius experiments in non-production environments, gradually increasing scope as confidence grows. All production experiments use strict abort conditions, automated rollback, and real-time monitoring to ensure safety." },
+      { question: "How do we get started with chaos engineering?", answer: "We begin with a resilience assessment to understand your architecture and identify high-risk areas. Then we design targeted experiments starting with simple scenarios (single service failure) and progressively increase complexity. Most teams see valuable insights from their very first game day." }
+    ]
+  },
+  {
+    slug: "release-engineering",
+    name: "Release Engineering",
+    shortDescription: "Feature flags, canary deployments, and progressive rollouts for safe, controlled software releases.",
+    fullDescription: "Our Release Engineering services enable organizations to decouple deployment from release, giving teams precise control over feature exposure and rollout strategies. We implement feature flag management, canary deployments, A/B testing infrastructure, and progressive rollout capabilities that let you ship code to production confidently while controlling who sees what, when. This approach dramatically reduces release risk and accelerates experimentation.",
+    icon: Flag,
+    features: [
+      "Feature flag management and lifecycle governance",
+      "Canary deployment and traffic splitting",
+      "Progressive rollout with automated health checks",
+      "A/B testing and experimentation infrastructure",
+      "Kill switch and emergency feature toggling",
+      "Release analytics and feature adoption tracking"
+    ],
+    benefits: [
+      "Decouple deployment from release for zero-risk shipping",
+      "Instantly roll back features without code deployments",
+      "Enable targeted rollouts by region, user segment, or percentage",
+      "Accelerate experimentation with built-in A/B testing",
+      "Reduce release-related incidents by 70%+",
+      "Empower product teams with self-service feature control"
+    ],
+    technologies: ["LaunchDarkly", "Split.io", "Flagsmith", "Unleash", "Flagger", "Argo Rollouts"],
+    caseStudies: [
+      {
+        company: "Global E-Commerce Marketplace",
+        industry: "E-Commerce",
+        challenge: "Major feature releases required 3-week release trains, and a botched checkout redesign caused $2M in lost revenue over a weekend.",
+        solution: "Implemented feature flag platform with progressive rollouts, automated canary analysis, and instant kill switches for all customer-facing features.",
+        results: ["Release cycle reduced from 3 weeks to continuous delivery", "Feature rollback time reduced from 45 minutes to under 5 seconds", "Revenue impact from bad releases reduced by 95%"]
+      }
+    ],
+    faqs: [
+      { question: "How do you manage feature flag technical debt?", answer: "We implement feature flag lifecycle governance — every flag has an owner, expiration date, and cleanup criteria. We provide dashboards showing stale flags, automated alerts for expired flags, and integrate cleanup tasks into sprint workflows to prevent flag sprawl." },
+      { question: "Can feature flags impact application performance?", answer: "Modern feature flag SDKs evaluate flags locally with cached configurations, adding negligible latency (typically <1ms). We design flag architectures that minimize network calls, use efficient data structures, and implement edge-side evaluation for latency-sensitive applications." }
+    ]
   }
 ];
 
