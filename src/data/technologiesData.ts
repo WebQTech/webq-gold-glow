@@ -199,7 +199,7 @@ export const technologiesData: TechnologyDetail[] = [
     category: "Backend",
     icon: Code2,
     shortDescription: "Elegant PHP framework for modern web applications.",
-    fullDescription: "Laravel brings elegance to PHP development with expressive syntax and powerful features. We use it for content-driven applications, APIs, and e-commerce platforms.",
+    fullDescription: "Laravel brings elegance to PHP development with expressive syntax and powerful features that make complex tasks simple. We use it for content-driven applications, REST APIs, and e-commerce platforms that demand reliability and developer productivity. For businesses, Laravel's vast ecosystem — including Forge for deployment, Vapor for serverless, and Nova for admin panels — reduces infrastructure overhead and accelerates time-to-market. Its built-in queue management and event broadcasting enable real-time features without additional infrastructure complexity. PHP powers over 75% of the web, and Laravel makes it modern and maintainable. We integrate AI-powered development tools for automated testing, intelligent code refactoring, and security scanning — delivering robust PHP applications with enterprise-grade quality at\u00A0speed.",
     useCases: ["Content Management Systems", "E-commerce Backends", "REST APIs", "SaaS Platforms", "Admin Dashboards"],
     features: ["Eloquent ORM", "Blade templating", "Queue management", "Laravel Forge deployment", "Built-in authentication"],
     relatedTechnologies: ["MySQL", "Redis", "Docker"],
