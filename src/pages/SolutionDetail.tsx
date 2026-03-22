@@ -270,7 +270,7 @@ const SolutionDetail = () => {
                     <AccordionTrigger className="text-left font-medium text-foreground hover:no-underline">
                       {faq.question}
                     </AccordionTrigger>
-                    <AccordionContent className="text-sm text-muted-foreground pb-4">
+                    <AccordionContent className="text-muted-foreground">
                       {faq.answer}
                     </AccordionContent>
                   </AccordionItem>
