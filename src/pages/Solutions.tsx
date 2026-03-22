@@ -22,7 +22,7 @@ const solutionCategories = [
   },
   {
     title: "Analytics & Data Management",
-    items: ["data-analytics", "data-management", "business-intelligence"],
+    items: ["data-analytics", "data-management", "business-intelligence", "data-governance", "data-warehousing", "etl-data-pipelines"],
   },
   {
     title: "AI & Machine Learning",

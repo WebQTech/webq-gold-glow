@@ -1892,6 +1892,117 @@ export const solutionsData: SolutionDetail[] = [
       { question: "How do you handle legacy document migration?", answer: "We develop a phased migration strategy that includes document inventory, metadata mapping, quality validation, and parallel running. We support migration from file shares, legacy DMS systems, and even physical paper archives." },
       { question: "Can you integrate ECM with our existing business applications?", answer: "Yes, we integrate with ERP, CRM, HR, and other enterprise systems to embed content management directly into business processes, eliminating context switching and manual document handling." }
     ]
+  },
+  {
+    slug: "data-governance",
+    name: "Data Governance & Quality",
+    shortDescription: "Establish data governance frameworks that ensure data accuracy, consistency, and regulatory compliance.",
+    fullDescription: "We implement comprehensive data governance programs that define ownership, policies, standards, and processes to ensure your data is accurate, consistent, secure, and compliant. From data cataloging and lineage to quality monitoring and stewardship, we help organizations treat data as a strategic asset.",
+    icon: BookCheck,
+    features: [
+      "Data governance framework & policy design",
+      "Data catalog & metadata management",
+      "Data lineage & impact analysis",
+      "Data quality profiling & monitoring",
+      "Data stewardship & ownership models",
+      "Master data management (MDM)",
+      "Regulatory compliance (GDPR, CCPA, HIPAA)",
+      "Data literacy & training programs"
+    ],
+    benefits: [
+      "Trusted, high-quality data across the organization",
+      "Regulatory compliance with audit-ready documentation",
+      "Clear data ownership & accountability",
+      "Reduced data-related errors & rework"
+    ],
+    technologies: ["Collibra", "Alation", "Informatica Data Governance", "Atlan", "Apache Atlas", "Great Expectations", "Monte Carlo", "Talend Data Quality", "IBM InfoSphere", "Microsoft Purview"],
+    caseStudies: [
+      {
+        company: "Banking Institution",
+        industry: "Financial Services",
+        challenge: "No centralized data catalog, inconsistent data definitions across departments, and GDPR compliance gaps threatening regulatory penalties.",
+        solution: "Implemented Collibra-based data governance platform with automated data lineage, quality rules, and stewardship workflows across 50+ data domains.",
+        results: ["Full GDPR compliance achieved in 6 months", "90% of critical data assets cataloged & governed", "40% reduction in data quality incidents"]
+      }
+    ],
+    faqs: [
+      { question: "How long does it take to implement a data governance program?", answer: "A foundational framework can be established in 3-6 months, but data governance is an ongoing discipline. We recommend starting with high-priority domains and expanding iteratively." },
+      { question: "What is the difference between data governance and data management?", answer: "Data governance defines the policies, standards, and accountability for data. Data management is the execution — the tools and processes used to collect, store, and maintain data according to governance policies." }
+    ]
+  },
+  {
+    slug: "data-warehousing",
+    name: "Data Warehousing & Data Lakes",
+    shortDescription: "Design and implement modern data warehouses and data lakes for scalable analytics and reporting.",
+    fullDescription: "We design and build modern data warehousing and data lake solutions that centralize your data for analytics, reporting, and AI/ML workloads. From cloud-native data warehouses and lakehouse architectures to data modeling and performance optimization, we create the data foundation that powers your business intelligence and advanced analytics initiatives.",
+    icon: Warehouse,
+    features: [
+      "Cloud data warehouse design & implementation",
+      "Data lake & lakehouse architecture",
+      "Dimensional data modeling (star/snowflake)",
+      "Data vault 2.0 modeling",
+      "Real-time & batch data ingestion",
+      "Query performance optimization",
+      "Data partitioning & clustering strategies",
+      "Cost optimization for cloud storage & compute"
+    ],
+    benefits: [
+      "Centralized, single source of truth for analytics",
+      "Scalable architecture for growing data volumes",
+      "Faster query performance & report generation",
+      "Reduced data infrastructure costs"
+    ],
+    technologies: ["Snowflake", "Databricks", "Google BigQuery", "Amazon Redshift", "Azure Synapse", "Apache Iceberg", "Delta Lake", "dbt", "Apache Spark", "Fivetran"],
+    caseStudies: [
+      {
+        company: "E-Commerce Company",
+        industry: "Retail",
+        challenge: "Analytics running on a legacy on-premise data warehouse with 8-hour report refresh cycles and inability to handle growing data volumes.",
+        solution: "Migrated to Snowflake with a lakehouse architecture using dbt for transformations and Fivetran for automated ingestion from 30+ sources.",
+        results: ["Report refresh reduced from 8 hours to 15 minutes", "10x data volume capacity with elastic scaling", "60% reduction in annual data infrastructure costs"]
+      }
+    ],
+    faqs: [
+      { question: "Data warehouse vs. data lake — which do we need?", answer: "Data warehouses are best for structured data and BI reporting. Data lakes handle all data types (structured, semi-structured, unstructured) at scale. Modern lakehouse architectures combine the best of both. We recommend the right approach based on your use cases." },
+      { question: "Should we choose Snowflake, Databricks, or BigQuery?", answer: "Each has strengths — Snowflake excels at SQL analytics and data sharing, Databricks is ideal for AI/ML + analytics workloads, and BigQuery offers serverless simplicity for Google-centric orgs. We evaluate your specific needs before recommending." }
+    ]
+  },
+  {
+    slug: "etl-data-pipelines",
+    name: "ETL & Data Pipelines",
+    shortDescription: "Build reliable, scalable data pipelines for extracting, transforming, and loading data across systems.",
+    fullDescription: "We design and implement robust ETL/ELT data pipelines that move data reliably across your ecosystem. From batch and real-time ingestion to complex transformations and orchestration, we build data pipelines that are scalable, observable, and maintainable — ensuring your downstream analytics and applications always have fresh, accurate data.",
+    icon: ArrowRightLeft,
+    features: [
+      "ETL/ELT pipeline design & development",
+      "Real-time streaming data pipelines",
+      "Batch processing & scheduling",
+      "Data transformation & cleansing",
+      "Pipeline orchestration & dependency management",
+      "Schema evolution & change data capture (CDC)",
+      "Data pipeline monitoring & alerting",
+      "Self-service data integration for analysts"
+    ],
+    benefits: [
+      "Reliable, automated data delivery",
+      "Fresh data for real-time analytics & dashboards",
+      "Reduced manual data processing effort",
+      "Scalable pipelines for growing data volumes"
+    ],
+    technologies: ["Apache Airflow", "dbt", "Fivetran", "Airbyte", "Apache Kafka", "Spark Structured Streaming", "Prefect", "Dagster", "AWS Glue", "Azure Data Factory"],
+    caseStudies: [
+      {
+        company: "AdTech Platform",
+        industry: "Advertising Technology",
+        challenge: "Processing 2 billion daily ad events with fragile, manually maintained ETL scripts causing frequent data outages and stale dashboards.",
+        solution: "Rebuilt pipelines using Apache Kafka for real-time streaming, dbt for transformations, and Dagster for orchestration with full observability.",
+        results: ["Zero data pipeline outages in 12 months", "Real-time data freshness (< 5 min latency)", "Pipeline development time reduced by 70%"]
+      }
+    ],
+    faqs: [
+      { question: "ETL vs ELT — which approach should we use?", answer: "ELT (Extract, Load, Transform) is the modern standard for cloud data warehouses — it loads raw data first, then transforms in the warehouse using tools like dbt. ETL is still relevant for legacy systems or when transformations need to happen before loading." },
+      { question: "How do you handle data pipeline failures?", answer: "We implement idempotent pipelines with retry logic, dead-letter queues, comprehensive alerting, data quality checks at each stage, and automated rollback capabilities to ensure reliability." }
+    ]
   }
 ];
 
