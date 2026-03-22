@@ -54,7 +54,7 @@ export const technologiesData: TechnologyDetail[] = [
     category: "Frontend",
     icon: Layers,
     shortDescription: "Progressive framework for building approachable, performant UIs.",
-    fullDescription: "Vue.js offers a gentle learning curve with powerful capabilities. We use Vue for projects needing rapid development, lightweight bundles, and an intuitive reactivity system.",
+    fullDescription: "Vue.js offers a gentle learning curve paired with powerful capabilities, making it ideal for teams that need to deliver polished interfaces quickly. We use Vue for projects requiring rapid development, lightweight bundles, and an intuitive reactivity system that simplifies state management. Its progressive architecture means businesses can adopt it incrementally — starting small and scaling as needed without costly rewrites. Vue's single-file components promote clean, maintainable codebases that reduce onboarding time for new developers. We enhance Vue development with AI-assisted tooling for automated component scaffolding, intelligent debugging, and optimized build configurations — accelerating project timelines while maintaining production-grade\u00A0standards.",
     useCases: ["Marketing Websites", "Content Management Interfaces", "Internal Tools", "Prototyping", "Progressive Web Apps"],
     features: ["Reactive data binding", "Single-file components", "Vue Router & Vuex", "Composition API", "Nuxt.js for SSR"],
     relatedTechnologies: ["TypeScript", "Tailwind CSS", "Node.js"],
