@@ -109,7 +109,7 @@ export const technologiesData: TechnologyDetail[] = [
     category: "Frontend",
     icon: Smartphone,
     shortDescription: "Build native mobile apps using React and JavaScript.",
-    fullDescription: "React Native allows us to leverage React skills to build truly native mobile applications for iOS and Android, sharing up to 90% of code between platforms.",
+    fullDescription: "React Native allows us to leverage existing React skills to build truly native mobile applications for iOS and Android, sharing up to 90% of code between platforms. This dramatically reduces development and maintenance costs while delivering authentic native experiences that users expect. Its large community and rich ecosystem of third-party libraries mean faster feature development without reinventing the wheel. React Native's bridge architecture provides access to native device capabilities while maintaining the flexibility of JavaScript. Major companies like Meta, Microsoft, and Shopify trust React Native for their flagship apps. We enhance React Native development with AI-assisted debugging, intelligent performance profiling, and automated cross-platform testing — ensuring flawless mobile experiences delivered at\u00A0speed.",
     useCases: ["Consumer Mobile Apps", "Enterprise Mobile Solutions", "Social Media Apps", "Marketplace Apps", "On-demand Service Apps"],
     features: ["Native components", "Code sharing with React web", "Hot reloading", "Large community & ecosystem", "Expo for rapid development"],
     relatedTechnologies: ["React", "TypeScript", "Node.js"],
