@@ -1313,6 +1313,15 @@ const reactNative: TechSnippetData = {
   webqCallout: "At WebQ, React Native enables us to ship iOS and Android apps from a single codebase. We use Expo, Reanimated 3, and FlashList — delivering native-quality mobile experiences with 90%+ code reuse.",
 };
 
+// Import from split files
+import { rubyOnRails, phpLaravel, oracleCloud, ibmCloud, mysql } from "./technologySnippets-backend-cloud";
+import { ansible, jenkins, githubActions, gitlabCicd, argocd } from "./technologySnippets-devops";
+import { tensorflow, pytorch, openai as openaiSnippets, langchain, huggingFace, scikitLearn, sparkMllib, vertexAi } from "./technologySnippets-ai";
+import { elasticsearch, dynamodb, cassandra, snowflake } from "./technologySnippets-databases";
+import { apacheKafka, apacheAirflow, dbt, tableau, powerBi, looker, databricks, apacheFlink } from "./technologySnippets-data-analytics";
+import { crowdstrike, splunk, paloAltoNetworks, hashicorpVault, sonarqube, snyk, owaspZap, fortify } from "./technologySnippets-security";
+import { sap, salesforce, servicenow, dynamics365, oracleErp, workday, hubspot, jiraAtlassian } from "./technologySnippets-enterprise";
+
 // Build the lookup map with all technologies
 export const technologySnippetsMap: Record<string, TechSnippetData> = {
   "spring-boot": springBoot,
@@ -1338,6 +1347,59 @@ export const technologySnippetsMap: Record<string, TechSnippetData> = {
   "redis": redis,
   "tailwind-css": tailwindCss,
   "react-native": reactNative,
+  // Backend & Cloud
+  "ruby-on-rails": rubyOnRails,
+  "php-laravel": phpLaravel,
+  "oracle-cloud": oracleCloud,
+  "ibm-cloud": ibmCloud,
+  "mysql": mysql,
+  // DevOps & CI/CD
+  "ansible": ansible,
+  "jenkins": jenkins,
+  "github-actions": githubActions,
+  "gitlab-cicd": gitlabCicd,
+  "argocd": argocd,
+  // AI & ML
+  "tensorflow": tensorflow,
+  "pytorch": pytorch,
+  "openai": openaiSnippets,
+  "langchain": langchain,
+  "hugging-face": huggingFace,
+  "scikit-learn": scikitLearn,
+  "spark-mllib": sparkMllib,
+  "vertex-ai": vertexAi,
+  // Databases
+  "elasticsearch": elasticsearch,
+  "dynamodb": dynamodb,
+  "cassandra": cassandra,
+  "snowflake": snowflake,
+  // Data & Analytics
+  "apache-kafka": apacheKafka,
+  "apache-airflow": apacheAirflow,
+  "dbt": dbt,
+  "tableau": tableau,
+  "power-bi": powerBi,
+  "looker": looker,
+  "databricks": databricks,
+  "apache-flink": apacheFlink,
+  // Security
+  "crowdstrike": crowdstrike,
+  "splunk": splunk,
+  "palo-alto-networks": paloAltoNetworks,
+  "hashicorp-vault": hashicorpVault,
+  "sonarqube": sonarqube,
+  "snyk": snyk,
+  "owasp-zap": owaspZap,
+  "fortify": fortify,
+  // Enterprise Platforms
+  "sap": sap,
+  "salesforce": salesforce,
+  "servicenow": servicenow,
+  "dynamics-365": dynamics365,
+  "oracle-erp": oracleErp,
+  "workday": workday,
+  "hubspot": hubspot,
+  "jira-atlassian": jiraAtlassian,
 };
 
 export const getTechSnippets = (slug: string): TechSnippetData | undefined => {
