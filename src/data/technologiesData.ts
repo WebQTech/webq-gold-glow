@@ -629,7 +629,7 @@ export const technologiesData: TechnologyDetail[] = [
     category: "Security",
     icon: ShieldCheck,
     shortDescription: "Cloud-native endpoint protection and threat intelligence.",
-    fullDescription: "CrowdStrike Falcon provides next-gen antivirus, endpoint detection and response (EDR), and threat intelligence for comprehensive endpoint security.",
+    fullDescription: "CrowdStrike Falcon provides next-gen antivirus, endpoint detection and response (EDR), and threat intelligence for comprehensive endpoint security across the enterprise. For businesses, CrowdStrike's cloud-native architecture eliminates the performance overhead of traditional antivirus solutions while providing superior protection against sophisticated threats including ransomware and zero-day exploits. Its AI-powered detection engine identifies and blocks threats in real-time without relying on signatures, stopping attacks that traditional solutions miss. Managed threat hunting by CrowdStrike's expert team provides 24/7 proactive defense. The lightweight agent deploys in minutes across thousands of endpoints. We leverage AI-enhanced threat correlation, automated incident response playbooks, and intelligent vulnerability prioritization to strengthen endpoint security posture — protecting critical business assets from evolving cyber\u00A0threats.",
     useCases: ["Endpoint Protection", "Threat Hunting", "Incident Response", "Vulnerability Management", "IT Hygiene"],
     features: ["Cloud-native architecture", "AI-powered detection", "Real-time visibility", "Threat intelligence", "Managed hunting"],
     relatedTechnologies: ["Splunk", "Palo Alto Networks"],
