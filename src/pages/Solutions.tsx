@@ -47,10 +47,12 @@ const Solutions = () => {
     <div className="min-h-screen bg-background">
       <main id="main-content" className="focus:outline-none" tabIndex={-1}>
         {/* Compact header */}
-        <section className="pt-6 pb-2 lg:pt-10 lg:pb-4">
+        <section className="pt-8 pb-2 lg:pt-12 lg:pb-4">
           <div className="container mx-auto px-6 lg:px-12">
-            <h1 className="text-2xl lg:text-3xl font-bold text-foreground">Solutions</h1>
-            <p className="mt-1 text-sm text-muted-foreground">Explore our full range of technology services and capabilities.</p>
+            <h1 className="text-3xl lg:text-5xl font-bold text-foreground leading-tight">
+              Comprehensive IT Solutions for{" "}
+              <span className="text-primary">Modern Enterprises</span>
+            </h1>
           </div>
         </section>
 
