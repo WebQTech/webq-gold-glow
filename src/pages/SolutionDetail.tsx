@@ -77,13 +77,13 @@ const SolutionDetail = () => {
               </ol>
             </motion.nav>
 
-            <div className="grid lg:grid-cols-5 gap-10 lg:gap-10 items-start">
+            <div className="grid lg:grid-cols-5 gap-10 lg:gap-16 items-start">
               {/* Left: Title + Description + Tech tags */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={isHeroInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6 }}
-                className="lg:col-span-3"
+                className="lg:col-span-2"
               >
                 <h1 className="text-2xl lg:text-3xl font-bold text-foreground leading-tight">
                   {solution.name}
@@ -109,7 +109,7 @@ const SolutionDetail = () => {
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={isHeroInView ? { opacity: 1, scale: 1 } : {}}
                 transition={{ duration: 0.6, delay: 0.15 }}
-                className="lg:col-span-2 flex justify-center"
+                className="lg:col-span-3 flex justify-center"
               >
                 {slug && solutionImages[slug] ? (
                   <SolutionImageCarousel
