@@ -6,10 +6,16 @@ import customDev1 from "@/assets/solutions/custom-dev-1.jpg";
 import customDev2 from "@/assets/solutions/custom-dev-2.jpg";
 import customDev3 from "@/assets/solutions/custom-dev-3.jpg";
 
-// Cloud & Infrastructure
+// Cloud & Infrastructure (business scenario images)
 import cloudMig1 from "@/assets/solutions/cloud-migration-1.jpg";
 import cloudMig2 from "@/assets/solutions/cloud-migration-2.jpg";
 import cloudMig3 from "@/assets/solutions/cloud-migration-3.jpg";
+import cloudMigBiz from "@/assets/solutions/cloud-migration-biz.jpg";
+import itInfraBiz from "@/assets/solutions/it-infra-biz.jpg";
+import cloudOptBiz from "@/assets/solutions/cloud-optimize-biz.jpg";
+import hybridCloudBiz from "@/assets/solutions/hybrid-cloud-biz.jpg";
+import finopsBiz from "@/assets/solutions/finops-biz.jpg";
+import serverlessBiz from "@/assets/solutions/serverless-biz.jpg";
 
 // IT Infrastructure
 import infra1 from "@/assets/solutions/it-infrastructure-1.jpg";
