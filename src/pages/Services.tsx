@@ -41,16 +41,21 @@ const Services = () => {
     <div className="min-h-screen bg-gradient-to-b from-primary/5 to-background">
       <main id="main-content" className="focus:outline-none" tabIndex={-1}>
 
-        {/* Hero — left-aligned, consistent with other pages */}
-        <section className="py-10 lg:py-14">
+        {/* Hero — dark gradient matching homepage */}
+        <section
+          className="py-10 lg:py-14"
+          style={{
+            background: `linear-gradient(135deg, hsl(215 50% 10%) 0%, hsl(210 100% 22%) 60%, hsl(195 80% 30%) 100%)`,
+          }}
+        >
           <div className="container mx-auto px-6 lg:px-12">
             <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12 items-start">
               {/* Left — headline & description */}
               <div className="lg:col-span-3">
-                <nav className="flex items-center gap-1.5 text-xs text-muted-foreground mb-4">
-                  <Link to="/" className="hover:text-primary transition-colors">Home</Link>
+                <nav className="flex items-center gap-1.5 text-xs text-white/50 mb-4">
+                  <Link to="/" className="hover:text-white/80 transition-colors">Home</Link>
                   <ChevronRight className="w-3 h-3" />
-                  <span className="text-foreground font-medium">Services</span>
+                  <span className="text-white/90 font-medium">Services</span>
                 </nav>
                 <motion.h1
                   initial={{ opacity: 0, y: 12 }}
