@@ -79,7 +79,7 @@ export const Navbar = () => {
                 className="h-14 w-auto"
               />
               <div className="flex flex-col">
-                <span className="font-montserrat text-xl font-bold text-foreground tracking-tight leading-tight whitespace-nowrap">
+                <span className="font-montserrat text-xl font-bold text-cream tracking-tight leading-tight whitespace-nowrap">
                   WebQ <span className="text-primary">Technologies</span>
                 </span>
                 <span className="text-xs text-muted-foreground font-medium tracking-wide whitespace-nowrap">
