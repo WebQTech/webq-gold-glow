@@ -201,7 +201,7 @@ const Services = () => {
                               <HoverCardTrigger asChild>
                                 <Link
                                   to={`/services/${service.slug}`}
-                                  className="group/link flex items-center gap-2 text-sm leading-normal text-primary hover:text-primary/80 transition-colors py-0.5"
+                                  className="group/link flex items-center gap-2 text-sm leading-normal text-muted-foreground hover:text-primary transition-colors py-0.5"
                                 >
                                   <ServiceIcon className="w-3.5 h-3.5 text-muted-foreground group-hover/link:text-primary transition-colors shrink-0" />
                                   <span>{service.name}</span>
