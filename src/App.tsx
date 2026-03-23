@@ -1,3 +1,4 @@
+import { lazy, Suspense } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -5,24 +6,26 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import Index from "./pages/Index";
-import Solutions from "./pages/Solutions";
-import Technologies from "./pages/Technologies";
-import TechnologyDetail from "./pages/TechnologyDetail";
-import SolutionDetail from "./pages/SolutionDetail";
-import NotFound from "./pages/NotFound";
-import Services from "./pages/Services";
-import ServiceDetail from "./pages/ServiceDetail";
-import Industries from "./pages/Industries";
-import IndustryDetail from "./pages/IndustryDetail";
-import Insights from "./pages/Insights";
-import InsightDetail from "./pages/InsightDetail";
-import About from "./pages/About";
-import Careers from "./pages/Careers";
-import News from "./pages/News";
-import Contact from "./pages/Contact";
 import { Navbar } from "@/components/Navbar";
 import { SectionRedirect } from "@/components/SectionRedirect";
 import { ScrollToTop } from "@/components/ScrollToTop";
+
+// Lazy load all secondary pages
+const Solutions = lazy(() => import("./pages/Solutions"));
+const Technologies = lazy(() => import("./pages/Technologies"));
+const TechnologyDetail = lazy(() => import("./pages/TechnologyDetail"));
+const SolutionDetail = lazy(() => import("./pages/SolutionDetail"));
+const NotFound = lazy(() => import("./pages/NotFound"));
+const Services = lazy(() => import("./pages/Services"));
+const ServiceDetail = lazy(() => import("./pages/ServiceDetail"));
+const Industries = lazy(() => import("./pages/Industries"));
+const IndustryDetail = lazy(() => import("./pages/IndustryDetail"));
+const Insights = lazy(() => import("./pages/Insights"));
+const InsightDetail = lazy(() => import("./pages/InsightDetail"));
+const About = lazy(() => import("./pages/About"));
+const Careers = lazy(() => import("./pages/Careers"));
+const News = lazy(() => import("./pages/News"));
+const Contact = lazy(() => import("./pages/Contact"));
 
 const queryClient = new QueryClient();
 
