@@ -1902,7 +1902,7 @@ export const servicesData: ServiceDetail[] = [
     name: "Financial Management Consultants",
     shortDescription: "Federal financial management, budget analysis, and fiscal compliance consulting specialists.",
     category: "Govt Services",
-    icon: "DollarSign",
+    icon: DollarSign,
     overview: "Our Financial Management consultants support federal agencies with budget formulation, fiscal compliance, audit readiness, and financial system modernization aligned with OMB and Treasury guidelines.",
     keyFeatures: [
       "Federal budget formulation and execution",
