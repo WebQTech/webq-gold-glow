@@ -808,5 +808,19 @@ export const getTechnologyBySlug = (slug: string): TechnologyDetail | undefined 
 };
 
 export const getAllTechnologyCategories = (): string[] => {
-  return [...new Set(technologiesData.map(t => t.category))];
+  const preferredOrder = [
+    "AI & Machine Learning",
+    "Data & Analytics",
+    "Cloud Platforms",
+    "DevOps & CI/CD",
+    "Frontend",
+    "Backend",
+    "Databases",
+    "Enterprise Platforms",
+    "Security",
+  ];
+  const allCategories = [...new Set(technologiesData.map(t => t.category))];
+  return preferredOrder.filter(c => allCategories.includes(c)).concat(
+    allCategories.filter(c => !preferredOrder.includes(c))
+  );
 };
