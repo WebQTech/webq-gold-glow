@@ -811,13 +811,13 @@ export const getAllTechnologyCategories = (): string[] => {
   const preferredOrder = [
     "AI & Machine Learning",
     "Data & Analytics",
+    "Cloud Platforms",
     "Frontend",
     "Backend",
-    "Cloud Platforms",
     "DevOps & CI/CD",
-    "Databases",
     "Enterprise Platforms",
     "Security",
+    "Databases",
   ];
   const allCategories = [...new Set(technologiesData.map(t => t.category))];
   return preferredOrder.filter(c => allCategories.includes(c)).concat(
