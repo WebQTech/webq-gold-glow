@@ -2846,6 +2846,201 @@ export const solutionsData: SolutionDetail[] = [
       { question: "How do you test and evaluate prompts?", answer: "We build automated evaluation suites with golden datasets, scoring rubrics, and regression tests. Every prompt change is validated against benchmarks before deployment — just like software testing." },
       { question: "Can you train our team on prompt engineering?", answer: "Yes. We offer hands-on workshops covering prompt design patterns, evaluation techniques, and best practices tailored to your specific LLM use cases and tech stack." }
     ]
+  },
+  {
+    slug: "database-administration",
+    name: "Database Administration & Management",
+    shortDescription: "End-to-end database administration, optimization, and managed services for mission-critical data systems.",
+    fullDescription: "Our Database Administration & Management services ensure your data systems run at peak performance, availability, and security. We provide 24/7 monitoring, proactive tuning, patching, backup management, and capacity planning across relational, NoSQL, and NewSQL databases. Whether you're running on-premises, in the cloud, or hybrid environments, our certified DBAs optimize query performance, implement high-availability configurations, and establish disaster recovery strategies that protect your most valuable asset — your data. We support Oracle, SQL Server, PostgreSQL, MySQL, MongoDB, and more, delivering enterprise-grade reliability with cost-efficient managed service models.",
+    icon: Database,
+    features: [
+      "24/7 database monitoring and alerting",
+      "Performance tuning and query optimization",
+      "Backup, recovery, and disaster recovery planning",
+      "High availability and failover configuration",
+      "Database patching and version upgrades",
+      "Capacity planning and scaling strategies",
+      "Security hardening and access control",
+      "Multi-database environment management"
+    ],
+    benefits: [
+      "99.99% database uptime with proactive monitoring",
+      "50-70% improvement in query performance",
+      "Reduced DBA staffing costs with managed services",
+      "Automated backup and rapid recovery capabilities",
+      "Compliance-ready audit trails and access controls",
+      "Seamless scaling as data volumes grow"
+    ],
+    technologies: ["Oracle", "SQL Server", "PostgreSQL", "MySQL", "MongoDB", "Amazon RDS", "Azure SQL", "Google Cloud SQL", "Redis", "Datadog"],
+    caseStudies: [
+      {
+        company: "MedData Systems",
+        industry: "Healthcare",
+        challenge: "Critical patient databases experienced frequent performance degradation during peak hours, with query response times exceeding 15 seconds.",
+        solution: "Implemented comprehensive database optimization including query rewriting, index tuning, connection pooling, and read replica configuration with automated failover.",
+        results: ["Query response times reduced from 15s to under 200ms", "99.99% uptime achieved over 12 months", "Database infrastructure costs reduced by 40%"]
+      }
+    ],
+    faqs: [
+      { question: "Which databases do you support?", answer: "We support all major relational databases (Oracle, SQL Server, PostgreSQL, MySQL, MariaDB) and NoSQL databases (MongoDB, Cassandra, DynamoDB, Redis, Elasticsearch). Our DBAs hold certifications across all major platforms." },
+      { question: "Can you manage databases across multiple cloud providers?", answer: "Yes. We manage multi-cloud database environments across AWS, Azure, and GCP, as well as hybrid configurations with on-premises systems. Our unified monitoring ensures consistent performance and security across all environments." }
+    ]
+  },
+  {
+    slug: "database-migration",
+    name: "Database Migration & Modernization",
+    shortDescription: "Seamlessly migrate and modernize databases across platforms with zero data loss and minimal downtime.",
+    fullDescription: "Our Database Migration & Modernization services help organizations move from legacy database systems to modern, cloud-native platforms with minimal risk and downtime. We handle complex migrations between heterogeneous platforms (Oracle to PostgreSQL, SQL Server to Aurora, on-prem to cloud) using proven methodologies that ensure data integrity, schema compatibility, and application continuity. Our approach includes thorough assessment, automated schema conversion, data validation, parallel-run testing, and cutover planning — ensuring your migration succeeds on the first attempt.",
+    icon: HardDrive,
+    features: [
+      "Cross-platform database migration (Oracle, SQL Server, PostgreSQL, MySQL)",
+      "On-premises to cloud database migration",
+      "Schema conversion and compatibility analysis",
+      "Data validation and integrity verification",
+      "Zero-downtime migration strategies",
+      "Legacy database modernization",
+      "Database consolidation and rationalization",
+      "Post-migration performance optimization"
+    ],
+    benefits: [
+      "Zero data loss with validated migration processes",
+      "Minimal downtime with parallel-run strategies",
+      "40-60% cost reduction by moving to open-source databases",
+      "Improved performance on modern database platforms",
+      "Reduced vendor lock-in with platform-agnostic approaches",
+      "Automated rollback capabilities for risk mitigation"
+    ],
+    technologies: ["AWS DMS", "Azure Database Migration Service", "AWS SCT", "Ora2Pg", "pgLoader", "Flyway", "Liquibase", "PostgreSQL", "Amazon Aurora", "Google AlloyDB"],
+    caseStudies: [
+      {
+        company: "RetailMax",
+        industry: "Retail",
+        challenge: "Running on expensive Oracle licenses with aging hardware, the company needed to modernize to a cloud-native database without disrupting 24/7 e-commerce operations.",
+        solution: "Executed a phased migration from Oracle to Amazon Aurora PostgreSQL using AWS DMS with continuous replication, automated schema conversion, and parallel-run validation over 6 weeks.",
+        results: ["Zero downtime during full production cutover", "Annual database licensing costs reduced by $1.8M", "Query performance improved by 35% on Aurora", "Migration completed 2 weeks ahead of schedule"]
+      }
+    ],
+    faqs: [
+      { question: "How do you ensure zero data loss during migration?", answer: "We use continuous data replication, checksum validation, row-count verification, and automated comparison tools to ensure every record is accurately migrated. Parallel-run testing validates data consistency before cutover." },
+      { question: "Can you migrate stored procedures and triggers?", answer: "Yes. We handle full schema migration including stored procedures, triggers, functions, views, and constraints. For cross-platform migrations, we convert platform-specific syntax using automated tools supplemented by manual review." }
+    ]
+  },
+  {
+    slug: "cloud-database-services",
+    name: "Cloud Database Services",
+    shortDescription: "Design, deploy, and manage cloud-native database solutions optimized for scalability, performance, and cost.",
+    fullDescription: "Our Cloud Database Services help organizations leverage fully managed database platforms across AWS, Azure, and GCP. We design cloud-native database architectures that maximize scalability, minimize operational overhead, and optimize costs. From selecting the right managed service (RDS, Aurora, Cloud SQL, Cosmos DB) to configuring auto-scaling, multi-region replication, and serverless databases, we ensure your cloud data layer is production-ready and cost-efficient. Our services include architecture design, provisioning, security configuration, monitoring setup, and ongoing optimization.",
+    icon: CloudCog,
+    features: [
+      "Cloud-native database architecture design",
+      "Managed database service selection and provisioning",
+      "Multi-region replication and global distribution",
+      "Auto-scaling and serverless database configuration",
+      "Cloud database security and encryption",
+      "Cost optimization and reserved capacity planning",
+      "Cross-cloud database strategy",
+      "Database-as-a-Service (DBaaS) implementation"
+    ],
+    benefits: [
+      "Eliminate database hardware and maintenance overhead",
+      "Auto-scale to handle traffic spikes seamlessly",
+      "Achieve global low-latency with multi-region deployments",
+      "Reduce cloud database spend by 30-50% with optimization",
+      "Built-in high availability and automated backups",
+      "Focus engineering teams on application logic, not infrastructure"
+    ],
+    technologies: ["Amazon RDS", "Amazon Aurora", "Azure SQL Database", "Azure Cosmos DB", "Google Cloud SQL", "Google AlloyDB", "Amazon DynamoDB", "Google Firestore", "PlanetScale", "CockroachDB"],
+    caseStudies: [
+      {
+        company: "StreamVault",
+        industry: "Media & Entertainment",
+        challenge: "Streaming platform needed a globally distributed database to serve 50M+ users across 30 countries with sub-10ms read latency.",
+        solution: "Designed a multi-region architecture using Azure Cosmos DB with automatic failover, tuned consistency levels per use case, and implemented intelligent caching layers.",
+        results: ["Global read latency reduced to 5ms average", "99.999% availability across all regions", "Database costs optimized by 40% through reserved capacity", "Supported 3x user growth without architecture changes"]
+      }
+    ],
+    faqs: [
+      { question: "Which cloud database service is right for us?", answer: "It depends on your workload type, scale, latency requirements, and budget. We evaluate your needs and recommend the optimal service — whether it's a managed relational database, a NoSQL document store, a graph database, or a serverless option." },
+      { question: "How do you optimize cloud database costs?", answer: "We use reserved instances, auto-scaling policies, storage tiering, query optimization, and right-sizing strategies to minimize costs. Our FinOps approach ensures you pay only for what you need." }
+    ]
+  },
+  {
+    slug: "data-architecture",
+    name: "Data Architecture & Modeling",
+    shortDescription: "Design scalable, performant data architectures and models that power enterprise applications and analytics.",
+    fullDescription: "Our Data Architecture & Modeling services help organizations design robust data foundations that support both operational systems and analytical workloads. We create logical and physical data models, define naming conventions and standards, design schema strategies (star, snowflake, data vault), and establish data flow architectures that ensure consistency, performance, and scalability. Whether you're building a new data platform or rationalizing a complex legacy landscape, our architects deliver blueprints that align data infrastructure with business objectives.",
+    icon: Layers,
+    features: [
+      "Logical and physical data modeling",
+      "Schema design (star, snowflake, data vault)",
+      "Data flow and integration architecture",
+      "Master data management strategy",
+      "Data catalog and metadata management",
+      "Naming conventions and data standards",
+      "Polyglot persistence strategy",
+      "Real-time and batch data architecture"
+    ],
+    benefits: [
+      "Consistent, well-documented data models across the enterprise",
+      "Improved query performance through optimized schema design",
+      "Reduced data redundancy and integration complexity",
+      "Faster development with standardized data patterns",
+      "Future-proof architecture that scales with business growth",
+      "Better data quality through enforced standards"
+    ],
+    technologies: ["ERwin", "dbt", "Apache Kafka", "Snowflake", "Databricks", "Apache Iceberg", "Delta Lake", "Great Expectations", "Alation", "Collibra"],
+    caseStudies: [
+      {
+        company: "InsureTech Global",
+        industry: "Insurance",
+        challenge: "Fragmented data across 12 legacy systems with no unified data model, causing inconsistent reporting and 3-month delays for new analytics requests.",
+        solution: "Designed an enterprise data architecture with a centralized data vault model, standardized schemas, automated data quality checks, and a self-service data catalog.",
+        results: ["Analytics request delivery reduced from 3 months to 2 weeks", "Data inconsistencies reduced by 90%", "Enabled self-service analytics for 200+ business users", "Unified view of customer data across all product lines"]
+      }
+    ],
+    faqs: [
+      { question: "What data modeling approach do you recommend?", answer: "We select the approach based on your use case. Dimensional modeling (star/snowflake) works well for analytics. Data vault is ideal for enterprise-scale integration. Document and graph models suit specific application patterns. We often use a polyglot approach." },
+      { question: "How do you handle legacy data integration?", answer: "We assess existing data landscapes, create mapping documents, design integration layers, and implement ETL/ELT pipelines that consolidate legacy data into modern architectures while maintaining backward compatibility." }
+    ]
+  },
+  {
+    slug: "nosql-newscale-databases",
+    name: "NoSQL & NewScale Databases",
+    shortDescription: "Implement and manage NoSQL and distributed databases for high-scale, low-latency, and flexible data workloads.",
+    fullDescription: "Our NoSQL & NewScale Database services help organizations adopt and optimize non-relational databases for workloads that demand extreme scale, flexible schemas, and low-latency access. We design solutions using document stores, key-value databases, wide-column stores, graph databases, and time-series databases — selecting the right engine for each use case. From MongoDB and Cassandra to Neo4j and InfluxDB, we deliver production-ready deployments with proper indexing, sharding, replication, and monitoring.",
+    icon: Network,
+    features: [
+      "Document database design and optimization (MongoDB, Couchbase)",
+      "Key-value store implementation (Redis, DynamoDB)",
+      "Wide-column database deployment (Cassandra, ScyllaDB)",
+      "Graph database solutions (Neo4j, Amazon Neptune)",
+      "Time-series database implementation (InfluxDB, TimescaleDB)",
+      "Sharding, partitioning, and replication strategies",
+      "Schema design for flexible data models",
+      "Performance benchmarking and capacity planning"
+    ],
+    benefits: [
+      "Handle millions of operations per second at sub-millisecond latency",
+      "Flexible schemas that adapt to evolving data requirements",
+      "Horizontal scaling without application changes",
+      "Purpose-built databases optimized for specific access patterns",
+      "Reduced costs compared to scaling relational databases",
+      "Built-in resilience with distributed architectures"
+    ],
+    technologies: ["MongoDB", "Cassandra", "Redis", "Neo4j", "Amazon DynamoDB", "ScyllaDB", "Couchbase", "InfluxDB", "TimescaleDB", "Amazon Neptune"],
+    caseStudies: [
+      {
+        company: "IoTSense",
+        industry: "IoT & Manufacturing",
+        challenge: "Manufacturing IoT platform needed to ingest and query 500,000 sensor readings per second with real-time alerting and 90-day retention.",
+        solution: "Implemented a dual-database architecture using TimescaleDB for time-series sensor data and Redis for real-time alerting, with automated data tiering to cold storage.",
+        results: ["Sustained 500K+ writes per second with sub-5ms latency", "Real-time anomaly detection within 2 seconds", "Storage costs reduced by 60% with automated tiering", "Query performance 10x faster than previous relational approach"]
+      }
+    ],
+    faqs: [
+      { question: "When should we use NoSQL instead of a relational database?", answer: "NoSQL excels when you need flexible schemas, horizontal scaling, low-latency at massive scale, or specialized data models (graphs, time-series, documents). We help evaluate your workload patterns and recommend the right database type." },
+      { question: "Can NoSQL databases handle ACID transactions?", answer: "Modern NoSQL databases increasingly support ACID transactions. MongoDB supports multi-document transactions, DynamoDB offers transactional APIs, and NewSQL databases like CockroachDB combine distributed architecture with full ACID compliance." }
+    ]
   }
 ];
 
