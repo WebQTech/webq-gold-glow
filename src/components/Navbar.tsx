@@ -58,7 +58,7 @@ export const Navbar = () => {
               >
                 News <ChevronDown size={12} />
               </Link>
-              <button className="text-xs font-medium text-muted-foreground hover:text-primary transition-colors px-3 py-1 flex items-center gap-1">
+              <button className="text-xs font-medium text-cream/70 hover:text-cream transition-colors px-3 py-1 flex items-center gap-1">
                 <Globe size={13} />
                 US-EN <ChevronDown size={12} />
               </button>
