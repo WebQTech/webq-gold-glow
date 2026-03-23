@@ -1876,7 +1876,7 @@ export const servicesData: ServiceDetail[] = [
     name: "Healthcare IT Consultants (VA/CMS)",
     shortDescription: "Specialized consultants for VA, CMS, and federal healthcare IT modernization programs.",
     category: "Govt Services",
-    icon: "HeartPulse",
+    icon: HeartPulse,
     overview: "Our Healthcare IT consultants bring deep domain expertise in VA and CMS systems, electronic health records, and federal healthcare compliance to support mission-critical modernization efforts.",
     keyFeatures: [
       "VA VistA and Cerner EHR migration specialists",
