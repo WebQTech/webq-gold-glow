@@ -2062,11 +2062,11 @@ export const getAllCategories = (): string[] => {
 
 // Categories shown on the Services page (Non-IT & Consulting only; IT is under Solutions)
 const servicesPageCategories = [
+  "Govt Strategic Consulting",
+  "Govt Technical Consulting",
   "Support & Consulting",
   "Talent Management Services",
   "Non-IT Talent Management Services",
-  "Govt Strategic Consulting",
-  "Govt Technical Consulting",
 ];
 
 export const getServicesPageCategories = (): string[] => {
