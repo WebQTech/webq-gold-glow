@@ -85,7 +85,7 @@ const SolutionDetail = () => {
                 transition={{ duration: 0.6 }}
                 className="lg:col-span-3"
               >
-                <h1 className="text-4xl lg:text-5xl font-bold text-foreground leading-tight">
+                <h1 className="text-3xl lg:text-4xl font-bold text-foreground leading-tight">
                   {solution.name}
                 </h1>
                 <p className="mt-5 text-base text-foreground/70 text-justify leading-relaxed font-[Inter]">
