@@ -69,19 +69,19 @@ const featuredInsights = [
 const upcomingWebinars = [
   {
     title: "AI-Powered Digital Transformation",
-    date: "Jan 15, 2025",
+    date: "Apr 17, 2026",
     time: "2:00 PM EST",
     speaker: "Dr. Sarah Chen",
   },
   {
     title: "Cloud Security Best Practices",
-    date: "Jan 22, 2025",
+    date: "May 14, 2026",
     time: "11:00 AM EST",
     speaker: "James Wilson",
   },
   {
     title: "Future of FinTech Innovation",
-    date: "Feb 5, 2025",
+    date: "Jun 11, 2026",
     time: "3:00 PM EST",
     speaker: "Michael Torres",
   },
