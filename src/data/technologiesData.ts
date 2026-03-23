@@ -811,10 +811,10 @@ export const getAllTechnologyCategories = (): string[] => {
   const preferredOrder = [
     "AI & Machine Learning",
     "Data & Analytics",
-    "Cloud Platforms",
-    "DevOps & CI/CD",
     "Frontend",
     "Backend",
+    "Cloud Platforms",
+    "DevOps & CI/CD",
     "Databases",
     "Enterprise Platforms",
     "Security",
