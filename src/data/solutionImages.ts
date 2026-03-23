@@ -146,11 +146,11 @@ export const solutionImages: Record<string, string[]> = {
   "ui-ux-design": uxImages,
   "low-code-no-code": lowCodeImages,
 
-  // Cloud
-  "cloud-migration": cloudImages,
-  "cloud-optimization": [cloudMig2, cloudMig1, infra3],
-  "hybrid-multi-cloud": [cloudMig3, cloudMig1, cloudMig2],
-  "serverless-architecture": [cloudMig2, devops3, cloudMig1],
+  // Cloud (business scenario images)
+  "cloud-migration": [cloudMigBiz, cloudMig1, itInfraBiz],
+  "cloud-optimization": [cloudOptBiz, finopsBiz, cloudMigBiz],
+  "hybrid-multi-cloud": [hybridCloudBiz, cloudMigBiz, serverlessBiz],
+  "serverless-architecture": [serverlessBiz, cloudMigBiz, hybridCloudBiz],
 
   // Infrastructure
   "it-infrastructure": infraImages,
