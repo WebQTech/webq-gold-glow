@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, CheckCircle2, Headphones, UserCheck, Users, Monitor, LucideIcon } from "lucide-react";
+import { ArrowRight, CheckCircle2, Headphones, UserCheck, Users, Monitor, Landmark, LucideIcon } from "lucide-react";
 import { Footer } from "@/components/Footer";
 import { getServicesPageCategories, getServicesByCategory } from "@/data/servicesData";
 import { motion } from "framer-motion";
@@ -9,6 +9,7 @@ const categoryIcons: Record<string, LucideIcon> = {
   "Support & Consulting": Headphones,
   "Talent Management Services": UserCheck,
   "Non-IT Talent Management Services": Users,
+  "Govt Services": Landmark,
 };
 
 const Services = () => {
@@ -46,7 +47,7 @@ const Services = () => {
         {/* Category grid — matches Solutions page style */}
         <section className="py-10 lg:py-14">
           <div className="container mx-auto px-6 lg:px-12">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
               {/* IT Solutions summary tile */}
               <motion.div
                 initial={{ opacity: 0, y: 16 }}
