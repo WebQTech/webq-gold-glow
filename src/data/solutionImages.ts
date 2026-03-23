@@ -111,7 +111,6 @@ const qaImages = [qa1, qa2, qa3];
 const prodImages = [prod1, prod2, prod3];
 const devopsImages = [devops1, devops2, devops3];
 const dataImages = [data1, data2, data3];
-const aiImages = [ai1, ai2, ai3];
 const secImages = [sec1, sec2, sec3];
 const mobileImages = [mobile1, customDev1, customDev2];
 const apiImages = [api1, enterprise1, customDev3];
