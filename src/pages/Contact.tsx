@@ -310,45 +310,7 @@ const Contact = () => {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="space-y-8"
               >
-                {/* USA Map */}
-                <div className="rounded-2xl border border-border overflow-hidden">
-                  <div className="bg-muted/30 px-4 py-2 border-b border-border">
-                    <p className="text-sm font-semibold text-foreground flex items-center gap-2">
-                      <MapPin className="w-4 h-4 text-primary" />
-                      USA Office — Dublin, CA
-                    </p>
-                  </div>
-                  <iframe
-                    title="USA Office Location"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3155.5!2d-121.9352!3d37.7085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fbe1c5e5b6b3f%3A0x0!2s6200+Village+Pkwy%2C+Dublin%2C+CA+94568!5e0!3m2!1sen!2sus!4v1700000000000"
-                    width="100%"
-                    height="200"
-                    style={{ border: 0 }}
-                    allowFullScreen
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                  />
-                </div>
 
-                {/* India Map */}
-                <div className="rounded-2xl border border-border overflow-hidden">
-                  <div className="bg-muted/30 px-4 py-2 border-b border-border">
-                    <p className="text-sm font-semibold text-foreground flex items-center gap-2">
-                      <MapPin className="w-4 h-4 text-primary" />
-                      India Office — Chennai
-                    </p>
-                  </div>
-                  <iframe
-                    title="India Office Location"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.5!2d80.1486!3d12.9516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525f5c5b5b5b5b%3A0x0!2sKalidasan+Street%2C+Chitlapakkam%2C+Chennai!5e0!3m2!1sen!2sin!4v1700000000000"
-                    width="100%"
-                    height="200"
-                    style={{ border: 0 }}
-                    allowFullScreen
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                  />
-                </div>
 
                 {/* FAQ Preview */}
                 <div className="bg-card border border-border rounded-2xl p-8">
