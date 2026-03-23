@@ -32,9 +32,9 @@ const solutionCategories: { title: string; icon: LucideIcon; items: string[] }[]
     items: ["devops-sre", "ci-cd-automation", "infrastructure-as-code", "platform-engineering", "observability-monitoring", "container-orchestration", "gitops-continuous-delivery", "chaos-engineering", "release-engineering"],
   },
   {
-    title: "Quality Assurance",
-    icon: TestTube,
-    items: ["qa-testing", "performance-testing", "security-testing", "test-automation-framework", "accessibility-testing"],
+    title: "Enterprise Application Management",
+    icon: Building2,
+    items: ["erp-management", "crm-implementation", "enterprise-integration", "legacy-modernization", "enterprise-mobility", "supply-chain-management", "enterprise-content-management"],
   },
   {
     title: "Security",
@@ -42,9 +42,9 @@ const solutionCategories: { title: string; icon: LucideIcon; items: string[] }[]
     items: ["data-security", "information-security", "code-security", "cloud-instance-security", "identity-access-management", "cybersecurity-consulting", "compliance-governance", "soc-as-a-service", "penetration-testing", "zero-trust-security"],
   },
   {
-    title: "Enterprise Application Management",
-    icon: Building2,
-    items: ["erp-management", "crm-implementation", "enterprise-integration", "legacy-modernization", "enterprise-mobility", "supply-chain-management", "enterprise-content-management"],
+    title: "Quality Assurance",
+    icon: TestTube,
+    items: ["qa-testing", "performance-testing", "security-testing", "test-automation-framework", "accessibility-testing"],
   },
   {
     title: "Operations & Support",
