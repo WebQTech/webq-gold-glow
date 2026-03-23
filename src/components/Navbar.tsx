@@ -30,6 +30,7 @@ export const Navbar = () => {
 
   const isActiveLink = (href: string) => {
     if (href.startsWith("/#")) return false;
+    if (href === "/") return location.pathname === "/";
     return location.pathname === href || location.pathname.startsWith(href + "/");
   };
 
