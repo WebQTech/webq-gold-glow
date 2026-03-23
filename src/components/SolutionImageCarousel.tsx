@@ -25,7 +25,7 @@ const SolutionImageCarousel = ({ images, alt, interval = 10000 }: SolutionImageC
           key={current}
           src={images[current]}
           alt={`${alt} - ${current + 1}`}
-          className="absolute inset-0 w-full h-full object-cover rounded-2xl"
+          className="absolute inset-0 w-full h-full object-contain rounded-2xl"
           initial={{ opacity: 0, scale: 1.05 }}
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0, scale: 0.95 }}
