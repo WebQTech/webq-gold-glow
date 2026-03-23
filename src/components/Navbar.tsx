@@ -82,7 +82,7 @@ export const Navbar = () => {
                 <span className="font-montserrat text-xl font-bold text-cream tracking-tight leading-tight whitespace-nowrap">
                   WebQ <span className="text-primary">Technologies</span>
                 </span>
-                <span className="text-xs text-muted-foreground font-medium tracking-wide whitespace-nowrap">
+                <span className="text-xs text-cream/60 font-medium tracking-wide whitespace-nowrap">
                   Innovate. Transform. Succeed.
                 </span>
               </div>
