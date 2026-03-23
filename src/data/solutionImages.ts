@@ -163,7 +163,7 @@ export const solutionImages: Record<string, string[]> = {
   // Modernization
   "technology-modernization": techModImages,
   "legacy-modernization": [techMod1, techMod2, customDev3],
-  "platform-engineering": [devops3, techMod2, cloudMig2],
+  "platform-engineering": [platformEngBiz, devopsBiz, cicdBiz],
 
   // QA & Testing
   "qa-testing": qaImages,
