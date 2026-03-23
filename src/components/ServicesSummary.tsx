@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
-import { servicesData } from "@/data/servicesData";
+import { getServicesPageCategories, getServicesByCategory } from "@/data/servicesData";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
-const serviceHighlights = servicesData.slice(0, 14);
+const serviceHighlights = getServicesPageCategories().flatMap(cat => getServicesByCategory(cat));
 
 export const ServicesSummary = () => {
   return (
@@ -22,8 +22,8 @@ export const ServicesSummary = () => {
           </h2>
           <div className="flex justify-center">
             <p className="text-base text-muted-foreground max-w-2xl border-l-4 border-yellow-400 pl-4 text-left">
-              End-to-end technology services from strategy to execution — helping
-              organizations build, modernize, and scale with confidence.
+              Non-IT professional services — talent management, workforce consulting,
+              HR outsourcing, and dedicated support &amp; consulting engagements.
             </p>
           </div>
         </motion.div>
