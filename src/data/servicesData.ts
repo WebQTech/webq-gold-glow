@@ -1677,6 +1677,199 @@ export const servicesData: ServiceDetail[] = [
       { question: "Can you support multi-cloud environments?", answer: "Yes. Our teams are certified across AWS, Azure, GCP, and hybrid environments with unified observability from a single pane of glass." }
     ]
   }
+  // ==================== GOVT SERVICES ====================
+  {
+    slug: "govt-program-management",
+    name: "Program & Project Management",
+    shortDescription: "End-to-end program management for government initiatives and public sector projects.",
+    fullDescription: "Deliver large-scale government programs on time and within budget. Our certified program managers bring deep public sector experience to manage complex multi-stakeholder initiatives, ensure regulatory compliance, and drive measurable outcomes for citizen-facing programs.",
+    icon: ClipboardList,
+    category: "Govt Services",
+    features: [
+      "Program lifecycle management",
+      "Stakeholder coordination & communication",
+      "Risk management & mitigation",
+      "Compliance & regulatory alignment",
+      "Budget tracking & financial reporting",
+      "Change management & adoption",
+      "Performance metrics & KPI dashboards",
+      "Agile & hybrid delivery frameworks"
+    ],
+    benefits: [
+      "On-time, on-budget program delivery",
+      "Transparent stakeholder reporting",
+      "Reduced project risk",
+      "Regulatory compliance assurance",
+      "Improved citizen outcomes"
+    ],
+    technologies: ["MS Project", "Jira", "ServiceNow", "Power BI", "SharePoint", "Confluence"],
+    pricing: createContactPricing("Program & Project Management"),
+    caseStudies: [],
+    faqs: [
+      { question: "What certifications do your consultants hold?", answer: "Our consultants hold PMP, PgMP, PRINCE2, and Agile certifications with extensive federal and state government experience." },
+      { question: "Do you support FedRAMP and FISMA compliance?", answer: "Yes. Our teams are well-versed in federal compliance frameworks including FedRAMP, FISMA, NIST, and agency-specific requirements." }
+    ]
+  },
+  {
+    slug: "govt-business-analysis",
+    name: "Business Analysis & Requirements",
+    shortDescription: "Expert business analysts for government digital transformation and modernization programs.",
+    fullDescription: "Bridge the gap between policy objectives and technology solutions. Our government business analysts specialize in requirements elicitation, process mapping, and gap analysis for public sector modernization initiatives, ensuring technology solutions align with mission objectives.",
+    icon: FileText,
+    category: "Govt Services",
+    features: [
+      "Requirements gathering & documentation",
+      "Business process reengineering",
+      "Gap analysis & feasibility studies",
+      "User story & use case development",
+      "Data flow & systems analysis",
+      "Policy-to-technology translation",
+      "Stakeholder workshops & JAD sessions",
+      "Traceability matrix management"
+    ],
+    benefits: [
+      "Clear, actionable requirements",
+      "Reduced scope creep",
+      "Faster modernization timelines",
+      "Better alignment with mission goals",
+      "Improved vendor coordination"
+    ],
+    technologies: ["Visio", "Lucidchart", "Jira", "Confluence", "Power BI", "Balsamiq"],
+    pricing: createContactPricing("Business Analysis & Requirements"),
+    caseStudies: [],
+    faqs: [
+      { question: "Do your analysts have government clearance?", answer: "We can provide analysts with appropriate clearance levels based on project requirements and agency needs." },
+      { question: "What methodologies do you follow?", answer: "We adapt to agency preferences — Agile, Waterfall, or hybrid — and follow BABOK best practices for requirements management." }
+    ]
+  },
+  {
+    slug: "govt-cybersecurity-compliance",
+    name: "Cybersecurity & Compliance Consulting",
+    shortDescription: "Specialized cybersecurity consultants for government agencies and compliance frameworks.",
+    fullDescription: "Protect government systems and citizen data with expert cybersecurity consultants who understand federal compliance frameworks. From risk assessments and security architecture to continuous monitoring and incident response, we provide the specialized talent government agencies need.",
+    icon: Shield,
+    category: "Govt Services",
+    features: [
+      "FISMA & FedRAMP compliance",
+      "NIST framework implementation",
+      "Security assessment & authorization (SA&A)",
+      "Continuous diagnostics & monitoring",
+      "Incident response planning",
+      "Zero trust architecture consulting",
+      "Identity & access management",
+      "Security awareness training"
+    ],
+    benefits: [
+      "Meet federal security mandates",
+      "Reduce cybersecurity risk exposure",
+      "Achieve & maintain ATO",
+      "Protect citizen data assets",
+      "Improve security posture continuously"
+    ],
+    technologies: ["Splunk", "CrowdStrike", "Palo Alto", "Tenable", "Okta", "Azure AD", "AWS GovCloud"],
+    pricing: createContactPricing("Cybersecurity & Compliance Consulting"),
+    caseStudies: [],
+    faqs: [
+      { question: "Can you help us achieve FedRAMP authorization?", answer: "Yes. We've guided multiple agencies and cloud service providers through the full FedRAMP authorization process, from readiness assessment to continuous monitoring." },
+      { question: "Do you provide cleared cybersecurity staff?", answer: "We can provide cybersecurity professionals with appropriate clearance levels to meet your agency's requirements." }
+    ]
+  },
+  {
+    slug: "govt-data-analytics-consultants",
+    name: "Data & Analytics Consultants",
+    shortDescription: "Data engineers, scientists, and analysts for government data modernization initiatives.",
+    fullDescription: "Transform government data into actionable insights. Our data consultants help agencies modernize data infrastructure, build analytics capabilities, and implement data governance frameworks that enable evidence-based decision making and improved public services.",
+    icon: BarChart3,
+    category: "Govt Services",
+    features: [
+      "Data strategy & governance",
+      "Data warehouse modernization",
+      "Advanced analytics & visualization",
+      "Data quality & master data management",
+      "Open data & transparency initiatives",
+      "Predictive analytics for public services",
+      "Data lake architecture",
+      "Reporting & compliance dashboards"
+    ],
+    benefits: [
+      "Evidence-based policy decisions",
+      "Improved public service delivery",
+      "Data-driven resource allocation",
+      "Enhanced transparency & accountability",
+      "Compliance with data mandates"
+    ],
+    technologies: ["Tableau", "Power BI", "Snowflake", "Databricks", "Python", "AWS GovCloud", "Azure Government"],
+    pricing: createContactPricing("Data & Analytics Consultants"),
+    caseStudies: [],
+    faqs: [
+      { question: "Do you support CDO office initiatives?", answer: "Yes. We help Chief Data Officers establish data governance, build analytics teams, and implement enterprise data strategies aligned with federal data mandates." },
+      { question: "Can you work with classified data?", answer: "We can provide appropriately cleared data professionals for projects involving sensitive or classified government data." }
+    ]
+  },
+  {
+    slug: "govt-cloud-infrastructure",
+    name: "Cloud & Infrastructure Consultants",
+    shortDescription: "Cloud migration and infrastructure modernization specialists for government environments.",
+    fullDescription: "Modernize government IT infrastructure with cloud-first strategies. Our consultants specialize in GovCloud environments, ensuring secure, compliant cloud migrations that reduce costs, improve agility, and meet strict government security requirements.",
+    icon: Cloud,
+    category: "Govt Services",
+    features: [
+      "Cloud migration strategy & execution",
+      "GovCloud architecture design",
+      "Hybrid & multi-cloud solutions",
+      "Infrastructure as Code (IaC)",
+      "Container orchestration & microservices",
+      "Disaster recovery & business continuity",
+      "Cost optimization & FinOps",
+      "Legacy system modernization"
+    ],
+    benefits: [
+      "Reduced infrastructure costs",
+      "Improved system reliability",
+      "Faster deployment of new capabilities",
+      "FedRAMP-compliant cloud environments",
+      "Scalable infrastructure for mission needs"
+    ],
+    technologies: ["AWS GovCloud", "Azure Government", "Google Cloud", "Terraform", "Kubernetes", "Docker", "Ansible"],
+    pricing: createContactPricing("Cloud & Infrastructure Consultants"),
+    caseStudies: [],
+    faqs: [
+      { question: "Do you support GovCloud deployments?", answer: "Yes. We specialize in AWS GovCloud, Azure Government, and other FedRAMP-authorized cloud platforms designed for government workloads." },
+      { question: "Can you modernize our legacy mainframe systems?", answer: "Absolutely. We have experience migrating legacy mainframe and on-premise systems to modern cloud architectures with minimal disruption." }
+    ]
+  },
+  {
+    slug: "govt-erp-systems-consultants",
+    name: "ERP & Enterprise Systems Consultants",
+    shortDescription: "SAP, Oracle, and enterprise system specialists for government agencies.",
+    fullDescription: "Implement and optimize enterprise resource planning systems for government operations. Our ERP consultants bring deep expertise in government-specific configurations, financial management systems, and HR modernization to help agencies streamline operations and improve efficiency.",
+    icon: Building2,
+    category: "Govt Services",
+    features: [
+      "SAP & Oracle implementations",
+      "Financial management system modernization",
+      "HR & payroll system integration",
+      "Grants management systems",
+      "Procurement & acquisition platforms",
+      "System integration & data migration",
+      "Custom configuration & development",
+      "Training & change management"
+    ],
+    benefits: [
+      "Streamlined government operations",
+      "Improved financial transparency",
+      "Better workforce management",
+      "Reduced manual processing",
+      "Compliance with federal standards"
+    ],
+    technologies: ["SAP S/4HANA", "Oracle Cloud", "Workday", "ServiceNow", "Salesforce Government Cloud", "MuleSoft"],
+    pricing: createContactPricing("ERP & Enterprise Systems Consultants"),
+    caseStudies: [],
+    faqs: [
+      { question: "Do you support federal financial systems?", answer: "Yes. Our consultants have experience with FFMIA-compliant financial systems and Treasury reporting requirements." },
+      { question: "Can you help with ERP modernization?", answer: "We help agencies plan and execute ERP modernization from legacy systems to modern cloud-based platforms like SAP S/4HANA and Oracle Cloud." }
+    ]
+  }
 ];
 
 export const getServiceBySlug = (slug: string): ServiceDetail | undefined => {
@@ -1696,6 +1889,7 @@ const servicesPageCategories = [
   "Support & Consulting",
   "Talent Management Services",
   "Non-IT Talent Management Services",
+  "Govt Services",
 ];
 
 export const getServicesPageCategories = (): string[] => {
