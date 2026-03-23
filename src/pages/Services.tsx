@@ -43,16 +43,16 @@ const Services = () => {
 
         {/* Hero — dark gradient matching homepage */}
         <section
-          className="py-10 lg:py-14"
+          className="py-8 lg:py-10"
           style={{
             background: `linear-gradient(135deg, hsl(215 50% 10%) 0%, hsl(210 100% 22%) 60%, hsl(195 80% 30%) 100%)`,
           }}
         >
           <div className="container mx-auto px-6 lg:px-12">
-            <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 lg:gap-8 items-center">
               {/* Left — headline & description */}
               <div className="lg:col-span-3">
-                <nav className="flex items-center gap-1.5 text-xs text-white/50 mb-4">
+                <nav className="flex items-center gap-1.5 text-xs text-white/50 mb-3">
                   <Link to="/" className="hover:text-white/80 transition-colors">Home</Link>
                   <ChevronRight className="w-3 h-3" />
                   <span className="text-white/90 font-medium">Services</span>
@@ -69,7 +69,7 @@ const Services = () => {
                   initial={{ opacity: 0, y: 12 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.4, delay: 0.05 }}
-                  className="mt-5 text-sm lg:text-base text-white/70 leading-relaxed max-w-2xl"
+                  className="mt-4 text-sm lg:text-base text-white/70 leading-relaxed max-w-2xl text-justify"
                 >
                   Our core IT delivery, engineering, and technology solution capabilities are detailed
                   under{" "}
@@ -84,11 +84,11 @@ const Services = () => {
                   initial={{ opacity: 0, y: 12 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.4, delay: 0.1 }}
-                  className="mt-3 text-sm text-white/60 leading-relaxed max-w-2xl"
+                  className="mt-2 text-sm text-white/60 leading-relaxed max-w-2xl text-justify"
                 >
                   Together, these services ensure organizations receive seamless, end-to-end support
                   across both technology and operational domains — serving private enterprises and
-                  public sector agencies at every level of government.
+                  public sector agencies at every level of&nbsp;government.
                 </motion.p>
               </div>
 
