@@ -2,7 +2,7 @@ import {
   Code2, Cloud, Server, RefreshCw, TestTube, Headphones, Settings, Database,
   Gauge, Network, GitBranch, Container, Zap, Shield, Wrench, ClipboardList,
   BarChart3, Brain, Smartphone, Plug, Lock, ShieldCheck, FileCode, CloudCog, KeyRound,
-  ShieldAlert, Scale, PackageSearch, HardDriveDownload, Layers, Activity, DollarSign, CloudLightning, Cog, Accessibility, Blocks, Palette, Bot, Workflow, FlaskConical, Building2, Users, Cable, RotateCcw, TabletSmartphone, Truck, FileStack, BookCheck, Warehouse, ArrowRightLeft, ShoppingCart, FileText, HardDrive, Headset, Radio, GitPullRequest, ShieldPlus, Radar, Crosshair, Fingerprint, Flame, Flag, MessageSquare, BookOpen, Eye, LucideIcon
+  ShieldAlert, Scale, PackageSearch, HardDriveDownload, Layers, Activity, DollarSign, CloudLightning, Cog, Accessibility, Blocks, Palette, Bot, Workflow, FlaskConical, Building2, Users, Cable, RotateCcw, TabletSmartphone, Truck, FileStack, BookCheck, Warehouse, ArrowRightLeft, ShoppingCart, FileText, HardDrive, Headset, Radio, GitPullRequest, ShieldPlus, Radar, Crosshair, Fingerprint, Flame, Flag, MessageSquare, BookOpen, Eye, Sparkles, LucideIcon
 } from "lucide-react";
 
 export interface SolutionDetail {
@@ -2765,6 +2765,86 @@ export const solutionsData: SolutionDetail[] = [
     faqs: [
       { question: "How does the follow-the-sun model work?", answer: "We staff NOC teams across multiple geographies (Americas, EMEA, APAC) so that support is always handled by fully alert, on-shift engineers — no overnight skeleton crews. Handoff protocols ensure seamless continuity between shifts with full context transfer." },
       { question: "Can you support multi-cloud environments?", answer: "Yes. Our teams are certified across AWS, Azure, GCP, and hybrid/on-premises environments. We use unified observability platforms to monitor all infrastructure from a single pane of glass, regardless of where workloads run." }
+    ]
+  },
+  {
+    slug: "llm-solutions",
+    name: "LLM Solutions",
+    shortDescription: "Deploy and fine-tune large language models for enterprise-grade text generation, summarization, and reasoning.",
+    fullDescription: "Our LLM Solutions practice helps enterprises adopt, customize, and scale large language models for production use cases. From fine-tuning open-source models to orchestrating multi-model pipelines, we deliver LLM-powered systems that automate knowledge work, enhance customer interactions, and accelerate decision-making. We specialize in model selection (GPT, Gemini, Llama, Mistral), cost-efficient inference optimization, guardrails for safety and compliance, and enterprise-grade deployment with monitoring. Whether you need a custom chatbot, document intelligence system, or autonomous agent, our LLM expertise turns cutting-edge research into reliable business tools — with full control over data privacy, latency, and cost.",
+    icon: Brain,
+    features: [
+      "Model selection and benchmarking (GPT, Gemini, Llama, Mistral)",
+      "Fine-tuning and domain adaptation",
+      "Multi-model orchestration and routing",
+      "Guardrails, safety filters, and output validation",
+      "Token optimization and cost management",
+      "Enterprise deployment with monitoring and observability",
+      "Knowledge grounding with RAG integration",
+      "On-premise and private cloud LLM hosting"
+    ],
+    benefits: [
+      "Automate knowledge-intensive workflows at scale",
+      "Reduce content creation and summarization time by 80%",
+      "Maintain data privacy with self-hosted model options",
+      "Optimize inference costs with intelligent model routing",
+      "Ensure safe, compliant outputs with built-in guardrails",
+      "Accelerate time-to-value with pre-built LLM templates"
+    ],
+    technologies: ["OpenAI API", "Google Gemini", "Meta Llama", "Mistral", "Hugging Face", "vLLM", "LangChain", "LlamaIndex", "NVIDIA TensorRT-LLM", "Ollama", "Azure OpenAI", "AWS Bedrock"],
+    caseStudies: [
+      {
+        company: "LegalEdge",
+        industry: "Legal Tech",
+        challenge: "Attorneys spent 6+ hours per case reviewing contracts and extracting key clauses, creating bottlenecks in deal flow.",
+        solution: "Deployed a fine-tuned LLM pipeline for contract analysis with clause extraction, risk scoring, and automated summary generation — integrated into existing document management systems.",
+        results: ["Contract review time reduced from 6 hours to 20 minutes", "95% accuracy on clause extraction", "3x increase in deals processed per quarter", "$2.5M annual savings in paralegal costs"]
+      }
+    ],
+    faqs: [
+      { question: "Should we use open-source or commercial LLMs?", answer: "It depends on your requirements. Commercial models (GPT, Gemini) offer best-in-class performance with minimal setup. Open-source models (Llama, Mistral) provide full control, data privacy, and lower long-term costs. We help you evaluate and choose the right fit." },
+      { question: "How do you handle LLM hallucinations?", answer: "We implement RAG grounding, output validation, confidence scoring, and human-in-the-loop review for critical decisions. Guardrail frameworks ensure outputs stay factual and within defined boundaries." },
+      { question: "Can LLMs work with our proprietary data?", answer: "Absolutely. We fine-tune models on your domain data or use RAG to ground responses in your knowledge base — all while maintaining strict data privacy and security controls." }
+    ]
+  },
+  {
+    slug: "prompt-engineering",
+    name: "Prompt Engineering",
+    shortDescription: "Design, optimize, and systematize prompts to maximize LLM output quality, consistency, and reliability.",
+    fullDescription: "Our Prompt Engineering services help organizations unlock the full potential of large language models through systematic prompt design, testing, and optimization. We go beyond ad-hoc prompting to build structured prompt libraries, evaluation frameworks, and automated pipelines that deliver consistent, high-quality AI outputs at scale. From chain-of-thought reasoning and few-shot learning to tool-use prompting and multi-step workflows, we apply research-backed techniques to every use case. Our prompt engineering practice includes version control, A/B testing, regression suites, and continuous improvement loops — treating prompts as first-class engineering artifacts that evolve with your business needs.",
+    icon: Sparkles,
+    features: [
+      "Systematic prompt design and optimization",
+      "Chain-of-thought and reasoning strategies",
+      "Few-shot and zero-shot prompt templates",
+      "Prompt versioning and A/B testing frameworks",
+      "Tool-use and function-calling prompt patterns",
+      "Evaluation benchmarks and regression testing",
+      "Multi-step workflow orchestration",
+      "Prompt security and injection prevention"
+    ],
+    benefits: [
+      "Improve LLM output quality by 40-60%",
+      "Reduce token usage and inference costs",
+      "Ensure consistent, reproducible AI responses",
+      "Accelerate prompt development with reusable templates",
+      "Prevent prompt injection and adversarial attacks",
+      "Scale AI capabilities without model retraining"
+    ],
+    technologies: ["LangChain", "LangSmith", "PromptLayer", "Weights & Biases", "OpenAI API", "Google Gemini", "Anthropic Claude", "Promptfoo", "Guidance", "DSPy"],
+    caseStudies: [
+      {
+        company: "SupportAI",
+        industry: "Customer Service",
+        challenge: "AI-powered customer support chatbot produced inconsistent responses, hallucinated product details, and failed to follow brand tone guidelines.",
+        solution: "Redesigned the entire prompt architecture with structured templates, few-shot examples, guardrails, and automated evaluation pipelines. Implemented prompt versioning with A/B testing across customer segments.",
+        results: ["Response accuracy improved from 72% to 94%", "Customer satisfaction scores increased 35%", "Token usage reduced by 45%", "New prompt variants deployed in hours instead of weeks"]
+      }
+    ],
+    faqs: [
+      { question: "Is prompt engineering really that impactful?", answer: "Absolutely. The difference between a mediocre and an expertly crafted prompt can be 40-60% improvement in output quality. Systematic prompt engineering is the most cost-effective way to improve AI performance without model retraining." },
+      { question: "How do you test and evaluate prompts?", answer: "We build automated evaluation suites with golden datasets, scoring rubrics, and regression tests. Every prompt change is validated against benchmarks before deployment — just like software testing." },
+      { question: "Can you train our team on prompt engineering?", answer: "Yes. We offer hands-on workshops covering prompt design patterns, evaluation techniques, and best practices tailored to your specific LLM use cases and tech stack." }
     ]
   }
 ];
