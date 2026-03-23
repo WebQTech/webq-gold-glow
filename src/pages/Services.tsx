@@ -35,11 +35,21 @@ const Services = () => {
                 >
                   Solutions
                 </Link>
-                . This section highlights our{" "}
-                <strong className="text-foreground">Non-IT Professional Services</strong>,
-                including talent management, workforce consulting, HR outsourcing, and dedicated
-                support and advisory engagements designed to strengthen and complement our
-                technology&nbsp;offerings.
+                . In addition, we provide a full suite of{" "}
+                <strong className="text-foreground">IT-Enabled and Professional Support Services</strong>{" "}
+                designed to strengthen, extend, and complement our technology offerings.
+                These include:
+              </p>
+              <ul className="mt-4 space-y-2 text-base text-foreground font-semibold list-disc list-inside">
+                <li>Talent Management &amp; Workforce Consulting</li>
+                <li>HR Outsourcing &amp; Administrative Support Services</li>
+                <li>IT-Enabled Business Support Services (ITES/BPO)</li>
+                <li>Operational Support, Coordination, and Program Administration</li>
+                <li>Dedicated Advisory, Staff Support, and Consulting Engagements</li>
+              </ul>
+              <p className="mt-4 text-base text-muted-foreground leading-relaxed">
+                Together, these services ensure organizations receive seamless, end-to-end support
+                across both technology and operational domains.
               </p>
             </div>
           </div>
