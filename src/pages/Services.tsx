@@ -235,18 +235,23 @@ const Services = () => {
           </div>
         </section>
 
-        {/* CTA — matches Solutions page */}
-        <section className="py-10 lg:py-14 bg-primary/5">
+        {/* CTA — plum→gold gradient */}
+        <section
+          className="py-16 lg:py-[120px]"
+          style={{
+            background: `linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(43 74% 58%) 100%)`,
+          }}
+        >
           <div className="container mx-auto px-6 lg:px-12 text-center">
-            <h2 className="text-2xl lg:text-3xl font-bold text-foreground">
-              Ready to Transform Your Business?
+            <h2 className="text-3xl lg:text-5xl font-bold text-white italic font-serif">
+              Build Better.
             </h2>
-            <p className="mt-3 text-base text-muted-foreground max-w-2xl mx-auto">
+            <p className="mt-4 text-lg text-white/80 max-w-2xl mx-auto">
               Let&apos;s discuss how our professional services can help you achieve your goals.
             </p>
             <Link
               to="/contact"
-              className="mt-6 inline-flex items-center gap-2 btn-primary"
+              className="mt-8 inline-flex items-center gap-2 bg-white text-primary font-semibold px-12 py-4 rounded-full hover:bg-white/90 transition-colors"
             >
               Contact Us Today
               <ArrowRight className="w-4 h-4" />
