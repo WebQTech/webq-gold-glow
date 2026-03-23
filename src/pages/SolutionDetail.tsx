@@ -88,7 +88,7 @@ const SolutionDetail = () => {
                 <h1 className="text-2xl lg:text-3xl font-bold text-foreground leading-tight">
                   {solution.name}
                 </h1>
-                <p className="mt-5 text-sm text-foreground/70 text-justify leading-relaxed font-[Inter]">
+                <p className="mt-5 text-base text-foreground/70 text-justify leading-relaxed font-[Inter]">
                   {solution.fullDescription}
                 </p>
 
