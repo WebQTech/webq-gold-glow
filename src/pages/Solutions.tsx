@@ -42,14 +42,14 @@ const solutionCategories: { title: string; icon: LucideIcon; items: string[] }[]
     items: ["data-security", "information-security", "code-security", "cloud-instance-security", "identity-access-management", "cybersecurity-consulting", "compliance-governance", "soc-as-a-service", "penetration-testing", "zero-trust-security"],
   },
   {
-    title: "Operations & Support",
-    icon: Headphones,
-    items: ["production-support", "managed-services", "it-service-management", "it-asset-management", "disaster-recovery", "procurement-services", "software-licensing", "bulk-hardware-services", "help-desk-support", "network-operations", "change-management", "business-continuity", "global-operations-support"],
-  },
-  {
     title: "Enterprise Application Management",
     icon: Building2,
     items: ["erp-management", "crm-implementation", "enterprise-integration", "legacy-modernization", "enterprise-mobility", "supply-chain-management", "enterprise-content-management"],
+  },
+  {
+    title: "Operations & Support",
+    icon: Headphones,
+    items: ["production-support", "managed-services", "it-service-management", "it-asset-management", "disaster-recovery", "procurement-services", "software-licensing", "bulk-hardware-services", "help-desk-support", "network-operations", "change-management", "business-continuity", "global-operations-support"],
   },
 ];
 
