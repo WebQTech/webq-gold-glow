@@ -1635,6 +1635,47 @@ export const servicesData: ServiceDetail[] = [
       { question: "Can you integrate with our existing HR system?", answer: "Yes. We integrate with all major HRIS and payroll platforms including Workday, SAP, ADP, and BambooHR." },
       { question: "Do you support shift-based and gig workers?", answer: "Absolutely. Our workforce management covers full-time, part-time, shift-based, and contingent/gig workers." }
     ]
+  },
+  {
+    slug: "global-operations-support",
+    name: "24×7 Global Operations IT Support",
+    shortDescription: "Round-the-clock IT operations support across time zones for uninterrupted business continuity.",
+    fullDescription: "Our 24×7 Global Operations IT Support delivers always-on monitoring, incident response, and resolution services across every time zone. With follow-the-sun staffing models, dedicated NOC teams, and AI-powered incident triage, we ensure your critical systems remain operational around the clock. Our tiered support model resolves incidents faster and prevents recurrence through structured root cause analysis. We leverage AI-driven alerting and automated runbooks to reduce mean time to resolution by up to 60%.",
+    icon: Headphones,
+    category: "IT Services",
+    features: [
+      "Follow-the-sun 24×7 monitoring and incident management",
+      "Tiered support (L1/L2/L3) with defined SLAs",
+      "AI-powered incident triage and auto-remediation",
+      "Proactive alerting and anomaly detection",
+      "Structured root cause analysis and problem management",
+      "Multi-cloud and hybrid infrastructure coverage",
+      "Real-time dashboards and executive reporting",
+      "Runbook automation for recurring incidents"
+    ],
+    benefits: [
+      "Zero coverage gaps with follow-the-sun operations",
+      "Faster incident resolution with AI-assisted triage",
+      "Reduced operational costs through automation",
+      "Improved SLA compliance across global deployments",
+      "Predictable IT support costs with managed service pricing",
+      "Freed internal teams to focus on strategic initiatives"
+    ],
+    technologies: ["ServiceNow", "PagerDuty", "Datadog", "Splunk", "AWS CloudWatch", "Azure Monitor", "Grafana", "Prometheus"],
+    pricing: createContactPricing("24×7 Global Operations IT Support"),
+    caseStudies: [
+      {
+        company: "GlobalTrade Corp",
+        industry: "Logistics & Supply Chain",
+        challenge: "Operating across 14 countries with no unified IT support, experiencing 8+ hour resolution times during off-peak periods.",
+        solution: "Implemented follow-the-sun NOC with AI-powered triage, automated runbooks for top 50 recurring incidents, and real-time SLA dashboards.",
+        results: ["Mean time to resolution reduced from 8 hours to 45 minutes", "99.95% uptime across all critical systems", "Annual IT support costs reduced by 35%"]
+      }
+    ],
+    faqs: [
+      { question: "How does the follow-the-sun model work?", answer: "We staff NOC teams across Americas, EMEA, and APAC so support is always handled by fully alert, on-shift engineers with seamless handoff protocols." },
+      { question: "Can you support multi-cloud environments?", answer: "Yes. Our teams are certified across AWS, Azure, GCP, and hybrid environments with unified observability from a single pane of glass." }
+    ]
   }
 ];
 
