@@ -1163,6 +1163,478 @@ export const servicesData: ServiceDetail[] = [
         answer: "We provide comprehensive container security including image scanning, runtime protection, network policies, and Kubernetes-native security controls. This covers the entire container lifecycle from build to runtime."
       }
     ]
+  },
+  // ─── Talent Management Services ───
+  {
+    slug: "it-staffing",
+    name: "IT Staffing & Augmentation",
+    shortDescription: "Scalable access to pre-vetted IT professionals across technologies and domains.",
+    fullDescription: "Our IT staffing services provide on-demand access to skilled engineers, architects, and specialists who integrate seamlessly into your existing teams. Whether you need short-term augmentation for a critical project or long-term embedded resources, we source, vet, and deploy talent matched to your tech stack and culture. For businesses, this eliminates months-long hiring cycles and reduces recruitment costs by up to 50%. Our talent pool spans full-stack developers, cloud engineers, data scientists, QA specialists, and DevOps professionals across all major technologies.",
+    icon: UserCheck,
+    category: "Talent Management Services",
+    features: [
+      "On-demand access to pre-vetted IT professionals",
+      "Tech-stack-matched talent sourcing",
+      "Short-term and long-term engagement models",
+      "Dedicated account management and performance tracking",
+      "Rapid onboarding with cultural fit assessment",
+      "Flexible scaling up or down based on project needs"
+    ],
+    benefits: [
+      "Eliminate lengthy hiring cycles with ready-to-deploy talent",
+      "Reduce recruitment costs by up to 50%",
+      "Access niche skills without permanent headcount commitment",
+      "Scale teams instantly for project surges",
+      "Improve delivery velocity with experienced professionals",
+      "Retain IP and knowledge through structured knowledge transfer"
+    ],
+    technologies: ["React", "Node.js", "Python", "Java", "AWS", "Azure", "Kubernetes", "Terraform"],
+    pricing: createContactPricing("IT Staffing & Augmentation"),
+    caseStudies: [
+      {
+        company: "TechScale Inc.",
+        industry: "SaaS",
+        challenge: "Needed to double their engineering team in 6 weeks for a critical product launch but couldn't hire fast enough through traditional channels.",
+        solution: "Deployed 12 pre-vetted full-stack engineers with React and Node.js expertise, fully integrated within the first week.",
+        results: ["Product launched on schedule", "Engineering velocity increased by 180%", "3 augmented engineers converted to full-time hires"]
+      }
+    ],
+    faqs: [
+      { question: "How quickly can you provide resources?", answer: "For common tech stacks, we can deploy pre-vetted professionals within 1-2 weeks. For niche skills, our average time-to-fill is 3-4 weeks." },
+      { question: "What if a resource isn't the right fit?", answer: "We offer a replacement guarantee. If a resource doesn't meet expectations within the first 2 weeks, we provide a replacement at no additional cost." }
+    ]
+  },
+  {
+    slug: "contract-hiring",
+    name: "Contract Hiring Solutions",
+    shortDescription: "Flexible contract-based hiring for project-specific and seasonal workforce needs.",
+    fullDescription: "Our contract hiring solutions give you workforce flexibility without long-term employment obligations. We manage the entire lifecycle — from sourcing and compliance to payroll and benefits — so you get the talent you need with minimal administrative burden. Ideal for project-based work, seasonal peaks, or specialized engagements where permanent hiring isn't practical.",
+    icon: ClipboardList,
+    category: "Talent Management Services",
+    features: [
+      "End-to-end contract lifecycle management",
+      "Compliance with local labor laws and regulations",
+      "Payroll, benefits, and tax administration",
+      "Contract-to-hire conversion pathways",
+      "Multi-geography contract support",
+      "Performance monitoring and SLA tracking"
+    ],
+    benefits: [
+      "Workforce flexibility without long-term commitments",
+      "Zero administrative burden on internal HR teams",
+      "Full regulatory compliance across jurisdictions",
+      "Seamless conversion from contract to permanent roles",
+      "Reduced legal risk through expert contract management",
+      "Predictable costs with transparent pricing models"
+    ],
+    technologies: ["SAP SuccessFactors", "Workday", "BambooHR", "ADP"],
+    pricing: createContactPricing("Contract Hiring Solutions"),
+    caseStudies: [
+      {
+        company: "RetailMax",
+        industry: "Retail & E-commerce",
+        challenge: "Needed 50+ seasonal technology workers across 3 countries for a holiday platform upgrade with full compliance.",
+        solution: "Managed end-to-end contract hiring across the US, UK, and India with localized compliance, payroll, and onboarding.",
+        results: ["All 50 positions filled within 4 weeks", "Zero compliance incidents across 3 jurisdictions", "Platform upgrade delivered 2 weeks ahead of schedule"]
+      }
+    ],
+    faqs: [
+      { question: "Do you handle payroll and benefits?", answer: "Yes. We manage the complete employment lifecycle for contract workers including payroll processing, statutory benefits, tax withholdings, and insurance." },
+      { question: "Can contractors convert to full-time?", answer: "Absolutely. We offer contract-to-hire pathways with pre-agreed conversion terms, making the transition seamless for both parties." }
+    ]
+  },
+  {
+    slug: "permanent-placement",
+    name: "Permanent Placement",
+    shortDescription: "End-to-end recruitment for permanent technology roles with guaranteed retention.",
+    fullDescription: "Our permanent placement service combines deep industry expertise with rigorous assessment methodologies to find candidates who excel technically and thrive culturally. We go beyond resume matching — using competency frameworks, technical assessments, and behavioral interviews to ensure long-term fit. Our 90-day retention guarantee ensures your investment in talent pays off from day one.",
+    icon: Briefcase,
+    category: "Talent Management Services",
+    features: [
+      "Competency-based candidate assessment",
+      "Technical skill evaluation and coding challenges",
+      "Cultural fit and behavioral interviews",
+      "Executive and leadership search capabilities",
+      "90-day retention guarantee",
+      "Post-placement integration support"
+    ],
+    benefits: [
+      "Higher quality hires with lower attrition rates",
+      "Reduced time-to-hire through dedicated sourcing teams",
+      "Access to passive candidates not on job boards",
+      "Guaranteed retention with replacement policy",
+      "Structured onboarding support for faster productivity",
+      "Deep domain expertise across technology verticals"
+    ],
+    technologies: ["LinkedIn Recruiter", "HackerRank", "Greenhouse", "Lever"],
+    pricing: createContactPricing("Permanent Placement"),
+    caseStudies: [
+      {
+        company: "HealthFirst Systems",
+        industry: "Healthcare Tech",
+        challenge: "Struggled to fill 8 senior engineering positions over 6 months with internal recruitment.",
+        solution: "Engaged our dedicated search team with technical assessment frameworks and access to our passive candidate network.",
+        results: ["All 8 positions filled within 10 weeks", "95% retention rate after 12 months", "Time-to-productivity reduced by 40%"]
+      }
+    ],
+    faqs: [
+      { question: "What roles do you specialize in?", answer: "We place across the full technology spectrum — software engineers, architects, data scientists, DevOps engineers, product managers, CTOs, and VP Engineering roles." },
+      { question: "What's your retention guarantee?", answer: "We offer a 90-day retention guarantee. If a placed candidate leaves within 90 days, we provide a replacement search at no additional fee." }
+    ]
+  },
+  // ─── IT Services ───
+  {
+    slug: "managed-it-services",
+    name: "Managed IT Services",
+    shortDescription: "Comprehensive IT management covering infrastructure, applications, and end-user support.",
+    fullDescription: "Our managed IT services provide end-to-end ownership of your technology operations — from infrastructure monitoring and patch management to application support and vendor coordination. With proactive monitoring, defined SLAs, and a dedicated service delivery manager, we ensure your IT environment runs smoothly while you focus on core business objectives.",
+    icon: Monitor,
+    category: "IT Services",
+    features: [
+      "24/7 infrastructure monitoring and management",
+      "Patch management and security updates",
+      "Application performance monitoring",
+      "Vendor management and coordination",
+      "ITIL-aligned service delivery",
+      "Monthly health reports and optimization reviews"
+    ],
+    benefits: [
+      "Predictable IT costs with fixed monthly pricing",
+      "Reduced downtime through proactive monitoring",
+      "Access to enterprise-grade tools and expertise",
+      "Freed internal teams for strategic projects",
+      "Improved compliance posture with regular audits",
+      "Scalable support that grows with your business"
+    ],
+    technologies: ["ServiceNow", "Datadog", "Splunk", "AWS", "Azure", "VMware", "Cisco"],
+    pricing: createContactPricing("Managed IT Services"),
+    caseStudies: [
+      {
+        company: "MidMarket Financial",
+        industry: "Financial Services",
+        challenge: "A 200-person firm with no dedicated IT team was experiencing frequent outages and security gaps.",
+        solution: "Implemented fully managed IT services with 24/7 monitoring, automated patching, and a dedicated service delivery manager.",
+        results: ["System uptime improved from 95% to 99.9%", "Security incidents reduced by 75%", "IT operational costs reduced by 35%"]
+      }
+    ],
+    faqs: [
+      { question: "What's included in managed IT services?", answer: "Our managed IT services cover infrastructure monitoring, patch management, backup management, security monitoring, help desk support, vendor management, and regular health reviews." },
+      { question: "Can you manage hybrid environments?", answer: "Yes. We manage on-premises, cloud, and hybrid environments using unified monitoring platforms." }
+    ]
+  },
+  {
+    slug: "infrastructure-support-services",
+    name: "Infrastructure Support Services",
+    shortDescription: "Proactive management and optimization of servers, networks, and cloud infrastructure.",
+    fullDescription: "Our infrastructure support services ensure your servers, networks, storage, and cloud resources are always available, secure, and optimized. We provide L1-L3 support with defined escalation paths, proactive capacity planning, and continuous performance tuning across on-premises, cloud, and hybrid environments.",
+    icon: Server,
+    category: "IT Services",
+    features: [
+      "Server and network administration",
+      "Cloud infrastructure management (AWS, Azure, GCP)",
+      "Storage management and optimization",
+      "Capacity planning and right-sizing",
+      "Disaster recovery and backup management",
+      "Performance tuning and optimization"
+    ],
+    benefits: [
+      "Maximum uptime with proactive issue prevention",
+      "Optimized costs through right-sizing and reserved capacity",
+      "Faster incident resolution with tiered support",
+      "Improved security with hardened configurations",
+      "Scalable infrastructure that adapts to demand",
+      "Expert management without hiring specialized staff"
+    ],
+    technologies: ["AWS", "Azure", "GCP", "VMware", "Terraform", "Ansible", "Docker", "Kubernetes"],
+    pricing: createContactPricing("Infrastructure Support Services"),
+    caseStudies: [
+      {
+        company: "DataFlow Analytics",
+        industry: "Data & Analytics",
+        challenge: "Cloud infrastructure costs were spiraling with no visibility into resource utilization across 3 AWS accounts.",
+        solution: "Implemented infrastructure support with automated right-sizing, reserved instance planning, and monthly optimization reviews.",
+        results: ["Cloud costs reduced by 42% in 3 months", "Resource utilization improved from 35% to 78%", "Zero unplanned outages in 12 months"]
+      }
+    ],
+    faqs: [
+      { question: "Do you support multi-cloud environments?", answer: "Yes. Our teams hold certifications across AWS, Azure, and GCP, and we use cloud-agnostic tools for unified management." },
+      { question: "How do you handle emergencies?", answer: "We provide 24/7 on-call support with defined SLAs — P1 incidents are acknowledged within 15 minutes and resolved within 4 hours." }
+    ]
+  },
+  {
+    slug: "help-desk-services",
+    name: "Help Desk & End-User Support",
+    shortDescription: "Multi-channel IT help desk providing fast resolution for employee technology issues.",
+    fullDescription: "Our help desk services provide your employees with responsive, multi-channel IT support — via phone, email, chat, and self-service portals. With AI-powered ticket routing, knowledge base automation, and tiered escalation, we resolve issues quickly and reduce recurring tickets through root cause elimination.",
+    icon: Phone,
+    category: "IT Services",
+    features: [
+      "Multi-channel support (phone, email, chat, portal)",
+      "AI-powered ticket routing and categorization",
+      "Self-service knowledge base and FAQ portal",
+      "Tiered escalation (L1/L2/L3)",
+      "Asset management and provisioning",
+      "Real-time SLA dashboards and CSAT tracking"
+    ],
+    benefits: [
+      "Faster issue resolution with AI-assisted triage",
+      "Improved employee satisfaction and productivity",
+      "Reduced ticket volume through self-service automation",
+      "Consistent service quality with defined SLAs",
+      "Data-driven improvements through analytics",
+      "Scalable support across locations and time zones"
+    ],
+    technologies: ["ServiceNow", "Jira Service Management", "Freshdesk", "Zendesk", "Microsoft Teams"],
+    pricing: createContactPricing("Help Desk & End-User Support"),
+    caseStudies: [
+      {
+        company: "EduGlobal University",
+        industry: "Education",
+        challenge: "5,000+ employees across 12 campuses with inconsistent IT support and average resolution times of 48+ hours.",
+        solution: "Deployed centralized help desk with AI ticket routing, self-service portal, and follow-the-sun L1/L2 support.",
+        results: ["Average resolution time reduced from 48 hours to 4 hours", "First-call resolution rate improved to 78%", "Employee satisfaction score increased from 3.2 to 4.6/5"]
+      }
+    ],
+    faqs: [
+      { question: "What channels do you support?", answer: "We provide omnichannel support via phone, email, live chat, Microsoft Teams integration, and a self-service web portal." },
+      { question: "Can you support remote and hybrid workers?", answer: "Absolutely. Our help desk supports distributed workforces with remote desktop support, device provisioning, and VPN troubleshooting." }
+    ]
+  },
+  // ─── IT Enabled Services ───
+  {
+    slug: "business-process-outsourcing",
+    name: "Business Process Outsourcing (BPO)",
+    shortDescription: "Technology-driven outsourcing of business processes for efficiency and cost optimization.",
+    fullDescription: "Our BPO services combine skilled operations teams with intelligent automation to streamline your back-office and customer-facing processes. From finance and accounting to customer support and data entry, we deliver process excellence through standardization, automation, and continuous improvement.",
+    icon: Cog,
+    category: "IT Enabled Services",
+    features: [
+      "Finance & accounting process outsourcing",
+      "Customer service and support operations",
+      "Data entry, processing, and validation",
+      "Claims processing and adjudication",
+      "Order management and fulfillment support",
+      "Process automation with RPA and AI"
+    ],
+    benefits: [
+      "30-50% cost reduction through operational efficiency",
+      "Improved accuracy with automated quality checks",
+      "Scalable operations for seasonal demand fluctuations",
+      "Access to trained process specialists",
+      "Continuous process improvement through analytics",
+      "Freed management bandwidth for strategic initiatives"
+    ],
+    technologies: ["UiPath", "Blue Prism", "Power Automate", "Salesforce", "SAP"],
+    pricing: createContactPricing("Business Process Outsourcing"),
+    caseStudies: [
+      {
+        company: "InsureCo Partners",
+        industry: "Insurance",
+        challenge: "Claims processing backlog of 10,000+ cases with 12-day average turnaround time.",
+        solution: "Deployed BPO team with RPA-assisted claims triage, automated document extraction, and standardized adjudication workflows.",
+        results: ["Claims backlog eliminated within 8 weeks", "Average turnaround reduced from 12 days to 3 days", "Processing costs reduced by 45%"]
+      }
+    ],
+    faqs: [
+      { question: "How do you ensure quality?", answer: "We implement multi-tier quality frameworks with automated checks, random sampling audits, and real-time accuracy dashboards." },
+      { question: "Can you handle sensitive data?", answer: "Yes. We maintain SOC 2 Type II compliance, implement role-based access controls, and support data residency requirements." }
+    ]
+  },
+  {
+    slug: "knowledge-process-outsourcing",
+    name: "Knowledge Process Outsourcing (KPO)",
+    shortDescription: "High-value analytical and research services powered by domain expertise and AI.",
+    fullDescription: "Our KPO services deliver specialized analytical work — market research, financial analysis, legal document review, and data science — performed by domain experts augmented with AI tools. Unlike traditional outsourcing, KPO focuses on knowledge-intensive tasks that require judgment, analysis, and domain expertise.",
+    icon: BookOpen,
+    category: "IT Enabled Services",
+    features: [
+      "Market research and competitive intelligence",
+      "Financial modeling and analysis",
+      "Legal document review and contract analysis",
+      "Data science and advanced analytics",
+      "Patent research and IP analysis",
+      "Industry-specific regulatory research"
+    ],
+    benefits: [
+      "Access to specialized domain expertise on demand",
+      "Faster turnaround on research and analysis tasks",
+      "AI-augmented insights for deeper analysis",
+      "Reduced cost compared to in-house specialist teams",
+      "Scalable analytical capacity without fixed overhead",
+      "Consistent methodology and quality frameworks"
+    ],
+    technologies: ["Python", "R", "Tableau", "Power BI", "Bloomberg Terminal", "LexisNexis"],
+    pricing: createContactPricing("Knowledge Process Outsourcing"),
+    caseStudies: [
+      {
+        company: "Venture Capital Partners",
+        industry: "Financial Services",
+        challenge: "Investment team spending 60% of time on due diligence research instead of deal evaluation.",
+        solution: "Deployed KPO team for market sizing, competitive analysis, and financial modeling with AI-powered data extraction.",
+        results: ["Due diligence time reduced by 65%", "Deal pipeline throughput increased by 40%", "Research cost per deal reduced by 55%"]
+      }
+    ],
+    faqs: [
+      { question: "What domains do you cover?", answer: "Our KPO teams specialize in financial services, healthcare, legal, technology, and energy sectors." },
+      { question: "How do you maintain confidentiality?", answer: "All KPO engagements operate under strict NDAs, with data handled in isolated environments and encrypted storage." }
+    ]
+  },
+  {
+    slug: "digital-operations",
+    name: "Digital Operations",
+    shortDescription: "Modernized business operations leveraging cloud platforms, automation, and analytics.",
+    fullDescription: "Our digital operations services transform traditional business processes into cloud-native, data-driven workflows. We combine process reengineering with modern platforms — SaaS tools, automation frameworks, and real-time analytics — to create operations that are faster, smarter, and continuously improving.",
+    icon: Globe,
+    category: "IT Enabled Services",
+    features: [
+      "Process digitization and workflow automation",
+      "Cloud-based operations platforms",
+      "Real-time operational analytics and dashboards",
+      "Digital document management and e-signatures",
+      "Omnichannel customer engagement operations",
+      "Continuous improvement through data-driven insights"
+    ],
+    benefits: [
+      "Eliminate paper-based and manual processes",
+      "Real-time visibility into operational metrics",
+      "Improved customer experience with digital-first interactions",
+      "Faster decision-making with live dashboards",
+      "Reduced operational errors through automation",
+      "Scalable operations without proportional headcount growth"
+    ],
+    technologies: ["Salesforce", "Microsoft 365", "ServiceNow", "Power Automate", "Zapier", "Tableau"],
+    pricing: createContactPricing("Digital Operations"),
+    caseStudies: [
+      {
+        company: "PropertyManage Co",
+        industry: "Real Estate",
+        challenge: "Managing 500+ properties with paper-based workflows, leading to lost documents and missed deadlines.",
+        solution: "Digitized all property management workflows with cloud-based document management and automated lease processing.",
+        results: ["Document processing time reduced by 80%", "Tenant satisfaction scores improved by 45%", "Operational staff reduced by 30% through automation"]
+      }
+    ],
+    faqs: [
+      { question: "How long does digital transformation take?", answer: "We follow a phased approach — quick wins in 4-6 weeks, core process digitization in 3-6 months, and full transformation in 6-12 months." },
+      { question: "Do you replace existing systems?", answer: "Not necessarily. We often integrate with existing systems while adding digital layers for automation and analytics." }
+    ]
+  },
+  // ─── Non-IT Talent Management Services ───
+  {
+    slug: "hr-outsourcing",
+    name: "HR Outsourcing",
+    shortDescription: "End-to-end human resources management including payroll, compliance, and employee lifecycle.",
+    fullDescription: "Our HR outsourcing services manage the complete employee lifecycle — from recruitment and onboarding to payroll, benefits administration, compliance, and offboarding. We combine HR expertise with technology platforms to deliver consistent, compliant, and employee-friendly HR operations.",
+    icon: Users,
+    category: "Non-IT Talent Management Services",
+    features: [
+      "Payroll processing and tax compliance",
+      "Benefits administration and enrollment",
+      "Employee onboarding and offboarding",
+      "HR policy development and compliance",
+      "Employee relations and grievance handling",
+      "HR analytics and workforce reporting"
+    ],
+    benefits: [
+      "Reduced HR operational costs by 40-60%",
+      "Full compliance with labor laws across jurisdictions",
+      "Improved employee experience with professional HR support",
+      "Scalable HR operations without fixed overhead",
+      "Access to HR technology platforms and self-service portals",
+      "Freed leadership bandwidth from administrative HR tasks"
+    ],
+    technologies: ["Workday", "BambooHR", "ADP", "SAP SuccessFactors", "Gusto"],
+    pricing: createContactPricing("HR Outsourcing"),
+    caseStudies: [
+      {
+        company: "GrowFast Startup",
+        industry: "Technology",
+        challenge: "Rapidly growing from 50 to 200 employees across 3 countries with no HR infrastructure.",
+        solution: "Implemented full HR outsourcing covering payroll, benefits, compliance, and onboarding with localized support.",
+        results: ["Zero compliance violations across 3 jurisdictions", "Employee onboarding time reduced from 2 weeks to 2 days", "HR cost per employee reduced by 55%"]
+      }
+    ],
+    faqs: [
+      { question: "Which countries do you support?", answer: "We provide HR outsourcing across 20+ countries with localized compliance expertise, covering the Americas, EMEA, and APAC regions." },
+      { question: "Can you handle payroll for contractors and employees?", answer: "Yes. We manage payroll for both permanent employees and contractors, including tax withholdings and statutory contributions." }
+    ]
+  },
+  {
+    slug: "recruitment-process-outsourcing",
+    name: "Recruitment Process Outsourcing (RPO)",
+    shortDescription: "Scalable recruitment solutions for non-IT roles across industries and functions.",
+    fullDescription: "Our RPO services take ownership of your non-IT recruitment — from job profiling and sourcing to screening, interviewing, and offer management. We deploy dedicated recruitment teams that function as an extension of your HR department, bringing process discipline, sourcing expertise, and hiring analytics.",
+    icon: UserPlus,
+    category: "Non-IT Talent Management Services",
+    features: [
+      "End-to-end recruitment lifecycle management",
+      "Multi-channel sourcing and talent pipelining",
+      "Screening, assessment, and interview coordination",
+      "Employer branding and candidate experience management",
+      "Hiring analytics and pipeline reporting",
+      "Campus recruitment and graduate programs"
+    ],
+    benefits: [
+      "Reduced cost-per-hire by 30-50%",
+      "Faster time-to-fill with dedicated sourcing teams",
+      "Improved candidate quality through structured assessments",
+      "Scalable recruitment capacity for volume hiring",
+      "Enhanced employer brand through consistent candidate experience",
+      "Data-driven hiring decisions with recruitment analytics"
+    ],
+    technologies: ["Greenhouse", "Lever", "LinkedIn Recruiter", "HireVue", "iCIMS"],
+    pricing: createContactPricing("Recruitment Process Outsourcing"),
+    caseStudies: [
+      {
+        company: "NationalBank Corp",
+        industry: "Banking",
+        challenge: "Needed to hire 300+ branch and operations staff across 50 locations within 3 months.",
+        solution: "Deployed RPO team with multi-channel sourcing, centralized screening, and regional interview coordination.",
+        results: ["280 of 300 positions filled within 3 months", "Cost-per-hire reduced by 40%", "90-day retention rate of 92%"]
+      }
+    ],
+    faqs: [
+      { question: "What roles do you recruit for?", answer: "We recruit across all non-IT functions — finance, operations, sales, marketing, HR, legal, supply chain, customer service, and executive leadership." },
+      { question: "How does RPO differ from staffing agencies?", answer: "RPO is a strategic partnership where we embed within your organization and own the full recruitment process — unlike transactional agency placements." }
+    ]
+  },
+  {
+    slug: "workforce-management",
+    name: "Workforce Management",
+    shortDescription: "Strategic workforce planning, scheduling, and optimization for operational efficiency.",
+    fullDescription: "Our workforce management services help organizations optimize their most valuable asset — their people. We provide workforce planning, shift scheduling, time & attendance management, and productivity analytics to ensure you have the right people in the right roles at the right time.",
+    icon: Target,
+    category: "Non-IT Talent Management Services",
+    features: [
+      "Workforce planning and demand forecasting",
+      "Shift scheduling and roster optimization",
+      "Time & attendance tracking and compliance",
+      "Productivity analytics and benchmarking",
+      "Contingent workforce management",
+      "Workforce cost modeling and optimization"
+    ],
+    benefits: [
+      "Optimized labor costs through intelligent scheduling",
+      "Improved workforce utilization and productivity",
+      "Reduced overtime and scheduling conflicts",
+      "Better compliance with labor regulations",
+      "Data-driven workforce planning decisions",
+      "Improved employee satisfaction with fair scheduling"
+    ],
+    technologies: ["Kronos", "Workday", "SAP SuccessFactors", "Deputy", "ADP Workforce Now"],
+    pricing: createContactPricing("Workforce Management"),
+    caseStudies: [
+      {
+        company: "LogiChain Solutions",
+        industry: "Logistics",
+        challenge: "Managing 2,000+ warehouse workers across 8 facilities with manual scheduling leading to overtime costs.",
+        solution: "Implemented AI-driven workforce management with demand-based scheduling and real-time attendance tracking.",
+        results: ["Overtime costs reduced by 35%", "Workforce utilization improved from 72% to 91%", "Scheduling conflicts reduced by 85%"]
+      }
+    ],
+    faqs: [
+      { question: "Can you integrate with our existing HR system?", answer: "Yes. We integrate with all major HRIS and payroll platforms including Workday, SAP, ADP, and BambooHR." },
+      { question: "Do you support shift-based and gig workers?", answer: "Absolutely. Our workforce management covers full-time, part-time, shift-based, and contingent/gig workers." }
+    ]
   }
 ];
 
