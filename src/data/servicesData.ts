@@ -1957,6 +1957,93 @@ export const servicesData: ServiceDetail[] = [
       { question: "Do your specialists have FAR/DFARS expertise?", answer: "Yes, our procurement specialists are deeply experienced in FAR, DFARS, and agency-specific acquisition regulations." },
       { question: "Can you support the full procurement lifecycle?", answer: "Absolutely. We cover everything from market research and solicitation through award, administration, and closeout." }
     ]
+  },
+  {
+    slug: "govt-change-management",
+    name: "Change Management Consultants",
+    shortDescription: "Organizational change management for government digital transformation and modernization initiatives.",
+    fullDescription: "Our Change Management consultants guide federal agencies through complex organizational transitions, ensuring stakeholder adoption, minimizing disruption, and driving lasting cultural change across large-scale modernization programs.",
+    icon: RefreshCw,
+    category: "Govt Services",
+    features: [
+      "Organizational readiness assessments",
+      "Stakeholder impact analysis & engagement",
+      "Communication strategy & execution",
+      "Training program design & delivery",
+      "Adoption metrics & sustainment planning",
+      "Prosci & ADKAR methodology expertise"
+    ],
+    benefits: [
+      "Higher user adoption rates for new systems",
+      "Reduced resistance to organizational change",
+      "Smoother transitions during modernization",
+      "Sustained long-term transformation outcomes"
+    ],
+    technologies: ["Prosci", "ServiceNow", "SharePoint", "Power BI", "MS Teams", "Confluence"],
+    pricing: createContactPricing("Change Management Consultants"),
+    caseStudies: [],
+    faqs: [
+      { question: "What change management frameworks do you use?", answer: "We primarily use Prosci ADKAR and Kotter's 8-Step model, tailored to the unique dynamics of federal agencies." },
+      { question: "Can you support enterprise-wide transformations?", answer: "Yes, our consultants have led change management for agency-wide ERP, cloud, and digital transformation programs." }
+    ]
+  },
+  {
+    slug: "govt-quality-assurance",
+    name: "Quality Assurance & Testing Specialists",
+    shortDescription: "IV&V, quality assurance, and testing specialists for government IT programs and compliance.",
+    fullDescription: "Our QA & Testing specialists provide independent verification and validation (IV&V), test automation, and quality assurance services to ensure government systems meet performance, security, and compliance standards.",
+    icon: TestTube,
+    category: "Govt Services",
+    features: [
+      "Independent Verification & Validation (IV&V)",
+      "Test strategy & planning for federal systems",
+      "Automated & manual testing execution",
+      "508 accessibility compliance testing",
+      "Security testing & vulnerability assessments",
+      "Performance & load testing"
+    ],
+    benefits: [
+      "Reduced defects in production systems",
+      "Compliance with federal testing standards",
+      "Faster release cycles with test automation",
+      "Improved system reliability and uptime"
+    ],
+    technologies: ["Selenium", "Cypress", "JIRA", "HP ALM", "SonarQube", "OWASP ZAP"],
+    pricing: createContactPricing("Quality Assurance Specialists"),
+    caseStudies: [],
+    faqs: [
+      { question: "Do you provide IV&V services?", answer: "Yes, we provide fully independent IV&V engagements aligned with IEEE and federal standards." },
+      { question: "Can you support 508 compliance testing?", answer: "Absolutely. Our QA team includes certified accessibility testers experienced with Section 508 and WCAG 2.1 requirements." }
+    ]
+  },
+  {
+    slug: "govt-human-capital",
+    name: "Human Capital Management Specialists",
+    shortDescription: "Federal human capital strategy, workforce planning, and talent management consulting.",
+    fullDescription: "Our Human Capital Management specialists help federal agencies develop workforce strategies, optimize talent acquisition, and build leadership pipelines aligned with OPM guidelines and agency mission objectives.",
+    icon: Users,
+    category: "Govt Services",
+    features: [
+      "Workforce planning & gap analysis",
+      "Talent acquisition strategy for federal roles",
+      "Leadership development & succession planning",
+      "Employee engagement & retention programs",
+      "OPM compliance & reporting",
+      "Diversity, equity & inclusion initiatives"
+    ],
+    benefits: [
+      "Stronger talent pipelines for mission-critical roles",
+      "Improved employee retention and engagement",
+      "Compliance with OPM and merit system principles",
+      "Data-driven workforce planning decisions"
+    ],
+    technologies: ["USA Staffing", "eOPF", "Workday", "SAP SuccessFactors", "Power BI", "Tableau"],
+    pricing: createContactPricing("Human Capital Management"),
+    caseStudies: [],
+    faqs: [
+      { question: "Do you align with OPM guidelines?", answer: "Yes, all our human capital strategies are built around OPM's Human Capital Framework and merit system principles." },
+      { question: "Can you support federal hiring initiatives?", answer: "Absolutely. We help agencies streamline hiring through USA Staffing, direct hire authorities, and strategic recruitment campaigns." }
+    ]
   }
 ];
 
