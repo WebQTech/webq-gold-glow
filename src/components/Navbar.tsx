@@ -93,7 +93,7 @@ export const Navbar = () => {
                 const active = isActiveLink(link.href);
                 const isHash = link.href.startsWith("/#");
                 const linkClass = `${navItemBaseClass} ${
-                  active ? "text-primary" : "text-foreground/70 hover:text-primary"
+                  active ? "text-primary-light" : "text-cream/80 hover:text-primary-light"
                 }`;
 
                 if (isHash) {
