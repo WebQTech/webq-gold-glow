@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, CheckCircle2, Headphones, UserCheck, Users, LucideIcon } from "lucide-react";
+import { ArrowRight, CheckCircle2, Headphones, UserCheck, Users, Monitor, LucideIcon } from "lucide-react";
 import { Footer } from "@/components/Footer";
 import { getServicesPageCategories, getServicesByCategory } from "@/data/servicesData";
 import { motion } from "framer-motion";
