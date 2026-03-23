@@ -82,9 +82,6 @@ const Solutions = () => {
                           <h3 className="text-sm font-bold text-foreground uppercase tracking-wider">
                             {category.title}
                           </h3>
-                          <span className="text-xs text-muted-foreground">
-                            {category.items.length} solutions
-                          </span>
                         </div>
                       </div>
                     </div>
