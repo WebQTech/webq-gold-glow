@@ -41,22 +41,27 @@ const Services = () => {
     <div className="min-h-screen bg-gradient-to-b from-primary/5 to-background">
       <main id="main-content" className="focus:outline-none" tabIndex={-1}>
 
-        {/* Hero — left-aligned, consistent with other pages */}
-        <section className="py-10 lg:py-14">
+        {/* Hero — dark gradient matching homepage */}
+        <section
+          className="py-10 lg:py-14"
+          style={{
+            background: `linear-gradient(135deg, hsl(215 50% 10%) 0%, hsl(210 100% 22%) 60%, hsl(195 80% 30%) 100%)`,
+          }}
+        >
           <div className="container mx-auto px-6 lg:px-12">
             <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12 items-start">
               {/* Left — headline & description */}
               <div className="lg:col-span-3">
-                <nav className="flex items-center gap-1.5 text-xs text-muted-foreground mb-4">
-                  <Link to="/" className="hover:text-primary transition-colors">Home</Link>
+                <nav className="flex items-center gap-1.5 text-xs text-white/50 mb-4">
+                  <Link to="/" className="hover:text-white/80 transition-colors">Home</Link>
                   <ChevronRight className="w-3 h-3" />
-                  <span className="text-foreground font-medium">Services</span>
+                  <span className="text-white/90 font-medium">Services</span>
                 </nav>
                 <motion.h1
                   initial={{ opacity: 0, y: 12 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.4 }}
-                  className="text-2xl lg:text-3xl font-bold text-foreground leading-tight"
+                  className="text-2xl lg:text-3xl font-bold text-white leading-tight"
                 >
                   IT &amp; Professional Consulting Services
                 </motion.h1>
@@ -64,22 +69,22 @@ const Services = () => {
                   initial={{ opacity: 0, y: 12 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.4, delay: 0.05 }}
-                  className="mt-4 text-sm lg:text-base text-muted-foreground leading-relaxed max-w-2xl"
+                  className="mt-4 text-sm lg:text-base text-white/70 leading-relaxed max-w-2xl"
                 >
                   Our core IT delivery, engineering, and technology solution capabilities are detailed
                   under{" "}
-                  <Link to="/solutions" className="text-foreground font-semibold hover:text-primary transition-colors">
+                  <Link to="/solutions" className="text-white font-semibold hover:text-[hsl(195,100%,55%)] transition-colors">
                     Solutions
                   </Link>
                   . In addition, we provide a full suite of{" "}
-                  <strong className="text-foreground">IT-Enabled and Professional Support Services</strong>{" "}
+                  <strong className="text-white">IT-Enabled and Professional Support Services</strong>{" "}
                   designed to strengthen, extend, and complement our technology offerings.
                 </motion.p>
                 <motion.p
                   initial={{ opacity: 0, y: 12 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.4, delay: 0.1 }}
-                  className="mt-3 text-sm text-muted-foreground leading-relaxed max-w-2xl"
+                  className="mt-3 text-sm text-white/70 leading-relaxed max-w-2xl"
                 >
                   Together, these services ensure organizations receive seamless, end-to-end support
                   across both technology and operational domains — serving private enterprises and
@@ -92,9 +97,9 @@ const Services = () => {
                 initial={{ opacity: 0, y: 16 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: 0.1 }}
-                className="lg:col-span-2 border-l-2 border-yellow-400 pl-5"
+                className="lg:col-span-2 border-l-2 border-[hsl(195,100%,55%)] pl-5"
               >
-                <p className="text-xs font-semibold uppercase tracking-[0.15em] text-muted-foreground mb-3">
+                <p className="text-xs font-semibold uppercase tracking-[0.15em] text-white/50 mb-3">
                   What We Cover
                 </p>
                 <ul className="space-y-2">
@@ -104,9 +109,9 @@ const Services = () => {
                       initial={{ opacity: 0, x: 8 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ duration: 0.3, delay: 0.15 + i * 0.03 }}
-                      className="flex items-start gap-2 text-sm text-foreground"
+                      className="flex items-start gap-2 text-sm text-white/90"
                     >
-                      <ChevronRight className="w-3.5 h-3.5 mt-0.5 text-primary shrink-0" />
+                      <ChevronRight className="w-3.5 h-3.5 mt-0.5 text-[hsl(195,100%,55%)] shrink-0" />
                       <span>{item}</span>
                     </motion.li>
                   ))}
