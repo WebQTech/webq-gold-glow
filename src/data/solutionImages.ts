@@ -78,6 +78,15 @@ import lowCode1 from "@/assets/solutions/low-code-1.jpg";
 // Disaster Recovery
 import dr1 from "@/assets/solutions/disaster-recovery-1.jpg";
 
+// LLM Solutions
+import llm1 from "@/assets/solutions/llm-solutions-1.jpg";
+
+// Prompt Engineering
+import promptEng1 from "@/assets/solutions/prompt-engineering-1.jpg";
+
+// Global Operations
+import globalOps1 from "@/assets/solutions/global-operations-1.jpg";
+
 // Reusable image sets by category
 const customDevImages = [customDev1, customDev2, customDev3];
 const cloudImages = [cloudMig1, cloudMig2, cloudMig3];
@@ -165,6 +174,8 @@ export const solutionImages: Record<string, string[]> = {
   "nlp-services": [genAi1, ai3, ai1],
   "rag-solutions": [genAi1, ai1, data1],
   "computer-vision": [ai1, ai2, ai3],
+  "llm-solutions": [llm1, ai1, genAi1],
+  "prompt-engineering": [promptEng1, llm1, ai2],
 
   // Security
   "data-security": secImages,
@@ -191,4 +202,7 @@ export const solutionImages: Record<string, string[]> = {
   "software-licensing": [managed1, enterprise1, infra1],
   "bulk-hardware-services": [infra1, managed1, supply1],
   "change-management": [managed1, techMod3, enterprise1],
+
+  // Operations
+  "global-operations-support": [globalOps1, prod1, managed1],
 };
