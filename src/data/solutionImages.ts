@@ -174,6 +174,8 @@ export const solutionImages: Record<string, string[]> = {
   "nlp-services": [genAi1, ai3, ai1],
   "rag-solutions": [genAi1, ai1, data1],
   "computer-vision": [ai1, ai2, ai3],
+  "llm-solutions": [llm1, ai1, genAi1],
+  "prompt-engineering": [promptEng1, llm1, ai2],
 
   // Security
   "data-security": secImages,
