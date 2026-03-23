@@ -54,8 +54,8 @@ const contactInfo = [
   {
     icon: MapPin,
     title: "Visit Us",
-    details: "123 Innovation Drive",
-    subtext: "San Francisco, CA 94105",
+    details: "6200 Village Pkwy, Suite # 200",
+    subtext: "Dublin, CA 94568",
   },
   {
     icon: Clock,
