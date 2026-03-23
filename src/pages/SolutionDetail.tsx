@@ -109,7 +109,7 @@ const SolutionDetail = () => {
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={isHeroInView ? { opacity: 1, scale: 1 } : {}}
                 transition={{ duration: 0.6, delay: 0.15 }}
-                className="lg:col-span-2 flex justify-center"
+                className="lg:col-span-3 flex justify-center"
               >
                 {slug && solutionImages[slug] ? (
                   <SolutionImageCarousel
