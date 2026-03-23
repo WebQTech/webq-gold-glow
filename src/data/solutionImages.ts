@@ -180,16 +180,16 @@ export const solutionImages: Record<string, string[]> = {
   "data-warehousing": [data1, data2, data3],
   "etl-data-pipelines": [data1, data3, data2],
 
-  // AI & ML
-  "ai-ml-solutions": aiImages,
-  "generative-ai": genAiImages,
-  "agentic-ai": [genAi1, ai2, ai1],
-  "mlops": [ai1, devops1, ai2],
-  "nlp-services": [genAi1, ai3, ai1],
-  "rag-solutions": [genAi1, ai1, data1],
-  "computer-vision": [ai1, ai2, ai3],
-  "llm-solutions": [llm1, ai1, genAi1],
-  "prompt-engineering": [promptEng1, llm1, ai2],
+  // AI & ML (unique hero images per solution)
+  "ai-ml-solutions": [aiMlHero, genAiHero, llmHero],
+  "generative-ai": [genAiHero, aiMlHero, promptEngHero],
+  "agentic-ai": [agenticAiHero, aiMlHero, mlopsHero],
+  "mlops": [mlopsHero, aiMlHero, agenticAiHero],
+  "nlp-services": [nlpHero, genAiHero, ragHero],
+  "rag-solutions": [ragHero, llmHero, nlpHero],
+  "computer-vision": [cvHero, aiMlHero, agenticAiHero],
+  "llm-solutions": [llmHero, ragHero, genAiHero],
+  "prompt-engineering": [promptEngHero, llmHero, genAiHero],
 
   // Security
   "data-security": secImages,
