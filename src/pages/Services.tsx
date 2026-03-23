@@ -61,7 +61,7 @@ const Services = () => {
                   initial={{ opacity: 0, y: 12 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.4 }}
-                  className="text-3xl lg:text-4xl xl:text-5xl font-bold text-white leading-tight tracking-tight"
+                  className="text-2xl lg:text-3xl xl:text-4xl font-bold text-white leading-tight tracking-tight"
                 >
                   IT &amp; Professional Consulting Services
                 </motion.h1>
