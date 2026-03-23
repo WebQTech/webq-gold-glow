@@ -83,7 +83,7 @@ const SolutionDetail = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={isHeroInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6 }}
-                className="lg:col-span-3"
+                className="lg:col-span-2"
               >
                 <h1 className="text-3xl lg:text-4xl font-bold text-foreground leading-tight">
                   {solution.name}
