@@ -54,7 +54,7 @@ export const Navbar = () => {
               </Link>
               <Link
                 to="/news"
-                className="text-xs font-medium text-muted-foreground hover:text-primary transition-colors px-3 py-1 flex items-center gap-1 no-underline"
+                className="text-xs font-medium text-cream/70 hover:text-cream transition-colors px-3 py-1 flex items-center gap-1 no-underline"
               >
                 News <ChevronDown size={12} />
               </Link>
