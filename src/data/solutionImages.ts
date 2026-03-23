@@ -178,15 +178,15 @@ export const solutionImages: Record<string, string[]> = {
   "disaster-recovery": drImages,
   "business-continuity": [dr1, prod1, infra1],
 
-  // DevOps
-  "devops-sre": devopsImages,
-  "ci-cd-automation": [devops1, devops3, qa3],
-  "infrastructure-as-code": [devops3, cloudMig2, devops1],
-  "container-orchestration": [devops3, cloudMig2, devops2],
-  "gitops-continuous-delivery": [devops1, devops3, devops2],
-  "chaos-engineering": [devops2, prod3, devops1],
-  "release-engineering": [devops1, qa3, devops2],
-  "finops": [infra3, cloudMig1, data2],
+  // DevOps (business scenario images)
+  "devops-sre": [devopsBiz, cicdBiz, observabilityBiz],
+  "ci-cd-automation": [cicdBiz, devopsBiz, containersBiz],
+  "infrastructure-as-code": [iacBiz, devopsBiz, cloudMigBiz],
+  "container-orchestration": [containersBiz, devopsBiz, observabilityBiz],
+  "gitops-continuous-delivery": [cicdBiz, iacBiz, devopsBiz],
+  "chaos-engineering": [observabilityBiz, devopsBiz, containersBiz],
+  "release-engineering": [cicdBiz, devopsBiz, iacBiz],
+  "finops": [finopsBiz, cloudOptBiz, cloudMigBiz],
 
   // Data
   "data-analytics": dataImages,
