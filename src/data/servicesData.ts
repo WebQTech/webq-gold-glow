@@ -1928,7 +1928,7 @@ export const servicesData: ServiceDetail[] = [
     name: "Acquisition & Procurement Specialists",
     shortDescription: "Federal acquisition, procurement strategy, and contract management consulting experts.",
     category: "Govt Services",
-    icon: "FileCheck",
+    icon: FileCheck,
     overview: "Our Acquisition & Procurement specialists help government agencies streamline procurement processes, manage contracts, and ensure compliance with FAR/DFARS regulations.",
     keyFeatures: [
       "Federal Acquisition Regulation (FAR/DFARS) expertise",
