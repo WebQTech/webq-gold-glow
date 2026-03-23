@@ -68,10 +68,14 @@ import ai1 from "@/assets/solutions/ai-ml-solutions-1.jpg";
 import ai2 from "@/assets/solutions/ai-ml-solutions-2.jpg";
 import ai3 from "@/assets/solutions/ai-ml-solutions-3.jpg";
 
-// Security
+// Security (business scenario images)
 import sec1 from "@/assets/solutions/security-1.jpg";
 import sec2 from "@/assets/solutions/security-2.jpg";
 import sec3 from "@/assets/solutions/security-3.jpg";
+import securityBiz from "@/assets/solutions/security-biz.jpg";
+import iamBiz from "@/assets/solutions/iam-biz.jpg";
+import complianceBiz from "@/assets/solutions/compliance-biz.jpg";
+import pentestBiz from "@/assets/solutions/pentest-biz.jpg";
 
 // Mobile
 import mobile1 from "@/assets/solutions/mobile-app-1.jpg";
