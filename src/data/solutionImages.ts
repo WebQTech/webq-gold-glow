@@ -174,7 +174,7 @@ export const solutionImages: Record<string, string[]> = {
 
   // Production & Monitoring
   "production-support": prodImages,
-  "observability-monitoring": [prod3, prod1, infra2],
+  "observability-monitoring": [observabilityBiz, devopsBiz, itInfraBiz],
   "disaster-recovery": drImages,
   "business-continuity": [dr1, prod1, infra1],
 
