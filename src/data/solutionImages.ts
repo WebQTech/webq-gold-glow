@@ -153,7 +153,7 @@ export const solutionImages: Record<string, string[]> = {
   "serverless-architecture": [serverlessBiz, cloudMigBiz, hybridCloudBiz],
 
   // Infrastructure
-  "it-infrastructure": infraImages,
+  "it-infrastructure": [itInfraBiz, cloudMigBiz, observabilityBiz],
   "managed-services": managedImages,
   "it-service-management": [managed1, infra1, prod2],
   "it-asset-management": [infra1, managed1, infra3],
