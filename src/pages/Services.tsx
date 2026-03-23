@@ -46,10 +46,12 @@ const Services = () => {
                 <li>IT-Enabled Business Support Services (ITES/BPO)</li>
                 <li>Operational Support, Coordination, and Program Administration</li>
                 <li>Dedicated Advisory, Staff Support, and Consulting Engagements</li>
+                <li>Federal, State, County, and City Government Consulting Services</li>
               </ul>
               <p className="mt-4 text-base text-muted-foreground leading-relaxed">
                 Together, these services ensure organizations receive seamless, end-to-end support
-                across both technology and operational domains.
+                across both technology and operational domains — serving private enterprises and
+                public sector agencies at every level of government.
               </p>
             </div>
           </div>
