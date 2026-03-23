@@ -76,7 +76,7 @@ export const Navbar = () => {
               <img
                 src={logo}
                 alt="WebQ Technologies"
-                className="h-14 w-auto"
+                className="h-10 w-auto"
               />
               <div className="flex flex-col">
                 <span className="font-montserrat text-xl font-bold text-foreground tracking-tight leading-tight whitespace-nowrap">
