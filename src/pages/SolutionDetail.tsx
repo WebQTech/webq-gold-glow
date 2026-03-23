@@ -77,7 +77,7 @@ const SolutionDetail = () => {
               </ol>
             </motion.nav>
 
-            <div className="grid lg:grid-cols-5 gap-10 lg:gap-16 items-start">
+            <div className="grid lg:grid-cols-5 gap-10 lg:gap-8 items-start">
               {/* Left: Title + Description + Tech tags */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
