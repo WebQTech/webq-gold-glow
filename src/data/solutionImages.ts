@@ -116,7 +116,7 @@ const mobileImages = [mobile1, customDev1, customDev2];
 const apiImages = [api1, enterprise1, customDev3];
 const enterpriseImages = [enterprise1, data2, infra1];
 const uxImages = [ux1, customDev2, lowCode1];
-const genAiImages = [genAi1, ai1, ai3];
+
 const managedImages = [managed1, infra2, prod1];
 const supplyImages = [supply1, enterprise1, data1];
 const lowCodeImages = [lowCode1, ux1, customDev1];
