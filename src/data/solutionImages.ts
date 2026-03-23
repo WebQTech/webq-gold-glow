@@ -6,10 +6,16 @@ import customDev1 from "@/assets/solutions/custom-dev-1.jpg";
 import customDev2 from "@/assets/solutions/custom-dev-2.jpg";
 import customDev3 from "@/assets/solutions/custom-dev-3.jpg";
 
-// Cloud & Infrastructure
+// Cloud & Infrastructure (business scenario images)
 import cloudMig1 from "@/assets/solutions/cloud-migration-1.jpg";
 import cloudMig2 from "@/assets/solutions/cloud-migration-2.jpg";
 import cloudMig3 from "@/assets/solutions/cloud-migration-3.jpg";
+import cloudMigBiz from "@/assets/solutions/cloud-migration-biz.jpg";
+import itInfraBiz from "@/assets/solutions/it-infra-biz.jpg";
+import cloudOptBiz from "@/assets/solutions/cloud-optimize-biz.jpg";
+import hybridCloudBiz from "@/assets/solutions/hybrid-cloud-biz.jpg";
+import finopsBiz from "@/assets/solutions/finops-biz.jpg";
+import serverlessBiz from "@/assets/solutions/serverless-biz.jpg";
 
 // IT Infrastructure
 import infra1 from "@/assets/solutions/it-infrastructure-1.jpg";
@@ -31,10 +37,16 @@ import prod1 from "@/assets/solutions/production-support-1.jpg";
 import prod2 from "@/assets/solutions/production-support-2.jpg";
 import prod3 from "@/assets/solutions/production-support-3.jpg";
 
-// DevOps & SRE
+// DevOps & SRE (business scenario images)
 import devops1 from "@/assets/solutions/devops-sre-1.jpg";
 import devops2 from "@/assets/solutions/devops-sre-2.jpg";
 import devops3 from "@/assets/solutions/devops-sre-3.jpg";
+import devopsBiz from "@/assets/solutions/devops-biz.jpg";
+import cicdBiz from "@/assets/solutions/cicd-biz.jpg";
+import iacBiz from "@/assets/solutions/iac-biz.jpg";
+import observabilityBiz from "@/assets/solutions/observability-biz.jpg";
+import platformEngBiz from "@/assets/solutions/platform-eng-biz.jpg";
+import containersBiz from "@/assets/solutions/containers-biz.jpg";
 
 // Data & Analytics
 import data1 from "@/assets/solutions/data-analytics-1.jpg";
@@ -56,10 +68,14 @@ import ai1 from "@/assets/solutions/ai-ml-solutions-1.jpg";
 import ai2 from "@/assets/solutions/ai-ml-solutions-2.jpg";
 import ai3 from "@/assets/solutions/ai-ml-solutions-3.jpg";
 
-// Security
+// Security (business scenario images)
 import sec1 from "@/assets/solutions/security-1.jpg";
 import sec2 from "@/assets/solutions/security-2.jpg";
 import sec3 from "@/assets/solutions/security-3.jpg";
+import securityBiz from "@/assets/solutions/security-biz.jpg";
+import iamBiz from "@/assets/solutions/iam-biz.jpg";
+import complianceBiz from "@/assets/solutions/compliance-biz.jpg";
+import pentestBiz from "@/assets/solutions/pentest-biz.jpg";
 
 // Mobile
 import mobile1 from "@/assets/solutions/mobile-app-1.jpg";
@@ -130,14 +146,14 @@ export const solutionImages: Record<string, string[]> = {
   "ui-ux-design": uxImages,
   "low-code-no-code": lowCodeImages,
 
-  // Cloud
-  "cloud-migration": cloudImages,
-  "cloud-optimization": [cloudMig2, cloudMig1, infra3],
-  "hybrid-multi-cloud": [cloudMig3, cloudMig1, cloudMig2],
-  "serverless-architecture": [cloudMig2, devops3, cloudMig1],
+  // Cloud (business scenario images)
+  "cloud-migration": [cloudMigBiz, cloudMig1, itInfraBiz],
+  "cloud-optimization": [cloudOptBiz, finopsBiz, cloudMigBiz],
+  "hybrid-multi-cloud": [hybridCloudBiz, cloudMigBiz, serverlessBiz],
+  "serverless-architecture": [serverlessBiz, cloudMigBiz, hybridCloudBiz],
 
   // Infrastructure
-  "it-infrastructure": infraImages,
+  "it-infrastructure": [itInfraBiz, cloudMigBiz, observabilityBiz],
   "managed-services": managedImages,
   "it-service-management": [managed1, infra1, prod2],
   "it-asset-management": [infra1, managed1, infra3],
@@ -147,7 +163,7 @@ export const solutionImages: Record<string, string[]> = {
   // Modernization
   "technology-modernization": techModImages,
   "legacy-modernization": [techMod1, techMod2, customDev3],
-  "platform-engineering": [devops3, techMod2, cloudMig2],
+  "platform-engineering": [platformEngBiz, devopsBiz, cicdBiz],
 
   // QA & Testing
   "qa-testing": qaImages,
@@ -158,19 +174,19 @@ export const solutionImages: Record<string, string[]> = {
 
   // Production & Monitoring
   "production-support": prodImages,
-  "observability-monitoring": [prod3, prod1, infra2],
+  "observability-monitoring": [observabilityBiz, devopsBiz, itInfraBiz],
   "disaster-recovery": drImages,
   "business-continuity": [dr1, prod1, infra1],
 
-  // DevOps
-  "devops-sre": devopsImages,
-  "ci-cd-automation": [devops1, devops3, qa3],
-  "infrastructure-as-code": [devops3, cloudMig2, devops1],
-  "container-orchestration": [devops3, cloudMig2, devops2],
-  "gitops-continuous-delivery": [devops1, devops3, devops2],
-  "chaos-engineering": [devops2, prod3, devops1],
-  "release-engineering": [devops1, qa3, devops2],
-  "finops": [infra3, cloudMig1, data2],
+  // DevOps (business scenario images)
+  "devops-sre": [devopsBiz, cicdBiz, observabilityBiz],
+  "ci-cd-automation": [cicdBiz, devopsBiz, containersBiz],
+  "infrastructure-as-code": [iacBiz, devopsBiz, cloudMigBiz],
+  "container-orchestration": [containersBiz, devopsBiz, observabilityBiz],
+  "gitops-continuous-delivery": [cicdBiz, iacBiz, devopsBiz],
+  "chaos-engineering": [observabilityBiz, devopsBiz, containersBiz],
+  "release-engineering": [cicdBiz, devopsBiz, iacBiz],
+  "finops": [finopsBiz, cloudOptBiz, cloudMigBiz],
 
   // Data
   "data-analytics": dataImages,
@@ -191,17 +207,17 @@ export const solutionImages: Record<string, string[]> = {
   "llm-solutions": [llmHero, ragHero, genAiHero],
   "prompt-engineering": [promptEngHero, llmHero, genAiHero],
 
-  // Security
-  "data-security": secImages,
-  "information-security": [sec1, sec3, sec2],
-  "code-security": [sec1, qa1, devops1],
-  "cloud-instance-security": [sec1, cloudMig3, sec3],
-  "identity-access-management": [sec2, sec1, sec3],
-  "cybersecurity-consulting": [sec1, sec2, sec3],
-  "compliance-governance": [sec3, sec1, sec2],
-  "soc-as-a-service": [sec1, prod1, sec3],
-  "penetration-testing": [sec1, qa1, sec2],
-  "zero-trust-security": [sec2, sec1, sec3],
+  // Security (business scenario images)
+  "data-security": [securityBiz, complianceBiz, pentestBiz],
+  "information-security": [securityBiz, iamBiz, complianceBiz],
+  "code-security": [pentestBiz, securityBiz, cicdBiz],
+  "cloud-instance-security": [securityBiz, cloudMigBiz, complianceBiz],
+  "identity-access-management": [iamBiz, securityBiz, complianceBiz],
+  "cybersecurity-consulting": [securityBiz, pentestBiz, complianceBiz],
+  "compliance-governance": [complianceBiz, securityBiz, iamBiz],
+  "soc-as-a-service": [securityBiz, observabilityBiz, pentestBiz],
+  "penetration-testing": [pentestBiz, securityBiz, iamBiz],
+  "zero-trust-security": [iamBiz, securityBiz, pentestBiz],
 
   // Enterprise
   "erp-management": enterpriseImages,
