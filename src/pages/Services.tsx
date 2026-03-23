@@ -61,7 +61,7 @@ const Services = () => {
                   initial={{ opacity: 0, y: 12 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.4 }}
-                  className="text-2xl lg:text-3xl font-bold text-foreground leading-tight"
+                  className="text-2xl lg:text-3xl font-bold text-white leading-tight"
                 >
                   IT &amp; Professional Consulting Services
                 </motion.h1>
@@ -69,22 +69,22 @@ const Services = () => {
                   initial={{ opacity: 0, y: 12 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.4, delay: 0.05 }}
-                  className="mt-4 text-sm lg:text-base text-muted-foreground leading-relaxed max-w-2xl"
+                  className="mt-4 text-sm lg:text-base text-white/70 leading-relaxed max-w-2xl"
                 >
                   Our core IT delivery, engineering, and technology solution capabilities are detailed
                   under{" "}
-                  <Link to="/solutions" className="text-foreground font-semibold hover:text-primary transition-colors">
+                  <Link to="/solutions" className="text-white font-semibold hover:text-[hsl(195,100%,55%)] transition-colors">
                     Solutions
                   </Link>
                   . In addition, we provide a full suite of{" "}
-                  <strong className="text-foreground">IT-Enabled and Professional Support Services</strong>{" "}
+                  <strong className="text-white">IT-Enabled and Professional Support Services</strong>{" "}
                   designed to strengthen, extend, and complement our technology offerings.
                 </motion.p>
                 <motion.p
                   initial={{ opacity: 0, y: 12 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.4, delay: 0.1 }}
-                  className="mt-3 text-sm text-muted-foreground leading-relaxed max-w-2xl"
+                  className="mt-3 text-sm text-white/70 leading-relaxed max-w-2xl"
                 >
                   Together, these services ensure organizations receive seamless, end-to-end support
                   across both technology and operational domains — serving private enterprises and
