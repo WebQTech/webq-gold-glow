@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, CheckCircle2, Headphones, UserCheck, Users, Monitor, Landmark, LucideIcon } from "lucide-react";
+import { ArrowRight, CheckCircle2, Headphones, UserCheck, Users, Monitor, Landmark, LucideIcon, Settings } from "lucide-react";
 import { Footer } from "@/components/Footer";
 import { getServicesPageCategories, getServicesByCategory } from "@/data/servicesData";
 import { motion } from "framer-motion";
@@ -9,7 +9,8 @@ const categoryIcons: Record<string, LucideIcon> = {
   "Support & Consulting": Headphones,
   "Talent Management Services": UserCheck,
   "Non-IT Talent Management Services": Users,
-  "Govt Services": Landmark,
+  "Govt Strategic Consulting": Landmark,
+  "Govt Technical Consulting": Settings,
 };
 
 const Services = () => {
