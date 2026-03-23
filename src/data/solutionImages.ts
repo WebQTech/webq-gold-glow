@@ -212,4 +212,11 @@ export const solutionImages: Record<string, string[]> = {
 
   // Operations
   "global-operations-support": [globalOps1, prod1, managed1],
+
+  // Databases & Data Infrastructure
+  "database-administration": [dbAdmin1, infra1, data1],
+  "database-migration": [dbMigration1, cloudMig1, data2],
+  "cloud-database-services": [cloudDb1, cloudMig2, dbAdmin1],
+  "data-architecture": [dataArch1, data1, data3],
+  "nosql-newscale-databases": [nosql1, dbAdmin1, cloudDb1],
 };
