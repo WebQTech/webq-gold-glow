@@ -18,40 +18,27 @@ const Services = () => {
     <div className="min-h-screen bg-gradient-to-b from-primary/5 to-background">
       <main id="main-content" className="focus:outline-none" tabIndex={-1}>
         {/* Hero */}
-        <section className="py-10 lg:py-16">
+        <section className="py-10 lg:py-14">
           <div className="container mx-auto px-6 lg:px-12">
             <div className="max-w-3xl">
-              <span className="section-label">Our Services</span>
-              <h1 className="mt-4 text-4xl lg:text-5xl font-bold text-foreground leading-tight">
-                IT &amp; Professional{" "}
-                <span className="text-primary">Consulting Services</span>
+              <h1 className="text-xl lg:text-2xl font-bold text-foreground">
+                IT &amp; Professional Consulting Services
               </h1>
-              <p className="mt-6 text-lg text-muted-foreground">
-                Our IT delivery, engineering, and technology solution capabilities are covered
+              <p className="mt-4 text-base text-muted-foreground leading-relaxed">
+                Our core IT delivery, engineering, and technology solution capabilities are detailed
                 under{" "}
                 <Link
                   to="/solutions"
-                  className="text-primary font-medium underline underline-offset-2 hover:text-primary/80"
+                  className="text-foreground font-semibold hover:text-primary transition-colors"
                 >
                   Solutions
                 </Link>
-                . This page focuses on our <strong className="text-foreground">Non-IT Professional Services</strong> —
-                talent management, workforce consulting, HR outsourcing, and dedicated support
-                &amp; consulting engagements that complement our technology offerings.
+                . This section highlights our{" "}
+                <strong className="text-foreground">Non-IT Professional Services</strong>,
+                including talent management, workforce consulting, HR outsourcing, and dedicated
+                support and advisory engagements designed to strengthen and complement our
+                technology&nbsp;offerings.
               </p>
-              <div className="mt-8 flex flex-wrap gap-4">
-                <Link to="/#contact" className="btn-primary inline-flex items-center gap-2">
-                  Get Started
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
-                <Link
-                  to="/solutions"
-                  className="inline-flex items-center gap-2 border border-border rounded-lg px-5 py-2.5 text-sm font-medium text-foreground hover:bg-accent transition-colors"
-                >
-                  View IT Solutions
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
-              </div>
             </div>
           </div>
         </section>
