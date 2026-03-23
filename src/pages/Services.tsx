@@ -49,7 +49,7 @@ const Services = () => {
           }}
         >
           <div className="container mx-auto px-6 lg:px-12">
-            <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12 items-start">
+            <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12 items-center">
               {/* Left — headline & description */}
               <div className="lg:col-span-3">
                 <nav className="flex items-center gap-1.5 text-xs text-white/50 mb-4">
