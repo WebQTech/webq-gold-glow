@@ -41,9 +41,9 @@ export const Navbar = () => {
         Skip to main content
       </a>
 
-      <div className="sticky top-0 z-50 backdrop-blur-md">
+      <div className="sticky top-0 z-50">
         {/* Top Utility Bar */}
-        <div className="hidden lg:block bg-navy/15 border-b border-navy/10">
+        <div className="hidden lg:block bg-navy/10 border-b border-navy/5">
           <div className="container mx-auto px-6 lg:px-12">
             <div className="flex items-center justify-end h-9 gap-1">
               <Link
