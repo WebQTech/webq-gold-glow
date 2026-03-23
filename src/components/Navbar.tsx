@@ -69,7 +69,7 @@ export const Navbar = () => {
           </div>
         </div>
 
-        <nav className="bg-navy/5 shadow-sm border-b border-navy/5">
+        <nav className="bg-navy shadow-lg border-b border-navy/80">
         <div className="container mx-auto px-6 lg:px-12">
           <div className="flex items-center justify-between flex-nowrap h-16 lg:h-20 gap-4">
             <Link to="/" className="flex items-center gap-3 group shrink-0">
