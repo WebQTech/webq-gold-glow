@@ -41,7 +41,17 @@ import data1 from "@/assets/solutions/data-analytics-1.jpg";
 import data2 from "@/assets/solutions/data-analytics-2.jpg";
 import data3 from "@/assets/solutions/data-analytics-3.jpg";
 
-// AI & ML
+// AI & ML (new high-quality unique images)
+import aiMlHero from "@/assets/solutions/ai-ml-hero-1.jpg";
+import genAiHero from "@/assets/solutions/generative-ai-hero-1.jpg";
+import agenticAiHero from "@/assets/solutions/agentic-ai-hero-1.jpg";
+import mlopsHero from "@/assets/solutions/mlops-hero-1.jpg";
+import nlpHero from "@/assets/solutions/nlp-hero-1.jpg";
+import ragHero from "@/assets/solutions/rag-hero-1.jpg";
+import cvHero from "@/assets/solutions/computer-vision-hero-1.jpg";
+import llmHero from "@/assets/solutions/llm-hero-1.jpg";
+import promptEngHero from "@/assets/solutions/prompt-eng-hero-1.jpg";
+// Legacy AI images for cross-references
 import ai1 from "@/assets/solutions/ai-ml-solutions-1.jpg";
 import ai2 from "@/assets/solutions/ai-ml-solutions-2.jpg";
 import ai3 from "@/assets/solutions/ai-ml-solutions-3.jpg";
@@ -80,8 +90,6 @@ import dr1 from "@/assets/solutions/disaster-recovery-1.jpg";
 
 // LLM Solutions
 import llm1 from "@/assets/solutions/llm-solutions-1.jpg";
-
-// Prompt Engineering
 import promptEng1 from "@/assets/solutions/prompt-engineering-1.jpg";
 
 // Global Operations
@@ -103,13 +111,12 @@ const qaImages = [qa1, qa2, qa3];
 const prodImages = [prod1, prod2, prod3];
 const devopsImages = [devops1, devops2, devops3];
 const dataImages = [data1, data2, data3];
-const aiImages = [ai1, ai2, ai3];
 const secImages = [sec1, sec2, sec3];
 const mobileImages = [mobile1, customDev1, customDev2];
 const apiImages = [api1, enterprise1, customDev3];
 const enterpriseImages = [enterprise1, data2, infra1];
 const uxImages = [ux1, customDev2, lowCode1];
-const genAiImages = [genAi1, ai1, ai3];
+
 const managedImages = [managed1, infra2, prod1];
 const supplyImages = [supply1, enterprise1, data1];
 const lowCodeImages = [lowCode1, ux1, customDev1];
@@ -173,16 +180,16 @@ export const solutionImages: Record<string, string[]> = {
   "data-warehousing": [data1, data2, data3],
   "etl-data-pipelines": [data1, data3, data2],
 
-  // AI & ML
-  "ai-ml-solutions": aiImages,
-  "generative-ai": genAiImages,
-  "agentic-ai": [genAi1, ai2, ai1],
-  "mlops": [ai1, devops1, ai2],
-  "nlp-services": [genAi1, ai3, ai1],
-  "rag-solutions": [genAi1, ai1, data1],
-  "computer-vision": [ai1, ai2, ai3],
-  "llm-solutions": [llm1, ai1, genAi1],
-  "prompt-engineering": [promptEng1, llm1, ai2],
+  // AI & ML (unique hero images per solution)
+  "ai-ml-solutions": [aiMlHero, genAiHero, llmHero],
+  "generative-ai": [genAiHero, aiMlHero, promptEngHero],
+  "agentic-ai": [agenticAiHero, aiMlHero, mlopsHero],
+  "mlops": [mlopsHero, aiMlHero, agenticAiHero],
+  "nlp-services": [nlpHero, genAiHero, ragHero],
+  "rag-solutions": [ragHero, llmHero, nlpHero],
+  "computer-vision": [cvHero, aiMlHero, agenticAiHero],
+  "llm-solutions": [llmHero, ragHero, genAiHero],
+  "prompt-engineering": [promptEngHero, llmHero, genAiHero],
 
   // Security
   "data-security": secImages,
