@@ -121,9 +121,15 @@ const Services = () => {
           </div>
         </section>
 
-        {/* Category grid — matches Solutions page style */}
+        {/* Section title + divider */}
         <section className="py-10 lg:py-14">
           <div className="container mx-auto px-6 lg:px-12">
+            <div className="flex items-center gap-4 mb-8">
+              <h2 className="text-lg font-bold text-foreground uppercase tracking-wider whitespace-nowrap">
+                Our Service Categories
+              </h2>
+              <div className="h-px flex-1 bg-border" />
+            </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
               {/* IT Solutions cross-reference tile */}
