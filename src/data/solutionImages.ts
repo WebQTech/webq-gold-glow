@@ -78,6 +78,15 @@ import lowCode1 from "@/assets/solutions/low-code-1.jpg";
 // Disaster Recovery
 import dr1 from "@/assets/solutions/disaster-recovery-1.jpg";
 
+// LLM Solutions
+import llm1 from "@/assets/solutions/llm-solutions-1.jpg";
+
+// Prompt Engineering
+import promptEng1 from "@/assets/solutions/prompt-engineering-1.jpg";
+
+// Global Operations
+import globalOps1 from "@/assets/solutions/global-operations-1.jpg";
+
 // Reusable image sets by category
 const customDevImages = [customDev1, customDev2, customDev3];
 const cloudImages = [cloudMig1, cloudMig2, cloudMig3];
