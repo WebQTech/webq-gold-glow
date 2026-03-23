@@ -41,7 +41,17 @@ import data1 from "@/assets/solutions/data-analytics-1.jpg";
 import data2 from "@/assets/solutions/data-analytics-2.jpg";
 import data3 from "@/assets/solutions/data-analytics-3.jpg";
 
-// AI & ML
+// AI & ML (new high-quality unique images)
+import aiMlHero from "@/assets/solutions/ai-ml-hero-1.jpg";
+import genAiHero from "@/assets/solutions/generative-ai-hero-1.jpg";
+import agenticAiHero from "@/assets/solutions/agentic-ai-hero-1.jpg";
+import mlopsHero from "@/assets/solutions/mlops-hero-1.jpg";
+import nlpHero from "@/assets/solutions/nlp-hero-1.jpg";
+import ragHero from "@/assets/solutions/rag-hero-1.jpg";
+import cvHero from "@/assets/solutions/computer-vision-hero-1.jpg";
+import llmHero from "@/assets/solutions/llm-hero-1.jpg";
+import promptEngHero from "@/assets/solutions/prompt-eng-hero-1.jpg";
+// Legacy AI images for cross-references
 import ai1 from "@/assets/solutions/ai-ml-solutions-1.jpg";
 import ai2 from "@/assets/solutions/ai-ml-solutions-2.jpg";
 import ai3 from "@/assets/solutions/ai-ml-solutions-3.jpg";
