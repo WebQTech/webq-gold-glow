@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, CheckCircle2, Headphones, UserCheck, Users, LucideIcon } from "lucide-react";
+import { ArrowRight, CheckCircle2, Headphones, UserCheck, Users, Monitor, LucideIcon } from "lucide-react";
 import { Footer } from "@/components/Footer";
 import { getServicesPageCategories, getServicesByCategory } from "@/data/servicesData";
 import { motion } from "framer-motion";
@@ -46,7 +46,53 @@ const Services = () => {
         {/* Category grid — matches Solutions page style */}
         <section className="py-10 lg:py-14">
           <div className="container mx-auto px-6 lg:px-12">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {/* IT Solutions summary tile */}
+              <motion.div
+                initial={{ opacity: 0, y: 16 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.3 }}
+                className="group rounded-xl border border-border bg-card overflow-hidden hover:border-primary/30 hover:shadow-lg transition-all duration-300"
+              >
+                <div className="px-5 pt-5 pb-3 border-b border-border/50 bg-gradient-to-r from-primary/[0.03] to-transparent">
+                  <div className="flex items-center gap-3">
+                    <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-primary transition-colors duration-300">
+                      <Monitor className="w-4 h-4 text-primary group-hover:text-primary-foreground transition-colors duration-300" />
+                    </div>
+                    <h2 className="text-sm font-bold text-foreground uppercase tracking-wider">
+                      IT Solutions
+                    </h2>
+                  </div>
+                </div>
+                <ul className="px-5 py-4 space-y-1.5">
+                  {[
+                    "Application Development",
+                    "Cloud Services",
+                    "DevOps & CI/CD",
+                    "Quality Assurance",
+                    "Analytics & Data Management",
+                    "Operations & Support",
+                    "Security Solutions",
+                    "AI & Machine Learning",
+                    "Enterprise Application Management",
+                  ].map((item) => (
+                    <li key={item} className="flex items-center gap-2 text-sm text-muted-foreground py-0.5">
+                      <CheckCircle2 className="w-3.5 h-3.5 text-primary shrink-0" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+                <div className="px-5 pb-4">
+                  <Link
+                    to="/solutions"
+                    className="inline-flex items-center gap-1.5 text-sm font-medium text-primary hover:text-primary/80 transition-colors"
+                  >
+                    View All Solutions
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </Link>
+                </div>
+              </motion.div>
+
               {categories.map((category, idx) => {
                 const CategoryIcon = categoryIcons[category] || Headphones;
                 const services = getServicesByCategory(category);
