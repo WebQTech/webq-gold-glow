@@ -207,17 +207,17 @@ export const solutionImages: Record<string, string[]> = {
   "llm-solutions": [llmHero, ragHero, genAiHero],
   "prompt-engineering": [promptEngHero, llmHero, genAiHero],
 
-  // Security
-  "data-security": secImages,
-  "information-security": [sec1, sec3, sec2],
-  "code-security": [sec1, qa1, devops1],
-  "cloud-instance-security": [sec1, cloudMig3, sec3],
-  "identity-access-management": [sec2, sec1, sec3],
-  "cybersecurity-consulting": [sec1, sec2, sec3],
-  "compliance-governance": [sec3, sec1, sec2],
-  "soc-as-a-service": [sec1, prod1, sec3],
-  "penetration-testing": [sec1, qa1, sec2],
-  "zero-trust-security": [sec2, sec1, sec3],
+  // Security (business scenario images)
+  "data-security": [securityBiz, complianceBiz, pentestBiz],
+  "information-security": [securityBiz, iamBiz, complianceBiz],
+  "code-security": [pentestBiz, securityBiz, cicdBiz],
+  "cloud-instance-security": [securityBiz, cloudMigBiz, complianceBiz],
+  "identity-access-management": [iamBiz, securityBiz, complianceBiz],
+  "cybersecurity-consulting": [securityBiz, pentestBiz, complianceBiz],
+  "compliance-governance": [complianceBiz, securityBiz, iamBiz],
+  "soc-as-a-service": [securityBiz, observabilityBiz, pentestBiz],
+  "penetration-testing": [pentestBiz, securityBiz, iamBiz],
+  "zero-trust-security": [iamBiz, securityBiz, pentestBiz],
 
   // Enterprise
   "erp-management": enterpriseImages,
