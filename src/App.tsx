@@ -29,37 +29,43 @@ const Contact = lazy(() => import("./pages/Contact"));
 
 const queryClient = new QueryClient();
 
+const PageLoader = () => (
+  <div className="min-h-screen flex items-center justify-center bg-background">
+    <div className="w-10 h-10 border-4 border-primary border-t-transparent rounded-full animate-spin" />
+  </div>
+);
+
 const AppRoutes = () => {
   return (
     <>
       <Navbar />
       <ScrollToTop />
-      <Routes>
-        <Route path="/" element={<Index />} />
-        <Route path="/solutions" element={<Solutions />} />
-        <Route path="/solutions/:slug" element={<SolutionDetail />} />
-        <Route path="/technologies" element={<Technologies />} />
-        <Route path="/technologies/:slug" element={<TechnologyDetail />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/services/:slug" element={<ServiceDetail />} />
-        <Route path="/industries" element={<Industries />} />
-        <Route path="/industries/:slug" element={<IndustryDetail />} />
-        <Route path="/insights" element={<Insights />} />
-        <Route path="/insights/:slug" element={<InsightDetail />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/careers" element={<Careers />} />
-        <Route path="/news" element={<News />} />
-        <Route path="/contact" element={<Contact />} />
+      <Suspense fallback={<PageLoader />}>
+        <Routes>
+          <Route path="/" element={<Index />} />
+          <Route path="/solutions" element={<Solutions />} />
+          <Route path="/solutions/:slug" element={<SolutionDetail />} />
+          <Route path="/technologies" element={<Technologies />} />
+          <Route path="/technologies/:slug" element={<TechnologyDetail />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/services/:slug" element={<ServiceDetail />} />
+          <Route path="/industries" element={<Industries />} />
+          <Route path="/industries/:slug" element={<IndustryDetail />} />
+          <Route path="/insights" element={<Insights />} />
+          <Route path="/insights/:slug" element={<InsightDetail />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/careers" element={<Careers />} />
+          <Route path="/news" element={<News />} />
+          <Route path="/contact" element={<Contact />} />
 
-        {/* Section routes (avoid 404 if someone lands on /process etc.) */}
-        <Route path="/products" element={<SectionRedirect hash="#products" />} />
-        <Route path="/solutions" element={<SectionRedirect hash="#solutions" />} />
-        <Route path="/process" element={<SectionRedirect hash="#process" />} />
-        <Route path="/capabilities" element={<SectionRedirect hash="#capabilities" />} />
+          <Route path="/products" element={<SectionRedirect hash="#products" />} />
+          <Route path="/solutions" element={<SectionRedirect hash="#solutions" />} />
+          <Route path="/process" element={<SectionRedirect hash="#process" />} />
+          <Route path="/capabilities" element={<SectionRedirect hash="#capabilities" />} />
 
-        {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-        <Route path="*" element={<NotFound />} />
-      </Routes>
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </Suspense>
     </>
   );
 };
