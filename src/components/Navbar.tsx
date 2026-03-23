@@ -6,6 +6,7 @@ import { useSmoothScroll } from "@/hooks/useSmoothScroll";
 import logo from "@/assets/logo.png";
 
 const navLinks = [
+  { label: "Home", href: "/" },
   { label: "Solutions", href: "/solutions" },
   { label: "Technologies", href: "/technologies" },
   { label: "Services", href: "/services" },
@@ -29,6 +30,7 @@ export const Navbar = () => {
 
   const isActiveLink = (href: string) => {
     if (href.startsWith("/#")) return false;
+    if (href === "/") return location.pathname === "/";
     return location.pathname === href || location.pathname.startsWith(href + "/");
   };
 
