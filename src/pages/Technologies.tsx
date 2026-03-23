@@ -14,7 +14,7 @@ const technologyCategories = getAllTechnologyCategories().map(category => ({
 
 const Technologies = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-gradient-to-b from-primary/5 to-background">
       <main id="main-content" className="focus:outline-none" tabIndex={-1}>
         {/* Category grid — same pattern as Solutions */}
         <section className="py-10 lg:py-14">
