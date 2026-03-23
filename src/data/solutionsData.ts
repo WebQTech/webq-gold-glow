@@ -2727,6 +2727,45 @@ export const solutionsData: SolutionDetail[] = [
       { question: "How much training data do we need?", answer: "It depends on complexity. For transfer learning with pre-trained models, often 100–500 labeled images per class suffice. For highly specialized tasks, we may need 1,000–10,000+ images. We also use data augmentation, synthetic data generation, and active learning to maximize performance with limited data." },
       { question: "Can models run on edge devices?", answer: "Yes. We optimize models for edge deployment using techniques like quantization, pruning, and knowledge distillation. Our models run on NVIDIA Jetson, Intel NCS, mobile devices, and industrial cameras for real-time inference without cloud latency." }
     ]
+  },
+  {
+    slug: "global-operations-support",
+    name: "24×7 Global Operations IT Support",
+    shortDescription: "Round-the-clock IT operations support across time zones, ensuring uninterrupted business continuity.",
+    fullDescription: "Our 24×7 Global Operations IT Support delivers always-on monitoring, incident response, and resolution services across every time zone. With follow-the-sun staffing models, dedicated NOC teams, and AI-powered incident triage, we ensure your critical systems remain operational around the clock. For businesses operating globally, downtime in any region directly impacts revenue and customer trust. Our tiered support model — from L1 triage through L3 deep-dive engineering — resolves incidents faster and prevents recurrence through structured root cause analysis. We leverage AI-driven alerting and automated runbooks to detect anomalies early, auto-remediate known issues, and escalate intelligently — reducing mean time to resolution by up to 60%.",
+    icon: Headphones,
+    features: [
+      "Follow-the-sun 24×7 monitoring and incident management",
+      "Tiered support (L1/L2/L3) with defined SLAs",
+      "AI-powered incident triage and auto-remediation",
+      "Proactive alerting and anomaly detection",
+      "Structured root cause analysis and problem management",
+      "Multi-cloud and hybrid infrastructure coverage",
+      "Real-time dashboards and executive reporting",
+      "Runbook automation for recurring incidents"
+    ],
+    benefits: [
+      "Zero coverage gaps with follow-the-sun operations",
+      "Faster incident resolution with AI-assisted triage",
+      "Reduced operational costs through automation and consolidation",
+      "Improved SLA compliance across global deployments",
+      "Predictable IT support costs with managed service pricing",
+      "Freed internal teams to focus on strategic initiatives"
+    ],
+    technologies: ["ServiceNow", "PagerDuty", "Datadog", "Splunk", "AWS CloudWatch", "Azure Monitor", "Grafana", "Prometheus", "Jira Service Management"],
+    caseStudies: [
+      {
+        company: "GlobalTrade Corp",
+        industry: "Logistics & Supply Chain",
+        challenge: "Operating across 14 countries with no unified IT support, the company experienced average incident resolution times of 8+ hours during off-peak periods.",
+        solution: "Implemented a follow-the-sun NOC with AI-powered triage, automated runbooks for top 50 recurring incidents, and real-time SLA dashboards for regional stakeholders.",
+        results: ["Mean time to resolution reduced from 8 hours to 45 minutes", "99.95% uptime achieved across all critical systems", "Annual IT support costs reduced by 35%"]
+      }
+    ],
+    faqs: [
+      { question: "How does the follow-the-sun model work?", answer: "We staff NOC teams across multiple geographies (Americas, EMEA, APAC) so that support is always handled by fully alert, on-shift engineers — no overnight skeleton crews. Handoff protocols ensure seamless continuity between shifts with full context transfer." },
+      { question: "Can you support multi-cloud environments?", answer: "Yes. Our teams are certified across AWS, Azure, GCP, and hybrid/on-premises environments. We use unified observability platforms to monitor all infrastructure from a single pane of glass, regardless of where workloads run." }
+    ]
   }
 ];
 

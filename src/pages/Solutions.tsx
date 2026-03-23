@@ -44,7 +44,7 @@ const solutionCategories: { title: string; icon: LucideIcon; items: string[] }[]
   {
     title: "Operations & Support",
     icon: Headphones,
-    items: ["production-support", "managed-services", "it-service-management", "it-asset-management", "disaster-recovery", "procurement-services", "software-licensing", "bulk-hardware-services", "help-desk-support", "network-operations", "change-management", "business-continuity"],
+    items: ["production-support", "managed-services", "it-service-management", "it-asset-management", "disaster-recovery", "procurement-services", "software-licensing", "bulk-hardware-services", "help-desk-support", "network-operations", "change-management", "business-continuity", "global-operations-support"],
   },
   {
     title: "Enterprise Application Management",
