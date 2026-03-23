@@ -98,7 +98,7 @@ const Insights = () => {
         />
       </Helmet>
 
-      <div className="min-h-screen bg-background">
+      <div className="min-h-screen bg-gradient-to-b from-primary/5 to-background">
         <main id="main-content" className="focus:outline-none" tabIndex={-1}>
           <section className="relative py-12 lg:py-20 bg-gradient-to-b from-primary/5 to-background overflow-hidden">
             <div className="container mx-auto px-6 lg:px-12">
