@@ -87,6 +87,13 @@ import promptEng1 from "@/assets/solutions/prompt-engineering-1.jpg";
 // Global Operations
 import globalOps1 from "@/assets/solutions/global-operations-1.jpg";
 
+// Database & Data Infrastructure
+import dbAdmin1 from "@/assets/solutions/database-admin-1.jpg";
+import dbMigration1 from "@/assets/solutions/database-migration-1.jpg";
+import cloudDb1 from "@/assets/solutions/cloud-database-1.jpg";
+import dataArch1 from "@/assets/solutions/data-architecture-1.jpg";
+import nosql1 from "@/assets/solutions/nosql-databases-1.jpg";
+
 // Reusable image sets by category
 const customDevImages = [customDev1, customDev2, customDev3];
 const cloudImages = [cloudMig1, cloudMig2, cloudMig3];
