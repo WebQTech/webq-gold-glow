@@ -43,7 +43,7 @@ export const Navbar = () => {
 
       <div className="sticky top-0 z-50">
         {/* Top Utility Bar */}
-        <div className="hidden lg:block bg-navy/10 border-b border-navy/5">
+        <div className="hidden lg:block bg-muted border-b border-border">
           <div className="container mx-auto px-6 lg:px-12">
             <div className="flex items-center justify-end h-9 gap-1">
               <Link
