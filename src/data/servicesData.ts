@@ -1685,7 +1685,7 @@ export const servicesData: ServiceDetail[] = [
     shortDescription: "End-to-end program management for government initiatives and public sector projects.",
     fullDescription: "Deliver large-scale government programs on time and within budget. Our certified program managers bring deep public sector experience to manage complex multi-stakeholder initiatives, ensure regulatory compliance, and drive measurable outcomes for citizen-facing programs.",
     icon: ClipboardList,
-    category: "Govt Services",
+    category: "Govt Strategic Consulting",
     features: [
       "Program lifecycle management",
       "Stakeholder coordination & communication",
@@ -1717,7 +1717,7 @@ export const servicesData: ServiceDetail[] = [
     shortDescription: "Expert business analysts for government digital transformation and modernization programs.",
     fullDescription: "Bridge the gap between policy objectives and technology solutions. Our government business analysts specialize in requirements elicitation, process mapping, and gap analysis for public sector modernization initiatives, ensuring technology solutions align with mission objectives.",
     icon: FileText,
-    category: "Govt Services",
+    category: "Govt Strategic Consulting",
     features: [
       "Requirements gathering & documentation",
       "Business process reengineering",
@@ -1749,7 +1749,7 @@ export const servicesData: ServiceDetail[] = [
     shortDescription: "Organizational change management for government digital transformation and modernization initiatives.",
     fullDescription: "Our Change Management consultants guide federal agencies through complex organizational transitions, ensuring stakeholder adoption, minimizing disruption, and driving lasting cultural change across large-scale modernization programs.",
     icon: RefreshCw,
-    category: "Govt Services",
+    category: "Govt Strategic Consulting",
     features: [
       "Organizational readiness assessments",
       "Stakeholder impact analysis & engagement",
@@ -1778,7 +1778,7 @@ export const servicesData: ServiceDetail[] = [
     shortDescription: "Federal human capital strategy, workforce planning, and talent management consulting.",
     fullDescription: "Our Human Capital Management specialists help federal agencies develop workforce strategies, optimize talent acquisition, and build leadership pipelines aligned with OPM guidelines and agency mission objectives.",
     icon: Users,
-    category: "Govt Services",
+    category: "Govt Strategic Consulting",
     features: [
       "Workforce planning & gap analysis",
       "Talent acquisition strategy for federal roles",
@@ -1807,7 +1807,7 @@ export const servicesData: ServiceDetail[] = [
     shortDescription: "Federal financial management, budget analysis, and fiscal compliance consulting specialists.",
     fullDescription: "Our Financial Management consultants support federal agencies with budget formulation, fiscal compliance, audit readiness, and financial system modernization aligned with OMB and Treasury guidelines.",
     icon: DollarSign,
-    category: "Govt Services",
+    category: "Govt Strategic Consulting",
     features: [
       "Federal budget formulation and execution",
       "Audit readiness and OMB compliance",
@@ -1836,7 +1836,7 @@ export const servicesData: ServiceDetail[] = [
     shortDescription: "Federal acquisition, procurement strategy, and contract management consulting experts.",
     fullDescription: "Our Acquisition & Procurement specialists help government agencies streamline procurement processes, manage contracts, and ensure compliance with FAR/DFARS regulations.",
     icon: FileCheck,
-    category: "Govt Services",
+    category: "Govt Strategic Consulting",
     features: [
       "Federal Acquisition Regulation (FAR/DFARS) expertise",
       "Contract lifecycle management",
@@ -1866,7 +1866,7 @@ export const servicesData: ServiceDetail[] = [
     shortDescription: "Specialized cybersecurity consultants for government agencies and compliance frameworks.",
     fullDescription: "Protect government systems and citizen data with expert cybersecurity consultants who understand federal compliance frameworks. From risk assessments and security architecture to continuous monitoring and incident response, we provide the specialized talent government agencies need.",
     icon: Shield,
-    category: "Govt Services",
+    category: "Govt Technical Consulting",
     features: [
       "FISMA & FedRAMP compliance",
       "NIST framework implementation",
@@ -1898,7 +1898,7 @@ export const servicesData: ServiceDetail[] = [
     shortDescription: "Data engineers, scientists, and analysts for government data modernization initiatives.",
     fullDescription: "Transform government data into actionable insights. Our data consultants help agencies modernize data infrastructure, build analytics capabilities, and implement data governance frameworks that enable evidence-based decision making and improved public services.",
     icon: BarChart3,
-    category: "Govt Services",
+    category: "Govt Technical Consulting",
     features: [
       "Data strategy & governance",
       "Data warehouse modernization",
@@ -1930,7 +1930,7 @@ export const servicesData: ServiceDetail[] = [
     shortDescription: "Cloud migration and infrastructure modernization specialists for government environments.",
     fullDescription: "Modernize government IT infrastructure with cloud-first strategies. Our consultants specialize in GovCloud environments, ensuring secure, compliant cloud migrations that reduce costs, improve agility, and meet strict government security requirements.",
     icon: Cloud,
-    category: "Govt Services",
+    category: "Govt Technical Consulting",
     features: [
       "Cloud migration strategy & execution",
       "GovCloud architecture design",
@@ -1962,7 +1962,7 @@ export const servicesData: ServiceDetail[] = [
     shortDescription: "SAP, Oracle, and enterprise system specialists for government agencies.",
     fullDescription: "Implement and optimize enterprise resource planning systems for government operations. Our ERP consultants bring deep expertise in government-specific configurations, financial management systems, and HR modernization to help agencies streamline operations and improve efficiency.",
     icon: Building2,
-    category: "Govt Services",
+    category: "Govt Technical Consulting",
     features: [
       "SAP & Oracle implementations",
       "Financial management system modernization",
@@ -1994,7 +1994,7 @@ export const servicesData: ServiceDetail[] = [
     shortDescription: "Specialized consultants for VA, CMS, and federal healthcare IT modernization programs.",
     fullDescription: "Our Healthcare IT consultants bring deep domain expertise in VA and CMS systems, electronic health records, and federal healthcare compliance to support mission-critical modernization efforts.",
     icon: HeartPulse,
-    category: "Govt Services",
+    category: "Govt Technical Consulting",
     features: [
       "VA VistA and Cerner EHR migration specialists",
       "CMS Medicare & Medicaid systems modernization",
@@ -2023,7 +2023,7 @@ export const servicesData: ServiceDetail[] = [
     shortDescription: "IV&V, quality assurance, and testing specialists for government IT programs and compliance.",
     fullDescription: "Our QA & Testing specialists provide independent verification and validation (IV&V), test automation, and quality assurance services to ensure government systems meet performance, security, and compliance standards.",
     icon: TestTube,
-    category: "Govt Services",
+    category: "Govt Technical Consulting",
     features: [
       "Independent Verification & Validation (IV&V)",
       "Test strategy & planning for federal systems",
@@ -2065,7 +2065,8 @@ const servicesPageCategories = [
   "Support & Consulting",
   "Talent Management Services",
   "Non-IT Talent Management Services",
-  "Govt Services",
+  "Govt Strategic Consulting",
+  "Govt Technical Consulting",
 ];
 
 export const getServicesPageCategories = (): string[] => {
