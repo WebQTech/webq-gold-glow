@@ -1676,7 +1676,7 @@ export const servicesData: ServiceDetail[] = [
       { question: "How does the follow-the-sun model work?", answer: "We staff NOC teams across Americas, EMEA, and APAC so support is always handled by fully alert, on-shift engineers with seamless handoff protocols." },
       { question: "Can you support multi-cloud environments?", answer: "Yes. Our teams are certified across AWS, Azure, GCP, and hybrid environments with unified observability from a single pane of glass." }
     ]
-  }
+  },
   // ==================== GOVT SERVICES ====================
   {
     slug: "govt-program-management",
