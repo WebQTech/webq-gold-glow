@@ -17,14 +17,14 @@ const solutionCategories: { title: string; icon: LucideIcon; items: string[] }[]
     items: ["data-analytics", "data-management", "business-intelligence", "data-governance", "data-warehousing", "etl-data-pipelines"],
   },
   {
-    title: "Application Development",
-    icon: Code2,
-    items: ["custom-app-development", "technology-modernization", "mobile-app-development", "api-integration", "low-code-no-code", "ui-ux-design"],
-  },
-  {
     title: "Cloud Services",
     icon: Cloud,
     items: ["cloud-migration", "it-infrastructure", "cloud-optimization", "hybrid-multi-cloud", "finops", "serverless-architecture"],
+  },
+  {
+    title: "Application Development",
+    icon: Code2,
+    items: ["custom-app-development", "technology-modernization", "mobile-app-development", "api-integration", "low-code-no-code", "ui-ux-design"],
   },
   {
     title: "DevOps",
