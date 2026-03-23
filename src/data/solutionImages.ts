@@ -202,4 +202,7 @@ export const solutionImages: Record<string, string[]> = {
   "software-licensing": [managed1, enterprise1, infra1],
   "bulk-hardware-services": [infra1, managed1, supply1],
   "change-management": [managed1, techMod3, enterprise1],
+
+  // Operations
+  "global-operations-support": [globalOps1, prod1, managed1],
 };
