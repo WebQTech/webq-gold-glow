@@ -48,7 +48,7 @@ export const Navbar = () => {
             <div className="flex items-center justify-end h-9 gap-1">
               <Link
                 to="/careers"
-                className="text-xs font-medium text-muted-foreground hover:text-primary transition-colors px-3 py-1 flex items-center gap-1 no-underline"
+                className="text-xs font-medium text-cream/70 hover:text-cream transition-colors px-3 py-1 flex items-center gap-1 no-underline"
               >
                 Careers <ChevronDown size={12} />
               </Link>
