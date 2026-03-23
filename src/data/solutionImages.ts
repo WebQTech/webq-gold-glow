@@ -37,10 +37,16 @@ import prod1 from "@/assets/solutions/production-support-1.jpg";
 import prod2 from "@/assets/solutions/production-support-2.jpg";
 import prod3 from "@/assets/solutions/production-support-3.jpg";
 
-// DevOps & SRE
+// DevOps & SRE (business scenario images)
 import devops1 from "@/assets/solutions/devops-sre-1.jpg";
 import devops2 from "@/assets/solutions/devops-sre-2.jpg";
 import devops3 from "@/assets/solutions/devops-sre-3.jpg";
+import devopsBiz from "@/assets/solutions/devops-biz.jpg";
+import cicdBiz from "@/assets/solutions/cicd-biz.jpg";
+import iacBiz from "@/assets/solutions/iac-biz.jpg";
+import observabilityBiz from "@/assets/solutions/observability-biz.jpg";
+import platformEngBiz from "@/assets/solutions/platform-eng-biz.jpg";
+import containersBiz from "@/assets/solutions/containers-biz.jpg";
 
 // Data & Analytics
 import data1 from "@/assets/solutions/data-analytics-1.jpg";
