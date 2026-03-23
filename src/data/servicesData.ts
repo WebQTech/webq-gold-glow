@@ -1,7 +1,8 @@
 import { 
   Code2, Cloud, Server, RefreshCw, TestTube, Headphones, Settings, Database,
   Shield, Smartphone, Brain, Layers, Zap, Users, BarChart3, Lock,
-  LucideIcon, Bot, Sparkles, MessageSquare, Eye, FileText, Workflow, AlertTriangle
+  LucideIcon, Bot, Sparkles, MessageSquare, Eye, FileText, Workflow, AlertTriangle,
+  UserCheck, ClipboardList, Briefcase, Monitor, Phone, Cog, Globe, BookOpen, Building2, UserPlus, GraduationCap, Target
 } from "lucide-react";
 
 export interface PricingTier {
