@@ -1678,7 +1678,7 @@ export const servicesData: ServiceDetail[] = [
       { question: "Can you support multi-cloud environments?", answer: "Yes. Our teams are certified across AWS, Azure, GCP, and hybrid environments with unified observability from a single pane of glass." }
     ]
   },
-  // ==================== GOVT SERVICES ====================
+  // ==================== GOVT SERVICES — STRATEGIC ====================
   {
     slug: "govt-program-management",
     name: "Program & Project Management",
@@ -1743,6 +1743,123 @@ export const servicesData: ServiceDetail[] = [
       { question: "What methodologies do you follow?", answer: "We adapt to agency preferences — Agile, Waterfall, or hybrid — and follow BABOK best practices for requirements management." }
     ]
   },
+  {
+    slug: "govt-change-management",
+    name: "Change Management Consultants",
+    shortDescription: "Organizational change management for government digital transformation and modernization initiatives.",
+    fullDescription: "Our Change Management consultants guide federal agencies through complex organizational transitions, ensuring stakeholder adoption, minimizing disruption, and driving lasting cultural change across large-scale modernization programs.",
+    icon: RefreshCw,
+    category: "Govt Services",
+    features: [
+      "Organizational readiness assessments",
+      "Stakeholder impact analysis & engagement",
+      "Communication strategy & execution",
+      "Training program design & delivery",
+      "Adoption metrics & sustainment planning",
+      "Prosci & ADKAR methodology expertise"
+    ],
+    benefits: [
+      "Higher user adoption rates for new systems",
+      "Reduced resistance to organizational change",
+      "Smoother transitions during modernization",
+      "Sustained long-term transformation outcomes"
+    ],
+    technologies: ["Prosci", "ServiceNow", "SharePoint", "Power BI", "MS Teams", "Confluence"],
+    pricing: createContactPricing("Change Management Consultants"),
+    caseStudies: [],
+    faqs: [
+      { question: "What change management frameworks do you use?", answer: "We primarily use Prosci ADKAR and Kotter's 8-Step model, tailored to the unique dynamics of federal agencies." },
+      { question: "Can you support enterprise-wide transformations?", answer: "Yes, our consultants have led change management for agency-wide ERP, cloud, and digital transformation programs." }
+    ]
+  },
+  {
+    slug: "govt-human-capital",
+    name: "Human Capital Management Specialists",
+    shortDescription: "Federal human capital strategy, workforce planning, and talent management consulting.",
+    fullDescription: "Our Human Capital Management specialists help federal agencies develop workforce strategies, optimize talent acquisition, and build leadership pipelines aligned with OPM guidelines and agency mission objectives.",
+    icon: Users,
+    category: "Govt Services",
+    features: [
+      "Workforce planning & gap analysis",
+      "Talent acquisition strategy for federal roles",
+      "Leadership development & succession planning",
+      "Employee engagement & retention programs",
+      "OPM compliance & reporting",
+      "Diversity, equity & inclusion initiatives"
+    ],
+    benefits: [
+      "Stronger talent pipelines for mission-critical roles",
+      "Improved employee retention and engagement",
+      "Compliance with OPM and merit system principles",
+      "Data-driven workforce planning decisions"
+    ],
+    technologies: ["USA Staffing", "eOPF", "Workday", "SAP SuccessFactors", "Power BI", "Tableau"],
+    pricing: createContactPricing("Human Capital Management"),
+    caseStudies: [],
+    faqs: [
+      { question: "Do you align with OPM guidelines?", answer: "Yes, all our human capital strategies are built around OPM's Human Capital Framework and merit system principles." },
+      { question: "Can you support federal hiring initiatives?", answer: "Absolutely. We help agencies streamline hiring through USA Staffing, direct hire authorities, and strategic recruitment campaigns." }
+    ]
+  },
+  {
+    slug: "govt-financial-management",
+    name: "Financial Management Consultants",
+    shortDescription: "Federal financial management, budget analysis, and fiscal compliance consulting specialists.",
+    fullDescription: "Our Financial Management consultants support federal agencies with budget formulation, fiscal compliance, audit readiness, and financial system modernization aligned with OMB and Treasury guidelines.",
+    icon: DollarSign,
+    category: "Govt Services",
+    features: [
+      "Federal budget formulation and execution",
+      "Audit readiness and OMB compliance",
+      "Financial system modernization (Oracle Federal, SAP)",
+      "Cost estimation and economic analysis",
+      "Grants management and oversight",
+      "DATA Act and FFMIA reporting compliance"
+    ],
+    benefits: [
+      "Ensure compliance with federal financial regulations",
+      "Improve audit readiness and reduce findings",
+      "Modernize legacy financial management systems",
+      "Better budget visibility and cost control"
+    ],
+    technologies: ["Oracle Federal Financials", "SAP ERP", "Power BI", "Tableau", "ServiceNow"],
+    pricing: createContactPricing("Financial Management Consultants"),
+    caseStudies: [],
+    faqs: [
+      { question: "What financial frameworks do you support?", answer: "We support OMB Circular A-123, FFMIA, DATA Act, and other federal financial management frameworks." },
+      { question: "Can you help with audit readiness?", answer: "Yes, our consultants specialize in preparing agencies for financial statement audits and reducing audit findings." }
+    ]
+  },
+  {
+    slug: "govt-acquisition-procurement",
+    name: "Acquisition & Procurement Specialists",
+    shortDescription: "Federal acquisition, procurement strategy, and contract management consulting experts.",
+    fullDescription: "Our Acquisition & Procurement specialists help government agencies streamline procurement processes, manage contracts, and ensure compliance with FAR/DFARS regulations.",
+    icon: FileCheck,
+    category: "Govt Services",
+    features: [
+      "Federal Acquisition Regulation (FAR/DFARS) expertise",
+      "Contract lifecycle management",
+      "Procurement strategy and market research",
+      "Source selection and proposal evaluation",
+      "Vendor performance management",
+      "Small business and socioeconomic program compliance"
+    ],
+    benefits: [
+      "Streamlined procurement timelines",
+      "Reduced contract risk and compliance issues",
+      "Better vendor selection and management",
+      "Improved small business participation"
+    ],
+    technologies: ["SAM.gov", "FPDS", "GovWin", "Deltek Costpoint", "Ariba"],
+    pricing: createContactPricing("Acquisition & Procurement"),
+    caseStudies: [],
+    faqs: [
+      { question: "Do your specialists have FAR/DFARS expertise?", answer: "Yes, our procurement specialists are deeply experienced in FAR, DFARS, and agency-specific acquisition regulations." },
+      { question: "Can you support the full procurement lifecycle?", answer: "Absolutely. We cover everything from market research and solicitation through award, administration, and closeout." }
+    ]
+  },
+  // ==================== GOVT SERVICES — TECHNICAL ====================
   {
     slug: "govt-cybersecurity-compliance",
     name: "Cybersecurity & Compliance Consulting",
@@ -1901,93 +2018,6 @@ export const servicesData: ServiceDetail[] = [
     ]
   },
   {
-    slug: "govt-financial-management",
-    name: "Financial Management Consultants",
-    shortDescription: "Federal financial management, budget analysis, and fiscal compliance consulting specialists.",
-    fullDescription: "Our Financial Management consultants support federal agencies with budget formulation, fiscal compliance, audit readiness, and financial system modernization aligned with OMB and Treasury guidelines.",
-    icon: DollarSign,
-    category: "Govt Services",
-    features: [
-      "Federal budget formulation and execution",
-      "Audit readiness and OMB compliance",
-      "Financial system modernization (Oracle Federal, SAP)",
-      "Cost estimation and economic analysis",
-      "Grants management and oversight",
-      "DATA Act and FFMIA reporting compliance"
-    ],
-    benefits: [
-      "Ensure compliance with federal financial regulations",
-      "Improve audit readiness and reduce findings",
-      "Modernize legacy financial management systems",
-      "Better budget visibility and cost control"
-    ],
-    technologies: ["Oracle Federal Financials", "SAP ERP", "Power BI", "Tableau", "ServiceNow"],
-    pricing: createContactPricing("Financial Management Consultants"),
-    caseStudies: [],
-    faqs: [
-      { question: "What financial frameworks do you support?", answer: "We support OMB Circular A-123, FFMIA, DATA Act, and other federal financial management frameworks." },
-      { question: "Can you help with audit readiness?", answer: "Yes, our consultants specialize in preparing agencies for financial statement audits and reducing audit findings." }
-    ]
-  },
-  {
-    slug: "govt-acquisition-procurement",
-    name: "Acquisition & Procurement Specialists",
-    shortDescription: "Federal acquisition, procurement strategy, and contract management consulting experts.",
-    fullDescription: "Our Acquisition & Procurement specialists help government agencies streamline procurement processes, manage contracts, and ensure compliance with FAR/DFARS regulations.",
-    icon: FileCheck,
-    category: "Govt Services",
-    features: [
-      "Federal Acquisition Regulation (FAR/DFARS) expertise",
-      "Contract lifecycle management",
-      "Procurement strategy and market research",
-      "Source selection and proposal evaluation",
-      "Vendor performance management",
-      "Small business and socioeconomic program compliance"
-    ],
-    benefits: [
-      "Streamlined procurement timelines",
-      "Reduced contract risk and compliance issues",
-      "Better vendor selection and management",
-      "Improved small business participation"
-    ],
-    technologies: ["SAM.gov", "FPDS", "GovWin", "Deltek Costpoint", "Ariba"],
-    pricing: createContactPricing("Acquisition & Procurement"),
-    caseStudies: [],
-    faqs: [
-      { question: "Do your specialists have FAR/DFARS expertise?", answer: "Yes, our procurement specialists are deeply experienced in FAR, DFARS, and agency-specific acquisition regulations." },
-      { question: "Can you support the full procurement lifecycle?", answer: "Absolutely. We cover everything from market research and solicitation through award, administration, and closeout." }
-    ]
-  },
-  {
-    slug: "govt-change-management",
-    name: "Change Management Consultants",
-    shortDescription: "Organizational change management for government digital transformation and modernization initiatives.",
-    fullDescription: "Our Change Management consultants guide federal agencies through complex organizational transitions, ensuring stakeholder adoption, minimizing disruption, and driving lasting cultural change across large-scale modernization programs.",
-    icon: RefreshCw,
-    category: "Govt Services",
-    features: [
-      "Organizational readiness assessments",
-      "Stakeholder impact analysis & engagement",
-      "Communication strategy & execution",
-      "Training program design & delivery",
-      "Adoption metrics & sustainment planning",
-      "Prosci & ADKAR methodology expertise"
-    ],
-    benefits: [
-      "Higher user adoption rates for new systems",
-      "Reduced resistance to organizational change",
-      "Smoother transitions during modernization",
-      "Sustained long-term transformation outcomes"
-    ],
-    technologies: ["Prosci", "ServiceNow", "SharePoint", "Power BI", "MS Teams", "Confluence"],
-    pricing: createContactPricing("Change Management Consultants"),
-    caseStudies: [],
-    faqs: [
-      { question: "What change management frameworks do you use?", answer: "We primarily use Prosci ADKAR and Kotter's 8-Step model, tailored to the unique dynamics of federal agencies." },
-      { question: "Can you support enterprise-wide transformations?", answer: "Yes, our consultants have led change management for agency-wide ERP, cloud, and digital transformation programs." }
-    ]
-  },
-  {
     slug: "govt-quality-assurance",
     name: "Quality Assurance & Testing Specialists",
     shortDescription: "IV&V, quality assurance, and testing specialists for government IT programs and compliance.",
@@ -2014,35 +2044,6 @@ export const servicesData: ServiceDetail[] = [
     faqs: [
       { question: "Do you provide IV&V services?", answer: "Yes, we provide fully independent IV&V engagements aligned with IEEE and federal standards." },
       { question: "Can you support 508 compliance testing?", answer: "Absolutely. Our QA team includes certified accessibility testers experienced with Section 508 and WCAG 2.1 requirements." }
-    ]
-  },
-  {
-    slug: "govt-human-capital",
-    name: "Human Capital Management Specialists",
-    shortDescription: "Federal human capital strategy, workforce planning, and talent management consulting.",
-    fullDescription: "Our Human Capital Management specialists help federal agencies develop workforce strategies, optimize talent acquisition, and build leadership pipelines aligned with OPM guidelines and agency mission objectives.",
-    icon: Users,
-    category: "Govt Services",
-    features: [
-      "Workforce planning & gap analysis",
-      "Talent acquisition strategy for federal roles",
-      "Leadership development & succession planning",
-      "Employee engagement & retention programs",
-      "OPM compliance & reporting",
-      "Diversity, equity & inclusion initiatives"
-    ],
-    benefits: [
-      "Stronger talent pipelines for mission-critical roles",
-      "Improved employee retention and engagement",
-      "Compliance with OPM and merit system principles",
-      "Data-driven workforce planning decisions"
-    ],
-    technologies: ["USA Staffing", "eOPF", "Workday", "SAP SuccessFactors", "Power BI", "Tableau"],
-    pricing: createContactPricing("Human Capital Management"),
-    caseStudies: [],
-    faqs: [
-      { question: "Do you align with OPM guidelines?", answer: "Yes, all our human capital strategies are built around OPM's Human Capital Framework and merit system principles." },
-      { question: "Can you support federal hiring initiatives?", answer: "Absolutely. We help agencies streamline hiring through USA Staffing, direct hire authorities, and strategic recruitment campaigns." }
     ]
   }
 ];
