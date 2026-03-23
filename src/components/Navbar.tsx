@@ -6,6 +6,7 @@ import { useSmoothScroll } from "@/hooks/useSmoothScroll";
 import logo from "@/assets/logo.png";
 
 const navLinks = [
+  { label: "Home", href: "/" },
   { label: "Solutions", href: "/solutions" },
   { label: "Technologies", href: "/technologies" },
   { label: "Services", href: "/services" },
