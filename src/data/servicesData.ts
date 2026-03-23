@@ -1685,7 +1685,7 @@ export const servicesData: ServiceDetail[] = [
     shortDescription: "End-to-end program management for government initiatives and public sector projects.",
     fullDescription: "Deliver large-scale government programs on time and within budget. Our certified program managers bring deep public sector experience to manage complex multi-stakeholder initiatives, ensure regulatory compliance, and drive measurable outcomes for citizen-facing programs.",
     icon: ClipboardList,
-    category: "Govt Services",
+    category: "Govt Strategic Consulting",
     features: [
       "Program lifecycle management",
       "Stakeholder coordination & communication",
@@ -1717,7 +1717,7 @@ export const servicesData: ServiceDetail[] = [
     shortDescription: "Expert business analysts for government digital transformation and modernization programs.",
     fullDescription: "Bridge the gap between policy objectives and technology solutions. Our government business analysts specialize in requirements elicitation, process mapping, and gap analysis for public sector modernization initiatives, ensuring technology solutions align with mission objectives.",
     icon: FileText,
-    category: "Govt Services",
+    category: "Govt Strategic Consulting",
     features: [
       "Requirements gathering & documentation",
       "Business process reengineering",
@@ -1749,7 +1749,7 @@ export const servicesData: ServiceDetail[] = [
     shortDescription: "Organizational change management for government digital transformation and modernization initiatives.",
     fullDescription: "Our Change Management consultants guide federal agencies through complex organizational transitions, ensuring stakeholder adoption, minimizing disruption, and driving lasting cultural change across large-scale modernization programs.",
     icon: RefreshCw,
-    category: "Govt Services",
+    category: "Govt Strategic Consulting",
     features: [
       "Organizational readiness assessments",
       "Stakeholder impact analysis & engagement",
@@ -1778,7 +1778,7 @@ export const servicesData: ServiceDetail[] = [
     shortDescription: "Federal human capital strategy, workforce planning, and talent management consulting.",
     fullDescription: "Our Human Capital Management specialists help federal agencies develop workforce strategies, optimize talent acquisition, and build leadership pipelines aligned with OPM guidelines and agency mission objectives.",
     icon: Users,
-    category: "Govt Services",
+    category: "Govt Strategic Consulting",
     features: [
       "Workforce planning & gap analysis",
       "Talent acquisition strategy for federal roles",
@@ -1807,7 +1807,7 @@ export const servicesData: ServiceDetail[] = [
     shortDescription: "Federal financial management, budget analysis, and fiscal compliance consulting specialists.",
     fullDescription: "Our Financial Management consultants support federal agencies with budget formulation, fiscal compliance, audit readiness, and financial system modernization aligned with OMB and Treasury guidelines.",
     icon: DollarSign,
-    category: "Govt Services",
+    category: "Govt Strategic Consulting",
     features: [
       "Federal budget formulation and execution",
       "Audit readiness and OMB compliance",
@@ -1836,7 +1836,7 @@ export const servicesData: ServiceDetail[] = [
     shortDescription: "Federal acquisition, procurement strategy, and contract management consulting experts.",
     fullDescription: "Our Acquisition & Procurement specialists help government agencies streamline procurement processes, manage contracts, and ensure compliance with FAR/DFARS regulations.",
     icon: FileCheck,
-    category: "Govt Services",
+    category: "Govt Strategic Consulting",
     features: [
       "Federal Acquisition Regulation (FAR/DFARS) expertise",
       "Contract lifecycle management",
