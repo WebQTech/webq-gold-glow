@@ -55,7 +55,7 @@ const contactInfo = [
     icon: MapPin,
     title: "Visit Us",
     details: "6200 Village Pkwy, Suite # 200",
-    subtext: "Dublin, CA 94568",
+    subtext: "Dublin, CA 94568, USA",
   },
   {
     icon: Clock,
