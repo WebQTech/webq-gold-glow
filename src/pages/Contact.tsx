@@ -53,13 +53,13 @@ const contactInfo = [
   },
   {
     icon: MapPin,
-    title: "Visit Us (USA)",
+    title: "US Office",
     details: "6200 Village Pkwy, Suite # 200",
     subtext: "Dublin, CA 94568, USA",
   },
   {
     icon: MapPin,
-    title: "Registered Office (India)",
+    title: "India Office",
     details: "5, Kalidasan Street, Chitlapakkam",
     subtext: "Chennai-600064, India",
   },
