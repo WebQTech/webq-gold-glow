@@ -2,7 +2,8 @@ import {
   Code2, Cloud, Server, RefreshCw, TestTube, Headphones, Settings, Database,
   Shield, Smartphone, Brain, Layers, Zap, Users, BarChart3, Lock,
   LucideIcon, Bot, Sparkles, MessageSquare, Eye, FileText, Workflow, AlertTriangle,
-  UserCheck, ClipboardList, Briefcase, Monitor, Phone, Cog, Globe, BookOpen, Building2, UserPlus, GraduationCap, Target
+  UserCheck, ClipboardList, Briefcase, Monitor, Phone, Cog, Globe, BookOpen, Building2, UserPlus, GraduationCap, Target,
+  HeartPulse, DollarSign, FileCheck
 } from "lucide-react";
 
 export interface PricingTier {
@@ -1868,6 +1869,93 @@ export const servicesData: ServiceDetail[] = [
     faqs: [
       { question: "Do you support federal financial systems?", answer: "Yes. Our consultants have experience with FFMIA-compliant financial systems and Treasury reporting requirements." },
       { question: "Can you help with ERP modernization?", answer: "We help agencies plan and execute ERP modernization from legacy systems to modern cloud-based platforms like SAP S/4HANA and Oracle Cloud." }
+    ]
+  },
+  {
+    slug: "govt-healthcare-it",
+    name: "Healthcare IT Consultants (VA/CMS)",
+    shortDescription: "Specialized consultants for VA, CMS, and federal healthcare IT modernization programs.",
+    fullDescription: "Our Healthcare IT consultants bring deep domain expertise in VA and CMS systems, electronic health records, and federal healthcare compliance to support mission-critical modernization efforts.",
+    icon: HeartPulse,
+    category: "Govt Services",
+    features: [
+      "VA VistA and Cerner EHR migration specialists",
+      "CMS Medicare & Medicaid systems modernization",
+      "HIPAA compliance and health data security",
+      "Interoperability and HL7/FHIR integration",
+      "Telehealth platform implementation",
+      "Health data analytics and population health management"
+    ],
+    benefits: [
+      "Deep understanding of federal healthcare regulations",
+      "Experience with VA and CMS-specific platforms",
+      "Faster onboarding with cleared healthcare IT talent",
+      "Improved patient outcomes through modern systems"
+    ],
+    technologies: ["Epic", "Cerner", "VistA", "HL7/FHIR", "AWS GovCloud", "Salesforce Health Cloud"],
+    pricing: createContactPricing("Healthcare IT Consultants"),
+    caseStudies: [],
+    faqs: [
+      { question: "Do your consultants have VA/CMS experience?", answer: "Yes, our healthcare IT consultants have hands-on experience with VA VistA, Cerner, CMS QNXT, and other federal healthcare platforms." },
+      { question: "Can you support HIPAA compliance?", answer: "Absolutely. Our consultants are well-versed in HIPAA, FISMA, and FedRAMP requirements specific to healthcare environments." }
+    ]
+  },
+  {
+    slug: "govt-financial-management",
+    name: "Financial Management Consultants",
+    shortDescription: "Federal financial management, budget analysis, and fiscal compliance consulting specialists.",
+    fullDescription: "Our Financial Management consultants support federal agencies with budget formulation, fiscal compliance, audit readiness, and financial system modernization aligned with OMB and Treasury guidelines.",
+    icon: DollarSign,
+    category: "Govt Services",
+    features: [
+      "Federal budget formulation and execution",
+      "Audit readiness and OMB compliance",
+      "Financial system modernization (Oracle Federal, SAP)",
+      "Cost estimation and economic analysis",
+      "Grants management and oversight",
+      "DATA Act and FFMIA reporting compliance"
+    ],
+    benefits: [
+      "Ensure compliance with federal financial regulations",
+      "Improve audit readiness and reduce findings",
+      "Modernize legacy financial management systems",
+      "Better budget visibility and cost control"
+    ],
+    technologies: ["Oracle Federal Financials", "SAP ERP", "Power BI", "Tableau", "ServiceNow"],
+    pricing: createContactPricing("Financial Management Consultants"),
+    caseStudies: [],
+    faqs: [
+      { question: "What financial frameworks do you support?", answer: "We support OMB Circular A-123, FFMIA, DATA Act, and other federal financial management frameworks." },
+      { question: "Can you help with audit readiness?", answer: "Yes, our consultants specialize in preparing agencies for financial statement audits and reducing audit findings." }
+    ]
+  },
+  {
+    slug: "govt-acquisition-procurement",
+    name: "Acquisition & Procurement Specialists",
+    shortDescription: "Federal acquisition, procurement strategy, and contract management consulting experts.",
+    fullDescription: "Our Acquisition & Procurement specialists help government agencies streamline procurement processes, manage contracts, and ensure compliance with FAR/DFARS regulations.",
+    icon: FileCheck,
+    category: "Govt Services",
+    features: [
+      "Federal Acquisition Regulation (FAR/DFARS) expertise",
+      "Contract lifecycle management",
+      "Procurement strategy and market research",
+      "Source selection and proposal evaluation",
+      "Vendor performance management",
+      "Small business and socioeconomic program compliance"
+    ],
+    benefits: [
+      "Streamlined procurement timelines",
+      "Reduced contract risk and compliance issues",
+      "Better vendor selection and management",
+      "Improved small business participation"
+    ],
+    technologies: ["SAM.gov", "FPDS", "GovWin", "Deltek Costpoint", "Ariba"],
+    pricing: createContactPricing("Acquisition & Procurement"),
+    caseStudies: [],
+    faqs: [
+      { question: "Do your specialists have FAR/DFARS expertise?", answer: "Yes, our procurement specialists are deeply experienced in FAR, DFARS, and agency-specific acquisition regulations." },
+      { question: "Can you support the full procurement lifecycle?", answer: "Absolutely. We cover everything from market research and solicitation through award, administration, and closeout." }
     ]
   }
 ];
