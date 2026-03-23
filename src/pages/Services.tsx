@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { Footer } from "@/components/Footer";
-import { getAllCategories, getServicesByCategory } from "@/data/servicesData";
+import { getServicesPageCategories, getServicesByCategory } from "@/data/servicesData";
 
 const Services = () => {
-  const categories = getAllCategories();
+  const categories = getServicesPageCategories();
 
   return (
     <div className="min-h-screen bg-background">
@@ -14,16 +14,29 @@ const Services = () => {
             <div className="max-w-3xl">
               <span className="section-label">Our Services</span>
               <h1 className="mt-4 text-4xl lg:text-5xl font-bold text-foreground leading-tight">
-                Comprehensive IT Solutions for{" "}
-                <span className="text-primary">Modern Enterprises</span>
+                IT &amp; Professional{" "}
+                <span className="text-primary">Consulting Services</span>
               </h1>
               <p className="mt-6 text-lg text-muted-foreground">
-                From custom software development to cloud infrastructure and AI-powered solutions,
-                we deliver end-to-end technology services that drive business transformation.
+                Our IT delivery, engineering, and technology solution capabilities are covered
+                under{" "}
+                <Link to="/solutions" className="text-primary font-medium underline underline-offset-2 hover:text-primary/80">
+                  Solutions
+                </Link>
+                . This page focuses on our <strong>Non-IT Professional Services</strong> —
+                talent management, workforce consulting, HR outsourcing, and dedicated support
+                &amp; consulting engagements that complement our technology offerings.
               </p>
               <div className="mt-8 flex flex-wrap gap-4">
                 <Link to="/#contact" className="btn-primary inline-flex items-center gap-2">
                   Get Started
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+                <Link
+                  to="/solutions"
+                  className="inline-flex items-center gap-2 border border-border rounded-lg px-5 py-2.5 text-sm font-medium text-foreground hover:bg-accent transition-colors"
+                >
+                  View IT Solutions
                   <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
@@ -74,7 +87,7 @@ const Services = () => {
               Ready to Transform Your Business?
             </h2>
             <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-              Let&apos;s discuss how our services can help you achieve your technology goals.
+              Let&apos;s discuss how our professional services can help you achieve your goals.
             </p>
             <Link
               to="/#contact"
