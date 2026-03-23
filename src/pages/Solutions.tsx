@@ -7,9 +7,9 @@ import { HoverCard, HoverCardTrigger, HoverCardContent } from "@/components/ui/h
 
 const solutionCategories: { title: string; icon: LucideIcon; items: string[] }[] = [
   {
-    title: "Application Development",
-    icon: Code2,
-    items: ["custom-app-development", "technology-modernization", "mobile-app-development", "api-integration", "low-code-no-code", "ui-ux-design"],
+    title: "AI & Machine Learning",
+    icon: Brain,
+    items: ["ai-ml-solutions", "generative-ai", "agentic-ai", "llm-solutions", "prompt-engineering", "mlops", "nlp-services", "rag-solutions", "computer-vision"],
   },
   {
     title: "Analytics & Data Management",
@@ -17,9 +17,9 @@ const solutionCategories: { title: string; icon: LucideIcon; items: string[] }[]
     items: ["data-analytics", "data-management", "business-intelligence", "data-governance", "data-warehousing", "etl-data-pipelines"],
   },
   {
-    title: "AI & Machine Learning",
-    icon: Brain,
-    items: ["ai-ml-solutions", "generative-ai", "agentic-ai", "llm-solutions", "prompt-engineering", "mlops", "nlp-services", "rag-solutions", "computer-vision"],
+    title: "Application Development",
+    icon: Code2,
+    items: ["custom-app-development", "technology-modernization", "mobile-app-development", "api-integration", "low-code-no-code", "ui-ux-design"],
   },
   {
     title: "Cloud Services",
