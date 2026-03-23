@@ -2065,7 +2065,8 @@ const servicesPageCategories = [
   "Support & Consulting",
   "Talent Management Services",
   "Non-IT Talent Management Services",
-  "Govt Services",
+  "Govt Strategic Consulting",
+  "Govt Technical Consulting",
 ];
 
 export const getServicesPageCategories = (): string[] => {
