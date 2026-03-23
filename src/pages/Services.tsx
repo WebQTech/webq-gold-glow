@@ -97,9 +97,9 @@ const Services = () => {
                 initial={{ opacity: 0, y: 16 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: 0.1 }}
-                className="lg:col-span-2 border-l-2 border-yellow-400 pl-5"
+                className="lg:col-span-2 border-l-2 border-[hsl(195,100%,55%)] pl-5"
               >
-                <p className="text-xs font-semibold uppercase tracking-[0.15em] text-muted-foreground mb-3">
+                <p className="text-xs font-semibold uppercase tracking-[0.15em] text-white/50 mb-3">
                   What We Cover
                 </p>
                 <ul className="space-y-2">
@@ -109,9 +109,9 @@ const Services = () => {
                       initial={{ opacity: 0, x: 8 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ duration: 0.3, delay: 0.15 + i * 0.03 }}
-                      className="flex items-start gap-2 text-sm text-foreground"
+                      className="flex items-start gap-2 text-sm text-white/90"
                     >
-                      <ChevronRight className="w-3.5 h-3.5 mt-0.5 text-primary shrink-0" />
+                      <ChevronRight className="w-3.5 h-3.5 mt-0.5 text-[hsl(195,100%,55%)] shrink-0" />
                       <span>{item}</span>
                     </motion.li>
                   ))}
