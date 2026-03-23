@@ -128,7 +128,7 @@ export const Navbar = () => {
             </div>
 
             <button
-              className="lg:hidden text-foreground p-2 shrink-0"
+              className="lg:hidden text-cream p-2 shrink-0"
               onClick={() => setIsMobileMenuOpen((prev) => !prev)}
               aria-label="Toggle menu"
               aria-expanded={isMobileMenuOpen}
