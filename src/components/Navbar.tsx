@@ -43,22 +43,22 @@ export const Navbar = () => {
 
       <div className="sticky top-0 z-50">
         {/* Top Utility Bar */}
-        <div className="hidden lg:block bg-slate-blue/90 border-b border-slate-blue/70">
+        <div className="hidden lg:block bg-navy/10 border-b border-navy/5">
           <div className="container mx-auto px-6 lg:px-12">
             <div className="flex items-center justify-end h-9 gap-1">
               <Link
                 to="/careers"
-                className="text-xs font-medium text-cream/70 hover:text-cream transition-colors px-3 py-1 flex items-center gap-1 no-underline"
+                className="text-xs font-medium text-muted-foreground hover:text-primary transition-colors px-3 py-1 flex items-center gap-1 no-underline"
               >
                 Careers <ChevronDown size={12} />
               </Link>
               <Link
                 to="/news"
-                className="text-xs font-medium text-cream/70 hover:text-cream transition-colors px-3 py-1 flex items-center gap-1 no-underline"
+                className="text-xs font-medium text-muted-foreground hover:text-primary transition-colors px-3 py-1 flex items-center gap-1 no-underline"
               >
                 News <ChevronDown size={12} />
               </Link>
-              <button className="text-xs font-medium text-cream/70 hover:text-cream transition-colors px-3 py-1 flex items-center gap-1">
+              <button className="text-xs font-medium text-muted-foreground hover:text-primary transition-colors px-3 py-1 flex items-center gap-1">
                 <Globe size={13} />
                 US-EN <ChevronDown size={12} />
               </button>
@@ -69,7 +69,7 @@ export const Navbar = () => {
           </div>
         </div>
 
-        <nav className="bg-slate-blue shadow-lg border-b border-slate-blue/80">
+        <nav className="bg-background shadow-sm">
         <div className="container mx-auto px-6 lg:px-12">
           <div className="flex items-center justify-between flex-nowrap h-16 lg:h-20 gap-4">
             <Link to="/" className="flex items-center gap-3 group shrink-0">
@@ -79,10 +79,10 @@ export const Navbar = () => {
                 className="h-14 w-auto"
               />
               <div className="flex flex-col">
-                <span className="font-montserrat text-xl font-bold text-cream tracking-tight leading-tight whitespace-nowrap">
+                <span className="font-montserrat text-xl font-bold text-foreground tracking-tight leading-tight whitespace-nowrap">
                   WebQ <span className="text-primary">Technologies</span>
                 </span>
-                <span className="text-xs text-cream/60 font-medium tracking-wide whitespace-nowrap">
+                <span className="text-xs text-muted-foreground font-medium tracking-wide whitespace-nowrap">
                   Innovate. Transform. Succeed.
                 </span>
               </div>
@@ -93,7 +93,7 @@ export const Navbar = () => {
                 const active = isActiveLink(link.href);
                 const isHash = link.href.startsWith("/#");
                 const linkClass = `${navItemBaseClass} ${
-                  active ? "text-primary-light" : "text-cream/80 hover:text-primary-light"
+                  active ? "text-primary" : "text-foreground/70 hover:text-primary"
                 }`;
 
                 if (isHash) {
@@ -128,7 +128,7 @@ export const Navbar = () => {
             </div>
 
             <button
-              className="lg:hidden text-cream p-2 shrink-0"
+              className="lg:hidden text-foreground p-2 shrink-0"
               onClick={() => setIsMobileMenuOpen((prev) => !prev)}
               aria-label="Toggle menu"
               aria-expanded={isMobileMenuOpen}

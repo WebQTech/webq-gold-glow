@@ -61,7 +61,6 @@ export default {
         navy: "hsl(var(--navy))",
         charcoal: "hsl(var(--charcoal))",
         cream: "hsl(var(--cream))",
-        "slate-blue": "hsl(var(--slate-blue))",
       },
       borderRadius: {
         lg: "var(--radius)",
