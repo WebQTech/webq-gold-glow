@@ -47,6 +47,11 @@ const Services = () => {
             <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12 items-start">
               {/* Left — headline & description */}
               <div className="lg:col-span-3">
+                <nav className="flex items-center gap-1.5 text-xs text-muted-foreground mb-4">
+                  <Link to="/" className="hover:text-primary transition-colors">Home</Link>
+                  <ChevronRight className="w-3 h-3" />
+                  <span className="text-foreground font-medium">Services</span>
+                </nav>
                 <motion.h1
                   initial={{ opacity: 0, y: 12 }}
                   animate={{ opacity: 1, y: 0 }}
