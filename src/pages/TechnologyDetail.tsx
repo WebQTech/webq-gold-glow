@@ -1,5 +1,4 @@
 import { useParams, Link, Navigate } from "react-router-dom";
-import { motion } from "framer-motion";
 import { ArrowLeft, ArrowRight, Check, ChevronRight, Home, Zap, TrendingUp, Users, Globe, BarChart3, Building2, Star } from "lucide-react";
 import { GoBackButton } from "@/components/GoBackButton";
 import { Footer } from "@/components/Footer";
@@ -55,12 +54,7 @@ const TechnologyDetail = () => {
               </nav>
             </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className={hasSnippets ? "grid lg:grid-cols-2 gap-6 items-start" : "max-w-3xl"}
-            >
+            <div className={`animate-in fade-in slide-in-from-bottom-4 duration-500 ${hasSnippets ? "grid lg:grid-cols-2 gap-6 items-start" : "max-w-3xl"}`}>
               <div>
                 <span className="text-xs font-black tracking-widest text-primary uppercase">{tech.category}</span>
                 <div className="flex items-center gap-3 mt-1">
@@ -73,15 +67,11 @@ const TechnologyDetail = () => {
               </div>
 
               {hasSnippets && (
-                <motion.div
-                  initial={{ opacity: 0, x: 30 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: 0.3 }}
-                >
+                <div className="animate-in fade-in slide-in-from-right-4 duration-600 delay-300">
                   <CodeTypingAnimation snippets={snippetData!.snippets} />
-                </motion.div>
+                </div>
               )}
-            </motion.div>
+            </div>
           </div>
         </section>
 
@@ -89,13 +79,7 @@ const TechnologyDetail = () => {
         <section className="py-10 lg:py-16">
           <div className="container mx-auto px-6 lg:px-12">
             <div className="grid lg:grid-cols-2 gap-12">
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5 }}
-                className="bg-card border border-border rounded-2xl p-8"
-              >
+              <div className="bg-card border border-border rounded-2xl p-8">
                 <h2 className="text-2xl font-bold text-foreground mb-6 flex items-center gap-2">
                   <Zap className="w-5 h-5 text-primary" />
                   Use Cases
@@ -110,15 +94,9 @@ const TechnologyDetail = () => {
                     </li>
                   ))}
                 </ul>
-              </motion.div>
+              </div>
 
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.1 }}
-                className="bg-card border border-border rounded-2xl p-8"
-              >
+              <div className="bg-card border border-border rounded-2xl p-8">
                 <h2 className="text-2xl font-bold text-foreground mb-6">Key Capabilities</h2>
                 <ul className="space-y-3">
                   {tech.features.map((f, i) => (
@@ -147,7 +125,7 @@ const TechnologyDetail = () => {
                     </div>
                   </div>
                 )}
-              </motion.div>
+              </div>
             </div>
           </div>
         </section>
@@ -158,31 +136,22 @@ const TechnologyDetail = () => {
             {/* Key Metrics */}
             <section className="py-10 lg:py-14 bg-primary/5">
               <div className="container mx-auto px-6 lg:px-12">
-                <motion.h2
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  className="text-2xl lg:text-3xl font-bold text-foreground text-center mb-10"
-                >
+                <h2 className="text-2xl lg:text-3xl font-bold text-foreground text-center mb-10">
                   {tech.name} by the Numbers
-                </motion.h2>
+                </h2>
                 <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
                   {snippetData.metrics.map((metric, i) => {
                     const MetricIcon = metricIcons[i % metricIcons.length];
                     return (
-                      <motion.div
+                      <div
                         key={i}
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.4, delay: i * 0.05 }}
                         className="bg-card border border-border rounded-xl p-5 text-center hover:shadow-md transition-shadow"
                       >
                         <MetricIcon className="w-6 h-6 text-primary mx-auto mb-2" />
                         <p className="text-2xl lg:text-3xl font-bold text-foreground">{metric.value}</p>
                         <p className="text-sm font-semibold text-foreground/80 mt-1">{metric.label}</p>
                         <p className="text-xs text-muted-foreground mt-0.5">{metric.detail}</p>
-                      </motion.div>
+                      </div>
                     );
                   })}
                 </div>
@@ -192,25 +161,16 @@ const TechnologyDetail = () => {
             {/* Industry Popularity */}
             <section className="py-10 lg:py-14">
               <div className="container mx-auto px-6 lg:px-12">
-                <motion.h2
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  className="text-2xl lg:text-3xl font-bold text-foreground text-center mb-3"
-                >
+                <h2 className="text-2xl lg:text-3xl font-bold text-foreground text-center mb-3">
                   Industry Adoption
-                </motion.h2>
+                </h2>
                 <p className="text-center text-muted-foreground mb-10 max-w-2xl mx-auto">
                   {tech.name} powers mission-critical systems across every major industry vertical.
                 </p>
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
                   {snippetData.industries.map((item, i) => (
-                    <motion.div
+                    <div
                       key={i}
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.4, delay: i * 0.08 }}
                       className="bg-card border border-border rounded-xl p-6"
                     >
                       <div className="flex items-center justify-between mb-3">
@@ -220,27 +180,18 @@ const TechnologyDetail = () => {
                         </span>
                       </div>
                       <div className="w-full bg-muted rounded-full h-2 mb-3">
-                        <motion.div
-                          initial={{ width: 0 }}
-                          whileInView={{ width: `${item.adoption}%` }}
-                          viewport={{ once: true }}
-                          transition={{ duration: 1, delay: 0.3 + i * 0.1 }}
-                          className="bg-primary h-2 rounded-full"
+                        <div
+                          className="bg-primary h-2 rounded-full transition-all duration-1000"
+                          style={{ width: `${item.adoption}%` }}
                         />
                       </div>
                       <p className="text-xs text-muted-foreground leading-relaxed">{item.use}</p>
-                    </motion.div>
+                    </div>
                   ))}
                 </div>
 
                 {/* WebQ callout */}
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: 0.3 }}
-                  className="mt-10 bg-card border-2 border-primary/20 rounded-2xl p-6 lg:p-8"
-                >
+                <div className="mt-10 bg-card border-2 border-primary/20 rounded-2xl p-6 lg:p-8">
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center shrink-0">
                       <Building2 className="w-6 h-6 text-primary" />
@@ -252,7 +203,7 @@ const TechnologyDetail = () => {
                       </p>
                     </div>
                   </div>
-                </motion.div>
+                </div>
               </div>
             </section>
           </>
