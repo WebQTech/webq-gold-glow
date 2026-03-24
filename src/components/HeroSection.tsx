@@ -79,7 +79,7 @@ export const HeroSection = () => {
       {/* Content overlay */}
       <div className="relative z-[2] h-full flex flex-col justify-end pb-6 lg:pb-8">
         <div className="container mx-auto px-6 lg:px-12">
-          <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 lg:gap-10 items-end">
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 lg:gap-10 items-center">
             {/* Left — headline & description */}
             <div className="lg:col-span-3">
 
@@ -95,7 +95,7 @@ export const HeroSection = () => {
             </div>
 
             {/* Right — highlights panel */}
-            <div className="lg:col-span-2 lg:translate-y-4 bg-white/5 backdrop-blur-md border border-white/10 rounded-lg p-5">
+            <div className="lg:col-span-2 lg:mt-16 bg-white/5 backdrop-blur-md border border-white/10 rounded-lg p-5">
               <h2 className="text-xs font-semibold uppercase tracking-widest text-[hsl(195,100%,55%)] mb-3">
                 What We Deliver
               </h2>
