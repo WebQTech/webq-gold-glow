@@ -66,16 +66,16 @@ export const HeroSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-10 items-center">
           {/* Left — headline & description */}
           <div className="lg:col-span-3 animate-fade-in">
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white leading-[1.1] tracking-tight">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white leading-[1.1] tracking-tight" style={{ textShadow: '0 2px 12px hsla(215,50%,10%,0.7), 0 1px 3px hsla(215,50%,10%,0.5)' }}>
               Built for Enterprise.{" "}
               <span className="text-[hsl(195,100%,55%)]">Powered by AI.</span>
             </h1>
-            <p className="mt-5 text-base lg:text-lg text-white/70 max-w-2xl leading-relaxed text-justify">
+            <p className="mt-5 text-base lg:text-lg text-white/80 max-w-2xl leading-relaxed text-justify" style={{ textShadow: '0 1px 6px hsla(215,50%,10%,0.6)' }}>
               We help organizations move from traditional IT environments to modern,
               AI-enabled operations with stronger performance, cost efficiency,
               and measurable outcomes.
             </p>
-            <p className="mt-2 text-sm text-white/60 max-w-2xl leading-relaxed text-justify">
+            <p className="mt-2 text-sm text-white/70 max-w-2xl leading-relaxed text-justify" style={{ textShadow: '0 1px 6px hsla(215,50%,10%,0.6)' }}>
               With expertise across <strong className="text-white/90">11+ industries</strong> and{" "}
               <strong className="text-white/90">15+ core services</strong>, we deliver end-to-end
               technology solutions — from strategy and consulting to implementation and managed support.
