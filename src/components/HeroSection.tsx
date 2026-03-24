@@ -43,7 +43,7 @@ export const HeroSection = () => {
   return (
     <section className="relative overflow-hidden">
       {/* Top: Full-width image carousel */}
-      <div className="relative h-[220px] sm:h-[280px] lg:h-[340px]">
+      <div className="relative h-[220px] sm:h-[280px] lg:h-[340px] overflow-hidden">
         <AnimatePresence mode="sync">
           <motion.div
             key={current}
