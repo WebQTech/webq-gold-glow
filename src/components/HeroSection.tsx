@@ -111,7 +111,7 @@ export const HeroSection = () => {
           </div>
 
           {/* Caption + Dot indicators — centered */}
-          <div className="flex flex-col items-center gap-3 mt-6">
+          <div className="flex flex-col items-center gap-3 mt-10">
             <AnimatePresence mode="wait">
               <motion.span
                 key={current}
