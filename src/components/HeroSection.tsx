@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
-import { ArrowRight, ChevronRight } from "lucide-react";
-import { Link } from "react-router-dom";
+import { ChevronRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useReducedMotion } from "@/hooks/useReducedMotion";
 
 // Import a curated set of solution images for the hero carousel
 import aiMlHero from "@/assets/solutions/ai-ml-hero-1.jpg";
@@ -31,6 +31,7 @@ const highlights = [
 
 export const HeroSection = () => {
   const [current, setCurrent] = useState(0);
+  const { reducedMotion } = useReducedMotion();
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -47,13 +48,17 @@ export const HeroSection = () => {
           <motion.div
             key={current}
             className="absolute inset-0 z-0"
-            initial={{ opacity: 0, scale: 1.01 }}
-            animate={{ opacity: 1, scale: 1.06 }}
-            exit={{ opacity: 0 }}
-            transition={{
-              opacity: { duration: 1, ease: "easeInOut" },
-              scale: { duration: 5, ease: "linear" },
-            }}
+            initial={{ opacity: reducedMotion ? 1 : 0, scale: 1 }}
+            animate={{ opacity: 1, scale: reducedMotion ? 1 : 1.06 }}
+            exit={{ opacity: reducedMotion ? 1 : 0 }}
+            transition={
+              reducedMotion
+                ? { duration: 0 }
+                : {
+                    opacity: { duration: 1, ease: "easeInOut" },
+                    scale: { duration: 5, ease: "linear" },
+                  }
+            }
           >
             <img
               src={heroSlides[current].image}
