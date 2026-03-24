@@ -51,7 +51,7 @@ export const HeroSection = () => {
         <motion.div
           key={current}
           className="absolute inset-0 z-0 origin-top"
-          initial={{ opacity: reducedMotion ? 1 : 0, scale: 1 }}
+          initial={{ opacity: (!hasMounted || reducedMotion) ? 1 : 0, scale: 1 }}
           animate={{ opacity: 1, scale: reducedMotion ? 1 : 1.06 }}
           exit={{ opacity: reducedMotion ? 1 : 0 }}
           transition={
