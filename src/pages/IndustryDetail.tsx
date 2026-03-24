@@ -117,8 +117,8 @@ const IndustryDetail = () => {
                 className="relative"
               >
                 <div className="aspect-video max-w-lg mx-auto rounded-2xl overflow-hidden shadow-2xl">
-                  <img 
-                    src={industry.heroImage} 
+                  <ImageLightbox
+                    src={industry.heroImage}
                     alt={industry.name}
                     className="w-full h-full object-cover"
                   />
