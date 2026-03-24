@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { Linkedin, Twitter, Youtube, Facebook } from "lucide-react";
 import { Link } from "react-router-dom";
 import logo from "@/assets/logo.png";
@@ -46,14 +45,13 @@ export const Footer = () => {
                 { icon: Youtube, href: "#" },
                 { icon: Facebook, href: "#" },
               ].map((social, i) => (
-                <motion.a
+                <a
                   key={i}
                   href={social.href}
-                  whileHover={{ scale: 1.1 }}
-                  className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-white/60 hover:text-white hover:bg-white/20 transition-colors"
+                  className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-white/60 hover:text-white hover:bg-white/20 hover:scale-110 transition-all"
                 >
                   <social.icon className="w-4 h-4" />
-                </motion.a>
+                </a>
               ))}
             </div>
           </div>
