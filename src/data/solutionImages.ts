@@ -1,15 +1,7 @@
 // Solution carousel images - maps solution slugs to their image sets
-// Many solutions share category-level images for visual consistency
-
-// Custom Software Development
-import customDev1 from "@/assets/solutions/custom-dev-1.jpg";
-import customDev2 from "@/assets/solutions/custom-dev-2.jpg";
-import customDev3 from "@/assets/solutions/custom-dev-3.jpg";
 
 // Cloud & Infrastructure (business scenario images)
 import cloudMig1 from "@/assets/solutions/cloud-migration-1.jpg";
-import cloudMig2 from "@/assets/solutions/cloud-migration-2.jpg";
-import cloudMig3 from "@/assets/solutions/cloud-migration-3.jpg";
 import cloudMigBiz from "@/assets/solutions/cloud-migration-biz.jpg";
 import itInfraBiz from "@/assets/solutions/it-infra-biz.jpg";
 import cloudOptBiz from "@/assets/solutions/cloud-optimize-biz.jpg";
@@ -17,30 +9,7 @@ import hybridCloudBiz from "@/assets/solutions/hybrid-cloud-biz.jpg";
 import finopsBiz from "@/assets/solutions/finops-biz.jpg";
 import serverlessBiz from "@/assets/solutions/serverless-biz.jpg";
 
-// IT Infrastructure
-import infra1 from "@/assets/solutions/it-infrastructure-1.jpg";
-import infra2 from "@/assets/solutions/it-infrastructure-2.jpg";
-import infra3 from "@/assets/solutions/it-infrastructure-3.jpg";
-
-// Technology Modernization
-import techMod1 from "@/assets/solutions/technology-modernization-1.jpg";
-import techMod2 from "@/assets/solutions/technology-modernization-2.jpg";
-import techMod3 from "@/assets/solutions/technology-modernization-3.jpg";
-
-// QA & Testing
-import qa1 from "@/assets/solutions/qa-testing-1.jpg";
-import qa2 from "@/assets/solutions/qa-testing-2.jpg";
-import qa3 from "@/assets/solutions/qa-testing-3.jpg";
-
-// Production Support
-import prod1 from "@/assets/solutions/production-support-1.jpg";
-import prod2 from "@/assets/solutions/production-support-2.jpg";
-import prod3 from "@/assets/solutions/production-support-3.jpg";
-
 // DevOps & SRE (business scenario images)
-import devops1 from "@/assets/solutions/devops-sre-1.jpg";
-import devops2 from "@/assets/solutions/devops-sre-2.jpg";
-import devops3 from "@/assets/solutions/devops-sre-3.jpg";
 import devopsBiz from "@/assets/solutions/devops-biz.jpg";
 import cicdBiz from "@/assets/solutions/cicd-biz.jpg";
 import iacBiz from "@/assets/solutions/iac-biz.jpg";
@@ -48,12 +17,7 @@ import observabilityBiz from "@/assets/solutions/observability-biz.jpg";
 import platformEngBiz from "@/assets/solutions/platform-eng-biz.jpg";
 import containersBiz from "@/assets/solutions/containers-biz.jpg";
 
-// Data & Analytics
-import data1 from "@/assets/solutions/data-analytics-1.jpg";
-import data2 from "@/assets/solutions/data-analytics-2.jpg";
-import data3 from "@/assets/solutions/data-analytics-3.jpg";
-
-// AI & ML (new high-quality unique images)
+// AI & ML (unique hero images per solution)
 import aiMlHero from "@/assets/solutions/ai-ml-hero-1.jpg";
 import genAiHero from "@/assets/solutions/generative-ai-hero-1.jpg";
 import agenticAiHero from "@/assets/solutions/agentic-ai-hero-1.jpg";
@@ -63,88 +27,56 @@ import ragHero from "@/assets/solutions/rag-hero-1.jpg";
 import cvHero from "@/assets/solutions/computer-vision-hero-1.jpg";
 import llmHero from "@/assets/solutions/llm-hero-1.jpg";
 import promptEngHero from "@/assets/solutions/prompt-eng-hero-1.jpg";
-// Legacy AI images for cross-references
-import ai1 from "@/assets/solutions/ai-ml-solutions-1.jpg";
-import ai2 from "@/assets/solutions/ai-ml-solutions-2.jpg";
-import ai3 from "@/assets/solutions/ai-ml-solutions-3.jpg";
 
 // Security (business scenario images)
-import sec1 from "@/assets/solutions/security-1.jpg";
-import sec2 from "@/assets/solutions/security-2.jpg";
-import sec3 from "@/assets/solutions/security-3.jpg";
 import securityBiz from "@/assets/solutions/security-biz.jpg";
 import iamBiz from "@/assets/solutions/iam-biz.jpg";
 import complianceBiz from "@/assets/solutions/compliance-biz.jpg";
 import pentestBiz from "@/assets/solutions/pentest-biz.jpg";
 
-// Mobile
-import mobile1 from "@/assets/solutions/mobile-app-1.jpg";
+// Analytics & Data (business scenario images)
+import analyticsDashBiz from "@/assets/solutions/analytics-dashboard-biz.jpg";
+import biReportingBiz from "@/assets/solutions/bi-reporting-biz.jpg";
+import dataPipelineBiz from "@/assets/solutions/data-pipeline-biz.jpg";
 
-// API Integration
-import api1 from "@/assets/solutions/api-integration-1.jpg";
+// App Development (business scenario images)
+import customAppBiz from "@/assets/solutions/custom-app-biz.jpg";
+import mobileAppBiz from "@/assets/solutions/mobile-app-biz.jpg";
+import apiIntegrationBiz from "@/assets/solutions/api-integration-biz.jpg";
 
-// Enterprise
-import enterprise1 from "@/assets/solutions/enterprise-1.jpg";
+// Enterprise (business scenario images)
+import erpBiz from "@/assets/solutions/erp-biz.jpg";
+import crmBiz from "@/assets/solutions/crm-biz.jpg";
+import supplyChainBiz from "@/assets/solutions/supply-chain-biz.jpg";
 
-// UX Design
+// QA & Testing (business scenario images)
+import qaAutomationBiz from "@/assets/solutions/qa-automation-biz.jpg";
+import performanceTestBiz from "@/assets/solutions/performance-test-biz.jpg";
+import accessibilityTestBiz from "@/assets/solutions/accessibility-test-biz.jpg";
+
+// Databases (business scenario images)
+import dbAdminBiz from "@/assets/solutions/db-admin-biz.jpg";
+import dbMigrationBiz from "@/assets/solutions/db-migration-biz.jpg";
+import dataArchBiz from "@/assets/solutions/data-arch-biz.jpg";
+
+// Operations (business scenario images)
+import managedServicesBiz from "@/assets/solutions/managed-services-biz.jpg";
+import helpdeskBiz from "@/assets/solutions/helpdesk-biz.jpg";
+import disasterRecoveryBiz from "@/assets/solutions/disaster-recovery-biz.jpg";
+
+// Legacy images kept for cross-referencing
+import techMod1 from "@/assets/solutions/technology-modernization-1.jpg";
+import techMod2 from "@/assets/solutions/technology-modernization-2.jpg";
+import lowCode1 from "@/assets/solutions/low-code-1.jpg";
 import ux1 from "@/assets/solutions/ux-design-1.jpg";
 
-// Generative AI
-import genAi1 from "@/assets/solutions/gen-ai-1.jpg";
-
-// Managed Services
-import managed1 from "@/assets/solutions/managed-services-1.jpg";
-
-// Supply Chain
-import supply1 from "@/assets/solutions/supply-chain-1.jpg";
-
-// Low Code
-import lowCode1 from "@/assets/solutions/low-code-1.jpg";
-
-// Disaster Recovery
-import dr1 from "@/assets/solutions/disaster-recovery-1.jpg";
-
-// LLM Solutions
-import llm1 from "@/assets/solutions/llm-solutions-1.jpg";
-import promptEng1 from "@/assets/solutions/prompt-engineering-1.jpg";
-
-// Global Operations
-import globalOps1 from "@/assets/solutions/global-operations-1.jpg";
-
-// Database & Data Infrastructure
-import dbAdmin1 from "@/assets/solutions/database-admin-1.jpg";
-import dbMigration1 from "@/assets/solutions/database-migration-1.jpg";
-import cloudDb1 from "@/assets/solutions/cloud-database-1.jpg";
-import dataArch1 from "@/assets/solutions/data-architecture-1.jpg";
-import nosql1 from "@/assets/solutions/nosql-databases-1.jpg";
-
-// Reusable image sets by category
-const customDevImages = [customDev1, customDev2, customDev3];
-const cloudImages = [cloudMig1, cloudMig2, cloudMig3];
-const infraImages = [infra1, infra2, infra3];
-const techModImages = [techMod1, techMod2, techMod3];
-const qaImages = [qa1, qa2, qa3];
-const prodImages = [prod1, prod2, prod3];
-const devopsImages = [devops1, devops2, devops3];
-const dataImages = [data1, data2, data3];
-const secImages = [sec1, sec2, sec3];
-const mobileImages = [mobile1, customDev1, customDev2];
-const apiImages = [api1, enterprise1, customDev3];
-const enterpriseImages = [enterprise1, data2, infra1];
-const uxImages = [ux1, customDev2, lowCode1];
-
-const managedImages = [managed1, infra2, prod1];
-const supplyImages = [supply1, enterprise1, data1];
-const lowCodeImages = [lowCode1, ux1, customDev1];
-const drImages = [dr1, infra1, cloudMig3];
-
 export const solutionImages: Record<string, string[]> = {
-  // Software Development
-  "custom-app-development": customDevImages,
-  "mobile-app-development": mobileImages,
-  "api-integration": apiImages,
-  "ui-ux-design": uxImages,
-  "low-code-no-code": lowCodeImages,
+  // Software Development (business scenario images)
+  "custom-app-development": [customAppBiz, mobileAppBiz, apiIntegrationBiz],
+  "mobile-app-development": [mobileAppBiz, customAppBiz, apiIntegrationBiz],
+  "api-integration": [apiIntegrationBiz, customAppBiz, mobileAppBiz],
+  "ui-ux-design": [customAppBiz, mobileAppBiz, ux1],
+  "low-code-no-code": [customAppBiz, mobileAppBiz, lowCode1],
 
   // Cloud (business scenario images)
   "cloud-migration": [cloudMigBiz, cloudMig1, itInfraBiz],
@@ -152,31 +84,31 @@ export const solutionImages: Record<string, string[]> = {
   "hybrid-multi-cloud": [hybridCloudBiz, cloudMigBiz, serverlessBiz],
   "serverless-architecture": [serverlessBiz, cloudMigBiz, hybridCloudBiz],
 
-  // Infrastructure
+  // Infrastructure (business scenario images)
   "it-infrastructure": [itInfraBiz, cloudMigBiz, observabilityBiz],
-  "managed-services": managedImages,
-  "it-service-management": [managed1, infra1, prod2],
-  "it-asset-management": [infra1, managed1, infra3],
-  "network-operations": [infra2, prod1, infra1],
-  "help-desk-support": [managed1, prod2, infra2],
+  "managed-services": [managedServicesBiz, helpdeskBiz, itInfraBiz],
+  "it-service-management": [managedServicesBiz, helpdeskBiz, observabilityBiz],
+  "it-asset-management": [managedServicesBiz, itInfraBiz, helpdeskBiz],
+  "network-operations": [observabilityBiz, managedServicesBiz, itInfraBiz],
+  "help-desk-support": [helpdeskBiz, managedServicesBiz, observabilityBiz],
 
   // Modernization
-  "technology-modernization": techModImages,
-  "legacy-modernization": [techMod1, techMod2, customDev3],
+  "technology-modernization": [customAppBiz, techMod1, techMod2],
+  "legacy-modernization": [customAppBiz, techMod1, apiIntegrationBiz],
   "platform-engineering": [platformEngBiz, devopsBiz, cicdBiz],
 
-  // QA & Testing
-  "qa-testing": qaImages,
-  "performance-testing": [qa1, prod3, qa3],
-  "security-testing": [sec1, qa2, sec3],
-  "test-automation-framework": [qa1, qa3, devops1],
-  "accessibility-testing": [qa2, ux1, qa1],
+  // QA & Testing (business scenario images)
+  "qa-testing": [qaAutomationBiz, performanceTestBiz, accessibilityTestBiz],
+  "performance-testing": [performanceTestBiz, qaAutomationBiz, observabilityBiz],
+  "security-testing": [pentestBiz, qaAutomationBiz, securityBiz],
+  "test-automation-framework": [qaAutomationBiz, performanceTestBiz, cicdBiz],
+  "accessibility-testing": [accessibilityTestBiz, qaAutomationBiz, customAppBiz],
 
-  // Production & Monitoring
-  "production-support": prodImages,
+  // Production & Monitoring (business scenario images)
+  "production-support": [managedServicesBiz, observabilityBiz, helpdeskBiz],
   "observability-monitoring": [observabilityBiz, devopsBiz, itInfraBiz],
-  "disaster-recovery": drImages,
-  "business-continuity": [dr1, prod1, infra1],
+  "disaster-recovery": [disasterRecoveryBiz, managedServicesBiz, itInfraBiz],
+  "business-continuity": [disasterRecoveryBiz, managedServicesBiz, observabilityBiz],
 
   // DevOps (business scenario images)
   "devops-sre": [devopsBiz, cicdBiz, observabilityBiz],
@@ -188,13 +120,13 @@ export const solutionImages: Record<string, string[]> = {
   "release-engineering": [cicdBiz, devopsBiz, iacBiz],
   "finops": [finopsBiz, cloudOptBiz, cloudMigBiz],
 
-  // Data
-  "data-analytics": dataImages,
-  "data-management": [data3, data1, data2],
-  "business-intelligence": [data2, data1, data3],
-  "data-governance": [data3, sec3, data1],
-  "data-warehousing": [data1, data2, data3],
-  "etl-data-pipelines": [data1, data3, data2],
+  // Data & Analytics (business scenario images)
+  "data-analytics": [analyticsDashBiz, biReportingBiz, dataPipelineBiz],
+  "data-management": [dataPipelineBiz, analyticsDashBiz, biReportingBiz],
+  "business-intelligence": [biReportingBiz, analyticsDashBiz, dataPipelineBiz],
+  "data-governance": [dataPipelineBiz, complianceBiz, analyticsDashBiz],
+  "data-warehousing": [analyticsDashBiz, dataPipelineBiz, biReportingBiz],
+  "etl-data-pipelines": [dataPipelineBiz, analyticsDashBiz, dataArchBiz],
 
   // AI & ML (unique hero images per solution)
   "ai-ml-solutions": [aiMlHero, genAiHero, llmHero],
@@ -219,27 +151,27 @@ export const solutionImages: Record<string, string[]> = {
   "penetration-testing": [pentestBiz, securityBiz, iamBiz],
   "zero-trust-security": [iamBiz, securityBiz, pentestBiz],
 
-  // Enterprise
-  "erp-management": enterpriseImages,
-  "crm-implementation": [enterprise1, data2, managed1],
-  "enterprise-integration": [enterprise1, api1, data1],
-  "enterprise-mobility": [mobile1, enterprise1, cloudMig2],
-  "supply-chain-management": supplyImages,
-  "enterprise-content-management": [enterprise1, data3, managed1],
+  // Enterprise (business scenario images)
+  "erp-management": [erpBiz, crmBiz, supplyChainBiz],
+  "crm-implementation": [crmBiz, erpBiz, analyticsDashBiz],
+  "enterprise-integration": [apiIntegrationBiz, erpBiz, crmBiz],
+  "enterprise-mobility": [mobileAppBiz, erpBiz, cloudMigBiz],
+  "supply-chain-management": [supplyChainBiz, erpBiz, analyticsDashBiz],
+  "enterprise-content-management": [erpBiz, crmBiz, managedServicesBiz],
 
-  // Procurement
-  "procurement-services": [supply1, enterprise1, managed1],
-  "software-licensing": [managed1, enterprise1, infra1],
-  "bulk-hardware-services": [infra1, managed1, supply1],
-  "change-management": [managed1, techMod3, enterprise1],
+  // Procurement (business scenario images)
+  "procurement-services": [supplyChainBiz, erpBiz, managedServicesBiz],
+  "software-licensing": [managedServicesBiz, erpBiz, itInfraBiz],
+  "bulk-hardware-services": [itInfraBiz, managedServicesBiz, supplyChainBiz],
+  "change-management": [erpBiz, managedServicesBiz, customAppBiz],
 
-  // Operations
-  "global-operations-support": [globalOps1, prod1, managed1],
+  // Operations (business scenario images)
+  "global-operations-support": [managedServicesBiz, helpdeskBiz, observabilityBiz],
 
-  // Databases & Data Infrastructure
-  "database-administration": [dbAdmin1, infra1, data1],
-  "database-migration": [dbMigration1, cloudMig1, data2],
-  "cloud-database-services": [cloudDb1, cloudMig2, dbAdmin1],
-  "data-architecture": [dataArch1, data1, data3],
-  "nosql-newscale-databases": [nosql1, dbAdmin1, cloudDb1],
+  // Databases & Data Infrastructure (business scenario images)
+  "database-administration": [dbAdminBiz, dbMigrationBiz, dataArchBiz],
+  "database-migration": [dbMigrationBiz, dbAdminBiz, cloudMigBiz],
+  "cloud-database-services": [dbAdminBiz, cloudMigBiz, dbMigrationBiz],
+  "data-architecture": [dataArchBiz, dbAdminBiz, dataPipelineBiz],
+  "nosql-newscale-databases": [dbAdminBiz, dataArchBiz, dbMigrationBiz],
 };
