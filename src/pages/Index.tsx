@@ -6,6 +6,9 @@ import { TechnologiesSummary } from "@/components/TechnologiesSummary";
 import { ServicesSummary } from "@/components/ServicesSummary";
 import { IndustriesSummary } from "@/components/IndustriesSummary";
 import { UseCasesSummary } from "@/components/UseCasesSummary";
+import { DeliveryMethodologySection } from "@/components/DeliveryMethodologySection";
+import { TrustSection } from "@/components/TrustSection";
+import { WhyWeExistSection } from "@/components/WhyWeExistSection";
 import { InsightsSummary } from "@/components/InsightsSummary";
 import { CareersSummary } from "@/components/CareersSummary";
 import { AboutSection } from "@/components/AboutSection";
@@ -26,6 +29,9 @@ const Index = () => {
         <ServicesSummary />
         <IndustriesSummary />
         <UseCasesSummary />
+        <DeliveryMethodologySection />
+        <TrustSection />
+        <WhyWeExistSection />
         <InsightsSummary />
         <AboutSection />
         <CareersSummary />
