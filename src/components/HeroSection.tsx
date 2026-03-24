@@ -99,10 +99,10 @@ export const HeroSection = () => {
               <h2 className="text-xs font-semibold uppercase tracking-widest text-[hsl(195,100%,55%)] mb-3">
                 What We Deliver
               </h2>
-              <ul className="space-y-2">
+              <ul className="space-y-2.5">
                 {highlights.map((item) => (
-                  <li key={item} className="flex items-start gap-2 text-sm text-white/85">
-                    <ChevronRight className="w-3.5 h-3.5 mt-0.5 text-[hsl(195,100%,55%)] shrink-0" />
+                  <li key={item} className="flex items-start gap-2 text-base text-white/85">
+                    <ChevronRight className="w-4 h-4 mt-0.5 text-[hsl(195,100%,55%)] shrink-0" />
                     {item}
                   </li>
                 ))}
