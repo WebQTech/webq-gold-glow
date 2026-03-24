@@ -57,7 +57,7 @@ export const HeroSection = () => {
       <div
         className="absolute inset-0 z-[1]"
         style={{
-          background: `linear-gradient(135deg, hsla(215,50%,10%,0.88) 0%, hsla(210,100%,22%,0.82) 60%, hsla(195,80%,30%,0.78) 100%)`,
+          background: `linear-gradient(135deg, hsla(215,50%,10%,0.55) 0%, hsla(210,100%,22%,0.45) 60%, hsla(195,80%,30%,0.35) 100%)`,
         }}
       />
 
