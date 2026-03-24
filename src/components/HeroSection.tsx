@@ -47,10 +47,13 @@ export const HeroSection = () => {
           <motion.div
             key={current}
             className="absolute inset-0 z-0"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+            initial={{ opacity: 0, scale: 1.05 }}
+            animate={{ opacity: 1, scale: 1.15 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 1, ease: "easeInOut" }}
+            transition={{
+              opacity: { duration: 1, ease: "easeInOut" },
+              scale: { duration: 8, ease: "linear" },
+            }}
           >
             <img
               src={heroSlides[current].image}
