@@ -2,8 +2,8 @@ import { Shield, Award, Globe, Clock, CheckCircle2 } from "lucide-react";
 
 const trustPillars = [
   { icon: Shield, label: "SOC 2 & ISO 27001 Compliant" },
-  { icon: Award, label: "50+ Enterprise Clients Served" },
-  { icon: Globe, label: "20+ Countries & Timezones" },
+  { icon: Award, label: "25+ Enterprise Clients Served" },
+  { icon: Globe, label: "10+ Countries & Timezones" },
   { icon: Clock, label: "99.9% Uptime SLA Guarantee" },
 ];
 
