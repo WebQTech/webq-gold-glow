@@ -68,7 +68,7 @@ export const HeroSection = () => {
       </AnimatePresence>
 
       {/* Dark overlay for text readability — lighter for image clarity */}
-      <div className="absolute inset-0 z-[1] bg-[hsl(215,50%,8%)]/35" />
+      <div className="absolute inset-0 z-[1] bg-[hsl(215,50%,8%)]/45" />
       <div
         className="absolute inset-x-0 bottom-0 h-48 z-[1]"
         style={{
