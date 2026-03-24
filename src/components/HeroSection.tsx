@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
-import { ArrowRight, ChevronRight } from "lucide-react";
-import { Link } from "react-router-dom";
+import { ChevronRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useReducedMotion } from "@/hooks/useReducedMotion";
 
 // Import a curated set of solution images for the hero carousel
 import aiMlHero from "@/assets/solutions/ai-ml-hero-1.jpg";
