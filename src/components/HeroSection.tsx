@@ -95,7 +95,7 @@ export const HeroSection = () => {
             </div>
 
             {/* Right — highlights panel */}
-            <div className="lg:col-span-2 bg-white/5 backdrop-blur-md border border-white/10 rounded-lg p-5">
+            <div className="lg:col-span-2 lg:translate-y-4 bg-white/5 backdrop-blur-md border border-white/10 rounded-lg p-5">
               <h2 className="text-xs font-semibold uppercase tracking-widest text-[hsl(195,100%,55%)] mb-3">
                 What We Deliver
               </h2>
