@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, CheckCircle2 } from "lucide-react";
+import { ArrowRight, CheckCircle2, ChevronRight } from "lucide-react";
 import { Footer } from "@/components/Footer";
 import { technologiesData, getAllTechnologyCategories } from "@/data/technologiesData";
 import { motion } from "framer-motion";
