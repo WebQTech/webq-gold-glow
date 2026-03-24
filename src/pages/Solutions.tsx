@@ -79,9 +79,52 @@ const solutionCategories: { title: string; icon: LucideIcon; items: string[] }[]
 ];
 
 const Solutions = () => {
+  const [currentImage, setCurrentImage] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentImage((prev) => (prev + 1) % heroImages.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-primary/5 to-background">
       <main id="main-content" className="focus:outline-none" tabIndex={-1}>
+
+        {/* Hero image carousel */}
+        <section className="relative w-full h-[320px] lg:h-[400px] overflow-hidden">
+          {heroImages.map((img, i) => (
+            <img
+              key={i}
+              src={img.src}
+              alt={img.label}
+              className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
+                i === currentImage ? "opacity-100" : "opacity-0"
+              }`}
+            />
+          ))}
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
+          <div className="absolute bottom-6 left-0 right-0 flex justify-center gap-2">
+            {heroImages.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => setCurrentImage(i)}
+                className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                  i === currentImage
+                    ? "bg-primary w-6"
+                    : "bg-primary/30 hover:bg-primary/50"
+                }`}
+                aria-label={`Show ${heroImages[i].label}`}
+              />
+            ))}
+          </div>
+          <div className="absolute bottom-12 left-0 right-0 text-center">
+            <span className="text-sm font-medium text-primary-foreground bg-primary/70 backdrop-blur-sm px-4 py-1.5 rounded-full">
+              {heroImages[currentImage].label}
+            </span>
+          </div>
+        </section>
 
         {/* Category grid */}
         <section className="py-10 lg:py-14">
