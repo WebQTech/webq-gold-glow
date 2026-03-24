@@ -40,9 +40,11 @@ const AppRoutes = () => {
     <>
       <Navbar />
       <ScrollToTop />
+      <Routes>
+        <Route path="/" element={<Index />} />
+      </Routes>
       <Suspense fallback={<PageLoader />}>
         <Routes>
-          <Route path="/" element={<Index />} />
           <Route path="/solutions" element={<Solutions />} />
           <Route path="/solutions/:slug" element={<SolutionDetail />} />
           <Route path="/technologies" element={<Technologies />} />
