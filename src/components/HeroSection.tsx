@@ -121,15 +121,6 @@ export const HeroSection = () => {
                 <strong className="text-white/90">15+ core services</strong>, we deliver end-to-end
                 technology solutions — from strategy and consulting to implementation and managed support.
               </p>
-              <div className="mt-8">
-                <Link
-                  to="/contact"
-                  className="inline-flex items-center gap-2 px-8 py-4 bg-[hsl(195,100%,55%)] text-[hsl(215,50%,8%)] font-semibold rounded-sm hover:bg-[hsl(195,100%,60%)] transition-colors"
-                >
-                  Get Started Today
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
-              </div>
             </div>
 
             {/* Right — highlights panel */}
