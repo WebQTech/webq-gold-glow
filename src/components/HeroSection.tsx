@@ -63,6 +63,8 @@ export const HeroSection = () => {
             alt=""
             className="w-full h-full object-cover"
             aria-hidden="true"
+            loading={current === 0 ? "eager" : "lazy"}
+            fetchPriority={current === 0 ? "high" : undefined}
           />
         </motion.div>
       </AnimatePresence>
