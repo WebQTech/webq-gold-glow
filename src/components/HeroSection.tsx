@@ -1,5 +1,17 @@
+import { useState, useEffect } from "react";
 import { ArrowRight, ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import { motion, AnimatePresence } from "framer-motion";
+
+// Import a curated set of solution images for the hero carousel
+import aiMlHero from "@/assets/solutions/ai-ml-hero-1.jpg";
+import genAiHero from "@/assets/solutions/generative-ai-hero-1.jpg";
+import cloudMigBiz from "@/assets/solutions/cloud-migration-biz.jpg";
+import analyticsDashBiz from "@/assets/solutions/analytics-dashboard-biz.jpg";
+import securityBiz from "@/assets/solutions/security-biz.jpg";
+import devopsBiz from "@/assets/solutions/devops-biz.jpg";
+
+const heroImages = [aiMlHero, genAiHero, cloudMigBiz, analyticsDashBiz, securityBiz, devopsBiz];
 
 const highlights = [
   "AI & Machine Learning Solutions",
@@ -11,14 +23,46 @@ const highlights = [
 ];
 
 export const HeroSection = () => {
+  const [current, setCurrent] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % heroImages.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, []);
+
   return (
-    <section
-      className="py-10 lg:py-14"
-      style={{
-        background: `linear-gradient(135deg, hsl(215 50% 10%) 0%, hsl(210 100% 22%) 60%, hsl(195 80% 30%) 100%)`,
-      }}
-    >
-      <div className="container mx-auto px-6 lg:px-12">
+    <section className="relative py-10 lg:py-14 overflow-hidden">
+      {/* Background image carousel */}
+      <AnimatePresence mode="sync">
+        <motion.div
+          key={current}
+          className="absolute inset-0 z-0"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 1, ease: "easeInOut" }}
+        >
+          <img
+            src={heroImages[current]}
+            alt=""
+            className="w-full h-full object-cover"
+            aria-hidden="true"
+          />
+        </motion.div>
+      </AnimatePresence>
+
+      {/* Dark overlay for text readability */}
+      <div
+        className="absolute inset-0 z-[1]"
+        style={{
+          background: `linear-gradient(135deg, hsla(215,50%,10%,0.88) 0%, hsla(210,100%,22%,0.82) 60%, hsla(195,80%,30%,0.78) 100%)`,
+        }}
+      />
+
+      {/* Content */}
+      <div className="relative z-[2] container mx-auto px-6 lg:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-10 items-center">
           {/* Left — headline & description */}
           <div className="lg:col-span-3 animate-fade-in">
@@ -61,6 +105,20 @@ export const HeroSection = () => {
               ))}
             </ul>
           </div>
+        </div>
+
+        {/* Carousel dot indicators */}
+        <div className="flex justify-center gap-2 mt-8">
+          {heroImages.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setCurrent(i)}
+              className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                i === current ? "bg-[hsl(195,100%,55%)] w-5" : "bg-white/30 hover:bg-white/50"
+              }`}
+              aria-label={`Go to slide ${i + 1}`}
+            />
+          ))}
         </div>
       </div>
     </section>
