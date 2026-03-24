@@ -1,6 +1,10 @@
 import { Footer } from "@/components/Footer";
 import { motion } from "framer-motion";
 import { Building2, Users, Award, MapPin, Handshake, Target, Eye, Heart, Globe, CheckCircle } from "lucide-react";
+import calEprocureLogo from "@/assets/certifications/cal-eprocure.png";
+import sbaLogo from "@/assets/certifications/sba.png";
+import dgsLogo from "@/assets/certifications/dgs.png";
+import wbencLogo from "@/assets/certifications/wbenc.png";
 import { Helmet } from "react-helmet-async";
 
 const stats = [
@@ -45,6 +49,13 @@ const globalPresence = [
 
 const partners = [
   "Microsoft", "AWS", "Google Cloud", "Salesforce", "SAP", "Oracle", "IBM", "ServiceNow"
+];
+
+const certifications = [
+  { name: "Cal eProcure", logo: calEprocureLogo },
+  { name: "U.S. Small Business Administration", logo: sbaLogo },
+  { name: "CA Dept. of General Services", logo: dgsLogo },
+  { name: "WBENC Certified", logo: wbencLogo },
 ];
 
 const About = () => {
@@ -279,6 +290,36 @@ const About = () => {
                     className="px-8 py-4 bg-card rounded-lg border border-border text-foreground font-semibold hover:border-primary/50 transition-all"
                   >
                     {partner}
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* Certifications */}
+          <section className="py-10 lg:py-16">
+            <div className="container mx-auto px-6 lg:px-12">
+              <div className="text-center max-w-2xl mx-auto mb-12">
+                <div className="flex items-center justify-center gap-2 mb-4">
+                  <Award className="w-5 h-5 text-primary" />
+                  <span className="text-primary text-sm font-semibold uppercase tracking-wider">Certifications</span>
+                </div>
+                <h2 className="text-3xl font-bold text-foreground">
+                  Certified & Trusted
+                </h2>
+              </div>
+              
+              <div className="flex flex-wrap justify-center items-center gap-10">
+                {certifications.map((cert, index) => (
+                  <motion.div
+                    key={cert.name}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    className="flex flex-col items-center gap-3 p-6 bg-card rounded-xl border border-border hover:border-primary/50 transition-all"
+                  >
+                    <img src={cert.logo} alt={cert.name} className="h-16 w-auto object-contain" />
+                    <span className="text-sm font-medium text-muted-foreground text-center">{cert.name}</span>
                   </motion.div>
                 ))}
               </div>
