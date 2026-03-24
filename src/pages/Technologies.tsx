@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, CheckCircle2 } from "lucide-react";
+import { ArrowRight, CheckCircle2, ChevronRight } from "lucide-react";
 import { Footer } from "@/components/Footer";
 import { technologiesData, getAllTechnologyCategories } from "@/data/technologiesData";
 import { motion } from "framer-motion";
@@ -12,10 +12,69 @@ const technologyCategories = getAllTechnologyCategories().map(category => ({
   items: technologiesData.filter(t => t.category === category).map(t => t.slug),
 }));
 
+const techHighlights = [
+  "AI & Machine Learning Frameworks",
+  "Cloud-Native & Multi-Cloud Platforms",
+  "Modern Frontend & Backend Stacks",
+  "Data Engineering & Analytics Pipelines",
+  "DevOps, CI/CD & Infrastructure as Code",
+  "Enterprise Security & Compliance Tools",
+];
+
 const Technologies = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-primary/5 to-background">
       <main id="main-content" className="focus:outline-none" tabIndex={-1}>
+
+        {/* Hero — dark gradient matching Services page */}
+        <section
+          className="py-8 lg:py-10"
+          style={{
+            background: `linear-gradient(135deg, hsl(215 50% 10%) 0%, hsl(210 100% 22%) 60%, hsl(195 80% 30%) 100%)`,
+          }}
+        >
+          <div className="container mx-auto px-6 lg:px-12">
+            <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 lg:gap-8 items-center">
+              {/* Left — headline & description */}
+              <div className="lg:col-span-3 animate-fade-in">
+                <nav className="flex items-center gap-1.5 text-xs text-white/50 mb-3">
+                  <Link to="/" className="hover:text-white/80 transition-colors">Home</Link>
+                  <ChevronRight className="w-3 h-3" />
+                  <span className="text-white/90 font-medium">Technologies</span>
+                </nav>
+                <h1 className="text-2xl lg:text-3xl xl:text-4xl font-bold text-white leading-tight tracking-tight">
+                  Technologies We Work With
+                </h1>
+                <p className="mt-4 text-sm lg:text-base text-white/70 leading-relaxed max-w-2xl text-justify">
+                  We leverage a curated, production-proven technology stack spanning{" "}
+                  <strong className="text-white">AI, cloud, data, and enterprise platforms</strong>{" "}
+                  to deliver scalable, secure, and high-performance solutions.
+                </p>
+                <p className="mt-2 text-sm text-white/60 leading-relaxed max-w-2xl text-justify">
+                  Every tool in our ecosystem is selected for real-world reliability, deep integration
+                  capabilities, and alignment with industry best practices — enabling faster delivery
+                  and long-term maintainability.
+                </p>
+              </div>
+
+              {/* Right — technology highlights */}
+              <div className="lg:col-span-2 border-l-2 border-[hsl(195,100%,55%)] pl-5 animate-fade-in">
+                <h2 className="text-xs font-semibold uppercase tracking-widest text-[hsl(195,100%,55%)] mb-3">
+                  What We Cover
+                </h2>
+                <ul className="space-y-2">
+                  {techHighlights.map((item) => (
+                    <li key={item} className="flex items-start gap-2 text-sm text-white/90">
+                      <ChevronRight className="w-3.5 h-3.5 mt-0.5 text-[hsl(195,100%,55%)] shrink-0" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Category grid — same pattern as Solutions */}
         <section className="py-10 lg:py-14">
           <div className="container mx-auto px-6 lg:px-12">
