@@ -11,7 +11,14 @@ import analyticsDashBiz from "@/assets/solutions/analytics-dashboard-biz.jpg";
 import securityBiz from "@/assets/solutions/security-biz.jpg";
 import devopsBiz from "@/assets/solutions/devops-biz.jpg";
 
-const heroImages = [aiMlHero, genAiHero, cloudMigBiz, analyticsDashBiz, securityBiz, devopsBiz];
+const heroSlides = [
+  { image: aiMlHero, caption: "AI & Machine Learning" },
+  { image: genAiHero, caption: "Generative AI" },
+  { image: cloudMigBiz, caption: "Cloud Services" },
+  { image: analyticsDashBiz, caption: "Data & Analytics" },
+  { image: securityBiz, caption: "Cybersecurity" },
+  { image: devopsBiz, caption: "DevOps & SRE" },
+];
 
 const highlights = [
   "AI & Machine Learning Solutions",
