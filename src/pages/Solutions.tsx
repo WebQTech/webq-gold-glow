@@ -1,8 +1,29 @@
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight, CheckCircle2, Code2, BarChart3, Brain, Cloud, GitBranch, TestTube, Shield, Headphones, Building2, Database, LucideIcon } from "lucide-react";
 import { Footer } from "@/components/Footer";
 import { solutionsData } from "@/data/solutionsData";
 import { HoverCard, HoverCardTrigger, HoverCardContent } from "@/components/ui/hover-card";
+
+import aiMlHero from "@/assets/solutions/ai-ml-hero-1.jpg";
+import cloudMigBiz from "@/assets/solutions/cloud-migration-biz.jpg";
+import devopsBiz from "@/assets/solutions/devops-biz.jpg";
+import securityBiz from "@/assets/solutions/security-biz.jpg";
+import analyticsDashBiz from "@/assets/solutions/analytics-dashboard-biz.jpg";
+import customAppBiz from "@/assets/solutions/custom-app-biz.jpg";
+import erpBiz from "@/assets/solutions/erp-biz.jpg";
+import dbAdminBiz from "@/assets/solutions/db-admin-biz.jpg";
+
+const heroImages = [
+  { src: aiMlHero, label: "AI & Machine Learning" },
+  { src: cloudMigBiz, label: "Cloud Services" },
+  { src: devopsBiz, label: "DevOps & SRE" },
+  { src: securityBiz, label: "Security" },
+  { src: analyticsDashBiz, label: "Analytics & Data" },
+  { src: customAppBiz, label: "App Development" },
+  { src: erpBiz, label: "Enterprise Solutions" },
+  { src: dbAdminBiz, label: "Databases" },
+];
 
 const solutionCategories: { title: string; icon: LucideIcon; items: string[] }[] = [
   {
