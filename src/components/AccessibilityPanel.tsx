@@ -27,13 +27,15 @@ const fontSizeOptions: { value: FontSize; label: string }[] = [
 export const AccessibilityPanel = () => {
   const { isHighContrast, toggleHighContrast } = useHighContrast();
   const { fontSize, setFontSize, resetFontSize } = useFontSize();
+  const { reducedMotion, toggleReducedMotion } = useReducedMotion();
 
   const resetAll = () => {
     if (isHighContrast) toggleHighContrast();
+    if (reducedMotion) toggleReducedMotion();
     resetFontSize();
   };
 
-  const hasCustomSettings = isHighContrast || fontSize !== "medium";
+  const hasCustomSettings = isHighContrast || fontSize !== "medium" || reducedMotion;
 
   return (
     <TooltipProvider>
