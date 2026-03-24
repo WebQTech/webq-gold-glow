@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { Footer } from "@/components/Footer";
 import { industriesData, getAllIndustryCategories } from "@/data/industriesData";
-import { motion } from "framer-motion";
 import { HoverCard, HoverCardTrigger, HoverCardContent } from "@/components/ui/hover-card";
 
 const industryCategories = getAllIndustryCategories().map(category => ({
@@ -14,17 +13,14 @@ const Industries = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-primary/5 to-background">
       <main id="main-content" className="focus:outline-none" tabIndex={-1}>
-        {/* Category grid — same pattern as Solutions */}
+        {/* Category grid */}
         <section className="py-10 lg:py-14">
           <div className="container mx-auto px-6 lg:px-12">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {industryCategories.map((category, idx) => (
-                <motion.div
+              {industryCategories.map((category) => (
+                <div
                   key={category.title}
-                  initial={{ opacity: 0, y: 16 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.3, delay: idx * 0.04 }}
-                  className="rounded-lg border border-border bg-card p-5 hover:shadow-md transition-shadow"
+                  className="rounded-lg border border-border bg-card p-5 hover:shadow-md transition-shadow animate-fade-in"
                 >
                   <h3 className="text-sm font-bold text-foreground uppercase tracking-wider mb-4 pb-2 border-b border-border">
                     {category.title}
@@ -76,7 +72,7 @@ const Industries = () => {
                       );
                     })}
                   </ul>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
