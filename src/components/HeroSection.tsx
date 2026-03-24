@@ -81,7 +81,7 @@ export const HeroSection = () => {
         <div className="container mx-auto px-6 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 lg:gap-10 items-end">
             {/* Left — headline & description */}
-            <div className="lg:col-span-3">
+            <div className="lg:col-span-3 lg:pt-8">
 
               <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-[3.5rem] font-bold text-white leading-[1.1] tracking-tight">
                 Built for Enterprise.{" "}
