@@ -125,6 +125,20 @@ export const HeroSection = () => {
               </motion.span>
             </AnimatePresence>
             <div className="flex gap-2">
+              {heroSlides.map((_, i) => (
+                <button
+                  key={i}
+                  onClick={() => setCurrent(i)}
+                  className={`h-1.5 rounded-full transition-all duration-300 ${
+                    i === current
+                      ? "bg-[hsl(195,100%,55%)] w-6"
+                      : "bg-white/30 w-1.5 hover:bg-white/50"
+                  }`}
+                  aria-label={`Go to slide ${i + 1}`}
+                />
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>
