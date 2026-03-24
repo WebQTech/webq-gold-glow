@@ -1,6 +1,7 @@
-import { Accessibility, Contrast, Type, RotateCcw } from "lucide-react";
+import { Accessibility, Contrast, Type, RotateCcw, MonitorOff } from "lucide-react";
 import { useHighContrast } from "@/hooks/useHighContrast";
 import { useFontSize, FontSize } from "@/hooks/useFontSize";
+import { useReducedMotion } from "@/hooks/useReducedMotion";
 import {
   Popover,
   PopoverContent,
