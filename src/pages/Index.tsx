@@ -5,6 +5,7 @@ import { MissionBanner } from "@/components/MissionBanner";
 import { TechnologiesSummary } from "@/components/TechnologiesSummary";
 import { ServicesSummary } from "@/components/ServicesSummary";
 import { IndustriesSummary } from "@/components/IndustriesSummary";
+import { UseCasesSummary } from "@/components/UseCasesSummary";
 import { InsightsSummary } from "@/components/InsightsSummary";
 import { CareersSummary } from "@/components/CareersSummary";
 import { AboutSection } from "@/components/AboutSection";
