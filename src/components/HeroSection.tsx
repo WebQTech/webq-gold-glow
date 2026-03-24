@@ -31,6 +31,7 @@ const highlights = [
 
 export const HeroSection = () => {
   const [current, setCurrent] = useState(0);
+  const { reducedMotion } = useReducedMotion();
 
   useEffect(() => {
     const timer = setInterval(() => {
