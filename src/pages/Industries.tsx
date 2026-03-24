@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, CheckCircle2 } from "lucide-react";
+import { ArrowRight, CheckCircle2, ChevronRight } from "lucide-react";
 import { Footer } from "@/components/Footer";
 import { industriesData, getAllIndustryCategories } from "@/data/industriesData";
 import { HoverCard, HoverCardTrigger, HoverCardContent } from "@/components/ui/hover-card";
@@ -9,26 +9,96 @@ const industryCategories = getAllIndustryCategories().map(category => ({
   items: industriesData.filter(i => i.category === category).map(i => i.slug),
 }));
 
+const industryHighlights = [
+  "AI-Centric Digital Innovation & Transformation",
+  "Banking, FinTech & Financial Services",
+  "Public Sector & Government Consulting",
+  "Healthcare, EdTech & Life Sciences",
+  "Retail, E-commerce & Consumer Markets",
+  "Manufacturing, Logistics & Supply Chain",
+];
+
 const Industries = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-primary/5 to-background">
       <main id="main-content" className="focus:outline-none" tabIndex={-1}>
-        {/* Category grid */}
+
+        {/* Hero — dark gradient matching Services page */}
+        <section
+          className="py-8 lg:py-10"
+          style={{
+            background: `linear-gradient(135deg, hsl(215 50% 10%) 0%, hsl(210 100% 22%) 60%, hsl(195 80% 30%) 100%)`,
+          }}
+        >
+          <div className="container mx-auto px-6 lg:px-12">
+            <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 lg:gap-8 items-center">
+              {/* Left — headline & description */}
+              <div className="lg:col-span-3 animate-fade-in">
+                <nav className="flex items-center gap-1.5 text-xs text-white/50 mb-3">
+                  <Link to="/" className="hover:text-white/80 transition-colors">Home</Link>
+                  <ChevronRight className="w-3 h-3" />
+                  <span className="text-white/90 font-medium">Industries</span>
+                </nav>
+                <h1 className="text-2xl lg:text-3xl xl:text-4xl font-bold text-white leading-tight tracking-tight">
+                  Industries We Serve
+                </h1>
+                <p className="mt-4 text-sm lg:text-base text-white/70 leading-relaxed max-w-2xl text-justify">
+                  We deliver industry-tested technology solutions across a wide range of sectors,
+                  combining deep domain expertise with cutting-edge AI, cloud, and enterprise
+                  capabilities to address the unique challenges each industry&nbsp;faces.
+                </p>
+                <p className="mt-2 text-sm text-white/60 leading-relaxed max-w-2xl text-justify">
+                  From regulated environments like banking and healthcare to fast-moving sectors
+                  like retail and logistics, our solutions are tailored for measurable impact
+                  and long-term operational&nbsp;excellence.
+                </p>
+              </div>
+
+              {/* Right — industry highlights */}
+              <div className="lg:col-span-2 border-l-2 border-[hsl(195,100%,55%)] pl-5 animate-fade-in">
+                <p className="text-xs font-semibold uppercase tracking-[0.15em] text-white/50 mb-3">
+                  Sectors We Cover
+                </p>
+                <ul className="space-y-2">
+                  {industryHighlights.map((item) => (
+                    <li
+                      key={item}
+                      className="flex items-start gap-2 text-sm text-white/90"
+                    >
+                      <ChevronRight className="w-3.5 h-3.5 mt-0.5 text-[hsl(195,100%,55%)] shrink-0" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Section title + divider */}
         <section className="py-10 lg:py-14">
           <div className="container mx-auto px-6 lg:px-12">
+            <div className="flex items-center gap-4 mb-8">
+              <h2 className="text-lg font-bold text-foreground uppercase tracking-wider whitespace-nowrap">
+                Industry Categories
+              </h2>
+              <div className="h-px flex-1 bg-border" />
+            </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {industryCategories.map((category) => (
                 <div
                   key={category.title}
-                  className="rounded-lg border border-border bg-card p-5 hover:shadow-md transition-shadow animate-fade-in"
+                  className="group rounded-xl border border-border bg-card overflow-hidden hover:border-primary/30 hover:shadow-lg transition-all duration-300 animate-fade-in"
                 >
-                  <h3 className="text-sm font-bold text-foreground uppercase tracking-wider mb-4 pb-2 border-b border-border">
-                    {category.title}
-                    <span className="ml-2 text-xs font-normal text-muted-foreground lowercase tracking-normal">
-                      {category.items.length} industries
-                    </span>
-                  </h3>
-                  <ul className="space-y-1.5">
+                  <div className="px-5 pt-5 pb-3 border-b border-border/50 bg-gradient-to-r from-primary/[0.03] to-transparent">
+                    <h3 className="text-sm font-bold text-foreground uppercase tracking-wider">
+                      {category.title}
+                      <span className="ml-2 text-xs font-normal text-muted-foreground lowercase tracking-normal">
+                        {category.items.length} industries
+                      </span>
+                    </h3>
+                  </div>
+                  <ul className="px-5 py-4 space-y-1.5">
                     {category.items.map((slug) => {
                       const industry = industriesData.find(i => i.slug === slug);
                       if (!industry) return null;
@@ -39,16 +109,16 @@ const Industries = () => {
                             <HoverCardTrigger asChild>
                               <Link
                                 to={`/industries/${slug}`}
-                                className="group flex items-center gap-2 text-base leading-normal text-primary hover:text-primary/80 transition-colors"
+                                className="group/link flex items-center gap-2 text-base leading-normal text-primary hover:text-primary/80 transition-colors py-0.5"
                               >
-                                <Icon className="w-4 h-4 text-primary/70 shrink-0" />
-                                <ArrowRight className="w-3 h-3 opacity-0 -ml-5 group-hover:opacity-100 group-hover:ml-0 transition-all duration-200" />
-                                {industry.name}
+                                <Icon className="w-3.5 h-3.5 text-muted-foreground group-hover/link:text-primary transition-colors shrink-0" />
+                                <span>{industry.name}</span>
                                 {industry.isNew && (
                                   <span className="px-1.5 py-0.5 text-[10px] font-bold uppercase tracking-wider bg-primary text-primary-foreground rounded-full ml-1">
                                     New
                                   </span>
                                 )}
+                                <ArrowRight className="w-3 h-3 opacity-0 -ml-2 group-hover/link:opacity-100 group-hover/link:ml-0 transition-all duration-200" />
                               </Link>
                             </HoverCardTrigger>
                             <HoverCardContent side="right" align="start" className="w-80 p-4">
@@ -78,18 +148,23 @@ const Industries = () => {
           </div>
         </section>
 
-        {/* CTA */}
-        <section className="py-10 lg:py-14 bg-primary/5">
+        {/* CTA — plum→gold gradient */}
+        <section
+          className="py-16 lg:py-[120px]"
+          style={{
+            background: `linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(43 74% 58%) 100%)`,
+          }}
+        >
           <div className="container mx-auto px-6 lg:px-12 text-center">
-            <h2 className="text-2xl lg:text-3xl font-bold text-foreground">
-              Ready to Transform Your Industry?
+            <h2 className="text-3xl lg:text-5xl font-bold text-white italic font-serif">
+              Transform Your Industry.
             </h2>
-            <p className="mt-3 text-base text-muted-foreground max-w-2xl mx-auto">
+            <p className="mt-4 text-lg text-white/80 max-w-2xl mx-auto">
               Let&apos;s discuss how our industry-specific expertise can help solve your unique challenges.
             </p>
             <Link
               to="/contact"
-              className="mt-6 inline-flex items-center gap-2 btn-primary"
+              className="mt-8 inline-flex items-center gap-2 bg-white text-primary font-semibold px-12 py-4 rounded-full hover:bg-white/90 transition-colors"
             >
               Get Started
               <ArrowRight className="w-4 h-4" />

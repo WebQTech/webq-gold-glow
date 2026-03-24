@@ -1,28 +1,16 @@
-import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight, CheckCircle2, Code2, BarChart3, Brain, Cloud, GitBranch, TestTube, Shield, Headphones, Building2, Database, LucideIcon } from "lucide-react";
+import { ArrowRight, CheckCircle2, Code2, BarChart3, Brain, Cloud, GitBranch, TestTube, Shield, Headphones, Building2, Database, LucideIcon, ChevronRight } from "lucide-react";
 import { Footer } from "@/components/Footer";
 import { solutionsData } from "@/data/solutionsData";
 import { HoverCard, HoverCardTrigger, HoverCardContent } from "@/components/ui/hover-card";
 
-import aiMlHero from "@/assets/solutions/ai-ml-hero-1.jpg";
-import cloudMigBiz from "@/assets/solutions/cloud-migration-biz.jpg";
-import devopsBiz from "@/assets/solutions/devops-biz.jpg";
-import securityBiz from "@/assets/solutions/security-biz.jpg";
-import analyticsDashBiz from "@/assets/solutions/analytics-dashboard-biz.jpg";
-import customAppBiz from "@/assets/solutions/custom-app-biz.jpg";
-import erpBiz from "@/assets/solutions/erp-biz.jpg";
-import dbAdminBiz from "@/assets/solutions/db-admin-biz.jpg";
-
-const heroImages = [
-  { src: aiMlHero, label: "AI & Machine Learning" },
-  { src: cloudMigBiz, label: "Cloud Services" },
-  { src: devopsBiz, label: "DevOps & SRE" },
-  { src: securityBiz, label: "Security" },
-  { src: analyticsDashBiz, label: "Analytics & Data" },
-  { src: customAppBiz, label: "App Development" },
-  { src: erpBiz, label: "Enterprise Solutions" },
-  { src: dbAdminBiz, label: "Databases" },
+const solutionHighlights = [
+  "AI & Machine Learning Solutions",
+  "Cloud Migration & Infrastructure",
+  "Enterprise Application Management",
+  "Data Engineering & Analytics",
+  "DevOps & Site Reliability Engineering",
+  "Cybersecurity & Compliance",
 ];
 
 const solutionCategories: { title: string; icon: LucideIcon; items: string[] }[] = [
@@ -79,56 +67,72 @@ const solutionCategories: { title: string; icon: LucideIcon; items: string[] }[]
 ];
 
 const Solutions = () => {
-  const [currentImage, setCurrentImage] = useState(0);
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentImage((prev) => (prev + 1) % heroImages.length);
-    }, 5000);
-    return () => clearInterval(timer);
-  }, []);
-
   return (
     <div className="min-h-screen bg-gradient-to-b from-primary/5 to-background">
       <main id="main-content" className="focus:outline-none" tabIndex={-1}>
 
-        {/* Hero image carousel */}
-        <section className="relative w-full h-[320px] lg:h-[400px] overflow-hidden">
-          {heroImages.map((img, i) => (
-            <img
-              key={i}
-              src={img.src}
-              alt={img.label}
-              className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
-                i === currentImage ? "opacity-100" : "opacity-0"
-              }`}
-            />
-          ))}
-          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
-          <div className="absolute bottom-6 left-0 right-0 flex justify-center gap-2">
-            {heroImages.map((_, i) => (
-              <button
-                key={i}
-                onClick={() => setCurrentImage(i)}
-                className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                  i === currentImage
-                    ? "bg-primary w-6"
-                    : "bg-primary/30 hover:bg-primary/50"
-                }`}
-                aria-label={`Show ${heroImages[i].label}`}
-              />
-            ))}
-          </div>
-          <div className="absolute bottom-12 left-0 right-0 text-center">
-            <span className="text-sm font-medium text-primary-foreground bg-primary/70 backdrop-blur-sm px-4 py-1.5 rounded-full">
-              {heroImages[currentImage].label}
-            </span>
+        {/* Hero — dark gradient matching Services page */}
+        <section
+          className="py-8 lg:py-10"
+          style={{
+            background: `linear-gradient(135deg, hsl(215 50% 10%) 0%, hsl(210 100% 22%) 60%, hsl(195 80% 30%) 100%)`,
+          }}
+        >
+          <div className="container mx-auto px-6 lg:px-12">
+            <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 lg:gap-8 items-center">
+              {/* Left — headline & description */}
+              <div className="lg:col-span-3 animate-fade-in">
+                <nav className="flex items-center gap-1.5 text-xs text-white/50 mb-3">
+                  <Link to="/" className="hover:text-white/80 transition-colors">Home</Link>
+                  <ChevronRight className="w-3 h-3" />
+                  <span className="text-white/90 font-medium">Solutions</span>
+                </nav>
+                <h1 className="text-2xl lg:text-3xl xl:text-4xl font-bold text-white leading-tight tracking-tight">
+                  Technology Solutions & Products
+                </h1>
+                <p className="mt-4 text-sm lg:text-base text-white/70 leading-relaxed max-w-2xl text-justify">
+                  From ready-to-deploy products to custom solutions — we deliver end-to-end
+                  technology for every business need. Our ten core solution areas cover AI,
+                  cloud, security, DevOps, and more, each powered by industry-tested
+                  frameworks and modern engineering&nbsp;practices.
+                </p>
+                <p className="mt-2 text-sm text-white/60 leading-relaxed max-w-2xl text-justify">
+                  Every solution is designed for enterprise scale, built with measurable
+                  outcomes in mind, and supported by our team of domain experts across
+                  industries and technology&nbsp;stacks.
+                </p>
+              </div>
+
+              {/* Right — solution highlights */}
+              <div className="lg:col-span-2 border-l-2 border-[hsl(195,100%,55%)] pl-5 animate-fade-in">
+                <p className="text-xs font-semibold uppercase tracking-[0.15em] text-white/50 mb-3">
+                  What We Deliver
+                </p>
+                <ul className="space-y-2">
+                  {solutionHighlights.map((item) => (
+                    <li
+                      key={item}
+                      className="flex items-start gap-2 text-sm text-white/90"
+                    >
+                      <ChevronRight className="w-3.5 h-3.5 mt-0.5 text-[hsl(195,100%,55%)] shrink-0" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
           </div>
         </section>
 
-        {/* Category grid */}
+        {/* Section title + divider */}
         <section className="py-10 lg:py-14">
           <div className="container mx-auto px-6 lg:px-12">
+            <div className="flex items-center gap-4 mb-8">
+              <h2 className="text-lg font-bold text-foreground uppercase tracking-wider whitespace-nowrap">
+                Our Solution Categories
+              </h2>
+              <div className="h-px flex-1 bg-border" />
+            </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {solutionCategories.map((category) => {
                 const CategoryIcon = category.icon;
@@ -137,21 +141,17 @@ const Solutions = () => {
                     key={category.title}
                     className="group rounded-xl border border-border bg-card overflow-hidden hover:border-primary/30 hover:shadow-lg transition-all duration-300 animate-fade-in"
                   >
-                    {/* Card header with gradient accent */}
                     <div className="px-5 pt-5 pb-3 border-b border-border/50 bg-gradient-to-r from-primary/[0.03] to-transparent">
                       <div className="flex items-center gap-3">
                         <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-primary transition-colors duration-300">
                           <CategoryIcon className="w-4.5 h-4.5 text-primary group-hover:text-primary-foreground transition-colors duration-300" />
                         </div>
-                        <div>
-                          <h3 className="text-sm font-bold text-foreground uppercase tracking-wider">
-                            {category.title}
-                          </h3>
-                        </div>
+                        <h3 className="text-sm font-bold text-foreground uppercase tracking-wider">
+                          {category.title}
+                        </h3>
                       </div>
                     </div>
 
-                    {/* Solution links */}
                     <ul className="px-5 py-4 space-y-1.5">
                       {category.items.map((slug) => {
                         const solution = solutionsData.find((s) => s.slug === slug);
@@ -203,18 +203,23 @@ const Solutions = () => {
           </div>
         </section>
 
-        {/* CTA */}
-        <section className="py-10 lg:py-14 bg-primary/5">
+        {/* CTA — plum→gold gradient */}
+        <section
+          className="py-16 lg:py-[120px]"
+          style={{
+            background: `linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(43 74% 58%) 100%)`,
+          }}
+        >
           <div className="container mx-auto px-6 lg:px-12 text-center">
-            <h2 className="text-2xl lg:text-3xl font-bold text-foreground">
-              Ready to Transform Your Business?
+            <h2 className="text-3xl lg:text-5xl font-bold text-white italic font-serif">
+              Build Better.
             </h2>
-            <p className="mt-3 text-base text-muted-foreground max-w-2xl mx-auto">
+            <p className="mt-4 text-lg text-white/80 max-w-2xl mx-auto">
               Let&apos;s discuss how our solutions can help you achieve your technology goals.
             </p>
             <Link
               to="/contact"
-              className="mt-6 inline-flex items-center gap-2 btn-primary"
+              className="mt-8 inline-flex items-center gap-2 bg-white text-primary font-semibold px-12 py-4 rounded-full hover:bg-white/90 transition-colors"
             >
               Contact Us Today
               <ArrowRight className="w-4 h-4" />

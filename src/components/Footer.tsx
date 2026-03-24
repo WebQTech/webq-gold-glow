@@ -3,17 +3,32 @@ import { Link } from "react-router-dom";
 import logo from "@/assets/logo.png";
 
 const footerLinks = {
+  Solutions: [
+    { label: "AI & Machine Learning", href: "/solutions/ai-ml-solutions" },
+    { label: "Cloud Services", href: "/solutions/cloud-migration" },
+    { label: "DevOps & SRE", href: "/solutions/devops-sre" },
+    { label: "Security", href: "/solutions/data-security" },
+    { label: "All Solutions", href: "/solutions" },
+  ],
+  Services: [
+    { label: "IT Solutions", href: "/solutions" },
+    { label: "Support & Consulting", href: "/services" },
+    { label: "Talent Management", href: "/services" },
+    { label: "Government Consulting", href: "/services" },
+    { label: "All Services", href: "/services" },
+  ],
   Company: [
     { label: "About Us", href: "/about" },
     { label: "Careers", href: "/careers" },
+    { label: "Industries", href: "/industries" },
     { label: "News", href: "/news" },
     { label: "Contact", href: "/contact" },
   ],
   Resources: [
-    { label: "Case Studies", href: "/insights" },
+    { label: "Technologies", href: "/technologies" },
     { label: "Insights", href: "/insights" },
+    { label: "Case Studies", href: "/insights" },
     { label: "Blog", href: "/insights" },
-    { label: "Events", href: "/news" },
   ],
 };
 
@@ -21,10 +36,10 @@ export const Footer = () => {
   return (
     <footer className="bg-[hsl(215,50%,8%)] text-white">
       <div className="container mx-auto px-6 lg:px-12 py-12">
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
           {/* Brand Column */}
           <div className="col-span-2 md:col-span-3 lg:col-span-1 mb-8 lg:mb-0">
-            <a href="#" className="flex items-center gap-3 mb-6 group">
+            <Link to="/" className="flex items-center gap-3 mb-6 group">
               <img src={logo} alt="WebQ Technologies" className="h-10 w-auto transition-all duration-300 group-hover:scale-110 group-hover:drop-shadow-[0_0_12px_hsl(var(--primary)/0.6)]" />
               <div className="flex flex-col">
                 <span className="font-montserrat text-lg font-bold tracking-tight leading-tight">
@@ -32,7 +47,7 @@ export const Footer = () => {
                 </span>
                 <span className="text-xs text-white/50 font-medium tracking-wide">Innovate. Transform. Succeed.</span>
               </div>
-            </a>
+            </Link>
             <p className="text-sm text-white/50 max-w-xs leading-relaxed">
               Enterprise technology solutions that transform businesses and drive innovation.
             </p>
@@ -56,7 +71,7 @@ export const Footer = () => {
             </div>
           </div>
 
-          {/* Other Link Columns */}
+          {/* Link Columns */}
           {Object.entries(footerLinks).map(([title, links]) => (
             <div key={title}>
               <h4 className="text-sm font-semibold uppercase tracking-wider text-white/40 mb-4">
