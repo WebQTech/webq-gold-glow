@@ -30,7 +30,12 @@ const highlights = [
 
 export const HeroSection = () => {
   const [current, setCurrent] = useState(0);
+  const [hasMounted, setHasMounted] = useState(false);
   const { reducedMotion } = useReducedMotion();
+
+  useEffect(() => {
+    setHasMounted(true);
+  }, []);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -40,13 +45,13 @@ export const HeroSection = () => {
   }, []);
 
   return (
-    <section className="relative h-[75vh] min-h-[480px] max-h-[700px] overflow-hidden">
+    <section className="relative h-[75vh] min-h-[480px] max-h-[700px] overflow-hidden bg-[hsl(215,50%,8%)]">
       {/* Full-bleed background image carousel */}
       <AnimatePresence mode="sync">
         <motion.div
           key={current}
           className="absolute inset-0 z-0 origin-top"
-          initial={{ opacity: reducedMotion ? 1 : 0, scale: 1 }}
+          initial={{ opacity: (!hasMounted || reducedMotion) ? 1 : 0, scale: 1 }}
           animate={{ opacity: 1, scale: reducedMotion ? 1 : 1.06 }}
           exit={{ opacity: reducedMotion ? 1 : 0 }}
           transition={
@@ -63,6 +68,8 @@ export const HeroSection = () => {
             alt=""
             className="w-full h-full object-cover"
             aria-hidden="true"
+            loading={current === 0 ? "eager" : "lazy"}
+            fetchPriority={current === 0 ? "high" : undefined}
           />
         </motion.div>
       </AnimatePresence>
