@@ -47,12 +47,12 @@ export const HeroSection = () => {
           <motion.div
             key={current}
             className="absolute inset-0 z-0"
-            initial={{ opacity: 0, scale: 1.05 }}
-            animate={{ opacity: 1, scale: 1.15 }}
+            initial={{ opacity: 0, scale: 1.01 }}
+            animate={{ opacity: 1, scale: 1.06 }}
             exit={{ opacity: 0 }}
             transition={{
               opacity: { duration: 1, ease: "easeInOut" },
-              scale: { duration: 8, ease: "linear" },
+              scale: { duration: 5, ease: "linear" },
             }}
           >
             <img
@@ -66,9 +66,9 @@ export const HeroSection = () => {
 
         {/* Subtle bottom fade into text area */}
         <div
-          className="absolute inset-x-0 bottom-0 h-32 z-[1]"
+          className="absolute inset-x-0 bottom-0 h-24 z-[1]"
           style={{
-            background: `linear-gradient(to top, hsl(215 50% 8%) 0%, transparent 100%)`,
+            background: `linear-gradient(to top, hsl(215 50% 8% / 0.72) 0%, transparent 100%)`,
           }}
         />
 
