@@ -67,12 +67,12 @@ export const HeroSection = () => {
         </motion.div>
       </AnimatePresence>
 
-      {/* Dark overlay for text readability */}
-      <div className="absolute inset-0 z-[1] bg-[hsl(215,50%,8%)]/60" />
+      {/* Dark overlay for text readability — lighter for image clarity */}
+      <div className="absolute inset-0 z-[1] bg-[hsl(215,50%,8%)]/35" />
       <div
-        className="absolute inset-x-0 bottom-0 h-40 z-[1]"
+        className="absolute inset-x-0 bottom-0 h-48 z-[1]"
         style={{
-          background: "linear-gradient(to top, hsl(215 50% 8% / 0.85) 0%, transparent 100%)",
+          background: "linear-gradient(to top, hsl(215 50% 8% / 0.7) 0%, transparent 100%)",
         }}
       />
 
