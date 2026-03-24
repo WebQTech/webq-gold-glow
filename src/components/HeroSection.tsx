@@ -40,7 +40,7 @@ export const HeroSection = () => {
   }, []);
 
   return (
-    <section className="relative h-[75vh] min-h-[480px] max-h-[700px] overflow-hidden">
+    <section className="relative h-[75vh] min-h-[480px] max-h-[700px] overflow-hidden bg-[hsl(215,50%,8%)]">
       {/* Full-bleed background image carousel */}
       <AnimatePresence mode="sync">
         <motion.div
