@@ -53,7 +53,7 @@ export const HeroSection = () => {
             transition={{ duration: 1, ease: "easeInOut" }}
           >
             <img
-              src={heroImages[current]}
+              src={heroSlides[current].image}
               alt=""
               className="w-full h-full object-cover"
               aria-hidden="true"
