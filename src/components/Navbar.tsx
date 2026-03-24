@@ -50,7 +50,7 @@ export const Navbar = () => {
                 to="/careers"
                 className="text-xs font-medium text-muted-foreground hover:text-primary transition-colors px-3 py-1 flex items-center gap-1 no-underline"
               >
-                Careers <ChevronDown size={12} />
+                Careers
               </Link>
               <Link
                 to="/news"
