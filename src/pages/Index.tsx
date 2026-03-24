@@ -25,6 +25,7 @@ const Index = () => {
         <TechnologiesSummary />
         <ServicesSummary />
         <IndustriesSummary />
+        <UseCasesSummary />
         <InsightsSummary />
         <AboutSection />
         <CareersSummary />
