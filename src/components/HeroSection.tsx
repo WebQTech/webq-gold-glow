@@ -11,7 +11,14 @@ import analyticsDashBiz from "@/assets/solutions/analytics-dashboard-biz.jpg";
 import securityBiz from "@/assets/solutions/security-biz.jpg";
 import devopsBiz from "@/assets/solutions/devops-biz.jpg";
 
-const heroImages = [aiMlHero, genAiHero, cloudMigBiz, analyticsDashBiz, securityBiz, devopsBiz];
+const heroSlides = [
+  { image: aiMlHero, caption: "AI & Machine Learning" },
+  { image: genAiHero, caption: "Generative AI" },
+  { image: cloudMigBiz, caption: "Cloud Services" },
+  { image: analyticsDashBiz, caption: "Data & Analytics" },
+  { image: securityBiz, caption: "Cybersecurity" },
+  { image: devopsBiz, caption: "DevOps & SRE" },
+];
 
 const highlights = [
   "AI & Machine Learning Solutions",
@@ -27,7 +34,7 @@ export const HeroSection = () => {
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % heroImages.length);
+      setCurrent((prev) => (prev + 1) % heroSlides.length);
     }, 5000);
     return () => clearInterval(timer);
   }, []);
@@ -46,7 +53,7 @@ export const HeroSection = () => {
             transition={{ duration: 1, ease: "easeInOut" }}
           >
             <img
-              src={heroImages[current]}
+              src={heroSlides[current].image}
               alt=""
               className="w-full h-full object-cover"
               aria-hidden="true"
@@ -62,18 +69,32 @@ export const HeroSection = () => {
           }}
         />
 
-        {/* Carousel dot indicators — overlaid on image */}
-        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-[2] flex gap-2">
-          {heroImages.map((_, i) => (
-            <button
-              key={i}
-              onClick={() => setCurrent(i)}
-              className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                i === current ? "bg-[hsl(195,100%,55%)] w-5" : "bg-white/40 hover:bg-white/60"
-              }`}
-              aria-label={`Go to slide ${i + 1}`}
-            />
-          ))}
+        {/* Caption + dot indicators */}
+        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-[2] flex flex-col items-center gap-3">
+          <AnimatePresence mode="wait">
+            <motion.span
+              key={current}
+              initial={{ opacity: 0, y: 6 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -6 }}
+              transition={{ duration: 0.4 }}
+              className="px-5 py-1.5 rounded-full bg-white/90 text-[hsl(210,100%,35%)] text-sm font-semibold shadow-md backdrop-blur-sm"
+            >
+              {heroSlides[current].caption}
+            </motion.span>
+          </AnimatePresence>
+          <div className="flex gap-2">
+            {heroSlides.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => setCurrent(i)}
+                className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                  i === current ? "bg-[hsl(195,100%,55%)] w-5" : "bg-white/40 hover:bg-white/60"
+                }`}
+                aria-label={`Go to slide ${i + 1}`}
+              />
+            ))}
+          </div>
         </div>
       </div>
 
