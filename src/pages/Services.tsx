@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import { ArrowRight, CheckCircle2, Headphones, UserCheck, Users, Monitor, Landmark, LucideIcon, Settings, ChevronRight } from "lucide-react";
 import { Footer } from "@/components/Footer";
 import { getServicesPageCategories, getServicesByCategory } from "@/data/servicesData";
-import { motion } from "framer-motion";
 import { HoverCard, HoverCardTrigger, HoverCardContent } from "@/components/ui/hover-card";
 
 const categoryIcons: Record<string, LucideIcon> = {
@@ -51,26 +50,16 @@ const Services = () => {
           <div className="container mx-auto px-6 lg:px-12">
             <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 lg:gap-8 items-center">
               {/* Left — headline & description */}
-              <div className="lg:col-span-3">
+              <div className="lg:col-span-3 animate-fade-in">
                 <nav className="flex items-center gap-1.5 text-xs text-white/50 mb-3">
                   <Link to="/" className="hover:text-white/80 transition-colors">Home</Link>
                   <ChevronRight className="w-3 h-3" />
                   <span className="text-white/90 font-medium">Services</span>
                 </nav>
-                <motion.h1
-                  initial={{ opacity: 0, y: 12 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.4 }}
-                  className="text-2xl lg:text-3xl xl:text-4xl font-bold text-white leading-tight tracking-tight"
-                >
+                <h1 className="text-2xl lg:text-3xl xl:text-4xl font-bold text-white leading-tight tracking-tight">
                   IT &amp; Professional Consulting Services
-                </motion.h1>
-                <motion.p
-                  initial={{ opacity: 0, y: 12 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.4, delay: 0.05 }}
-                  className="mt-4 text-sm lg:text-base text-white/70 leading-relaxed max-w-2xl text-justify"
-                >
+                </h1>
+                <p className="mt-4 text-sm lg:text-base text-white/70 leading-relaxed max-w-2xl text-justify">
                   Our core IT delivery, engineering, and technology solution capabilities are detailed
                   under{" "}
                   <Link to="/solutions" className="text-white font-semibold hover:text-[hsl(195,100%,55%)] transition-colors">
@@ -79,44 +68,31 @@ const Services = () => {
                   . In addition, we provide a full suite of{" "}
                   <strong className="text-white">IT-Enabled and Professional Support Services</strong>{" "}
                   designed to strengthen, extend, and complement our technology offerings.
-                </motion.p>
-                <motion.p
-                  initial={{ opacity: 0, y: 12 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.4, delay: 0.1 }}
-                  className="mt-2 text-sm text-white/60 leading-relaxed max-w-2xl text-justify"
-                >
+                </p>
+                <p className="mt-2 text-sm text-white/60 leading-relaxed max-w-2xl text-justify">
                   Together, these services ensure organizations receive seamless, end-to-end support
                   across both technology and operational domains — serving private enterprises and
                   public sector agencies at every level of&nbsp;government.
-                </motion.p>
+                </p>
               </div>
 
               {/* Right — service highlights */}
-              <motion.div
-                initial={{ opacity: 0, y: 16 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: 0.1 }}
-                className="lg:col-span-2 border-l-2 border-[hsl(195,100%,55%)] pl-5"
-              >
+              <div className="lg:col-span-2 border-l-2 border-[hsl(195,100%,55%)] pl-5 animate-fade-in">
                 <p className="text-xs font-semibold uppercase tracking-[0.15em] text-white/50 mb-3">
                   What We Cover
                 </p>
                 <ul className="space-y-2">
-                  {serviceHighlights.map((item, i) => (
-                    <motion.li
+                  {serviceHighlights.map((item) => (
+                    <li
                       key={item}
-                      initial={{ opacity: 0, x: 8 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.3, delay: 0.15 + i * 0.03 }}
                       className="flex items-start gap-2 text-sm text-white/90"
                     >
                       <ChevronRight className="w-3.5 h-3.5 mt-0.5 text-[hsl(195,100%,55%)] shrink-0" />
                       <span>{item}</span>
-                    </motion.li>
+                    </li>
                   ))}
                 </ul>
-              </motion.div>
+              </div>
             </div>
           </div>
         </section>
@@ -133,12 +109,7 @@ const Services = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
               {/* IT Solutions cross-reference tile */}
-              <motion.div
-                initial={{ opacity: 0, y: 16 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.3 }}
-                className="group rounded-xl border border-border bg-card overflow-hidden hover:border-primary/30 hover:shadow-lg transition-all duration-300"
-              >
+              <div className="group rounded-xl border border-border bg-card overflow-hidden hover:border-primary/30 hover:shadow-lg transition-all duration-300 animate-fade-in">
                 <div className="px-5 pt-5 pb-3 border-b border-border/50 bg-gradient-to-r from-primary/[0.03] to-transparent">
                   <div className="flex items-center gap-3">
                     <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-primary transition-colors duration-300">
@@ -166,20 +137,17 @@ const Services = () => {
                     <ArrowRight className="w-3.5 h-3.5" />
                   </Link>
                 </div>
-              </motion.div>
+              </div>
 
               {/* Service category tiles */}
-              {categories.map((category, idx) => {
+              {categories.map((category) => {
                 const CategoryIcon = categoryIcons[category] || Headphones;
                 const services = getServicesByCategory(category);
 
                 return (
-                  <motion.div
+                  <div
                     key={category}
-                    initial={{ opacity: 0, y: 16 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.3, delay: (idx + 1) * 0.04 }}
-                    className="group rounded-xl border border-border bg-card overflow-hidden hover:border-primary/30 hover:shadow-lg transition-all duration-300"
+                    className="group rounded-xl border border-border bg-card overflow-hidden hover:border-primary/30 hover:shadow-lg transition-all duration-300 animate-fade-in"
                   >
                     <div className="px-5 pt-5 pb-3 border-b border-border/50 bg-gradient-to-r from-primary/[0.03] to-transparent">
                       <div className="flex items-center gap-3">
@@ -234,7 +202,7 @@ const Services = () => {
                         );
                       })}
                     </ul>
-                  </motion.div>
+                  </div>
                 );
               })}
             </div>

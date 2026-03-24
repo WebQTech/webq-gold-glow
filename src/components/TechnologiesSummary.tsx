@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
-import { motion } from "framer-motion";
 
 const techHighlights = [
   "React", "Angular", "Node.js", "Python", "Java", "AWS", "Azure", "GCP",
@@ -12,13 +11,7 @@ export const TechnologiesSummary = () => {
   return (
     <section className="py-14 lg:py-20 bg-background">
       <div className="container mx-auto px-6 lg:px-12">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="text-center mb-10"
-        >
+        <div className="text-center mb-10">
           <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-3">
             Technologies We Work With
           </h2>
@@ -27,15 +20,9 @@ export const TechnologiesSummary = () => {
               We leverage industry-leading tools and platforms to deliver scalable, secure, and high-performance solutions across every layer of the technology stack.
             </p>
           </div>
-        </motion.div>
+        </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.15 }}
-          className="flex flex-wrap justify-center gap-3 mb-8"
-        >
+        <div className="flex flex-wrap justify-center gap-3 mb-8">
           {techHighlights.map((tech) => (
             <span
               key={tech}
@@ -44,7 +31,7 @@ export const TechnologiesSummary = () => {
               {tech}
             </span>
           ))}
-        </motion.div>
+        </div>
 
         <div className="text-center">
           <Link

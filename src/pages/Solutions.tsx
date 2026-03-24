@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import { ArrowRight, CheckCircle2, Code2, BarChart3, Brain, Cloud, GitBranch, TestTube, Shield, Headphones, Building2, Database, LucideIcon } from "lucide-react";
 import { Footer } from "@/components/Footer";
 import { solutionsData } from "@/data/solutionsData";
-import { motion } from "framer-motion";
 import { HoverCard, HoverCardTrigger, HoverCardContent } from "@/components/ui/hover-card";
 
 const solutionCategories: { title: string; icon: LucideIcon; items: string[] }[] = [
@@ -67,15 +66,12 @@ const Solutions = () => {
         <section className="py-10 lg:py-14">
           <div className="container mx-auto px-6 lg:px-12">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {solutionCategories.map((category, idx) => {
+              {solutionCategories.map((category) => {
                 const CategoryIcon = category.icon;
                 return (
-                  <motion.div
+                  <div
                     key={category.title}
-                    initial={{ opacity: 0, y: 16 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.3, delay: idx * 0.04 }}
-                    className="group rounded-xl border border-border bg-card overflow-hidden hover:border-primary/30 hover:shadow-lg transition-all duration-300"
+                    className="group rounded-xl border border-border bg-card overflow-hidden hover:border-primary/30 hover:shadow-lg transition-all duration-300 animate-fade-in"
                   >
                     {/* Card header with gradient accent */}
                     <div className="px-5 pt-5 pb-3 border-b border-border/50 bg-gradient-to-r from-primary/[0.03] to-transparent">
@@ -136,7 +132,7 @@ const Solutions = () => {
                         );
                       })}
                     </ul>
-                  </motion.div>
+                  </div>
                 );
               })}
             </div>

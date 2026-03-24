@@ -1,6 +1,5 @@
 import { useParams, Link, Navigate } from "react-router-dom";
-import { motion, useInView } from "framer-motion";
-import { useRef, useMemo } from "react";
+import { useMemo } from "react";
 import { ArrowLeft, ArrowRight, Check, Building2, ChevronRight, Home, Layers } from "lucide-react";
 import { GoBackButton } from "@/components/GoBackButton";
 
@@ -24,16 +23,6 @@ const ServiceDetail = () => {
       .slice(0, 3);
   }, [service]);
 
-  const heroRef = useRef(null);
-  const contentRef = useRef(null);
-  const caseStudiesRef = useRef(null);
-  const faqRef = useRef(null);
-
-  const isHeroInView = useInView(heroRef, { once: true });
-  const isContentInView = useInView(contentRef, { once: true, margin: "-80px" });
-  const isCaseStudiesInView = useInView(caseStudiesRef, { once: true, margin: "-80px" });
-  const isFaqInView = useInView(faqRef, { once: true, margin: "-80px" });
-
   if (!service) {
     return <Navigate to="/services" replace />;
   }
@@ -47,16 +36,10 @@ const ServiceDetail = () => {
     <div className="min-h-screen bg-background">
       <main id="main-content" className="focus:outline-none" tabIndex={-1}>
         {/* Hero */}
-        <section ref={heroRef} className="pt-6 pb-10 lg:pt-8 lg:pb-14 bg-gradient-to-b from-primary/5 to-background">
+        <section className="pt-6 pb-10 lg:pt-8 lg:pb-14 bg-gradient-to-b from-primary/5 to-background">
           <div className="container mx-auto px-6 lg:px-12">
             <GoBackButton />
-            <motion.nav
-              aria-label="Breadcrumb"
-              initial={{ opacity: 0, y: 10 }}
-              animate={isHeroInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.4 }}
-              className="mb-8"
-            >
+            <nav aria-label="Breadcrumb" className="mb-8 animate-fade-in">
               <ol className="flex items-center gap-1.5 text-sm text-muted-foreground">
                 <li>
                   <Link to="/" className="inline-flex items-center gap-1 hover:text-primary transition-colors">
@@ -75,16 +58,11 @@ const ServiceDetail = () => {
                   {service.name}
                 </li>
               </ol>
-            </motion.nav>
+            </nav>
 
             <div className="grid lg:grid-cols-5 gap-10 lg:gap-16 items-start">
               {/* Left: Title + Description + Tech tags */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={isHeroInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6 }}
-                className="lg:col-span-3"
-              >
+              <div className="lg:col-span-3 animate-fade-in">
                 <h1 className="text-4xl lg:text-5xl font-bold text-foreground leading-tight">
                   {service.name}
                 </h1>
@@ -102,109 +80,76 @@ const ServiceDetail = () => {
                     ))}
                   </div>
                 </div>
-              </motion.div>
+              </div>
 
               {/* Right: Icon */}
-              <motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={isHeroInView ? { opacity: 1, scale: 1 } : {}}
-                transition={{ duration: 0.6, delay: 0.15 }}
-                className="lg:col-span-2 flex justify-center"
-              >
+              <div className="lg:col-span-2 flex justify-center animate-fade-in">
                 <div className="w-48 h-48 lg:w-56 lg:h-56 bg-gradient-to-br from-primary/15 to-primary/5 rounded-3xl flex items-center justify-center">
                   <div className="w-24 h-24 lg:w-28 lg:h-28 bg-primary rounded-2xl flex items-center justify-center shadow-lg shadow-primary/20">
                     <Icon className="w-12 h-12 lg:w-14 lg:h-14 text-primary-foreground" />
                   </div>
                 </div>
-              </motion.div>
+              </div>
             </div>
           </div>
         </section>
 
         {/* Services Offered + Key Benefits */}
-        <section ref={contentRef} className="py-10 lg:py-16">
+        <section className="py-10 lg:py-16">
           <div className="container mx-auto px-6 lg:px-12">
             <div className="grid lg:grid-cols-2 gap-10 lg:gap-16">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={isContentInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.5 }}
-              >
+              <div>
                 <div className="flex items-center gap-2 mb-6">
                   <Layers className="w-5 h-5 text-primary" />
                   <h2 className="text-2xl lg:text-3xl font-bold text-foreground">Services Offered</h2>
                 </div>
                 <ul className="space-y-4">
                   {service.features.map((feature, index) => (
-                    <motion.li
-                      key={index}
-                      initial={{ opacity: 0, x: -15 }}
-                      animate={isContentInView ? { opacity: 1, x: 0 } : {}}
-                      transition={{ duration: 0.3, delay: index * 0.04 }}
-                      className="flex items-start gap-3"
-                    >
+                    <li key={index} className="flex items-start gap-3">
                       <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center shrink-0 mt-0.5">
                         <Check className="w-3 h-3 text-primary" />
                       </div>
                       <span className="text-foreground/80">{feature}</span>
-                    </motion.li>
+                    </li>
                   ))}
                 </ul>
-              </motion.div>
+              </div>
 
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={isContentInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.5, delay: 0.15 }}
-              >
+              <div>
                 <div className="flex items-center gap-2 mb-6">
                   <Check className="w-5 h-5 text-emerald-500" />
                   <h2 className="text-2xl lg:text-3xl font-bold text-foreground">Key Benefits</h2>
                 </div>
                 <ul className="space-y-4">
                   {service.benefits.map((benefit, index) => (
-                    <motion.li
-                      key={index}
-                      initial={{ opacity: 0, x: 15 }}
-                      animate={isContentInView ? { opacity: 1, x: 0 } : {}}
-                      transition={{ duration: 0.3, delay: 0.15 + index * 0.04 }}
-                      className="flex items-start gap-3"
-                    >
+                    <li key={index} className="flex items-start gap-3">
                       <div className="w-5 h-5 rounded-full bg-emerald-500/10 flex items-center justify-center shrink-0 mt-0.5">
                         <Check className="w-3 h-3 text-emerald-500" />
                       </div>
                       <span className="text-foreground/80">{benefit}</span>
-                    </motion.li>
+                    </li>
                   ))}
                 </ul>
-              </motion.div>
+              </div>
             </div>
           </div>
         </section>
 
         {/* Success Stories */}
         {service.caseStudies.length > 0 && (
-          <section ref={caseStudiesRef} className="py-10 lg:py-16 bg-muted/30">
+          <section className="py-10 lg:py-16 bg-muted/30">
             <div className="container mx-auto px-6 lg:px-12">
-              <motion.div
-                initial={{ opacity: 0, y: 15 }}
-                animate={isCaseStudiesInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.5 }}
-                className="mb-12"
-              >
+              <div className="mb-12">
                 <h2 className="text-3xl lg:text-4xl font-bold text-foreground">Success Stories</h2>
                 <p className="mt-4 text-muted-foreground max-w-2xl">
                   See how we've helped organizations like yours achieve their goals
                 </p>
-              </motion.div>
+              </div>
 
               <div className="grid md:grid-cols-2 gap-8">
-                {service.caseStudies.map((caseStudy, index) => (
-                  <motion.div
+                {service.caseStudies.map((caseStudy) => (
+                  <div
                     key={caseStudy.company}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={isCaseStudiesInView ? { opacity: 1, y: 0 } : {}}
-                    transition={{ duration: 0.4, delay: index * 0.1 }}
                     className="bg-card border border-border rounded-2xl p-8"
                   >
                     <div className="flex items-center gap-4 mb-6">
@@ -237,7 +182,7 @@ const ServiceDetail = () => {
                         </ul>
                       </div>
                     </div>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
             </div>
@@ -245,23 +190,13 @@ const ServiceDetail = () => {
         )}
 
         {/* FAQs */}
-        <section ref={faqRef} className="py-10 lg:py-16">
+        <section className="py-10 lg:py-16">
           <div className="container mx-auto px-6 lg:px-12">
-            <motion.div
-              initial={{ opacity: 0, y: 15 }}
-              animate={isFaqInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5 }}
-              className="mb-12"
-            >
+            <div className="mb-12">
               <h2 className="text-3xl lg:text-4xl font-bold text-foreground">Frequently Asked Questions</h2>
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={isFaqInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              className="max-w-3xl"
-            >
+            <div className="max-w-3xl">
               <Accordion type="single" collapsible className="space-y-4">
                 {service.faqs.map((faq, index) => (
                   <AccordionItem
@@ -278,7 +213,7 @@ const ServiceDetail = () => {
                   </AccordionItem>
                 ))}
               </Accordion>
-            </motion.div>
+            </div>
           </div>
         </section>
 
@@ -286,49 +221,36 @@ const ServiceDetail = () => {
         {relatedServices.length > 0 && (
           <section className="py-10 lg:py-16 bg-muted/30">
             <div className="container mx-auto px-6 lg:px-12">
-              <motion.div
-                initial={{ opacity: 0, y: 15 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5 }}
-                className="mb-12"
-              >
+              <div className="mb-12">
                 <h2 className="text-3xl lg:text-4xl font-bold text-foreground">Related Services</h2>
                 <p className="mt-4 text-muted-foreground max-w-2xl">
                   Explore more services in {service.category}
                 </p>
-              </motion.div>
+              </div>
 
               <div className="grid md:grid-cols-3 gap-6">
-                {relatedServices.map((related, index) => {
+                {relatedServices.map((related) => {
                   const RelatedIcon = related.icon;
                   return (
-                    <motion.div
+                    <Link
                       key={related.slug}
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.4, delay: index * 0.08 }}
+                      to={`/services/${related.slug}`}
+                      className="group block h-full bg-card border border-border rounded-2xl p-6 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5 transition-all duration-300"
                     >
-                      <Link
-                        to={`/services/${related.slug}`}
-                        className="group block h-full bg-card border border-border rounded-2xl p-6 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5 transition-all duration-300"
-                      >
-                        <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
-                          <RelatedIcon className="w-6 h-6 text-primary" />
-                        </div>
-                        <h3 className="text-lg font-semibold text-foreground group-hover:text-primary transition-colors">
-                          {related.name}
-                        </h3>
-                        <p className="mt-2 text-sm text-muted-foreground line-clamp-2">
-                          {related.shortDescription}
-                        </p>
-                        <div className="mt-4 inline-flex items-center gap-2 text-sm text-primary opacity-0 group-hover:opacity-100 transition-opacity">
-                          Learn more
-                          <ArrowRight className="w-4 h-4" />
-                        </div>
-                      </Link>
-                    </motion.div>
+                      <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+                        <RelatedIcon className="w-6 h-6 text-primary" />
+                      </div>
+                      <h3 className="text-lg font-semibold text-foreground group-hover:text-primary transition-colors">
+                        {related.name}
+                      </h3>
+                      <p className="mt-2 text-sm text-muted-foreground line-clamp-2">
+                        {related.shortDescription}
+                      </p>
+                      <div className="mt-4 inline-flex items-center gap-2 text-sm text-primary opacity-0 group-hover:opacity-100 transition-opacity">
+                        Learn more
+                        <ArrowRight className="w-4 h-4" />
+                      </div>
+                    </Link>
                   );
                 })}
               </div>

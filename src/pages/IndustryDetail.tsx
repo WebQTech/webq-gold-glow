@@ -1,6 +1,5 @@
 import { useParams, Link, Navigate } from "react-router-dom";
-import { motion, useInView } from "framer-motion";
-import { useRef, useMemo } from "react";
+import { useMemo } from "react";
 import { ArrowLeft, ArrowRight, Check, Building2, ChevronRight, Home } from "lucide-react";
 import { GoBackButton } from "@/components/GoBackButton";
 import ImageLightbox from "@/components/ImageLightbox";
@@ -18,23 +17,12 @@ const IndustryDetail = () => {
   const { slug } = useParams<{ slug: string }>();
   const industry = slug ? getIndustryBySlug(slug) : undefined;
   
-  // Get related industries (same category, excluding current)
   const relatedIndustries = useMemo(() => {
     if (!industry) return [];
     return industriesData
       .filter(i => i.category === industry.category && i.slug !== industry.slug)
       .slice(0, 3);
   }, [industry]);
-
-  const heroRef = useRef(null);
-  const solutionsRef = useRef(null);
-  const caseStudiesRef = useRef(null);
-  const faqRef = useRef(null);
-
-  const isHeroInView = useInView(heroRef, { once: true });
-  const isSolutionsInView = useInView(solutionsRef, { once: true, margin: "-100px" });
-  const isCaseStudiesInView = useInView(caseStudiesRef, { once: true, margin: "-100px" });
-  const isFaqInView = useInView(faqRef, { once: true, margin: "-100px" });
 
   if (!industry) {
     return <Navigate to="/industries" replace />;
@@ -49,16 +37,10 @@ const IndustryDetail = () => {
     <div className="min-h-screen bg-background">
       <main id="main-content" className="focus:outline-none" tabIndex={-1}>
         {/* Hero Section */}
-        <section ref={heroRef} className="py-10 lg:py-16 bg-gradient-to-b from-primary/5 to-background">
+        <section className="py-10 lg:py-16 bg-gradient-to-b from-primary/5 to-background">
            <div className="container mx-auto px-6 lg:px-12">
             <GoBackButton />
-            <motion.nav
-              aria-label="Breadcrumb"
-              initial={{ opacity: 0, y: 20 }}
-              animate={isHeroInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5 }}
-              className="mb-6"
-            >
+            <nav aria-label="Breadcrumb" className="mb-6 animate-fade-in">
               <ol className="flex items-center gap-1.5 text-sm text-muted-foreground">
                 <li>
                   <Link to="/" className="inline-flex items-center gap-1 hover:text-primary transition-colors">
@@ -77,14 +59,10 @@ const IndustryDetail = () => {
                   {industry.name}
                 </li>
               </ol>
-            </motion.nav>
+            </nav>
 
             <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                animate={isHeroInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.7 }}
-              >
+              <div className="animate-fade-in">
                 <div className="flex items-center gap-3 mb-4">
                   <span className="text-base font-black tracking-widest text-primary uppercase">
                     {industry.category}
@@ -108,14 +86,9 @@ const IndustryDetail = () => {
                     <ArrowRight className="w-4 h-4" />
                   </Link>
                 </div>
-              </motion.div>
+              </div>
 
-              <motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={isHeroInView ? { opacity: 1, scale: 1 } : {}}
-                transition={{ duration: 0.7, delay: 0.2 }}
-                className="relative"
-              >
+              <div className="relative animate-fade-in">
                 <div className="aspect-video max-w-lg mx-auto rounded-2xl overflow-hidden shadow-2xl">
                   <ImageLightbox
                     src={industry.heroImage}
@@ -123,22 +96,17 @@ const IndustryDetail = () => {
                     className="w-full h-full object-cover"
                   />
                 </div>
-              </motion.div>
+              </div>
             </div>
           </div>
         </section>
 
         {/* What We Solve & How We Help */}
-        <section ref={solutionsRef} className="py-10 lg:py-16">
+        <section className="py-10 lg:py-16">
           <div className="container mx-auto px-6 lg:px-12">
             <div className="grid lg:grid-cols-2 gap-12">
               {/* What We Solve */}
-              <motion.div
-                initial={{ opacity: 0, x: -30 }}
-                animate={isSolutionsInView ? { opacity: 1, x: 0 } : {}}
-                transition={{ duration: 0.6 }}
-                className="bg-card border border-border rounded-2xl p-8"
-              >
+              <div className="bg-card border border-border rounded-2xl p-8">
                 <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-4">
                   Challenges We Solve
                 </h2>
@@ -159,31 +127,21 @@ const IndustryDetail = () => {
                     ))}
                   </div>
                 </div>
-              </motion.div>
+              </div>
 
               {/* How We Help */}
-              <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                animate={isSolutionsInView ? { opacity: 1, x: 0 } : {}}
-                transition={{ duration: 0.6, delay: 0.2 }}
-              >
+              <div>
                 <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-6">
                   How We Help
                 </h2>
                 <ul className="space-y-4">
                   {industry.howWeHelp.map((item, index) => (
-                    <motion.li
-                      key={index}
-                      initial={{ opacity: 0, x: 20 }}
-                      animate={isSolutionsInView ? { opacity: 1, x: 0 } : {}}
-                      transition={{ duration: 0.4, delay: 0.2 + index * 0.05 }}
-                      className="flex items-start gap-3"
-                    >
+                    <li key={index} className="flex items-start gap-3">
                       <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center shrink-0 mt-0.5">
                         <Check className="w-3 h-3 text-primary" />
                       </div>
                       <span className="text-foreground/80">{item}</span>
-                    </motion.li>
+                    </li>
                   ))}
                 </ul>
 
@@ -200,36 +158,28 @@ const IndustryDetail = () => {
                     ))}
                   </div>
                 </div>
-              </motion.div>
+              </div>
             </div>
           </div>
         </section>
 
         {/* Case Studies */}
         {industry.caseStudies.length > 0 && (
-          <section ref={caseStudiesRef} className="py-10 lg:py-16 bg-muted/30">
+          <section className="py-10 lg:py-16 bg-muted/30">
             <div className="container mx-auto px-6 lg:px-12">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={isCaseStudiesInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6 }}
-                className="text-center mb-12"
-              >
+              <div className="text-center mb-12">
                 <h2 className="text-3xl lg:text-4xl font-bold text-foreground">
                   Success Stories
                 </h2>
                 <p className="mt-4 text-muted-foreground max-w-2xl mx-auto">
                   See how we've helped organizations in {industry.name.toLowerCase()} achieve their goals
                 </p>
-              </motion.div>
+              </div>
 
               <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                {industry.caseStudies.map((caseStudy, index) => (
-                  <motion.div
+                {industry.caseStudies.map((caseStudy) => (
+                  <div
                     key={caseStudy.company}
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={isCaseStudiesInView ? { opacity: 1, y: 0 } : {}}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
                     className="bg-card border border-border rounded-2xl p-8"
                   >
                     <div className="flex items-center gap-4 mb-6">
@@ -263,7 +213,7 @@ const IndustryDetail = () => {
                         </ul>
                       </div>
                     </div>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
             </div>
@@ -271,25 +221,15 @@ const IndustryDetail = () => {
         )}
 
         {/* FAQs */}
-        <section ref={faqRef} className="py-10 lg:py-16">
+        <section className="py-10 lg:py-16">
           <div className="container mx-auto px-6 lg:px-12">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={isFaqInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6 }}
-              className="text-center mb-12"
-            >
+            <div className="text-center mb-12">
               <h2 className="text-3xl lg:text-4xl font-bold text-foreground">
                 Frequently Asked Questions
               </h2>
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={isFaqInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="max-w-3xl mx-auto"
-            >
+            <div className="max-w-3xl mx-auto">
               <Accordion type="single" collapsible className="space-y-4">
                 {industry.faqs.map((faq, index) => (
                   <AccordionItem
@@ -306,7 +246,7 @@ const IndustryDetail = () => {
                   </AccordionItem>
                 ))}
               </Accordion>
-            </motion.div>
+            </div>
           </div>
         </section>
 
@@ -314,51 +254,38 @@ const IndustryDetail = () => {
         {relatedIndustries.length > 0 && (
           <section className="py-10 lg:py-16 bg-muted/30">
             <div className="container mx-auto px-6 lg:px-12">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
-                className="text-center mb-12"
-              >
+              <div className="text-center mb-12">
                 <h2 className="text-3xl lg:text-4xl font-bold text-foreground">
                   Related Industries
                 </h2>
                 <p className="mt-4 text-muted-foreground max-w-2xl mx-auto">
                   Explore more industries in {industry.category}
                 </p>
-              </motion.div>
+              </div>
 
               <div className="grid md:grid-cols-3 gap-6">
-                {relatedIndustries.map((related, index) => {
+                {relatedIndustries.map((related) => {
                   const RelatedIcon = related.icon;
                   return (
-                    <motion.div
+                    <Link
                       key={related.slug}
-                      initial={{ opacity: 0, y: 30 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.5, delay: index * 0.1 }}
+                      to={`/industries/${related.slug}`}
+                      className="group block h-full bg-card border border-border rounded-2xl p-6 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5 transition-all duration-300"
                     >
-                      <Link
-                        to={`/industries/${related.slug}`}
-                        className="group block h-full bg-card border border-border rounded-2xl p-6 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5 transition-all duration-300"
-                      >
-                        <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
-                          <RelatedIcon className="w-6 h-6 text-primary" />
-                        </div>
-                        <h3 className="text-lg font-semibold text-foreground group-hover:text-primary transition-colors">
-                          {related.name}
-                        </h3>
-                        <p className="mt-2 text-sm text-muted-foreground line-clamp-2">
-                          {related.shortDescription}
-                        </p>
-                        <div className="mt-4 inline-flex items-center gap-2 text-sm text-primary opacity-0 group-hover:opacity-100 transition-opacity">
-                          Learn more
-                          <ArrowRight className="w-4 h-4" />
-                        </div>
-                      </Link>
-                    </motion.div>
+                      <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+                        <RelatedIcon className="w-6 h-6 text-primary" />
+                      </div>
+                      <h3 className="text-lg font-semibold text-foreground group-hover:text-primary transition-colors">
+                        {related.name}
+                      </h3>
+                      <p className="mt-2 text-sm text-muted-foreground line-clamp-2">
+                        {related.shortDescription}
+                      </p>
+                      <div className="mt-4 inline-flex items-center gap-2 text-sm text-primary opacity-0 group-hover:opacity-100 transition-opacity">
+                        Learn more
+                        <ArrowRight className="w-4 h-4" />
+                      </div>
+                    </Link>
                   );
                 })}
               </div>

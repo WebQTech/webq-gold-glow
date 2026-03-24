@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
-import { motion } from "framer-motion";
 import { industriesData } from "@/data/industriesData";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
@@ -10,13 +9,7 @@ export const IndustriesSummary = () => {
   return (
     <section className="py-14 lg:py-20 bg-background">
       <div className="container mx-auto px-6 lg:px-12">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="text-center mb-10"
-        >
+        <div className="text-center mb-10">
           <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-3">
             Industries We Serve
           </h2>
@@ -26,15 +19,9 @@ export const IndustriesSummary = () => {
               that address the unique challenges of your industry.
             </p>
           </div>
-        </motion.div>
+        </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.15 }}
-          className="flex flex-wrap justify-center gap-3 mb-8"
-        >
+        <div className="flex flex-wrap justify-center gap-3 mb-8">
           <TooltipProvider delayDuration={200}>
             {industryHighlights.map((industry) => (
               <Tooltip key={industry.slug}>
@@ -52,7 +39,7 @@ export const IndustriesSummary = () => {
               </Tooltip>
             ))}
           </TooltipProvider>
-        </motion.div>
+        </div>
 
         <div className="text-center">
           <Link
