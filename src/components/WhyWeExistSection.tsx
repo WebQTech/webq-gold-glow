@@ -18,7 +18,7 @@ const pillars = [
     icon: TrendingUp,
     title: "Our Impact",
     description:
-      "100+ projects delivered across 11+ industries. Our clients see an average 40% reduction in operational costs and 3x faster time-to-market after digital transformation.",
+      "50+ projects delivered across 11+ industries, with 30+ MVPs launched for startups. Our clients achieve 3x faster time-to-market through lean, AI-assisted delivery.",
   },
 ];
 

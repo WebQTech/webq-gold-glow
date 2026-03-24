@@ -4,9 +4,9 @@ import { ArrowRight, Target, Lightbulb, TrendingUp } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const stats = [
-  { value: "100+", label: "Projects Delivered" },
+  { value: "50+", label: "Projects Delivered" },
   { value: "11+", label: "Industries Served" },
-  { value: "40%", label: "Avg Cost Reduction" },
+  { value: "30+", label: "MVPs Launched" },
   { value: "3x", label: "Faster Time-to-Market" },
 ];
 
