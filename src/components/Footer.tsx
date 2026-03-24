@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { Linkedin, Twitter, Youtube, Facebook } from "lucide-react";
 import { Linkedin, Twitter, Youtube, Facebook } from "lucide-react";
 import { Link } from "react-router-dom";
 import logo from "@/assets/logo.png";
