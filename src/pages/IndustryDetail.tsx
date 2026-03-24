@@ -3,6 +3,7 @@ import { motion, useInView } from "framer-motion";
 import { useRef, useMemo } from "react";
 import { ArrowLeft, ArrowRight, Check, Building2, ChevronRight, Home } from "lucide-react";
 import { GoBackButton } from "@/components/GoBackButton";
+import ImageLightbox from "@/components/ImageLightbox";
 
 import { Footer } from "@/components/Footer";
 import { getIndustryBySlug, industriesData, IndustryDetail as IndustryDetailType } from "@/data/industriesData";
