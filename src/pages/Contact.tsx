@@ -46,12 +46,6 @@ const contactInfo = [
     subtext: "We'll respond within 24 hours",
   },
   {
-    icon: Phone,
-    title: "Call Us",
-    details: "925-548-9897",
-    subtext: "Mon-Fri, 9am-6pm EST",
-  },
-  {
     icon: MapPin,
     title: "US Office",
     details: "6200 Village Pkwy, Suite # 200",
