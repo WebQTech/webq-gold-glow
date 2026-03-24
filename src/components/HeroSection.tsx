@@ -82,18 +82,6 @@ export const HeroSection = () => {
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 lg:gap-10 items-end">
             {/* Left — headline & description */}
             <div className="lg:col-span-3">
-              <AnimatePresence mode="wait">
-                <motion.span
-                  key={current}
-                  initial={{ opacity: 0, y: 6 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -6 }}
-                  transition={{ duration: 0.4 }}
-                  className="inline-block mb-4 px-4 py-1.5 rounded-full bg-white/15 text-white text-xs font-semibold tracking-wide backdrop-blur-sm border border-white/20"
-                >
-                  {heroSlides[current].caption}
-                </motion.span>
-              </AnimatePresence>
 
               <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-[3.5rem] font-bold text-white leading-[1.1] tracking-tight">
                 Built for Enterprise.{" "}
