@@ -110,21 +110,21 @@ export const HeroSection = () => {
             </div>
           </div>
 
-          {/* Dot indicators — centered */}
-          <div className="flex justify-center gap-2 mt-6">
-            {heroSlides.map((_, i) => (
-              <button
-                key={i}
-                onClick={() => setCurrent(i)}
-                className={`h-1.5 rounded-full transition-all duration-300 ${
-                  i === current
-                    ? "bg-[hsl(195,100%,55%)] w-6"
-                    : "bg-white/30 w-1.5 hover:bg-white/50"
-                }`}
-                aria-label={`Go to slide ${i + 1}`}
-              />
-            ))}
-          </div>
+          {/* Caption + Dot indicators — centered */}
+          <div className="flex flex-col items-center gap-3 mt-6">
+            <AnimatePresence mode="wait">
+              <motion.span
+                key={current}
+                initial={{ opacity: 0, y: 6 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -6 }}
+                transition={{ duration: 0.4 }}
+                className="inline-block px-4 py-1.5 rounded-full bg-white/15 text-white text-xs font-semibold tracking-wide backdrop-blur-sm border border-white/20"
+              >
+                {heroSlides[current].caption}
+              </motion.span>
+            </AnimatePresence>
+            <div className="flex gap-2">
         </div>
       </div>
     </section>
