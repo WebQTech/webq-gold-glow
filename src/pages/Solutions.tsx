@@ -96,9 +96,9 @@ const Solutions = () => {
                   frameworks and modern&nbsp;engineering.
                 </p>
                 <p className="mt-2 text-sm text-white/60 leading-relaxed max-w-2xl text-justify">
-                  Every solution is designed for enterprise scale, built with measurable
-                  outcomes in mind, and supported by our team of domain experts across
-                  industries and technology&nbsp;stacks.
+                  Every solution is engineered for enterprise scale, guided by measurable
+                  outcomes, and delivered by domain experts with deep industry and
+                  technology&nbsp;expertise.
                 </p>
               </div>
 
