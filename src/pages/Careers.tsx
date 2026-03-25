@@ -8,6 +8,25 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { useToast } from "@/hooks/use-toast";
 
+const CopyEmailButton = ({ email = "hr@webqtech.com" }: { email?: string }) => {
+  const [copied, setCopied] = useState(false);
+  const handleCopy = async () => {
+    await navigator.clipboard.writeText(email);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
+  return (
+    <button
+      onClick={handleCopy}
+      className="inline-flex items-center gap-1 text-primary hover:text-primary/80 transition-colors"
+      title={`Copy ${email}`}
+    >
+      {copied ? <Check className="w-3.5 h-3.5 text-green-500" /> : <Copy className="w-3.5 h-3.5" />}
+      <span className="text-xs">{copied ? "Copied!" : "Copy"}</span>
+    </button>
+  );
+};
+
 const benefits = [
   { icon: Heart, title: "Health & Wellness", description: "Comprehensive health, dental, and vision insurance for you and your family." },
   { icon: Zap, title: "Learning & Growth", description: "Annual learning budget, certifications, and conference attendance." },
