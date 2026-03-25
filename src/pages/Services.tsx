@@ -60,19 +60,14 @@ const Services = () => {
                   IT &amp; Professional Consulting Services
                 </h1>
                 <p className="mt-4 text-sm lg:text-base text-white/70 leading-relaxed max-w-2xl text-justify">
-                  Our core IT delivery, engineering, and technology solution capabilities are detailed
-                  under{" "}
-                  <Link to="/solutions" className="text-white font-semibold hover:text-[hsl(195,100%,55%)] transition-colors">
-                    Solutions
-                  </Link>
-                  . In addition, we provide a full suite of{" "}
-                  <strong className="text-white">IT-Enabled and Professional Support Services</strong>{" "}
-                  designed to strengthen, extend, and complement our technology offerings.
+                  In addition to our core technology and engineering solutions, we offer comprehensive
+                  IT‑enabled and professional consulting services that reinforce and extend our
+                  delivery&nbsp;capabilities.
                 </p>
                 <p className="mt-2 text-sm text-white/60 leading-relaxed max-w-2xl text-justify">
-                  Together, these services ensure organizations receive seamless, end-to-end support
-                  across both technology and operational domains — serving private enterprises and
-                  public sector agencies at every level of&nbsp;government.
+                  This unified service model enables organizations across the private and public
+                  sectors to receive consistent, end‑to‑end support across both technology and
+                  operational&nbsp;functions.
                 </p>
               </div>
 
