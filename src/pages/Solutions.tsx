@@ -91,10 +91,9 @@ const Solutions = () => {
                   Technology Solutions & Products
                 </h1>
                 <p className="mt-4 text-sm lg:text-base text-white/70 leading-relaxed max-w-2xl text-justify">
-                  From ready-to-deploy products to custom solutions — we deliver end-to-end
-                  technology for every business need. Our ten core solution areas cover AI,
-                  cloud, security, DevOps, and more, each powered by industry-tested
-                  frameworks and modern engineering&nbsp;practices.
+                  We deliver end-to-end technology—from ready-to-deploy products to fully customized solutions.
+                  Our ten core offerings span AI, cloud, security, DevOps, and more, all grounded in industry-tested
+                  frameworks and modern&nbsp;engineering.
                 </p>
                 <p className="mt-2 text-sm text-white/60 leading-relaxed max-w-2xl text-justify">
                   Every solution is designed for enterprise scale, built with measurable
