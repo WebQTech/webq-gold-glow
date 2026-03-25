@@ -108,7 +108,10 @@ const Insights = () => {
                   Technology Insights, Research & <span className="text-primary">Case Studies</span>
                 </h1>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  Stay ahead with our latest research, case studies, and expert analysis on technology trends shaping the future of business.
+                  Stay ahead of digital transformation with expert insights, research, and real‑world case studies focused on AI, cloud computing, data platforms, cybersecurity, and enterprise technology.
+                </p>
+                <p className="text-base text-muted-foreground/80 leading-relaxed mt-3">
+                  Our Knowledge &amp; Insights hub shares practical analysis and proven perspectives drawn from hands‑on experience across banking, healthcare, government, retail, and logistics—helping organizations understand emerging technology trends, make informed decisions, and achieve measurable business outcomes.
                 </p>
               </div>
             </div>
