@@ -1,8 +1,12 @@
 import { Footer } from "@/components/Footer";
 import { motion } from "framer-motion";
-import { Briefcase, Users, Gift, UserCheck, MapPin, Clock, ArrowRight, Heart, Zap, Globe, GraduationCap, Mail, ChevronDown, ChevronUp, Building2 } from "lucide-react";
+import { Briefcase, Users, Gift, UserCheck, MapPin, Clock, ArrowRight, Heart, Zap, Globe, GraduationCap, Mail, ChevronDown, ChevronUp, Building2, Send } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { useState } from "react";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { z } from "zod";
+import { useToast } from "@/hooks/use-toast";
 
 const benefits = [
   { icon: Heart, title: "Health & Wellness", description: "Comprehensive health, dental, and vision insurance for you and your family." },
@@ -318,6 +322,21 @@ const indiaPositions: JobPosition[] = [
   },
 ];
 
+const applicationSchema = z.object({
+  name: z.string().trim().min(1, "Full name is required").max(100, "Name must be less than 100 characters"),
+  email: z.string().trim().min(1, "Email is required").email("Please enter a valid email address").max(255),
+  position: z.string().min(1, "Please select a position"),
+  resumeLink: z.string().trim().min(1, "Resume link is required").url("Please enter a valid URL"),
+  coverNote: z.string().trim().max(500, "Cover note must be less than 500 characters").optional(),
+});
+
+type ApplicationFormData = z.infer<typeof applicationSchema>;
+
+const allPositions = [
+  ...usPositions.map(p => ({ title: p.title, location: p.location })),
+  ...indiaPositions.map(p => ({ title: p.title, location: p.location })),
+];
+
 const internshipPrograms = [
   {
     title: "Summer Technology Internship",
@@ -438,6 +457,155 @@ const JobCard = ({ job, index }: { job: JobPosition; index: number }) => {
         </motion.div>
       )}
     </motion.div>
+  );
+};
+
+const ApplicationForm = () => {
+  const { toast } = useToast();
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors, isSubmitting },
+  } = useForm<ApplicationFormData>({
+    resolver: zodResolver(applicationSchema),
+  });
+
+  const onSubmit = async (data: ApplicationFormData) => {
+    try {
+      const subject = `Application for ${data.position}`;
+      const body = `Name: ${data.name}\nEmail: ${data.email}\nPosition: ${data.position}\nResume: ${data.resumeLink}${data.coverNote ? `\n\nCover Note:\n${data.coverNote}` : ""}`;
+      
+      window.location.href = `mailto:hr@webqtech.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      
+      toast({
+        title: "Application prepared!",
+        description: "Your email client should open with the application details. Please send the email to complete your application.",
+      });
+      reset();
+    } catch {
+      toast({
+        title: "Something went wrong",
+        description: "Please email your application directly to hr@webqtech.com",
+        variant: "destructive",
+      });
+    }
+  };
+
+  return (
+    <section id="apply" className="py-10 lg:py-16 bg-secondary/30 scroll-mt-20">
+      <div className="container mx-auto px-6 lg:px-12">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="max-w-2xl mx-auto"
+        >
+          <div className="text-center mb-10">
+            <span className="text-primary text-sm font-semibold uppercase tracking-wider">Apply Now</span>
+            <h2 className="text-3xl font-bold text-foreground mt-4">Submit Your Application</h2>
+            <p className="text-muted-foreground mt-3">
+              Fill out the form below and we'll review your application promptly.
+            </p>
+          </div>
+
+          <form onSubmit={handleSubmit(onSubmit)} className="space-y-6 bg-card p-8 rounded-xl border border-border">
+            <div className="grid md:grid-cols-2 gap-6">
+              <div>
+                <label className="block text-sm font-medium text-foreground mb-2">Full Name *</label>
+                <input
+                  type="text"
+                  {...register("name")}
+                  className={`w-full px-4 py-3 bg-muted border rounded-lg text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all ${
+                    errors.name ? "border-destructive" : "border-border"
+                  }`}
+                  placeholder="John Smith"
+                />
+                {errors.name && <p className="mt-1 text-sm text-destructive">{errors.name.message}</p>}
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-foreground mb-2">Email Address *</label>
+                <input
+                  type="email"
+                  {...register("email")}
+                  className={`w-full px-4 py-3 bg-muted border rounded-lg text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all ${
+                    errors.email ? "border-destructive" : "border-border"
+                  }`}
+                  placeholder="john@example.com"
+                />
+                {errors.email && <p className="mt-1 text-sm text-destructive">{errors.email.message}</p>}
+              </div>
+            </div>
+
+            <div>
+              <label className="block text-sm font-medium text-foreground mb-2">Position *</label>
+              <select
+                {...register("position")}
+                className={`w-full px-4 py-3 bg-muted border rounded-lg text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all ${
+                  errors.position ? "border-destructive" : "border-border"
+                }`}
+              >
+                <option value="">Select a position</option>
+                <optgroup label="United States">
+                  {allPositions.filter(p => !p.location.includes("India")).map(p => (
+                    <option key={`us-${p.title}`} value={p.title}>{p.title} — {p.location}</option>
+                  ))}
+                </optgroup>
+                <optgroup label="India">
+                  {allPositions.filter(p => p.location.includes("India")).map(p => (
+                    <option key={`in-${p.title}`} value={p.title}>{p.title} — {p.location}</option>
+                  ))}
+                </optgroup>
+              </select>
+              {errors.position && <p className="mt-1 text-sm text-destructive">{errors.position.message}</p>}
+            </div>
+
+            <div>
+              <label className="block text-sm font-medium text-foreground mb-2">Resume Link *</label>
+              <input
+                type="url"
+                {...register("resumeLink")}
+                className={`w-full px-4 py-3 bg-muted border rounded-lg text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all ${
+                  errors.resumeLink ? "border-destructive" : "border-border"
+                }`}
+                placeholder="https://drive.google.com/your-resume"
+              />
+              {errors.resumeLink && <p className="mt-1 text-sm text-destructive">{errors.resumeLink.message}</p>}
+              <p className="mt-1 text-xs text-muted-foreground">Share a link to your resume (Google Drive, Dropbox, LinkedIn, etc.)</p>
+            </div>
+
+            <div>
+              <label className="block text-sm font-medium text-foreground mb-2">Cover Note <span className="text-muted-foreground">(optional)</span></label>
+              <textarea
+                rows={4}
+                {...register("coverNote")}
+                className={`w-full px-4 py-3 bg-muted border rounded-lg text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all resize-none ${
+                  errors.coverNote ? "border-destructive" : "border-border"
+                }`}
+                placeholder="Tell us why you'd be a great fit..."
+              />
+              {errors.coverNote && <p className="mt-1 text-sm text-destructive">{errors.coverNote.message}</p>}
+            </div>
+
+            <button
+              type="submit"
+              disabled={isSubmitting}
+              className="w-full btn-primary inline-flex items-center justify-center gap-2 py-4 disabled:opacity-50 disabled:cursor-not-allowed"
+            >
+              <Send className="w-4 h-4" />
+              {isSubmitting ? "Submitting..." : "Submit Application"}
+            </button>
+
+            <p className="text-center text-xs text-muted-foreground">
+              Your application will be sent to{" "}
+              <a href="mailto:hr@webqtech.com" className="text-primary hover:underline">hr@webqtech.com</a>
+            </p>
+          </form>
+        </motion.div>
+      </div>
+    </section>
   );
 };
 
@@ -601,6 +769,9 @@ const Careers = () => {
               </motion.div>
             </div>
           </section>
+
+          {/* Application Form */}
+          <ApplicationForm />
 
           {/* Internships */}
           <section className="py-10 bg-secondary/30">
