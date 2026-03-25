@@ -43,9 +43,9 @@ const Industries = () => {
                   Industries We Serve
                 </h1>
                 <p className="mt-4 text-sm lg:text-base text-white/70 leading-relaxed max-w-2xl text-justify">
-                  We partner with organizations across industries to deliver technology solutions
-                  informed by real‑world experience and powered by modern AI, cloud, data, and
-                  enterprise&nbsp;platforms.
+                  We partner with organizations across industries to deliver technology
+                  solutions informed by real‑world experience and powered by modern AI,
+                  cloud, data, and enterprise&nbsp;platforms.
                 </p>
                 <p className="mt-2 text-sm text-white/60 leading-relaxed max-w-2xl text-justify">
                   From highly regulated sectors like banking, healthcare, and government to
