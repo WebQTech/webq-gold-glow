@@ -1368,6 +1368,9 @@ export const technologySnippetsMap: Record<string, TechSnippetData> = {
   "scikit-learn": scikitLearn,
   "spark-mllib": sparkMllib,
   "vertex-ai": vertexAi,
+  "google-gemini": googleGemini,
+  "aws-sagemaker": awsSagemaker,
+  "azure-ai": azureAi,
   // Databases
   "elasticsearch": elasticsearch,
   "dynamodb": dynamodb,
