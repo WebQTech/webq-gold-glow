@@ -42,7 +42,7 @@ const Technologies = () => {
                   <ChevronRight className="w-3 h-3" />
                   <span className="text-white/90 font-medium">Technologies</span>
                 </nav>
-                <h1 className="text-2xl lg:text-3xl xl:text-4xl font-bold text-white leading-tight tracking-tight">
+                <h1 className="text-2xl lg:text-3xl font-bold text-white leading-tight tracking-tight">
                   Technologies We Work With
                 </h1>
                 <p className="mt-4 text-sm lg:text-base text-white/70 leading-relaxed max-w-2xl text-justify">
