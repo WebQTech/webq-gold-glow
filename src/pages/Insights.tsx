@@ -104,7 +104,7 @@ const Insights = () => {
             <div className="container mx-auto px-6 lg:px-12">
               <div className="max-w-3xl">
                 <span className="text-primary text-sm font-semibold uppercase tracking-wider">Insights</span>
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mt-4 mb-6">
+                <h1 className="text-3xl lg:text-4xl font-bold text-foreground mt-4 mb-6">
                   Technology Insights, Research & <span className="text-primary">Case Studies</span>
                 </h1>
                 <p className="text-lg text-muted-foreground leading-relaxed">
