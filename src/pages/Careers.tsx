@@ -621,8 +621,12 @@ const Careers = () => {
             </div>
           </section>
 
-          {/* Internships */}
-          <section className="py-10 bg-secondary/30">
+          {/* Application Form */}
+          <ApplicationForm />
+        </section>
+
+        {/* Internships */}
+        <section className="py-10 bg-secondary/30">
             <div className="container mx-auto px-6 lg:px-12">
               <div className="flex items-center gap-2 mb-8">
                 <GraduationCap className="w-5 h-5 text-primary" />
