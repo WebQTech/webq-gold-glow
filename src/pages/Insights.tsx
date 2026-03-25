@@ -116,10 +116,49 @@ const Insights = () => {
 
           <section className="py-10 lg:py-16">
             <div className="container mx-auto px-6 lg:px-12">
-              <h2 className="text-2xl font-bold text-foreground mb-8">Featured Insights</h2>
+              <div className="flex items-center gap-4 mb-8">
+                <h2 className="text-lg font-bold text-foreground uppercase tracking-wider whitespace-nowrap">
+                  Featured Insights
+                </h2>
+                <div className="h-px flex-1 bg-border" />
+              </div>
 
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {featuredInsights.map((insight) => (
+              {/* Hero featured article */}
+              <Link
+                to={`/insights/${featuredInsights[0].title
+                  .toLowerCase()
+                  .replace(/[^a-z0-9]+/g, "-")
+                  .replace(/(^-|-$)/g, "")}`}
+                className="block mb-8"
+              >
+                <article className="group grid md:grid-cols-2 gap-0 bg-card rounded-xl overflow-hidden border border-border hover:border-primary/50 transition-all hover:shadow-lg cursor-pointer">
+                  <div className="aspect-video md:aspect-auto md:h-full overflow-hidden">
+                    <img
+                      src={featuredInsights[0].image}
+                      alt={featuredInsights[0].title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                  </div>
+                  <div className="p-8 flex flex-col justify-center">
+                    <span className="text-xs font-semibold text-primary uppercase tracking-wider">
+                      {featuredInsights[0].category}
+                    </span>
+                    <h3 className="text-xl lg:text-2xl font-bold text-foreground mt-3 mb-4 group-hover:text-primary transition-colors">
+                      {featuredInsights[0].title}
+                    </h3>
+                    <p className="text-sm text-muted-foreground mb-5 leading-relaxed">{featuredInsights[0].excerpt}</p>
+                    <div className="flex items-center gap-4 text-xs text-muted-foreground">
+                      <span className="flex items-center gap-1.5"><User className="w-3 h-3" />{featuredInsights[0].author}</span>
+                      <span className="flex items-center gap-1.5"><Clock className="w-3 h-3" />{featuredInsights[0].readTime}</span>
+                      <span className="flex items-center gap-1.5"><Calendar className="w-3 h-3" />{featuredInsights[0].date}</span>
+                    </div>
+                  </div>
+                </article>
+              </Link>
+
+              {/* Remaining insights in 2-column grid */}
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                {featuredInsights.slice(1).map((insight) => (
                   <Link
                     key={insight.title}
                     to={`/insights/${insight.title
@@ -136,35 +175,22 @@ const Insights = () => {
                           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                         />
                       </div>
-                      <div className="p-6">
+                      <div className="p-5">
                         <span className="text-xs font-semibold text-primary uppercase tracking-wider">
                           {insight.category}
                         </span>
-                        <h3 className="text-lg font-semibold text-foreground mt-2 mb-3 group-hover:text-primary transition-colors line-clamp-2">
+                        <h3 className="text-base font-semibold text-foreground mt-2 mb-2 group-hover:text-primary transition-colors line-clamp-2">
                           {insight.title}
                         </h3>
                         <p className="text-sm text-muted-foreground mb-4 line-clamp-2">{insight.excerpt}</p>
                         <div className="flex items-center justify-between text-xs text-muted-foreground">
-                          <div className="flex items-center gap-2">
-                            <User className="w-3 h-3" />
-                            <span>{insight.author}</span>
-                          </div>
-                          <div className="flex items-center gap-2">
-                            <Clock className="w-3 h-3" />
-                            <span>{insight.readTime}</span>
-                          </div>
+                          <span className="flex items-center gap-1.5"><User className="w-3 h-3" />{insight.author}</span>
+                          <span className="flex items-center gap-1.5"><Clock className="w-3 h-3" />{insight.readTime}</span>
                         </div>
                       </div>
                     </article>
                   </Link>
                 ))}
-              </div>
-
-              <div className="text-center mt-12">
-                <button className="btn-primary inline-flex items-center gap-2">
-                  View All Insights
-                  <ArrowRight className="w-4 h-4" />
-                </button>
               </div>
             </div>
           </section>
