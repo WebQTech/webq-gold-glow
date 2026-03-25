@@ -102,8 +102,8 @@ const IndustryDetail = () => {
 
               {/* Right: Hero Image */}
               <div className="lg:col-span-3 flex justify-end animate-fade-in">
-                <div className="w-full max-w-xl rounded-2xl overflow-hidden shadow-2xl">
-                  <ImageLightbox
+              <div className="w-full max-w-xl rounded-2xl overflow-hidden shadow-2xl">
+                  <img
                     src={industry.heroImage}
                     alt={industry.name}
                     className="w-full h-full object-cover aspect-video"
