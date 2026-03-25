@@ -46,14 +46,8 @@ const Technologies = () => {
                   Technologies We Work With
                 </h1>
                 <p className="mt-4 text-sm lg:text-base text-white/70 leading-relaxed max-w-2xl text-justify">
-                  We leverage a curated, production-proven technology stack spanning{" "}
-                  <strong className="text-white">AI, cloud, data, and enterprise platforms</strong>{" "}
-                  to deliver scalable, secure, and high-performance solutions.
-                </p>
-                <p className="mt-2 text-sm text-white/60 leading-relaxed max-w-2xl text-justify">
-                  Every tool in our ecosystem is selected for real-world reliability, deep integration
-                  capabilities, and alignment with industry best practices — enabling faster delivery
-                  and long-term maintainability.
+                  We leverage a modern, battle‑tested technology stack across AI, cloud, data, and
+                  enterprise platforms to deliver secure, scalable, and high‑performance&nbsp;solutions.
                 </p>
               </div>
 
