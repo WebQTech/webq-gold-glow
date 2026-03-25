@@ -617,9 +617,10 @@ const ApplicationForm = () => {
               {isSubmitting ? "Submitting..." : "Submit Application"}
             </button>
 
-            <p className="text-center text-xs text-muted-foreground">
+            <p className="text-center text-xs text-muted-foreground flex items-center justify-center gap-2">
               Your application will be sent to{" "}
               <a href="mailto:hr@webqtech.com" className="text-primary hover:underline">hr@webqtech.com</a>
+              <CopyEmailButton />
             </p>
           </form>
         </motion.div>
@@ -785,6 +786,7 @@ const Careers = () => {
                   <Mail className="w-4 h-4" />
                   Send Resume to <span className="underline">hr@webqtech.com</span>
                 </a>
+                <CopyEmailButton />
               </motion.div>
             </div>
           </section>
@@ -865,13 +867,16 @@ const Careers = () => {
                     Send your resume and a brief introduction — we'd love to hear from you.
                   </p>
                 </div>
-                <a
-                  href="mailto:hr@webqtech.com?subject=Young%20Talent%20Application&body=Hi%20WebQ%20HR%20Team%2C%0A%0AI%27m%20interested%20in%20early-career%20opportunities%20at%20WebQ.%0APlease%20find%20my%20resume%20attached.%0A%0ABest%20regards"
-                  className="btn-primary inline-flex items-center gap-2 whitespace-nowrap"
-                >
-                  <Mail className="w-4 h-4" />
-                  Email hr@webqtech.com
-                </a>
+                <div className="flex items-center gap-3">
+                  <a
+                    href="mailto:hr@webqtech.com?subject=Young%20Talent%20Application&body=Hi%20WebQ%20HR%20Team%2C%0A%0AI%27m%20interested%20in%20early-career%20opportunities%20at%20WebQ.%0APlease%20find%20my%20resume%20attached.%0A%0ABest%20regards"
+                    className="btn-primary inline-flex items-center gap-2 whitespace-nowrap"
+                  >
+                    <Mail className="w-4 h-4" />
+                    Email hr@webqtech.com
+                  </a>
+                  <CopyEmailButton />
+                </div>
               </div>
             </div>
           </section>
