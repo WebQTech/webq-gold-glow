@@ -564,6 +564,28 @@ export const technologiesData: TechnologyDetail[] = [
     features: ["Linear scalability", "Multi-datacenter replication", "Tunable consistency", "CQL query language", "No single point of failure"],
     relatedTechnologies: ["Java", "Apache Kafka", "Docker"],
   },
+  {
+    slug: "oracle-database",
+    name: "Oracle Database",
+    category: "Databases",
+    icon: DbIcon,
+    shortDescription: "Enterprise relational database for mission-critical workloads.",
+    fullDescription: "Oracle Database is the industry standard for mission-critical enterprise applications, powering the world's largest banks, telecoms, and government systems with unmatched reliability, security, and performance. We deploy Oracle for high-transaction OLTP systems, data warehousing, and complex analytics that demand enterprise-grade availability and disaster recovery. For businesses, Oracle's Real Application Clusters (RAC) deliver continuous availability with zero downtime, while Advanced Security provides transparent data encryption and redaction for regulatory compliance. Its Autonomous Database eliminates manual DBA tasks through self-driving, self-securing, and self-repairing capabilities — reducing operational costs by up to 80%. Partitioning and in-memory processing handle petabyte-scale datasets with sub-second query response. We leverage AI-powered performance tuning, automated patching, and intelligent workload management to maximize Oracle Database ROI — delivering enterprise-grade data infrastructure with unmatched reliability and\u00A0security.",
+    useCases: ["Enterprise OLTP", "Financial Systems", "Data Warehousing", "ERP Backends", "Government Systems", "Telecom Billing"],
+    features: ["Real Application Clusters (RAC)", "Autonomous Database", "Advanced Security", "Partitioning", "In-Memory processing"],
+    relatedTechnologies: ["Oracle Cloud", "Java", "Oracle ERP"],
+  },
+  {
+    slug: "mssql",
+    name: "Microsoft SQL Server",
+    category: "Databases",
+    icon: DbIcon,
+    shortDescription: "Microsoft's enterprise relational database with BI integration.",
+    fullDescription: "Microsoft SQL Server provides a comprehensive data platform combining relational database capabilities with built-in analytics, machine learning, and business intelligence — deeply integrated with the Microsoft ecosystem. We deploy SQL Server for enterprise applications, reporting platforms, and data warehouses that leverage existing Microsoft investments. For businesses, SQL Server's seamless integration with Azure, Power BI, and .NET dramatically reduces integration complexity and accelerates time-to-insight. Its Always On availability groups provide enterprise-grade high availability and disaster recovery with automatic failover. SQL Server Analysis Services (SSAS) and Reporting Services (SSRS) deliver built-in BI capabilities without additional licensing. The PolyBase feature enables querying across SQL Server, Hadoop, and Azure Blob Storage from a single T-SQL interface. We leverage AI-powered query optimization, automated index tuning, and intelligent performance insights to maximize SQL Server efficiency — delivering robust, integrated data solutions for Microsoft-centric\u00A0enterprises.",
+    useCases: ["Enterprise Applications", "Business Intelligence", "Data Warehousing", ".NET Application Backends", "Reporting Platforms", "Healthcare Systems"],
+    features: ["Always On availability", "SSAS & SSRS", "PolyBase", "In-Memory OLTP", "Azure SQL integration"],
+    relatedTechnologies: [".NET", "Microsoft Azure", "Power BI"],
+  },
 
   // ── Data & Analytics (highest demand first) ──
   {
