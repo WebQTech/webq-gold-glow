@@ -105,7 +105,7 @@ const Insights = () => {
               <div className="max-w-3xl">
                 <span className="text-primary text-sm font-semibold uppercase tracking-wider">Insights</span>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mt-4 mb-6">
-                  Knowledge & <span className="text-primary">Insights</span>
+                  Technology Insights, Research & <span className="text-primary">Case Studies</span>
                 </h1>
                 <p className="text-lg text-muted-foreground leading-relaxed">
                   Stay ahead with our latest research, case studies, and expert analysis on technology trends shaping the future of business.
