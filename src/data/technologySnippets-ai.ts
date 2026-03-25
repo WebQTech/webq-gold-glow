@@ -1,6 +1,6 @@
 import { TechSnippetData } from "./technologySnippets";
 
-// Minimal but complete snippet data for remaining technologies
+// Complete snippet data for AI & Machine Learning technologies
 const createTechData = (name: string, lang: string, snippets: {t:string,l:string,c:string}[]): TechSnippetData => ({
   snippets: [
     { title: snippets[0]?.t||"security."+lang.toLowerCase(), language: lang, badge: "🔒 Secure Code", badgeColor: "#9AB6CF", description: `Enterprise-grade security implementation. At WebQ, we enforce security best practices across all ${name} deployments.`, lines: snippets[0]?.c.split("\n")||[] },
