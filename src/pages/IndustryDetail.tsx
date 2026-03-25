@@ -1,6 +1,6 @@
 import { useParams, Link, Navigate } from "react-router-dom";
 import { useMemo } from "react";
-import { ArrowLeft, ArrowRight, Check, Building2, ChevronRight, Home } from "lucide-react";
+import { ArrowLeft, ArrowRight, Check, Building2, ChevronRight, Home, Layers } from "lucide-react";
 import { GoBackButton } from "@/components/GoBackButton";
 import ImageLightbox from "@/components/ImageLightbox";
 
@@ -36,11 +36,11 @@ const IndustryDetail = () => {
   return (
     <div className="min-h-screen bg-background">
       <main id="main-content" className="focus:outline-none" tabIndex={-1}>
-        {/* Hero Section */}
-        <section className="py-10 lg:py-16 bg-gradient-to-b from-primary/5 to-background">
-           <div className="container mx-auto px-6 lg:px-12">
+        {/* Hero */}
+        <section className="pt-6 pb-10 lg:pt-8 lg:pb-14 bg-gradient-to-b from-primary/5 to-background">
+          <div className="container mx-auto px-6 lg:px-12">
             <GoBackButton />
-            <nav aria-label="Breadcrumb" className="mb-6 animate-fade-in">
+            <nav aria-label="Breadcrumb" className="mb-8 animate-fade-in">
               <ol className="flex items-center gap-1.5 text-sm text-muted-foreground">
                 <li>
                   <Link to="/" className="inline-flex items-center gap-1 hover:text-primary transition-colors">
@@ -61,26 +61,38 @@ const IndustryDetail = () => {
               </ol>
             </nav>
 
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div className="animate-fade-in">
-                <div className="flex items-center gap-3 mb-4">
-                  <span className="text-base font-black tracking-widest text-primary uppercase">
+            <div className="grid lg:grid-cols-5 gap-10 lg:gap-8 items-start">
+              {/* Left: Title + Description + Tags */}
+              <div className="lg:col-span-2 animate-fade-in">
+                <div className="flex items-center gap-3 mb-3">
+                  <span className="text-sm font-black tracking-widest text-primary uppercase">
                     {industry.category}
                   </span>
                   {industry.isNew && (
-                    <span className="px-2 py-1 text-xs font-bold uppercase tracking-wider bg-primary text-primary-foreground rounded-full">
+                    <span className="px-2 py-0.5 text-xs font-bold uppercase tracking-wider bg-primary text-primary-foreground rounded-full">
                       New
                     </span>
                   )}
                 </div>
-                <h1 className="text-4xl lg:text-5xl font-bold text-foreground leading-tight">
+                <h1 className="text-2xl lg:text-3xl font-bold text-foreground leading-tight">
                   {industry.name}
                 </h1>
-                <p className="mt-6 text-lg text-muted-foreground">
+                <p className="mt-5 text-base text-foreground/70 text-justify leading-relaxed font-[Inter]">
                   {industry.fullDescription}
                 </p>
 
-                <div className="mt-8">
+                {/* Tags inline */}
+                <div className="mt-6">
+                  <div className="flex flex-wrap gap-2">
+                    {industry.tags.map((tag, index) => (
+                      <span key={index} className="px-3 py-1 text-sm font-medium bg-primary/8 text-primary border border-primary/15 rounded-full">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="mt-6">
                   <Link to="/#contact" className="btn-primary inline-flex items-center gap-2">
                     Get Started
                     <ArrowRight className="w-4 h-4" />
@@ -88,12 +100,13 @@ const IndustryDetail = () => {
                 </div>
               </div>
 
-              <div className="relative animate-fade-in">
-                <div className="aspect-video max-w-lg mx-auto rounded-2xl overflow-hidden shadow-2xl">
+              {/* Right: Hero Image */}
+              <div className="lg:col-span-3 flex justify-end animate-fade-in">
+                <div className="w-full max-w-xl rounded-2xl overflow-hidden shadow-2xl">
                   <ImageLightbox
                     src={industry.heroImage}
                     alt={industry.name}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover aspect-video"
                   />
                 </div>
               </div>
@@ -101,51 +114,19 @@ const IndustryDetail = () => {
           </div>
         </section>
 
-        {/* What We Solve & How We Help */}
-        <section className="py-10 lg:py-16">
+        {/* What We Solve + How We Help */}
+        <section className="py-10 lg:py-14">
           <div className="container mx-auto px-6 lg:px-12">
-            <div className="grid lg:grid-cols-2 gap-12">
-              {/* What We Solve */}
-              <div className="bg-card border border-border rounded-2xl p-8">
-                <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-4">
-                  Challenges We Solve
-                </h2>
-                <p className="text-muted-foreground text-lg">
+            <div className="grid lg:grid-cols-2 gap-10 lg:gap-16">
+              <div>
+                <div className="flex items-center gap-2 mb-5">
+                  <Layers className="w-5 h-5 text-primary" />
+                  <h2 className="text-2xl lg:text-3xl font-bold text-foreground">Challenges We Solve</h2>
+                </div>
+                <p className="text-foreground/70 text-base leading-relaxed font-[Inter] mb-6">
                   {industry.whatWeSolve}
                 </p>
-
-                <div className="mt-8">
-                  <h3 className="text-lg font-semibold text-foreground mb-4">Industries We Serve</h3>
-                  <div className="flex flex-wrap gap-2">
-                    {industry.tags.map((tag, index) => (
-                      <span
-                        key={index}
-                        className="px-3 py-1.5 text-sm bg-primary/10 text-primary rounded-full"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </div>
-
-              {/* How We Help */}
-              <div>
-                <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-6">
-                  How We Help
-                </h2>
-                <ul className="space-y-4">
-                  {industry.howWeHelp.map((item, index) => (
-                    <li key={index} className="flex items-start gap-3">
-                      <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center shrink-0 mt-0.5">
-                        <Check className="w-3 h-3 text-primary" />
-                      </div>
-                      <span className="text-foreground/80">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-
-                <div className="mt-8">
+                <div>
                   <h3 className="text-lg font-semibold text-foreground mb-4">Related Services</h3>
                   <div className="flex flex-wrap gap-2">
                     {industry.services.map((service, index) => (
@@ -159,24 +140,39 @@ const IndustryDetail = () => {
                   </div>
                 </div>
               </div>
+
+              <div>
+                <div className="flex items-center gap-2 mb-5">
+                  <Check className="w-5 h-5 text-emerald-500" />
+                  <h2 className="text-2xl lg:text-3xl font-bold text-foreground">How We Help</h2>
+                </div>
+                <ul className="space-y-4">
+                  {industry.howWeHelp.map((item, index) => (
+                    <li key={index} className="flex items-start gap-3">
+                      <div className="w-5 h-5 rounded-full bg-emerald-500/10 flex items-center justify-center shrink-0 mt-0.5">
+                        <Check className="w-3 h-3 text-emerald-500" />
+                      </div>
+                      <span className="text-foreground/80">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </div>
         </section>
 
-        {/* Case Studies */}
+        {/* Success Stories */}
         {industry.caseStudies.length > 0 && (
-          <section className="py-10 lg:py-16 bg-muted/30">
+          <section className="py-10 lg:py-14 bg-muted/30">
             <div className="container mx-auto px-6 lg:px-12">
-              <div className="text-center mb-12">
-                <h2 className="text-3xl lg:text-4xl font-bold text-foreground">
-                  Success Stories
-                </h2>
-                <p className="mt-4 text-muted-foreground max-w-2xl mx-auto">
-                  See how we've helped organizations in {industry.name.toLowerCase()} achieve their goals
+              <div className="mb-8">
+                <h2 className="text-3xl lg:text-4xl font-bold text-foreground">Success Stories</h2>
+                <p className="mt-4 text-muted-foreground max-w-2xl">
+                  Real-world results from our {industry.name.toLowerCase()} implementations
                 </p>
               </div>
 
-              <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+              <div className="grid md:grid-cols-2 gap-6">
                 {industry.caseStudies.map((caseStudy) => (
                   <div
                     key={caseStudy.company}
@@ -191,7 +187,6 @@ const IndustryDetail = () => {
                         <p className="text-sm text-muted-foreground">{industry.name}</p>
                       </div>
                     </div>
-
                     <div className="space-y-4">
                       <div>
                         <h4 className="text-sm font-medium text-primary mb-1">Challenge</h4>
@@ -206,7 +201,7 @@ const IndustryDetail = () => {
                         <ul className="grid grid-cols-2 gap-2">
                           {caseStudy.results.map((result, i) => (
                             <li key={i} className="flex items-start gap-2 text-sm">
-                              <Check className="w-4 h-4 text-green-500 shrink-0 mt-0.5" />
+                              <Check className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" />
                               <span className="text-foreground/80">{result}</span>
                             </li>
                           ))}
@@ -221,21 +216,19 @@ const IndustryDetail = () => {
         )}
 
         {/* FAQs */}
-        <section className="py-10 lg:py-16">
+        <section className="py-10 lg:py-14">
           <div className="container mx-auto px-6 lg:px-12">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl lg:text-4xl font-bold text-foreground">
-                Frequently Asked Questions
-              </h2>
+            <div className="mb-8">
+              <h2 className="text-3xl lg:text-4xl font-bold text-foreground">Frequently Asked Questions</h2>
             </div>
 
-            <div className="max-w-3xl mx-auto">
-              <Accordion type="single" collapsible className="space-y-4">
+            <div className="max-w-3xl">
+              <Accordion type="single" collapsible className="space-y-3">
                 {industry.faqs.map((faq, index) => (
                   <AccordionItem
                     key={index}
                     value={`faq-${index}`}
-                    className="bg-card border border-border rounded-lg px-6"
+                    className="bg-card border border-border rounded-lg px-5"
                   >
                     <AccordionTrigger className="text-left font-medium text-foreground hover:no-underline">
                       {faq.question}
@@ -252,13 +245,11 @@ const IndustryDetail = () => {
 
         {/* Related Industries */}
         {relatedIndustries.length > 0 && (
-          <section className="py-10 lg:py-16 bg-muted/30">
+          <section className="py-10 lg:py-14 bg-muted/30">
             <div className="container mx-auto px-6 lg:px-12">
-              <div className="text-center mb-12">
-                <h2 className="text-3xl lg:text-4xl font-bold text-foreground">
-                  Related Industries
-                </h2>
-                <p className="mt-4 text-muted-foreground max-w-2xl mx-auto">
+              <div className="mb-8">
+                <h2 className="text-3xl lg:text-4xl font-bold text-foreground">Related Industries</h2>
+                <p className="mt-4 text-muted-foreground max-w-2xl">
                   Explore more industries in {industry.category}
                 </p>
               </div>
@@ -294,18 +285,13 @@ const IndustryDetail = () => {
         )}
 
         {/* CTA */}
-        <section className="py-10 lg:py-16">
+        <section className="py-10 lg:py-14">
           <div className="container mx-auto px-6 lg:px-12 text-center">
-            <h2 className="text-3xl lg:text-4xl font-bold text-foreground">
-              Ready to Get Started?
-            </h2>
-            <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
+            <h2 className="text-3xl lg:text-4xl font-bold text-foreground">Ready to Get Started?</h2>
+            <p className="mt-3 text-muted-foreground max-w-xl mx-auto">
               Let's discuss how we can help transform your {industry.name.toLowerCase()} operations.
             </p>
-            <Link
-              to="/#contact"
-              className="mt-8 inline-flex items-center gap-2 btn-primary"
-            >
+            <Link to="/#contact" className="mt-6 inline-flex items-center gap-2 btn-primary">
               Contact Us Today
               <ArrowRight className="w-4 h-4" />
             </Link>
@@ -313,13 +299,13 @@ const IndustryDetail = () => {
         </section>
 
         {/* Navigation */}
-        <section className="py-8 border-t border-border">
+        <section className="py-6 border-t border-border">
           <div className="container mx-auto px-6 lg:px-12">
             <div className="flex justify-between items-center">
               {prevIndustry ? (
                 <Link
                   to={`/industries/${prevIndustry.slug}`}
-                  className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
+                  className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
                 >
                   <ArrowLeft className="w-4 h-4" />
                   <span className="hidden sm:inline">{prevIndustry.name}</span>
@@ -331,7 +317,7 @@ const IndustryDetail = () => {
               {nextIndustry ? (
                 <Link
                   to={`/industries/${nextIndustry.slug}`}
-                  className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
+                  className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
                 >
                   <span className="hidden sm:inline">{nextIndustry.name}</span>
                   <span className="sm:hidden">Next</span>
