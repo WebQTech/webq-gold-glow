@@ -1,6 +1,6 @@
 import { Footer } from "@/components/Footer";
 import { motion } from "framer-motion";
-import { Briefcase, Users, Gift, UserCheck, MapPin, Clock, ArrowRight, Heart, Zap, Globe, GraduationCap, Mail, ChevronDown, ChevronUp, Building2, Send } from "lucide-react";
+import { Briefcase, Users, Gift, UserCheck, MapPin, Clock, ArrowRight, Heart, Zap, Globe, GraduationCap, Mail, ChevronDown, ChevronUp, Building2, Send, Sparkles } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
@@ -772,6 +772,90 @@ const Careers = () => {
 
           {/* Application Form */}
           <ApplicationForm />
+
+          {/* Young Talent */}
+          <section className="py-10 lg:py-16">
+            <div className="container mx-auto px-6 lg:px-12">
+              <div className="flex items-center gap-2 mb-4">
+                <Sparkles className="w-5 h-5 text-primary" />
+                <span className="text-primary text-sm font-semibold uppercase tracking-wider">Young Talent</span>
+              </div>
+              <h2 className="text-2xl font-bold text-foreground mb-3">
+                Kickstart Your Career in Enterprise Technology
+              </h2>
+              <p className="text-muted-foreground max-w-3xl mb-10 text-justify leading-relaxed">
+                At WebQ, we believe the best innovations come from fresh perspectives. Whether you're a recent graduate, a career switcher, or an aspiring technologist — we offer mentorship, hands-on project experience, and a clear growth path to help you thrive in the enterprise technology&nbsp;space.
+              </p>
+
+              <div className="grid md:grid-cols-3 gap-6 mb-10">
+                <motion.div
+                  initial={{ opacity: 0, y: 16 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4 }}
+                  className="bg-card p-6 rounded-xl border border-border hover:border-primary/30 transition-all"
+                >
+                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                    <GraduationCap className="w-6 h-6 text-primary" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-foreground mb-2">Structured Mentorship</h3>
+                  <p className="text-sm text-muted-foreground">
+                    Every young talent is paired with a senior engineer or consultant who guides your technical growth and career development from day&nbsp;one.
+                  </p>
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, y: 16 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: 0.1 }}
+                  className="bg-card p-6 rounded-xl border border-border hover:border-primary/30 transition-all"
+                >
+                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                    <Zap className="w-6 h-6 text-primary" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-foreground mb-2">Real Project Exposure</h3>
+                  <p className="text-sm text-muted-foreground">
+                    Work on real enterprise projects from the start — no busy work. Contribute to AI, cloud, SAP, and data solutions used by actual&nbsp;clients.
+                  </p>
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, y: 16 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: 0.2 }}
+                  className="bg-card p-6 rounded-xl border border-border hover:border-primary/30 transition-all"
+                >
+                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                    <UserCheck className="w-6 h-6 text-primary" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-foreground mb-2">Fast-Track Growth</h3>
+                  <p className="text-sm text-muted-foreground">
+                    Certifications, learning budgets, and clear promotion paths. We invest in your future so you can grow into leadership roles&nbsp;quickly.
+                  </p>
+                </motion.div>
+              </div>
+
+              <div className="bg-primary/5 rounded-xl border border-primary/20 p-8 flex flex-col md:flex-row items-center justify-between gap-6">
+                <div>
+                  <h3 className="text-lg font-semibold text-foreground mb-1">
+                    Ready to Launch Your Career?
+                  </h3>
+                  <p className="text-sm text-muted-foreground">
+                    Send your resume and a brief introduction — we'd love to hear from you.
+                  </p>
+                </div>
+                <a
+                  href="mailto:hr@webqtech.com?subject=Young%20Talent%20Application&body=Hi%20WebQ%20HR%20Team%2C%0A%0AI%27m%20interested%20in%20early-career%20opportunities%20at%20WebQ.%0APlease%20find%20my%20resume%20attached.%0A%0ABest%20regards"
+                  className="btn-primary inline-flex items-center gap-2 whitespace-nowrap"
+                >
+                  <Mail className="w-4 h-4" />
+                  Email hr@webqtech.com
+                </a>
+              </div>
+            </div>
+          </section>
 
           {/* Internships */}
           <section className="py-10 bg-secondary/30">
