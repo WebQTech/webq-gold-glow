@@ -56,7 +56,10 @@ export const industriesData: IndustryDetail[] = [
       "Custom ML model development for your specific use case",
       "Data preparation, labeling, and pipeline setup",
       "AI model deployment, monitoring, and retraining",
-      "Responsible AI implementation with bias detection"
+      "Responsible AI implementation with bias detection",
+      "Natural language processing for chatbots and document analysis",
+      "Computer vision solutions for image and video processing",
+      "AI-powered business process automation"
     ],
     tags: ["Chatbots", "Recommendation Engines", "Document Processing", "Predictive Models", "Computer Vision"],
     services: ["AI & Machine Learning", "Generative AI Solutions", "Agentic AI, Agents & Tools"],
@@ -67,10 +70,10 @@ export const industriesData: IndustryDetail[] = [
         challenge: "Struggling to integrate AI capabilities into their existing platform.",
         solution: "Developed a comprehensive AI strategy and implemented custom ML models for predictive analytics.",
         results: [
-          "Reduced data processing time significantly",
-          "Improved user engagement metrics",
-          "AI-powered features launched within timeline",
-          "Positive ROI within first quarter"
+          "Reduced data processing time noticeably",
+          "Improved user engagement and retention",
+          "AI-powered features launched on schedule",
+          "Early positive ROI observed"
         ]
       }
     ],
@@ -99,7 +102,9 @@ export const industriesData: IndustryDetail[] = [
       "Data extraction and migration from legacy databases",
       "API layer creation to connect old systems with AI tools",
       "Gradual AI integration without full system replacement",
-      "Change management and team upskilling"
+      "Change management and team upskilling",
+      "Microservices migration from monolithic architectures",
+      "Cloud-native re-platforming for scalability"
     ],
     tags: ["Assessment", "Data Prep", "Pilot AI Project", "Scale", "Optimize"],
     services: ["AI Process Automation", "Cloud Migration", "DevOps & CI/CD"],
@@ -110,7 +115,7 @@ export const industriesData: IndustryDetail[] = [
         challenge: "Legacy ERP system couldn't support modern analytics or AI.",
         solution: "Created API bridges and data pipelines to enable AI without replacing core systems.",
         results: [
-          "Majority of manual processes automated",
+          "Key manual processes automated",
           "Real-time analytics now available",
           "Zero downtime during transformation",
           "Significant cost savings vs full replacement"
@@ -137,11 +142,14 @@ export const industriesData: IndustryDetail[] = [
     category: "Finance",
     whatWeSolve: "Slow transaction processing, fraud vulnerabilities, regulatory complexity",
     howWeHelp: [
+      "Digital banking and mobile wallet platforms",
       "Real-time payment processing and settlement systems",
       "Fraud detection using machine learning models",
       "KYC/AML compliance automation",
-      "Digital banking and mobile wallet platforms",
-      "Blockchain-based secure transaction ledgers"
+      "Blockchain-based secure transaction ledgers",
+      "Open banking API integration (PSD2 / Open Banking)",
+      "Core banking system modernization",
+      "Customer onboarding and identity verification workflows"
     ],
     tags: ["Banks", "Credit Unions", "Payment Processors", "Insurance", "Lending Platforms"],
     services: ["AI & Machine Learning", "Custom App Development", "Cloud Solutions"],
@@ -152,9 +160,9 @@ export const industriesData: IndustryDetail[] = [
         challenge: "Fraud losses increasing with existing rule-based system.",
         solution: "Implemented ML-based fraud detection with real-time transaction scoring.",
         results: [
-          "Significant reduction in fraud losses",
-          "Lower false positive rate",
-          "Real-time detection capability",
+          "Notable reduction in fraud losses",
+          "Fewer false positives flagged",
+          "Real-time detection capability enabled",
           "Improved customer trust and retention"
         ]
       }
@@ -184,7 +192,9 @@ export const industriesData: IndustryDetail[] = [
       "Trading systems with real-time market data integration",
       "Asset management and portfolio tracking solutions",
       "Regulatory compliance and reporting automation",
-      "High-performance systems for securities operations"
+      "High-performance systems for securities operations",
+      "Risk analytics and portfolio stress testing tools",
+      "Investor reporting and communication portals"
     ],
     tags: ["Real Estate", "Private Equity", "Asset Management", "Securities Firms", "Trading Platforms"],
     services: ["Custom App Development", "AI & Machine Learning", "Data & Analytics"],
@@ -195,8 +205,8 @@ export const industriesData: IndustryDetail[] = [
         challenge: "Manual portfolio reporting consuming significant team hours.",
         solution: "Built automated reporting platform with real-time data aggregation.",
         results: [
-          "Reporting time reduced dramatically",
-          "Real-time portfolio visibility",
+          "Reporting time reduced meaningfully",
+          "Real-time portfolio visibility achieved",
           "Improved investor satisfaction",
           "Compliance reporting streamlined"
         ]
@@ -209,7 +219,7 @@ export const industriesData: IndustryDetail[] = [
       },
       {
         question: "How do you ensure system performance for trading?",
-        answer: "We design for low-latency and high-throughput from the start. Our trading systems achieve sub-millisecond latency where required, with 99.99% uptime SLAs."
+        answer: "We design for low-latency and high-throughput from the start, targeting sub-millisecond latency where required, with high-availability architecture and rigorous load testing."
       }
     ]
   },
@@ -226,7 +236,10 @@ export const industriesData: IndustryDetail[] = [
       "Telemedicine platforms with secure video consultations",
       "AI-assisted diagnostics and medical imaging analysis",
       "Patient scheduling and workflow automation",
-      "HIPAA-compliant data storage and security"
+      "HIPAA-compliant data storage and security",
+      "Remote patient monitoring and wearable integration",
+      "Clinical trial data management platforms",
+      "Automated insurance claims processing"
     ],
     tags: ["Hospitals", "Clinics", "Telehealth Providers", "Pharmaceutical", "Medical Devices"],
     services: ["Custom App Development", "AI & Machine Learning", "Cloud Solutions"],
@@ -237,10 +250,10 @@ export const industriesData: IndustryDetail[] = [
         challenge: "Long patient wait times and inefficient scheduling across facilities.",
         solution: "Implemented AI-powered scheduling optimization with predictive no-show modeling.",
         results: [
-          "Reduced patient wait times",
-          "Lower no-show rates",
-          "Improved provider utilization",
-          "Operational cost savings achieved"
+          "Noticeably shorter patient wait times",
+          "Fewer missed appointments",
+          "Better provider utilization",
+          "Meaningful operational cost savings"
         ]
       }
     ],
@@ -268,7 +281,9 @@ export const industriesData: IndustryDetail[] = [
       "Legacy system modernization to cloud",
       "Interagency data sharing and integration",
       "Document digitization and workflow automation",
-      "FedRAMP and compliance-ready infrastructure"
+      "FedRAMP and compliance-ready infrastructure",
+      "Open data portals for public transparency",
+      "GIS-based mapping and analytics for urban planning"
     ],
     tags: ["Federal Agencies", "State & Local Government", "Public Services"],
     services: ["Cloud Migration", "Custom App Development", "AI Process Automation"],
@@ -280,9 +295,9 @@ export const industriesData: IndustryDetail[] = [
         solution: "Built digital filing platform with automated document processing.",
         results: [
           "Faster processing turnaround",
-          "Higher digital adoption rate",
-          "Reduced error rates",
-          "Improved citizen satisfaction"
+          "High digital adoption among staff",
+          "Reduced manual error rates",
+          "Improved citizen satisfaction scores"
         ]
       }
     ],
@@ -310,7 +325,10 @@ export const industriesData: IndustryDetail[] = [
       "Virtual classroom and live collaboration platforms",
       "Student performance tracking and predictive analytics",
       "Automated grading and assessment tools",
-      "Mobile-first learning apps for accessibility"
+      "Mobile-first learning apps for accessibility",
+      "Gamification engines to boost learner engagement",
+      "Content authoring and curriculum management tools",
+      "Alumni engagement and placement tracking portals"
     ],
     tags: ["K-12", "Higher Education", "Corporate Training", "Online Course Platforms"],
     services: ["Custom App Development", "AI & Machine Learning", "Mobile Development"],
@@ -322,8 +340,8 @@ export const industriesData: IndustryDetail[] = [
         solution: "Developed AI-powered adaptive learning platform with gamification.",
         results: [
           "Higher course completion rates",
-          "Improved student engagement",
-          "Better learning outcomes",
+          "Stronger student engagement observed",
+          "Measurably better learning outcomes",
           "Increased platform retention"
         ]
       }
@@ -352,7 +370,10 @@ export const industriesData: IndustryDetail[] = [
       "AI-powered product recommendations and search",
       "Real-time inventory tracking and demand forecasting",
       "Customer loyalty and personalization engines",
-      "Headless commerce architecture for flexibility"
+      "Headless commerce architecture for flexibility",
+      "Dynamic pricing and promotion management",
+      "Subscription and recurring order platforms",
+      "Return & exchange automation workflows"
     ],
     tags: ["Online Retailers", "Brick-and-Mortar Stores", "Marketplaces", "D2C Brands"],
     services: ["Custom App Development", "AI & Machine Learning", "Cloud Solutions"],
@@ -364,16 +385,16 @@ export const industriesData: IndustryDetail[] = [
         solution: "Implemented AI-powered personalization across web and mobile.",
         results: [
           "Reduced cart abandonment rate",
-          "Higher average order value",
-          "Improved conversion rates",
-          "Increased customer lifetime value"
+          "Improved average order value",
+          "Better overall conversion rates",
+          "Stronger customer lifetime value"
         ]
       }
     ],
     faqs: [
       {
         question: "How do you handle high-traffic sales events?",
-        answer: "We design for scale with auto-scaling cloud infrastructure, CDN optimization, and load testing. Our e-commerce platforms have handled 100x traffic spikes during Black Friday events."
+        answer: "We design for scale with auto-scaling cloud infrastructure, CDN optimization, and load testing. Our e-commerce platforms are built to handle significant traffic spikes during peak events."
       },
       {
         question: "Can you integrate with our existing inventory system?",
@@ -394,7 +415,10 @@ export const industriesData: IndustryDetail[] = [
       "Real-time production monitoring dashboards",
       "Supply chain visibility and optimization",
       "Quality control automation with computer vision",
-      "Digital twin simulations for process improvement"
+      "Digital twin simulations for process improvement",
+      "Energy consumption monitoring and optimization",
+      "Safety compliance tracking and incident reporting",
+      "Shop floor scheduling and workforce management"
     ],
     tags: ["Automotive", "Electronics", "Consumer Goods", "Industrial Equipment"],
     services: ["AI & Machine Learning", "IoT Solutions", "Data & Analytics"],
@@ -405,10 +429,10 @@ export const industriesData: IndustryDetail[] = [
         challenge: "Unplanned equipment downtime affecting production.",
         solution: "Deployed IoT sensors with AI-powered predictive maintenance.",
         results: [
-          "Significantly reduced unplanned downtime",
-          "Lower maintenance costs",
+          "Fewer unplanned downtime events",
+          "Lower maintenance costs overall",
           "Extended equipment lifespan",
-          "Improved production efficiency"
+          "Smoother production workflows"
         ]
       }
     ],
@@ -436,7 +460,10 @@ export const industriesData: IndustryDetail[] = [
       "Route optimization using AI algorithms",
       "Warehouse management system (WMS) implementation",
       "Demand forecasting and inventory optimization",
-      "Carrier management and freight audit automation"
+      "Carrier management and freight audit automation",
+      "Last-mile delivery coordination and driver apps",
+      "Cold chain monitoring and compliance tracking",
+      "Reverse logistics and returns management"
     ],
     tags: ["3PLs", "Freight Forwarders", "Warehousing", "Last-Mile Delivery"],
     services: ["Custom App Development", "AI & Machine Learning", "Mobile Development"],
@@ -447,7 +474,7 @@ export const industriesData: IndustryDetail[] = [
         challenge: "Manual route planning leading to inefficiencies.",
         solution: "Built AI-powered route optimization with real-time traffic integration.",
         results: [
-          "Reduced fuel costs",
+          "Lower fuel costs achieved",
           "Improved on-time delivery rates",
           "Better driver utilization",
           "Measurable operational savings"
@@ -478,7 +505,10 @@ export const industriesData: IndustryDetail[] = [
       "Renewable energy integration and optimization",
       "Predictive maintenance for utility infrastructure",
       "Customer usage analytics and demand response",
-      "SCADA system modernization and security"
+      "SCADA system modernization and security",
+      "Carbon footprint tracking and ESG reporting",
+      "Distributed energy resource management",
+      "Automated meter reading and billing platforms"
     ],
     tags: ["Electric Utilities", "Oil & Gas", "Renewable Energy", "Water & Wastewater"],
     services: ["IoT Solutions", "AI & Machine Learning", "Cloud Solutions"],
@@ -489,9 +519,9 @@ export const industriesData: IndustryDetail[] = [
         challenge: "Grid instability during peak demand causing outages.",
         solution: "Implemented smart grid monitoring with AI-powered demand prediction.",
         results: [
-          "Reduced outage frequency",
+          "Fewer outage incidents reported",
           "Better peak demand management",
-          "Lower energy waste",
+          "Reduced energy waste",
           "Improved customer satisfaction"
         ]
       }
@@ -521,7 +551,9 @@ export const industriesData: IndustryDetail[] = [
       "Quantum algorithm development for specific business problems",
       "Hybrid quantum-classical system architecture",
       "Post-quantum cryptography implementation",
-      "Quantum simulation for drug discovery and materials science"
+      "Quantum simulation for drug discovery and materials science",
+      "Quantum machine learning model prototyping",
+      "Quantum-safe security audits and migration plans"
     ],
     tags: ["Quantum Algorithms", "Optimization", "Cryptography", "Simulation", "Hybrid Computing"],
     services: ["AI & Machine Learning", "Custom App Development", "Data & Analytics"],
@@ -532,10 +564,10 @@ export const industriesData: IndustryDetail[] = [
         challenge: "Complex optimization problems taking too long with classical methods.",
         solution: "Developed quantum-inspired optimization algorithm with hybrid quantum-classical architecture.",
         results: [
-          "Dramatically faster optimization",
+          "Dramatically faster optimization times",
           "Improved route efficiency",
-          "Reduced operational costs",
-          "Lower carbon footprint"
+          "Meaningful operational cost reduction",
+          "Reduced carbon footprint"
         ]
       }
     ],
