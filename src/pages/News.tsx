@@ -27,11 +27,11 @@ const News = () => {
                 <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-6">
                   <Bell className="w-8 h-8 text-primary" />
                 </div>
-                <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+                <h1 className="text-2xl lg:text-3xl font-bold text-foreground mb-6">
                   News & Updates
                 </h1>
                 <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                  We're just getting started! As we grow and achieve new milestones, we'll share our journey here. Stay tuned for exciting updates.
+                  We're just getting started on our journey to become a leading enterprise technology partner. As we grow and achieve new milestones, we'll share our story here. Stay tuned for exciting updates.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link to="/contact" className="btn-primary inline-flex items-center justify-center gap-2">
