@@ -43,14 +43,14 @@ const Industries = () => {
                   Industries We Serve
                 </h1>
                 <p className="mt-4 text-sm lg:text-base text-white/70 leading-relaxed max-w-2xl text-justify">
-                  We deliver industry-tested technology solutions across a wide range of sectors,
-                  combining deep domain expertise with cutting-edge AI, cloud, and enterprise
-                  capabilities to address the unique challenges each industry&nbsp;faces.
+                  We partner with organizations across industries to deliver technology solutions
+                  informed by real‑world experience and powered by modern AI, cloud, data, and
+                  enterprise&nbsp;platforms.
                 </p>
                 <p className="mt-2 text-sm text-white/60 leading-relaxed max-w-2xl text-justify">
-                  From regulated environments like banking and healthcare to fast-moving sectors
-                  like retail and logistics, our solutions are tailored for measurable impact
-                  and long-term operational&nbsp;excellence.
+                  From highly regulated sectors like banking, healthcare, and government to
+                  fast‑paced industries such as retail and logistics, our solutions are tailored
+                  to deliver measurable outcomes, operational resilience, and long‑term&nbsp;success.
                 </p>
               </div>
 
