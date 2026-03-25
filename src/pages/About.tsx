@@ -79,7 +79,7 @@ const About = () => {
               >
                 <span className="text-primary text-sm font-semibold uppercase tracking-wider">About Us</span>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mt-4 mb-6">
-                  Transforming Businesses Through <span className="text-primary">Technology</span>
+                  Delivering Technology That Moves <span className="text-primary">Businesses Forward.</span>
                 </h1>
                 <p className="text-lg text-muted-foreground leading-relaxed">
                   We operate with the mindset of a startup and the experience of an enterprise. While our size allows us to move fast, stay flexible, and innovate quickly, our foundation is built on decades of enterprise-level expertise across industries and technologies.
