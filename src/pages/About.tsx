@@ -82,7 +82,10 @@ const About = () => {
                   Transforming Businesses Through <span className="text-primary">Technology</span>
                 </h1>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  For over 15 years, WebQ Technologies has been at the forefront of digital transformation, helping enterprises worldwide harness the power of technology to achieve their goals.
+                  We operate with the mindset of a startup and the experience of an enterprise. While our size allows us to move fast, stay flexible, and innovate quickly, our foundation is built on decades of enterprise-level expertise across industries and technologies.
+                </p>
+                <p className="text-lg text-muted-foreground leading-relaxed mt-4">
+                  This unique combination enables us to design and deliver scalable, secure, and outcome-driven solutions—bringing modern engineering practices together with the rigor, reliability, and depth enterprises expect.
                 </p>
               </motion.div>
             </div>
