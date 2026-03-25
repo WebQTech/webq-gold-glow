@@ -1316,7 +1316,7 @@ const reactNative: TechSnippetData = {
 // Import from split files
 import { rubyOnRails, phpLaravel, oracleCloud, ibmCloud, mysql } from "./technologySnippets-backend-cloud";
 import { ansible, jenkins, githubActions, gitlabCicd, argocd } from "./technologySnippets-devops";
-import { tensorflow, pytorch, openai as openaiSnippets, langchain, huggingFace, scikitLearn, sparkMllib, vertexAi } from "./technologySnippets-ai";
+import { tensorflow, pytorch, openai as openaiSnippets, langchain, huggingFace, scikitLearn, sparkMllib, vertexAi, googleGemini, awsSagemaker, azureAi } from "./technologySnippets-ai";
 import { elasticsearch, dynamodb, cassandra, snowflake } from "./technologySnippets-databases";
 import { apacheKafka, apacheAirflow, dbt, tableau, powerBi, looker, databricks, apacheFlink } from "./technologySnippets-data-analytics";
 import { crowdstrike, splunk, paloAltoNetworks, hashicorpVault, sonarqube, snyk, owaspZap, fortify } from "./technologySnippets-security";
