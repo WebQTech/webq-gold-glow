@@ -49,6 +49,10 @@ const Technologies = () => {
                   We leverage a modern, battle‑tested technology stack across AI, cloud, data, and
                   enterprise platforms to deliver secure, scalable, and high‑performance&nbsp;solutions.
                 </p>
+                <p className="mt-2 text-sm text-white/60 leading-relaxed max-w-2xl text-justify">
+                  Our technology choices prioritize real‑world reliability, deep interoperability, and
+                  best‑practice alignment—ensuring faster time to value and long‑term&nbsp;maintainability.
+                </p>
               </div>
 
               {/* Right — technology highlights */}
