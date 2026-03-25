@@ -322,6 +322,21 @@ const indiaPositions: JobPosition[] = [
   },
 ];
 
+const applicationSchema = z.object({
+  name: z.string().trim().min(1, "Full name is required").max(100, "Name must be less than 100 characters"),
+  email: z.string().trim().min(1, "Email is required").email("Please enter a valid email address").max(255),
+  position: z.string().min(1, "Please select a position"),
+  resumeLink: z.string().trim().min(1, "Resume link is required").url("Please enter a valid URL"),
+  coverNote: z.string().trim().max(500, "Cover note must be less than 500 characters").optional(),
+});
+
+type ApplicationFormData = z.infer<typeof applicationSchema>;
+
+const allPositions = [
+  ...usPositions.map(p => ({ title: p.title, location: p.location })),
+  ...indiaPositions.map(p => ({ title: p.title, location: p.location })),
+];
+
 const internshipPrograms = [
   {
     title: "Summer Technology Internship",
