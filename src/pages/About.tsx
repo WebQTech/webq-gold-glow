@@ -78,7 +78,7 @@ const About = () => {
                 className="max-w-3xl"
               >
                 <span className="text-primary text-sm font-semibold uppercase tracking-wider">About Us</span>
-                <h1 className="text-2xl lg:text-3xl font-bold text-foreground mt-4 mb-6">
+                <h1 className="text-3xl lg:text-4xl font-bold text-foreground mt-4 mb-6">
                   Delivering Technology That Moves <span className="text-primary">Businesses Forward.</span>
                 </h1>
                 <p className="text-lg text-muted-foreground leading-relaxed">
