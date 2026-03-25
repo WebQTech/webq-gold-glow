@@ -1,8 +1,12 @@
 import { Footer } from "@/components/Footer";
 import { motion } from "framer-motion";
-import { Briefcase, Users, Gift, UserCheck, MapPin, Clock, ArrowRight, Heart, Zap, Globe, GraduationCap, Mail, ChevronDown, ChevronUp, Building2 } from "lucide-react";
+import { Briefcase, Users, Gift, UserCheck, MapPin, Clock, ArrowRight, Heart, Zap, Globe, GraduationCap, Mail, ChevronDown, ChevronUp, Building2, Send } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { useState } from "react";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { z } from "zod";
+import { useToast } from "@/hooks/use-toast";
 
 const benefits = [
   { icon: Heart, title: "Health & Wellness", description: "Comprehensive health, dental, and vision insurance for you and your family." },
