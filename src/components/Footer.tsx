@@ -1,10 +1,6 @@
 import { Linkedin, Twitter, Youtube, Facebook } from "lucide-react";
 import { Link } from "react-router-dom";
 import logo from "@/assets/logo.png";
-import calEprocureLogo from "@/assets/certifications/cal-eprocure.png";
-import sbaLogo from "@/assets/certifications/sba.png";
-import dgsLogo from "@/assets/certifications/dgs.png";
-import wbencLogo from "@/assets/certifications/wbenc.png";
 
 const footerLinks = {
   Solutions: [
@@ -98,21 +94,6 @@ export const Footer = () => {
         </div>
       </div>
 
-      {/* Certifications Bar */}
-      <div className="border-t border-white/10">
-        <div className="container mx-auto px-6 lg:px-12 py-6">
-          <div className="flex flex-wrap justify-center items-center gap-8">
-            {[
-              { src: calEprocureLogo, alt: "Cal eProcure" },
-              { src: sbaLogo, alt: "U.S. Small Business Administration" },
-              { src: dgsLogo, alt: "CA Dept. of General Services" },
-              { src: wbencLogo, alt: "WBENC Certified" },
-            ].map((cert) => (
-              <img key={cert.alt} src={cert.src} alt={cert.alt} className="h-10 w-auto object-contain brightness-0 invert opacity-60 hover:opacity-100 transition-opacity" />
-            ))}
-          </div>
-        </div>
-      </div>
 
       {/* Bottom Bar */}
       <div className="border-t border-white/10">
