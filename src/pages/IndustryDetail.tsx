@@ -64,16 +64,6 @@ const IndustryDetail = () => {
             <div className="grid lg:grid-cols-5 gap-10 lg:gap-8 items-start">
               {/* Left: Title + Description + Tags */}
               <div className="lg:col-span-2 animate-fade-in">
-                <div className="flex items-center gap-3 mb-3">
-                  <span className="text-sm font-black tracking-widest text-primary uppercase">
-                    {industry.category}
-                  </span>
-                  {industry.isNew && (
-                    <span className="px-2 py-0.5 text-xs font-bold uppercase tracking-wider bg-primary text-primary-foreground rounded-full">
-                      New
-                    </span>
-                  )}
-                </div>
                 <h1 className="text-2xl lg:text-3xl font-bold text-foreground leading-tight">
                   {industry.name}
                 </h1>
@@ -90,13 +80,6 @@ const IndustryDetail = () => {
                       </span>
                     ))}
                   </div>
-                </div>
-
-                <div className="mt-6">
-                  <Link to="/#contact" className="btn-primary inline-flex items-center gap-2">
-                    Get Started
-                    <ArrowRight className="w-4 h-4" />
-                  </Link>
                 </div>
               </div>
 
