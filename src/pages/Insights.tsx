@@ -107,10 +107,10 @@ const Insights = () => {
                 <h1 className="text-3xl lg:text-4xl font-bold text-foreground mt-4 mb-6">
                   Technology Insights, Research & <span className="text-primary">Case Studies</span>
                 </h1>
-                <p className="text-lg text-muted-foreground leading-relaxed">
+                <p className="text-lg text-muted-foreground leading-relaxed font-[Inter]">
                   Stay ahead of digital transformation with expert insights, research, and real‑world case studies focused on AI, cloud computing, data platforms, cybersecurity, and enterprise technology.
                 </p>
-                <p className="text-base text-muted-foreground/80 leading-relaxed mt-3">
+                <p className="text-base text-muted-foreground/80 leading-relaxed mt-3 font-[Inter]">
                   Our Knowledge &amp; Insights hub shares practical analysis and proven perspectives drawn from hands‑on experience across banking, healthcare, government, retail, and logistics—helping organizations understand emerging technology trends, make informed decisions, and achieve measurable business outcomes.
                 </p>
               </div>
