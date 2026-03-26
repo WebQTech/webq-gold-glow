@@ -8,7 +8,7 @@ interface SolutionImageCarouselProps {
   interval?: number;
 }
 
-const SolutionImageCarousel = ({ images, alt, interval = 10000 }: SolutionImageCarouselProps) => {
+const SolutionImageCarousel = ({ images, alt, interval = 5000 }: SolutionImageCarouselProps) => {
   const [current, setCurrent] = useState(0);
   const [lightboxOpen, setLightboxOpen] = useState(false);
 
