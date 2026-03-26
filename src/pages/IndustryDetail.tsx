@@ -2,10 +2,11 @@ import { useParams, Link, Navigate } from "react-router-dom";
 import { useMemo } from "react";
 import { ArrowLeft, ArrowRight, Check, Building2, ChevronRight, Home, Layers } from "lucide-react";
 import { GoBackButton } from "@/components/GoBackButton";
-
+import SolutionImageCarousel from "@/components/SolutionImageCarousel";
 
 import { Footer } from "@/components/Footer";
 import { getIndustryBySlug, industriesData, IndustryDetail as IndustryDetailType } from "@/data/industriesData";
+import { industryImages } from "@/data/industryImages";
 import {
   Accordion,
   AccordionContent,
@@ -83,15 +84,22 @@ const IndustryDetail = () => {
                 </div>
               </div>
 
-              {/* Right: Hero Image */}
+              {/* Right: Image Carousel */}
               <div className="lg:col-span-3 flex justify-end animate-fade-in">
-              <div className="w-full max-w-xl rounded-2xl overflow-hidden shadow-2xl">
-                  <img
-                    src={industry.heroImage}
+                {slug && industryImages[slug] ? (
+                  <SolutionImageCarousel
+                    images={industryImages[slug]}
                     alt={industry.name}
-                    className="w-full h-full object-cover aspect-video"
                   />
-                </div>
+                ) : (
+                  <div className="w-full max-w-xl rounded-2xl overflow-hidden shadow-2xl">
+                    <img
+                      src={industry.heroImage}
+                      alt={industry.name}
+                      className="w-full h-full object-cover aspect-video"
+                    />
+                  </div>
+                )}
               </div>
             </div>
           </div>
