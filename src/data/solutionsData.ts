@@ -1008,7 +1008,7 @@ export const solutionsData: SolutionDetail[] = [
       {
         company: "GlobalTech Enterprises",
         industry: "Technology",
-        challenge: "No formal security program, ad-hoc incident handling, and failed SOC 2 audit blocking enterprise sales pipeline worth $20M.",
+        challenge: "No formal security program, ad-hoc incident handling, and failed SOC 2 audit blocking enterprise sales pipeline.",
         solution: "Build an ISMS from the ground up — risk assessment, policy framework, 24/7 SOC with SIEM deployment, vulnerability management program, and employee security training.",
         results: ["SOC 2 Type II certification in 6 months", "significant enterprise pipeline unblocked", "Mean time to detect threats reduced to 15 minutes", "95% employee phishing test pass rate"]
       }
@@ -2389,7 +2389,7 @@ export const solutionsData: SolutionDetail[] = [
       {
         company: "Fortune 500 Financial Services Firm",
         industry: "Financial Services",
-        challenge: "Board-mandated security assessment after industry peer suffered a $200M breach. Needed to evaluate resilience against advanced persistent threats across a complex hybrid environment.",
+        challenge: "Board-mandated security assessment after a high-profile industry breach. Needed to evaluate resilience against advanced persistent threats across a complex hybrid environment.",
         solution: "Conduct a 4-week red team engagement simulating APT tactics including spear-phishing, lateral movement, privilege escalation, and data exfiltration across on-prem and cloud infrastructure.",
         results: ["Achieved domain admin access within 72 hours through chained vulnerabilities", "Identified 6 critical attack paths to sensitive financial data", "Remediation of findings prevented an actual attack attempt 3 months later"]
       },
