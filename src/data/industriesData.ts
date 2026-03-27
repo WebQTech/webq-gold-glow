@@ -6,7 +6,9 @@ import {
 // Hero images
 import aiTechHero from "@/assets/industries/ai-tech-hero.jpg";
 import legacyTransformHero from "@/assets/industries/legacy-transform-hero.jpg";
+import bankingHero from "@/assets/industries/banking-hero.jpg";
 import fintechHero from "@/assets/industries/fintech-hero.jpg";
+import creditUnionsHero from "@/assets/industries/credit-unions-hero.jpg";
 import capitalMarketsHero from "@/assets/industries/capital-markets-hero.jpg";
 import healthcareHero from "@/assets/industries/healthcare-hero.jpg";
 import governmentHero from "@/assets/industries/government-hero.jpg";
