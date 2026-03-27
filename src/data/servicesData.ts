@@ -1638,6 +1638,52 @@ export const servicesData: ServiceDetail[] = [
     ]
   },
   {
+    slug: "medicos-staffing-augmentation",
+    name: "Medicos Staffing & Augmentation",
+    shortDescription: "Specialized healthcare staffing and workforce augmentation for hospitals, clinics, and health systems.",
+    fullDescription: "Our Medicos Staffing & Augmentation services provide qualified healthcare professionals — from nurses and allied health specialists to physicians and administrative staff — to meet the dynamic workforce demands of hospitals, clinics, long-term care facilities, and health systems. We handle credentialing, compliance verification, and rapid deployment so your organization can maintain quality patient care without staffing gaps. Whether you need temporary coverage, permanent placements, or scalable workforce augmentation, our healthcare recruitment experts match the right talent to the right roles with speed and precision.",
+    icon: HeartPulse,
+    category: "Non-IT Talent Management Services",
+    features: [
+      "Registered nurses and specialty nursing placement",
+      "Allied health professional staffing (radiology, lab, therapy)",
+      "Physician and advanced practice provider recruitment",
+      "Healthcare administrative and support staff",
+      "Credentialing and compliance verification",
+      "Rapid-response staffing for surge capacity",
+      "Travel and per-diem healthcare staffing",
+      "Permanent placement and direct-hire services"
+    ],
+    benefits: [
+      "Eliminate staffing gaps that impact patient care",
+      "Pre-credentialed professionals reduce onboarding time",
+      "Flexible staffing models for seasonal demand",
+      "Compliance with healthcare regulations and certifications",
+      "Reduced recruitment costs and time-to-fill",
+      "Access to a vetted network of healthcare professionals"
+    ],
+    technologies: ["Bullhorn", "HealthcareSource", "Symplr", "Relias", "SAP SuccessFactors", "Workday"],
+    pricing: createContactPricing("Medicos Staffing & Augmentation"),
+    caseStudies: [
+      {
+        company: "Regional Health System",
+        industry: "Healthcare",
+        challenge: "Critical nursing shortages across multiple facilities leading to overtime costs and staff burnout.",
+        solution: "Deployed a managed staffing program with pre-credentialed nurses and allied health professionals, supported by demand forecasting.",
+        results: [
+          "Staffing vacancies reduced significantly",
+          "Overtime costs lowered across facilities",
+          "Faster time-to-fill for critical roles",
+          "Improved staff satisfaction scores"
+        ]
+      }
+    ],
+    faqs: [
+      { question: "What types of healthcare professionals do you staff?", answer: "We staff RNs, LPNs, CNAs, allied health professionals (radiology, lab, respiratory, physical therapy), physicians, NPs, PAs, and healthcare administrative personnel." },
+      { question: "How do you handle credentialing and compliance?", answer: "We manage the full credentialing lifecycle — license verification, background checks, certifications, immunizations, and ongoing compliance monitoring — so your facility stays audit-ready." }
+    ]
+  },
+  {
     slug: "global-operations-support",
     name: "24×7 Global Operations IT Support",
     shortDescription: "Round-the-clock IT operations support across time zones for uninterrupted business continuity.",
