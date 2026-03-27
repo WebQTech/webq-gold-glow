@@ -3047,3 +3047,4 @@ export const solutionsData: SolutionDetail[] = [
 export const getSolutionBySlug = (slug: string): SolutionDetail | undefined => {
   return solutionsData.find(s => s.slug === slug);
 };
+
