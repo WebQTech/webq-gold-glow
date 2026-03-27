@@ -2,6 +2,7 @@ import { Footer } from "@/components/Footer";
 import { Mic, Calendar, ArrowRight, Clock, User } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+import { GoBackButton } from "@/components/GoBackButton";
 
 const featuredInsights = [
   {

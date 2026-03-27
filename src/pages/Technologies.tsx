@@ -4,6 +4,7 @@ import { Footer } from "@/components/Footer";
 import { technologiesData, getAllTechnologyCategories } from "@/data/technologiesData";
 import { motion } from "framer-motion";
 import { HoverCard, HoverCardTrigger, HoverCardContent } from "@/components/ui/hover-card";
+import { GoBackButton } from "@/components/GoBackButton";
 
 const categoryIcons: Record<string, string> = {};
 
