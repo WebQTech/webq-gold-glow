@@ -34,6 +34,7 @@ const Technologies = () => {
           }}
         >
           <div className="container mx-auto px-6 lg:px-12">
+            <GoBackButton />
             <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 lg:gap-8 items-center">
               {/* Left — headline & description */}
               <div className="lg:col-span-3 animate-fade-in">
