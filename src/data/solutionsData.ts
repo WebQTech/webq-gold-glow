@@ -46,18 +46,18 @@ export const solutionsData: SolutionDetail[] = [
     technologies: ["React", "Node.js", "TypeScript", "Python", "Java", "Spring Boot", ".NET", "Flutter", "React Native", "PostgreSQL", "MongoDB", "Redis", "Docker", "AWS", "Azure"],
     caseStudies: [
       {
-        company: "FinServe Global",
+        company: "Financial Services Client",
         industry: "Financial Services",
         challenge: "Legacy loan processing system causing 48-hour turnaround times and frequent errors.",
-        solution: "Built a modern web application with automated workflows, real-time status tracking, and integrated compliance checks.",
-        results: ["Processing time reduced to 4 hours", "98% reduction in manual errors", "30% increase in loan throughput", "Improved customer satisfaction scores"]
+        solution: "Build a modern web application with automated workflows, real-time status tracking, and integrated compliance checks.",
+        results: ["Processing time reduced to 4 hours", "Significant reduction in manual errors", "Notable increase in loan throughput", "Improved customer satisfaction scores"]
       },
       {
-        company: "HealthBridge Systems",
+        company: "Healthcare Client",
         industry: "Healthcare",
         challenge: "Fragmented patient data across multiple systems with no unified view.",
-        solution: "Developed a unified patient portal with real-time data aggregation, appointment scheduling, and secure messaging.",
-        results: ["Single view of patient data", "40% reduction in administrative overhead", "HIPAA-compliant architecture", "50% faster patient onboarding"]
+        solution: "Develop a unified patient portal with real-time data aggregation, appointment scheduling, and secure messaging.",
+        results: ["Single view of patient data", "Significant reduction in administrative overhead", "HIPAA-compliant architecture", "50% faster patient onboarding"]
       }
     ],
     faqs: [
@@ -94,11 +94,11 @@ export const solutionsData: SolutionDetail[] = [
     technologies: ["AWS", "Azure", "Google Cloud", "Terraform", "CloudFormation", "Kubernetes", "Docker", "Ansible", "Jenkins", "GitHub Actions", "Datadog", "CloudWatch"],
     caseStudies: [
       {
-        company: "RetailMax Corp",
+        company: "Retail Client",
         industry: "Retail & E-commerce",
         challenge: "On-premise infrastructure unable to handle seasonal traffic spikes, causing frequent outages during peak sales.",
-        solution: "Migrated entire e-commerce platform to AWS with auto-scaling, CDN, and managed databases. Implemented blue-green deployments.",
-        results: ["99.99% uptime during Black Friday", "60% reduction in infrastructure costs", "3x faster page load times", "Zero downtime deployments"]
+        solution: "Migrate entire e-commerce platform to AWS with auto-scaling, CDN, and managed databases. Implemented blue-green deployments.",
+        results: ["99.99% uptime during Black Friday", "Significant reduction in infrastructure costs", "substantial faster page load times", "Zero downtime deployments"]
       }
     ],
     faqs: [
@@ -135,11 +135,11 @@ export const solutionsData: SolutionDetail[] = [
     technologies: ["VMware", "Hyper-V", "Cisco", "Palo Alto", "Fortinet", "Nagios", "Zabbix", "SolarWinds", "ServiceNow", "Jira", "Splunk", "ELK Stack"],
     caseStudies: [
       {
-        company: "MedTech Solutions",
+        company: "Healthcare Technology Client",
         industry: "Healthcare Technology",
         challenge: "Growing infrastructure complexity with frequent unplanned outages affecting patient-facing applications.",
-        solution: "Implemented 24/7 NOC operations with proactive monitoring, automated remediation, and structured incident management.",
-        results: ["99.95% uptime achieved", "70% reduction in incident volume", "Mean time to resolution reduced by 60%", "Annual savings of $500K"]
+        solution: "Implement 24/7 NOC operations with proactive monitoring, automated remediation, and structured incident management.",
+        results: ["99.95% uptime achieved", "Significant reduction in incident volume", "Mean time to resolution reduced by 60%", "Annual savings of significant"]
       }
     ],
     faqs: [
@@ -175,11 +175,11 @@ export const solutionsData: SolutionDetail[] = [
     technologies: ["React", "Angular", "Spring Boot", "Node.js", ".NET Core", "Kubernetes", "Docker", "Kafka", "RabbitMQ", "PostgreSQL", "MongoDB", "GraphQL", "REST APIs"],
     caseStudies: [
       {
-        company: "InsureFirst",
+        company: "Insurance Client",
         industry: "Insurance",
         challenge: "20-year-old COBOL-based claims processing system with no vendor support and inability to add new features.",
-        solution: "Phased modernization from COBOL to Java/Spring Boot microservices with React frontend, maintaining data integrity throughout.",
-        results: ["Claims processing 5x faster", "70% reduction in maintenance costs", "New features deployed weekly", "Zero data loss during migration"]
+        solution: "Phase modernization from COBOL to Java/Spring Boot microservices with React frontend, maintaining data integrity throughout.",
+        results: ["Claims processing substantial faster", "Significant reduction in maintenance costs", "New features deployed weekly", "Zero data loss during migration"]
       }
     ],
     faqs: [
@@ -215,11 +215,11 @@ export const solutionsData: SolutionDetail[] = [
     technologies: ["Selenium", "Cypress", "Playwright", "JMeter", "Gatling", "Appium", "Postman", "SonarQube", "Jenkins", "GitHub Actions", "TestRail", "Allure", "K6"],
     caseStudies: [
       {
-        company: "TravelEase",
+        company: "Travel & Hospitality Client",
         industry: "Travel & Hospitality",
         challenge: "Manual testing cycles taking 3 weeks per release, causing delayed feature launches and frequent production bugs.",
-        solution: "Built a comprehensive test automation framework with 85% coverage, integrated into CI/CD pipeline with parallel execution.",
-        results: ["Testing cycle reduced to 2 days", "90% reduction in production bugs", "Release frequency increased 4x", "Annual savings of $300K in QA costs"]
+        solution: "Build a comprehensive test automation framework with 85% coverage, integrated into CI/CD pipeline with parallel execution.",
+        results: ["Testing cycle reduced to 2 days", "Significant reduction in production bugs", "Release frequency increased 4x", "Annual savings of notable savings in QA costs"]
       }
     ],
     faqs: [
@@ -255,11 +255,11 @@ export const solutionsData: SolutionDetail[] = [
     technologies: ["PagerDuty", "Datadog", "New Relic", "Splunk", "Grafana", "Prometheus", "ELK Stack", "ServiceNow", "Jira", "Opsgenie", "Slack", "Teams"],
     caseStudies: [
       {
-        company: "PayStream Inc",
+        company: "FinTech Client",
         industry: "Financial Technology",
         challenge: "Critical payment processing platform experiencing frequent outages with slow incident response from existing support team.",
-        solution: "Deployed dedicated 24/7 support team with automated monitoring, alerting, and structured incident management processes.",
-        results: ["MTTR reduced from 4 hours to 30 minutes", "99.99% platform availability", "Zero critical incidents in 6 months", "40% reduction in support costs"]
+        solution: "Deploy dedicated 24/7 support team with automated monitoring, alerting, and structured incident management processes.",
+        results: ["MTTR dramatically reduced
       }
     ],
     faqs: [
@@ -295,11 +295,11 @@ export const solutionsData: SolutionDetail[] = [
     technologies: ["Kubernetes", "Docker", "Terraform", "Pulumi", "Helm", "ArgoCD", "Jenkins", "GitHub Actions", "GitLab CI", "Prometheus", "Grafana", "Jaeger", "Istio", "Ansible"],
     caseStudies: [
       {
-        company: "StreamMedia",
+        company: "Media Client",
         industry: "Media & Entertainment",
         challenge: "Manual deployments taking days, frequent rollback failures, and no visibility into production system health.",
-        solution: "Implemented GitOps-based CI/CD with ArgoCD, Kubernetes clusters with auto-scaling, and full observability with Prometheus/Grafana.",
-        results: ["Deployments reduced from days to minutes", "Zero-downtime releases", "95% reduction in rollback time", "Complete system observability"]
+        solution: "Implement GitOps-based CI/CD with ArgoCD, Kubernetes clusters with auto-scaling, and full observability with Prometheus/Grafana.",
+        results: ["Deployments dramatically reduced
       }
     ],
     faqs: [
@@ -335,11 +335,11 @@ export const solutionsData: SolutionDetail[] = [
     technologies: ["Apache Spark", "Airflow", "Kafka", "dbt", "Snowflake", "BigQuery", "Redshift", "Databricks", "Tableau", "Power BI", "Looker", "Python", "SQL", "Fivetran"],
     caseStudies: [
       {
-        company: "LogiChain Solutions",
+        company: "Logistics Client",
         industry: "Supply Chain & Logistics",
         challenge: "Data scattered across 15+ systems with no unified reporting, causing delayed and inaccurate business decisions.",
-        solution: "Built a modern data platform with Snowflake, dbt for transformations, Airflow for orchestration, and Tableau for executive dashboards.",
-        results: ["Single source of truth for all business data", "Reporting time reduced from days to minutes", "20% improvement in supply chain efficiency", "$2M annual savings from data-driven decisions"]
+        solution: "Build a modern data platform with Snowflake, dbt for transformations, Airflow for orchestration, and Tableau for executive dashboards.",
+        results: ["Single source of truth for all business data", "Reporting time dramatically reduced
       }
     ],
     faqs: [
@@ -375,15 +375,15 @@ export const solutionsData: SolutionDetail[] = [
     technologies: ["Informatica", "Talend", "Apache NiFi", "Collibra", "Alation", "SQL Server", "PostgreSQL", "Oracle", "MongoDB", "Snowflake", "Databricks"],
     caseStudies: [
       {
-        company: "National Insurance Group",
+        company: "Insurance Client",
         industry: "Insurance",
         challenge: "Fragmented customer data across 12 legacy systems causing policy errors and compliance risks.",
-        solution: "Implemented an MDM platform with automated data quality rules and a unified customer data hub.",
+        solution: "Implement an MDM platform with automated data quality rules and a unified customer data hub.",
         results: [
-          "95% improvement in data accuracy",
-          "60% reduction in policy processing errors",
+          "Meaningful improvement in data accuracy",
+          "Significant reduction in policy processing errors",
           "Full regulatory compliance achieved",
-          "$2M annual savings from decommissioned redundant systems"
+          "notable annual savings from decommissioned redundant systems"
         ]
       }
     ],
@@ -417,11 +417,11 @@ export const solutionsData: SolutionDetail[] = [
     technologies: ["AWS Cost Explorer", "Azure Cost Management", "GCP Billing", "CloudHealth", "Spot.io", "Kubecost", "Terraform", "Infracost"],
     caseStudies: [
       {
-        company: "Digital Media Corp",
+        company: "Media Client",
         industry: "Media & Entertainment",
         challenge: "Cloud costs growing 40% year-over-year with limited visibility into spend drivers.",
-        solution: "Implemented FinOps practices, rightsized instances, and automated scheduling for non-production environments.",
-        results: ["42% reduction in monthly cloud spend", "Real-time cost dashboards for engineering teams", "Automated savings of $15K/month from idle resources"]
+        solution: "Implement FinOps practices, rightsized instances, and automated scheduling for non-production environments.",
+        results: ["Significant reduction in monthly cloud spend", "Real-time cost dashboards for engineering teams", "Automated savings of significant/month from idle resources"]
       }
     ],
     faqs: [
@@ -453,10 +453,10 @@ export const solutionsData: SolutionDetail[] = [
     technologies: ["Kubernetes", "Anthos", "Azure Arc", "AWS Outposts", "Terraform", "Consul", "Istio", "HashiCorp Vault"],
     caseStudies: [
       {
-        company: "Global Trading Firm",
+        company: "Financial Services Client",
         industry: "Financial Services",
         challenge: "Needed low-latency workloads on-premises with burst capacity to cloud during peak trading hours.",
-        solution: "Designed a hybrid architecture with Kubernetes-based workload portability and automated burst-to-cloud during peak periods.",
+        solution: "Design a hybrid architecture with Kubernetes-based workload portability and automated burst-to-cloud during peak periods.",
         results: ["99.99% uptime achieved", "60% cost reduction during off-peak periods", "Sub-millisecond latency for critical workloads"]
       }
     ],
@@ -492,8 +492,8 @@ export const solutionsData: SolutionDetail[] = [
         company: "FinTech Startup",
         industry: "Financial Services",
         challenge: "Manual deployments taking 4+ hours with frequent rollbacks and production incidents.",
-        solution: "Built fully automated CI/CD pipelines with GitOps, canary deployments, and integrated security scanning.",
-        results: ["Deployments reduced from 4 hours to 12 minutes", "Zero-downtime releases achieved", "90% reduction in production incidents", "50+ deployments per week"]
+        solution: "Build fully automated CI/CD pipelines with GitOps, canary deployments, and integrated security scanning.",
+        results: ["Deployments dramatically reduced
       }
     ],
     faqs: [
@@ -528,8 +528,8 @@ export const solutionsData: SolutionDetail[] = [
         company: "Healthcare SaaS Provider",
         industry: "Healthcare",
         challenge: "Manual infrastructure provisioning taking weeks, with configuration inconsistencies across environments causing production bugs.",
-        solution: "Implemented Terraform modules with automated testing, GitOps workflows, and drift detection across 200+ cloud resources.",
-        results: ["Environment provisioning reduced from 2 weeks to 30 minutes", "Zero configuration drift incidents", "100% infrastructure audit compliance", "40% reduction in infrastructure team workload"]
+        solution: "Implement Terraform modules with automated testing, GitOps workflows, and drift detection across 200+ cloud resources.",
+        results: ["Environment provisioning dramatically reduced
       }
     ],
     faqs: [
@@ -564,11 +564,11 @@ export const solutionsData: SolutionDetail[] = [
     technologies: ["JMeter", "Gatling", "K6", "Locust", "BlazeMeter", "Datadog APM", "New Relic", "Lighthouse", "WebPageTest", "Grafana", "InfluxDB"],
     caseStudies: [
       {
-        company: "ShopStream",
+        company: "E-Commerce Client",
         industry: "E-Commerce",
         challenge: "Platform crashes during seasonal sales events, losing millions in revenue due to inability to handle 10x normal traffic.",
-        solution: "Implemented comprehensive performance testing suite simulating peak loads, identified critical database and caching bottlenecks, and established auto-scaling strategies.",
-        results: ["Handled 15x normal traffic during Black Friday", "Page load time reduced from 4.2s to 1.1s", "Zero downtime during peak sales", "$2.5M additional revenue captured"]
+        solution: "Implement comprehensive performance testing suite simulating peak loads, identified critical database and caching bottlenecks, and established auto-scaling strategies.",
+        results: ["Handled substantial normal traffic during Black Friday", "Page load time dramatically reduced
       }
     ],
     faqs: [
@@ -604,11 +604,11 @@ export const solutionsData: SolutionDetail[] = [
     technologies: ["Burp Suite", "OWASP ZAP", "SonarQube", "Snyk", "Veracode", "Checkmarx", "Nessus", "Qualys", "AWS Security Hub", "Trivy", "Dependabot"],
     caseStudies: [
       {
-        company: "MedSecure Health",
+        company: "Healthcare Client",
         industry: "Healthcare",
         challenge: "Needed to achieve HIPAA compliance for a new patient portal while addressing multiple security vulnerabilities found in a previous audit.",
-        solution: "Conducted comprehensive penetration testing, implemented SAST/DAST in CI/CD pipeline, remediated all critical findings, and established ongoing security monitoring.",
-        results: ["100% of critical vulnerabilities remediated", "HIPAA compliance achieved in 8 weeks", "Passed external audit with zero findings", "50% reduction in security incidents year-over-year"]
+        solution: "Conduct comprehensive penetration testing, implemented SAST/DAST in CI/CD pipeline, remediated all critical findings, and established ongoing security monitoring.",
+        results: ["100% of critical vulnerabilities remediated", "HIPAA compliance achieved in 8 weeks", "Passed external audit with zero findings", "Significant reduction in security incidents year-over-year"]
       }
     ],
     faqs: [
@@ -644,11 +644,11 @@ export const solutionsData: SolutionDetail[] = [
     technologies: ["AWS", "Azure", "GCP", "VMware", "Oracle", "SQL Server", "PostgreSQL", "MongoDB", "Ansible", "Terraform", "ServiceNow", "Zabbix"],
     caseStudies: [
       {
-        company: "Midwest Manufacturing Co.",
+        company: "Manufacturing Client",
         industry: "Manufacturing",
         challenge: "Small IT team overwhelmed by maintaining 200+ servers, multiple databases, and legacy ERP systems while trying to drive digital transformation.",
-        solution: "Transitioned infrastructure and database management to our managed services team, freeing internal staff to focus on strategic initiatives.",
-        results: ["35% reduction in IT operational costs", "99.95% system uptime achieved", "Internal team refocused on digital initiatives", "Successful ERP modernization completed on schedule"]
+        solution: "Transition infrastructure and database management to our managed services team, freeing internal staff to focus on strategic initiatives.",
+        results: ["Significant reduction in IT operational costs", "99.95% system uptime achieved", "Internal team refocused on digital initiatives", "Successful ERP modernization completed on schedule"]
       }
     ],
     faqs: [
@@ -684,10 +684,10 @@ export const solutionsData: SolutionDetail[] = [
     technologies: ["ServiceNow", "Jira Service Management", "Freshservice", "BMC Helix", "PagerDuty", "Confluence", "Power Automate", "Zapier", "Slack", "Teams"],
     caseStudies: [
       {
-        company: "National Credit Union",
+        company: "Financial Services Client",
         industry: "Financial Services",
         challenge: "Inconsistent IT service delivery across 50 branches with no centralized ticketing, leading to poor user satisfaction and untracked SLAs.",
-        solution: "Implemented ServiceNow-based ITSM platform with automated workflows, self-service portal, and comprehensive reporting across all branches.",
+        solution: "Implement ServiceNow-based ITSM platform with automated workflows, self-service portal, and comprehensive reporting across all branches.",
         results: ["User satisfaction improved from 62% to 91%", "First-call resolution increased to 78%", "Mean time to resolve reduced by 45%", "Full SLA visibility across all branches"]
       }
     ],
@@ -724,11 +724,11 @@ export const solutionsData: SolutionDetail[] = [
     technologies: ["ServiceNow ITAM", "Flexera", "Snow Software", "Lansweeper", "Oomnitza", "Microsoft Intune", "Jamf", "AWS Cost Explorer", "Azure Cost Management", "Cloudability"],
     caseStudies: [
       {
-        company: "Continental Logistics",
+        company: "Logistics Client",
         industry: "Logistics & Transportation",
-        challenge: "A logistics company with 5,000+ endpoints had no centralized asset tracking, leading to over-provisioned software licenses and surprise audit penalties.",
-        solution: "Deployed ServiceNow ITAM with automated discovery, integrated Flexera for license optimization, and established lifecycle workflows from procurement to disposal.",
-        results: ["$1.2M annual savings from license reclamation", "100% asset visibility across all locations", "Software audit penalties eliminated", "Hardware refresh cycle optimized, extending useful life by 18 months"]
+        challenge: "A logistics company with 5,000+ endpoints has no centralized asset tracking, leading to over-provisioned software licenses and surprise audit penalties.",
+        solution: "Deploy ServiceNow ITAM with automated discovery, integrated Flexera for license optimization, and established lifecycle workflows from procurement to disposal.",
+        results: ["notable annual savings from license reclamation", "100% asset visibility across all locations", "Software audit penalties eliminated", "Hardware refresh cycle optimized, extending useful life by 18 months"]
       }
     ],
     faqs: [
@@ -766,11 +766,11 @@ export const solutionsData: SolutionDetail[] = [
     technologies: ["AWS Elastic Disaster Recovery", "Azure Site Recovery", "Veeam", "Zerto", "Commvault", "Druva", "Rubrik", "VMware SRM", "Cloudflare", "HashiCorp Terraform"],
     caseStudies: [
       {
-        company: "MediCare Systems",
+        company: "Healthcare Client",
         industry: "Healthcare",
-        challenge: "A healthcare provider had no formal DR plan and experienced a ransomware attack that caused 72 hours of downtime, impacting patient care and costing over $2M in losses.",
-        solution: "Designed a multi-region DR architecture on AWS with automated failover, implemented Veeam with immutable backups, and established quarterly DR testing with documented runbooks.",
-        results: ["RTO reduced from 72 hours to 45 minutes", "RPO improved from 24 hours to 15 minutes", "Zero data loss in subsequent DR tests", "Full compliance with HIPAA business continuity requirements"]
+        challenge: "A healthcare provider has no formal DR plan and experiences a ransomware attack that causes 72 hours of downtime, impacting patient care and costing over $2M in losses.",
+        solution: "Design a multi-region DR architecture on AWS with automated failover, implemented Veeam with immutable backups, and established quarterly DR testing with documented runbooks.",
+        results: ["RTO dramatically reduced
       }
     ],
     faqs: [
@@ -808,9 +808,9 @@ export const solutionsData: SolutionDetail[] = [
       {
         company: "RetailMax Group",
         industry: "Retail",
-        challenge: "Executives relied on weekly static spreadsheets for decision-making, with no real-time visibility into sales performance, inventory, or customer behavior across 150 stores.",
-        solution: "Built a cloud data warehouse consolidating POS, inventory, and CRM data, with role-based Power BI dashboards delivering real-time insights to store managers and C-suite.",
-        results: ["Decision cycle reduced from 7 days to real-time", "15% improvement in inventory turnover", "$4M annual savings from optimized stock management", "Self-service adoption by 90% of managers"]
+        challenge: "Executives relies on weekly static spreadsheets for decision-making, with no real-time visibility into sales performance, inventory, or customer behavior across 150 stores.",
+        solution: "Build a cloud data warehouse consolidating POS, inventory, and CRM data, with role-based Power BI dashboards delivering real-time insights to store managers and C-suite.",
+        results: ["Decision cycle dramatically reduced
       }
     ],
     faqs: [
@@ -848,9 +848,9 @@ export const solutionsData: SolutionDetail[] = [
       {
         company: "InsureRight",
         industry: "Insurance",
-        challenge: "Claims processing took an average of 14 days with high error rates, leading to poor customer satisfaction and increased operational costs.",
-        solution: "Developed an AI-powered claims processing pipeline using NLP for document extraction, ML models for fraud detection, and automated decisioning for straightforward claims.",
-        results: ["Claims processing time reduced to 2 days", "Fraud detection accuracy improved by 40%", "60% of simple claims auto-approved", "$8M annual savings in operational costs"]
+        challenge: "Claims processing takes an average of 14 days with high error rates, leading to poor customer satisfaction and increased operational costs.",
+        solution: "Develop an AI-powered claims processing pipeline using NLP for document extraction, ML models for fraud detection, and automated decisioning for straightforward claims.",
+        results: ["Claims processing time reduced to 2 days", "Fraud detection accuracy improved by 40%", "60% of simple claims auto-approved", "notable annual savings in operational costs"]
       }
     ],
     faqs: [
@@ -889,7 +889,7 @@ export const solutionsData: SolutionDetail[] = [
         company: "FitTrack Pro",
         industry: "Health & Wellness",
         challenge: "Needed a unified mobile experience for iOS and Android with real-time health data syncing, wearable integration, and offline workout tracking.",
-        solution: "Built a cross-platform app using React Native with offline-first architecture, real-time syncing via WebSockets, and integration with Apple Health and Google Fit APIs.",
+        solution: "Build a cross-platform app using React Native with offline-first architecture, real-time syncing via WebSockets, and integration with Apple Health and Google Fit APIs.",
         results: ["Launched on both platforms in 4 months", "500K+ downloads in first quarter", "4.8-star average app store rating", "Daily active users grew 30% month-over-month"]
       }
     ],
@@ -926,11 +926,11 @@ export const solutionsData: SolutionDetail[] = [
     technologies: ["Node.js", "Python", "Java", "GraphQL", "Apollo", "Kong", "Apigee", "AWS API Gateway", "Swagger/OpenAPI", "Postman", "MuleSoft", "Zapier"],
     caseStudies: [
       {
-        company: "LogiChain Solutions",
+        company: "Logistics Client",
         industry: "Logistics",
         challenge: "Disconnected systems across warehousing, transportation, and order management created data silos, manual reconciliation, and delayed shipment tracking.",
-        solution: "Designed a unified API layer connecting WMS, TMS, and OMS platforms with real-time event-driven architecture, enabling end-to-end supply chain visibility.",
-        results: ["Order processing time reduced by 60%", "Real-time tracking for 100% of shipments", "Partner onboarding reduced from weeks to days", "$1.2M saved annually in manual reconciliation"]
+        solution: "Design a unified API layer connecting WMS, TMS, and OMS platforms with real-time event-driven architecture, enabling end-to-end supply chain visibility.",
+        results: ["Order processing time reduced by 60%", "Real-time tracking for 100% of shipments", "Partner onboarding dramatically reduced
       }
     ],
     faqs: [
@@ -969,7 +969,7 @@ export const solutionsData: SolutionDetail[] = [
         company: "FinGuard Banking",
         industry: "Financial Services",
         challenge: "Unclassified sensitive data spread across 50+ databases with no encryption strategy, putting the organization at risk of regulatory penalties and data breaches.",
-        solution: "Deployed automated data discovery and classification, implemented column-level encryption for PII/PCI data, and established DLP policies across all endpoints and cloud storage.",
+        solution: "Deploy automated data discovery and classification, implemented column-level encryption for PII/PCI data, and established DLP policies across all endpoints and cloud storage.",
         results: ["100% of sensitive data classified and encrypted", "PCI DSS Level 1 compliance achieved", "Zero data leakage incidents post-implementation", "Audit preparation time reduced by 70%"]
       }
     ],
@@ -1009,8 +1009,8 @@ export const solutionsData: SolutionDetail[] = [
         company: "GlobalTech Enterprises",
         industry: "Technology",
         challenge: "No formal security program, ad-hoc incident handling, and failed SOC 2 audit blocking enterprise sales pipeline worth $20M.",
-        solution: "Built an ISMS from the ground up — risk assessment, policy framework, 24/7 SOC with SIEM deployment, vulnerability management program, and employee security training.",
-        results: ["SOC 2 Type II certification in 6 months", "$20M enterprise pipeline unblocked", "Mean time to detect threats reduced to 15 minutes", "95% employee phishing test pass rate"]
+        solution: "Build an ISMS from the ground up — risk assessment, policy framework, 24/7 SOC with SIEM deployment, vulnerability management program, and employee security training.",
+        results: ["SOC 2 Type II certification in 6 months", "significant enterprise pipeline unblocked", "Mean time to detect threats reduced to 15 minutes", "95% employee phishing test pass rate"]
       }
     ],
     faqs: [
@@ -1049,7 +1049,7 @@ export const solutionsData: SolutionDetail[] = [
         company: "CloudPay Systems",
         industry: "FinTech",
         challenge: "Critical vulnerabilities discovered in production code and third-party dependencies, with no automated scanning in the CI/CD pipeline — manual reviews missed 60% of issues.",
-        solution: "Implemented SAST, DAST, and SCA tools as CI/CD gates, established secure coding standards, deployed secret scanning across all repositories, and trained 80 developers on secure practices.",
+        solution: "Implement SAST, DAST, and SCA tools as CI/CD gates, established secure coding standards, deployed secret scanning across all repositories, and trained 80 developers on secure practices.",
         results: ["92% of vulnerabilities caught pre-production", "Third-party dependency risks reduced by 85%", "Zero critical CVEs in production for 12 months", "Developer security proficiency doubled"]
       }
     ],
@@ -1088,8 +1088,8 @@ export const solutionsData: SolutionDetail[] = [
       {
         company: "ScaleUp SaaS",
         industry: "Technology",
-        challenge: "Rapid cloud expansion led to 3,000+ unaudited instances across 12 AWS accounts with misconfigured security groups, public S3 buckets, and no centralized visibility.",
-        solution: "Deployed CSPM across all accounts, remediated 500+ critical misconfigurations, implemented automated guardrails via IaC policies, and established continuous compliance monitoring.",
+        challenge: "Rapid cloud expansion leads to 3,000+ unaudited instances across 12 AWS accounts with misconfigured security groups, public S3 buckets, and no centralized visibility.",
+        solution: "Deploy CSPM across all accounts, remediated 500+ critical misconfigurations, implemented automated guardrails via IaC policies, and established continuous compliance monitoring.",
         results: ["500+ critical misconfigurations remediated in 4 weeks", "100% visibility across 12 AWS accounts", "CIS benchmark compliance improved from 42% to 97%", "Automated remediation for 80% of common drift issues"]
       }
     ],
@@ -1129,8 +1129,8 @@ export const solutionsData: SolutionDetail[] = [
         company: "Continental Healthcare Network",
         industry: "Healthcare",
         challenge: "150+ applications with separate credentials, no centralized access governance, and failed HIPAA audit due to orphaned accounts and excessive privileges.",
-        solution: "Implemented Okta SSO with MFA across all applications, deployed CyberArk PAM for privileged accounts, and established automated joiner/mover/leaver workflows tied to HR systems.",
-        results: ["Login time reduced from 45 minutes to 2 minutes daily per user", "100% MFA coverage across all applications", "Orphaned accounts eliminated with automated deprovisioning", "HIPAA access control audit passed with zero findings"]
+        solution: "Implement Okta SSO with MFA across all applications, deployed CyberArk PAM for privileged accounts, and established automated joiner/mover/leaver workflows tied to HR systems.",
+        results: ["Login time dramatically reduced
       }
     ],
     faqs: [
@@ -1172,9 +1172,9 @@ export const solutionsData: SolutionDetail[] = [
       {
         company: "SecureBank Corp",
         industry: "Financial Services",
-        challenge: "A regional bank experienced a sophisticated phishing attack and lacked a formal incident response plan, leading to delayed containment and regulatory scrutiny.",
-        solution: "Conducted a full cybersecurity maturity assessment, developed and tested an incident response playbook, implemented threat hunting capabilities, and established a security operations center (SOC) partnership.",
-        results: ["Incident response time reduced from 72 hours to 4 hours", "Achieved NIST CSF Tier 3 maturity within 12 months", "Zero successful breaches in 18 months post-engagement", "Regulatory confidence restored with documented security posture"]
+        challenge: "A regional bank experiences a sophisticated phishing attack and lacks a formal incident response plan, leading to delayed containment and regulatory scrutiny.",
+        solution: "Conduct a full cybersecurity maturity assessment, developed and tested an incident response playbook, implemented threat hunting capabilities, and established a security operations center (SOC) partnership.",
+        results: ["Incident response time dramatically reduced
       }
     ],
     faqs: [
@@ -1216,8 +1216,8 @@ export const solutionsData: SolutionDetail[] = [
       {
         company: "MedFlow Health",
         industry: "Healthcare SaaS",
-        challenge: "A fast-growing health-tech startup needed SOC 2 Type II and HIPAA compliance to close enterprise deals but had no formal compliance program or dedicated security staff.",
-        solution: "Implemented Vanta for automated compliance monitoring, developed comprehensive security policies, established a risk management framework, and prepared the organization for SOC 2 Type II and HIPAA audits within 6 months.",
+        challenge: "A fast-growing health-tech startup needs SOC 2 Type II and HIPAA compliance to close enterprise deals but has no formal compliance program or dedicated security staff.",
+        solution: "Implement Vanta for automated compliance monitoring, developed comprehensive security policies, established a risk management framework, and prepared the organization for SOC 2 Type II and HIPAA audits within 6 months.",
         results: ["SOC 2 Type II achieved in 5 months from zero baseline", "HIPAA compliance validated with zero critical findings", "Enterprise deal pipeline increased by 300%", "Ongoing compliance maintained with 90% automation"]
       }
     ],
@@ -1254,9 +1254,9 @@ export const solutionsData: SolutionDetail[] = [
       {
         company: "FinTech Company",
         industry: "Financial Services",
-        challenge: "New service onboarding took 2 weeks with heavy manual configuration and inconsistent environments.",
-        solution: "Built a Backstage-based internal developer portal with self-service provisioning and golden path templates.",
-        results: ["Onboarding reduced from 2 weeks to 30 minutes", "60% improvement in developer satisfaction", "Standardized service templates across 15 teams"]
+        challenge: "New service onboarding takes 2 weeks with heavy manual configuration and inconsistent environments.",
+        solution: "Build a Backstage-based internal developer portal with self-service provisioning and golden path templates.",
+        results: ["Onboarding dramatically reduced
       }
     ],
     faqs: [
@@ -1292,8 +1292,8 @@ export const solutionsData: SolutionDetail[] = [
         company: "E-Commerce Platform",
         industry: "Retail",
         challenge: "120+ microservices with no unified observability, leading to long incident resolution times.",
-        solution: "Implemented OpenTelemetry-based distributed tracing and Grafana dashboards across the entire stack.",
-        results: ["75% reduction in mean time to detection", "55% reduction in mean time to resolution", "Unified observability across 120+ services"]
+        solution: "Implement OpenTelemetry-based distributed tracing and Grafana dashboards across the entire stack.",
+        results: ["Significant reduction in mean time to detection", "Significant reduction in mean time to resolution", "Unified observability across 120+ services"]
       }
     ],
     faqs: [
@@ -1329,8 +1329,8 @@ export const solutionsData: SolutionDetail[] = [
         company: "SaaS Enterprise",
         industry: "Technology",
         challenge: "Cloud costs growing 30% quarter-over-quarter with no visibility into spend drivers across 200+ AWS accounts.",
-        solution: "Implemented FinOps framework with CloudHealth, automated tagging, rightsizing recommendations, and team-level chargeback dashboards.",
-        results: ["35% reduction in annual cloud spend", "Full cost attribution across 40 engineering teams", "Automated anomaly detection preventing $50K+ monthly overruns"]
+        solution: "Implement FinOps framework with CloudHealth, automated tagging, rightsizing recommendations, and team-level chargeback dashboards.",
+        results: ["Significant reduction in annual cloud spend", "Full cost attribution across 40 engineering teams", "Automated anomaly detection preventing significant+ monthly overruns"]
       }
     ],
     faqs: [
@@ -1366,7 +1366,7 @@ export const solutionsData: SolutionDetail[] = [
         company: "Media Streaming Company",
         industry: "Media & Entertainment",
         challenge: "Needed to process millions of real-time events daily for content recommendations with unpredictable traffic spikes.",
-        solution: "Built a fully serverless event-driven pipeline using Lambda, EventBridge, and DynamoDB with automatic scaling.",
+        solution: "Build a fully serverless event-driven pipeline using Lambda, EventBridge, and DynamoDB with automatic scaling.",
         results: ["Processing 5M+ events/day with zero ops overhead", "70% cost reduction vs. always-on infrastructure", "Sub-second response times during peak traffic"]
       }
     ],
@@ -1402,9 +1402,9 @@ export const solutionsData: SolutionDetail[] = [
       {
         company: "Insurance Provider",
         industry: "Financial Services",
-        challenge: "Manual regression testing took 3 weeks per release, creating a bottleneck for quarterly deployments.",
-        solution: "Built a Playwright-based automation framework with 1,200+ tests integrated into CI/CD, enabling daily regression runs.",
-        results: ["Regression cycle reduced from 3 weeks to 4 hours", "85% test automation coverage", "Release frequency increased from quarterly to bi-weekly"]
+        challenge: "Manual regression testing takes 3 weeks per release, creating a bottleneck for quarterly deployments.",
+        solution: "Build a Playwright-based automation framework with 1,200+ tests integrated into CI/CD, enabling daily regression runs.",
+        results: ["Regression cycle dramatically reduced
       }
     ],
     faqs: [
@@ -1439,9 +1439,9 @@ export const solutionsData: SolutionDetail[] = [
       {
         company: "Government Agency",
         industry: "Public Sector",
-        challenge: "Public-facing portal had 500+ WCAG violations, risking ADA non-compliance lawsuits and excluding users with disabilities.",
-        solution: "Conducted comprehensive accessibility audit, prioritized critical violations, and guided remediation with developer training sessions.",
-        results: ["100% WCAG 2.1 AA compliance achieved", "500+ violations remediated across 80 pages", "Accessibility integrated into CI/CD with automated checks"]
+        challenge: "Public-facing portal has 500+ WCAG violations, risking ADA non-compliance lawsuits and excluding users with disabilities.",
+        solution: "Conduct comprehensive accessibility audit, prioritized critical violations, and guided remediation with developer training sessions.",
+        results: ["100% WCAG 2.1 AA compliance achieved", "500+ violations remediated across numerous pages", "Accessibility integrated into CI/CD with automated checks"]
       }
     ],
     faqs: [
@@ -1474,11 +1474,11 @@ export const solutionsData: SolutionDetail[] = [
     technologies: ["Microsoft Power Platform", "OutSystems", "Mendix", "Appian", "Retool", "Bubble", "ServiceNow App Engine", "Salesforce Lightning", "Google AppSheet", "Zoho Creator"],
     caseStudies: [
       {
-        company: "Healthcare Network",
+        company: "Healthcare Client",
         industry: "Healthcare",
         challenge: "IT backlog of 200+ application requests from business units with an average 6-month delivery timeline.",
-        solution: "Implemented Microsoft Power Platform with governance framework, trained 50 citizen developers, and built a center of excellence.",
-        results: ["IT backlog reduced by 70% in 6 months", "Average app delivery time dropped from 6 months to 2 weeks", "50 citizen developers building production apps"]
+        solution: "Implement Microsoft Power Platform with governance framework, trained 50 citizen developers, and built a center of excellence.",
+        results: ["IT backlog reduced by 70% in 6 months", "Average app delivery time dropped from 6 months to 2 weeks", "numerous citizen developers building production apps"]
       }
     ],
     faqs: [
@@ -1511,10 +1511,10 @@ export const solutionsData: SolutionDetail[] = [
     technologies: ["Figma", "Adobe XD", "Sketch", "InVision", "Storybook", "Zeplin", "Hotjar", "Maze", "UserTesting", "Optimal Workshop"],
     caseStudies: [
       {
-        company: "B2B SaaS Platform",
+        company: "SaaS Client",
         industry: "Technology",
         challenge: "Complex enterprise dashboard with poor usability scores, high support ticket volume, and 40% feature abandonment rate.",
-        solution: "Conducted user research with 30+ interviews, redesigned the dashboard with simplified navigation and a new design system in Figma.",
+        solution: "Conduct user research with 30+ interviews, redesigned the dashboard with simplified navigation and a new design system in Figma.",
         results: ["User satisfaction score increased from 3.2 to 4.6/5", "Support tickets reduced by 45%", "Feature adoption increased by 60%"]
       }
     ],
@@ -1548,11 +1548,11 @@ export const solutionsData: SolutionDetail[] = [
     technologies: ["OpenAI GPT", "Google Gemini", "Anthropic Claude", "LangChain", "LlamaIndex", "Hugging Face", "Pinecone", "Weaviate", "AWS Bedrock", "Azure OpenAI"],
     caseStudies: [
       {
-        company: "Legal Services Firm",
+        company: "Legal Client",
         industry: "Legal",
-        challenge: "Lawyers spent 40% of billable hours on document review and research across millions of case files.",
-        solution: "Built a RAG-based AI assistant using LangChain and GPT-4 with vector search over the firm's document repository.",
-        results: ["60% reduction in document review time", "95% accuracy in legal research queries", "$2M annual savings in billable hour efficiency"]
+        challenge: "Lawyers spend 40% of billable hours on document review and research across millions of case files.",
+        solution: "Build a RAG-based AI assistant using LangChain and GPT-4 with vector search over the firm's document repository.",
+        results: ["Significant reduction in document review time", "95% accuracy in legal research queries", "notable annual savings in billable hour efficiency"]
       }
     ],
     faqs: [
@@ -1585,11 +1585,11 @@ export const solutionsData: SolutionDetail[] = [
     technologies: ["LangGraph", "CrewAI", "AutoGen", "OpenAI Assistants API", "LangChain Agents", "Semantic Kernel", "Haystack", "Prefect", "Temporal", "n8n"],
     caseStudies: [
       {
-        company: "Supply Chain Company",
+        company: "Supply Chain Client",
         industry: "Logistics",
         challenge: "Complex procurement process requiring coordination across 5 departments with manual handoffs causing 2-week delays.",
-        solution: "Deployed a multi-agent system using LangGraph with specialized agents for vendor evaluation, compliance checking, and approval routing.",
-        results: ["Procurement cycle reduced from 2 weeks to 2 days", "90% reduction in manual handoffs", "30% cost savings through automated vendor negotiation"]
+        solution: "Deploy a multi-agent system using LangGraph with specialized agents for vendor evaluation, compliance checking, and approval routing.",
+        results: ["Procurement cycle dramatically reduced
       }
     ],
     faqs: [
@@ -1625,8 +1625,8 @@ export const solutionsData: SolutionDetail[] = [
         company: "FinTech Startup",
         industry: "Financial Services",
         challenge: "Data science team deploying models manually with no versioning, monitoring, or automated retraining — leading to model drift and inconsistent predictions.",
-        solution: "Implemented end-to-end MLOps pipeline using MLflow, Kubeflow, and Seldon Core with automated drift detection and retraining triggers.",
-        results: ["Model deployment time reduced from weeks to hours", "99.5% model uptime with automated monitoring", "30% improvement in prediction accuracy through continuous retraining"]
+        solution: "Implement end-to-end MLOps pipeline using MLflow, Kubeflow, and Seldon Core with automated drift detection and retraining triggers.",
+        results: ["Model deployment time dramatically reduced
       }
     ],
     faqs: [
@@ -1659,11 +1659,11 @@ export const solutionsData: SolutionDetail[] = [
     technologies: ["SAP S/4HANA", "Oracle ERP Cloud", "Microsoft Dynamics 365", "NetSuite", "Infor CloudSuite", "Workday", "Epicor", "Odoo", "Acumatica", "IFS"],
     caseStudies: [
       {
-        company: "Manufacturing Enterprise",
+        company: "Manufacturing Client",
         industry: "Manufacturing",
         challenge: "Operating on a 15-year-old legacy ERP with fragmented data across 8 plants and manual reconciliation processes.",
-        solution: "Migrated to SAP S/4HANA with unified data model, automated inter-plant workflows, and real-time financial consolidation.",
-        results: ["40% reduction in month-end close time", "Unified operations across 8 manufacturing plants", "Real-time inventory visibility reducing stockouts by 60%"]
+        solution: "Migrate to SAP S/4HANA with unified data model, automated inter-plant workflows, and real-time financial consolidation.",
+        results: ["Significant reduction in month-end close time", "Unified operations across 8 manufacturing plants", "Real-time inventory visibility reducing stockouts by 60%"]
       }
     ],
     faqs: [
@@ -1696,11 +1696,11 @@ export const solutionsData: SolutionDetail[] = [
     technologies: ["Salesforce", "HubSpot", "Microsoft Dynamics 365 CRM", "Zoho CRM", "Freshsales", "Pipedrive", "SugarCRM", "Monday CRM", "SAP CRM", "Oracle CX"],
     caseStudies: [
       {
-        company: "B2B Technology Company",
+        company: "Technology Client",
         industry: "Technology",
         challenge: "Sales team using spreadsheets and disconnected tools, losing 30% of leads due to lack of follow-up and no pipeline visibility.",
-        solution: "Implemented Salesforce with automated lead scoring, pipeline management, marketing automation integration, and custom dashboards.",
-        results: ["45% increase in lead conversion rates", "Complete pipeline visibility for leadership", "20% revenue growth in first year post-implementation"]
+        solution: "Implement Salesforce with automated lead scoring, pipeline management, marketing automation integration, and custom dashboards.",
+        results: ["Notable increase in lead conversion rates", "Complete pipeline visibility for leadership", "20% revenue growth in first year post-implementation"]
       }
     ],
     faqs: [
@@ -1733,11 +1733,11 @@ export const solutionsData: SolutionDetail[] = [
     technologies: ["MuleSoft", "Dell Boomi", "Workato", "Apache Kafka", "Azure Integration Services", "AWS EventBridge", "Informatica", "Talend", "IBM App Connect", "Kong Gateway"],
     caseStudies: [
       {
-        company: "Retail Chain",
+        company: "Retail Client",
         industry: "Retail",
         challenge: "12 disconnected systems (POS, ERP, e-commerce, WMS) with manual data transfers causing 48-hour delays in inventory updates.",
-        solution: "Implemented MuleSoft-based integration platform with real-time event-driven architecture connecting all systems.",
-        results: ["Real-time inventory sync across all channels", "48-hour data delay eliminated", "50% reduction in integration maintenance effort"]
+        solution: "Implement MuleSoft-based integration platform with real-time event-driven architecture connecting all systems.",
+        results: ["Real-time inventory sync across all channels", "48-hour data delay eliminated", "Significant reduction in integration maintenance effort"]
       }
     ],
     faqs: [
@@ -1770,11 +1770,11 @@ export const solutionsData: SolutionDetail[] = [
     technologies: ["Kubernetes", "Docker", "AWS App2Container", "Azure Migrate", "Strangler Fig Pattern", "Spring Boot", ".NET Core", "React", "PostgreSQL", "MongoDB"],
     caseStudies: [
       {
-        company: "Insurance Corporation",
+        company: "Insurance Client",
         industry: "Insurance",
         challenge: "Core policy management system built on COBOL mainframe — costly to maintain, impossible to integrate with modern digital channels.",
-        solution: "Applied strangler fig pattern to incrementally modernize into microservices on Kubernetes while keeping the mainframe running during transition.",
-        results: ["70% reduction in infrastructure costs", "New feature delivery accelerated from months to weeks", "Seamless integration with mobile app and partner portals"]
+        solution: "Apply strangler fig pattern to incrementally modernize into microservices on Kubernetes while keeping the mainframe running during transition.",
+        results: ["Significant reduction in infrastructure costs", "New feature delivery accelerated from months to weeks", "Seamless integration with mobile app and partner portals"]
       }
     ],
     faqs: [
@@ -1807,11 +1807,11 @@ export const solutionsData: SolutionDetail[] = [
     technologies: ["Microsoft Intune", "VMware Workspace ONE", "Jamf", "MobileIron", "Samsung Knox", "Citrix Endpoint Management", "IBM MaaS360", "Lookout", "Zimperium", "AppConfig"],
     caseStudies: [
       {
-        company: "Healthcare System",
+        company: "Healthcare Client",
         industry: "Healthcare",
         challenge: "5,000+ clinicians using personal devices to access patient data with no security controls or compliance framework.",
-        solution: "Deployed Microsoft Intune with BYOD containerization, conditional access policies, and HIPAA-compliant mobile workspace.",
-        results: ["100% HIPAA compliance for mobile access", "5,000 devices enrolled and secured in 8 weeks", "Zero data breach incidents since deployment"]
+        solution: "Deploy Microsoft Intune with BYOD containerization, conditional access policies, and HIPAA-compliant mobile workspace.",
+        results: ["100% HIPAA compliance for mobile access", "5,numerous devices enrolled and secured in 8 weeks", "Zero data breach incidents since deployment"]
       }
     ],
     faqs: [
@@ -1844,11 +1844,11 @@ export const solutionsData: SolutionDetail[] = [
     technologies: ["SAP SCM", "Oracle SCM Cloud", "Blue Yonder", "Kinaxis RapidResponse", "Manhattan Associates", "Coupa", "Anaplan", "o9 Solutions", "E2open", "FourKites"],
     caseStudies: [
       {
-        company: "Consumer Goods Manufacturer",
+        company: "Consumer Goods Client",
         industry: "Consumer Goods",
         challenge: "Frequent stockouts and overstocking across 500+ SKUs due to inaccurate demand forecasting and fragmented supply chain visibility.",
-        solution: "Implemented Blue Yonder demand planning with AI-driven forecasting, integrated with SAP for real-time inventory visibility across 12 distribution centers.",
-        results: ["30% reduction in inventory carrying costs", "Stockout incidents reduced by 65%", "Demand forecast accuracy improved from 60% to 88%"]
+        solution: "Implement Blue Yonder demand planning with AI-driven forecasting, integrated with SAP for real-time inventory visibility across 12 distribution centers.",
+        results: ["Significant reduction in inventory carrying costs", "Stockout incidents reduced by 65%", "Demand forecast accuracy improved from 60% to 88%"]
       }
     ],
     faqs: [
@@ -1881,11 +1881,11 @@ export const solutionsData: SolutionDetail[] = [
     technologies: ["SharePoint", "OpenText", "Hyland OnBase", "Box", "M-Files", "DocuSign", "ABBYY", "Laserfiche", "Alfresco", "Google Workspace"],
     caseStudies: [
       {
-        company: "Government Department",
+        company: "Government Client",
         industry: "Public Sector",
         challenge: "Processing 50,000+ paper documents monthly with manual data entry, 5-day average processing time, and no digital audit trail.",
-        solution: "Deployed intelligent document processing with ABBYY and Hyland OnBase, automating capture, classification, and routing with digital workflows.",
-        results: ["Document processing time reduced from 5 days to 4 hours", "95% automated data extraction accuracy", "Complete digital audit trail for compliance"]
+        solution: "Deploy intelligent document processing with ABBYY and Hyland OnBase, automating capture, classification, and routing with digital workflows.",
+        results: ["Document processing time dramatically reduced
       }
     ],
     faqs: [
@@ -1918,11 +1918,11 @@ export const solutionsData: SolutionDetail[] = [
     technologies: ["Collibra", "Alation", "Informatica Data Governance", "Atlan", "Apache Atlas", "Great Expectations", "Monte Carlo", "Talend Data Quality", "IBM InfoSphere", "Microsoft Purview"],
     caseStudies: [
       {
-        company: "Banking Institution",
+        company: "Banking Client",
         industry: "Financial Services",
         challenge: "No centralized data catalog, inconsistent data definitions across departments, and GDPR compliance gaps threatening regulatory penalties.",
-        solution: "Implemented Collibra-based data governance platform with automated data lineage, quality rules, and stewardship workflows across 50+ data domains.",
-        results: ["Full GDPR compliance achieved in 6 months", "90% of critical data assets cataloged & governed", "40% reduction in data quality incidents"]
+        solution: "Implement Collibra-based data governance platform with automated data lineage, quality rules, and stewardship workflows across 50+ data domains.",
+        results: ["Full GDPR compliance achieved in 6 months", "90% of critical data assets cataloged & governed", "Significant reduction in data quality incidents"]
       }
     ],
     faqs: [
@@ -1955,11 +1955,11 @@ export const solutionsData: SolutionDetail[] = [
     technologies: ["Snowflake", "Databricks", "Google BigQuery", "Amazon Redshift", "Azure Synapse", "Apache Iceberg", "Delta Lake", "dbt", "Apache Spark", "Fivetran"],
     caseStudies: [
       {
-        company: "E-Commerce Company",
+        company: "E-Commerce Client",
         industry: "Retail",
         challenge: "Analytics running on a legacy on-premise data warehouse with 8-hour report refresh cycles and inability to handle growing data volumes.",
-        solution: "Migrated to Snowflake with a lakehouse architecture using dbt for transformations and Fivetran for automated ingestion from 30+ sources.",
-        results: ["Report refresh reduced from 8 hours to 15 minutes", "10x data volume capacity with elastic scaling", "60% reduction in annual data infrastructure costs"]
+        solution: "Migrate to Snowflake with a lakehouse architecture using dbt for transformations and Fivetran for automated ingestion from 30+ sources.",
+        results: ["Report refresh dramatically reduced
       }
     ],
     faqs: [
@@ -1992,10 +1992,10 @@ export const solutionsData: SolutionDetail[] = [
     technologies: ["Apache Airflow", "dbt", "Fivetran", "Airbyte", "Apache Kafka", "Spark Structured Streaming", "Prefect", "Dagster", "AWS Glue", "Azure Data Factory"],
     caseStudies: [
       {
-        company: "AdTech Platform",
+        company: "AdTech Client",
         industry: "Advertising Technology",
         challenge: "Processing 2 billion daily ad events with fragile, manually maintained ETL scripts causing frequent data outages and stale dashboards.",
-        solution: "Rebuilt pipelines using Apache Kafka for real-time streaming, dbt for transformations, and Dagster for orchestration with full observability.",
+        solution: "Rebuild pipelines using Apache Kafka for real-time streaming, dbt for transformations, and Dagster for orchestration with full observability.",
         results: ["Zero data pipeline outages in 12 months", "Real-time data freshness (< 5 min latency)", "Pipeline development time reduced by 70%"]
       }
     ],
@@ -2029,11 +2029,11 @@ export const solutionsData: SolutionDetail[] = [
     technologies: ["SAP Ariba", "Coupa", "Oracle Procurement Cloud", "Jaggaer", "ServiceNow ITAM", "Ivalua"],
     caseStudies: [
       {
-        company: "National Retail Chain",
+        company: "Retail Client",
         industry: "Retail",
-        challenge: "Decentralized purchasing across 200+ locations led to inconsistent pricing and vendor sprawl.",
-        solution: "Implemented a centralized procurement platform with pre-negotiated vendor catalogs and automated approval workflows.",
-        results: ["22% reduction in IT procurement costs", "60% faster purchase-to-delivery cycle", "Consolidated vendor base from 150+ to 40 preferred partners"]
+        challenge: "Decentralized purchasing across 200+ locations leads to inconsistent pricing and vendor sprawl.",
+        solution: "Implement a centralized procurement platform with pre-negotiated vendor catalogs and automated approval workflows.",
+        results: ["Significant reduction in IT procurement costs", "60% faster purchase-to-delivery cycle", "Consolidated vendor base from 150+ to 40 preferred partners"]
       }
     ],
     faqs: [
@@ -2066,11 +2066,11 @@ export const solutionsData: SolutionDetail[] = [
     technologies: ["Flexera", "Snow Software", "ServiceNow SAM", "Zylo", "Aspera SmartTrack", "Microsoft VLSC"],
     caseStudies: [
       {
-        company: "Global Financial Institution",
+        company: "Financial Services Client",
         industry: "Financial Services",
         challenge: "Facing a major vendor audit with no visibility into actual license usage across 15,000 endpoints.",
-        solution: "Deployed automated discovery tools, reconciled entitlements, and negotiated a compliant position with the vendor before the audit deadline.",
-        results: ["Avoided $4.2M in potential audit penalties", "Identified $1.8M in unused licenses for reallocation", "Established ongoing compliance monitoring program"]
+        solution: "Deploy automated discovery tools, reconciled entitlements, and negotiated a compliant position with the vendor before the audit deadline.",
+        results: ["Avoided notable savings in potential audit penalties", "Identified notable savings in unused licenses for reallocation", "Established ongoing compliance monitoring program"]
       }
     ],
     faqs: [
@@ -2103,7 +2103,7 @@ export const solutionsData: SolutionDetail[] = [
     technologies: ["Dell Technologies", "HP Enterprise", "Lenovo", "Cisco", "SCCM/Intune", "ManageEngine"],
     caseStudies: [
       {
-        company: "Healthcare Network",
+        company: "Healthcare Client",
         industry: "Healthcare",
         challenge: "Needed to deploy 8,000 new workstations across 45 clinical locations within a 90-day window during an EMR migration.",
         solution: "Coordinated bulk procurement, centralized imaging facility, and phased rollout with minimal disruption to clinical operations.",
@@ -2140,10 +2140,10 @@ export const solutionsData: SolutionDetail[] = [
     technologies: ["ServiceNow", "Freshservice", "Zendesk", "Jira Service Management", "ConnectWise", "TeamViewer"],
     caseStudies: [
       {
-        company: "Insurance Corporation",
+        company: "Insurance Client",
         industry: "Insurance",
         challenge: "Internal help desk overwhelmed with 3,000+ monthly tickets and average resolution times exceeding 48 hours.",
-        solution: "Deployed a 24/7 managed help desk with automated triage, self-service knowledge base, and tiered escalation workflows.",
+        solution: "Deploy a 24/7 managed help desk with automated triage, self-service knowledge base, and tiered escalation workflows.",
         results: ["Average resolution time reduced to 4 hours", "First-call resolution rate improved to 78%", "Employee satisfaction scores increased by 35%"]
       }
     ],
@@ -2180,8 +2180,8 @@ export const solutionsData: SolutionDetail[] = [
         company: "Logistics Enterprise",
         industry: "Logistics",
         challenge: "Frequent network outages across 80 distribution centers causing operational disruptions and shipment delays.",
-        solution: "Implemented centralized NOC with real-time monitoring, automated alerting, and proactive capacity management across all sites.",
-        results: ["Network uptime improved from 97.2% to 99.95%", "70% reduction in unplanned network outages", "Mean time to resolution reduced from 4 hours to 22 minutes"]
+        solution: "Implement centralized NOC with real-time monitoring, automated alerting, and proactive capacity management across all sites.",
+        results: ["Network uptime improved from 97.2% to 99.95%", "Significant reduction in unplanned network outages", "Mean time to resolution dramatically reduced
       }
     ],
     faqs: [
@@ -2214,10 +2214,10 @@ export const solutionsData: SolutionDetail[] = [
     technologies: ["ServiceNow", "BMC Helix", "Jira Service Management", "Freshservice", "Cherwell", "iTop"],
     caseStudies: [
       {
-        company: "Banking Institution",
+        company: "Banking Client",
         industry: "Financial Services",
         challenge: "30% of production changes resulted in incidents, causing frequent outages and regulatory concerns.",
-        solution: "Implemented a structured change management framework with automated risk scoring, mandatory testing gates, and CAB review processes.",
+        solution: "Implement a structured change management framework with automated risk scoring, mandatory testing gates, and CAB review processes.",
         results: ["Change-related incidents reduced by 75%", "Unplanned downtime decreased by 60%", "Achieved full regulatory audit compliance"]
       }
     ],
@@ -2254,7 +2254,7 @@ export const solutionsData: SolutionDetail[] = [
         company: "Manufacturing Conglomerate",
         industry: "Manufacturing",
         challenge: "A ransomware attack shut down operations for 12 days with no documented recovery procedures.",
-        solution: "Developed comprehensive BCP covering all critical business functions, implemented regular tabletop exercises, and established a crisis command structure.",
+        solution: "Develop comprehensive BCP covering all critical business functions, implemented regular tabletop exercises, and established a crisis command structure.",
         results: ["Recovery capability improved from 12 days to 6 hours", "Achieved ISO 22301 certification", "Successfully navigated a subsequent facility flood with zero data loss"]
       }
     ],
@@ -2306,35 +2306,35 @@ export const solutionsData: SolutionDetail[] = [
         company: "Mid-Market SaaS Provider",
         industry: "Technology",
         challenge: "Lacked dedicated security staff and suffered a data breach that went undetected for 3 months.",
-        solution: "Deployed managed SOC with 24/7 monitoring, SIEM integration across cloud and on-prem environments, and automated incident response playbooks.",
-        results: ["Mean time to detect reduced from 90 days to 8 minutes", "Blocked 12,000+ threats in the first quarter", "Achieved SOC 2 Type II compliance within 6 months"]
+        solution: "Deploy managed SOC with 24/7 monitoring, SIEM integration across cloud and on-prem environments, and automated incident response playbooks.",
+        results: ["Mean time to detect dramatically reduced
       },
       {
         company: "Regional Healthcare Network",
         industry: "Healthcare",
         challenge: "HIPAA compliance audit revealed insufficient security monitoring across 12 hospitals and 200+ clinics with sensitive patient data at risk.",
-        solution: "Implemented fully managed SOC with HIPAA-compliant SIEM, endpoint detection across all clinical workstations, and automated PHI access monitoring with anomaly detection.",
+        solution: "Implement fully managed SOC with HIPAA-compliant SIEM, endpoint detection across all clinical workstations, and automated PHI access monitoring with anomaly detection.",
         results: ["100% HIPAA security monitoring compliance achieved", "Detected and blocked 3 insider threat incidents within first 60 days", "Reduced security incident response time from 12 hours to 15 minutes"]
       },
       {
         company: "Manufacturing Conglomerate",
         industry: "Manufacturing",
         challenge: "IT/OT convergence created new attack surfaces across industrial control systems with no visibility into operational technology threats.",
-        solution: "Deployed hybrid SOC monitoring covering both IT and OT environments, with specialized ICS/SCADA threat detection and purpose-built response playbooks.",
+        solution: "Deploy hybrid SOC monitoring covering both IT and OT environments, with specialized ICS/SCADA threat detection and purpose-built response playbooks.",
         results: ["Unified visibility across 8 manufacturing plants", "Identified 47 previously unknown OT vulnerabilities", "Zero operational disruptions from cyber incidents post-deployment"]
       },
       {
-        company: "National Retail Chain",
+        company: "Retail Client",
         industry: "Retail",
-        challenge: "Processing 5M+ card transactions monthly with PCI DSS requirements but no dedicated security team — relied solely on firewall logs reviewed weekly.",
-        solution: "Deployed managed SOC with PCI-scoped SIEM, real-time payment system monitoring, point-of-sale endpoint detection, and automated cardholder data exfiltration alerts.",
-        results: ["Detected a POS malware variant within 4 minutes of execution", "Achieved PCI DSS 4.0 continuous monitoring requirement", "Reduced annual security staffing costs by $1.2M"]
+        challenge: "Processing 5M+ card transactions monthly with PCI DSS requirements but no dedicated security team — relies solely on firewall logs reviewed weekly.",
+        solution: "Deploy managed SOC with PCI-scoped SIEM, real-time payment system monitoring, point-of-sale endpoint detection, and automated cardholder data exfiltration alerts.",
+        results: ["Detected a POS malware variant within 4 minutes of execution", "Achieved PCI DSS 4.0 continuous monitoring requirement", "Reduced annual security staffing costs by significant"]
       },
       {
         company: "Global Law Firm",
         industry: "Legal",
         challenge: "Handling privileged attorney-client communications across 30 offices worldwide with nation-state threat actors actively targeting intellectual property.",
-        solution: "Implemented co-managed SOC with advanced email threat detection, DLP monitoring for privileged documents, dark web surveillance for leaked credentials, and geofenced access anomaly detection.",
+        solution: "Implement co-managed SOC with advanced email threat detection, DLP monitoring for privileged documents, dark web surveillance for leaked credentials, and geofenced access anomaly detection.",
         results: ["Intercepted 2 targeted spear-phishing campaigns within first month", "Zero data breaches involving privileged communications over 18 months", "Client trust audit scores increased by 40%"]
       }
     ],
@@ -2382,27 +2382,27 @@ export const solutionsData: SolutionDetail[] = [
       {
         company: "E-Commerce Platform",
         industry: "Retail",
-        challenge: "Required PCI DSS compliance but had never conducted a formal penetration test on their payment processing infrastructure handling 2M+ transactions monthly.",
-        solution: "Performed comprehensive penetration testing across web application, API layer, and network infrastructure with focus on payment card data flows, session management, and encryption.",
+        challenge: "Required PCI DSS compliance but has never conducted a formal penetration test on their payment processing infrastructure handling 2M+ transactions monthly.",
+        solution: "Perform comprehensive penetration testing across web application, API layer, and network infrastructure with focus on payment card data flows, session management, and encryption.",
         results: ["Identified 14 critical and 32 high-severity vulnerabilities", "All critical findings remediated within 30 days", "Successfully passed PCI DSS compliance audit on first attempt"]
       },
       {
         company: "Fortune 500 Financial Services Firm",
         industry: "Financial Services",
         challenge: "Board-mandated security assessment after industry peer suffered a $200M breach. Needed to evaluate resilience against advanced persistent threats across a complex hybrid environment.",
-        solution: "Conducted a 4-week red team engagement simulating APT tactics including spear-phishing, lateral movement, privilege escalation, and data exfiltration across on-prem and cloud infrastructure.",
+        solution: "Conduct a 4-week red team engagement simulating APT tactics including spear-phishing, lateral movement, privilege escalation, and data exfiltration across on-prem and cloud infrastructure.",
         results: ["Achieved domain admin access within 72 hours through chained vulnerabilities", "Identified 6 critical attack paths to sensitive financial data", "Remediation of findings prevented an actual attack attempt 3 months later"]
       },
       {
         company: "Healthcare SaaS Company",
         industry: "Healthcare",
         challenge: "Launching a patient portal handling PHI data with HIPAA compliance requirements and zero tolerance for data exposure.",
-        solution: "Performed white-box application security assessment including source code review, API fuzzing, authentication bypass testing, and HIPAA-specific data flow analysis.",
+        solution: "Perform white-box application security assessment including source code review, API fuzzing, authentication bypass testing, and HIPAA-specific data flow analysis.",
         results: ["Discovered 3 critical authentication bypass vulnerabilities pre-launch", "Identified insecure direct object references exposing patient records", "Achieved clean HIPAA security assessment post-remediation"]
       }
     ],
     faqs: [
-      { question: "How often should we conduct penetration tests?", answer: "We recommend at least annual penetration testing, with additional tests after major application releases, significant infrastructure changes, or mergers/acquisitions. Compliance frameworks like PCI DSS require quarterly network scans and annual penetration tests. High-risk environments benefit from semi-annual or continuous testing programs." },
+      { question: "How often should we conduct penetration tests?", answer: "We recommend at least annual penetration testing, with additional tests after major application releases, notable savings infrastructure changes, or mergers/acquisitions. Compliance frameworks like PCI DSS require quarterly network scans and annual penetration tests. High-risk environments benefit from semi-annual or continuous testing programs." },
       { question: "Will penetration testing disrupt our production systems?", answer: "We carefully scope and schedule tests to minimize impact. For production environments, we use controlled techniques, coordinate timing with your team, and maintain a real-time communication channel. We can test against staging environments first and limit potentially disruptive techniques to maintenance windows. In 15+ years, we've never caused unplanned downtime." },
       { question: "What's the difference between black-box, grey-box, and white-box testing?", answer: "Black-box simulates an external attacker with no prior knowledge. Grey-box provides partial information like user credentials or architecture docs, simulating an insider or compromised account. White-box includes full access to source code, architecture, and credentials for the deepest possible analysis. We recommend grey-box for the best balance of realism and coverage." },
       { question: "How do you prioritize findings?", answer: "We use a risk-based scoring model combining CVSS scores, exploitability (proof-of-concept vs. theoretical), business impact, data sensitivity, and attack complexity. Findings are categorized as Critical, High, Medium, Low, and Informational with specific, actionable remediation steps for each." },
@@ -2443,22 +2443,22 @@ export const solutionsData: SolutionDetail[] = [
         company: "Federal Government Agency",
         industry: "Government",
         challenge: "Executive order mandated zero trust adoption across all systems within 24 months, with legacy infrastructure spanning 30+ years and 15,000+ employees.",
-        solution: "Developed phased zero trust roadmap aligned with CISA maturity model, implemented identity-centric access controls with phishing-resistant MFA, micro-segmented critical networks, and deployed SASE for the remote workforce.",
+        solution: "Develop phased zero trust roadmap aligned with CISA maturity model, implemented identity-centric access controls with phishing-resistant MFA, micro-segmented critical networks, and deployed SASE for the remote workforce.",
         results: ["Achieved zero trust maturity level 3 within 18 months", "Eliminated 85% of VPN-related security incidents", "Passed federal zero trust compliance assessment ahead of deadline"]
       },
       {
         company: "Global Investment Bank",
         industry: "Financial Services",
-        challenge: "Post-breach remediation required zero trust implementation across 40,000 endpoints, 200+ applications, and operations in 30 countries — while maintaining uninterrupted trading operations.",
-        solution: "Implemented identity-first zero trust with risk-based adaptive access, micro-segmented trading floor networks from corporate IT, deployed ZTNA for third-party vendor access, and integrated PAM for privileged accounts.",
+        challenge: "Post-breach remediation requires zero trust implementation across 40,000 endpoints, 200+ applications, and operations in 30 countries — while maintaining uninterrupted trading operations.",
+        solution: "Implement identity-first zero trust with risk-based adaptive access, micro-segmented trading floor networks from corporate IT, deployed ZTNA for third-party vendor access, and integrated PAM for privileged accounts.",
         results: ["Lateral movement attack paths reduced by 94%", "Third-party access incidents dropped to zero", "Achieved SOC 2 and PCI DSS compliance simultaneously"]
       },
       {
         company: "National Healthcare Provider",
         industry: "Healthcare",
         challenge: "Rapid shift to telehealth exposed 50,000+ clinical devices and remote endpoints with no unified access controls, creating HIPAA compliance gaps.",
-        solution: "Deployed zero trust architecture with device trust scoring for clinical endpoints, SASE for telehealth practitioners, micro-segmentation of EMR systems, and continuous compliance monitoring.",
-        results: ["100% HIPAA-compliant remote access for 12,000 clinicians", "Device compliance enforcement reduced unmanaged endpoint access by 97%", "Mean time to detect unauthorized access reduced from hours to 30 seconds"]
+        solution: "Deploy zero trust architecture with device trust scoring for clinical endpoints, SASE for telehealth practitioners, micro-segmentation of EMR systems, and continuous compliance monitoring.",
+        results: ["100% HIPAA-compliant remote access for 12,000 clinicians", "Device compliance enforcement reduced unmanaged endpoint access by 97%", "Mean time to detect unauthorized access dramatically reduced
       }
     ],
     faqs: [
@@ -2498,7 +2498,7 @@ export const solutionsData: SolutionDetail[] = [
         industry: "Financial Services",
         challenge: "Monolithic application couldn't scale to handle 10x traffic growth, with deployments taking 8+ hours and frequent outages.",
         solution: "Decomposed the monolith into containerized microservices on Kubernetes with Istio service mesh, automated scaling policies, and rolling deployment strategies.",
-        results: ["Deployment time reduced from 8 hours to 12 minutes", "Auto-scaling handles 15x traffic spikes seamlessly", "99.99% uptime achieved with zero-downtime deployments"]
+        results: ["Deployment time dramatically reduced
       }
     ],
     faqs: [
@@ -2533,9 +2533,9 @@ export const solutionsData: SolutionDetail[] = [
       {
         company: "Digital Media Company",
         industry: "Media & Entertainment",
-        challenge: "Manual deployments across 200+ microservices caused frequent configuration drift, inconsistent environments, and 2-hour rollback times.",
-        solution: "Implemented GitOps with Argo CD, environment promotion pipelines, and canary deployment strategies across all services.",
-        results: ["Deployment frequency increased from weekly to 50+ per day", "Rollback time reduced from 2 hours to 30 seconds", "Zero configuration drift incidents after implementation"]
+        challenge: "Manual deployments across 200+ microservices causes frequent configuration drift, inconsistent environments, and 2-hour rollback times.",
+        solution: "Implement GitOps with Argo CD, environment promotion pipelines, and canary deployment strategies across all services.",
+        results: ["Deployment frequency increased from weekly to 50+ per day", "Rollback time dramatically reduced
       }
     ],
     faqs: [
@@ -2571,8 +2571,8 @@ export const solutionsData: SolutionDetail[] = [
         company: "Online Travel Platform",
         industry: "Travel & Hospitality",
         challenge: "Experienced 3 major outages in 6 months, each lasting 4+ hours, with no clear understanding of cascading failure patterns.",
-        solution: "Implemented chaos engineering program with weekly experiments, game days, and automated resilience tests in staging environments.",
-        results: ["Identified 23 previously unknown failure modes", "MTTR reduced from 4 hours to 18 minutes", "Zero major outages in the 12 months following implementation"]
+        solution: "Implement chaos engineering program with weekly experiments, game days, and automated resilience tests in staging environments.",
+        results: ["Identified 23 previously unknown failure modes", "MTTR dramatically reduced
       }
     ],
     faqs: [
@@ -2607,9 +2607,9 @@ export const solutionsData: SolutionDetail[] = [
       {
         company: "Global E-Commerce Marketplace",
         industry: "E-Commerce",
-        challenge: "Major feature releases required 3-week release trains, and a botched checkout redesign caused $2M in lost revenue over a weekend.",
-        solution: "Implemented feature flag platform with progressive rollouts, automated canary analysis, and instant kill switches for all customer-facing features.",
-        results: ["Release cycle reduced from 3 weeks to continuous delivery", "Feature rollback time reduced from 45 minutes to under 5 seconds", "Revenue impact from bad releases reduced by 95%"]
+        challenge: "Major feature releases requires 3-week release trains, and a botched checkout redesign causes $2M in lost revenue over a weekend.",
+        solution: "Implement feature flag platform with progressive rollouts, automated canary analysis, and instant kill switches for all customer-facing features.",
+        results: ["Release cycle dramatically reduced
       }
     ],
     faqs: [
@@ -2645,8 +2645,8 @@ export const solutionsData: SolutionDetail[] = [
         company: "Global Pharmaceutical Company",
         industry: "Healthcare",
         challenge: "Manually reviewing 50,000+ adverse event reports annually, taking an average of 45 minutes per report with inconsistent categorization.",
-        solution: "Built a custom NLP pipeline for automated report classification, entity extraction (drugs, symptoms, outcomes), and severity scoring with human-in-the-loop validation.",
-        results: ["Report processing time reduced from 45 minutes to 3 minutes", "Classification accuracy of 94% matching expert reviewers", "Annual cost savings of $2.1M in manual review labor"]
+        solution: "Build a custom NLP pipeline for automated report classification, entity extraction (drugs, symptoms, outcomes), and severity scoring with human-in-the-loop validation.",
+        results: ["Report processing time dramatically reduced
       }
     ],
     faqs: [
@@ -2681,9 +2681,9 @@ export const solutionsData: SolutionDetail[] = [
       {
         company: "International Law Firm",
         industry: "Legal",
-        challenge: "Attorneys spent 30% of billable time searching through 2M+ documents across case files, precedents, and regulatory databases.",
-        solution: "Deployed a RAG-powered legal research assistant that indexes all firm documents, provides cited answers, and surfaces relevant precedents with source attribution.",
-        results: ["Research time reduced by 65%", "95% accuracy rate with full source citations", "$4.5M annual increase in billable hours recovered"]
+        challenge: "Attorneys spend 30% of billable time searching through 2M+ documents across case files, precedents, and regulatory databases.",
+        solution: "Deploy a RAG-powered legal research assistant that indexes all firm documents, provides cited answers, and surfaces relevant precedents with source attribution.",
+        results: ["Research time reduced by 65%", "95% accuracy rate with full source citations", "significant annual increase in billable hours recovered"]
       }
     ],
     faqs: [
@@ -2719,7 +2719,7 @@ export const solutionsData: SolutionDetail[] = [
         company: "Automotive Manufacturer",
         industry: "Manufacturing",
         challenge: "Manual quality inspection of painted surfaces caught only 82% of defects, resulting in costly rework and warranty claims.",
-        solution: "Deployed edge-based computer vision system with custom-trained defect detection models on the production line, inspecting every unit in real time.",
+        solution: "Deploy edge-based computer vision system with custom-trained defect detection models on the production line, inspecting every unit in real time.",
         results: ["Defect detection rate improved from 82% to 99.6%", "Inspection throughput increased by 300%", "Warranty claims reduced by 45% in the first year"]
       }
     ],
@@ -2757,9 +2757,9 @@ export const solutionsData: SolutionDetail[] = [
       {
         company: "GlobalTrade Corp",
         industry: "Logistics & Supply Chain",
-        challenge: "Operating across 14 countries with no unified IT support, the company experienced average incident resolution times of 8+ hours during off-peak periods.",
-        solution: "Implemented a follow-the-sun NOC with AI-powered triage, automated runbooks for top 50 recurring incidents, and real-time SLA dashboards for regional stakeholders.",
-        results: ["Mean time to resolution reduced from 8 hours to 45 minutes", "99.95% uptime achieved across all critical systems", "Annual IT support costs reduced by 35%"]
+        challenge: "Operating across 14 countries with no unified IT support, the company experiences average incident resolution times of 8+ hours during off-peak periods.",
+        solution: "Implement a follow-the-sun NOC with AI-powered triage, automated runbooks for top 50 recurring incidents, and real-time SLA dashboards for regional stakeholders.",
+        results: ["Mean time to resolution dramatically reduced
       }
     ],
     faqs: [
@@ -2836,8 +2836,8 @@ export const solutionsData: SolutionDetail[] = [
       {
         company: "SupportAI",
         industry: "Customer Service",
-        challenge: "AI-powered customer support chatbot produced inconsistent responses, hallucinated product details, and failed to follow brand tone guidelines.",
-        solution: "Redesigned the entire prompt architecture with structured templates, few-shot examples, guardrails, and automated evaluation pipelines. Implemented prompt versioning with A/B testing across customer segments.",
+        challenge: "AI-powered customer support chatbot produced inconsistent responses, hallucinated product details, and faileads to follow brand tone guidelines.",
+        solution: "Redesign the entire prompt architecture with structured templates, few-shot examples, guardrails, and automated evaluation pipelines. Implemented prompt versioning with A/B testing across customer segments.",
         results: ["Response accuracy improved from 72% to 94%", "Customer satisfaction scores increased 35%", "Token usage reduced by 45%", "New prompt variants deployed in hours instead of weeks"]
       }
     ],
@@ -2876,9 +2876,9 @@ export const solutionsData: SolutionDetail[] = [
       {
         company: "MedData Systems",
         industry: "Healthcare",
-        challenge: "Critical patient databases experienced frequent performance degradation during peak hours, with query response times exceeding 15 seconds.",
-        solution: "Implemented comprehensive database optimization including query rewriting, index tuning, connection pooling, and read replica configuration with automated failover.",
-        results: ["Query response times reduced from 15s to under 200ms", "99.99% uptime achieved over 12 months", "Database infrastructure costs reduced by 40%"]
+        challenge: "Critical patient databases experiences frequent performance degradation during peak hours, with query response times exceeding 15 seconds.",
+        solution: "Implement comprehensive database optimization including query rewriting, index tuning, connection pooling, and read replica configuration with automated failover.",
+        results: ["Query response times dramatically reduced
       }
     ],
     faqs: [
@@ -2915,9 +2915,9 @@ export const solutionsData: SolutionDetail[] = [
       {
         company: "RetailMax",
         industry: "Retail",
-        challenge: "Running on expensive Oracle licenses with aging hardware, the company needed to modernize to a cloud-native database without disrupting 24/7 e-commerce operations.",
+        challenge: "Running on expensive Oracle licenses with aging hardware, the company needs to modernize to a cloud-native database without disrupting 24/7 e-commerce operations.",
         solution: "Executed a phased migration from Oracle to Amazon Aurora PostgreSQL using AWS DMS with continuous replication, automated schema conversion, and parallel-run validation over 6 weeks.",
-        results: ["Zero downtime during full production cutover", "Annual database licensing costs reduced by $1.8M", "Query performance improved by 35% on Aurora", "Migration completed 2 weeks ahead of schedule"]
+        results: ["Zero downtime during full production cutover", "Annual database licensing costs reduced by significant", "Query performance improved by 35% on Aurora", "Migration completed 2 weeks ahead of schedule"]
       }
     ],
     faqs: [
@@ -2954,8 +2954,8 @@ export const solutionsData: SolutionDetail[] = [
       {
         company: "StreamVault",
         industry: "Media & Entertainment",
-        challenge: "Streaming platform needed a globally distributed database to serve 50M+ users across 30 countries with sub-10ms read latency.",
-        solution: "Designed a multi-region architecture using Azure Cosmos DB with automatic failover, tuned consistency levels per use case, and implemented intelligent caching layers.",
+        challenge: "Streaming platform needs a globally distributed database to serve 50M+ users across 30 countries with sub-10ms read latency.",
+        solution: "Design a multi-region architecture using Azure Cosmos DB with automatic failover, tuned consistency levels per use case, and implemented intelligent caching layers.",
         results: ["Global read latency reduced to 5ms average", "99.999% availability across all regions", "Database costs optimized by 40% through reserved capacity", "Supported 3x user growth without architecture changes"]
       }
     ],
@@ -2994,8 +2994,8 @@ export const solutionsData: SolutionDetail[] = [
         company: "InsureTech Global",
         industry: "Insurance",
         challenge: "Fragmented data across 12 legacy systems with no unified data model, causing inconsistent reporting and 3-month delays for new analytics requests.",
-        solution: "Designed an enterprise data architecture with a centralized data vault model, standardized schemas, automated data quality checks, and a self-service data catalog.",
-        results: ["Analytics request delivery reduced from 3 months to 2 weeks", "Data inconsistencies reduced by 90%", "Enabled self-service analytics for 200+ business users", "Unified view of customer data across all product lines"]
+        solution: "Design an enterprise data architecture with a centralized data vault model, standardized schemas, automated data quality checks, and a self-service data catalog.",
+        results: ["Analytics request delivery dramatically reduced
       }
     ],
     faqs: [
@@ -3032,9 +3032,9 @@ export const solutionsData: SolutionDetail[] = [
       {
         company: "IoTSense",
         industry: "IoT & Manufacturing",
-        challenge: "Manufacturing IoT platform needed to ingest and query 500,000 sensor readings per second with real-time alerting and 90-day retention.",
-        solution: "Implemented a dual-database architecture using TimescaleDB for time-series sensor data and Redis for real-time alerting, with automated data tiering to cold storage.",
-        results: ["Sustained 500K+ writes per second with sub-5ms latency", "Real-time anomaly detection within 2 seconds", "Storage costs reduced by 60% with automated tiering", "Query performance 10x faster than previous relational approach"]
+        challenge: "Manufacturing IoT platform needs to ingest and query 500,000 sensor readings per second with real-time alerting and 90-day retention.",
+        solution: "Implement a dual-database architecture using TimescaleDB for time-series sensor data and Redis for real-time alerting, with automated data tiering to cold storage.",
+        results: ["Sustained 500K+ writes per second with sub-5ms latency", "Real-time anomaly detection within 2 seconds", "Storage costs reduced by 60% with automated tiering", "Query performance substantial faster than previous relational approach"]
       }
     ],
     faqs: [
