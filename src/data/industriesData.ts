@@ -1,12 +1,14 @@
 import { 
-  Brain, RefreshCw, CreditCard, Landmark, Heart, GraduationCap, 
+  Brain, RefreshCw, Building2, CreditCard, Landmark, Users, Heart, GraduationCap, 
   ShoppingCart, Factory, Truck, Bolt, Atom, LucideIcon
 } from "lucide-react";
 
 // Hero images
 import aiTechHero from "@/assets/industries/ai-tech-hero.jpg";
 import legacyTransformHero from "@/assets/industries/legacy-transform-hero.jpg";
+import bankingHero from "@/assets/industries/banking-hero.jpg";
 import fintechHero from "@/assets/industries/fintech-hero.jpg";
+import creditUnionsHero from "@/assets/industries/credit-unions-hero.jpg";
 import capitalMarketsHero from "@/assets/industries/capital-markets-hero.jpg";
 import healthcareHero from "@/assets/industries/healthcare-hero.jpg";
 import governmentHero from "@/assets/industries/government-hero.jpg";
@@ -134,24 +136,70 @@ export const industriesData: IndustryDetail[] = [
     ]
   },
   {
-    slug: "banks-fintech",
-    name: "Banks & FinTech",
-    shortDescription: "Financial services & payment solutions for modern banking.",
-    fullDescription: "Financial services move fast — and your technology needs to move faster. We partner with banks, credit unions, payment processors, and fintech startups to build secure, scalable platforms that handle everything from real-time payments to AI-driven fraud detection. As a consulting-first team, we bring deep domain knowledge in regulatory compliance, open banking standards, and modern financial architecture to help you compete confidently. Our solutions cover the full spectrum of digital banking — from customer onboarding and identity verification to core banking system modernization and mobile wallet platforms. We implement machine learning models that detect fraudulent transactions in real time, reducing false positives while catching sophisticated attack patterns. For organizations navigating PSD2, Open Banking, and embedded finance, we build compliant API ecosystems that turn regulatory requirements into competitive advantages. Our KYC/AML automation pipelines streamline compliance workflows, reducing manual review time while strengthening your risk posture. Whether you're a challenger bank launching from scratch or an established institution modernizing legacy infrastructure, we deliver technology that scales with your ambitions and earns the trust of your\u00A0customers.",
+    slug: "banking",
+    name: "Banking & Financial Services",
+    shortDescription: "Digital transformation and core modernization for banks.",
+    fullDescription: "Banks face unprecedented pressure to modernize — from evolving customer expectations to tightening regulations and rising competition from digital-first challengers. We partner with retail banks, commercial banks, and financial holding companies to modernize core banking systems, digitize customer journeys, and strengthen risk and compliance infrastructure. Our consultants bring deep domain expertise in regulatory frameworks including Basel III, Dodd-Frank, and PSD2, ensuring every technology decision aligns with compliance requirements from day one. We architect secure, scalable platforms for real-time payment processing, digital account opening, and omnichannel customer engagement. Our AI-powered credit risk models analyze thousands of data points to deliver faster, more accurate lending decisions while reducing default rates. For banks modernizing legacy mainframe systems, we design phased migration strategies that minimize operational disruption and preserve institutional knowledge. From treasury management and wire transfer systems to mortgage origination platforms and wealth management portals, we deliver enterprise-grade solutions that help banks compete confidently in a digital-first\u00A0world.",
+    icon: Building2,
+    category: "Finance",
+    whatWeSolve: "Legacy core banking limitations, slow digital transformation, regulatory compliance burden",
+    howWeHelp: [
+      "Core banking system modernization and migration",
+      "Digital account opening and customer onboarding",
+      "Real-time payment processing and settlement",
+      "AI-powered credit risk assessment and scoring",
+      "Regulatory compliance automation (Basel III, Dodd-Frank)",
+      "Omnichannel banking platform development",
+      "Treasury management and wire transfer systems",
+      "Mortgage origination and loan management platforms"
+    ],
+    tags: ["Retail Banks", "Commercial Banks", "Regional Banks", "Community Banks", "Mortgage Lenders"],
+    services: ["Custom App Development", "AI & Machine Learning", "Cloud Solutions"],
+    heroImage: bankingHero,
+    caseStudies: [
+      {
+        company: "Regional Bank Client",
+        challenge: "Legacy core banking system limiting digital product launches.",
+        solution: "Phased core modernization with API layer enabling rapid digital product deployment.",
+        results: [
+          "Digital account opening launched in weeks",
+          "Processing time for loans significantly reduced",
+          "Customer satisfaction scores improved",
+          "Regulatory audit preparation streamlined"
+        ]
+      }
+    ],
+    faqs: [
+      {
+        question: "How do you handle core banking migrations?",
+        answer: "We use a phased approach — building API layers around legacy systems first, then gradually migrating modules. This minimizes risk and keeps operations running smoothly throughout the transition."
+      },
+      {
+        question: "What regulatory frameworks do you support?",
+        answer: "We have experience with Basel III, Dodd-Frank, PCI-DSS, SOC 2, GDPR, and various state and federal banking regulations. Compliance is built into our development process from day one."
+      }
+    ]
+  },
+  {
+    slug: "fintech",
+    name: "FinTech & Digital Payments",
+    shortDescription: "Scalable payment platforms and financial innovation for fintech companies.",
+    fullDescription: "FinTech is rewriting the rules of finance — and you need a technology partner who moves at your speed. We work with payment processors, neobanks, lending platforms, insurtech startups, and embedded finance companies to build scalable, secure platforms that disrupt traditional financial services. From real-time payment rails and digital wallet infrastructure to AI-driven fraud detection and automated KYC/AML pipelines, we deliver production-ready systems designed for explosive growth. Our engineers understand the unique challenges of fintech — balancing rapid iteration with regulatory compliance, building for scale from day one, and integrating with complex financial ecosystems. We implement machine learning models that detect fraudulent transactions in milliseconds, reducing false positives while catching sophisticated attack patterns. For companies navigating PSD2, Open Banking, and embedded finance regulations, we build compliant API ecosystems that turn regulatory requirements into competitive advantages. Whether you're launching a new payment product, scaling a lending platform, or building the next generation of financial infrastructure, we bring the technical depth and domain expertise to help you move\u00A0fast.",
     icon: CreditCard,
     category: "Finance",
-    whatWeSolve: "Slow transaction processing, fraud vulnerabilities, regulatory complexity",
+    isNew: true,
+    whatWeSolve: "Scaling payment infrastructure, fraud prevention, regulatory complexity for startups",
     howWeHelp: [
-      "Digital banking and mobile wallet platforms",
-      "Real-time payment processing and settlement systems",
-      "Fraud detection using machine learning models",
-      "KYC/AML compliance automation",
-      "Blockchain-based secure transaction ledgers",
-      "Open banking API integration (PSD2 / Open Banking)",
-      "Core banking system modernization",
-      "Customer onboarding and identity verification workflows"
+      "Digital wallet and mobile payment platforms",
+      "Real-time payment processing and settlement engines",
+      "ML-based fraud detection and transaction scoring",
+      "KYC/AML compliance automation pipelines",
+      "Open Banking API integration (PSD2 compliant)",
+      "Embedded finance and Banking-as-a-Service platforms",
+      "Lending platform development and credit decisioning",
+      "Payment gateway and processor integrations"
     ],
-    tags: ["Banks", "Credit Unions", "Payment Processors", "Insurance", "Lending Platforms"],
+    tags: ["Payment Processors", "Neobanks", "Lending Platforms", "InsurTech", "Embedded Finance"],
     services: ["AI & Machine Learning", "Custom App Development", "Cloud Solutions"],
     heroImage: fintechHero,
     caseStudies: [
@@ -169,12 +217,58 @@ export const industriesData: IndustryDetail[] = [
     ],
     faqs: [
       {
-        question: "How do you handle banking compliance requirements?",
-        answer: "Our solutions are built with compliance in mind from day one. We have experience with PCI-DSS, SOC 2, GDPR, and various banking regulations. We work closely with your compliance team throughout the project."
+        question: "Can you build for scale from day one?",
+        answer: "Absolutely. We architect fintech platforms using microservices, event-driven design, and cloud-native infrastructure that can handle millions of transactions. Our systems are designed to scale horizontally as your user base grows."
       },
       {
-        question: "Can you integrate with our existing core banking system?",
-        answer: "Yes, we have experience integrating with major core banking platforms including FIS, Fiserv, Jack Henry, and Temenos. We use standard APIs and custom integrations as needed."
+        question: "How do you handle payment compliance?",
+        answer: "We build PCI-DSS compliant systems with end-to-end encryption, tokenization, and comprehensive audit trails. We also support PSD2, Open Banking, and various regional financial regulations."
+      }
+    ]
+  },
+  {
+    slug: "credit-unions",
+    name: "Credit Unions",
+    shortDescription: "Member-centric technology solutions for credit unions and cooperatives.",
+    fullDescription: "Credit unions exist to serve their members — and your technology should reflect that mission. We partner with credit unions and financial cooperatives to build member-centric digital platforms that enhance the member experience while streamlining operations and reducing costs. Unlike big-bank technology that prioritizes profit maximization, our solutions are designed around the cooperative model — emphasizing financial inclusion, community engagement, and member lifetime value. We help credit unions modernize without losing their identity: digital member onboarding that feels personal, mobile banking apps that rival the big banks, and AI-powered financial wellness tools that help members build stronger financial futures. Our loan origination automation reduces processing time from days to minutes while maintaining the personal touch that sets credit unions apart. We implement shared branching technology, ATM network integrations, and core system modernizations specifically tailored to the NCUA regulatory framework. For credit union service organizations (CUSOs), we develop shared technology platforms that give smaller credit unions access to enterprise-grade capabilities. Every solution we build strengthens the credit union's ability to compete with larger institutions while staying true to its community-first\u00A0mission.",
+    icon: Users,
+    category: "Finance",
+    isNew: true,
+    whatWeSolve: "Limited digital capabilities, member engagement gaps, operational inefficiencies",
+    howWeHelp: [
+      "Digital member onboarding and account opening",
+      "Mobile banking apps tailored for credit union members",
+      "AI-powered financial wellness and budgeting tools",
+      "Loan origination automation and decisioning",
+      "Shared branching and ATM network integration",
+      "Core system modernization (NCUA compliant)",
+      "Member engagement and communication platforms",
+      "CUSO shared technology platform development"
+    ],
+    tags: ["Credit Unions", "Financial Cooperatives", "CUSOs", "Community Banking", "Member Services"],
+    services: ["Custom App Development", "AI & Machine Learning", "Cloud Solutions"],
+    heroImage: creditUnionsHero,
+    caseStudies: [
+      {
+        company: "Credit Union Client",
+        challenge: "Low digital adoption and high operational costs from manual processes.",
+        solution: "Launched mobile banking platform with automated loan origination and member self-service.",
+        results: [
+          "Digital adoption increased significantly",
+          "Loan processing time reduced dramatically",
+          "Operational costs lowered",
+          "Member satisfaction scores improved"
+        ]
+      }
+    ],
+    faqs: [
+      {
+        question: "Do you understand credit union-specific regulations?",
+        answer: "Yes, we have experience with NCUA regulations, the Federal Credit Union Act, and state-specific requirements. Our solutions are built to meet the unique compliance needs of credit unions and cooperatives."
+      },
+      {
+        question: "Can smaller credit unions afford your solutions?",
+        answer: "Absolutely. We design scalable solutions that work for credit unions of all sizes. We also build shared platforms for CUSOs that allow smaller credit unions to access enterprise-grade technology at a fraction of the cost."
       }
     ]
   },
