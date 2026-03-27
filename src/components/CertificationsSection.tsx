@@ -1,12 +1,12 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import calEprocureLogo from "@/assets/certifications/cal-eprocure.png";
+
 import sbaLogo from "@/assets/certifications/sba.png";
 import dgsLogo from "@/assets/certifications/dgs.png";
 import wbencLogo from "@/assets/certifications/wbenc.png";
 
 const certifications = [
-  { name: "Cal eProcure", logo: calEprocureLogo },
+  
   { name: "U.S. Small Business Administration", logo: sbaLogo },
   { name: "CA Dept. of General Services", logo: dgsLogo },
   { name: "WBENC Certified", logo: wbencLogo },
