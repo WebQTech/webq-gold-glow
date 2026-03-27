@@ -1841,6 +1841,57 @@ export const servicesData: ServiceDetail[] = [
     ]
   },
   {
+    slug: "finance-accounting-compliance",
+    name: "Finance, Accounting & Compliance",
+    shortDescription: "Professional staffing for finance, accounting, and regulatory compliance functions across industries.",
+    fullDescription: "Our Finance, Accounting & Compliance services provide skilled professionals to support organizations with financial operations, audit readiness, budget management, payroll processing, and regulatory compliance. We deploy accountants, auditors, budget analysts, payroll specialists, and compliance analysts who bring deep expertise in GAAP, GASB, federal/state regulations, and industry-specific compliance frameworks. Whether you need temporary support during audit season, ongoing financial operations staffing, or specialized compliance expertise, our professionals integrate seamlessly with your finance team to maintain accuracy, transparency, and regulatory adherence.",
+    icon: DollarSign,
+    category: "Non-IT Talent Management Services",
+    features: [
+      "Financial reporting and general ledger management",
+      "Internal and external audit support",
+      "Budget development and expenditure tracking",
+      "Payroll processing and tax compliance",
+      "Regulatory compliance monitoring and reporting",
+      "Accounts payable and receivable management",
+      "Grant financial management and reporting",
+      "SOX compliance and controls documentation",
+      "Accountants",
+      "Auditors",
+      "Budget Analysts",
+      "Payroll Specialists",
+      "Compliance Analysts"
+    ],
+    benefits: [
+      "Rapid deployment of experienced finance professionals",
+      "Improved audit readiness and compliance posture",
+      "Scalable staffing for fiscal year-end and audit cycles",
+      "Reduced risk of regulatory penalties and findings",
+      "Cost-effective alternative to permanent finance hires",
+      "Seamless integration with existing finance systems"
+    ],
+    technologies: ["SAP", "Oracle Financials", "QuickBooks", "Workday", "ADP", "Sage", "Power BI", "Microsoft Excel"],
+    pricing: createContactPricing("Finance, Accounting & Compliance"),
+    caseStudies: [
+      {
+        company: "Municipal Government",
+        industry: "Government",
+        challenge: "City finance department short-staffed during annual audit with multiple compliance deadlines approaching.",
+        solution: "Deployed auditors, budget analysts, and compliance specialists to support audit preparation, financial reconciliation, and regulatory reporting.",
+        results: [
+          "Audit completed on schedule with zero findings",
+          "Budget variance reporting accuracy improved by 35%",
+          "All compliance deadlines met without extensions",
+          "Finance team overtime reduced by 50%"
+        ]
+      }
+    ],
+    faqs: [
+      { question: "Do your finance professionals have relevant certifications?", answer: "Yes, our staff includes CPAs, CIAs, CGFMs, and professionals with specialized certifications in government accounting, compliance, and financial management." },
+      { question: "Can you support both private and public sector finance needs?", answer: "Absolutely. We staff for corporate finance, nonprofit organizations, and federal, state, and local government agencies with professionals experienced in GAAP, GASB, and FAR compliance." }
+    ]
+  },
+  {
     slug: "global-operations-support",
     name: "24×7 Global Operations IT Support",
     shortDescription: "Round-the-clock IT operations support across time zones for uninterrupted business continuity.",
