@@ -1732,6 +1732,54 @@ export const servicesData: ServiceDetail[] = [
     ]
   },
   {
+    slug: "healthcare-public-health",
+    name: "Healthcare & Public Health",
+    shortDescription: "Specialized staffing and consulting for healthcare organizations and public health agencies.",
+    fullDescription: "Our Healthcare & Public Health services deliver experienced professionals to hospitals, health systems, public health departments, and government health agencies. We provide clinical support staff, public health program coordinators, epidemiological analysts, community health workers, and health IT specialists who understand regulatory frameworks including HIPAA, OSHA, and CMS guidelines. From pandemic response surge staffing to ongoing public health program administration, our teams integrate with your operations to improve population health outcomes, strengthen care delivery, and maintain compliance. We handle credentialing, licensure verification, and background screening so your organization can focus on its mission.",
+    icon: HeartPulse,
+    category: "Non-IT Talent Management Services",
+    features: [
+      "Public health program coordination and administration",
+      "Epidemiological data collection and analysis support",
+      "Community health outreach and education staffing",
+      "Health IT and EHR implementation support",
+      "Clinical trial coordination and research support",
+      "HIPAA compliance and privacy officer support",
+      "Emergency preparedness and pandemic response staffing",
+      "Health equity and social determinants of health programs",
+      "Grant management and federal reporting assistance",
+      "Quality improvement and accreditation support"
+    ],
+    benefits: [
+      "Rapid deployment of credentialed healthcare professionals",
+      "Deep expertise in public health regulatory frameworks",
+      "Scalable staffing for surge and seasonal demands",
+      "Improved population health program outcomes",
+      "Reduced administrative burden on clinical teams",
+      "Compliance with HIPAA, CMS, and state health regulations"
+    ],
+    technologies: ["Epic", "Cerner", "MEDITECH", "Salesforce Health Cloud", "REDCap", "Tableau", "Power BI", "Microsoft 365 GCC"],
+    pricing: createContactPricing("Healthcare & Public Health"),
+    caseStudies: [
+      {
+        company: "County Health Department",
+        industry: "Public Health",
+        challenge: "Understaffed public health department struggling to manage disease surveillance and community outreach programs simultaneously.",
+        solution: "Deployed epidemiological analysts, community health workers, and program coordinators to support disease tracking and outreach initiatives.",
+        results: [
+          "Disease surveillance reporting turnaround improved by 50%",
+          "Community vaccination program participation increased by 35%",
+          "Full compliance with CDC reporting requirements",
+          "Staff burnout reduced through augmented team capacity"
+        ]
+      }
+    ],
+    faqs: [
+      { question: "Do your healthcare staff meet credentialing requirements?", answer: "Yes, we manage full credentialing — licensure verification, background checks, immunization records, certifications, and ongoing compliance monitoring for all healthcare personnel." },
+      { question: "Can you support public health emergency response?", answer: "Absolutely. We maintain a rapid-response talent pool for pandemic preparedness, disaster response, and surge staffing scenarios, with deployment timelines as short as 48–72 hours." }
+    ]
+  },
+  {
     slug: "global-operations-support",
     name: "24×7 Global Operations IT Support",
     shortDescription: "Round-the-clock IT operations support across time zones for uninterrupted business continuity.",
