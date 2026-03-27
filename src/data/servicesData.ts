@@ -1892,6 +1892,57 @@ export const servicesData: ServiceDetail[] = [
     ]
   },
   {
+    slug: "human-resources-organizational-development",
+    name: "Human Resources & Organizational Development",
+    shortDescription: "HR staffing and organizational development support for talent acquisition, employee development, and workforce transformation.",
+    fullDescription: "Our Human Resources & Organizational Development services provide experienced HR professionals to support the full spectrum of people operations — from recruitment and onboarding to training, employee relations, organizational change management, and labor relations. We deploy recruiters, HR generalists, training specialists, OCM analysts, and labor relations assistants who understand both private and public sector HR frameworks. Whether you need surge support for hiring campaigns, ongoing HR operations staffing, or specialized change management expertise, our professionals seamlessly integrate with your HR team to drive workforce effectiveness and organizational growth.",
+    icon: UserCheck,
+    category: "Non-IT Talent Management Services",
+    features: [
+      "Full-cycle recruitment and talent acquisition",
+      "Employee onboarding and offboarding management",
+      "Training program design and delivery",
+      "Organizational change management planning",
+      "Employee relations and conflict resolution",
+      "Performance management support",
+      "HR policy development and compliance",
+      "Labor relations and collective bargaining support",
+      "Recruiters",
+      "HR Generalists",
+      "Training & Development",
+      "OCM Analysts (non‑technical)",
+      "Labor Relations Assistants"
+    ],
+    benefits: [
+      "Rapid deployment of experienced HR professionals",
+      "Scalable staffing for hiring surges and special projects",
+      "Improved employee engagement and retention outcomes",
+      "Reduced time-to-fill for critical positions",
+      "Seamless integration with existing HRIS platforms",
+      "Compliance with federal, state, and local employment regulations"
+    ],
+    technologies: ["Workday", "SAP SuccessFactors", "ADP", "BambooHR", "iCIMS", "Cornerstone OnDemand", "Microsoft 365", "ServiceNow HRSD"],
+    pricing: createContactPricing("Human Resources & Organizational Development"),
+    caseStudies: [
+      {
+        company: "State Agency",
+        industry: "Government",
+        challenge: "Agency facing high turnover and a backlog of 200+ open positions with limited internal HR capacity.",
+        solution: "Deployed a team of recruiters, HR generalists, and onboarding coordinators to manage the full hiring lifecycle and implement retention strategies.",
+        results: [
+          "Open position backlog reduced by 75% in 90 days",
+          "Time-to-fill reduced from 65 to 28 days",
+          "New hire retention rate improved by 25%",
+          "HR team capacity freed for strategic initiatives"
+        ]
+      }
+    ],
+    faqs: [
+      { question: "Can your HR staff work within our existing HRIS?", answer: "Yes, our professionals have experience across major HRIS platforms including Workday, SAP SuccessFactors, ADP, and BambooHR. We adapt quickly to your existing systems and processes." },
+      { question: "Do you support organizational change management?", answer: "Absolutely. Our OCM analysts support change readiness assessments, stakeholder engagement, communication planning, and adoption tracking for organizational transformations." }
+    ]
+  },
+  {
     slug: "global-operations-support",
     name: "24×7 Global Operations IT Support",
     shortDescription: "Round-the-clock IT operations support across time zones for uninterrupted business continuity.",
