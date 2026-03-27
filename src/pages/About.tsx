@@ -1,7 +1,7 @@
 import { Footer } from "@/components/Footer";
 import { motion } from "framer-motion";
 import { Building2, Users, Award, MapPin, Handshake, Target, Eye, Heart, Globe, CheckCircle } from "lucide-react";
-import calEprocureLogo from "@/assets/certifications/cal-eprocure.png";
+
 import sbaLogo from "@/assets/certifications/sba.png";
 import dgsLogo from "@/assets/certifications/dgs.png";
 import wbencLogo from "@/assets/certifications/wbenc.png";
@@ -52,7 +52,7 @@ const partners = [
 ];
 
 const certifications = [
-  { name: "Cal eProcure", logo: calEprocureLogo },
+  
   { name: "U.S. Small Business Administration", logo: sbaLogo },
   { name: "CA Dept. of General Services", logo: dgsLogo },
   { name: "WBENC Certified", logo: wbencLogo },
