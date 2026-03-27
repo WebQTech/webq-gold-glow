@@ -108,10 +108,10 @@ const IndustryDetail = () => {
         {/* What We Solve + How We Help - 4 Card Grid */}
         <section className="py-10 lg:py-14">
           <div className="container mx-auto px-6 lg:px-12">
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid md:grid-cols-2 gap-6 auto-rows-fr">
               {/* Card 1: Challenges We Solve */}
-              <div className="bg-card border border-border rounded-2xl p-8">
-                <div className="flex items-center gap-3 mb-5">
+              <div className="bg-card border border-border rounded-2xl p-8 flex flex-col">
+                <div className="flex items-center gap-3 mb-6">
                   <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
                     <Layers className="w-5 h-5 text-primary" />
                   </div>
@@ -123,16 +123,16 @@ const IndustryDetail = () => {
               </div>
 
               {/* Card 2: How We Help */}
-              <div className="bg-card border border-border rounded-2xl p-8">
-                <div className="flex items-center gap-3 mb-5">
+              <div className="bg-card border border-border rounded-2xl p-8 flex flex-col">
+                <div className="flex items-center gap-3 mb-6">
                   <div className="w-10 h-10 bg-emerald-500/10 rounded-lg flex items-center justify-center">
                     <Check className="w-5 h-5 text-emerald-500" />
                   </div>
                   <h2 className="text-xl lg:text-2xl font-bold text-foreground">How We Help</h2>
                 </div>
-                <ul className="space-y-2.5">
+                <ul className="space-y-3">
                   {industry.howWeHelp.slice(0, 4).map((item, index) => (
-                    <li key={index} className="flex items-start gap-2 text-sm">
+                    <li key={index} className="flex items-start gap-2.5 text-sm">
                       <Check className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" />
                       <span className="text-foreground/80">{item}</span>
                     </li>
@@ -141,17 +141,17 @@ const IndustryDetail = () => {
               </div>
 
               {/* Card 3: More Capabilities */}
-              <div className="bg-card border border-border rounded-2xl p-8">
-                <div className="flex items-center gap-3 mb-5">
-                  <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
-                    <Check className="w-5 h-5 text-primary" />
+              <div className="bg-card border border-border rounded-2xl p-8 flex flex-col">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-10 h-10 bg-emerald-500/10 rounded-lg flex items-center justify-center">
+                    <Check className="w-5 h-5 text-emerald-500" />
                   </div>
                   <h2 className="text-xl lg:text-2xl font-bold text-foreground">More Capabilities</h2>
                 </div>
-                <ul className="space-y-2.5">
+                <ul className="space-y-3">
                   {industry.howWeHelp.slice(4).map((item, index) => (
-                    <li key={index} className="flex items-start gap-2 text-sm">
-                      <Check className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+                    <li key={index} className="flex items-start gap-2.5 text-sm">
+                      <Check className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" />
                       <span className="text-foreground/80">{item}</span>
                     </li>
                   ))}
@@ -159,14 +159,14 @@ const IndustryDetail = () => {
               </div>
 
               {/* Card 4: Related Services */}
-              <div className="bg-card border border-border rounded-2xl p-8">
-                <div className="flex items-center gap-3 mb-5">
+              <div className="bg-card border border-border rounded-2xl p-8 flex flex-col">
+                <div className="flex items-center gap-3 mb-6">
                   <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
                     <Building2 className="w-5 h-5 text-primary" />
                   </div>
                   <h2 className="text-xl lg:text-2xl font-bold text-foreground">Related Services</h2>
                 </div>
-                <div className="flex flex-wrap gap-2 mb-4">
+                <div className="flex flex-wrap gap-2 mb-5">
                   {industry.services.map((service, index) => (
                     <span
                       key={index}
@@ -176,7 +176,7 @@ const IndustryDetail = () => {
                     </span>
                   ))}
                 </div>
-                <div className="flex flex-wrap gap-2 mt-3">
+                <div className="flex flex-wrap gap-2">
                   {industry.tags.map((tag, index) => (
                     <span
                       key={index}
