@@ -117,9 +117,18 @@ const IndustryDetail = () => {
                   </div>
                   <h2 className="text-xl lg:text-2xl font-bold text-foreground">Challenges We Solve</h2>
                 </div>
-                <p className="text-foreground/70 text-sm leading-relaxed">
+                <p className="text-foreground/70 text-sm leading-relaxed mb-4">
                   {industry.whatWeSolve}
                 </p>
+                <div className="mt-auto">
+                  <Link
+                    to="/solutions"
+                    className="inline-flex items-center gap-1.5 text-sm font-medium text-primary hover:text-primary/80 transition-colors"
+                  >
+                    Explore our IT Solutions
+                    <ArrowRight className="w-4 h-4" />
+                  </Link>
+                </div>
               </div>
 
               {/* Card 2: How We Help */}
