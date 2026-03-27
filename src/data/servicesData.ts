@@ -1790,6 +1790,57 @@ export const servicesData: ServiceDetail[] = [
     ]
   },
   {
+    slug: "education-workforce-development",
+    name: "Education & Workforce Development",
+    shortDescription: "Staffing and program support for educational institutions and workforce development agencies.",
+    fullDescription: "Our Education & Workforce Development services provide skilled professionals to K-12 school districts, colleges, universities, workforce development boards, and training organizations. We supply student services coordinators, career counselors, training specialists, administrative staff, and program analysts who understand the unique demands of educational environments and workforce readiness initiatives. From grant-funded program administration to career pathway development and student support services, our teams help institutions improve outcomes, maintain compliance, and scale operations efficiently.",
+    icon: GraduationCap,
+    category: "Non-IT Talent Management Services",
+    features: [
+      "Student services coordination and enrollment support",
+      "Career counseling and workforce readiness programs",
+      "Training program design and facilitation",
+      "Grant administration and compliance reporting",
+      "Curriculum support and instructional coordination",
+      "Data tracking and outcome measurement",
+      "Community outreach and employer engagement",
+      "Accreditation and regulatory compliance support",
+      "Student Services",
+      "Career Counselors",
+      "Training Coordinators",
+      "Administrative Support",
+      "Program Specialists"
+    ],
+    benefits: [
+      "Rapid deployment of education-experienced professionals",
+      "Improved student and participant outcomes",
+      "Scalable staffing for grant-funded programs",
+      "Reduced administrative burden on faculty and leadership",
+      "Compliance with federal and state education regulations",
+      "Cost-effective alternative to permanent hiring"
+    ],
+    technologies: ["Salesforce Education Cloud", "Banner", "PeopleSoft", "Canvas LMS", "Workday", "Power BI", "Microsoft 365", "Tableau"],
+    pricing: createContactPricing("Education & Workforce Development"),
+    caseStudies: [
+      {
+        company: "Regional Workforce Development Board",
+        industry: "Education & Workforce",
+        challenge: "Workforce board struggling to staff multiple grant-funded career readiness programs across five counties.",
+        solution: "Deployed career counselors, training coordinators, and program specialists to manage participant intake, job placement, and outcome reporting.",
+        results: [
+          "Program enrollment increased by 40%",
+          "Job placement rates improved by 30%",
+          "Full compliance with federal grant reporting",
+          "Reduced time-to-hire for program staff from 60 to 10 days"
+        ]
+      }
+    ],
+    faqs: [
+      { question: "Can you staff for grant-funded programs with specific requirements?", answer: "Yes, we regularly staff positions funded by WIOA, DOL, DOE, and state workforce grants. Our team understands the compliance, reporting, and eligibility requirements associated with these programs." },
+      { question: "Do you provide staff for K-12 and higher education?", answer: "Absolutely. We support school districts, community colleges, universities, and vocational training centers with administrative, student services, and program coordination professionals." }
+    ]
+  },
+  {
     slug: "global-operations-support",
     name: "24×7 Global Operations IT Support",
     shortDescription: "Round-the-clock IT operations support across time zones for uninterrupted business continuity.",
