@@ -164,25 +164,25 @@ const SolutionDetail = () => {
                         <Building2 className="w-6 h-6 text-primary" />
                       </div>
                       <div>
-                        <h3 className="font-semibold text-foreground">{caseStudy.company}</h3>
+                        <h3 className="text-lg font-semibold text-foreground">{caseStudy.company}</h3>
                         <p className="text-sm text-muted-foreground">{caseStudy.industry}</p>
                       </div>
                     </div>
-                    <div className="space-y-4">
+                    <div className="space-y-5">
                       <div>
-                        <h4 className="text-sm font-medium text-primary mb-1">Challenge</h4>
-                        <p className="text-sm text-muted-foreground">{caseStudy.challenge}</p>
+                        <h4 className="text-base font-semibold text-primary mb-1.5">Challenge</h4>
+                        <p className="text-base text-muted-foreground leading-relaxed">{caseStudy.challenge}</p>
                       </div>
                       <div>
-                        <h4 className="text-sm font-medium text-primary mb-1">Solution</h4>
-                        <p className="text-sm text-muted-foreground">{caseStudy.solution}</p>
+                        <h4 className="text-base font-semibold text-primary mb-1.5">Solution</h4>
+                        <p className="text-base text-muted-foreground leading-relaxed">{caseStudy.solution}</p>
                       </div>
                       <div>
-                        <h4 className="text-sm font-medium text-primary mb-2">Results</h4>
-                        <ul className="grid grid-cols-2 gap-2">
+                        <h4 className="text-base font-semibold text-primary mb-2">Results</h4>
+                        <ul className="grid grid-cols-2 gap-3">
                           {caseStudy.results.map((result, i) => (
-                            <li key={i} className="flex items-start gap-2 text-sm">
-                              <Check className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" />
+                            <li key={i} className="flex items-start gap-2.5 text-base">
+                              <Check className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" />
                               <span className="text-foreground/80">{result}</span>
                             </li>
                           ))}
