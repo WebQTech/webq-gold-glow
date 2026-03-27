@@ -50,14 +50,14 @@ export const solutionsData: SolutionDetail[] = [
         industry: "Financial Services",
         challenge: "Legacy loan processing system causing 48-hour turnaround times and frequent errors.",
         solution: "Build a modern web application with automated workflows, real-time status tracking, and integrated compliance checks.",
-        results: ["Processing time reduced to 4 hours", "Significant reduction in manual errors", "Notable increase in loan throughput", "Improved customer satisfaction scores"]
+        results: ["Dramatically faster processing time", "Significant reduction in manual errors", "Notable increase in loan throughput", "Improved customer satisfaction scores"]
       },
       {
         company: "Healthcare Client",
         industry: "Healthcare",
         challenge: "Fragmented patient data across multiple systems with no unified view.",
         solution: "Develop a unified patient portal with real-time data aggregation, appointment scheduling, and secure messaging.",
-        results: ["Single view of patient data", "Significant reduction in administrative overhead", "HIPAA-compliant architecture", "50% faster patient onboarding"]
+        results: ["Single view of patient data", "Significant reduction in administrative overhead", "HIPAA-compliant architecture", "Faster patient onboarding"]
       }
     ],
     faqs: [
@@ -98,7 +98,7 @@ export const solutionsData: SolutionDetail[] = [
         industry: "Retail & E-commerce",
         challenge: "On-premise infrastructure unable to handle seasonal traffic spikes, causing frequent outages during peak sales.",
         solution: "Migrate entire e-commerce platform to AWS with auto-scaling, CDN, and managed databases. Implemented blue-green deployments.",
-        results: ["99.99% uptime during Black Friday", "Significant reduction in infrastructure costs", "substantial faster page load times", "Zero downtime deployments"]
+        results: ["High uptime during peak traffic", "Significant reduction in infrastructure costs", "substantially faster page load times", "Zero downtime deployments"]
       }
     ],
     faqs: [
@@ -139,7 +139,7 @@ export const solutionsData: SolutionDetail[] = [
         industry: "Healthcare Technology",
         challenge: "Growing infrastructure complexity with frequent unplanned outages affecting patient-facing applications.",
         solution: "Implement 24/7 NOC operations with proactive monitoring, automated remediation, and structured incident management.",
-        results: ["99.95% uptime achieved", "Significant reduction in incident volume", "Mean time to resolution reduced by 60%", "Annual savings of significant"]
+        results: ["High uptime achieved", "Significant reduction in incident volume", "Dramatically faster incident resolution", "Notable annual cost savings"]
       }
     ],
     faqs: [
@@ -179,7 +179,7 @@ export const solutionsData: SolutionDetail[] = [
         industry: "Insurance",
         challenge: "20-year-old COBOL-based claims processing system with no vendor support and inability to add new features.",
         solution: "Phase modernization from COBOL to Java/Spring Boot microservices with React frontend, maintaining data integrity throughout.",
-        results: ["Claims processing substantial faster", "Significant reduction in maintenance costs", "New features deployed weekly", "Zero data loss during migration"]
+        results: ["Claims processing substantially faster", "Significant reduction in maintenance costs", "New features deployed weekly", "Zero data loss during migration"]
       }
     ],
     faqs: [
@@ -205,7 +205,7 @@ export const solutionsData: SolutionDetail[] = [
       "Test environment management"
     ],
     benefits: [
-      "80% faster regression testing with automation",
+      "Substantially faster regression testing with automation",
       "Earlier defect detection reducing fix costs",
       "Consistent quality across releases",
       "Faster release cycles with confidence",
@@ -219,7 +219,7 @@ export const solutionsData: SolutionDetail[] = [
         industry: "Travel & Hospitality",
         challenge: "Manual testing cycles taking 3 weeks per release, causing delayed feature launches and frequent production bugs.",
         solution: "Build a comprehensive test automation framework with 85% coverage, integrated into CI/CD pipeline with parallel execution.",
-        results: ["Testing cycle reduced to 2 days", "Significant reduction in production bugs", "Release frequency increased 4x", "Annual savings of notable savings in QA costs"]
+        results: ["Dramatically shorter testing cycles", "Significant reduction in production bugs", "Substantially increased release frequency", "Notable annual savings in QA costs"]
       }
     ],
     faqs: [
@@ -421,7 +421,7 @@ export const solutionsData: SolutionDetail[] = [
         industry: "Media & Entertainment",
         challenge: "Cloud costs growing 40% year-over-year with limited visibility into spend drivers.",
         solution: "Implement FinOps practices, rightsized instances, and automated scheduling for non-production environments.",
-        results: ["Significant reduction in monthly cloud spend", "Real-time cost dashboards for engineering teams", "Automated savings of significant/month from idle resources"]
+        results: ["Significant reduction in monthly cloud spend", "Real-time cost dashboards for engineering teams", "Automated savings from idle resource management"]
       }
     ],
     faqs: [
@@ -457,7 +457,7 @@ export const solutionsData: SolutionDetail[] = [
         industry: "Financial Services",
         challenge: "Needed low-latency workloads on-premises with burst capacity to cloud during peak trading hours.",
         solution: "Design a hybrid architecture with Kubernetes-based workload portability and automated burst-to-cloud during peak periods.",
-        results: ["99.99% uptime achieved", "60% cost reduction during off-peak periods", "Sub-millisecond latency for critical workloads"]
+        results: ["High uptime achieved", "Significant cost savings during off-peak periods", "Ultra-low latency for critical workloads"]
       }
     ],
     faqs: [
@@ -567,8 +567,8 @@ export const solutionsData: SolutionDetail[] = [
         company: "E-Commerce Client",
         industry: "E-Commerce",
         challenge: "Platform crashes during seasonal sales events, losing millions in revenue due to inability to handle 10x normal traffic.",
-        solution: "Implement comprehensive performance testing suite simulating peak loads, identified critical database and caching bottlenecks, and established auto-scaling strategies.",
-        results: ["Handled substantial normal traffic during Black Friday", "Page load time dramatically reduced
+        solution: "Implement comprehensive performance testing suite simulating peak loads, identify critical database and caching bottlenecks, and establish auto-scaling strategies.",
+        results: ["Handle peak seasonal traffic during Black Friday", "Page load times dramatically improved
       }
     ],
     faqs: [
@@ -607,8 +607,8 @@ export const solutionsData: SolutionDetail[] = [
         company: "Healthcare Client",
         industry: "Healthcare",
         challenge: "Needed to achieve HIPAA compliance for a new patient portal while addressing multiple security vulnerabilities found in a previous audit.",
-        solution: "Conduct comprehensive penetration testing, implemented SAST/DAST in CI/CD pipeline, remediated all critical findings, and established ongoing security monitoring.",
-        results: ["100% of critical vulnerabilities remediated", "HIPAA compliance achieved in 8 weeks", "Passed external audit with zero findings", "Significant reduction in security incidents year-over-year"]
+        solution: "Conduct comprehensive penetration testing, implement SAST/DAST in CI/CD pipeline, remediate all critical findings, and establish ongoing security monitoring.",
+        results: ["All critical vulnerabilities remediated", "Rapid HIPAA compliance achievement", "Clean external audit results", "Significant reduction in security incidents year-over-year"]
       }
     ],
     faqs: [
@@ -688,7 +688,7 @@ export const solutionsData: SolutionDetail[] = [
         industry: "Financial Services",
         challenge: "Inconsistent IT service delivery across 50 branches with no centralized ticketing, leading to poor user satisfaction and untracked SLAs.",
         solution: "Implement ServiceNow-based ITSM platform with automated workflows, self-service portal, and comprehensive reporting across all branches.",
-        results: ["User satisfaction improved from 62% to 91%", "First-call resolution increased to 78%", "Mean time to resolve reduced by 45%", "Full SLA visibility across all branches"]
+        results: ["Significant improvement in user satisfaction", "Improved first-call resolution rate", "Faster time to resolution", "Full SLA visibility across all branches"]
       }
     ],
     faqs: [
@@ -726,9 +726,9 @@ export const solutionsData: SolutionDetail[] = [
       {
         company: "Logistics Client",
         industry: "Logistics & Transportation",
-        challenge: "A logistics company with 5,000+ endpoints has no centralized asset tracking, leading to over-provisioned software licenses and surprise audit penalties.",
-        solution: "Deploy ServiceNow ITAM with automated discovery, integrated Flexera for license optimization, and established lifecycle workflows from procurement to disposal.",
-        results: ["notable annual savings from license reclamation", "100% asset visibility across all locations", "Software audit penalties eliminated", "Hardware refresh cycle optimized, extending useful life by 18 months"]
+        challenge: "A logistics company has 5,000+ endpoints has no centralized asset tracking, leading to over-provisioned software licenses and surprise audit penalties.",
+        solution: "Deploy ServiceNow ITAM with automated discovery, integrate Flexera for license optimization, and establish lifecycle workflows from procurement to disposal.",
+        results: ["notable annual savings from license reclamation", "Full asset visibility across all locations", "Software audit penalties eliminated", "Hardware refresh cycle optimized, extending useful asset life"]
       }
     ],
     faqs: [
@@ -768,7 +768,7 @@ export const solutionsData: SolutionDetail[] = [
       {
         company: "Healthcare Client",
         industry: "Healthcare",
-        challenge: "A healthcare provider has no formal DR plan and experiences a ransomware attack that causes 72 hours of downtime, impacting patient care and costing over $2M in losses.",
+        challenge: "A healthcare provider has no formal DR plan and experiences a ransomware attack that causes 72 hours of downtime, impacting patient care and with significant financial impact.",
         solution: "Design a multi-region DR architecture on AWS with automated failover, implemented Veeam with immutable backups, and established quarterly DR testing with documented runbooks.",
         results: ["RTO dramatically reduced
       }
@@ -1441,7 +1441,7 @@ export const solutionsData: SolutionDetail[] = [
         industry: "Public Sector",
         challenge: "Public-facing portal has 500+ WCAG violations, risking ADA non-compliance lawsuits and excluding users with disabilities.",
         solution: "Conduct comprehensive accessibility audit, prioritized critical violations, and guided remediation with developer training sessions.",
-        results: ["100% WCAG 2.1 AA compliance achieved", "500+ violations remediated across numerous pages", "Accessibility integrated into CI/CD with automated checks"]
+        results: ["Full WCAG 2.1 AA compliance achieved", "500+ violations remediated across numerous pages", "Accessibility integrated into CI/CD with automated checks"]
       }
     ],
     faqs: [
@@ -1515,7 +1515,7 @@ export const solutionsData: SolutionDetail[] = [
         industry: "Technology",
         challenge: "Complex enterprise dashboard with poor usability scores, high support ticket volume, and 40% feature abandonment rate.",
         solution: "Conduct user research with 30+ interviews, redesigned the dashboard with simplified navigation and a new design system in Figma.",
-        results: ["User satisfaction score increased from 3.2 to 4.6/5", "Support tickets reduced by 45%", "Feature adoption increased by 60%"]
+        results: ["Significant improvement in user satisfaction", "Support tickets reduced by 45%", "Feature adoption increased by 60%"]
       }
     ],
     faqs: [
@@ -1811,7 +1811,7 @@ export const solutionsData: SolutionDetail[] = [
         industry: "Healthcare",
         challenge: "5,000+ clinicians using personal devices to access patient data with no security controls or compliance framework.",
         solution: "Deploy Microsoft Intune with BYOD containerization, conditional access policies, and HIPAA-compliant mobile workspace.",
-        results: ["100% HIPAA compliance for mobile access", "5,numerous devices enrolled and secured in 8 weeks", "Zero data breach incidents since deployment"]
+        results: ["Full HIPAA compliance for mobile access", "5,numerous devices enrolled and secured in 8 weeks", "Zero data breach incidents since deployment"]
       }
     ],
     faqs: [
@@ -2033,7 +2033,7 @@ export const solutionsData: SolutionDetail[] = [
         industry: "Retail",
         challenge: "Decentralized purchasing across 200+ locations leads to inconsistent pricing and vendor sprawl.",
         solution: "Implement a centralized procurement platform with pre-negotiated vendor catalogs and automated approval workflows.",
-        results: ["Significant reduction in IT procurement costs", "60% faster purchase-to-delivery cycle", "Consolidated vendor base from 150+ to 40 preferred partners"]
+        results: ["Significant reduction in IT procurement costs", "Substantially faster purchase-to-delivery cycle", "Consolidated vendor base from 150+ to 40 preferred partners"]
       }
     ],
     faqs: [
@@ -3034,7 +3034,7 @@ export const solutionsData: SolutionDetail[] = [
         industry: "IoT & Manufacturing",
         challenge: "Manufacturing IoT platform needs to ingest and query 500,000 sensor readings per second with real-time alerting and 90-day retention.",
         solution: "Implement a dual-database architecture using TimescaleDB for time-series sensor data and Redis for real-time alerting, with automated data tiering to cold storage.",
-        results: ["Sustained 500K+ writes per second with sub-5ms latency", "Real-time anomaly detection within 2 seconds", "Storage costs reduced by 60% with automated tiering", "Query performance substantial faster than previous relational approach"]
+        results: ["Sustained 500K+ writes per second with sub-5ms latency", "Real-time anomaly detection within 2 seconds", "Storage costs reduced by 60% with automated tiering", "Query performance substantially faster than previous relational approach"]
       }
     ],
     faqs: [
