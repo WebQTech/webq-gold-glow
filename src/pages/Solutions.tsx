@@ -18,7 +18,7 @@ const solutionCategories: { title: string; icon: LucideIcon; items: string[] }[]
   {
     title: "AI & Machine Learning",
     icon: Brain,
-    items: ["ai-ml-solutions", "generative-ai", "agentic-ai", "llm-solutions", "prompt-engineering", "mlops", "nlp-services", "rag-solutions", "computer-vision"],
+    items: ["generative-ai", "agentic-ai", "llm-solutions", "rag-solutions", "ai-ml-solutions", "nlp-services", "computer-vision", "mlops", "prompt-engineering"],
   },
   {
     title: "Analytics & Data Management",
