@@ -11,7 +11,9 @@ const industryCategories = getAllIndustryCategories().map(category => ({
 
 const industryHighlights = [
   "AI-Centric Digital Innovation & Transformation",
-  "Banking, FinTech & Financial Services",
+  "Banking & Financial Services",
+  "FinTech & Digital Payments",
+  "Credit Unions & Financial Cooperatives",
   "Public Sector & Government Consulting",
   "Healthcare, EdTech & Life Sciences",
   "Retail, E-commerce & Consumer Markets",

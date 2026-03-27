@@ -10,10 +10,20 @@ import legacyTransform1 from "@/assets/industries/legacy-transform-1.jpg";
 import legacyTransform2 from "@/assets/industries/legacy-transform-2.jpg";
 import legacyTransform3 from "@/assets/industries/legacy-transform-3.jpg";
 
-// Banks & FinTech
+// Banking
+import banking1 from "@/assets/industries/banking-1.jpg";
+import banking2 from "@/assets/industries/banking-2.jpg";
+import banking3 from "@/assets/industries/banking-3.jpg";
+
+// FinTech
 import fintech1 from "@/assets/industries/fintech-1.jpg";
 import fintech2 from "@/assets/industries/fintech-2.jpg";
 import fintech3 from "@/assets/industries/fintech-3.jpg";
+
+// Credit Unions
+import creditUnions1 from "@/assets/industries/credit-unions-1.jpg";
+import creditUnions2 from "@/assets/industries/credit-unions-2.jpg";
+import creditUnions3 from "@/assets/industries/credit-unions-3.jpg";
 
 // Capital Markets
 import capitalMarkets1 from "@/assets/industries/capital-markets-1.jpg";
@@ -63,7 +73,9 @@ import quantum3 from "@/assets/industries/quantum-3.jpg";
 export const industryImages: Record<string, string[]> = {
   "ai-solutions": [aiSolutions1, aiSolutions2, aiSolutions3],
   "legacy-to-ai-transformation": [legacyTransform1, legacyTransform2, legacyTransform3],
-  "banks-fintech": [fintech1, fintech2, fintech3],
+  "banking": [banking1, banking2, banking3],
+  "fintech": [fintech1, fintech2, fintech3],
+  "credit-unions": [creditUnions1, creditUnions2, creditUnions3],
   "capital-markets": [capitalMarkets1, capitalMarkets2, capitalMarkets3],
   "healthcare-tech": [healthcare1, healthcare2, healthcare3],
   "government": [government1, government2, government3],
