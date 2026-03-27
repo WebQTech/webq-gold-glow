@@ -105,48 +105,87 @@ const IndustryDetail = () => {
           </div>
         </section>
 
-        {/* What We Solve + How We Help */}
+        {/* What We Solve + How We Help - 4 Card Grid */}
         <section className="py-10 lg:py-14">
           <div className="container mx-auto px-6 lg:px-12">
-            <div className="grid lg:grid-cols-2 gap-10 lg:gap-16">
-              <div>
-                <div className="flex items-center gap-2 mb-5">
-                  <Layers className="w-5 h-5 text-primary" />
-                  <h2 className="text-2xl lg:text-3xl font-bold text-foreground">Challenges We Solve</h2>
+            <div className="grid md:grid-cols-2 gap-6">
+              {/* Card 1: Challenges We Solve */}
+              <div className="bg-card border border-border rounded-2xl p-8">
+                <div className="flex items-center gap-3 mb-5">
+                  <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
+                    <Layers className="w-5 h-5 text-primary" />
+                  </div>
+                  <h2 className="text-xl lg:text-2xl font-bold text-foreground">Challenges We Solve</h2>
                 </div>
-                <p className="text-foreground/70 text-base leading-relaxed font-[Inter] mb-6">
+                <p className="text-foreground/70 text-sm leading-relaxed">
                   {industry.whatWeSolve}
                 </p>
-                <div>
-                  <h3 className="text-lg font-semibold text-foreground mb-4">Related Services</h3>
-                  <div className="flex flex-wrap gap-2">
-                    {industry.services.map((service, index) => (
-                      <span
-                        key={index}
-                        className="px-3 py-1 text-sm bg-muted text-muted-foreground rounded-full"
-                      >
-                        {service}
-                      </span>
-                    ))}
-                  </div>
-                </div>
               </div>
 
-              <div>
-                <div className="flex items-center gap-2 mb-5">
-                  <Check className="w-5 h-5 text-emerald-500" />
-                  <h2 className="text-2xl lg:text-3xl font-bold text-foreground">How We Help</h2>
+              {/* Card 2: How We Help */}
+              <div className="bg-card border border-border rounded-2xl p-8">
+                <div className="flex items-center gap-3 mb-5">
+                  <div className="w-10 h-10 bg-emerald-500/10 rounded-lg flex items-center justify-center">
+                    <Check className="w-5 h-5 text-emerald-500" />
+                  </div>
+                  <h2 className="text-xl lg:text-2xl font-bold text-foreground">How We Help</h2>
                 </div>
-                <ul className="space-y-4">
-                  {industry.howWeHelp.map((item, index) => (
-                    <li key={index} className="flex items-start gap-3">
-                      <div className="w-5 h-5 rounded-full bg-emerald-500/10 flex items-center justify-center shrink-0 mt-0.5">
-                        <Check className="w-3 h-3 text-emerald-500" />
-                      </div>
+                <ul className="space-y-2.5">
+                  {industry.howWeHelp.slice(0, 4).map((item, index) => (
+                    <li key={index} className="flex items-start gap-2 text-sm">
+                      <Check className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" />
                       <span className="text-foreground/80">{item}</span>
                     </li>
                   ))}
                 </ul>
+              </div>
+
+              {/* Card 3: More Capabilities */}
+              <div className="bg-card border border-border rounded-2xl p-8">
+                <div className="flex items-center gap-3 mb-5">
+                  <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
+                    <Check className="w-5 h-5 text-primary" />
+                  </div>
+                  <h2 className="text-xl lg:text-2xl font-bold text-foreground">More Capabilities</h2>
+                </div>
+                <ul className="space-y-2.5">
+                  {industry.howWeHelp.slice(4).map((item, index) => (
+                    <li key={index} className="flex items-start gap-2 text-sm">
+                      <Check className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+                      <span className="text-foreground/80">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Card 4: Related Services */}
+              <div className="bg-card border border-border rounded-2xl p-8">
+                <div className="flex items-center gap-3 mb-5">
+                  <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
+                    <Building2 className="w-5 h-5 text-primary" />
+                  </div>
+                  <h2 className="text-xl lg:text-2xl font-bold text-foreground">Related Services</h2>
+                </div>
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {industry.services.map((service, index) => (
+                    <span
+                      key={index}
+                      className="px-3 py-1.5 text-sm font-medium bg-primary/8 text-primary border border-primary/15 rounded-full"
+                    >
+                      {service}
+                    </span>
+                  ))}
+                </div>
+                <div className="flex flex-wrap gap-2 mt-3">
+                  {industry.tags.map((tag, index) => (
+                    <span
+                      key={index}
+                      className="px-2.5 py-1 text-xs bg-muted text-muted-foreground rounded-full"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
