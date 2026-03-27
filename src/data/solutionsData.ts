@@ -3041,6 +3041,228 @@ export const solutionsData: SolutionDetail[] = [
       { question: "When should we use NoSQL instead of a relational database?", answer: "NoSQL excels when you need flexible schemas, horizontal scaling, low-latency at massive scale, or specialized data models (graphs, time-series, documents). We help evaluate your workload patterns and recommend the right database type." },
       { question: "Can NoSQL databases handle ACID transactions?", answer: "Modern NoSQL databases increasingly support ACID transactions. MongoDB supports multi-document transactions, DynamoDB offers transactional APIs, and NewSQL databases like CockroachDB combine distributed architecture with full ACID compliance." }
     ]
+  },
+  {
+    slug: "sap-s4hana",
+    name: "SAP S/4HANA Implementation",
+    shortDescription: "End-to-end SAP S/4HANA implementation, migration, and optimization for intelligent enterprises.",
+    fullDescription: "We deliver comprehensive SAP S/4HANA implementation and migration services — from greenfield deployments to system conversions and selective data transitions. Our certified SAP consultants guide organizations through every phase: discovery, design, build, test, deploy, and hypercare. S/4HANA's in-memory computing platform delivers real-time analytics on live transactional data, enabling instant business insights across finance, supply chain, manufacturing, and procurement. We leverage SAP Activate methodology, AI-powered data migration tools, and automated testing frameworks to accelerate deployments while reducing risk and cost.",
+    icon: Cable,
+    features: [
+      "Greenfield & brownfield S/4HANA implementations",
+      "Legacy ECC to S/4HANA migration & conversion",
+      "Selective data transition with minimal downtime",
+      "SAP Fiori UX design & deployment",
+      "Custom ABAP & RAP development",
+      "SAP Integration Suite configuration",
+      "Performance tuning & optimization",
+      "Hypercare & post-go-live support"
+    ],
+    benefits: [
+      "Real-time financial close & reporting",
+      "Unified operations across business units",
+      "Reduced total cost of ownership",
+      "Future-proof digital core for innovation"
+    ],
+    technologies: ["SAP S/4HANA", "SAP Fiori", "SAP BTP", "SAP Integration Suite", "ABAP RESTful Programming Model", "SAP Data Services", "SAP Solution Manager"],
+    caseStudies: [
+      {
+        company: "Global Manufacturing Corp",
+        industry: "Manufacturing",
+        challenge: "Running a 15-year-old SAP ECC system with fragmented data across 12 plants and manual reconciliation.",
+        solution: "Greenfield SAP S/4HANA implementation with unified data model, automated inter-plant workflows, and embedded analytics.",
+        results: ["70% reduction in month-end close time", "Unified operations across 12 plants", "Real-time inventory visibility reducing stockouts by 60%"]
+      }
+    ],
+    faqs: [
+      { question: "Should we choose greenfield or brownfield migration?", answer: "It depends on your current landscape complexity. Greenfield (new implementation) is ideal for process redesign, while brownfield (system conversion) preserves customizations. We assess your landscape and recommend the optimal approach." },
+      { question: "How long does an S/4HANA implementation take?", answer: "Timelines vary based on scope — typically 6-12 months for mid-size deployments and 12-24 months for large enterprises. Our SAP Activate methodology accelerates delivery with pre-configured best practices." }
+    ]
+  },
+  {
+    slug: "sap-btp",
+    name: "SAP Business Technology Platform",
+    shortDescription: "Extend and innovate on SAP BTP with custom applications, integrations, and AI capabilities.",
+    fullDescription: "SAP Business Technology Platform (BTP) is the foundation for extending SAP solutions and building intelligent enterprise applications. We help organizations leverage BTP's capabilities — from SAP Build for low-code development and SAP Integration Suite for seamless connectivity to SAP AI Core for machine learning workloads. Our BTP services enable businesses to build side-by-side extensions, automate workflows, and create data-driven applications without modifying the SAP core, ensuring clean upgrade paths and long-term maintainability.",
+    icon: Blocks,
+    features: [
+      "SAP Build Apps & Process Automation",
+      "SAP Integration Suite & API Management",
+      "SAP AI Core & AI Launchpad",
+      "Cloud Application Programming (CAP) model",
+      "SAP HANA Cloud database services",
+      "Custom Fiori Elements applications",
+      "SAP Analytics Cloud integration",
+      "Multi-cloud deployment (AWS, Azure, GCP)"
+    ],
+    benefits: [
+      "Extend SAP without modifying the core",
+      "Accelerate innovation with low-code tools",
+      "Unified integration across SAP & non-SAP systems",
+      "AI-powered business process automation"
+    ],
+    technologies: ["SAP BTP", "SAP Build", "SAP Integration Suite", "SAP AI Core", "SAP HANA Cloud", "Cloud Foundry", "Kyma Runtime", "SAP CAP"],
+    caseStudies: [
+      {
+        company: "Retail Enterprise",
+        industry: "Retail",
+        challenge: "Needed custom customer loyalty and inventory applications without disrupting core S/4HANA operations.",
+        solution: "Built side-by-side extensions on SAP BTP using CAP model with real-time S/4HANA integration via SAP Integration Suite.",
+        results: ["Custom apps deployed in 8 weeks", "Zero impact on core S/4HANA performance", "30% improvement in customer retention through loyalty platform"]
+      }
+    ],
+    faqs: [
+      { question: "What's the difference between SAP BTP and S/4HANA?", answer: "S/4HANA is the core ERP system for business operations, while BTP is a platform for extending, integrating, and innovating on top of SAP. Think of BTP as the innovation layer that enhances your SAP landscape." },
+      { question: "Can BTP integrate with non-SAP systems?", answer: "Absolutely. SAP Integration Suite on BTP supports 200+ pre-built connectors for popular platforms like Salesforce, ServiceNow, AWS, and Azure, plus open APIs for custom integrations." }
+    ]
+  },
+  {
+    slug: "sap-analytics",
+    name: "SAP Analytics & Planning",
+    shortDescription: "Enterprise analytics, planning, and reporting powered by SAP Analytics Cloud and embedded BI.",
+    fullDescription: "We implement SAP Analytics Cloud (SAC) and embedded analytics solutions that transform enterprise data into actionable insights. From financial planning and predictive forecasting to real-time operational dashboards, our analytics services help organizations move from reactive reporting to proactive decision-making. SAC unifies business intelligence, planning, and predictive capabilities in a single cloud platform, with native integration into S/4HANA for live data access without replication.",
+    icon: BarChart3,
+    features: [
+      "SAP Analytics Cloud implementation",
+      "Financial planning & budgeting",
+      "Predictive analytics & smart insights",
+      "Real-time dashboards & story design",
+      "SAP BW/4HANA & DataSphere integration",
+      "Embedded analytics in S/4HANA",
+      "Board-ready reporting automation",
+      "Data quality & governance frameworks"
+    ],
+    benefits: [
+      "Single source of truth for enterprise reporting",
+      "Faster planning cycles with collaborative workflows",
+      "AI-driven forecasting & anomaly detection",
+      "Reduced reporting infrastructure costs"
+    ],
+    technologies: ["SAP Analytics Cloud", "SAP BW/4HANA", "SAP DataSphere", "SAP HANA", "SAP BusinessObjects", "SAP Data Intelligence"],
+    caseStudies: [
+      {
+        company: "Financial Services Group",
+        industry: "Financial Services",
+        challenge: "Manual budget consolidation across 15 business units taking 6 weeks per cycle with inconsistent data.",
+        solution: "Deployed SAP Analytics Cloud for unified planning with live S/4HANA connectivity, automated consolidation, and predictive forecasting.",
+        results: ["Planning cycle reduced from 6 weeks to 5 days", "99.5% data accuracy in consolidated reports", "Predictive models improved forecast accuracy by 35%"]
+      }
+    ],
+    faqs: [
+      { question: "Can SAP Analytics Cloud replace our existing BI tools?", answer: "SAC can consolidate most BI, planning, and predictive needs into one platform. We assess your current landscape and create a migration roadmap that ensures continuity while maximizing SAC's capabilities." },
+      { question: "Does SAC require S/4HANA?", answer: "No, SAC works with various data sources including non-SAP systems. However, it offers the richest experience with S/4HANA through live data connections and embedded analytics." }
+    ]
+  },
+  {
+    slug: "sap-successfactors",
+    name: "SAP SuccessFactors (HCM)",
+    shortDescription: "Cloud-based human capital management covering the complete employee lifecycle.",
+    fullDescription: "We implement and optimize SAP SuccessFactors to modernize human capital management across the entire employee lifecycle — from recruiting and onboarding to performance management, learning, and succession planning. SuccessFactors delivers cloud-native HCM with built-in AI for talent intelligence, continuous performance management, and workforce analytics. Our services include module implementation, integration with S/4HANA HR, data migration from legacy HR systems, and ongoing optimization to ensure your HCM platform evolves with your workforce strategy.",
+    icon: Users,
+    features: [
+      "Employee Central & Core HR",
+      "Recruiting & onboarding management",
+      "Performance & goal management",
+      "Learning management system (LMS)",
+      "Succession planning & development",
+      "Compensation & benefits administration",
+      "Workforce analytics & people insights",
+      "Integration with S/4HANA & payroll"
+    ],
+    benefits: [
+      "Unified employee experience across HR processes",
+      "AI-driven talent insights & retention predictions",
+      "Global compliance across 100+ countries",
+      "Reduced HR administrative overhead"
+    ],
+    technologies: ["SAP SuccessFactors", "SAP BTP", "SAP Integration Suite", "SAP Work Zone", "Qualtrics", "SAP Concur"],
+    caseStudies: [
+      {
+        company: "Healthcare Network",
+        industry: "Healthcare",
+        challenge: "Managing 25,000 employees across 40 facilities with fragmented HR systems and manual onboarding taking 3 weeks.",
+        solution: "Implemented SuccessFactors Employee Central with automated onboarding workflows, integrated recruiting, and workforce analytics.",
+        results: ["Onboarding time reduced from 3 weeks to 3 days", "Employee self-service adoption at 92%", "HR team capacity freed by 40% for strategic initiatives"]
+      }
+    ],
+    faqs: [
+      { question: "Can SuccessFactors integrate with our existing payroll?", answer: "Yes, SuccessFactors integrates with major payroll providers including ADP, Workday Payroll, and SAP Payroll. We configure bi-directional data flows to ensure accuracy and compliance." },
+      { question: "How do you handle data migration from legacy HR systems?", answer: "We use structured data migration templates, automated validation scripts, and parallel testing to ensure complete and accurate data transfer with zero disruption to HR operations." }
+    ]
+  },
+  {
+    slug: "sap-ariba",
+    name: "SAP Ariba & Procurement",
+    shortDescription: "Intelligent procurement and supply chain collaboration on the world's largest business network.",
+    fullDescription: "We implement SAP Ariba to transform procurement operations — from strategic sourcing and contract management to procure-to-pay automation. Ariba Network connects buyers with millions of suppliers globally, enabling real-time collaboration, spend visibility, and compliance enforcement. Our services cover Ariba Buying, Sourcing, Contracts, Supply Chain Collaboration, and integration with S/4HANA for end-to-end procure-to-pay automation. We help organizations achieve measurable savings through supplier consolidation, automated approvals, and intelligent spend analytics.",
+    icon: ShoppingCart,
+    features: [
+      "SAP Ariba Buying & invoicing",
+      "Strategic sourcing & auctions",
+      "Contract lifecycle management",
+      "Supplier management & qualification",
+      "Ariba Network onboarding",
+      "Guided buying & catalog management",
+      "Spend analytics & compliance",
+      "S/4HANA procurement integration"
+    ],
+    benefits: [
+      "Reduce procurement costs by 15-25%",
+      "100% spend visibility & compliance",
+      "Faster sourcing cycles with automation",
+      "Access to world's largest supplier network"
+    ],
+    technologies: ["SAP Ariba", "SAP S/4HANA", "SAP Integration Suite", "SAP Fieldglass", "SAP Business Network"],
+    caseStudies: [
+      {
+        company: "Energy Corporation",
+        industry: "Energy",
+        challenge: "Fragmented procurement across 20 operating companies with no spend visibility and 60% maverick buying.",
+        solution: "Deployed SAP Ariba with guided buying, supplier qualification workflows, and spend analytics integrated with S/4HANA.",
+        results: ["22% reduction in procurement costs", "Maverick spending reduced from 60% to 8%", "Supplier onboarding time cut from 30 days to 3 days"]
+      }
+    ],
+    faqs: [
+      { question: "What's the difference between Ariba and S/4HANA procurement?", answer: "S/4HANA handles operational procurement (purchase orders, goods receipts), while Ariba adds strategic sourcing, supplier collaboration, and the Ariba Network. Together they provide end-to-end procurement excellence." },
+      { question: "How long does Ariba implementation take?", answer: "Typical Ariba implementations take 3-6 months depending on modules and scope. We use phased rollouts starting with highest-impact areas like guided buying and invoice automation." }
+    ]
+  },
+  {
+    slug: "sap-integration",
+    name: "SAP Integration & Migration",
+    shortDescription: "Seamless integration of SAP with enterprise systems and cloud platforms for unified operations.",
+    fullDescription: "We specialize in integrating SAP landscapes with third-party applications, cloud platforms, and legacy systems. Using SAP Integration Suite, middleware platforms, and custom APIs, we create seamless data flows between SAP and non-SAP environments. Our migration services cover system conversions, data migrations, and cloud transitions — whether moving from on-premise to SAP cloud, consolidating multiple SAP instances, or integrating acquisitions. Every integration is designed for reliability, scalability, and maintainability.",
+    icon: ArrowRightLeft,
+    features: [
+      "SAP Integration Suite & CPI configuration",
+      "API-based & event-driven integrations",
+      "Legacy system migration & decommissioning",
+      "Multi-system landscape harmonization",
+      "Master data management & synchronization",
+      "Cloud migration (on-prem to RISE with SAP)",
+      "Real-time & batch integration patterns",
+      "Integration monitoring & error handling"
+    ],
+    benefits: [
+      "Eliminate data silos across the enterprise",
+      "Reduce integration maintenance overhead",
+      "Accelerate M&A system consolidation",
+      "Future-proof with API-first architecture"
+    ],
+    technologies: ["SAP Integration Suite", "SAP CPI", "SAP Data Services", "SAP LT Replication", "Dell Boomi", "MuleSoft", "Microsoft Azure Integration"],
+    caseStudies: [
+      {
+        company: "Pharmaceutical Company",
+        industry: "Life Sciences",
+        challenge: "Post-acquisition landscape with 3 separate SAP instances, 50+ point-to-point integrations, and frequent data inconsistencies.",
+        solution: "Consolidated to single S/4HANA instance with SAP Integration Suite as central hub, replacing point-to-point connections with managed APIs.",
+        results: ["Integration errors reduced by 95%", "System consolidation completed in 10 months", "Annual integration maintenance costs reduced by 60%"]
+      }
+    ],
+    faqs: [
+      { question: "Can you integrate SAP with our CRM and other cloud apps?", answer: "Yes, we integrate SAP with Salesforce, ServiceNow, Workday, and 200+ other platforms using SAP Integration Suite's pre-built connectors and custom API development." },
+      { question: "What's RISE with SAP and should we consider it?", answer: "RISE with SAP is a bundled offering for cloud transformation including S/4HANA Cloud, BTP, and Business Network. We help evaluate whether RISE fits your roadmap versus standalone cloud migration." }
+    ]
   }
 ];
 

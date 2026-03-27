@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, CheckCircle2, Code2, BarChart3, Brain, Cloud, GitBranch, TestTube, Shield, Headphones, Building2, Database, LucideIcon, ChevronRight } from "lucide-react";
+import { ArrowRight, CheckCircle2, Code2, BarChart3, Brain, Cloud, GitBranch, TestTube, Shield, Headphones, Building2, Database, Cable, LucideIcon, ChevronRight } from "lucide-react";
 import { Footer } from "@/components/Footer";
 import { solutionsData } from "@/data/solutionsData";
 import { HoverCard, HoverCardTrigger, HoverCardContent } from "@/components/ui/hover-card";
@@ -44,6 +44,11 @@ const solutionCategories: { title: string; icon: LucideIcon; items: string[] }[]
     title: "Enterprise Application Management",
     icon: Building2,
     items: ["crm-implementation", "erp-management", "enterprise-integration", "legacy-modernization", "supply-chain-management", "enterprise-mobility", "enterprise-content-management"],
+  },
+  {
+    title: "SAP Solutions",
+    icon: Cable,
+    items: ["sap-s4hana", "sap-btp", "sap-analytics", "sap-successfactors", "sap-ariba", "sap-integration"],
   },
   {
     title: "Security",
