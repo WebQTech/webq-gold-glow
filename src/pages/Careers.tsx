@@ -2,6 +2,7 @@ import { Footer } from "@/components/Footer";
 import { motion } from "framer-motion";
 import { Briefcase, Users, Gift, UserCheck, MapPin, Clock, ArrowRight, Heart, Zap, Globe, GraduationCap, Mail, ChevronDown, ChevronUp, Building2, Send, Sparkles, Copy, Check } from "lucide-react";
 import { Helmet } from "react-helmet-async";
+import { GoBackButton } from "@/components/GoBackButton";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -642,6 +643,7 @@ const Careers = () => {
           {/* Hero Section */}
           <section className="relative py-12 lg:py-20 bg-gradient-to-b from-primary/5 to-background overflow-hidden">
             <div className="container mx-auto px-6 lg:px-12">
+              <GoBackButton />
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}

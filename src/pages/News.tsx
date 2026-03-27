@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Bell, ArrowRight } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+import { GoBackButton } from "@/components/GoBackButton";
 
 const News = () => {
   return (
@@ -18,6 +19,7 @@ const News = () => {
           {/* Hero Section */}
           <section className="relative py-20 lg:py-32 bg-gradient-to-b from-primary/5 to-background overflow-hidden">
             <div className="container mx-auto px-6 lg:px-12">
+              <GoBackButton />
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}

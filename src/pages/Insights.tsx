@@ -2,6 +2,7 @@ import { Footer } from "@/components/Footer";
 import { Mic, Calendar, ArrowRight, Clock, User } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+import { GoBackButton } from "@/components/GoBackButton";
 
 const featuredInsights = [
   {
@@ -102,6 +103,7 @@ const Insights = () => {
         <main id="main-content" className="focus:outline-none" tabIndex={-1}>
           <section className="relative py-12 lg:py-20 bg-gradient-to-b from-primary/5 to-background overflow-hidden">
             <div className="container mx-auto px-6 lg:px-12">
+              <GoBackButton />
               <div className="max-w-3xl">
                 <span className="text-primary text-sm font-semibold uppercase tracking-wider">Insights</span>
                 <h1 className="text-3xl lg:text-4xl font-bold text-foreground mt-4 mb-6">

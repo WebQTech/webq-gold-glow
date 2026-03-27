@@ -1,6 +1,7 @@
 import { Footer } from "@/components/Footer";
 import { motion } from "framer-motion";
 import { Building2, Users, Award, MapPin, Handshake, Target, Eye, Heart, Globe, CheckCircle } from "lucide-react";
+import { GoBackButton } from "@/components/GoBackButton";
 
 import sbaLogo from "@/assets/certifications/sba.png";
 import dgsLogo from "@/assets/certifications/dgs.png";
@@ -71,6 +72,7 @@ const About = () => {
           {/* Hero Section */}
           <section className="relative py-12 lg:py-20 bg-gradient-to-b from-primary/5 to-background overflow-hidden">
             <div className="container mx-auto px-6 lg:px-12">
+              <GoBackButton />
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}

@@ -9,6 +9,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
 import { Mail, Phone, MapPin, Clock, Send } from "lucide-react";
+import { GoBackButton } from "@/components/GoBackButton";
 import { z } from "zod";
 
 const contactSchema = z.object({
@@ -137,6 +138,7 @@ const Contact = () => {
         <section className="relative pt-24 pb-12 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-transparent" />
           <div className="container mx-auto px-6 lg:px-12 relative z-10">
+            <GoBackButton />
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
