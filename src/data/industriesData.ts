@@ -69,14 +69,21 @@ export const industriesData: IndustryDetail[] = [
     caseStudies: [
       {
         company: "SaaS Platform Client",
-        challenge: "Struggling to integrate AI capabilities into their existing platform.",
-        solution: "Develop a comprehensive AI strategy and implemented custom ML models for predictive analytics.",
-        results: [
-          "Reduced data processing time noticeably",
-          "Improved user engagement and retention",
-          "AI-powered features launched on schedule",
-          "Early positive ROI observed"
-        ]
+        challenge: "High customer churn due to inability to predict user disengagement before it happens, leaving the product team reactive instead of proactive.",
+        solution: "Build a predictive churn model using behavioral signals, feature usage patterns, and support ticket sentiment — integrated directly into the product dashboard for real-time intervention.",
+        results: ["Early churn risk detection before cancellation", "Proactive retention workflows triggered automatically", "Improved customer lifetime value", "Data-driven product prioritization"]
+      },
+      {
+        company: "Enterprise Client",
+        challenge: "Internal knowledge scattered across thousands of documents, wikis, and email threads — making it nearly impossible for employees to find accurate answers quickly.",
+        solution: "Deploy a RAG-based AI knowledge assistant that indexes internal documents, applies semantic search, and delivers context-aware answers with source citations.",
+        results: ["Dramatically faster internal knowledge retrieval", "Reduced dependency on tribal knowledge", "Improved onboarding speed for new hires", "Higher employee productivity"]
+      },
+      {
+        company: "Healthcare Client",
+        challenge: "Manual medical coding and billing errors causing revenue leakage and claim denials, with coders struggling to keep up with changing ICD-10 guidelines.",
+        solution: "Implement an AI-assisted coding engine that reads clinical notes, suggests accurate codes, and flags discrepancies for human review — reducing errors and accelerating the revenue cycle.",
+        results: ["Fewer claim denials due to coding errors", "Faster billing cycle turnaround", "Improved coder productivity and satisfaction", "Better compliance with coding standards"]
       }
     ],
     faqs: [
@@ -114,14 +121,21 @@ export const industriesData: IndustryDetail[] = [
     caseStudies: [
       {
         company: "Manufacturing Client",
-        challenge: "Legacy ERP system can't support modern analytics or AI.",
-        solution: "Create API bridges and data pipelines to enable AI without replacing core systems.",
-        results: [
-          "Key manual processes automated",
-          "Real-time analytics now available",
-          "Zero downtime during transformation",
-          "Significant cost savings vs full replacement"
-        ]
+        challenge: "A 20-year-old ERP system stores critical production data in proprietary formats that no modern analytics or AI tool can read, blocking digital transformation.",
+        solution: "Create secure API bridges and ETL pipelines that extract, normalize, and expose legacy data to cloud-native AI services — without replacing the core ERP.",
+        results: ["Real-time analytics available for the first time", "AI-powered demand forecasting enabled", "Zero disruption to daily operations", "Fraction of the cost of full ERP replacement"]
+      },
+      {
+        company: "Insurance Client",
+        challenge: "COBOL-based claims system processes everything in batch overnight, meaning adjusters can't access updated claim status until the next business day.",
+        solution: "Wrap the mainframe with a real-time API gateway and event-driven middleware, enabling modern web and mobile interfaces to interact with legacy data in real time.",
+        results: ["Same-day claim status visibility for adjusters", "Modern self-service portal for policyholders", "Mainframe investment preserved", "Incremental modernization path established"]
+      },
+      {
+        company: "Government Client",
+        challenge: "Decades of citizen records trapped in siloed legacy databases across multiple agencies, preventing unified service delivery and cross-agency collaboration.",
+        solution: "Build a master data integration layer with identity resolution and data quality rules that unify citizen records across agencies while respecting privacy regulations.",
+        results: ["Unified citizen view across agencies", "Faster benefits eligibility determination", "Improved data accuracy and deduplication", "Full compliance with privacy regulations"]
       }
     ],
     faqs: [
@@ -159,14 +173,21 @@ export const industriesData: IndustryDetail[] = [
     caseStudies: [
       {
         company: "Regional Bank Client",
-        challenge: "Legacy core banking system limiting digital product launches.",
-        solution: "Phase core modernization with API layer enabling rapid digital product deployment.",
-        results: [
-          "Digital account opening launched in weeks",
-          "Processing time for loans significantly reduced",
-          "Customer satisfaction scores improved",
-          "Regulatory audit preparation streamlined"
-        ]
+        challenge: "Core banking system running on decades-old mainframe technology can't support real-time payments, digital account opening, or mobile-first customer experiences.",
+        solution: "Design a phased core modernization strategy with an API orchestration layer that enables new digital products to launch immediately while the core is gradually migrated.",
+        results: ["Digital account opening launched within weeks", "Real-time payment capability enabled", "Customer onboarding time dramatically reduced", "Regulatory compliance maintained throughout"]
+      },
+      {
+        company: "Community Bank Client",
+        challenge: "Rising compliance costs consuming a disproportionate share of the budget, with staff manually preparing reports for BSA/AML, HMDA, and CRA regulations.",
+        solution: "Implement automated regulatory reporting pipelines that pull data from core systems, apply validation rules, and generate audit-ready reports with minimal human intervention.",
+        results: ["Compliance report preparation time cut significantly", "Fewer regulatory findings during audits", "Staff redeployed to higher-value activities", "Scalable framework for new regulatory requirements"]
+      },
+      {
+        company: "Banking Client",
+        challenge: "Fraud losses growing as sophisticated attacks bypass legacy rule-based detection systems that can't adapt to new patterns in real time.",
+        solution: "Deploy ML-based transaction monitoring that learns from historical fraud patterns, scores transactions in real time, and adapts to emerging threats without manual rule updates.",
+        results: ["Notable reduction in fraud losses", "Fewer false positives disrupting legitimate customers", "Real-time detection of previously unseen patterns", "Improved customer trust and satisfaction"]
       }
     ],
     faqs: [
@@ -204,15 +225,22 @@ export const industriesData: IndustryDetail[] = [
     heroImage: fintechHero,
     caseStudies: [
       {
+        company: "Payment Platform Client",
+        challenge: "Transaction processing infrastructure can't scale to meet growing merchant demand, causing latency spikes and failed transactions during peak periods.",
+        solution: "Re-architect the payment processing pipeline with event-driven microservices, horizontal auto-scaling, and multi-region redundancy for sub-second transaction processing.",
+        results: ["Transaction throughput increased dramatically", "Sub-second processing achieved consistently", "Zero failed transactions during peak events", "Platform ready to onboard enterprise merchants"]
+      },
+      {
         company: "FinTech Client",
-        challenge: "Fraud losses increasing with existing rule-based system.",
-        solution: "Implement ML-based fraud detection with real-time transaction scoring.",
-        results: [
-          "Notable reduction in fraud losses",
-          "Fewer false positives flagged",
-          "Real-time detection capability enabled",
-          "Improved customer trust and retention"
-        ]
+        challenge: "Manual KYC/AML onboarding process taking days per customer, causing high abandonment rates and losing potential users to faster competitors.",
+        solution: "Build automated identity verification pipeline using document OCR, biometric matching, and real-time sanctions screening — reducing onboarding to minutes while maintaining compliance.",
+        results: ["Customer onboarding reduced from days to minutes", "Significant drop in onboarding abandonment", "Full regulatory compliance maintained", "Scalable to handle rapid user growth"]
+      },
+      {
+        company: "Lending Platform Client",
+        challenge: "Credit decisioning relies on traditional bureau scores alone, excluding creditworthy individuals with thin credit files and limiting the addressable market.",
+        solution: "Implement alternative data credit scoring using cash flow analysis, rent payment history, and behavioral signals to expand lending to underserved populations responsibly.",
+        results: ["Expanded addressable market significantly", "Lower default rates than traditional scoring alone", "Financial inclusion mission advanced", "Competitive differentiation in the market"]
       }
     ],
     faqs: [
@@ -251,14 +279,21 @@ export const industriesData: IndustryDetail[] = [
     caseStudies: [
       {
         company: "Credit Union Client",
-        challenge: "Low digital adoption and high operational costs from manual processes.",
-        solution: "Launch mobile banking platform with automated loan origination and member self-service.",
-        results: [
-          "Digital adoption increased significantly",
-          "Loan processing time reduced dramatically",
-          "Operational costs lowered",
-          "Member satisfaction scores improved"
-        ]
+        challenge: "Members increasingly expect digital banking experiences that rival large banks, but limited IT budgets and legacy core systems make it hard to keep up.",
+        solution: "Launch a mobile-first banking platform with automated loan origination, remote deposit capture, and AI-powered financial wellness tools — built to integrate with the existing core.",
+        results: ["Digital adoption among members increased significantly", "Loan processing turnaround dramatically reduced", "Younger member demographic attracted", "Member satisfaction scores improved"]
+      },
+      {
+        company: "Community Credit Union Client",
+        challenge: "Manual loan underwriting process causes long wait times and inconsistent decisions, frustrating members and driving them to faster alternatives.",
+        solution: "Implement automated loan decisioning with configurable risk rules, instant pre-approval for qualified members, and a digital application flow accessible from any device.",
+        results: ["Loan decision time reduced from days to minutes", "More consistent underwriting across branches", "Higher member retention on loan products", "Staff time freed for relationship building"]
+      },
+      {
+        company: "Regional Credit Union Client",
+        challenge: "No unified view of member relationships across checking, savings, loans, and investments — preventing personalized service and cross-sell opportunities.",
+        solution: "Build a 360-degree member relationship dashboard that aggregates data from all product lines, enabling staff to deliver personalized recommendations and proactive outreach.",
+        results: ["Holistic member view available at every touchpoint", "Improved cross-sell and product adoption", "More personalized member interactions", "Better data-driven decision making"]
       }
     ],
     faqs: [
@@ -296,14 +331,21 @@ export const industriesData: IndustryDetail[] = [
     caseStudies: [
       {
         company: "Investment Firm Client",
-        challenge: "Manual portfolio reporting consuming significant team hours.",
-        solution: "Build automated reporting platform with real-time data aggregation.",
-        results: [
-          "Reporting time reduced meaningfully",
-          "Real-time portfolio visibility achieved",
-          "Improved investor satisfaction",
-          "Compliance reporting streamlined"
-        ]
+        challenge: "Portfolio managers spend hours each week manually compiling performance reports from multiple data sources, delaying investor communications and decision-making.",
+        solution: "Build an automated reporting platform that aggregates real-time data from custodians, market feeds, and internal systems — generating investor-ready reports on demand.",
+        results: ["Reporting cycle dramatically shortened", "Real-time portfolio visibility achieved", "Improved investor confidence and satisfaction", "Compliance reporting automated"]
+      },
+      {
+        company: "Asset Management Client",
+        challenge: "Risk models run overnight in batch mode, meaning portfolio managers can't assess intraday risk exposure during volatile market conditions.",
+        solution: "Implement real-time risk analytics engine with streaming market data integration, scenario stress testing, and configurable alert thresholds for immediate risk visibility.",
+        results: ["Intraday risk monitoring now available", "Faster response to market volatility", "Improved regulatory risk reporting", "Better-informed trading decisions"]
+      },
+      {
+        company: "Private Equity Client",
+        challenge: "Fund administration processes — capital calls, distributions, and investor reporting — run on spreadsheets, creating errors and audit vulnerabilities.",
+        solution: "Develop a fund administration platform with automated waterfall calculations, investor portal with self-service reporting, and complete audit trail for every transaction.",
+        results: ["Eliminated spreadsheet-based fund accounting errors", "Investors self-serve performance data on demand", "Audit preparation time dramatically reduced", "Scalable to manage additional funds"]
       }
     ],
     faqs: [
@@ -340,15 +382,22 @@ export const industriesData: IndustryDetail[] = [
     heroImage: healthcareHero,
     caseStudies: [
       {
-        company: "Healthcare Network Client",
-        challenge: "Long patient wait times and inefficient scheduling across facilities.",
-        solution: "Implement AI-powered scheduling optimization with predictive no-show modeling.",
-        results: [
-          "Noticeably shorter patient wait times",
-          "Fewer missed appointments",
-          "Better provider utilization",
-          "Meaningful operational cost savings"
-        ]
+        company: "Hospital Network Client",
+        challenge: "Patient wait times are excessive due to inefficient scheduling, high no-show rates, and poor coordination across departments and facilities.",
+        solution: "Implement AI-powered scheduling optimization with predictive no-show modeling, automated reminders, and real-time capacity balancing across facilities.",
+        results: ["Patient wait times meaningfully reduced", "No-show rates dropped significantly", "Better provider utilization across departments", "Improved patient satisfaction scores"]
+      },
+      {
+        company: "Health System Client",
+        challenge: "Clinical data trapped in separate EHR instances across acquired facilities, preventing unified patient records and coordinated care delivery.",
+        solution: "Build an interoperability layer using HL7 FHIR standards that aggregates patient data from multiple EHR systems into a unified clinical dashboard for care teams.",
+        results: ["Unified patient view across all facilities", "Fewer duplicate tests and redundant procedures", "Improved care coordination for complex patients", "Foundation for population health analytics"]
+      },
+      {
+        company: "Telehealth Client",
+        challenge: "Revenue cycle management plagued by claim denials, slow reimbursements, and manual coding errors that erode operating margins.",
+        solution: "Deploy AI-assisted medical coding and automated claims processing that validates codes against clinical documentation, catches errors pre-submission, and tracks denials for appeal.",
+        results: ["Claim denial rates significantly reduced", "Faster reimbursement turnaround", "Improved coding accuracy and compliance", "Revenue leakage substantially decreased"]
       }
     ],
     faqs: [
@@ -384,15 +433,22 @@ export const industriesData: IndustryDetail[] = [
     heroImage: governmentHero,
     caseStudies: [
       {
-        company: "Government Agency Client",
-        challenge: "Paper-based filing causing significant processing delays.",
-        solution: "Build digital filing platform with automated document processing.",
-        results: [
-          "Faster processing turnaround",
-          "High digital adoption among staff",
-          "Reduced manual error rates",
-          "Improved citizen satisfaction scores"
-        ]
+        company: "State Agency Client",
+        challenge: "Citizens wait weeks for permit approvals, license renewals, and benefit determinations because workflows are paper-based and routed manually between departments.",
+        solution: "Build a digital citizen services platform with online applications, automated routing, status tracking, and electronic approvals — accessible on any device.",
+        results: ["Processing turnaround reduced from weeks to days", "Citizens can track application status online", "Staff productivity improved significantly", "Backlog of pending applications eliminated"]
+      },
+      {
+        company: "Federal Agency Client",
+        challenge: "Aging IT infrastructure running on end-of-life hardware and unsupported software creates security vulnerabilities and limits the agency's ability to deliver modern services.",
+        solution: "Design a phased cloud migration strategy aligned with FedRAMP requirements, migrating critical workloads to secure government cloud while modernizing applications incrementally.",
+        results: ["Critical systems migrated to FedRAMP-authorized cloud", "Security posture significantly strengthened", "Infrastructure maintenance costs reduced", "Foundation for modern service delivery established"]
+      },
+      {
+        company: "Local Government Client",
+        challenge: "Data silos across police, fire, public works, and social services prevent coordinated emergency response and evidence-based policy decisions.",
+        solution: "Implement a cross-agency data integration platform with role-based access controls, real-time dashboards, and analytics tools for coordinated operations and policy planning.",
+        results: ["Cross-agency data sharing enabled for the first time", "Emergency response coordination improved", "Data-driven policy decisions now possible", "Full compliance with privacy and security regulations"]
       }
     ],
     faqs: [
@@ -429,15 +485,22 @@ export const industriesData: IndustryDetail[] = [
     heroImage: edutechHero,
     caseStudies: [
       {
-        company: "EdTech Platform Client",
-        challenge: "Low course completion rates and poor student engagement.",
-        solution: "Develop AI-powered adaptive learning platform with gamification.",
-        results: [
-          "Higher course completion rates",
-          "Stronger student engagement observed",
-          "Measurably better learning outcomes",
-          "Increased platform retention"
-        ]
+        company: "University Client",
+        challenge: "Course completion rates are declining as students disengage from one-size-fits-all content that doesn't adapt to individual learning speeds or styles.",
+        solution: "Develop an AI-powered adaptive learning platform that personalizes content difficulty, pacing, and format based on each student's performance patterns and engagement signals.",
+        results: ["Course completion rates meaningfully improved", "Student engagement scores increased", "At-risk students identified and supported earlier", "Better learning outcomes measured across programs"]
+      },
+      {
+        company: "K-12 District Client",
+        challenge: "Teachers spend excessive time on administrative tasks — grading, attendance, parent communication — leaving less time for actual instruction and student support.",
+        solution: "Build an integrated classroom management platform with automated grading, attendance tracking, parent communication tools, and AI-generated progress reports.",
+        results: ["Teacher administrative time significantly reduced", "More instructional time available per day", "Improved parent engagement and communication", "Better visibility into student progress trends"]
+      },
+      {
+        company: "Corporate Training Client",
+        challenge: "Compliance training completion is low and employees treat mandatory courses as checkbox exercises, retaining little of the material covered.",
+        solution: "Redesign compliance training with microlearning modules, scenario-based simulations, gamification elements, and adaptive assessments that reinforce weak areas.",
+        results: ["Training completion rates dramatically improved", "Higher knowledge retention demonstrated", "Employees report more engaging experience", "Compliance audit readiness strengthened"]
       }
     ],
     faqs: [
@@ -475,14 +538,21 @@ export const industriesData: IndustryDetail[] = [
     caseStudies: [
       {
         company: "E-commerce Client",
-        challenge: "High cart abandonment with generic product recommendations.",
-        solution: "Implement AI-powered personalization across web and mobile.",
-        results: [
-          "Reduced cart abandonment rate",
-          "Improved average order value",
-          "Better overall conversion rates",
-          "Stronger customer lifetime value"
-        ]
+        challenge: "Cart abandonment rates are high because product recommendations are generic, search results are irrelevant, and the checkout flow has too much friction.",
+        solution: "Implement AI-powered personalization engine across product recommendations, search, and checkout — using behavioral data, purchase history, and real-time intent signals.",
+        results: ["Cart abandonment rate measurably reduced", "Average order value increased", "Conversion rates improved across channels", "Repeat purchase frequency grew"]
+      },
+      {
+        company: "Retail Chain Client",
+        challenge: "Inventory visibility is fragmented across stores, warehouses, and online channels — leading to stockouts in high-demand locations while excess inventory sits elsewhere.",
+        solution: "Build a unified real-time inventory management system that synchronizes stock levels across all channels and enables intelligent allocation based on demand signals.",
+        results: ["Stockout incidents significantly reduced", "Excess inventory carrying costs lowered", "Fulfillment speed improved for online orders", "Unified inventory view across all locations"]
+      },
+      {
+        company: "D2C Brand Client",
+        challenge: "Customer acquisition costs are rising while lifetime value is flat — the brand lacks a loyalty program and has no strategy for turning one-time buyers into repeat customers.",
+        solution: "Design and implement a data-driven loyalty and retention program with personalized rewards, targeted re-engagement campaigns, and predictive churn prevention.",
+        results: ["Customer retention rates improved", "Lifetime value per customer increased", "Acquisition cost pressure reduced", "Stronger brand loyalty and advocacy"]
       }
     ],
     faqs: [
@@ -519,15 +589,22 @@ export const industriesData: IndustryDetail[] = [
     heroImage: manufacturingHero,
     caseStudies: [
       {
+        company: "Industrial Client",
+        challenge: "Unplanned equipment breakdowns halt production lines for hours, causing missed delivery deadlines, wasted materials, and expensive emergency repairs.",
+        solution: "Deploy IoT sensor networks with AI-powered predictive maintenance that monitors vibration, temperature, and performance patterns to forecast failures before they occur.",
+        results: ["Unplanned downtime events dramatically reduced", "Maintenance costs lowered through proactive scheduling", "Equipment lifespan extended", "Production throughput and delivery reliability improved"]
+      },
+      {
         company: "Manufacturing Client",
-        challenge: "Unplanned equipment downtime affecting production.",
-        solution: "Deploy IoT sensors with AI-powered predictive maintenance.",
-        results: [
-          "Fewer unplanned downtime events",
-          "Lower maintenance costs overall",
-          "Extended equipment lifespan",
-          "Smoother production workflows"
-        ]
+        challenge: "Quality defects aren't caught until final inspection, resulting in high scrap rates, costly rework, and occasional defective products reaching customers.",
+        solution: "Implement computer vision-based inline quality inspection that detects defects at each production stage in real time, triggering immediate alerts and root cause analysis.",
+        results: ["Defect escape rate to customers near zero", "Scrap and rework costs significantly reduced", "Real-time quality visibility across production lines", "Faster root cause identification for recurring defects"]
+      },
+      {
+        company: "Consumer Goods Client",
+        challenge: "Production planning relies on manual spreadsheets and gut feel, leading to overproduction of slow-moving items and shortages of high-demand products.",
+        solution: "Build AI-driven demand forecasting and production scheduling that analyzes historical sales, seasonal trends, and market signals to optimize production plans.",
+        results: ["Forecast accuracy meaningfully improved", "Overproduction waste reduced", "Fewer stockouts on high-demand products", "Better alignment between production and actual demand"]
       }
     ],
     faqs: [
@@ -564,15 +641,22 @@ export const industriesData: IndustryDetail[] = [
     heroImage: logisticsHero,
     caseStudies: [
       {
-        company: "Logistics Client",
-        challenge: "Manual route planning leading to inefficiencies.",
-        solution: "Build AI-powered route optimization with real-time traffic integration.",
-        results: [
-          "Lower fuel costs achieved",
-          "Improved on-time delivery rates",
-          "Better driver utilization",
-          "Measurable operational savings"
-        ]
+        company: "3PL Client",
+        challenge: "Manual route planning across a large fleet leads to excessive fuel costs, missed delivery windows, and poor driver utilization.",
+        solution: "Build AI-powered route optimization that factors in real-time traffic, delivery windows, vehicle capacity, and driver hours to generate optimal routes dynamically.",
+        results: ["Fuel costs measurably reduced", "On-time delivery rates significantly improved", "Better driver utilization and satisfaction", "Capacity to handle more deliveries without fleet expansion"]
+      },
+      {
+        company: "Distribution Client",
+        challenge: "Warehouse operations bottleneck during peak seasons with manual picking, packing, and shipping processes that can't scale without proportional headcount increases.",
+        solution: "Implement warehouse management system with zone-based picking optimization, barcode scanning workflows, and real-time labor allocation based on order volume patterns.",
+        results: ["Order fulfillment speed improved significantly", "Picking error rates dramatically reduced", "Peak season capacity handled without proportional staffing increases", "Real-time warehouse performance visibility"]
+      },
+      {
+        company: "Freight Client",
+        challenge: "No real-time visibility into shipment location and status — customer service spends hours tracking down shipments and calling carriers for updates.",
+        solution: "Deploy end-to-end shipment tracking platform that aggregates status updates from all carriers via API, provides real-time customer-facing tracking, and proactive exception alerts.",
+        results: ["Real-time shipment visibility achieved", "Customer service inquiries about shipment status reduced", "Proactive exception handling before customers notice", "Carrier performance benchmarking enabled"]
       }
     ],
     faqs: [
@@ -609,15 +693,22 @@ export const industriesData: IndustryDetail[] = [
     heroImage: energyHero,
     caseStudies: [
       {
-        company: "Utility Client",
-        challenge: "Grid instability during peak demand causing outages.",
-        solution: "Implement smart grid monitoring with AI-powered demand prediction.",
-        results: [
-          "Fewer outage incidents reported",
-          "Better peak demand management",
-          "Reduced energy waste",
-          "Improved customer satisfaction"
-        ]
+        company: "Electric Utility Client",
+        challenge: "Grid instability during peak demand periods causes rolling outages, customer complaints, and regulatory scrutiny over service reliability.",
+        solution: "Implement smart grid monitoring with AI-powered demand forecasting, automated load balancing, and real-time outage detection and response coordination.",
+        results: ["Peak demand outage incidents significantly reduced", "Faster outage detection and restoration", "Better demand forecasting accuracy", "Improved regulatory compliance metrics"]
+      },
+      {
+        company: "Renewable Energy Client",
+        challenge: "Solar and wind farms operate below optimal output because generation forecasting is inaccurate and curtailment decisions are made reactively rather than proactively.",
+        solution: "Build AI-powered generation forecasting using weather data, historical performance, and grid demand signals to maximize renewable output and minimize curtailment.",
+        results: ["Renewable energy output increased", "Curtailment events reduced", "More accurate generation forecasting", "Improved grid integration and revenue"]
+      },
+      {
+        company: "Water Utility Client",
+        challenge: "Aging water infrastructure experiences frequent main breaks and leaks, leading to water loss, service disruptions, and costly emergency repairs.",
+        solution: "Deploy IoT-based water network monitoring with pressure sensors, flow analytics, and AI-powered leak detection that identifies problems before they escalate into main breaks.",
+        results: ["Water loss from leaks meaningfully reduced", "Main break incidents fewer and less severe", "Proactive maintenance replacing emergency repairs", "Better infrastructure investment prioritization"]
       }
     ],
     faqs: [
@@ -654,15 +745,22 @@ export const industriesData: IndustryDetail[] = [
     heroImage: quantumComputingHero,
     caseStudies: [
       {
-        company: "Enterprise Client",
-        challenge: "Complex optimization problems taking too long with classical methods.",
-        solution: "Develop quantum-inspired optimization algorithm with hybrid quantum-classical architecture.",
-        results: [
-          "Dramatically faster optimization times",
-          "Improved route efficiency",
-          "Meaningful operational cost reduction",
-          "Reduced carbon footprint"
-        ]
+        company: "Logistics Enterprise Client",
+        challenge: "Fleet routing and scheduling across hundreds of vehicles and thousands of delivery points creates combinatorial optimization problems that classical solvers can't handle efficiently.",
+        solution: "Develop quantum-inspired optimization algorithms using hybrid quantum-classical architecture to solve vehicle routing problems with dramatically better results than classical approaches.",
+        results: ["Route optimization quality significantly improved", "Fuel and operational costs reduced", "More deliveries completed per vehicle per day", "Scalable approach for growing fleet operations"]
+      },
+      {
+        company: "Financial Services Client",
+        challenge: "Portfolio optimization across thousands of assets with complex constraints takes hours to compute, preventing intraday rebalancing during volatile markets.",
+        solution: "Build quantum-enhanced portfolio optimization that explores exponentially larger solution spaces, enabling near-real-time rebalancing even with complex multi-constraint portfolios.",
+        results: ["Portfolio optimization time dramatically reduced", "Better risk-adjusted returns identified", "Intraday rebalancing capability enabled", "Competitive advantage in portfolio management"]
+      },
+      {
+        company: "Pharmaceutical Client",
+        challenge: "Drug discovery process is extremely slow because molecular simulation of protein interactions requires computational power that classical methods can't provide at sufficient accuracy.",
+        solution: "Implement quantum simulation capabilities for molecular modeling, enabling higher-fidelity protein folding and drug-target interaction analysis to accelerate candidate identification.",
+        results: ["Molecular simulation fidelity meaningfully improved", "Drug candidate screening accelerated", "Previously intractable molecular interactions modeled", "Research team productivity enhanced"]
       }
     ],
     faqs: [
