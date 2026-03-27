@@ -89,7 +89,7 @@ const Solutions = () => {
                   <ChevronRight className="w-3 h-3" />
                   <span className="text-white/90 font-medium">Solutions</span>
                 </nav>
-                <h1 className="text-2xl lg:text-3xl xl:text-4xl font-bold text-white leading-tight tracking-tight">
+                <h1 className="text-2xl lg:text-3xl font-bold text-white leading-tight tracking-tight">
                   Technology Solutions & Products
                 </h1>
                 <p className="mt-4 text-sm lg:text-base text-white/70 leading-relaxed max-w-2xl text-justify">
@@ -106,9 +106,9 @@ const Solutions = () => {
 
               {/* Right — solution highlights */}
               <div className="lg:col-span-2 border-l-2 border-[hsl(195,100%,55%)] pl-5 animate-fade-in">
-                <p className="text-xs font-semibold uppercase tracking-[0.15em] text-white/50 mb-3">
+                <h2 className="text-xs font-semibold uppercase tracking-widest text-[hsl(195,100%,55%)] mb-3">
                   What We Deliver
-                </p>
+                </h2>
                 <ul className="space-y-2">
                   {solutionHighlights.map((item) => (
                     <li
