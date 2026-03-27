@@ -1,5 +1,5 @@
 import { 
-  Brain, RefreshCw, CreditCard, Landmark, Heart, GraduationCap, 
+  Brain, RefreshCw, Building2, CreditCard, Landmark, Users, Heart, GraduationCap, 
   ShoppingCart, Factory, Truck, Bolt, Atom, LucideIcon
 } from "lucide-react";
 
