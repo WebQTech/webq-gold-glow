@@ -1684,6 +1684,54 @@ export const servicesData: ServiceDetail[] = [
     ]
   },
   {
+    slug: "government-operations-administrative-support",
+    name: "Government Operations & Administrative Support",
+    shortDescription: "Comprehensive operational and administrative support services for federal, state, and local government agencies.",
+    fullDescription: "Our Government Operations & Administrative Support services provide qualified professionals to assist government agencies with day-to-day operational functions — from program coordination and records management to procurement support, constituent services, and regulatory compliance administration. We deploy skilled administrative staff, program analysts, and operations coordinators who understand the unique requirements of public-sector environments, including federal acquisition regulations, government reporting standards, and agency-specific protocols. Whether you need staff augmentation for seasonal surges, ongoing program support, or full administrative team deployment, we deliver reliable, clearance-ready talent that integrates seamlessly with your agency's mission and workflows.",
+    icon: Building2,
+    category: "Non-IT Talent Management Services",
+    features: [
+      "Program coordination and project administration",
+      "Records management and document control",
+      "Procurement and acquisition support",
+      "Constituent and citizen services support",
+      "Regulatory compliance and reporting assistance",
+      "Data entry, verification, and quality assurance",
+      "Meeting coordination and executive support",
+      "Grant administration and financial tracking",
+      "Policy research and legislative analysis support",
+      "Clearance-ready and background-checked personnel"
+    ],
+    benefits: [
+      "Rapid deployment of vetted government-experienced staff",
+      "Seamless integration with agency workflows and protocols",
+      "Scalable staffing for seasonal or project-based surges",
+      "Reduced administrative burden on core government teams",
+      "Compliance with federal, state, and local regulations",
+      "Cost-effective alternative to full-time hiring cycles"
+    ],
+    technologies: ["SharePoint", "SAP", "Oracle EBS", "Salesforce Government Cloud", "ServiceNow", "Microsoft 365 GCC", "Adobe Acrobat", "Power BI"],
+    pricing: createContactPricing("Government Operations & Administrative Support"),
+    caseStudies: [
+      {
+        company: "State Government Agency",
+        industry: "Government",
+        challenge: "Agency facing backlog in records processing and constituent response times due to staffing shortages.",
+        solution: "Deployed a team of trained administrative professionals for records management, constituent inquiry handling, and compliance documentation.",
+        results: [
+          "Records processing backlog cleared within 60 days",
+          "Constituent response times improved by 45%",
+          "Full compliance with state audit requirements",
+          "Agency leadership freed to focus on policy priorities"
+        ]
+      }
+    ],
+    faqs: [
+      { question: "Do your staff have government security clearances?", answer: "Yes, we provide clearance-ready personnel and manage the full background investigation process. We staff at Public Trust, Secret, and Top Secret levels depending on agency requirements." },
+      { question: "Can you support both federal and state/local agencies?", answer: "Absolutely. We have experience supporting federal civilian agencies, DoD organizations, and state, county, and city government offices with tailored administrative and operational staffing." }
+    ]
+  },
+  {
     slug: "global-operations-support",
     name: "24×7 Global Operations IT Support",
     shortDescription: "Round-the-clock IT operations support across time zones for uninterrupted business continuity.",
