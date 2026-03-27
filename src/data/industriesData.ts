@@ -70,7 +70,7 @@ export const industriesData: IndustryDetail[] = [
       {
         company: "SaaS Platform Client",
         challenge: "Struggling to integrate AI capabilities into their existing platform.",
-        solution: "Developed a comprehensive AI strategy and implemented custom ML models for predictive analytics.",
+        solution: "Develop a comprehensive AI strategy and implemented custom ML models for predictive analytics.",
         results: [
           "Reduced data processing time noticeably",
           "Improved user engagement and retention",
@@ -114,8 +114,8 @@ export const industriesData: IndustryDetail[] = [
     caseStudies: [
       {
         company: "Manufacturing Client",
-        challenge: "Legacy ERP system couldn't support modern analytics or AI.",
-        solution: "Created API bridges and data pipelines to enable AI without replacing core systems.",
+        challenge: "Legacy ERP system can't support modern analytics or AI.",
+        solution: "Create API bridges and data pipelines to enable AI without replacing core systems.",
         results: [
           "Key manual processes automated",
           "Real-time analytics now available",
@@ -160,7 +160,7 @@ export const industriesData: IndustryDetail[] = [
       {
         company: "Regional Bank Client",
         challenge: "Legacy core banking system limiting digital product launches.",
-        solution: "Phased core modernization with API layer enabling rapid digital product deployment.",
+        solution: "Phase core modernization with API layer enabling rapid digital product deployment.",
         results: [
           "Digital account opening launched in weeks",
           "Processing time for loans significantly reduced",
@@ -206,7 +206,7 @@ export const industriesData: IndustryDetail[] = [
       {
         company: "FinTech Client",
         challenge: "Fraud losses increasing with existing rule-based system.",
-        solution: "Implemented ML-based fraud detection with real-time transaction scoring.",
+        solution: "Implement ML-based fraud detection with real-time transaction scoring.",
         results: [
           "Notable reduction in fraud losses",
           "Fewer false positives flagged",
@@ -252,7 +252,7 @@ export const industriesData: IndustryDetail[] = [
       {
         company: "Credit Union Client",
         challenge: "Low digital adoption and high operational costs from manual processes.",
-        solution: "Launched mobile banking platform with automated loan origination and member self-service.",
+        solution: "Launch mobile banking platform with automated loan origination and member self-service.",
         results: [
           "Digital adoption increased significantly",
           "Loan processing time reduced dramatically",
@@ -297,7 +297,7 @@ export const industriesData: IndustryDetail[] = [
       {
         company: "Investment Firm Client",
         challenge: "Manual portfolio reporting consuming significant team hours.",
-        solution: "Built automated reporting platform with real-time data aggregation.",
+        solution: "Build automated reporting platform with real-time data aggregation.",
         results: [
           "Reporting time reduced meaningfully",
           "Real-time portfolio visibility achieved",
@@ -342,7 +342,7 @@ export const industriesData: IndustryDetail[] = [
       {
         company: "Healthcare Network Client",
         challenge: "Long patient wait times and inefficient scheduling across facilities.",
-        solution: "Implemented AI-powered scheduling optimization with predictive no-show modeling.",
+        solution: "Implement AI-powered scheduling optimization with predictive no-show modeling.",
         results: [
           "Noticeably shorter patient wait times",
           "Fewer missed appointments",
@@ -386,7 +386,7 @@ export const industriesData: IndustryDetail[] = [
       {
         company: "Government Agency Client",
         challenge: "Paper-based filing causing significant processing delays.",
-        solution: "Built digital filing platform with automated document processing.",
+        solution: "Build digital filing platform with automated document processing.",
         results: [
           "Faster processing turnaround",
           "High digital adoption among staff",
@@ -431,7 +431,7 @@ export const industriesData: IndustryDetail[] = [
       {
         company: "EdTech Platform Client",
         challenge: "Low course completion rates and poor student engagement.",
-        solution: "Developed AI-powered adaptive learning platform with gamification.",
+        solution: "Develop AI-powered adaptive learning platform with gamification.",
         results: [
           "Higher course completion rates",
           "Stronger student engagement observed",
@@ -476,7 +476,7 @@ export const industriesData: IndustryDetail[] = [
       {
         company: "E-commerce Client",
         challenge: "High cart abandonment with generic product recommendations.",
-        solution: "Implemented AI-powered personalization across web and mobile.",
+        solution: "Implement AI-powered personalization across web and mobile.",
         results: [
           "Reduced cart abandonment rate",
           "Improved average order value",
@@ -521,7 +521,7 @@ export const industriesData: IndustryDetail[] = [
       {
         company: "Manufacturing Client",
         challenge: "Unplanned equipment downtime affecting production.",
-        solution: "Deployed IoT sensors with AI-powered predictive maintenance.",
+        solution: "Deploy IoT sensors with AI-powered predictive maintenance.",
         results: [
           "Fewer unplanned downtime events",
           "Lower maintenance costs overall",
@@ -566,7 +566,7 @@ export const industriesData: IndustryDetail[] = [
       {
         company: "Logistics Client",
         challenge: "Manual route planning leading to inefficiencies.",
-        solution: "Built AI-powered route optimization with real-time traffic integration.",
+        solution: "Build AI-powered route optimization with real-time traffic integration.",
         results: [
           "Lower fuel costs achieved",
           "Improved on-time delivery rates",
@@ -611,7 +611,7 @@ export const industriesData: IndustryDetail[] = [
       {
         company: "Utility Client",
         challenge: "Grid instability during peak demand causing outages.",
-        solution: "Implemented smart grid monitoring with AI-powered demand prediction.",
+        solution: "Implement smart grid monitoring with AI-powered demand prediction.",
         results: [
           "Fewer outage incidents reported",
           "Better peak demand management",
@@ -656,7 +656,7 @@ export const industriesData: IndustryDetail[] = [
       {
         company: "Enterprise Client",
         challenge: "Complex optimization problems taking too long with classical methods.",
-        solution: "Developed quantum-inspired optimization algorithm with hybrid quantum-classical architecture.",
+        solution: "Develop quantum-inspired optimization algorithm with hybrid quantum-classical architecture.",
         results: [
           "Dramatically faster optimization times",
           "Improved route efficiency",

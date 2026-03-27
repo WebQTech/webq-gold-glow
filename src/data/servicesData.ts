@@ -116,7 +116,7 @@ export const servicesData: ServiceDetail[] = [
         company: "Insurance Client",
         industry: "Insurance",
         challenge: "Manual claims processing taking too long and prone to errors.",
-        solution: "Implemented AI-powered claims processing with document OCR and fraud detection.",
+        solution: "Implement AI-powered claims processing with document OCR and fraud detection.",
         results: [
           "Significantly faster claims processing",
           "Improved fraud detection accuracy",
@@ -166,10 +166,10 @@ export const servicesData: ServiceDetail[] = [
     pricing: createContactPricing("Generative AI Solutions"),
     caseStudies: [
       {
-        company: "Legal Services Client",
+        company: "Legal Client",
         industry: "Legal",
         challenge: "Legal team spending significant time on document review and research.",
-        solution: "Built an AI-powered legal research assistant with RAG for document analysis and case law retrieval.",
+        solution: "Build an AI-powered legal research assistant with RAG for document analysis and case law retrieval.",
         results: [
           "Faster research turnaround",
           "Improved document review efficiency",
@@ -220,7 +220,7 @@ export const servicesData: ServiceDetail[] = [
         company: "Financial Services Client",
         industry: "Banking",
         challenge: "Loan processing taking too long with extensive manual document review.",
-        solution: "Implemented intelligent document processing with automated data extraction and decision support.",
+        solution: "Implement intelligent document processing with automated data extraction and decision support.",
         results: [
           "Faster loan processing turnaround",
           "High document processing accuracy",
@@ -273,7 +273,7 @@ export const servicesData: ServiceDetail[] = [
         company: "Analytics Client",
         industry: "Business Intelligence",
         challenge: "Data analysts spending too much time on repetitive report generation.",
-        solution: "Deployed autonomous AI agents that investigate data anomalies, generate reports, and proactively surface insights with full MLOps infrastructure.",
+        solution: "Deploy autonomous AI agents that investigate data anomalies, generate reports, and proactively surface insights with full MLOps infrastructure.",
         results: [
           "Faster report generation",
           "Analysts focus on strategic work",
@@ -329,7 +329,7 @@ export const servicesData: ServiceDetail[] = [
         company: "Logistics Client",
         industry: "Logistics",
         challenge: "Managing fleet operations across multiple locations with outdated spreadsheets.",
-        solution: "Built a custom fleet management platform with real-time tracking, route optimization, and driver management.",
+        solution: "Build a custom fleet management platform with real-time tracking, route optimization, and driver management.",
         results: [
           "Reduced fuel costs",
           "Improved delivery times",
@@ -379,8 +379,8 @@ export const servicesData: ServiceDetail[] = [
       {
         company: "Retail Client",
         industry: "Retail",
-        challenge: "Needed a mobile commerce platform to compete with larger retailers.",
-        solution: "Built a cross-platform shopping app with personalized recommendations and seamless checkout.",
+        challenge: "Needs a mobile commerce platform to compete with larger retailers.",
+        solution: "Build a cross-platform shopping app with personalized recommendations and seamless checkout.",
         results: [
           "Strong app downloads post-launch",
           "Meaningful portion of sales from mobile",
@@ -430,8 +430,8 @@ export const servicesData: ServiceDetail[] = [
       {
         company: "Media Client",
         industry: "Media & Entertainment",
-        challenge: "On-premise infrastructure couldn't handle streaming traffic spikes during popular events.",
-        solution: "Migrated to AWS with auto-scaling architecture and global CDN implementation.",
+        challenge: "On-premise infrastructure can't handle streaming traffic spikes during popular events.",
+        solution: "Migrate to AWS with auto-scaling architecture and global CDN implementation.",
         results: [
           "Handles traffic spikes seamlessly",
           "Reduced infrastructure costs",
@@ -482,7 +482,7 @@ export const servicesData: ServiceDetail[] = [
         company: "Logistics Client",
         industry: "Logistics",
         challenge: "Frequent system outages affecting tracking and delivery operations.",
-        solution: "Implemented comprehensive monitoring, automated failover, and 24/7 NOC support.",
+        solution: "Implement comprehensive monitoring, automated failover, and 24/7 NOC support.",
         results: [
           "Improved system uptime",
           "Faster recovery times",
@@ -533,7 +533,7 @@ export const servicesData: ServiceDetail[] = [
         company: "SaaS Client",
         industry: "Software",
         challenge: "Infrequent releases causing extended downtime and customer complaints.",
-        solution: "Implemented GitOps, Kubernetes, and comprehensive CI/CD with automated testing.",
+        solution: "Implement GitOps, Kubernetes, and comprehensive CI/CD with automated testing.",
         results: [
           "More frequent deployments",
           "Zero-downtime deployments achieved",
@@ -584,7 +584,7 @@ export const servicesData: ServiceDetail[] = [
         company: "E-commerce Client",
         industry: "Retail",
         challenge: "Data scattered across multiple systems, making reporting slow.",
-        solution: "Built unified data platform with Snowflake, real-time pipelines, and self-service BI.",
+        solution: "Build unified data platform with Snowflake, real-time pipelines, and self-service BI.",
         results: [
           "Faster reporting turnaround",
           "Improved data freshness",
@@ -635,7 +635,7 @@ export const servicesData: ServiceDetail[] = [
         company: "Financial Services Client",
         industry: "Banking",
         challenge: "Executives lacked real-time visibility into branch performance and customer metrics.",
-        solution: "Deployed Power BI platform with real-time dashboards and mobile access.",
+        solution: "Deploy Power BI platform with real-time dashboards and mobile access.",
         results: [
           "Faster decision-making",
           "Improved performance visibility",
@@ -686,7 +686,7 @@ export const servicesData: ServiceDetail[] = [
         company: "Healthcare Client",
         industry: "Healthcare",
         challenge: "Needed to achieve HIPAA compliance and improve security posture for regulatory approval.",
-        solution: "Conducted comprehensive security assessment, implemented controls, and established security program.",
+        solution: "Conduct comprehensive security assessment, implemented controls, and established security program.",
         results: [
           "HIPAA compliance achieved",
           "Regulatory approval obtained",
@@ -734,10 +734,10 @@ export const servicesData: ServiceDetail[] = [
     pricing: createContactPricing("Production Support"),
     caseStudies: [
       {
-        company: "FinTech Platform Client",
+        company: "FinTech Client",
         industry: "Financial Services",
         challenge: "Internal team overwhelmed with support requests, impacting development velocity.",
-        solution: "Implemented L1/L2 support model with 24/7 coverage and automated incident response.",
+        solution: "Implement L1/L2 support model with 24/7 coverage and automated incident response.",
         results: [
           "Reduced developer time on support",
           "Faster issue resolution",
@@ -788,7 +788,7 @@ export const servicesData: ServiceDetail[] = [
         company: "Manufacturing Client",
         industry: "Manufacturing",
         challenge: "Established company struggling to compete with digitally-native competitors.",
-        solution: "Developed digital transformation roadmap, prioritized initiatives, and led implementation oversight.",
+        solution: "Develop digital transformation roadmap, prioritized initiatives, and led implementation oversight.",
         results: [
           "Increased digital revenue",
           "Improved operational efficiency",
@@ -836,10 +836,10 @@ export const servicesData: ServiceDetail[] = [
     pricing: createContactPricing("Team Augmentation"),
     caseStudies: [
       {
-        company: "Growth Startup Client",
+        company: "Growth-Stage Client",
         industry: "Technology",
-        challenge: "Needed to scale engineering capacity quickly for product launch.",
-        solution: "Provided senior developers and QA engineers with rapid onboarding and integration.",
+        challenge: "Needs to scale engineering capacity quickly for product launch.",
+        solution: "Provide senior developers and QA engineers with rapid onboarding and integration.",
         results: [
           "Team scaled quickly",
           "Product launched on schedule",
@@ -889,8 +889,8 @@ export const servicesData: ServiceDetail[] = [
       {
         company: "FinTech Client",
         industry: "Fintech",
-        challenge: "Needed to expose payment services to partners through a secure, scalable API.",
-        solution: "Built comprehensive payment API with OAuth security, rate limiting, and developer portal.",
+        challenge: "Needs to expose payment services to partners through a secure, scalable API.",
+        solution: "Build comprehensive payment API with OAuth security, rate limiting, and developer portal.",
         results: [
           "Partner integrations enabled",
           "New revenue stream created",
@@ -938,10 +938,10 @@ export const servicesData: ServiceDetail[] = [
     pricing: createContactPricing("Quality Engineering & Assurance"),
     caseStudies: [
       {
-        company: "Travel Platform Client",
+        company: "Travel Client",
         industry: "Travel",
         challenge: "Frequent production bugs damaging brand reputation and causing booking errors.",
-        solution: "Implemented comprehensive test automation with Cypress, performance testing, and CI integration.",
+        solution: "Implement comprehensive test automation with Cypress, performance testing, and CI integration.",
         results: [
           "Fewer production bugs",
           "Improved release confidence",
@@ -1040,10 +1040,10 @@ export const servicesData: ServiceDetail[] = [
     pricing: createContactPricing("Compliance & Governance"),
     caseStudies: [
       {
-        company: "SaaS Startup Client",
+        company: "SaaS Client",
         industry: "Technology",
-        challenge: "Needed SOC 2 certification to close enterprise deals but had no compliance program.",
-        solution: "Implemented comprehensive SOC 2 program with automated evidence collection and continuous monitoring.",
+        challenge: "Needs SOC 2 certification to close enterprise deals but had no compliance program.",
+        solution: "Implement comprehensive SOC 2 program with automated evidence collection and continuous monitoring.",
         results: [
           "SOC 2 certification achieved",
           "Enabled enterprise deals",
@@ -1094,7 +1094,7 @@ export const servicesData: ServiceDetail[] = [
         company: "E-commerce Client",
         industry: "E-commerce",
         challenge: "Operating across multiple countries with varying privacy laws and struggling to manage customer data requests.",
-        solution: "Implemented unified privacy platform with automated data discovery, consent management, and DSR automation.",
+        solution: "Implement unified privacy platform with automated data discovery, consent management, and DSR automation.",
         results: [
           "Faster DSR response times",
           "Multi-jurisdiction compliance achieved",
@@ -1144,8 +1144,8 @@ export const servicesData: ServiceDetail[] = [
       {
         company: "Technology Client",
         industry: "Technology",
-        challenge: "Rapid cloud adoption led to security blind spots and compliance gaps across cloud environments.",
-        solution: "Implemented unified cloud security platform with automated compliance monitoring, container security, and DevSecOps pipeline integration.",
+        challenge: "Rapid cloud adoption leads to security blind spots and compliance gaps across cloud environments.",
+        solution: "Implement unified cloud security platform with automated compliance monitoring, container security, and DevSecOps pipeline integration.",
         results: [
           "Reduced misconfigurations",
           "Achieved cloud compliance",
@@ -1193,11 +1193,11 @@ export const servicesData: ServiceDetail[] = [
     pricing: createContactPricing("IT Staffing & Augmentation"),
     caseStudies: [
       {
-        company: "TechScale Inc.",
+        company: "Technology Client",
         industry: "SaaS",
-        challenge: "Needed to double their engineering team in 6 weeks for a critical product launch but couldn't hire fast enough through traditional channels.",
-        solution: "Deployed 12 pre-vetted full-stack engineers with React and Node.js expertise, fully integrated within the first week.",
-        results: ["Product launched on schedule", "Engineering velocity increased by 180%", "3 augmented engineers converted to full-time hires"]
+        challenge: "Needs to double their engineering team in 6 weeks for a critical product launch but can't hire fast enough through traditional channels.",
+        solution: "Deploy 12 pre-vetted full-stack engineers with React and Node.js expertise, fully integrated within the first week.",
+        results: ["Product launched on schedule", "Engineering velocity notably increased", "3 augmented engineers converted to full-time hires"]
       }
     ],
     faqs: [
@@ -1232,11 +1232,11 @@ export const servicesData: ServiceDetail[] = [
     pricing: createContactPricing("Contract Hiring Solutions"),
     caseStudies: [
       {
-        company: "RetailMax",
+        company: "Retail Client",
         industry: "Retail & E-commerce",
         challenge: "Needed 50+ seasonal technology workers across 3 countries for a holiday platform upgrade with full compliance.",
-        solution: "Managed end-to-end contract hiring across the US, UK, and India with localized compliance, payroll, and onboarding.",
-        results: ["All 50 positions filled within 4 weeks", "Zero compliance incidents across 3 jurisdictions", "Platform upgrade delivered 2 weeks ahead of schedule"]
+        solution: "Manage end-to-end contract hiring across the US, UK, and India with localized compliance, payroll, and onboarding.",
+        results: ["All 50 positions filled within a short timeframe", "Zero compliance incidents across 3 jurisdictions", "Platform upgrade delivered 2 weeks ahead of schedule"]
       }
     ],
     faqs: [
@@ -1271,11 +1271,11 @@ export const servicesData: ServiceDetail[] = [
     pricing: createContactPricing("Permanent Placement"),
     caseStudies: [
       {
-        company: "HealthFirst Systems",
+        company: "Healthcare Client",
         industry: "Healthcare Tech",
-        challenge: "Struggled to fill 8 senior engineering positions over 6 months with internal recruitment.",
-        solution: "Engaged our dedicated search team with technical assessment frameworks and access to our passive candidate network.",
-        results: ["All 8 positions filled within 10 weeks", "95% retention rate after 12 months", "Time-to-productivity reduced by 40%"]
+        challenge: "Struggles to fill 8 senior engineering positions over 6 months with internal recruitment.",
+        solution: "Engage our dedicated search team with technical assessment frameworks and access to our passive candidate network.",
+        results: ["All 8 positions filled within a short timeframe", "Strong retention rate after 12 months", "Time-to-productivity significantly reduced"]
       }
     ],
     faqs: [
@@ -1311,11 +1311,11 @@ export const servicesData: ServiceDetail[] = [
     pricing: createContactPricing("Managed IT Services"),
     caseStudies: [
       {
-        company: "MidMarket Financial",
+        company: "Financial Services Client",
         industry: "Financial Services",
-        challenge: "A 200-person firm with no dedicated IT team was experiencing frequent outages and security gaps.",
-        solution: "Implemented fully managed IT services with 24/7 monitoring, automated patching, and a dedicated service delivery manager.",
-        results: ["System uptime improved from 95% to 99.9%", "Security incidents reduced by 75%", "IT operational costs reduced by 35%"]
+        challenge: "A 200-person firm with no dedicated IT team experiences frequent outages and security gaps.",
+        solution: "Implement fully managed IT services with 24/7 monitoring, automated patching, and a dedicated service delivery manager.",
+        results: ["System uptime significantly improved", "Security incidents significantly reduced", "IT operational costs significantly reduced"]
       }
     ],
     faqs: [
@@ -1350,11 +1350,11 @@ export const servicesData: ServiceDetail[] = [
     pricing: createContactPricing("Infrastructure Support Services"),
     caseStudies: [
       {
-        company: "DataFlow Analytics",
+        company: "Analytics Client",
         industry: "Data & Analytics",
-        challenge: "Cloud infrastructure costs were spiraling with no visibility into resource utilization across 3 AWS accounts.",
-        solution: "Implemented infrastructure support with automated right-sizing, reserved instance planning, and monthly optimization reviews.",
-        results: ["Cloud costs reduced by 42% in 3 months", "Resource utilization improved from 35% to 78%", "Zero unplanned outages in 12 months"]
+        challenge: "Cloud infrastructure costs are spiraling with no visibility into resource utilization across 3 AWS accounts.",
+        solution: "Implement infrastructure support with automated right-sizing, reserved instance planning, and monthly optimization reviews.",
+        results: ["Cloud costs significantly reduced in 3 months", "Resource utilization significantly improved", "Zero unplanned outages in 12 months"]
       }
     ],
     faqs: [
@@ -1389,11 +1389,11 @@ export const servicesData: ServiceDetail[] = [
     pricing: createContactPricing("Help Desk & End-User Support"),
     caseStudies: [
       {
-        company: "EduGlobal University",
+        company: "Education Client",
         industry: "Education",
         challenge: "5,000+ employees across 12 campuses with inconsistent IT support and average resolution times of 48+ hours.",
-        solution: "Deployed centralized help desk with AI ticket routing, self-service portal, and follow-the-sun L1/L2 support.",
-        results: ["Average resolution time reduced from 48 hours to 4 hours", "First-call resolution rate improved to 78%", "Employee satisfaction score increased from 3.2 to 4.6/5"]
+        solution: "Deploy centralized help desk with AI ticket routing, self-service portal, and follow-the-sun L1/L2 support.",
+        results: ["Average resolution time dramatically reduced", "First-call resolution rate improved to 78%", "Employee satisfaction score notably increased"]
       }
     ],
     faqs: [
@@ -1429,11 +1429,11 @@ export const servicesData: ServiceDetail[] = [
     pricing: createContactPricing("Business Process Outsourcing"),
     caseStudies: [
       {
-        company: "InsureCo Partners",
+        company: "Insurance Client",
         industry: "Insurance",
         challenge: "Claims processing backlog of 10,000+ cases with 12-day average turnaround time.",
-        solution: "Deployed BPO team with RPA-assisted claims triage, automated document extraction, and standardized adjudication workflows.",
-        results: ["Claims backlog eliminated within 8 weeks", "Average turnaround reduced from 12 days to 3 days", "Processing costs reduced by 45%"]
+        solution: "Deploy BPO team with RPA-assisted claims triage, automated document extraction, and standardized adjudication workflows.",
+        results: ["Claims backlog eliminated within a short timeframe", "Average turnaround dramatically reduced", "Processing costs significantly reduced"]
       }
     ],
     faqs: [
@@ -1468,11 +1468,11 @@ export const servicesData: ServiceDetail[] = [
     pricing: createContactPricing("Knowledge Process Outsourcing"),
     caseStudies: [
       {
-        company: "Venture Capital Partners",
+        company: "Investment Client",
         industry: "Financial Services",
         challenge: "Investment team spending 60% of time on due diligence research instead of deal evaluation.",
-        solution: "Deployed KPO team for market sizing, competitive analysis, and financial modeling with AI-powered data extraction.",
-        results: ["Due diligence time reduced by 65%", "Deal pipeline throughput increased by 40%", "Research cost per deal reduced by 55%"]
+        solution: "Deploy KPO team for market sizing, competitive analysis, and financial modeling with AI-powered data extraction.",
+        results: ["Due diligence time significantly reduced", "Deal pipeline throughput notably increased", "Research cost per deal significantly reduced"]
       }
     ],
     faqs: [
@@ -1507,11 +1507,11 @@ export const servicesData: ServiceDetail[] = [
     pricing: createContactPricing("Digital Operations"),
     caseStudies: [
       {
-        company: "PropertyManage Co",
+        company: "Property Management Client",
         industry: "Real Estate",
         challenge: "Managing 500+ properties with paper-based workflows, leading to lost documents and missed deadlines.",
-        solution: "Digitized all property management workflows with cloud-based document management and automated lease processing.",
-        results: ["Document processing time reduced by 80%", "Tenant satisfaction scores improved by 45%", "Operational staff reduced by 30% through automation"]
+        solution: "Digitize all property management workflows with cloud-based document management and automated lease processing.",
+        results: ["Document processing time significantly reduced", "Tenant satisfaction scores notably improved", "Operational staff significantly reduced through automation"]
       }
     ],
     faqs: [
@@ -1547,11 +1547,11 @@ export const servicesData: ServiceDetail[] = [
     pricing: createContactPricing("HR Outsourcing"),
     caseStudies: [
       {
-        company: "GrowFast Startup",
+        company: "Growth-Stage Startup",
         industry: "Technology",
         challenge: "Rapidly growing from 50 to 200 employees across 3 countries with no HR infrastructure.",
-        solution: "Implemented full HR outsourcing covering payroll, benefits, compliance, and onboarding with localized support.",
-        results: ["Zero compliance violations across 3 jurisdictions", "Employee onboarding time reduced from 2 weeks to 2 days", "HR cost per employee reduced by 55%"]
+        solution: "Implement full HR outsourcing covering payroll, benefits, compliance, and onboarding with localized support.",
+        results: ["Zero compliance violations across 3 jurisdictions", "Employee onboarding time dramatically reduced", "HR cost per employee significantly reduced"]
       }
     ],
     faqs: [
@@ -1586,11 +1586,11 @@ export const servicesData: ServiceDetail[] = [
     pricing: createContactPricing("Recruitment Process Outsourcing"),
     caseStudies: [
       {
-        company: "NationalBank Corp",
+        company: "Banking Client",
         industry: "Banking",
-        challenge: "Needed to hire 300+ branch and operations staff across 50 locations within 3 months.",
-        solution: "Deployed RPO team with multi-channel sourcing, centralized screening, and regional interview coordination.",
-        results: ["280 of 300 positions filled within 3 months", "Cost-per-hire reduced by 40%", "90-day retention rate of 92%"]
+        challenge: "Needs to hire 300+ branch and operations staff across 50 locations within 3 months.",
+        solution: "Deploy RPO team with multi-channel sourcing, centralized screening, and regional interview coordination.",
+        results: ["Most positions filled within a short timeframe", "Cost-per-hire significantly reduced", "90-day retention rate of 92%"]
       }
     ],
     faqs: [
@@ -1625,11 +1625,11 @@ export const servicesData: ServiceDetail[] = [
     pricing: createContactPricing("Workforce Management"),
     caseStudies: [
       {
-        company: "LogiChain Solutions",
+        company: "Logistics Client",
         industry: "Logistics",
         challenge: "Managing 2,000+ warehouse workers across 8 facilities with manual scheduling leading to overtime costs.",
-        solution: "Implemented AI-driven workforce management with demand-based scheduling and real-time attendance tracking.",
-        results: ["Overtime costs reduced by 35%", "Workforce utilization improved from 72% to 91%", "Scheduling conflicts reduced by 85%"]
+        solution: "Implement AI-driven workforce management with demand-based scheduling and real-time attendance tracking.",
+        results: ["Overtime costs significantly reduced", "Workforce utilization significantly improved", "Scheduling conflicts significantly reduced"]
       }
     ],
     faqs: [
@@ -1666,10 +1666,10 @@ export const servicesData: ServiceDetail[] = [
     pricing: createContactPricing("Medicos Staffing & Augmentation"),
     caseStudies: [
       {
-        company: "Regional Health System",
+        company: "Healthcare Client",
         industry: "Healthcare",
         challenge: "Critical nursing shortages across multiple facilities leading to overtime costs and staff burnout.",
-        solution: "Deployed a managed staffing program with pre-credentialed nurses and allied health professionals, supported by demand forecasting.",
+        solution: "Deploy a managed staffing program with pre-credentialed nurses and allied health professionals, supported by demand forecasting.",
         results: [
           "Staffing vacancies reduced significantly",
           "Overtime costs lowered across facilities",
@@ -1719,13 +1719,13 @@ export const servicesData: ServiceDetail[] = [
     pricing: createContactPricing("Government Operations & Administrative Support"),
     caseStudies: [
       {
-        company: "State Government Agency",
+        company: "Government Client",
         industry: "Government",
         challenge: "Agency facing backlog in records processing and constituent response times due to staffing shortages.",
-        solution: "Deployed a team of trained administrative professionals for records management, constituent inquiry handling, and compliance documentation.",
+        solution: "Deploy a team of trained administrative professionals for records management, constituent inquiry handling, and compliance documentation.",
         results: [
-          "Records processing backlog cleared within 60 days",
-          "Constituent response times improved by 45%",
+          "Records processing backlog cleared within a short timeframe",
+          "Constituent response times notably improved",
           "Full compliance with state audit requirements",
           "Agency leadership freed to focus on policy priorities"
         ]
@@ -1772,13 +1772,13 @@ export const servicesData: ServiceDetail[] = [
     pricing: createContactPricing("Healthcare & Public Health"),
     caseStudies: [
       {
-        company: "County Health Department",
+        company: "Public Health Client",
         industry: "Public Health",
         challenge: "Understaffed public health department struggling to manage disease surveillance and community outreach programs simultaneously.",
-        solution: "Deployed epidemiological analysts, community health workers, and program coordinators to support disease tracking and outreach initiatives.",
+        solution: "Deploy epidemiological analysts, community health workers, and program coordinators to support disease tracking and outreach initiatives.",
         results: [
-          "Disease surveillance reporting turnaround improved by 50%",
-          "Community vaccination program participation increased by 35%",
+          "Disease surveillance reporting turnaround notably improved",
+          "Community vaccination program participation notably increased",
           "Full compliance with CDC reporting requirements",
           "Staff burnout reduced through augmented team capacity"
         ]
@@ -1823,13 +1823,13 @@ export const servicesData: ServiceDetail[] = [
     pricing: createContactPricing("Education & Workforce Development"),
     caseStudies: [
       {
-        company: "Regional Workforce Development Board",
+        company: "Workforce Development Client",
         industry: "Education & Workforce",
         challenge: "Workforce board struggling to staff multiple grant-funded career readiness programs across five counties.",
-        solution: "Deployed career counselors, training coordinators, and program specialists to manage participant intake, job placement, and outcome reporting.",
+        solution: "Deploy career counselors, training coordinators, and program specialists to manage participant intake, job placement, and outcome reporting.",
         results: [
-          "Program enrollment increased by 40%",
-          "Job placement rates improved by 30%",
+          "Program enrollment notably increased",
+          "Job placement rates notably improved",
           "Full compliance with federal grant reporting",
           "Reduced time-to-hire for program staff from 60 to 10 days"
         ]
@@ -1874,15 +1874,15 @@ export const servicesData: ServiceDetail[] = [
     pricing: createContactPricing("Finance, Accounting & Compliance"),
     caseStudies: [
       {
-        company: "Municipal Government",
+        company: "Municipal Client",
         industry: "Government",
         challenge: "City finance department short-staffed during annual audit with multiple compliance deadlines approaching.",
-        solution: "Deployed auditors, budget analysts, and compliance specialists to support audit preparation, financial reconciliation, and regulatory reporting.",
+        solution: "Deploy auditors, budget analysts, and compliance specialists to support audit preparation, financial reconciliation, and regulatory reporting.",
         results: [
           "Audit completed on schedule with zero findings",
-          "Budget variance reporting accuracy improved by 35%",
+          "Budget variance reporting accuracy notably improved",
           "All compliance deadlines met without extensions",
-          "Finance team overtime reduced by 50%"
+          "Finance team overtime significantly reduced"
         ]
       }
     ],
@@ -1925,14 +1925,14 @@ export const servicesData: ServiceDetail[] = [
     pricing: createContactPricing("Human Resources & Organizational Development"),
     caseStudies: [
       {
-        company: "State Agency",
+        company: "Government Client",
         industry: "Government",
         challenge: "Agency facing high turnover and a backlog of 200+ open positions with limited internal HR capacity.",
-        solution: "Deployed a team of recruiters, HR generalists, and onboarding coordinators to manage the full hiring lifecycle and implement retention strategies.",
+        solution: "Deploy a team of recruiters, HR generalists, and onboarding coordinators to manage the full hiring lifecycle and implement retention strategies.",
         results: [
-          "Open position backlog reduced by 75% in 90 days",
-          "Time-to-fill reduced from 65 to 28 days",
-          "New hire retention rate improved by 25%",
+          "Open position backlog significantly reduced in 90 days",
+          "Time-to-fill dramatically reduced",
+          "New hire retention rate notably improved",
           "HR team capacity freed for strategic initiatives"
         ]
       }
@@ -1974,8 +1974,8 @@ export const servicesData: ServiceDetail[] = [
         company: "GlobalTrade Corp",
         industry: "Logistics & Supply Chain",
         challenge: "Operating across 14 countries with no unified IT support, experiencing 8+ hour resolution times during off-peak periods.",
-        solution: "Implemented follow-the-sun NOC with AI-powered triage, automated runbooks for top 50 recurring incidents, and real-time SLA dashboards.",
-        results: ["Mean time to resolution reduced from 8 hours to 45 minutes", "99.95% uptime across all critical systems", "Annual IT support costs reduced by 35%"]
+        solution: "Implement follow-the-sun NOC with AI-powered triage, automated runbooks for top 50 recurring incidents, and real-time SLA dashboards.",
+        results: ["Mean time to resolution dramatically reduced", "High uptime across all critical systems", "Annual IT support costs significantly reduced"]
       }
     ],
     faqs: [
