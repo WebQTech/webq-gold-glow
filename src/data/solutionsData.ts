@@ -2794,11 +2794,11 @@ export const solutionsData: SolutionDetail[] = [
     technologies: ["OpenAI API", "Google Gemini", "Meta Llama", "Mistral", "Hugging Face", "vLLM", "LangChain", "LlamaIndex", "NVIDIA TensorRT-LLM", "Ollama", "Azure OpenAI", "AWS Bedrock"],
     caseStudies: [
       {
-        company: "LegalEdge",
+        company: "Legal Tech Client",
         industry: "Legal Tech",
-        challenge: "Attorneys spent 6+ hours per case reviewing contracts and extracting key clauses, creating bottlenecks in deal flow.",
-        solution: "Deployed a fine-tuned LLM pipeline for contract analysis with clause extraction, risk scoring, and automated summary generation — integrated into existing document management systems.",
-        results: ["Contract review time reduced from 6 hours to 20 minutes", "95% accuracy on clause extraction", "3x increase in deals processed per quarter", "$2.5M annual savings in paralegal costs"]
+        challenge: "Attorneys spend 6+ hours per case reviewing contracts and extracting key clauses, creating bottlenecks in deal flow.",
+        solution: "Deploy a fine-tuned LLM pipeline for contract analysis with clause extraction, risk scoring, and automated summary generation — integrated into existing document management systems.",
+        results: ["Dramatically reduce contract review time", "High accuracy on clause extraction", "Significant increase in deals processed per quarter", "Notable cost savings in paralegal operations"]
       }
     ],
     faqs: [
