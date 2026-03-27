@@ -3,6 +3,7 @@ import { ArrowRight, CheckCircle2, ChevronRight } from "lucide-react";
 import { Footer } from "@/components/Footer";
 import { industriesData, getAllIndustryCategories } from "@/data/industriesData";
 import { HoverCard, HoverCardTrigger, HoverCardContent } from "@/components/ui/hover-card";
+import { GoBackButton } from "@/components/GoBackButton";
 
 const industryCategories = getAllIndustryCategories().map(category => ({
   title: category,
@@ -33,6 +34,7 @@ const Industries = () => {
           }}
         >
           <div className="container mx-auto px-6 lg:px-12">
+            <GoBackButton />
             <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 lg:gap-8 items-center">
               {/* Left — headline & description */}
               <div className="lg:col-span-3 animate-fade-in">
