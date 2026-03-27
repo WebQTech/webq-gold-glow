@@ -85,6 +85,13 @@ export const industriesData: IndustryDetail[] = [
         solution: "Implement an AI-assisted coding engine that reads clinical notes, suggests accurate codes, and flags discrepancies for human review — reducing errors and accelerating the revenue cycle.",
         results: ["Fewer claim denials due to coding errors", "Faster billing cycle turnaround", "Improved coder productivity and satisfaction", "Better compliance with coding standards"]
       }
+    ,
+      {
+        company: "Retail Client",
+        challenge: "Product recommendation engine relies on basic collaborative filtering that fails to capture real-time user intent, resulting in irrelevant suggestions and low click-through rates.",
+        solution: "Build a deep learning recommendation system using real-time behavioral signals, contextual data, and multi-armed bandit experimentation to serve hyper-relevant product suggestions.",
+        results: ["Recommendation click-through rates significantly improved", "Revenue from recommended products increased", "Real-time personalization across all touchpoints", "Continuous model improvement through automated A/B testing"]
+      }
     ],
     faqs: [
       {
@@ -137,6 +144,13 @@ export const industriesData: IndustryDetail[] = [
         solution: "Build a master data integration layer with identity resolution and data quality rules that unify citizen records across agencies while respecting privacy regulations.",
         results: ["Unified citizen view across agencies", "Faster benefits eligibility determination", "Improved data accuracy and deduplication", "Full compliance with privacy regulations"]
       }
+    ,
+      {
+        company: "Financial Services Client",
+        challenge: "Critical business logic is embedded in millions of lines of undocumented legacy code, making it impossible to modify or extend without risking system-wide failures.",
+        solution: "Use AI-powered code analysis to reverse-engineer business rules from legacy codebases, document them systematically, and implement them in modern, testable microservices.",
+        results: ["Business rules documented and validated for the first time", "Modern microservices replacing fragile legacy modules", "Development velocity for new features dramatically improved", "Risk of catastrophic legacy failures eliminated"]
+      }
     ],
     faqs: [
       {
@@ -188,6 +202,13 @@ export const industriesData: IndustryDetail[] = [
         challenge: "Fraud losses growing as sophisticated attacks bypass legacy rule-based detection systems that can't adapt to new patterns in real time.",
         solution: "Deploy ML-based transaction monitoring that learns from historical fraud patterns, scores transactions in real time, and adapts to emerging threats without manual rule updates.",
         results: ["Notable reduction in fraud losses", "Fewer false positives disrupting legitimate customers", "Real-time detection of previously unseen patterns", "Improved customer trust and satisfaction"]
+      }
+    ,
+      {
+        company: "Digital Banking Client",
+        challenge: "Customer onboarding is slow and paper-heavy, with applicants abandoning the process due to excessive documentation requirements and multi-day approval timelines.",
+        solution: "Build a fully digital onboarding journey with e-KYC, document OCR, automated identity verification, and instant account provisioning — all accessible from mobile devices.",
+        results: ["Onboarding completion rates dramatically improved", "Account provisioning reduced to minutes", "Paper-based documentation eliminated", "Younger customer demographic attracted"]
       }
     ],
     faqs: [
@@ -242,6 +263,13 @@ export const industriesData: IndustryDetail[] = [
         solution: "Implement alternative data credit scoring using cash flow analysis, rent payment history, and behavioral signals to expand lending to underserved populations responsibly.",
         results: ["Expanded addressable market significantly", "Lower default rates than traditional scoring alone", "Financial inclusion mission advanced", "Competitive differentiation in the market"]
       }
+    ,
+      {
+        company: "Digital Wallet Client",
+        challenge: "Cross-border payment processing is slow and expensive, with inconsistent exchange rates and lack of transparency causing customer complaints and regulatory scrutiny.",
+        solution: "Architect a real-time cross-border payment rail with transparent FX pricing, compliance-first transaction screening, and multi-currency wallet support across target corridors.",
+        results: ["Cross-border transfer time reduced to near-instant", "Transparent pricing improved customer trust", "Regulatory compliance across all corridors maintained", "Transaction volume growth accelerated"]
+      }
     ],
     faqs: [
       {
@@ -295,6 +323,13 @@ export const industriesData: IndustryDetail[] = [
         solution: "Build a 360-degree member relationship dashboard that aggregates data from all product lines, enabling staff to deliver personalized recommendations and proactive outreach.",
         results: ["Holistic member view available at every touchpoint", "Improved cross-sell and product adoption", "More personalized member interactions", "Better data-driven decision making"]
       }
+    ,
+      {
+        company: "State Credit Union Client",
+        challenge: "Cybersecurity posture is weak — with limited IT staff, no dedicated security team, and growing threats targeting financial institutions of all sizes.",
+        solution: "Implement a managed security program with continuous monitoring, endpoint protection, phishing simulation training, and incident response planning tailored to credit union scale and budget.",
+        results: ["Security incident detection and response dramatically improved", "Staff security awareness measurably increased", "NCUA examiner confidence in cyber posture strengthened", "Cost-effective security without dedicated in-house team"]
+      }
     ],
     faqs: [
       {
@@ -346,6 +381,13 @@ export const industriesData: IndustryDetail[] = [
         challenge: "Fund administration processes — capital calls, distributions, and investor reporting — run on spreadsheets, creating errors and audit vulnerabilities.",
         solution: "Develop a fund administration platform with automated waterfall calculations, investor portal with self-service reporting, and complete audit trail for every transaction.",
         results: ["Eliminated spreadsheet-based fund accounting errors", "Investors self-serve performance data on demand", "Audit preparation time dramatically reduced", "Scalable to manage additional funds"]
+      }
+    ,
+      {
+        company: "Trading Firm Client",
+        challenge: "Regulatory reporting across SEC, FINRA, and MiFID II requires manual data gathering from multiple systems, consuming analyst time and increasing the risk of reporting errors.",
+        solution: "Build automated regulatory reporting pipelines that pull trade data, apply validation rules, generate required filings, and maintain complete audit trails for examiner review.",
+        results: ["Regulatory report preparation time dramatically reduced", "Reporting errors and resubmissions eliminated", "Full audit trail for every filing maintained", "Analyst time redirected to higher-value activities"]
       }
     ],
     faqs: [
@@ -399,6 +441,13 @@ export const industriesData: IndustryDetail[] = [
         solution: "Deploy AI-assisted medical coding and automated claims processing that validates codes against clinical documentation, catches errors pre-submission, and tracks denials for appeal.",
         results: ["Claim denial rates significantly reduced", "Faster reimbursement turnaround", "Improved coding accuracy and compliance", "Revenue leakage substantially decreased"]
       }
+    ,
+      {
+        company: "MedTech Client",
+        challenge: "Clinical staff burn out from excessive EHR documentation requirements — spending more time typing notes than interacting with patients, affecting care quality and morale.",
+        solution: "Deploy ambient AI clinical documentation that listens to patient-provider conversations, generates structured clinical notes automatically, and integrates directly with the EHR.",
+        results: ["Clinical documentation time significantly reduced", "More face-to-face time with patients", "Improved clinician satisfaction and retention", "Higher quality and more complete clinical notes"]
+      }
     ],
     faqs: [
       {
@@ -449,6 +498,13 @@ export const industriesData: IndustryDetail[] = [
         challenge: "Data silos across police, fire, public works, and social services prevent coordinated emergency response and evidence-based policy decisions.",
         solution: "Implement a cross-agency data integration platform with role-based access controls, real-time dashboards, and analytics tools for coordinated operations and policy planning.",
         results: ["Cross-agency data sharing enabled for the first time", "Emergency response coordination improved", "Data-driven policy decisions now possible", "Full compliance with privacy and security regulations"]
+      }
+    ,
+      {
+        company: "County Government Client",
+        challenge: "Emergency management systems are outdated and disconnected — first responders lack real-time situational awareness during natural disasters and public safety incidents.",
+        solution: "Build an integrated emergency operations platform with real-time GIS mapping, inter-agency communication, resource tracking, and citizen alert capabilities.",
+        results: ["Emergency response coordination dramatically improved", "Real-time situational awareness for all agencies", "Resource deployment optimized during incidents", "Citizen communication speed and reach enhanced"]
       }
     ],
     faqs: [
@@ -502,6 +558,13 @@ export const industriesData: IndustryDetail[] = [
         solution: "Redesign compliance training with microlearning modules, scenario-based simulations, gamification elements, and adaptive assessments that reinforce weak areas.",
         results: ["Training completion rates dramatically improved", "Higher knowledge retention demonstrated", "Employees report more engaging experience", "Compliance audit readiness strengthened"]
       }
+    ,
+      {
+        company: "Online Learning Client",
+        challenge: "Credential verification is slow and unreliable — employers and institutions can't efficiently validate certificates, degrees, or professional credentials issued by the platform.",
+        solution: "Implement blockchain-anchored digital credentialing with verifiable badges, shareable certificates, and instant employer verification — integrated with LinkedIn and major job platforms.",
+        results: ["Instant credential verification for employers", "Increased learner motivation through portable credentials", "Reduced administrative burden of verification requests", "Stronger institutional reputation and trust"]
+      }
     ],
     faqs: [
       {
@@ -553,6 +616,13 @@ export const industriesData: IndustryDetail[] = [
         challenge: "Customer acquisition costs are rising while lifetime value is flat — the brand lacks a loyalty program and has no strategy for turning one-time buyers into repeat customers.",
         solution: "Design and implement a data-driven loyalty and retention program with personalized rewards, targeted re-engagement campaigns, and predictive churn prevention.",
         results: ["Customer retention rates improved", "Lifetime value per customer increased", "Acquisition cost pressure reduced", "Stronger brand loyalty and advocacy"]
+      }
+    ,
+      {
+        company: "Omnichannel Retailer Client",
+        challenge: "Returns processing is slow and costly — customers wait weeks for refunds, returned inventory sits in limbo, and the lack of return analytics prevents addressing root causes.",
+        solution: "Build an intelligent returns management system with instant refund processing, automated inventory restocking, return reason analytics, and fraud detection for abuse prevention.",
+        results: ["Refund processing time dramatically reduced", "Returned inventory back on shelf faster", "Return rate root causes identified and addressed", "Return fraud incidents significantly decreased"]
       }
     ],
     faqs: [
@@ -606,6 +676,13 @@ export const industriesData: IndustryDetail[] = [
         solution: "Build AI-driven demand forecasting and production scheduling that analyzes historical sales, seasonal trends, and market signals to optimize production plans.",
         results: ["Forecast accuracy meaningfully improved", "Overproduction waste reduced", "Fewer stockouts on high-demand products", "Better alignment between production and actual demand"]
       }
+    ,
+      {
+        company: "Aerospace Client",
+        challenge: "Supply chain disruptions from single-source dependencies cause production delays — there is no visibility into tier-2 and tier-3 supplier risks until a crisis hits.",
+        solution: "Implement multi-tier supply chain visibility platform with real-time supplier risk monitoring, alternative sourcing recommendations, and disruption scenario modeling.",
+        results: ["Supply chain disruption impact significantly reduced", "Early warning system for supplier risks operational", "Alternative sourcing activated before disruptions hit", "Production continuity improved across product lines"]
+      }
     ],
     faqs: [
       {
@@ -657,6 +734,13 @@ export const industriesData: IndustryDetail[] = [
         challenge: "No real-time visibility into shipment location and status — customer service spends hours tracking down shipments and calling carriers for updates.",
         solution: "Deploy end-to-end shipment tracking platform that aggregates status updates from all carriers via API, provides real-time customer-facing tracking, and proactive exception alerts.",
         results: ["Real-time shipment visibility achieved", "Customer service inquiries about shipment status reduced", "Proactive exception handling before customers notice", "Carrier performance benchmarking enabled"]
+      }
+    ,
+      {
+        company: "Cold Chain Client",
+        challenge: "Temperature-sensitive shipments (pharmaceuticals, food) experience compliance violations and spoilage because monitoring is manual and exceptions are discovered after delivery.",
+        solution: "Deploy IoT-based cold chain monitoring with real-time temperature tracking, automated deviation alerts, predictive spoilage analytics, and digital compliance documentation.",
+        results: ["Spoilage incidents dramatically reduced", "Real-time temperature visibility throughout transit", "Automated compliance documentation for auditors", "Faster response to temperature excursions"]
       }
     ],
     faqs: [
@@ -710,6 +794,13 @@ export const industriesData: IndustryDetail[] = [
         solution: "Deploy IoT-based water network monitoring with pressure sensors, flow analytics, and AI-powered leak detection that identifies problems before they escalate into main breaks.",
         results: ["Water loss from leaks meaningfully reduced", "Main break incidents fewer and less severe", "Proactive maintenance replacing emergency repairs", "Better infrastructure investment prioritization"]
       }
+    ,
+      {
+        company: "Gas Utility Client",
+        challenge: "Manual meter reading is expensive and error-prone — estimated bills cause customer disputes, and the utility lacks granular consumption data for demand planning.",
+        solution: "Deploy advanced metering infrastructure (AMI) with automated reading, real-time consumption analytics, customer usage dashboards, and time-of-use billing capabilities.",
+        results: ["Meter reading costs dramatically reduced", "Billing accuracy improved significantly", "Customer disputes over estimated bills eliminated", "Granular data enabling better demand planning"]
+      }
     ],
     faqs: [
       {
@@ -761,6 +852,13 @@ export const industriesData: IndustryDetail[] = [
         challenge: "Drug discovery process is extremely slow because molecular simulation of protein interactions requires computational power that classical methods can't provide at sufficient accuracy.",
         solution: "Implement quantum simulation capabilities for molecular modeling, enabling higher-fidelity protein folding and drug-target interaction analysis to accelerate candidate identification.",
         results: ["Molecular simulation fidelity meaningfully improved", "Drug candidate screening accelerated", "Previously intractable molecular interactions modeled", "Research team productivity enhanced"]
+      }
+    ,
+      {
+        company: "Cybersecurity Client",
+        challenge: "Current encryption standards will become vulnerable to quantum attacks — the organization needs to prepare its cryptographic infrastructure before quantum computers mature.",
+        solution: "Conduct post-quantum cryptography assessment, identify vulnerable systems and data flows, implement quantum-safe encryption algorithms, and build a phased migration roadmap.",
+        results: ["Complete inventory of quantum-vulnerable encryption", "Critical systems migrated to quantum-safe algorithms", "Long-term data protection strategy established", "Ahead of regulatory requirements on post-quantum readiness"]
       }
     ],
     faqs: [
