@@ -157,7 +157,7 @@ const IndustryDetail = () => {
           <section className="py-10 lg:py-14 bg-muted/30">
             <div className="container mx-auto px-6 lg:px-12">
               <div className="mb-8">
-                <h2 className="text-3xl lg:text-4xl font-bold text-foreground">Model Use Case</h2>
+                <h2 className="text-3xl lg:text-4xl font-bold text-foreground">Model Use Cases</h2>
                 <p className="mt-4 text-muted-foreground max-w-2xl">
                   See how our approach delivers measurable outcomes
                 </p>
