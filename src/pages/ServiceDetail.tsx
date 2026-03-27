@@ -140,9 +140,9 @@ const ServiceDetail = () => {
           <section className="py-10 lg:py-16 bg-muted/30">
             <div className="container mx-auto px-6 lg:px-12">
               <div className="mb-12">
-                <h2 className="text-3xl lg:text-4xl font-bold text-foreground">Success Stories</h2>
+                <h2 className="text-3xl lg:text-4xl font-bold text-foreground">Model Use Case</h2>
                 <p className="mt-4 text-muted-foreground max-w-2xl">
-                  See how we've helped organizations like yours achieve their goals
+                  See how our approach delivers measurable outcomes
                 </p>
               </div>
 
