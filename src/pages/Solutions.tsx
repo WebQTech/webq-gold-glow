@@ -3,6 +3,7 @@ import { ArrowRight, CheckCircle2, Code2, BarChart3, Brain, Cloud, GitBranch, Te
 import { Footer } from "@/components/Footer";
 import { solutionsData } from "@/data/solutionsData";
 import { HoverCard, HoverCardTrigger, HoverCardContent } from "@/components/ui/hover-card";
+import { GoBackButton } from "@/components/GoBackButton";
 
 const solutionHighlights = [
   "AI & Machine Learning Solutions",
