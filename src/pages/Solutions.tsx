@@ -46,6 +46,11 @@ const solutionCategories: { title: string; icon: LucideIcon; items: string[] }[]
     items: ["crm-implementation", "erp-management", "enterprise-integration", "legacy-modernization", "supply-chain-management", "enterprise-mobility", "enterprise-content-management"],
   },
   {
+    title: "SAP Solutions",
+    icon: Cable,
+    items: ["sap-s4hana", "sap-btp", "sap-analytics", "sap-successfactors", "sap-ariba", "sap-integration"],
+  },
+  {
     title: "Security",
     icon: Shield,
     items: ["zero-trust-security", "cloud-instance-security", "identity-access-management", "data-security", "cybersecurity-consulting", "compliance-governance", "code-security", "soc-as-a-service", "penetration-testing", "information-security"],
