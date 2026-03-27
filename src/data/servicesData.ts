@@ -1753,7 +1753,12 @@ export const servicesData: ServiceDetail[] = [
       "Emergency preparedness and pandemic response staffing",
       "Health equity and social determinants of health programs",
       "Grant management and federal reporting assistance",
-      "Quality improvement and accreditation support"
+      "Quality improvement and accreditation support",
+      "Case Managers",
+      "Eligibility Specialists",
+      "Medical Office Assistants",
+      "Health Program Analysts",
+      "Behavioral Health Support Staff"
     ],
     benefits: [
       "Rapid deployment of credentialed healthcare professionals",
