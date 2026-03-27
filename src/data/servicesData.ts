@@ -1700,7 +1700,12 @@ export const servicesData: ServiceDetail[] = [
       "Meeting coordination and executive support",
       "Grant administration and financial tracking",
       "Policy research and legislative analysis support",
-      "Clearance-ready and background-checked personnel"
+      "Clearance-ready and background-checked personnel",
+      "Administrative Assistants",
+      "Program Coordinators",
+      "Office Technicians",
+      "Procurement Analysts",
+      "HR Assistants"
     ],
     benefits: [
       "Rapid deployment of vetted government-experienced staff",
