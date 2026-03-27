@@ -28,42 +28,42 @@ const solutionCategories: { title: string; icon: LucideIcon; items: string[] }[]
   {
     title: "Cloud Services",
     icon: Cloud,
-    items: ["cloud-migration", "it-infrastructure", "cloud-optimization", "hybrid-multi-cloud", "finops", "serverless-architecture"],
+    items: ["cloud-migration", "hybrid-multi-cloud", "cloud-optimization", "serverless-architecture", "it-infrastructure", "finops"],
   },
   {
     title: "Application Development",
     icon: Code2,
-    items: ["custom-app-development", "technology-modernization", "mobile-app-development", "api-integration", "low-code-no-code", "ui-ux-design"],
+    items: ["custom-app-development", "mobile-app-development", "api-integration", "low-code-no-code", "technology-modernization", "ui-ux-design"],
   },
   {
     title: "DevOps",
     icon: GitBranch,
-    items: ["devops-sre", "ci-cd-automation", "infrastructure-as-code", "platform-engineering", "observability-monitoring", "container-orchestration", "gitops-continuous-delivery", "chaos-engineering", "release-engineering"],
+    items: ["ci-cd-automation", "infrastructure-as-code", "container-orchestration", "devops-sre", "platform-engineering", "observability-monitoring", "gitops-continuous-delivery", "release-engineering", "chaos-engineering"],
   },
   {
     title: "Enterprise Application Management",
     icon: Building2,
-    items: ["erp-management", "crm-implementation", "enterprise-integration", "legacy-modernization", "enterprise-mobility", "supply-chain-management", "enterprise-content-management"],
+    items: ["crm-implementation", "erp-management", "enterprise-integration", "legacy-modernization", "supply-chain-management", "enterprise-mobility", "enterprise-content-management"],
   },
   {
     title: "Security",
     icon: Shield,
-    items: ["data-security", "information-security", "code-security", "cloud-instance-security", "identity-access-management", "cybersecurity-consulting", "compliance-governance", "soc-as-a-service", "penetration-testing", "zero-trust-security"],
+    items: ["zero-trust-security", "cloud-instance-security", "identity-access-management", "data-security", "cybersecurity-consulting", "compliance-governance", "code-security", "soc-as-a-service", "penetration-testing", "information-security"],
   },
   {
     title: "Quality Assurance",
     icon: TestTube,
-    items: ["qa-testing", "performance-testing", "security-testing", "test-automation-framework", "accessibility-testing"],
+    items: ["test-automation-framework", "security-testing", "performance-testing", "qa-testing", "accessibility-testing"],
   },
   {
     title: "Databases & Data Infrastructure",
     icon: Database,
-    items: ["database-administration", "database-migration", "cloud-database-services", "data-architecture", "nosql-newscale-databases"],
+    items: ["cloud-database-services", "data-architecture", "database-migration", "nosql-newscale-databases", "database-administration"],
   },
   {
     title: "Operations & Support",
     icon: Headphones,
-    items: ["production-support", "managed-services", "it-service-management", "it-asset-management", "disaster-recovery", "procurement-services", "software-licensing", "bulk-hardware-services", "help-desk-support", "network-operations", "change-management", "business-continuity", "global-operations-support"],
+    items: ["managed-services", "it-service-management", "disaster-recovery", "business-continuity", "production-support", "network-operations", "help-desk-support", "it-asset-management", "change-management", "global-operations-support", "procurement-services", "software-licensing", "bulk-hardware-services"],
   },
 ];
 
