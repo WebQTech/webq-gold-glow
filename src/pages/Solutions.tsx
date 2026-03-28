@@ -10,10 +10,11 @@ import solutionsHero1 from "@/assets/solutions-hero-1.jpg";
 import solutionsHero2 from "@/assets/solutions-hero-2.jpg";
 import solutionsHero3 from "@/assets/solutions-hero-3.jpg";
 
-const heroImages = [
-  { src: solutionsHero1, alt: "Enterprise technology solutions dashboard" },
-  { src: solutionsHero2, alt: "Team collaborating on cloud architecture" },
-  { src: solutionsHero3, alt: "DevOps and security operations center" },
+const heroSlides = [
+  { type: "content" as const },
+  { type: "image" as const, src: solutionsHero1, alt: "Enterprise technology solutions dashboard" },
+  { type: "image" as const, src: solutionsHero2, alt: "Team collaborating on cloud architecture" },
+  { type: "image" as const, src: solutionsHero3, alt: "DevOps and security operations center" },
 ];
 
 const solutionHighlights = [
