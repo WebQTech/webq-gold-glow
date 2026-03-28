@@ -56,7 +56,7 @@ const contactInfo = [
     icon: MapPin,
     title: "India Office",
     details: "5, Kalidasan Street, Chitlapakkam",
-    subtext: "Chennai-600064, India",
+    subtext: "Chennai-600064, Tamil Nadu, India",
   },
   {
     icon: Clock,
