@@ -230,7 +230,11 @@ const Solutions = () => {
                   <div
                     key={category.title}
                     id={`category-${category.title.replace(/\s+/g, '-').toLowerCase()}`}
-                    className="group rounded-xl border border-border bg-card overflow-hidden hover:border-primary/30 hover:shadow-lg transition-all duration-300 animate-fade-in scroll-mt-24"
+                    className={`group rounded-xl border bg-card overflow-hidden hover:border-primary/30 hover:shadow-lg transition-all duration-500 animate-fade-in scroll-mt-24 ${
+                      highlightedCategory === category.title
+                        ? "border-primary ring-2 ring-primary/30 shadow-lg shadow-primary/10"
+                        : "border-border"
+                    }`}
                   >
                     <div className="px-5 pt-5 pb-3 border-b border-border/50 bg-gradient-to-r from-primary/[0.03] to-transparent">
                       <div className="flex items-center gap-3">
