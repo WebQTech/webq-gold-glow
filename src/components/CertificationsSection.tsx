@@ -5,8 +5,8 @@ import sbaLogo from "@/assets/certifications/sba.png";
 import wbencLogo from "@/assets/certifications/wbenc.png";
 
 const certifications = [
-  { name: "U.S. Small Business Administration", logo: sbaLogo },
-  { name: "WBENC Certified", logo: wbencLogo },
+  { name: "SBA", logo: sbaLogo },
+  { name: "WBENC", logo: wbencLogo },
 ];
 
 export const CertificationsSection = () => {
