@@ -37,8 +37,8 @@ export const CertificationsSection = () => {
               transition={{ duration: 0.4, delay: index * 0.1 }}
               className="flex items-center justify-center p-6 bg-background rounded-xl border border-border/50 hover:border-primary/30 hover:shadow-md transition-all"
             >
-              <div className="h-24 w-48 flex items-center justify-center">
-                <img src={cert.logo} alt={cert.name} className="max-h-24 max-w-48 object-contain" />
+              <div className={`flex items-center justify-center ${cert.name === "SBA" ? "h-32 w-56" : "h-24 w-48"}`}>
+                <img src={cert.logo} alt={cert.name} className={`object-contain ${cert.name === "SBA" ? "max-h-32 max-w-56" : "max-h-24 max-w-48"}`} />
               </div>
             </motion.div>
           ))}
