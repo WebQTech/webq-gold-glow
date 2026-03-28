@@ -91,18 +91,16 @@ export const HeroSection = () => {
             <div className="lg:col-span-3 lg:pt-8">
 
               <motion.h1
-                initial={{ opacity: 0, y: 20 }}
+                initial={false}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, ease: "easeOut" }}
                 className="text-3xl sm:text-4xl lg:text-5xl xl:text-[3.5rem] font-bold text-white leading-[1.1] tracking-tight"
               >
                 Built for Enterprise.{" "}
                 <span className="text-[hsl(195,100%,55%)]">Powered by&nbsp;AI.</span>
               </motion.h1>
               <motion.p
-                initial={{ opacity: 0, y: 16 }}
+                initial={false}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
                 className="mt-4 text-sm sm:text-base lg:text-lg text-white/80 max-w-xl leading-relaxed"
               >
                 We help organizations move from traditional IT to modern,
