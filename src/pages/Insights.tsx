@@ -68,32 +68,29 @@ const Insights = () => {
 
               {/* Hero featured article */}
               <Link
-                to={`/insights/${featuredInsights[0].title
-                  .toLowerCase()
-                  .replace(/[^a-z0-9]+/g, "-")
-                  .replace(/(^-|-$)/g, "")}`}
+                to={`/insights/${insightsData[0].slug}`}
                 className="block mb-8"
               >
                 <article className="group grid md:grid-cols-2 gap-0 bg-card rounded-xl overflow-hidden border border-border hover:border-primary/50 transition-all hover:shadow-lg cursor-pointer">
                   <div className="aspect-video md:aspect-auto md:h-full overflow-hidden">
                     <img
-                      src={featuredInsights[0].image}
-                      alt={featuredInsights[0].title}
+                      src={insightsData[0].image}
+                      alt={insightsData[0].title}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                   </div>
                   <div className="p-8 flex flex-col justify-center">
                     <span className="text-xs font-semibold text-primary uppercase tracking-wider">
-                      {featuredInsights[0].category}
+                      {insightsData[0].category}
                     </span>
                     <h3 className="text-xl lg:text-2xl font-bold text-foreground mt-3 mb-4 group-hover:text-primary transition-colors">
-                      {featuredInsights[0].title}
+                      {insightsData[0].title}
                     </h3>
-                    <p className="text-sm text-muted-foreground mb-5 leading-relaxed">{featuredInsights[0].excerpt}</p>
+                    <p className="text-sm text-muted-foreground mb-5 leading-relaxed">{insightsData[0].excerpt}</p>
                     <div className="flex items-center gap-4 text-xs text-muted-foreground">
-                      <span className="flex items-center gap-1.5"><User className="w-3 h-3" />{featuredInsights[0].author}</span>
-                      <span className="flex items-center gap-1.5"><Clock className="w-3 h-3" />{featuredInsights[0].readTime}</span>
-                      <span className="flex items-center gap-1.5"><Calendar className="w-3 h-3" />{featuredInsights[0].date}</span>
+                      <span className="flex items-center gap-1.5"><User className="w-3 h-3" />{insightsData[0].author}</span>
+                      <span className="flex items-center gap-1.5"><Clock className="w-3 h-3" />{insightsData[0].readTime}</span>
+                      <span className="flex items-center gap-1.5"><Calendar className="w-3 h-3" />{insightsData[0].date}</span>
                     </div>
                   </div>
                 </article>
