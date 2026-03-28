@@ -70,6 +70,7 @@ const solutionCategories: { title: string; icon: LucideIcon; items: string[] }[]
 
 const Solutions = () => {
   const [activeFilter, setActiveFilter] = useState<string>("All");
+  const [searchQuery, setSearchQuery] = useState<string>("");
 
   const filterOptions = ["All", ...solutionCategories.map((c) => c.title)];
   const filteredCategories = activeFilter === "All" 
