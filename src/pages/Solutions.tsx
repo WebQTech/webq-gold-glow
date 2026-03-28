@@ -74,6 +74,16 @@ const Solutions = () => {
 
   const filterOptions = ["All", ...solutionCategories.map((c) => c.title)];
 
+  const handleFilterClick = (filter: string) => {
+    setActiveFilter(filter);
+    if (filter !== "All") {
+      setTimeout(() => {
+        const el = document.getElementById(`category-${filter.replace(/\s+/g, '-').toLowerCase()}`);
+        el?.scrollIntoView({ behavior: "smooth", block: "start" });
+      }, 50);
+    }
+  };
+
   const filteredCategories = useMemo(() => {
     const byTab = activeFilter === "All" 
       ? solutionCategories 
