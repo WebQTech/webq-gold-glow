@@ -69,6 +69,13 @@ const solutionCategories: { title: string; icon: LucideIcon; items: string[] }[]
 ];
 
 const Solutions = () => {
+  const [activeFilter, setActiveFilter] = useState<string>("All");
+
+  const filterOptions = ["All", ...solutionCategories.map((c) => c.title)];
+  const filteredCategories = activeFilter === "All" 
+    ? solutionCategories 
+    : solutionCategories.filter((c) => c.title === activeFilter);
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-primary/5 to-background">
       <main id="main-content" className="focus:outline-none" tabIndex={-1}>
