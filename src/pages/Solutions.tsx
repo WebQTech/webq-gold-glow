@@ -1,4 +1,4 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight, CheckCircle2, Code2, BarChart3, Brain, Cloud, GitBranch, TestTube, Shield, Headphones, Building2, Database, LucideIcon, ChevronRight, Search, X } from "lucide-react";
 import { Footer } from "@/components/Footer";
@@ -6,6 +6,15 @@ import { solutionsData } from "@/data/solutionsData";
 import { HoverCard, HoverCardTrigger, HoverCardContent } from "@/components/ui/hover-card";
 import { GoBackButton } from "@/components/GoBackButton";
 import { Helmet } from "react-helmet-async";
+import solutionsHero1 from "@/assets/solutions-hero-1.jpg";
+import solutionsHero2 from "@/assets/solutions-hero-2.jpg";
+import solutionsHero3 from "@/assets/solutions-hero-3.jpg";
+
+const heroImages = [
+  { src: solutionsHero1, alt: "Enterprise technology solutions dashboard" },
+  { src: solutionsHero2, alt: "Team collaborating on cloud architecture" },
+  { src: solutionsHero3, alt: "DevOps and security operations center" },
+];
 
 const solutionHighlights = [
   "AI & Machine Learning Solutions",
