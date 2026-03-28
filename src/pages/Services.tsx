@@ -51,6 +51,19 @@ const Services = () => {
   const [searchQuery, setSearchQuery] = useState<string>("");
   const [highlightedCategory, setHighlightedCategory] = useState<string | null>(null);
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [isHeroReady, setIsHeroReady] = useState(false);
+
+  useEffect(() => {
+    let loaded = 0;
+    heroImages.forEach(({ src }) => {
+      const img = new Image();
+      img.src = src;
+      img.onload = img.onerror = () => {
+        loaded++;
+        if (loaded >= 1) setIsHeroReady(true);
+      };
+    });
+  }, []);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -122,7 +135,7 @@ const Services = () => {
         >
           <div className="container mx-auto px-6 lg:px-12">
             <GoBackButton />
-            <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 lg:gap-8 items-center">
+            <div className={`grid grid-cols-1 lg:grid-cols-5 gap-6 lg:gap-8 items-center transition-opacity duration-500 ${isHeroReady ? "opacity-100" : "opacity-0"}`}>
               <div className="lg:col-span-3 animate-fade-in">
                 <nav className="flex items-center gap-1.5 text-xs text-white/50 mb-3">
                   <Link to="/" className="hover:text-white/80 transition-colors">Home</Link>
