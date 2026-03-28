@@ -1,6 +1,6 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { Footer } from "@/components/Footer";
-import { Mic, Calendar, ArrowRight, Clock, User, ChevronRight } from "lucide-react";
+import { Mic, Calendar, ArrowRight, Clock, User, ChevronRight, Search, X } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { GoBackButton } from "@/components/GoBackButton";
