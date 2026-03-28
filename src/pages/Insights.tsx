@@ -35,8 +35,12 @@ const upcomingWebinars = [
   },
 ];
 
+const allCategories = [...new Set(insightsData.map((i) => i.category))];
+
 const Insights = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [activeFilter, setActiveFilter] = useState<string>("All");
+  const [searchQuery, setSearchQuery] = useState<string>("");
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -44,6 +48,25 @@ const Insights = () => {
     }, 5000);
     return () => clearInterval(timer);
   }, []);
+
+  const filterOptions = ["All", ...allCategories];
+
+  const filteredInsights = useMemo(() => {
+    let results = insightsData;
+    if (activeFilter !== "All") {
+      results = results.filter((i) => i.category === activeFilter);
+    }
+    if (searchQuery.trim()) {
+      const q = searchQuery.toLowerCase();
+      results = results.filter(
+        (i) =>
+          i.title.toLowerCase().includes(q) ||
+          i.excerpt.toLowerCase().includes(q) ||
+          i.category.toLowerCase().includes(q)
+      );
+    }
+    return results;
+  }, [activeFilter, searchQuery]);
   return (
     <>
       <Helmet>
