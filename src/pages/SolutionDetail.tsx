@@ -3,6 +3,7 @@ import { useMemo } from "react";
 import { ArrowLeft, ArrowRight, Check, Building2, ChevronRight, Home, Layers } from "lucide-react";
 import { GoBackButton } from "@/components/GoBackButton";
 import SolutionImageCarousel from "@/components/SolutionImageCarousel";
+import { Helmet } from "react-helmet-async";
 
 import { Footer } from "@/components/Footer";
 import { getSolutionBySlug, solutionsData } from "@/data/solutionsData";
@@ -33,7 +34,12 @@ const SolutionDetail = () => {
   const nextSolution = currentIndex < solutionsData.length - 1 ? solutionsData[currentIndex + 1] : null;
 
   return (
-    <div className="min-h-screen bg-background">
+    <>
+      <Helmet>
+        <title>{solution.name} | WebQ Technologies Solutions</title>
+        <meta name="description" content={solution.shortDescription} />
+      </Helmet>
+      <div className="min-h-screen bg-background">
       <main id="main-content" className="focus:outline-none" tabIndex={-1}>
         {/* Hero */}
         <section className="pt-6 pb-10 lg:pt-8 lg:pb-14 bg-gradient-to-b from-primary/5 to-background">
@@ -313,6 +319,7 @@ const SolutionDetail = () => {
       </main>
       <Footer />
     </div>
+    </>
   );
 };
 

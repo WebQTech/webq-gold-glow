@@ -5,6 +5,7 @@ import { Footer } from "@/components/Footer";
 import { getTechnologyBySlug, technologiesData } from "@/data/technologiesData";
 import { CodeTypingAnimation } from "@/components/CodeTypingAnimation";
 import { getTechSnippets } from "@/data/technologySnippets";
+import { Helmet } from "react-helmet-async";
 
 const metricIcons = [TrendingUp, Globe, Star, Users, BarChart3, Building2, Zap, Globe];
 
@@ -30,7 +31,12 @@ const TechnologyDetail = () => {
   const hasSnippets = !!snippetData;
 
   return (
-    <div className="min-h-screen bg-background">
+    <>
+      <Helmet>
+        <title>{tech.name} | WebQ Technologies</title>
+        <meta name="description" content={tech.shortDescription} />
+      </Helmet>
+      <div className="min-h-screen bg-background">
       <main id="main-content" className="focus:outline-none" tabIndex={-1}>
         {/* Hero */}
         <section className={`bg-gradient-to-b from-primary/5 to-background ${hasSnippets ? "py-2 lg:py-3" : "py-10 lg:py-16"}`}>
@@ -248,6 +254,7 @@ const TechnologyDetail = () => {
       </main>
       <Footer />
     </div>
+    </>
   );
 };
 
