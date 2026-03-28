@@ -34,7 +34,8 @@ const Index = () => {
       </main>
       <Footer />
       <BackToTopButton />
-    </div>
+      </div>
+    </>
   );
 };
 

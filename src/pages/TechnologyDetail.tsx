@@ -254,6 +254,7 @@ const TechnologyDetail = () => {
       </main>
       <Footer />
     </div>
+    </>
   );
 };
 

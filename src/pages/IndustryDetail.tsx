@@ -377,6 +377,7 @@ const IndustryDetail = () => {
       </main>
       <Footer />
     </div>
+    </>
   );
 };
 

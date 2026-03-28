@@ -319,6 +319,7 @@ const SolutionDetail = () => {
       </main>
       <Footer />
     </div>
+    </>
   );
 };
 
