@@ -122,7 +122,7 @@ const Solutions = () => {
         <section
           className="py-8 lg:py-10"
           style={{
-            background: `linear-gradient(135deg, hsl(215 50% 10%) 0%, hsl(210 100% 22%) 60%, hsl(195 80% 30%) 100%)`,
+            background: `linear-gradient(135deg, #0F172A 0%, #1e1145 50%, #8B5CF6 100%)`,
           }}
         >
           <div className="container mx-auto px-6 lg:px-12">
@@ -151,8 +151,8 @@ const Solutions = () => {
               </div>
 
               {/* Right — solution highlights */}
-              <div className="lg:col-span-2 border-l-2 border-[hsl(195,100%,55%)] pl-5 animate-fade-in">
-                <h2 className="text-xs font-semibold uppercase tracking-widest text-[hsl(195,100%,55%)] mb-3">
+              <div className="lg:col-span-2 border-l-2 border-[#E5B94E] pl-5 animate-fade-in">
+                <h2 className="text-xs font-semibold uppercase tracking-widest text-[#E5B94E] mb-3">
                   What We Deliver
                 </h2>
                 <ul className="space-y-2">
@@ -161,7 +161,7 @@ const Solutions = () => {
                       key={item}
                       className="flex items-start gap-2 text-sm text-white/90"
                     >
-                      <ChevronRight className="w-3.5 h-3.5 mt-0.5 text-[hsl(195,100%,55%)] shrink-0" />
+                      <ChevronRight className="w-3.5 h-3.5 mt-0.5 text-[#E5B94E] shrink-0" />
                       <span>{item}</span>
                     </li>
                   ))}

@@ -95,7 +95,7 @@ const About = () => {
           <section
             className="py-8 lg:py-10"
             style={{
-              background: `linear-gradient(135deg, hsl(215 50% 10%) 0%, hsl(210 100% 22%) 60%, hsl(195 80% 30%) 100%)`,
+              background: `linear-gradient(135deg, #0F172A 0%, #1e1145 50%, #8B5CF6 100%)`,
             }}
           >
             <div className="container mx-auto px-6 lg:px-12">
@@ -108,7 +108,7 @@ const About = () => {
                     <span className="text-white/90 font-medium">About Us</span>
                   </nav>
                   <h1 className="text-2xl lg:text-3xl font-bold text-white leading-tight tracking-tight">
-                    Delivering Technology That Moves <span className="text-[hsl(195,100%,55%)]">Businesses Forward.</span>
+                    Delivering Technology That Moves <span className="text-[#E5B94E]">Businesses Forward.</span>
                   </h1>
                   <p className="mt-4 text-sm lg:text-base text-white/70 leading-relaxed max-w-2xl text-justify">
                     We operate with the mindset of a startup and the experience of an enterprise. While our size allows us to move fast, stay flexible, and innovate quickly, our foundation is built on decades of enterprise-level expertise across industries and technologies.
