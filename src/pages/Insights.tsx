@@ -82,7 +82,7 @@ const Insights = () => {
           <section
             className="py-8 lg:py-10"
             style={{
-              background: `linear-gradient(135deg, #0F172A 0%, #1e1145 50%, #8B5CF6 100%)`,
+              background: `linear-gradient(135deg, hsl(215 50% 10%) 0%, hsl(210 100% 22%) 60%, hsl(195 80% 30%) 100%)`,
             }}
           >
             <div className="container mx-auto px-6 lg:px-12">
