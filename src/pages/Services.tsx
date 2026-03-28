@@ -1,10 +1,19 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight, CheckCircle2, Headphones, UserCheck, Users, Monitor, Landmark, LucideIcon, Settings, ChevronRight, Search, X } from "lucide-react";
 import { Footer } from "@/components/Footer";
 import { getServicesPageCategories, getServicesByCategory } from "@/data/servicesData";
 import { HoverCard, HoverCardTrigger, HoverCardContent } from "@/components/ui/hover-card";
 import { GoBackButton } from "@/components/GoBackButton";
+import servicesHero1 from "@/assets/services-hero-1.jpg";
+import servicesHero2 from "@/assets/services-hero-2.jpg";
+import servicesHero3 from "@/assets/services-hero-3.jpg";
+
+const heroImages = [
+  { src: servicesHero1, alt: "IT consulting team discussing strategy" },
+  { src: servicesHero2, alt: "Talent management and workforce consulting" },
+  { src: servicesHero3, alt: "Government consulting and digital transformation" },
+];
 
 const categoryIcons: Record<string, LucideIcon> = {
   "Support & Consulting": Headphones,

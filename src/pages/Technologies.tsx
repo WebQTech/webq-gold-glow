@@ -1,10 +1,19 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight, CheckCircle2, ChevronRight, Search, X } from "lucide-react";
 import { Footer } from "@/components/Footer";
 import { technologiesData, getAllTechnologyCategories } from "@/data/technologiesData";
 import { HoverCard, HoverCardTrigger, HoverCardContent } from "@/components/ui/hover-card";
 import { GoBackButton } from "@/components/GoBackButton";
+import techHero1 from "@/assets/technologies-hero-1.jpg";
+import techHero2 from "@/assets/technologies-hero-2.jpg";
+import techHero3 from "@/assets/technologies-hero-3.jpg";
+
+const heroImages = [
+  { src: techHero1, alt: "AI and machine learning technology stack" },
+  { src: techHero2, alt: "DevOps and CI/CD pipeline infrastructure" },
+  { src: techHero3, alt: "Enterprise data analytics and cloud platforms" },
+];
 
 const technologyCategories = getAllTechnologyCategories().map(category => ({
   title: category,

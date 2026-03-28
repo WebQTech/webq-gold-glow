@@ -1,10 +1,19 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight, CheckCircle2, ChevronRight, Search, X } from "lucide-react";
 import { Footer } from "@/components/Footer";
 import { industriesData, getAllIndustryCategories } from "@/data/industriesData";
 import { HoverCard, HoverCardTrigger, HoverCardContent } from "@/components/ui/hover-card";
 import { GoBackButton } from "@/components/GoBackButton";
+import industriesHero1 from "@/assets/industries-hero-1.jpg";
+import industriesHero2 from "@/assets/industries-hero-2.jpg";
+import industriesHero3 from "@/assets/industries-hero-3.jpg";
+
+const heroImages = [
+  { src: industriesHero1, alt: "Banking and financial services technology" },
+  { src: industriesHero2, alt: "Healthcare technology and life sciences" },
+  { src: industriesHero3, alt: "Retail logistics and supply chain automation" },
+];
 
 const industryCategories = getAllIndustryCategories().map(category => ({
   title: category,
