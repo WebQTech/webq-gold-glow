@@ -48,7 +48,6 @@ const whyWebQ = [
 
 const globalPresence: { region: string; offices: string[] }[] = [
   { region: "North America", offices: ["New York", "San Francisco", "Toronto"] },
-  { region: "Europe", offices: ["London", "Berlin", "Amsterdam"] },
   { region: "Asia Pacific", offices: ["Singapore", "Sydney", "Tokyo"] },
   { region: "India", offices: ["Bangalore", "Mumbai", "Hyderabad"] },
 ];
