@@ -36,6 +36,14 @@ const upcomingWebinars = [
 ];
 
 const Insights = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % heroImages.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, []);
   return (
     <>
       <Helmet>
