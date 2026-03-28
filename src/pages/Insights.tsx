@@ -3,69 +3,7 @@ import { Mic, Calendar, ArrowRight, Clock, User } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { GoBackButton } from "@/components/GoBackButton";
-
-const featuredInsights = [
-  {
-    title: "The Future of Enterprise AI: 2025 and Beyond",
-    category: "Industry Reports",
-    excerpt:
-      "Explore how artificial intelligence is reshaping enterprise operations, from automated decision-making to predictive analytics.",
-    author: "Dr. Sarah Chen",
-    date: "Dec 20, 2025",
-    readTime: "12 min read",
-    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&auto=format&fit=crop",
-  },
-  {
-    title: "Cloud Migration Success Stories: Fortune 500 Companies",
-    category: "Case Studies",
-    excerpt:
-      "Learn from the experiences of leading enterprises that successfully migrated their infrastructure to the cloud.",
-    author: "Michael Torres",
-    date: "Dec 18, 2025",
-    readTime: "8 min read",
-    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&auto=format&fit=crop",
-  },
-  {
-    title: "Cybersecurity Best Practices for 2025",
-    category: "Whitepapers",
-    excerpt:
-      "A comprehensive guide to protecting your organization against emerging cyber threats and vulnerabilities.",
-    author: "James Wilson",
-    date: "Dec 15, 2025",
-    readTime: "15 min read",
-    image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&auto=format&fit=crop",
-  },
-  {
-    title: "Generative AI in Healthcare: Transforming Patient Care",
-    category: "Tech Trends",
-    excerpt:
-      "Discover how generative AI is revolutionizing diagnostics, treatment planning, and patient engagement.",
-    author: "Dr. Emily Roberts",
-    date: "Dec 12, 2025",
-    readTime: "10 min read",
-    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&auto=format&fit=crop",
-  },
-  {
-    title: "Building Resilient Supply Chains with AI",
-    category: "Industry Reports",
-    excerpt:
-      "How AI-powered analytics can help organizations build more resilient and adaptive supply chain networks.",
-    author: "David Park",
-    date: "Dec 10, 2025",
-    readTime: "9 min read",
-    image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&auto=format&fit=crop",
-  },
-  {
-    title: "The Rise of Agentic AI: Autonomous Systems in Enterprise",
-    category: "Tech Trends",
-    excerpt:
-      "Understanding how autonomous AI agents are changing the way businesses operate and make decisions.",
-    author: "Lisa Zhang",
-    date: "Dec 8, 2025",
-    readTime: "11 min read",
-    image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&auto=format&fit=crop",
-  },
-];
+import { insightsData } from "@/data/insightsData";
 
 const upcomingWebinars = [
   {
