@@ -1,11 +1,22 @@
+import { useState, useEffect } from "react";
 import { Footer } from "@/components/Footer";
 import { motion } from "framer-motion";
-import { Building2, Users, Award, MapPin, Handshake, Target, Eye, Heart, Globe, CheckCircle } from "lucide-react";
+import { Building2, Users, Award, MapPin, Handshake, Target, Eye, Heart, Globe, CheckCircle, ChevronRight } from "lucide-react";
 import { GoBackButton } from "@/components/GoBackButton";
+import { Link } from "react-router-dom";
 
 import sbaLogo from "@/assets/certifications/sba.png";
 import wbencLogo from "@/assets/certifications/wbenc.png";
 import { Helmet } from "react-helmet-async";
+import aboutHero1 from "@/assets/about-hero-1.jpg";
+import aboutHero2 from "@/assets/about-hero-2.jpg";
+import aboutHero3 from "@/assets/about-hero-3.jpg";
+
+const heroImages = [
+  { src: aboutHero1, alt: "Business team strategy discussion in modern office" },
+  { src: aboutHero2, alt: "Technology leadership reviewing data dashboards" },
+  { src: aboutHero3, alt: "Global enterprise consulting team collaborating" },
+];
 
 const stats = [
   { value: "25+", label: "Enterprise Clients" },
