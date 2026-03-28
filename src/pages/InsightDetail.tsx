@@ -1,7 +1,7 @@
 import { useParams, Link, Navigate } from "react-router-dom";
 import { motion, useInView } from "framer-motion";
 import { useRef, useMemo } from "react";
-import { ArrowLeft, ArrowRight, Clock, User, Calendar, Tag, ChevronRight, Home } from "lucide-react";
+import { ArrowLeft, ArrowRight, Clock, Calendar, Tag, ChevronRight, Home } from "lucide-react";
 import { GoBackButton } from "@/components/GoBackButton";
 
 import { Footer } from "@/components/Footer";
@@ -93,10 +93,6 @@ const InsightDetail = () => {
                   </p>
 
                   <div className="mt-8 flex flex-wrap items-center gap-6 text-sm text-muted-foreground">
-                    <div className="flex items-center gap-2">
-                      <User className="w-4 h-4" />
-                      <span>{insight.author}</span>
-                    </div>
                     <div className="flex items-center gap-2">
                       <Calendar className="w-4 h-4" />
                       <span>{insight.date}</span>
@@ -190,19 +186,6 @@ const InsightDetail = () => {
                     </div>
                   </div>
 
-                  {/* Author Info */}
-                  <div className="bg-card border border-border rounded-2xl p-6">
-                    <h3 className="text-lg font-bold text-foreground mb-4">About the Author</h3>
-                    <div className="flex items-center gap-4">
-                      <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
-                        <User className="w-6 h-6 text-primary" />
-                      </div>
-                      <div>
-                        <p className="font-semibold text-foreground">{insight.author}</p>
-                        <p className="text-sm text-muted-foreground">WebQ Technologies</p>
-                      </div>
-                    </div>
-                  </div>
                 </motion.aside>
               </div>
             </div>

@@ -149,7 +149,6 @@ const Insights = () => {
                     </h3>
                     <p className="text-sm text-muted-foreground mb-5 leading-relaxed">{insightsData[0].excerpt}</p>
                     <div className="flex items-center gap-4 text-xs text-muted-foreground">
-                      <span className="flex items-center gap-1.5"><User className="w-3 h-3" />{insightsData[0].author}</span>
                       <span className="flex items-center gap-1.5"><Clock className="w-3 h-3" />{insightsData[0].readTime}</span>
                       <span className="flex items-center gap-1.5"><Calendar className="w-3 h-3" />{insightsData[0].date}</span>
                     </div>
@@ -182,7 +181,6 @@ const Insights = () => {
                         </h3>
                         <p className="text-sm text-muted-foreground mb-4 line-clamp-2">{insight.excerpt}</p>
                         <div className="flex items-center justify-between text-xs text-muted-foreground">
-                          <span className="flex items-center gap-1.5"><User className="w-3 h-3" />{insight.author}</span>
                           <span className="flex items-center gap-1.5"><Clock className="w-3 h-3" />{insight.readTime}</span>
                         </div>
                       </div>
