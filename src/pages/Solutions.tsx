@@ -74,6 +74,16 @@ const Solutions = () => {
 
   const filterOptions = ["All", ...solutionCategories.map((c) => c.title)];
 
+  const handleFilterClick = (filter: string) => {
+    setActiveFilter(filter);
+    if (filter !== "All") {
+      setTimeout(() => {
+        const el = document.getElementById(`category-${filter.replace(/\s+/g, '-').toLowerCase()}`);
+        el?.scrollIntoView({ behavior: "smooth", block: "start" });
+      }, 50);
+    }
+  };
+
   const filteredCategories = useMemo(() => {
     const byTab = activeFilter === "All" 
       ? solutionCategories 
@@ -188,7 +198,7 @@ const Solutions = () => {
               {filterOptions.map((filter) => (
                 <button
                   key={filter}
-                  onClick={() => setActiveFilter(filter)}
+                  onClick={() => handleFilterClick(filter)}
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 border ${
                     activeFilter === filter
                       ? "bg-primary text-primary-foreground border-primary shadow-md"
@@ -217,7 +227,8 @@ const Solutions = () => {
                 return (
                   <div
                     key={category.title}
-                    className="group rounded-xl border border-border bg-card overflow-hidden hover:border-primary/30 hover:shadow-lg transition-all duration-300 animate-fade-in"
+                    id={`category-${category.title.replace(/\s+/g, '-').toLowerCase()}`}
+                    className="group rounded-xl border border-border bg-card overflow-hidden hover:border-primary/30 hover:shadow-lg transition-all duration-300 animate-fade-in scroll-mt-24"
                   >
                     <div className="px-5 pt-5 pb-3 border-b border-border/50 bg-gradient-to-r from-primary/[0.03] to-transparent">
                       <div className="flex items-center gap-3">
