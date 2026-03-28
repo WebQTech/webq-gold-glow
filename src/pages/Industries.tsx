@@ -5,6 +5,7 @@ import { Footer } from "@/components/Footer";
 import { industriesData, getAllIndustryCategories } from "@/data/industriesData";
 import { HoverCard, HoverCardTrigger, HoverCardContent } from "@/components/ui/hover-card";
 import { GoBackButton } from "@/components/GoBackButton";
+import { Helmet } from "react-helmet-async";
 import industriesHero1 from "@/assets/industries-hero-1.jpg";
 import industriesHero2 from "@/assets/industries-hero-2.jpg";
 import industriesHero3 from "@/assets/industries-hero-3.jpg";

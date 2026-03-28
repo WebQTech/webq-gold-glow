@@ -72,7 +72,7 @@ const Insights = () => {
                     <ChevronRight className="w-3 h-3" />
                     <span className="text-white/90 font-medium">Insights</span>
                   </nav>
-                  <h1 className="text-3xl lg:text-4xl font-bold text-white leading-tight tracking-tight">
+                  <h1 className="text-2xl lg:text-3xl font-bold text-white leading-tight tracking-tight">
                     Technology Insights, Research &amp; Case Studies
                   </h1>
                   <p className="mt-4 text-sm lg:text-base text-white/70 leading-relaxed max-w-2xl text-justify">

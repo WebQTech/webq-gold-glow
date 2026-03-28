@@ -5,6 +5,7 @@ import { Footer } from "@/components/Footer";
 import { technologiesData, getAllTechnologyCategories } from "@/data/technologiesData";
 import { HoverCard, HoverCardTrigger, HoverCardContent } from "@/components/ui/hover-card";
 import { GoBackButton } from "@/components/GoBackButton";
+import { Helmet } from "react-helmet-async";
 import techHero1 from "@/assets/technologies-hero-1.jpg";
 import techHero2 from "@/assets/technologies-hero-2.jpg";
 import techHero3 from "@/assets/technologies-hero-3.jpg";
