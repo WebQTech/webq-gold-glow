@@ -65,11 +65,7 @@ export const InsightsSummary = () => {
                 <h3 className="text-base font-semibold text-foreground mt-2 mb-3 group-hover:text-primary transition-colors line-clamp-2">
                   {insight.title}
                 </h3>
-                <div className="flex items-center justify-between text-xs text-muted-foreground">
-                  <span className="flex items-center gap-1">
-                    <User className="w-3 h-3" />
-                    {insight.author}
-                  </span>
+                <div className="flex items-center text-xs text-muted-foreground">
                   <span className="flex items-center gap-1">
                     <Clock className="w-3 h-3" />
                     {insight.readTime}
