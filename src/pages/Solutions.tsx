@@ -156,14 +156,14 @@ const Solutions = () => {
 
         {/* Hero — dark gradient matching Services page */}
         <section
-          className="py-8 lg:py-10"
+          className="py-6 lg:py-8"
           style={{
             background: `linear-gradient(135deg, hsl(215 50% 10%) 0%, hsl(210 100% 22%) 60%, hsl(195 80% 30%) 100%)`,
           }}
         >
           <div className="container mx-auto px-6 lg:px-12">
             <GoBackButton />
-              <div className={`grid grid-cols-1 lg:grid-cols-5 gap-6 lg:gap-8 items-center transition-opacity duration-500 ${isHeroReady ? "opacity-100" : "opacity-0"}`}>
+              <div className={`grid grid-cols-1 lg:grid-cols-5 gap-4 lg:gap-8 items-start transition-opacity duration-500 ${isHeroReady ? "opacity-100" : "opacity-0"}`}>
                 {/* Left — headline & description */}
                 <div className="lg:col-span-3 animate-fade-in">
                   <nav className="flex items-center gap-1.5 text-xs text-white/50 mb-3">
