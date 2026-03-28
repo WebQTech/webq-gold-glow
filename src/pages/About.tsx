@@ -243,7 +243,7 @@ const About = () => {
                   <span className="text-primary text-sm font-semibold uppercase tracking-wider">Global Presence</span>
                 </div>
                 <h2 className="text-3xl font-bold text-foreground">
-                  Serving Clients Worldwide
+                  Serving Clients Worldwide Through Partnerships
                 </h2>
               </div>
               
