@@ -35,12 +35,11 @@ export const CertificationsSection = () => {
               initial={{ opacity: 0, y: 15 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.4, delay: index * 0.1 }}
-              className="flex flex-col items-center gap-3 p-5 bg-background rounded-xl border border-border/50 hover:border-primary/30 hover:shadow-md transition-all"
+              className="flex items-center justify-center p-6 bg-background rounded-xl border border-border/50 hover:border-primary/30 hover:shadow-md transition-all"
             >
-              <div className="h-20 w-40 flex items-center justify-center">
-                <img src={cert.logo} alt={cert.name} className="max-h-20 max-w-40 object-contain" />
+              <div className="h-24 w-48 flex items-center justify-center">
+                <img src={cert.logo} alt={cert.name} className="max-h-24 max-w-48 object-contain" />
               </div>
-              <span className="text-sm font-medium text-muted-foreground text-center max-w-[160px]">{cert.name}</span>
             </motion.div>
           ))}
         </div>
