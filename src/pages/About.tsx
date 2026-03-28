@@ -46,6 +46,17 @@ const whyWebQ = [
   { icon: CheckCircle, title: "End-to-End Ownership", description: "From strategy through implementation to ongoing optimization." },
 ];
 
+const globalPresence = [
+  { region: "North America", offices: ["New York", "San Francisco", "Toronto"] },
+  { region: "Europe", offices: ["London", "Berlin", "Amsterdam"] },
+  { region: "Asia Pacific", offices: ["Singapore", "Sydney", "Tokyo"] },
+  { region: "India", offices: ["Bangalore", "Mumbai", "Hyderabad"] },
+];
+
+const partners = [
+  "Microsoft", "AWS", "Google Cloud", "Salesforce", "SAP", "Oracle", "IBM", "ServiceNow"
+];
+
 const certifications = [
   { name: "U.S. Small Business Administration", logo: sbaLogo },
   { name: "WBENC Certified", logo: wbencLogo },
