@@ -1,4 +1,4 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight, CheckCircle2, Code2, BarChart3, Brain, Cloud, GitBranch, TestTube, Shield, Headphones, Building2, Database, LucideIcon, ChevronRight, Search, X } from "lucide-react";
 import { Footer } from "@/components/Footer";
@@ -6,6 +6,15 @@ import { solutionsData } from "@/data/solutionsData";
 import { HoverCard, HoverCardTrigger, HoverCardContent } from "@/components/ui/hover-card";
 import { GoBackButton } from "@/components/GoBackButton";
 import { Helmet } from "react-helmet-async";
+import solutionsHero1 from "@/assets/solutions-hero-1.jpg";
+import solutionsHero2 from "@/assets/solutions-hero-2.jpg";
+import solutionsHero3 from "@/assets/solutions-hero-3.jpg";
+
+const heroImages = [
+  { src: solutionsHero1, alt: "Enterprise technology solutions dashboard" },
+  { src: solutionsHero2, alt: "Team collaborating on cloud architecture" },
+  { src: solutionsHero3, alt: "DevOps and security operations center" },
+];
 
 const solutionHighlights = [
   "AI & Machine Learning Solutions",
@@ -70,6 +79,28 @@ const solutionCategories: { title: string; icon: LucideIcon; items: string[] }[]
 ];
 
 const Solutions = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isHeroReady, setIsHeroReady] = useState(false);
+
+  useEffect(() => {
+    let loaded = 0;
+    heroImages.forEach(({ src }) => {
+      const img = new Image();
+      img.src = src;
+      img.onload = img.onerror = () => {
+        loaded++;
+        if (loaded >= 1) setIsHeroReady(true);
+      };
+    });
+  }, []);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % heroImages.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, []);
+
   const [activeFilter, setActiveFilter] = useState<string>("All");
   const [searchQuery, setSearchQuery] = useState<string>("");
   const [highlightedCategory, setHighlightedCategory] = useState<string | null>(null);
@@ -127,47 +158,53 @@ const Solutions = () => {
         >
           <div className="container mx-auto px-6 lg:px-12">
             <GoBackButton />
-            <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 lg:gap-8 items-center">
-              {/* Left — headline & description */}
-              <div className="lg:col-span-3 animate-fade-in">
-                <nav className="flex items-center gap-1.5 text-xs text-white/50 mb-3">
-                  <Link to="/" className="hover:text-white/80 transition-colors">Home</Link>
-                  <ChevronRight className="w-3 h-3" />
-                  <span className="text-white/90 font-medium">Solutions</span>
-                </nav>
-                <h1 className="text-2xl lg:text-3xl font-bold text-white leading-tight tracking-tight">
-                  Technology Solutions & Products
-                </h1>
-                <p className="mt-4 text-sm lg:text-base text-white/70 leading-relaxed max-w-2xl text-justify">
-                  We deliver end-to-end technology—from ready-to-deploy products to fully customized solutions.
-                  Our ten core offerings span AI, cloud, security, DevOps, and more, all grounded in industry-tested
-                  frameworks and modern&nbsp;engineering.
-                </p>
-                <p className="mt-2 text-sm text-white/60 leading-relaxed max-w-2xl text-justify">
-                  Every solution is engineered for enterprise scale, guided by measurable
-                  outcomes, and delivered by domain experts with deep industry and
-                  technology&nbsp;expertise.
-                </p>
-              </div>
+              <div className={`grid grid-cols-1 lg:grid-cols-5 gap-6 lg:gap-8 items-center transition-opacity duration-500 ${isHeroReady ? "opacity-100" : "opacity-0"}`}>
+                {/* Left — headline & description */}
+                <div className="lg:col-span-3 animate-fade-in">
+                  <nav className="flex items-center gap-1.5 text-xs text-white/50 mb-3">
+                    <Link to="/" className="hover:text-white/80 transition-colors">Home</Link>
+                    <ChevronRight className="w-3 h-3" />
+                    <span className="text-white/90 font-medium">Solutions</span>
+                  </nav>
+                  <h1 className="text-2xl lg:text-3xl font-bold text-white leading-tight tracking-tight">
+                    Technology Solutions & Products
+                  </h1>
+                  <p className="mt-4 text-sm lg:text-base text-white/70 leading-relaxed max-w-2xl text-justify">
+                    We deliver end-to-end technology—from ready-to-deploy products to fully customized solutions.
+                    Our ten core offerings span AI, cloud, security, DevOps, and more, all grounded in industry-tested
+                    frameworks and modern&nbsp;engineering.
+                  </p>
+                  <p className="mt-2 text-sm text-white/60 leading-relaxed max-w-2xl text-justify">
+                    Every solution is engineered for enterprise scale, guided by measurable
+                    outcomes, and delivered by domain experts with deep industry and
+                    technology&nbsp;expertise.
+                  </p>
+                </div>
 
-              {/* Right — solution highlights */}
-              <div className="lg:col-span-2 border-l-2 border-[hsl(195,100%,55%)] pl-5 animate-fade-in">
-                <h2 className="text-xs font-semibold uppercase tracking-widest text-[hsl(195,100%,55%)] mb-3">
-                  What We Deliver
-                </h2>
-                <ul className="space-y-2">
-                  {solutionHighlights.map((item) => (
-                    <li
-                      key={item}
-                      className="flex items-start gap-2 text-sm text-white/90"
-                    >
-                      <ChevronRight className="w-3.5 h-3.5 mt-0.5 text-[hsl(195,100%,55%)] shrink-0" />
-                      <span>{item}</span>
-                    </li>
+                {/* Right — image carousel */}
+                <div className="lg:col-span-2 hidden lg:block relative aspect-[3/2] rounded-xl overflow-hidden shadow-2xl">
+                  {heroImages.map((img, idx) => (
+                    <img
+                      key={idx}
+                      src={img.src}
+                      alt={img.alt}
+                      className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ${idx === currentSlide ? "opacity-100" : "opacity-0"}`}
+                      width={960}
+                      height={640}
+                    />
                   ))}
-                </ul>
+                  <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2 z-10">
+                    {heroImages.map((_, idx) => (
+                      <button
+                        key={idx}
+                        onClick={() => setCurrentSlide(idx)}
+                        className={`w-2 h-2 rounded-full transition-all ${idx === currentSlide ? "bg-white w-5" : "bg-white/50"}`}
+                        aria-label={`View image ${idx + 1}`}
+                      />
+                    ))}
+                  </div>
+                </div>
               </div>
-            </div>
           </div>
         </section>
 
