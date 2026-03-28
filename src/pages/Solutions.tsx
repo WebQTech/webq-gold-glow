@@ -85,19 +85,23 @@ const Solutions = () => {
 
   useEffect(() => {
     let loaded = 0;
-    heroImages.forEach(({ src }) => {
-      const img = new Image();
-      img.src = src;
-      img.onload = img.onerror = () => {
-        loaded++;
-        if (loaded >= 1) setIsHeroReady(true);
-      };
+    const imageSlides = heroSlides.filter(s => s.type === "image");
+    if (imageSlides.length === 0) { setIsHeroReady(true); return; }
+    imageSlides.forEach((slide) => {
+      if (slide.type === "image") {
+        const img = new Image();
+        img.src = slide.src;
+        img.onload = img.onerror = () => {
+          loaded++;
+          if (loaded >= 1) setIsHeroReady(true);
+        };
+      }
     });
   }, []);
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % heroImages.length);
+      setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
     }, 5000);
     return () => clearInterval(timer);
   }, []);
