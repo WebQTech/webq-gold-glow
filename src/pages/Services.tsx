@@ -1,10 +1,19 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight, CheckCircle2, Headphones, UserCheck, Users, Monitor, Landmark, LucideIcon, Settings, ChevronRight, Search, X } from "lucide-react";
 import { Footer } from "@/components/Footer";
 import { getServicesPageCategories, getServicesByCategory } from "@/data/servicesData";
 import { HoverCard, HoverCardTrigger, HoverCardContent } from "@/components/ui/hover-card";
 import { GoBackButton } from "@/components/GoBackButton";
+import servicesHero1 from "@/assets/services-hero-1.jpg";
+import servicesHero2 from "@/assets/services-hero-2.jpg";
+import servicesHero3 from "@/assets/services-hero-3.jpg";
+
+const heroImages = [
+  { src: servicesHero1, alt: "IT consulting team discussing strategy" },
+  { src: servicesHero2, alt: "Talent management and workforce consulting" },
+  { src: servicesHero3, alt: "Government consulting and digital transformation" },
+];
 
 const categoryIcons: Record<string, LucideIcon> = {
   "Support & Consulting": Headphones,
@@ -40,6 +49,14 @@ const Services = () => {
   const [activeFilter, setActiveFilter] = useState<string>("All");
   const [searchQuery, setSearchQuery] = useState<string>("");
   const [highlightedCategory, setHighlightedCategory] = useState<string | null>(null);
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % heroImages.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, []);
 
   const filterOptions = ["All", ...categories];
 
@@ -121,18 +138,27 @@ const Services = () => {
                 </p>
               </div>
 
-              <div className="lg:col-span-2 border-l-2 border-[hsl(195,100%,55%)] pl-5 animate-fade-in">
-                <h2 className="text-xs font-semibold uppercase tracking-widest text-[hsl(195,100%,55%)] mb-3">
-                  What We Cover
-                </h2>
-                <ul className="space-y-2">
-                  {serviceHighlights.map((item) => (
-                    <li key={item} className="flex items-start gap-2 text-sm text-white/90">
-                      <ChevronRight className="w-3.5 h-3.5 mt-0.5 text-[hsl(195,100%,55%)] shrink-0" />
-                      <span>{item}</span>
-                    </li>
+              <div className="lg:col-span-2 hidden lg:block relative aspect-[3/2] rounded-xl overflow-hidden shadow-2xl">
+                {heroImages.map((img, idx) => (
+                  <img
+                    key={idx}
+                    src={img.src}
+                    alt={img.alt}
+                    className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ${idx === currentSlide ? "opacity-100" : "opacity-0"}`}
+                    width={960}
+                    height={640}
+                  />
+                ))}
+                <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2 z-10">
+                  {heroImages.map((_, idx) => (
+                    <button
+                      key={idx}
+                      onClick={() => setCurrentSlide(idx)}
+                      className={`w-2 h-2 rounded-full transition-all ${idx === currentSlide ? "bg-white w-5" : "bg-white/50"}`}
+                      aria-label={`View image ${idx + 1}`}
+                    />
                   ))}
-                </ul>
+                </div>
               </div>
             </div>
           </div>
