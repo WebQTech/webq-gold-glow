@@ -4,6 +4,7 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { GoBackButton } from "@/components/GoBackButton";
 import { insightsData } from "@/data/insightsData";
+import insightsHero from "@/assets/insights-hero.jpg";
 
 const upcomingWebinars = [
   {
@@ -42,17 +43,28 @@ const Insights = () => {
           <section className="relative py-12 lg:py-20 bg-gradient-to-b from-primary/5 to-background overflow-hidden">
             <div className="container mx-auto px-6 lg:px-12">
               <GoBackButton />
-              <div className="max-w-3xl">
-                <span className="text-primary text-sm font-semibold uppercase tracking-wider">Insights</span>
-                <h1 className="text-3xl lg:text-4xl font-bold text-foreground mt-4 mb-6">
-                  Technology Insights, Research & <span className="text-primary">Case Studies</span>
-                </h1>
-                <p className="text-lg text-muted-foreground leading-relaxed font-[Inter]">
-                  Stay ahead of digital transformation with expert insights, research, and real‑world case studies focused on AI, cloud computing, data platforms, cybersecurity, and enterprise technology.
-                </p>
-                <p className="text-base text-muted-foreground/80 leading-relaxed mt-3 font-[Inter]">
-                  Our Knowledge &amp; Insights hub shares practical analysis and proven perspectives drawn from hands‑on experience across banking, healthcare, government, retail, and logistics—helping organizations understand emerging technology trends, make informed decisions, and achieve measurable business outcomes.
-                </p>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+                <div>
+                  <span className="text-primary text-sm font-semibold uppercase tracking-wider">Insights</span>
+                  <h1 className="text-3xl lg:text-4xl font-bold text-foreground mt-4 mb-6">
+                    Technology Insights, Research & <span className="text-primary">Case Studies</span>
+                  </h1>
+                  <p className="text-lg text-muted-foreground leading-relaxed font-[Inter]">
+                    Stay ahead of digital transformation with expert insights, research, and real‑world case studies focused on AI, cloud computing, data platforms, cybersecurity, and enterprise technology.
+                  </p>
+                  <p className="text-base text-muted-foreground/80 leading-relaxed mt-3 font-[Inter]">
+                    Our Knowledge &amp; Insights hub shares practical analysis and proven perspectives drawn from hands‑on experience across banking, healthcare, government, retail, and logistics—helping organizations understand emerging technology trends, make informed decisions, and achieve measurable business outcomes.
+                  </p>
+                </div>
+                <div className="hidden lg:block">
+                  <img
+                    src={insightsHero}
+                    alt="Technology research and data analytics workspace"
+                    width={960}
+                    height={640}
+                    className="w-full h-auto rounded-xl shadow-lg object-cover"
+                  />
+                </div>
               </div>
             </div>
           </section>
