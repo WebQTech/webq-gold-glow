@@ -71,28 +71,30 @@ const solutionCategories: { title: string; icon: LucideIcon; items: string[] }[]
 const Solutions = () => {
   const [activeFilter, setActiveFilter] = useState<string>("All");
   const [searchQuery, setSearchQuery] = useState<string>("");
+  const [highlightedCategory, setHighlightedCategory] = useState<string | null>(null);
 
   const filterOptions = ["All", ...solutionCategories.map((c) => c.title)];
 
   const handleFilterClick = (filter: string) => {
     setActiveFilter(filter);
-    if (filter !== "All") {
-      setTimeout(() => {
-        const el = document.getElementById(`category-${filter.replace(/\s+/g, '-').toLowerCase()}`);
-        el?.scrollIntoView({ behavior: "smooth", block: "start" });
-      }, 50);
-    }
+    setHighlightedCategory(null);
+    if (filter === "All") return;
+    // Scroll to the category without filtering others out
+    setTimeout(() => {
+      const el = document.getElementById(`category-${filter.replace(/\s+/g, '-').toLowerCase()}`);
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth", block: "start" });
+        setHighlightedCategory(filter);
+        setTimeout(() => setHighlightedCategory(null), 2000);
+      }
+    }, 50);
   };
 
   const filteredCategories = useMemo(() => {
-    const byTab = activeFilter === "All" 
-      ? solutionCategories 
-      : solutionCategories.filter((c) => c.title === activeFilter);
-
-    if (!searchQuery.trim()) return byTab;
+    if (!searchQuery.trim()) return solutionCategories;
 
     const q = searchQuery.toLowerCase();
-    return byTab
+    return solutionCategories
       .map((category) => ({
         ...category,
         items: category.items.filter((slug) => {
@@ -104,7 +106,7 @@ const Solutions = () => {
         }),
       }))
       .filter((category) => category.items.length > 0);
-  }, [activeFilter, searchQuery]);
+  }, [searchQuery]);
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-primary/5 to-background">
