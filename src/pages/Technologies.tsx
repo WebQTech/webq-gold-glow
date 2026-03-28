@@ -30,7 +30,6 @@ const techHighlights = [
 ];
 
 const Technologies = () => {
-const Technologies = () => {
   const [activeFilter, setActiveFilter] = useState<string>("All");
   const [searchQuery, setSearchQuery] = useState<string>("");
   const [highlightedCategory, setHighlightedCategory] = useState<string | null>(null);
