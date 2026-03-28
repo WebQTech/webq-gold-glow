@@ -108,7 +108,7 @@ const Technologies = () => {
         >
           <div className="container mx-auto px-6 lg:px-12">
             <GoBackButton />
-            <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 lg:gap-8 items-center">
+            <div className={`grid grid-cols-1 lg:grid-cols-5 gap-6 lg:gap-8 items-center transition-opacity duration-500 ${isHeroReady ? "opacity-100" : "opacity-0"}`}>
               <div className="lg:col-span-3 animate-fade-in">
                 <nav className="flex items-center gap-1.5 text-xs text-white/50 mb-3">
                   <Link to="/" className="hover:text-white/80 transition-colors">Home</Link>
