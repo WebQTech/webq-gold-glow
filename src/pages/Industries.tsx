@@ -296,6 +296,7 @@ const Industries = () => {
       </main>
       <Footer />
     </div>
+    </>
   );
 };
 

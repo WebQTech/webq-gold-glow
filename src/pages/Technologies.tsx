@@ -284,6 +284,7 @@ const Technologies = () => {
       </main>
       <Footer />
     </div>
+    </>
   );
 };
 
