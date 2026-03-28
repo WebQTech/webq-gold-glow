@@ -78,7 +78,12 @@ const Technologies = () => {
   }, [searchQuery]);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-primary/5 to-background">
+    <>
+      <Helmet>
+        <title>Technologies | WebQ Technologies - Our Technology Stack</title>
+        <meta name="description" content="Explore WebQ Technologies' modern technology stack across AI, cloud, data, DevOps, security, and enterprise platforms." />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-b from-primary/5 to-background">
       <main id="main-content" className="focus:outline-none" tabIndex={-1}>
 
         {/* Hero */}

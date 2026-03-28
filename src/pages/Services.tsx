@@ -105,7 +105,12 @@ const Services = () => {
   const hasResults = filteredServiceCategories.length > 0 || filteredItSolutions.length > 0;
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-primary/5 to-background">
+    <>
+      <Helmet>
+        <title>Services | WebQ Technologies - IT & Professional Consulting</title>
+        <meta name="description" content="Explore WebQ Technologies' IT-enabled and professional consulting services including talent management, government consulting, and operational support." />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-b from-primary/5 to-background">
       <main id="main-content" className="focus:outline-none" tabIndex={-1}>
 
         {/* Hero — dark gradient matching homepage */}

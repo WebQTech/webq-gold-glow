@@ -80,7 +80,12 @@ const Industries = () => {
   }, [searchQuery]);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-primary/5 to-background">
+    <>
+      <Helmet>
+        <title>Industries | WebQ Technologies - Industry Solutions & Expertise</title>
+        <meta name="description" content="WebQ Technologies serves banking, healthcare, government, retail, manufacturing, and more with tailored enterprise technology solutions." />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-b from-primary/5 to-background">
       <main id="main-content" className="focus:outline-none" tabIndex={-1}>
 
         {/* Hero — dark gradient matching Services page */}
