@@ -1,5 +1,6 @@
+import { useState, useMemo } from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight, CheckCircle2, Headphones, UserCheck, Users, Monitor, Landmark, LucideIcon, Settings, ChevronRight } from "lucide-react";
+import { ArrowRight, CheckCircle2, Headphones, UserCheck, Users, Monitor, Landmark, LucideIcon, Settings, ChevronRight, Search, X } from "lucide-react";
 import { Footer } from "@/components/Footer";
 import { getServicesPageCategories, getServicesByCategory } from "@/data/servicesData";
 import { HoverCard, HoverCardTrigger, HoverCardContent } from "@/components/ui/hover-card";
@@ -36,6 +37,54 @@ const itSolutions = [
 
 const Services = () => {
   const categories = getServicesPageCategories();
+  const [activeFilter, setActiveFilter] = useState<string>("All");
+  const [searchQuery, setSearchQuery] = useState<string>("");
+  const [highlightedCategory, setHighlightedCategory] = useState<string | null>(null);
+
+  const filterOptions = ["All", ...categories];
+
+  const handleFilterClick = (filter: string) => {
+    setActiveFilter(filter);
+    setHighlightedCategory(null);
+    if (filter === "All") return;
+    setTimeout(() => {
+      const el = document.getElementById(`service-category-${filter.replace(/\s+/g, '-').toLowerCase()}`);
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth", block: "start" });
+        setHighlightedCategory(filter);
+        setTimeout(() => setHighlightedCategory(null), 2000);
+      }
+    }, 50);
+  };
+
+  const filteredServiceCategories = useMemo(() => {
+    const allCats = categories.map(cat => ({
+      title: cat,
+      services: getServicesByCategory(cat),
+    }));
+
+    if (!searchQuery.trim()) return allCats;
+
+    const q = searchQuery.toLowerCase();
+    return allCats
+      .map(cat => ({
+        ...cat,
+        services: cat.services.filter(s =>
+          s.name.toLowerCase().includes(q) ||
+          s.shortDescription?.toLowerCase().includes(q)
+        ),
+      }))
+      .filter(cat => cat.services.length > 0);
+  }, [searchQuery, categories]);
+
+  // Also filter IT Solutions cross-reference tile by search
+  const filteredItSolutions = useMemo(() => {
+    if (!searchQuery.trim()) return itSolutions;
+    const q = searchQuery.toLowerCase();
+    return itSolutions.filter(item => item.toLowerCase().includes(q));
+  }, [searchQuery]);
+
+  const hasResults = filteredServiceCategories.length > 0 || filteredItSolutions.length > 0;
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-primary/5 to-background">
@@ -51,7 +100,6 @@ const Services = () => {
           <div className="container mx-auto px-6 lg:px-12">
             <GoBackButton />
             <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 lg:gap-8 items-center">
-              {/* Left — headline & description */}
               <div className="lg:col-span-3 animate-fade-in">
                 <nav className="flex items-center gap-1.5 text-xs text-white/50 mb-3">
                   <Link to="/" className="hover:text-white/80 transition-colors">Home</Link>
@@ -73,17 +121,13 @@ const Services = () => {
                 </p>
               </div>
 
-              {/* Right — service highlights */}
               <div className="lg:col-span-2 border-l-2 border-[hsl(195,100%,55%)] pl-5 animate-fade-in">
                 <h2 className="text-xs font-semibold uppercase tracking-widest text-[hsl(195,100%,55%)] mb-3">
                   What We Cover
                 </h2>
                 <ul className="space-y-2">
                   {serviceHighlights.map((item) => (
-                    <li
-                      key={item}
-                      className="flex items-start gap-2 text-sm text-white/90"
-                    >
+                    <li key={item} className="flex items-start gap-2 text-sm text-white/90">
                       <ChevronRight className="w-3.5 h-3.5 mt-0.5 text-[hsl(195,100%,55%)] shrink-0" />
                       <span>{item}</span>
                     </li>
@@ -94,57 +138,109 @@ const Services = () => {
           </div>
         </section>
 
-        {/* Section title + divider */}
+        {/* Section title + divider + search + filters */}
         <section className="py-10 lg:py-14">
           <div className="container mx-auto px-6 lg:px-12">
-            <div className="flex items-center gap-4 mb-8">
+            <div className="flex items-center gap-4 mb-6">
               <h2 className="text-lg font-bold text-foreground uppercase tracking-wider whitespace-nowrap">
                 Our Service Categories
               </h2>
               <div className="h-px flex-1 bg-border" />
+              <div className="relative max-w-xs w-full shrink-0">
+                <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
+                <input
+                  type="text"
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  placeholder="Search services…"
+                  className="w-full h-9 pl-9 pr-9 rounded-lg border border-border bg-background text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
+                />
+                {searchQuery && (
+                  <button
+                    onClick={() => setSearchQuery("")}
+                    className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground"
+                  >
+                    <X className="w-4 h-4" />
+                  </button>
+                )}
+              </div>
             </div>
+
+            {/* Filter Tabs */}
+            <div className="flex flex-wrap gap-2 mb-8">
+              {filterOptions.map((filter) => (
+                <button
+                  key={filter}
+                  onClick={() => handleFilterClick(filter)}
+                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 border ${
+                    activeFilter === filter
+                      ? "bg-primary text-primary-foreground border-primary shadow-md"
+                      : "bg-background text-muted-foreground border-border hover:border-primary/40 hover:text-foreground"
+                  }`}
+                >
+                  {filter}
+                </button>
+              ))}
+            </div>
+
+            {/* No results */}
+            {!hasResults && (
+              <div className="text-center py-12 text-muted-foreground">
+                <Search className="w-8 h-8 mx-auto mb-3 opacity-50" />
+                <p className="text-sm">No services found for "{searchQuery}"</p>
+                <button onClick={() => { setSearchQuery(""); setActiveFilter("All"); }} className="mt-2 text-sm text-primary hover:underline">
+                  Clear filters
+                </button>
+              </div>
+            )}
+
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
               {/* IT Solutions cross-reference tile */}
-              <div className="group rounded-xl border border-border bg-card overflow-hidden hover:border-primary/30 hover:shadow-lg transition-all duration-300 animate-fade-in">
-                <div className="px-5 pt-5 pb-3 border-b border-border/50 bg-gradient-to-r from-primary/[0.03] to-transparent">
-                  <div className="flex items-center gap-3">
-                    <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-primary transition-colors duration-300">
-                      <Monitor className="w-4 h-4 text-primary group-hover:text-primary-foreground transition-colors duration-300" />
+              {filteredItSolutions.length > 0 && (
+                <div className="group rounded-xl border border-border bg-card overflow-hidden hover:border-primary/30 hover:shadow-lg transition-all duration-300 animate-fade-in">
+                  <div className="px-5 pt-5 pb-3 border-b border-border/50 bg-gradient-to-r from-primary/[0.03] to-transparent">
+                    <div className="flex items-center gap-3">
+                      <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-primary transition-colors duration-300">
+                        <Monitor className="w-4 h-4 text-primary group-hover:text-primary-foreground transition-colors duration-300" />
+                      </div>
+                      <h2 className="text-sm font-bold text-foreground uppercase tracking-wider">
+                        IT Solutions
+                      </h2>
                     </div>
-                    <h2 className="text-sm font-bold text-foreground uppercase tracking-wider">
-                      IT Solutions
-                    </h2>
+                  </div>
+                  <ul className="px-5 py-4 space-y-1.5">
+                    {filteredItSolutions.map((item) => (
+                      <li key={item} className="flex items-center gap-2 text-sm text-muted-foreground py-0.5">
+                        <CheckCircle2 className="w-3.5 h-3.5 text-primary shrink-0" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="px-5 pb-4">
+                    <Link
+                      to="/solutions"
+                      className="inline-flex items-center gap-1.5 text-sm font-medium text-primary hover:text-primary/80 transition-colors"
+                    >
+                      View All Solutions
+                      <ArrowRight className="w-3.5 h-3.5" />
+                    </Link>
                   </div>
                 </div>
-                <ul className="px-5 py-4 space-y-1.5">
-                  {itSolutions.map((item) => (
-                    <li key={item} className="flex items-center gap-2 text-sm text-muted-foreground py-0.5">
-                      <CheckCircle2 className="w-3.5 h-3.5 text-primary shrink-0" />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-                <div className="px-5 pb-4">
-                  <Link
-                    to="/solutions"
-                    className="inline-flex items-center gap-1.5 text-sm font-medium text-primary hover:text-primary/80 transition-colors"
-                  >
-                    View All Solutions
-                    <ArrowRight className="w-3.5 h-3.5" />
-                  </Link>
-                </div>
-              </div>
+              )}
 
               {/* Service category tiles */}
-              {categories.map((category) => {
-                const CategoryIcon = categoryIcons[category] || Headphones;
-                const services = getServicesByCategory(category);
-
+              {filteredServiceCategories.map((cat) => {
+                const CategoryIcon = categoryIcons[cat.title] || Headphones;
                 return (
                   <div
-                    key={category}
-                    className="group rounded-xl border border-border bg-card overflow-hidden hover:border-primary/30 hover:shadow-lg transition-all duration-300 animate-fade-in"
+                    key={cat.title}
+                    id={`service-category-${cat.title.replace(/\s+/g, '-').toLowerCase()}`}
+                    className={`group rounded-xl border bg-card overflow-hidden hover:border-primary/30 hover:shadow-lg transition-all duration-500 animate-fade-in scroll-mt-24 ${
+                      highlightedCategory === cat.title
+                        ? "border-primary ring-2 ring-primary/30 shadow-lg shadow-primary/10"
+                        : "border-border"
+                    }`}
                   >
                     <div className="px-5 pt-5 pb-3 border-b border-border/50 bg-gradient-to-r from-primary/[0.03] to-transparent">
                       <div className="flex items-center gap-3">
@@ -152,13 +248,13 @@ const Services = () => {
                           <CategoryIcon className="w-4 h-4 text-primary group-hover:text-primary-foreground transition-colors duration-300" />
                         </div>
                         <h2 className="text-sm font-bold text-foreground uppercase tracking-wider">
-                          {category}
+                          {cat.title}
                         </h2>
                       </div>
                     </div>
 
                     <ul className="px-5 py-4 space-y-1.5">
-                      {services.map((service) => {
+                      {cat.services.map((service) => {
                         const ServiceIcon = service.icon;
                         return (
                           <li key={service.slug}>
