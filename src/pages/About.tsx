@@ -73,6 +73,15 @@ const certifications = [
 ];
 
 const About = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % heroImages.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <>
       <Helmet>
@@ -83,26 +92,56 @@ const About = () => {
       <div className="min-h-screen bg-background">
         <main id="main-content" className="focus:outline-none" tabIndex={-1}>
           {/* Hero Section */}
-          <section className="relative py-12 lg:py-20 bg-gradient-to-b from-primary/5 to-background overflow-hidden">
+          <section
+            className="py-8 lg:py-10"
+            style={{
+              background: `linear-gradient(135deg, hsl(215 50% 10%) 0%, hsl(210 100% 22%) 60%, hsl(195 80% 30%) 100%)`,
+            }}
+          >
             <div className="container mx-auto px-6 lg:px-12">
               <GoBackButton />
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                className="max-w-3xl"
-              >
-                <span className="text-primary text-sm font-semibold uppercase tracking-wider">About Us</span>
-                <h1 className="text-3xl lg:text-4xl font-bold text-foreground mt-4 mb-6">
-                  Delivering Technology That Moves <span className="text-primary">Businesses Forward.</span>
-                </h1>
-                <p className="text-lg text-muted-foreground leading-relaxed">
-                  We operate with the mindset of a startup and the experience of an enterprise. While our size allows us to move fast, stay flexible, and innovate quickly, our foundation is built on decades of enterprise-level expertise across industries and technologies.
-                </p>
-                <p className="text-lg text-muted-foreground leading-relaxed mt-4">
-                  This unique combination enables us to design and deliver scalable, secure, and outcome-driven solutions—bringing modern engineering practices together with the rigor, reliability, and depth enterprises expect.
-                </p>
-              </motion.div>
+              <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 lg:gap-8 items-center">
+                <div className="lg:col-span-3 animate-fade-in">
+                  <nav className="flex items-center gap-1.5 text-xs text-white/50 mb-3">
+                    <Link to="/" className="hover:text-white/80 transition-colors">Home</Link>
+                    <ChevronRight className="w-3 h-3" />
+                    <span className="text-white/90 font-medium">About Us</span>
+                  </nav>
+                  <h1 className="text-2xl lg:text-3xl font-bold text-white leading-tight tracking-tight">
+                    Delivering Technology That Moves <span className="text-[hsl(195,100%,55%)]">Businesses Forward.</span>
+                  </h1>
+                  <p className="mt-4 text-sm lg:text-base text-white/70 leading-relaxed max-w-2xl text-justify">
+                    We operate with the mindset of a startup and the experience of an enterprise. While our size allows us to move fast, stay flexible, and innovate quickly, our foundation is built on decades of enterprise-level expertise across industries and technologies.
+                  </p>
+                  <p className="mt-2 text-sm text-white/60 leading-relaxed max-w-2xl text-justify">
+                    This unique combination enables us to design and deliver scalable, secure, and outcome-driven solutions—bringing modern engineering practices together with the rigor, reliability, and depth enterprises expect.
+                  </p>
+                </div>
+
+                {/* Right — image carousel */}
+                <div className="lg:col-span-2 hidden lg:block relative aspect-[3/2] rounded-xl overflow-hidden shadow-2xl">
+                  {heroImages.map((img, idx) => (
+                    <img
+                      key={idx}
+                      src={img.src}
+                      alt={img.alt}
+                      className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ${idx === currentSlide ? "opacity-100" : "opacity-0"}`}
+                      width={960}
+                      height={640}
+                    />
+                  ))}
+                  <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2 z-10">
+                    {heroImages.map((_, idx) => (
+                      <button
+                        key={idx}
+                        onClick={() => setCurrentSlide(idx)}
+                        className={`w-2 h-2 rounded-full transition-all ${idx === currentSlide ? "bg-white w-5" : "bg-white/50"}`}
+                        aria-label={`View image ${idx + 1}`}
+                      />
+                    ))}
+                  </div>
+                </div>
+              </div>
             </div>
           </section>
 
