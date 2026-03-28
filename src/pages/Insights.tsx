@@ -56,30 +56,63 @@ const Insights = () => {
 
       <div className="min-h-screen bg-gradient-to-b from-primary/5 to-background">
         <main id="main-content" className="focus:outline-none" tabIndex={-1}>
-          <section className="relative py-12 lg:py-20 bg-gradient-to-b from-primary/5 to-background overflow-hidden">
+          <section
+            className="py-8 lg:py-10"
+            style={{
+              background: `linear-gradient(135deg, hsl(215 50% 10%) 0%, hsl(210 100% 22%) 60%, hsl(195 80% 30%) 100%)`,
+            }}
+          >
             <div className="container mx-auto px-6 lg:px-12">
               <GoBackButton />
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-                <div>
-                  <span className="text-primary text-sm font-semibold uppercase tracking-wider">Insights</span>
-                  <h1 className="text-3xl lg:text-4xl font-bold text-foreground mt-4 mb-6">
-                    Technology Insights, Research & <span className="text-primary">Case Studies</span>
+              <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 lg:gap-8 items-center">
+                {/* Left — headline & description */}
+                <div className="lg:col-span-3 animate-fade-in">
+                  <nav className="flex items-center gap-1.5 text-xs text-white/50 mb-3">
+                    <Link to="/" className="hover:text-white/80 transition-colors">Home</Link>
+                    <ChevronRight className="w-3 h-3" />
+                    <span className="text-white/90 font-medium">Insights</span>
+                  </nav>
+                  <h1 className="text-3xl lg:text-4xl font-bold text-white leading-tight tracking-tight">
+                    Technology Insights, Research &amp; Case Studies
                   </h1>
-                  <p className="text-lg text-muted-foreground leading-relaxed font-[Inter]">
+                  <p className="mt-4 text-sm lg:text-base text-white/70 leading-relaxed max-w-2xl text-justify">
                     Stay ahead of digital transformation with expert insights, research, and real‑world case studies focused on AI, cloud computing, data platforms, cybersecurity, and enterprise technology.
                   </p>
-                  <p className="text-base text-muted-foreground/80 leading-relaxed mt-3 font-[Inter]">
+                  <p className="mt-2 text-sm text-white/60 leading-relaxed max-w-2xl text-justify">
                     Our Knowledge &amp; Insights hub shares practical analysis and proven perspectives drawn from hands‑on experience across banking, healthcare, government, retail, and logistics—helping organizations understand emerging technology trends, make informed decisions, and achieve measurable business outcomes.
                   </p>
                 </div>
-                <div className="hidden lg:block">
-                  <img
-                    src={insightsHero}
-                    alt="Technology research and data analytics workspace"
-                    width={960}
-                    height={640}
-                    className="w-full h-auto rounded-xl shadow-lg object-cover"
-                  />
+
+                {/* Right — auto-rotating image carousel */}
+                <div className="lg:col-span-2 hidden lg:block">
+                  <div className="relative rounded-xl overflow-hidden shadow-lg aspect-[3/2]">
+                    {heroImages.map((img, idx) => (
+                      <img
+                        key={idx}
+                        src={img.src}
+                        alt={img.alt}
+                        width={960}
+                        height={640}
+                        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ${
+                          idx === currentSlide ? "opacity-100" : "opacity-0"
+                        }`}
+                        loading={idx === 0 ? "eager" : "lazy"}
+                      />
+                    ))}
+                    {/* Dot indicators */}
+                    <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2 z-10">
+                      {heroImages.map((_, idx) => (
+                        <button
+                          key={idx}
+                          onClick={() => setCurrentSlide(idx)}
+                          className={`w-2 h-2 rounded-full transition-all ${
+                            idx === currentSlide ? "bg-white w-5" : "bg-white/50"
+                          }`}
+                          aria-label={`View image ${idx + 1}`}
+                        />
+                      ))}
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
