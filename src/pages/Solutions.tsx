@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight, CheckCircle2, Code2, BarChart3, Brain, Cloud, GitBranch, TestTube, Shield, Headphones, Building2, Database, LucideIcon, ChevronRight } from "lucide-react";
+import { ArrowRight, CheckCircle2, Code2, BarChart3, Brain, Cloud, GitBranch, TestTube, Shield, Headphones, Building2, Database, LucideIcon, ChevronRight, Search, X } from "lucide-react";
 import { Footer } from "@/components/Footer";
 import { solutionsData } from "@/data/solutionsData";
 import { HoverCard, HoverCardTrigger, HoverCardContent } from "@/components/ui/hover-card";
@@ -73,9 +73,28 @@ const Solutions = () => {
   const [searchQuery, setSearchQuery] = useState<string>("");
 
   const filterOptions = ["All", ...solutionCategories.map((c) => c.title)];
-  const filteredCategories = activeFilter === "All" 
-    ? solutionCategories 
-    : solutionCategories.filter((c) => c.title === activeFilter);
+
+  const filteredCategories = useMemo(() => {
+    const byTab = activeFilter === "All" 
+      ? solutionCategories 
+      : solutionCategories.filter((c) => c.title === activeFilter);
+
+    if (!searchQuery.trim()) return byTab;
+
+    const q = searchQuery.toLowerCase();
+    return byTab
+      .map((category) => ({
+        ...category,
+        items: category.items.filter((slug) => {
+          const solution = solutionsData.find((s) => s.slug === slug);
+          return solution && (
+            solution.name.toLowerCase().includes(q) ||
+            solution.shortDescription?.toLowerCase().includes(q)
+          );
+        }),
+      }))
+      .filter((category) => category.items.length > 0);
+  }, [activeFilter, searchQuery]);
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-primary/5 to-background">
@@ -144,6 +163,26 @@ const Solutions = () => {
               <div className="h-px flex-1 bg-border" />
             </div>
 
+            {/* Search Bar */}
+            <div className="relative mb-4 max-w-md">
+              <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
+              <input
+                type="text"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                placeholder="Search solutions…"
+                className="w-full h-10 pl-9 pr-9 rounded-lg border border-border bg-background text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
+              />
+              {searchQuery && (
+                <button
+                  onClick={() => setSearchQuery("")}
+                  className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground"
+                >
+                  <X className="w-4 h-4" />
+                </button>
+              )}
+            </div>
+
             {/* Filter Tabs */}
             <div className="flex flex-wrap gap-2 mb-8">
               {filterOptions.map((filter) => (
@@ -160,6 +199,17 @@ const Solutions = () => {
                 </button>
               ))}
             </div>
+
+            {/* No results */}
+            {filteredCategories.length === 0 && (
+              <div className="text-center py-12 text-muted-foreground">
+                <Search className="w-8 h-8 mx-auto mb-3 opacity-50" />
+                <p className="text-sm">No solutions found for "{searchQuery}"</p>
+                <button onClick={() => { setSearchQuery(""); setActiveFilter("All"); }} className="mt-2 text-sm text-primary hover:underline">
+                  Clear filters
+                </button>
+              </div>
+            )
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {filteredCategories.map((category) => {
