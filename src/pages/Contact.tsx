@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
-import { Navbar } from "@/components/Navbar";
+
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -9,6 +9,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
 import { Mail, Phone, MapPin, Clock, Send } from "lucide-react";
+import { GoBackButton } from "@/components/GoBackButton";
 import { z } from "zod";
 
 const contactSchema = z.object({
@@ -46,16 +47,16 @@ const contactInfo = [
     subtext: "We'll respond within 24 hours",
   },
   {
-    icon: Phone,
-    title: "Call Us",
-    details: "+1 (555) 123-4567",
-    subtext: "Mon-Fri, 9am-6pm EST",
+    icon: MapPin,
+    title: "US Office",
+    details: "6200 Village Pkwy, Suite # 200",
+    subtext: "Dublin, CA 94568, USA",
   },
   {
     icon: MapPin,
-    title: "Visit Us",
-    details: "123 Innovation Drive",
-    subtext: "San Francisco, CA 94105",
+    title: "India Office",
+    details: "5, Kalidasan Street, Chitlapakkam",
+    subtext: "Chennai-600064, Tamil Nadu, India",
   },
   {
     icon: Clock,
@@ -130,13 +131,14 @@ const Contact = () => {
         />
       </Helmet>
 
-      <Navbar />
+      
 
       <main className="min-h-screen bg-background">
         {/* Hero Section */}
         <section className="relative pt-24 pb-12 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-transparent" />
           <div className="container mx-auto px-6 lg:px-12 relative z-10">
+            <GoBackButton />
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -304,19 +306,7 @@ const Contact = () => {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="space-y-8"
               >
-                {/* Map Placeholder */}
-                <div className="aspect-[4/3] rounded-2xl bg-muted/50 border border-border overflow-hidden relative">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-center">
-                      <MapPin className="w-12 h-12 text-primary/50 mx-auto mb-4" />
-                      <p className="text-muted-foreground">
-                        123 Innovation Drive
-                        <br />
-                        San Francisco, CA 94105
-                      </p>
-                    </div>
-                  </div>
-                </div>
+
 
                 {/* FAQ Preview */}
                 <div className="bg-card border border-border rounded-2xl p-8">
