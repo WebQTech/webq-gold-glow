@@ -1,8 +1,9 @@
 import { useParams, Link, Navigate } from "react-router-dom";
 import { motion, useInView } from "framer-motion";
 import { useRef, useMemo } from "react";
-import { ArrowLeft, ArrowRight, Clock, User, Calendar, Tag } from "lucide-react";
-import { Navbar } from "@/components/Navbar";
+import { ArrowLeft, ArrowRight, Clock, Calendar, Tag, ChevronRight, Home } from "lucide-react";
+import { GoBackButton } from "@/components/GoBackButton";
+
 import { Footer } from "@/components/Footer";
 import { getInsightBySlug, insightsData } from "@/data/insightsData";
 import { Helmet } from "react-helmet-async";
@@ -43,24 +44,37 @@ const InsightDetail = () => {
       </Helmet>
 
       <div className="min-h-screen bg-background">
-        <Navbar />
         <main id="main-content" className="focus:outline-none" tabIndex={-1}>
           {/* Hero Section */}
           <section ref={heroRef} className="py-10 lg:py-16 bg-gradient-to-b from-primary/5 to-background">
             <div className="container mx-auto px-6 lg:px-12">
-              <motion.div
+              <GoBackButton />
+              <motion.nav
+                aria-label="Breadcrumb"
                 initial={{ opacity: 0, y: 20 }}
                 animate={isHeroInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5 }}
+                className="mb-6"
               >
-                <Link
-                  to="/insights"
-                  className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors mb-6"
-                >
-                  <ArrowLeft className="w-4 h-4" />
-                  Back to Insights
-                </Link>
-              </motion.div>
+                <ol className="flex items-center gap-1.5 text-sm text-muted-foreground">
+                  <li>
+                    <Link to="/" className="inline-flex items-center gap-1 hover:text-primary transition-colors">
+                      <Home className="w-3.5 h-3.5" />
+                      Home
+                    </Link>
+                  </li>
+                  <li><ChevronRight className="w-3.5 h-3.5" /></li>
+                  <li>
+                    <Link to="/insights" className="hover:text-primary transition-colors">
+                      Insights
+                    </Link>
+                  </li>
+                  <li><ChevronRight className="w-3.5 h-3.5" /></li>
+                  <li className="text-foreground font-medium truncate max-w-[200px] sm:max-w-none">
+                    {insight.title}
+                  </li>
+                </ol>
+              </motion.nav>
 
               <div className="grid lg:grid-cols-2 gap-12 items-center">
                 <motion.div
@@ -79,10 +93,6 @@ const InsightDetail = () => {
                   </p>
 
                   <div className="mt-8 flex flex-wrap items-center gap-6 text-sm text-muted-foreground">
-                    <div className="flex items-center gap-2">
-                      <User className="w-4 h-4" />
-                      <span>{insight.author}</span>
-                    </div>
                     <div className="flex items-center gap-2">
                       <Calendar className="w-4 h-4" />
                       <span>{insight.date}</span>
@@ -176,19 +186,6 @@ const InsightDetail = () => {
                     </div>
                   </div>
 
-                  {/* Author Info */}
-                  <div className="bg-card border border-border rounded-2xl p-6">
-                    <h3 className="text-lg font-bold text-foreground mb-4">About the Author</h3>
-                    <div className="flex items-center gap-4">
-                      <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
-                        <User className="w-6 h-6 text-primary" />
-                      </div>
-                      <div>
-                        <p className="font-semibold text-foreground">{insight.author}</p>
-                        <p className="text-sm text-muted-foreground">WebQ Technologies</p>
-                      </div>
-                    </div>
-                  </div>
                 </motion.aside>
               </div>
             </div>

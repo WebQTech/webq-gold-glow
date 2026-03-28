@@ -1,42 +1,64 @@
-import { Navbar } from "@/components/Navbar";
+import { useState, useEffect } from "react";
 import { Footer } from "@/components/Footer";
 import { motion } from "framer-motion";
-import { Building2, Users, Award, MapPin, Handshake, Target, Eye, Heart, Globe, CheckCircle } from "lucide-react";
+import { Building2, Users, Award, MapPin, Handshake, Target, Eye, Heart, Globe, CheckCircle, ChevronRight } from "lucide-react";
+import { GoBackButton } from "@/components/GoBackButton";
+import { Link } from "react-router-dom";
+
+import sbaLogo from "@/assets/certifications/sba.png";
+import wbencLogo from "@/assets/certifications/wbenc.png";
 import { Helmet } from "react-helmet-async";
+import aboutHero1 from "@/assets/about-hero-1.jpg";
+import aboutHero2 from "@/assets/about-hero-2.jpg";
+import aboutHero3 from "@/assets/about-hero-3.jpg";
+
+const heroImages = [
+  { src: aboutHero1, alt: "Enterprise technology team collaborating" },
+  { src: aboutHero2, alt: "Modern cloud infrastructure and data center" },
+  { src: aboutHero3, alt: "Global strategy and digital transformation" },
+];
 
 const stats = [
-  { value: "50+", label: "Enterprise Clients" },
-  { value: "100+", label: "Projects Delivered" },
-  { value: "20+", label: "Countries & Timezones" },
+  { value: "25+", label: "Enterprise Clients" },
+  { value: "50+", label: "Projects Delivered" },
+  { value: "10+", label: "Countries & Timezones" },
+  { value: "15+", label: "Startup Partners" },
 ];
 
 const values = [
   {
     icon: Target,
-    title: "Innovation First",
-    description: "We constantly push boundaries to deliver cutting-edge solutions that give our clients a competitive edge.",
+    title: "Mission-Driven",
+    description: "Every engagement is guided by clear objectives and measurable outcomes."
+  },
+  {
+    icon: Eye,
+    title: "Forward-Thinking",
+    description: "We anticipate technology shifts and position our clients ahead of the curve."
   },
   {
     icon: Heart,
-    title: "Client Success",
-    description: "Your success is our success. We're committed to delivering measurable outcomes that drive your business forward.",
+    title: "Client-First",
+    description: "Deep partnerships built on trust, transparency, and shared success."
   },
   {
-    icon: Users,
-    title: "Collaborative Spirit",
-    description: "We work as an extension of your team, fostering open communication and shared goals.",
-  },
-  {
-    icon: Award,
-    title: "Excellence in Execution",
-    description: "Quality is non-negotiable. We deliver solutions that exceed expectations and stand the test of time.",
+    icon: Globe,
+    title: "Global Reach",
+    description: "Delivering enterprise solutions across industries and geographies."
   },
 ];
 
+const whyWebQ = [
+  { icon: Building2, title: "Enterprise DNA", description: "Built on decades of Fortune 500 experience across industries." },
+  { icon: Users, title: "Senior-Led Teams", description: "Every project is staffed with experienced architects and engineers." },
+  { icon: Award, title: "Certified Excellence", description: "SBA, WBENC certified with proven delivery track record." },
+  { icon: MapPin, title: "US-Based, Global Delivery", description: "Headquartered in the US with delivery capabilities worldwide." },
+  { icon: Handshake, title: "Outcome-Focused", description: "We measure success by business impact, not just deliverables." },
+  { icon: CheckCircle, title: "End-to-End Ownership", description: "From strategy through implementation to ongoing optimization." },
+];
 
-const globalPresence = [
+const globalPresence: { region: string; offices: string[] }[] = [
   { region: "North America", offices: ["New York", "San Francisco", "Toronto"] },
-  { region: "Europe", offices: ["London", "Berlin", "Amsterdam"] },
   { region: "Asia Pacific", offices: ["Singapore", "Sydney", "Tokyo"] },
   { region: "India", offices: ["Bangalore", "Mumbai", "Hyderabad"] },
 ];
@@ -45,54 +67,93 @@ const partners = [
   "Microsoft", "AWS", "Google Cloud", "Salesforce", "SAP", "Oracle", "IBM", "ServiceNow"
 ];
 
+const certifications = [
+  { name: "U.S. Small Business Administration", logo: sbaLogo },
+  { name: "WBENC Certified", logo: wbencLogo },
+];
+
 const About = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isHeroReady, setIsHeroReady] = useState(false);
+
+  useEffect(() => {
+    let loaded = 0;
+    heroImages.forEach(({ src }) => {
+      const img = new Image();
+      img.src = src;
+      img.onload = img.onerror = () => {
+        loaded++;
+        if (loaded >= 1) setIsHeroReady(true);
+      };
+    });
+  }, []);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % heroImages.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <>
       <Helmet>
         <title>About Us | WebQ Technologies - Our Story, Leadership & Values</title>
         <meta name="description" content="Learn about WebQ Technologies' mission, leadership team, core values, and global presence. 15+ years of delivering enterprise technology solutions." />
       </Helmet>
-      
-      <div className="min-h-screen bg-background">
-        <Navbar />
-        
-        <main id="main-content">
-          {/* Hero Section */}
-          <section className="relative py-12 lg:py-20 bg-gradient-to-b from-primary/5 to-background overflow-hidden">
-            <div className="container mx-auto px-6 lg:px-12">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                className="max-w-3xl"
-              >
-                <span className="text-primary text-sm font-semibold uppercase tracking-wider">About Us</span>
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mt-4 mb-6">
-                  Transforming Businesses Through <span className="text-primary">Technology</span>
-                </h1>
-                <p className="text-lg text-muted-foreground leading-relaxed">
-                  For over 15 years, WebQ Technologies has been at the forefront of digital transformation, helping enterprises worldwide harness the power of technology to achieve their goals.
-                </p>
-              </motion.div>
-            </div>
-          </section>
 
-          {/* Stats */}
-          <section className="py-8 bg-primary text-primary-foreground">
+      <div className="min-h-screen bg-background">
+        <main id="main-content" className="focus:outline-none" tabIndex={-1}>
+          {/* Hero Section */}
+          <section
+            className="py-6 lg:py-8"
+            style={{
+              background: `linear-gradient(135deg, hsl(215 50% 10%) 0%, hsl(210 100% 22%) 60%, hsl(195 80% 30%) 100%)`,
+            }}
+          >
             <div className="container mx-auto px-6 lg:px-12">
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-                {stats.map((stat, index) => (
-                  <motion.div
-                    key={stat.label}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    className="text-center"
-                  >
-                    <div className="text-4xl md:text-5xl font-bold mb-2">{stat.value}</div>
-                    <div className="text-sm opacity-80">{stat.label}</div>
-                  </motion.div>
-                ))}
+              <GoBackButton />
+              <div className={`grid grid-cols-1 lg:grid-cols-5 gap-4 lg:gap-8 items-start transition-opacity duration-500 ${isHeroReady ? "opacity-100" : "opacity-0"}`}>
+                <div className="lg:col-span-3 animate-fade-in">
+                  <nav className="flex items-center gap-1.5 text-xs text-white/50 mb-3">
+                    <Link to="/" className="hover:text-white/80 transition-colors">Home</Link>
+                    <ChevronRight className="w-3 h-3" />
+                    <span className="text-white/90 font-medium">About Us</span>
+                  </nav>
+                  <h1 className="text-2xl lg:text-3xl font-bold text-white leading-tight tracking-tight">
+                    Delivering Technology That Moves <span className="text-[hsl(195,100%,55%)]">Businesses Forward.</span>
+                  </h1>
+                  <p className="mt-4 text-sm lg:text-base text-white/70 leading-relaxed max-w-2xl text-justify">
+                    We operate with the mindset of a startup and the experience of an enterprise. While our size allows us to move fast, stay flexible, and innovate quickly, our foundation is built on decades of enterprise-level expertise across industries and technologies.
+                  </p>
+                  <p className="mt-2 text-sm text-white/60 leading-relaxed max-w-2xl text-justify">
+                    This unique combination enables us to design and deliver scalable, secure, and outcome-driven solutions—bringing modern engineering practices together with the rigor, reliability, and depth enterprises expect.
+                  </p>
+                </div>
+
+                {/* Right — image carousel */}
+                <div className="lg:col-span-2 hidden lg:block relative aspect-[3/2] rounded-xl overflow-hidden shadow-2xl">
+                  {heroImages.map((img, idx) => (
+                    <img
+                      key={idx}
+                      src={img.src}
+                      alt={img.alt}
+                      className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ${idx === currentSlide ? "opacity-100" : "opacity-0"}`}
+                      width={960}
+                      height={640}
+                    />
+                  ))}
+                  <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2 z-10">
+                    {heroImages.map((_, idx) => (
+                      <button
+                        key={idx}
+                        onClick={() => setCurrentSlide(idx)}
+                        className={`w-2 h-2 rounded-full transition-all ${idx === currentSlide ? "bg-white w-5" : "bg-white/50"}`}
+                        aria-label={`View image ${idx + 1}`}
+                      />
+                    ))}
+                  </div>
+                </div>
               </div>
             </div>
           </section>
@@ -141,6 +202,26 @@ const About = () => {
                     <div className="text-sm">Years of Innovation</div>
                   </div>
                 </motion.div>
+              </div>
+            </div>
+          </section>
+
+          {/* Stats */}
+          <section className="py-8 bg-primary text-primary-foreground">
+            <div className="container mx-auto px-6 lg:px-12">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+                {stats.map((stat, index) => (
+                  <motion.div
+                    key={stat.label}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    className="text-center"
+                  >
+                    <div className="text-4xl md:text-5xl font-bold mb-2">{stat.value}</div>
+                    <div className="text-sm opacity-80">{stat.label}</div>
+                  </motion.div>
+                ))}
               </div>
             </div>
           </section>
@@ -225,11 +306,11 @@ const About = () => {
                   <span className="text-primary text-sm font-semibold uppercase tracking-wider">Global Presence</span>
                 </div>
                 <h2 className="text-3xl font-bold text-foreground">
-                  Serving Clients Worldwide
+                  Serving Clients Worldwide Through Partnerships
                 </h2>
               </div>
               
-              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="grid md:grid-cols-3 gap-6">
                 {globalPresence.map((region, index) => (
                   <motion.div
                     key={region.region}
@@ -279,6 +360,36 @@ const About = () => {
                     className="px-8 py-4 bg-card rounded-lg border border-border text-foreground font-semibold hover:border-primary/50 transition-all"
                   >
                     {partner}
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* Certifications */}
+          <section className="py-10 lg:py-16">
+            <div className="container mx-auto px-6 lg:px-12">
+              <div className="text-center max-w-2xl mx-auto mb-12">
+                <div className="flex items-center justify-center gap-2 mb-4">
+                  <Award className="w-5 h-5 text-primary" />
+                  <span className="text-primary text-sm font-semibold uppercase tracking-wider">Certifications</span>
+                </div>
+                <h2 className="text-3xl font-bold text-foreground">
+                  Certified & Trusted
+                </h2>
+              </div>
+              
+              <div className="flex flex-wrap justify-center items-center gap-10">
+                {certifications.map((cert, index) => (
+                  <motion.div
+                    key={cert.name}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    className="flex flex-col items-center gap-3 p-6 bg-card rounded-xl border border-border hover:border-primary/50 transition-all"
+                  >
+                    <img src={cert.logo} alt={cert.name} className="h-16 w-auto object-contain" />
+                    <span className="text-sm font-medium text-muted-foreground text-center">{cert.name}</span>
                   </motion.div>
                 ))}
               </div>
