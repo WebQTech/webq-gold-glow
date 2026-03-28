@@ -63,7 +63,7 @@ const ServiceDetail = () => {
             <div className="grid lg:grid-cols-5 gap-10 lg:gap-16 items-start">
               {/* Left: Title + Description + Tech tags */}
               <div className="lg:col-span-3 animate-fade-in">
-                <h1 className="text-4xl lg:text-5xl font-bold text-foreground leading-tight">
+                <h1 className="text-2xl lg:text-3xl font-bold text-foreground leading-tight">
                   {service.name}
                 </h1>
                 <p className="mt-6 text-base text-foreground/70 text-justify leading-relaxed font-[Inter]">

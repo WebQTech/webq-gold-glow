@@ -61,7 +61,7 @@ const TechnologyDetail = () => {
                   <div className={`bg-primary/10 rounded-xl flex items-center justify-center ${hasSnippets ? "w-9 h-9" : "w-14 h-14"}`}>
                     <Icon className={`text-primary ${hasSnippets ? "w-5 h-5" : "w-7 h-7"}`} />
                   </div>
-                  <h1 className={`font-bold text-foreground ${hasSnippets ? "text-2xl lg:text-3xl" : "text-4xl lg:text-5xl"}`}>{tech.name}</h1>
+                  <h1 className={`font-bold text-foreground ${hasSnippets ? "text-2xl lg:text-3xl" : "text-2xl lg:text-3xl"}`}>{tech.name}</h1>
                 </div>
                 <p className={`text-foreground/70 text-justify leading-relaxed font-[Inter] ${hasSnippets ? "mt-3 text-base" : "mt-6 text-lg lg:text-xl"}`}>{tech.fullDescription}</p>
               </div>
