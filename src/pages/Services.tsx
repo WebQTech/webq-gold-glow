@@ -10,10 +10,11 @@ import servicesHero1 from "@/assets/services-hero-1.jpg";
 import servicesHero2 from "@/assets/services-hero-2.jpg";
 import servicesHero3 from "@/assets/services-hero-3.jpg";
 
-const heroImages = [
-  { src: servicesHero1, alt: "IT consulting team discussing strategy" },
-  { src: servicesHero2, alt: "Talent management and workforce consulting" },
-  { src: servicesHero3, alt: "Government consulting and digital transformation" },
+const heroSlides = [
+  { type: "content" as const },
+  { type: "image" as const, src: servicesHero1, alt: "IT consulting team discussing strategy" },
+  { type: "image" as const, src: servicesHero2, alt: "Talent management and workforce consulting" },
+  { type: "image" as const, src: servicesHero3, alt: "Government consulting and digital transformation" },
 ];
 
 const categoryIcons: Record<string, LucideIcon> = {

@@ -10,10 +10,11 @@ import techHero1 from "@/assets/technologies-hero-1.jpg";
 import techHero2 from "@/assets/technologies-hero-2.jpg";
 import techHero3 from "@/assets/technologies-hero-3.jpg";
 
-const heroImages = [
-  { src: techHero1, alt: "AI and machine learning technology stack" },
-  { src: techHero2, alt: "DevOps and CI/CD pipeline infrastructure" },
-  { src: techHero3, alt: "Enterprise data analytics and cloud platforms" },
+const heroSlides = [
+  { type: "content" as const },
+  { type: "image" as const, src: techHero1, alt: "AI and machine learning technology stack" },
+  { type: "image" as const, src: techHero2, alt: "DevOps and CI/CD pipeline infrastructure" },
+  { type: "image" as const, src: techHero3, alt: "Enterprise data analytics and cloud platforms" },
 ];
 
 const technologyCategories = getAllTechnologyCategories().map(category => ({

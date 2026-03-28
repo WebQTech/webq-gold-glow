@@ -10,10 +10,11 @@ import industriesHero1 from "@/assets/industries-hero-1.jpg";
 import industriesHero2 from "@/assets/industries-hero-2.jpg";
 import industriesHero3 from "@/assets/industries-hero-3.jpg";
 
-const heroImages = [
-  { src: industriesHero1, alt: "Banking and financial services technology" },
-  { src: industriesHero2, alt: "Healthcare technology and life sciences" },
-  { src: industriesHero3, alt: "Retail logistics and supply chain automation" },
+const heroSlides = [
+  { type: "content" as const },
+  { type: "image" as const, src: industriesHero1, alt: "Banking and financial services technology" },
+  { type: "image" as const, src: industriesHero2, alt: "Healthcare technology and life sciences" },
+  { type: "image" as const, src: industriesHero3, alt: "Retail logistics and supply chain automation" },
 ];
 
 const industryCategories = getAllIndustryCategories().map(category => ({
