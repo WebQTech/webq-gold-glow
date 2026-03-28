@@ -4,7 +4,6 @@ import { Building2, Users, Award, MapPin, Handshake, Target, Eye, Heart, Globe, 
 import { GoBackButton } from "@/components/GoBackButton";
 
 import sbaLogo from "@/assets/certifications/sba.png";
-import dgsLogo from "@/assets/certifications/dgs.png";
 import wbencLogo from "@/assets/certifications/wbenc.png";
 import { Helmet } from "react-helmet-async";
 
@@ -13,49 +12,42 @@ const stats = [
   { value: "50+", label: "Projects Delivered" },
   { value: "10+", label: "Countries & Timezones" },
   { value: "15+", label: "Startup Partners" },
-  { value: "30+", label: "MVPs Launched" },
-  { value: "3x", label: "Faster Time-to-Market" },
 ];
 
 const values = [
   {
     icon: Target,
-    title: "Innovation First",
-    description: "We constantly push boundaries to deliver cutting-edge solutions that give our clients a competitive edge.",
+    title: "Mission-Driven",
+    description: "Every engagement is guided by clear objectives and measurable outcomes."
+  },
+  {
+    icon: Eye,
+    title: "Forward-Thinking",
+    description: "We anticipate technology shifts and position our clients ahead of the curve."
   },
   {
     icon: Heart,
-    title: "Client Success",
-    description: "Your success is our success. We're committed to delivering measurable outcomes that drive your business forward.",
+    title: "Client-First",
+    description: "Deep partnerships built on trust, transparency, and shared success."
   },
   {
-    icon: Users,
-    title: "Collaborative Spirit",
-    description: "We work as an extension of your team, fostering open communication and shared goals.",
-  },
-  {
-    icon: Award,
-    title: "Excellence in Execution",
-    description: "Quality is non-negotiable. We deliver solutions that exceed expectations and stand the test of time.",
+    icon: Globe,
+    title: "Global Reach",
+    description: "Delivering enterprise solutions across industries and geographies."
   },
 ];
 
-
-const globalPresence = [
-  { region: "North America", offices: ["New York", "San Francisco", "Toronto"] },
-  { region: "Europe", offices: ["London", "Berlin", "Amsterdam"] },
-  { region: "Asia Pacific", offices: ["Singapore", "Sydney", "Tokyo"] },
-  { region: "India", offices: ["Bangalore", "Mumbai", "Hyderabad"] },
-];
-
-const partners = [
-  "Microsoft", "AWS", "Google Cloud", "Salesforce", "SAP", "Oracle", "IBM", "ServiceNow"
+const whyWebQ = [
+  { icon: Building2, title: "Enterprise DNA", description: "Built on decades of Fortune 500 experience across industries." },
+  { icon: Users, title: "Senior-Led Teams", description: "Every project is staffed with experienced architects and engineers." },
+  { icon: Award, title: "Certified Excellence", description: "SBA, WBENC certified with proven delivery track record." },
+  { icon: MapPin, title: "US-Based, Global Delivery", description: "Headquartered in the US with delivery capabilities worldwide." },
+  { icon: Handshake, title: "Outcome-Focused", description: "We measure success by business impact, not just deliverables." },
+  { icon: CheckCircle, title: "End-to-End Ownership", description: "From strategy through implementation to ongoing optimization." },
 ];
 
 const certifications = [
-  
   { name: "U.S. Small Business Administration", logo: sbaLogo },
-  { name: "CA Dept. of General Services", logo: dgsLogo },
   { name: "WBENC Certified", logo: wbencLogo },
 ];
 
