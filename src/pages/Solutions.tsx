@@ -5,6 +5,7 @@ import { Footer } from "@/components/Footer";
 import { solutionsData } from "@/data/solutionsData";
 import { HoverCard, HoverCardTrigger, HoverCardContent } from "@/components/ui/hover-card";
 import { GoBackButton } from "@/components/GoBackButton";
+import { Helmet } from "react-helmet-async";
 
 const solutionHighlights = [
   "AI & Machine Learning Solutions",
@@ -109,7 +110,12 @@ const Solutions = () => {
   }, [searchQuery]);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-primary/5 to-background">
+    <>
+      <Helmet>
+        <title>Solutions | WebQ Technologies - Enterprise Technology Solutions</title>
+        <meta name="description" content="Explore WebQ Technologies' enterprise solutions across AI, cloud, security, DevOps, data analytics, and application development." />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-b from-primary/5 to-background">
       <main id="main-content" className="focus:outline-none" tabIndex={-1}>
 
         {/* Hero — dark gradient matching Services page */}
@@ -324,6 +330,7 @@ const Solutions = () => {
       </main>
       <Footer />
     </div>
+    </>
   );
 };
 

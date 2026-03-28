@@ -1,6 +1,6 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { Footer } from "@/components/Footer";
-import { Mic, Calendar, ArrowRight, Clock, User, ChevronRight } from "lucide-react";
+import { Mic, Calendar, ArrowRight, Clock, User, ChevronRight, Search, X } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { GoBackButton } from "@/components/GoBackButton";
@@ -35,8 +35,12 @@ const upcomingWebinars = [
   },
 ];
 
+const allCategories = [...new Set(insightsData.map((i) => i.category))];
+
 const Insights = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [activeFilter, setActiveFilter] = useState<string>("All");
+  const [searchQuery, setSearchQuery] = useState<string>("");
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -44,6 +48,25 @@ const Insights = () => {
     }, 5000);
     return () => clearInterval(timer);
   }, []);
+
+  const filterOptions = ["All", ...allCategories];
+
+  const filteredInsights = useMemo(() => {
+    let results = insightsData;
+    if (activeFilter !== "All") {
+      results = results.filter((i) => i.category === activeFilter);
+    }
+    if (searchQuery.trim()) {
+      const q = searchQuery.toLowerCase();
+      results = results.filter(
+        (i) =>
+          i.title.toLowerCase().includes(q) ||
+          i.excerpt.toLowerCase().includes(q) ||
+          i.category.toLowerCase().includes(q)
+      );
+    }
+    return results;
+  }, [activeFilter, searchQuery]);
   return (
     <>
       <Helmet>
@@ -72,7 +95,7 @@ const Insights = () => {
                     <ChevronRight className="w-3 h-3" />
                     <span className="text-white/90 font-medium">Insights</span>
                   </nav>
-                  <h1 className="text-3xl lg:text-4xl font-bold text-white leading-tight tracking-tight">
+                  <h1 className="text-2xl lg:text-3xl font-bold text-white leading-tight tracking-tight">
                     Technology Insights, Research &amp; Case Studies
                   </h1>
                   <p className="mt-4 text-sm lg:text-base text-white/70 leading-relaxed max-w-2xl text-justify">
@@ -118,76 +141,128 @@ const Insights = () => {
             </div>
           </section>
 
-          <section className="py-10 lg:py-16">
+          <section className="py-10 lg:py-14">
             <div className="container mx-auto px-6 lg:px-12">
-              <div className="flex items-center gap-4 mb-8">
+              {/* Section header + search */}
+              <div className="flex items-center gap-4 mb-6">
                 <h2 className="text-lg font-bold text-foreground uppercase tracking-wider whitespace-nowrap">
-                  Featured Insights
+                  All Insights
                 </h2>
                 <div className="h-px flex-1 bg-border" />
+                <div className="relative max-w-xs w-full shrink-0">
+                  <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
+                  <input
+                    type="text"
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    placeholder="Search insights…"
+                    className="w-full h-9 pl-9 pr-9 rounded-lg border border-border bg-background text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
+                  />
+                  {searchQuery && (
+                    <button
+                      onClick={() => setSearchQuery("")}
+                      className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground"
+                    >
+                      <X className="w-4 h-4" />
+                    </button>
+                  )}
+                </div>
               </div>
 
-              {/* Hero featured article */}
-              <Link
-                to={`/insights/${insightsData[0].slug}`}
-                className="block mb-8"
-              >
-                <article className="group grid md:grid-cols-2 gap-0 bg-card rounded-xl overflow-hidden border border-border hover:border-primary/50 transition-all hover:shadow-lg cursor-pointer">
-                  <div className="aspect-video md:aspect-auto md:h-full overflow-hidden">
-                    <img
-                      src={insightsData[0].image}
-                      alt={insightsData[0].title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
-                  </div>
-                  <div className="p-8 flex flex-col justify-center">
-                    <span className="text-xs font-semibold text-primary uppercase tracking-wider">
-                      {insightsData[0].category}
-                    </span>
-                    <h3 className="text-xl lg:text-2xl font-bold text-foreground mt-3 mb-4 group-hover:text-primary transition-colors">
-                      {insightsData[0].title}
-                    </h3>
-                    <p className="text-sm text-muted-foreground mb-5 leading-relaxed">{insightsData[0].excerpt}</p>
-                    <div className="flex items-center gap-4 text-xs text-muted-foreground">
-                      <span className="flex items-center gap-1.5"><Clock className="w-3 h-3" />{insightsData[0].readTime}</span>
-                      <span className="flex items-center gap-1.5"><Calendar className="w-3 h-3" />{insightsData[0].date}</span>
-                    </div>
-                  </div>
-                </article>
-              </Link>
-
-              {/* Remaining insights in 2-column grid */}
-              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                {insightsData.slice(1).map((insight) => (
-                  <Link
-                    key={insight.slug}
-                    to={`/insights/${insight.slug}`}
-                    className="block"
+              {/* Category filter tabs */}
+              <div className="flex flex-wrap gap-2 mb-8">
+                {filterOptions.map((filter) => (
+                  <button
+                    key={filter}
+                    onClick={() => setActiveFilter(filter)}
+                    className={`px-4 py-1.5 rounded-full text-sm font-medium transition-all ${
+                      activeFilter === filter
+                        ? "bg-primary text-primary-foreground shadow-md"
+                        : "bg-muted text-muted-foreground hover:bg-muted/80"
+                    }`}
                   >
-                    <article className="group bg-card rounded-xl overflow-hidden border border-border hover:border-primary/50 transition-all hover:shadow-lg cursor-pointer h-full">
-                      <div className="aspect-video overflow-hidden">
+                    {filter}
+                  </button>
+                ))}
+              </div>
+
+              {filteredInsights.length === 0 ? (
+                <div className="text-center py-16">
+                  <p className="text-muted-foreground text-lg">No insights found matching your search.</p>
+                  <button
+                    onClick={() => { setSearchQuery(""); setActiveFilter("All"); }}
+                    className="mt-4 text-primary font-medium hover:underline"
+                  >
+                    Clear filters
+                  </button>
+                </div>
+              ) : (
+                <>
+                  {/* Featured article (first result) */}
+                  <Link
+                    to={`/insights/${filteredInsights[0].slug}`}
+                    className="block mb-8"
+                  >
+                    <article className="group grid md:grid-cols-2 gap-0 bg-card rounded-xl overflow-hidden border border-border hover:border-primary/50 transition-all hover:shadow-lg cursor-pointer">
+                      <div className="aspect-video md:aspect-auto md:h-full overflow-hidden">
                         <img
-                          src={insight.image}
-                          alt={insight.title}
+                          src={filteredInsights[0].image}
+                          alt={filteredInsights[0].title}
                           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                         />
                       </div>
-                      <div className="p-5">
+                      <div className="p-8 flex flex-col justify-center">
                         <span className="text-xs font-semibold text-primary uppercase tracking-wider">
-                          {insight.category}
+                          {filteredInsights[0].category}
                         </span>
-                        <h3 className="text-base font-semibold text-foreground mt-2 mb-2 group-hover:text-primary transition-colors line-clamp-2">
-                          {insight.title}
+                        <h3 className="text-xl lg:text-2xl font-bold text-foreground mt-3 mb-4 group-hover:text-primary transition-colors">
+                          {filteredInsights[0].title}
                         </h3>
-                        <p className="text-sm text-muted-foreground mb-4 line-clamp-2">{insight.excerpt}</p>
-                        <div className="flex items-center justify-between text-xs text-muted-foreground">
-                          <span className="flex items-center gap-1.5"><Clock className="w-3 h-3" />{insight.readTime}</span>
+                        <p className="text-sm text-muted-foreground mb-5 leading-relaxed">{filteredInsights[0].excerpt}</p>
+                        <div className="flex items-center gap-4 text-xs text-muted-foreground">
+                          <span className="flex items-center gap-1.5"><Clock className="w-3 h-3" />{filteredInsights[0].readTime}</span>
+                          <span className="flex items-center gap-1.5"><Calendar className="w-3 h-3" />{filteredInsights[0].date}</span>
                         </div>
                       </div>
                     </article>
                   </Link>
-                ))}
-              </div>
+
+                  {/* Remaining insights grid */}
+                  {filteredInsights.length > 1 && (
+                    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                      {filteredInsights.slice(1).map((insight) => (
+                        <Link
+                          key={insight.slug}
+                          to={`/insights/${insight.slug}`}
+                          className="block"
+                        >
+                          <article className="group bg-card rounded-xl overflow-hidden border border-border hover:border-primary/50 transition-all hover:shadow-lg cursor-pointer h-full">
+                            <div className="aspect-video overflow-hidden">
+                              <img
+                                src={insight.image}
+                                alt={insight.title}
+                                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                              />
+                            </div>
+                            <div className="p-5">
+                              <span className="text-xs font-semibold text-primary uppercase tracking-wider">
+                                {insight.category}
+                              </span>
+                              <h3 className="text-base font-semibold text-foreground mt-2 mb-2 group-hover:text-primary transition-colors line-clamp-2">
+                                {insight.title}
+                              </h3>
+                              <p className="text-sm text-muted-foreground mb-4 line-clamp-2">{insight.excerpt}</p>
+                              <div className="flex items-center justify-between text-xs text-muted-foreground">
+                                <span className="flex items-center gap-1.5"><Clock className="w-3 h-3" />{insight.readTime}</span>
+                              </div>
+                            </div>
+                          </article>
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </>
+              )}
             </div>
           </section>
 

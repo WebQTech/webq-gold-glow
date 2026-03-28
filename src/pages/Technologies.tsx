@@ -5,6 +5,7 @@ import { Footer } from "@/components/Footer";
 import { technologiesData, getAllTechnologyCategories } from "@/data/technologiesData";
 import { HoverCard, HoverCardTrigger, HoverCardContent } from "@/components/ui/hover-card";
 import { GoBackButton } from "@/components/GoBackButton";
+import { Helmet } from "react-helmet-async";
 import techHero1 from "@/assets/technologies-hero-1.jpg";
 import techHero2 from "@/assets/technologies-hero-2.jpg";
 import techHero3 from "@/assets/technologies-hero-3.jpg";
@@ -77,7 +78,12 @@ const Technologies = () => {
   }, [searchQuery]);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-primary/5 to-background">
+    <>
+      <Helmet>
+        <title>Technologies | WebQ Technologies - Our Technology Stack</title>
+        <meta name="description" content="Explore WebQ Technologies' modern technology stack across AI, cloud, data, DevOps, security, and enterprise platforms." />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-b from-primary/5 to-background">
       <main id="main-content" className="focus:outline-none" tabIndex={-1}>
 
         {/* Hero */}
@@ -278,6 +284,7 @@ const Technologies = () => {
       </main>
       <Footer />
     </div>
+    </>
   );
 };
 

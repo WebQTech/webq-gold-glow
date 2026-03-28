@@ -5,6 +5,7 @@ import { Footer } from "@/components/Footer";
 import { industriesData, getAllIndustryCategories } from "@/data/industriesData";
 import { HoverCard, HoverCardTrigger, HoverCardContent } from "@/components/ui/hover-card";
 import { GoBackButton } from "@/components/GoBackButton";
+import { Helmet } from "react-helmet-async";
 import industriesHero1 from "@/assets/industries-hero-1.jpg";
 import industriesHero2 from "@/assets/industries-hero-2.jpg";
 import industriesHero3 from "@/assets/industries-hero-3.jpg";
@@ -79,7 +80,12 @@ const Industries = () => {
   }, [searchQuery]);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-primary/5 to-background">
+    <>
+      <Helmet>
+        <title>Industries | WebQ Technologies - Industry Solutions & Expertise</title>
+        <meta name="description" content="WebQ Technologies serves banking, healthcare, government, retail, manufacturing, and more with tailored enterprise technology solutions." />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-b from-primary/5 to-background">
       <main id="main-content" className="focus:outline-none" tabIndex={-1}>
 
         {/* Hero — dark gradient matching Services page */}
@@ -290,6 +296,7 @@ const Industries = () => {
       </main>
       <Footer />
     </div>
+    </>
   );
 };
 
