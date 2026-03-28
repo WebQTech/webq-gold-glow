@@ -31,18 +31,55 @@ const highlights = [
 export const HeroSection = () => {
   const [current, setCurrent] = useState(0);
   const [hasMounted, setHasMounted] = useState(false);
+  const [loadedSlides, setLoadedSlides] = useState<Record<number, boolean>>({});
   const { reducedMotion } = useReducedMotion();
+
+  const isHeroReady = Boolean(loadedSlides[0]);
 
   useEffect(() => {
     setHasMounted(true);
   }, []);
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % heroSlides.length);
-    }, 5000);
-    return () => clearInterval(timer);
+    let cancelled = false;
+
+    const markLoaded = (index: number) => {
+      if (cancelled) return;
+      setLoadedSlides((prev) =>
+        prev[index] ? prev : { ...prev, [index]: true }
+      );
+    };
+
+    heroSlides.forEach((slide, index) => {
+      const img = new Image();
+      img.src = slide.image;
+
+      if (img.complete) {
+        markLoaded(index);
+        return;
+      }
+
+      img.onload = () => markLoaded(index);
+      img.onerror = () => markLoaded(index);
+    });
+
+    return () => {
+      cancelled = true;
+    };
   }, []);
+
+  useEffect(() => {
+    if (!isHeroReady) return;
+
+    const timer = setInterval(() => {
+      setCurrent((prev) => {
+        const next = (prev + 1) % heroSlides.length;
+        return loadedSlides[next] ? next : prev;
+      });
+    }, 5000);
+
+    return () => clearInterval(timer);
+  }, [isHeroReady, loadedSlides]);
 
   return (
     <section className="relative h-[75vh] min-h-[480px] max-h-[700px] overflow-hidden bg-[hsl(215,50%,8%)]">
@@ -84,7 +121,7 @@ export const HeroSection = () => {
       />
 
       {/* Content overlay */}
-      <div className="relative z-[2] h-full flex flex-col justify-end pb-6 lg:pb-8">
+      <div className={`relative z-[2] h-full flex flex-col justify-end pb-6 lg:pb-8 transition-opacity duration-150 ${isHeroReady ? "opacity-100" : "opacity-0"}`}>
         <div className="container mx-auto px-6 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 lg:gap-10 items-end">
             {/* Left — headline & description */}
@@ -143,12 +180,13 @@ export const HeroSection = () => {
               {heroSlides.map((_, i) => (
                 <button
                   key={i}
-                  onClick={() => setCurrent(i)}
+                  onClick={() => loadedSlides[i] && setCurrent(i)}
+                  disabled={!loadedSlides[i]}
                   className={`h-1.5 rounded-full transition-all duration-300 ${
                     i === current
                       ? "bg-[hsl(195,100%,55%)] w-6"
                       : "bg-white/30 w-1.5 hover:bg-white/50"
-                  }`}
+                  } ${!loadedSlides[i] ? "opacity-50 cursor-not-allowed" : ""}`}
                   aria-label={`Go to slide ${i + 1}`}
                 />
               ))}
