@@ -3,69 +3,7 @@ import { Mic, Calendar, ArrowRight, Clock, User } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { GoBackButton } from "@/components/GoBackButton";
-
-const featuredInsights = [
-  {
-    title: "The Future of Enterprise AI: 2025 and Beyond",
-    category: "Industry Reports",
-    excerpt:
-      "Explore how artificial intelligence is reshaping enterprise operations, from automated decision-making to predictive analytics.",
-    author: "Dr. Sarah Chen",
-    date: "Dec 20, 2025",
-    readTime: "12 min read",
-    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&auto=format&fit=crop",
-  },
-  {
-    title: "Cloud Migration Success Stories: Fortune 500 Companies",
-    category: "Case Studies",
-    excerpt:
-      "Learn from the experiences of leading enterprises that successfully migrated their infrastructure to the cloud.",
-    author: "Michael Torres",
-    date: "Dec 18, 2025",
-    readTime: "8 min read",
-    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&auto=format&fit=crop",
-  },
-  {
-    title: "Cybersecurity Best Practices for 2025",
-    category: "Whitepapers",
-    excerpt:
-      "A comprehensive guide to protecting your organization against emerging cyber threats and vulnerabilities.",
-    author: "James Wilson",
-    date: "Dec 15, 2025",
-    readTime: "15 min read",
-    image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&auto=format&fit=crop",
-  },
-  {
-    title: "Generative AI in Healthcare: Transforming Patient Care",
-    category: "Tech Trends",
-    excerpt:
-      "Discover how generative AI is revolutionizing diagnostics, treatment planning, and patient engagement.",
-    author: "Dr. Emily Roberts",
-    date: "Dec 12, 2025",
-    readTime: "10 min read",
-    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&auto=format&fit=crop",
-  },
-  {
-    title: "Building Resilient Supply Chains with AI",
-    category: "Industry Reports",
-    excerpt:
-      "How AI-powered analytics can help organizations build more resilient and adaptive supply chain networks.",
-    author: "David Park",
-    date: "Dec 10, 2025",
-    readTime: "9 min read",
-    image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&auto=format&fit=crop",
-  },
-  {
-    title: "The Rise of Agentic AI: Autonomous Systems in Enterprise",
-    category: "Tech Trends",
-    excerpt:
-      "Understanding how autonomous AI agents are changing the way businesses operate and make decisions.",
-    author: "Lisa Zhang",
-    date: "Dec 8, 2025",
-    readTime: "11 min read",
-    image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&auto=format&fit=crop",
-  },
-];
+import { insightsData } from "@/data/insightsData";
 
 const upcomingWebinars = [
   {
@@ -130,32 +68,29 @@ const Insights = () => {
 
               {/* Hero featured article */}
               <Link
-                to={`/insights/${featuredInsights[0].title
-                  .toLowerCase()
-                  .replace(/[^a-z0-9]+/g, "-")
-                  .replace(/(^-|-$)/g, "")}`}
+                to={`/insights/${insightsData[0].slug}`}
                 className="block mb-8"
               >
                 <article className="group grid md:grid-cols-2 gap-0 bg-card rounded-xl overflow-hidden border border-border hover:border-primary/50 transition-all hover:shadow-lg cursor-pointer">
                   <div className="aspect-video md:aspect-auto md:h-full overflow-hidden">
                     <img
-                      src={featuredInsights[0].image}
-                      alt={featuredInsights[0].title}
+                      src={insightsData[0].image}
+                      alt={insightsData[0].title}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                   </div>
                   <div className="p-8 flex flex-col justify-center">
                     <span className="text-xs font-semibold text-primary uppercase tracking-wider">
-                      {featuredInsights[0].category}
+                      {insightsData[0].category}
                     </span>
                     <h3 className="text-xl lg:text-2xl font-bold text-foreground mt-3 mb-4 group-hover:text-primary transition-colors">
-                      {featuredInsights[0].title}
+                      {insightsData[0].title}
                     </h3>
-                    <p className="text-sm text-muted-foreground mb-5 leading-relaxed">{featuredInsights[0].excerpt}</p>
+                    <p className="text-sm text-muted-foreground mb-5 leading-relaxed">{insightsData[0].excerpt}</p>
                     <div className="flex items-center gap-4 text-xs text-muted-foreground">
-                      <span className="flex items-center gap-1.5"><User className="w-3 h-3" />{featuredInsights[0].author}</span>
-                      <span className="flex items-center gap-1.5"><Clock className="w-3 h-3" />{featuredInsights[0].readTime}</span>
-                      <span className="flex items-center gap-1.5"><Calendar className="w-3 h-3" />{featuredInsights[0].date}</span>
+                      <span className="flex items-center gap-1.5"><User className="w-3 h-3" />{insightsData[0].author}</span>
+                      <span className="flex items-center gap-1.5"><Clock className="w-3 h-3" />{insightsData[0].readTime}</span>
+                      <span className="flex items-center gap-1.5"><Calendar className="w-3 h-3" />{insightsData[0].date}</span>
                     </div>
                   </div>
                 </article>
@@ -163,13 +98,10 @@ const Insights = () => {
 
               {/* Remaining insights in 2-column grid */}
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                {featuredInsights.slice(1).map((insight) => (
+                {insightsData.slice(1).map((insight) => (
                   <Link
-                    key={insight.title}
-                    to={`/insights/${insight.title
-                      .toLowerCase()
-                      .replace(/[^a-z0-9]+/g, "-")
-                      .replace(/(^-|-$)/g, "")}`}
+                    key={insight.slug}
+                    to={`/insights/${insight.slug}`}
                     className="block"
                   >
                     <article className="group bg-card rounded-xl overflow-hidden border border-border hover:border-primary/50 transition-all hover:shadow-lg cursor-pointer h-full">
