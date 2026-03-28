@@ -151,8 +151,8 @@ const Solutions = () => {
               </div>
 
               {/* Right — solution highlights */}
-              <div className="lg:col-span-2 border-l-2 border-[hsl(195,100%,55%)] pl-5 animate-fade-in">
-                <h2 className="text-xs font-semibold uppercase tracking-widest text-[hsl(195,100%,55%)] mb-3">
+              <div className="lg:col-span-2 border-l-2 border-[#E5B94E] pl-5 animate-fade-in">
+                <h2 className="text-xs font-semibold uppercase tracking-widest text-[#E5B94E] mb-3">
                   What We Deliver
                 </h2>
                 <ul className="space-y-2">
@@ -161,7 +161,7 @@ const Solutions = () => {
                       key={item}
                       className="flex items-start gap-2 text-sm text-white/90"
                     >
-                      <ChevronRight className="w-3.5 h-3.5 mt-0.5 text-[hsl(195,100%,55%)] shrink-0" />
+                      <ChevronRight className="w-3.5 h-3.5 mt-0.5 text-[#E5B94E] shrink-0" />
                       <span>{item}</span>
                     </li>
                   ))}
