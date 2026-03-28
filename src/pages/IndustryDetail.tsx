@@ -38,8 +38,8 @@ const IndustryDetail = () => {
   return (
     <>
       <Helmet>
-        <title>{industry.title} | WebQ Technologies Industries</title>
-        <meta name="description" content={industry.description} />
+        <title>{industry.name} | WebQ Technologies Industries</title>
+        <meta name="description" content={industry.shortDescription} />
       </Helmet>
       <div className="min-h-screen bg-background">
       <main id="main-content" className="focus:outline-none" tabIndex={-1}>

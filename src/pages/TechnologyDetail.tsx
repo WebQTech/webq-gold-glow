@@ -34,7 +34,7 @@ const TechnologyDetail = () => {
     <>
       <Helmet>
         <title>{tech.name} | WebQ Technologies</title>
-        <meta name="description" content={tech.description} />
+        <meta name="description" content={tech.shortDescription} />
       </Helmet>
       <div className="min-h-screen bg-background">
       <main id="main-content" className="focus:outline-none" tabIndex={-1}>

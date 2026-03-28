@@ -36,8 +36,8 @@ const SolutionDetail = () => {
   return (
     <>
       <Helmet>
-        <title>{solution.title} | WebQ Technologies Solutions</title>
-        <meta name="description" content={solution.description} />
+        <title>{solution.name} | WebQ Technologies Solutions</title>
+        <meta name="description" content={solution.shortDescription} />
       </Helmet>
       <div className="min-h-screen bg-background">
       <main id="main-content" className="focus:outline-none" tabIndex={-1}>
