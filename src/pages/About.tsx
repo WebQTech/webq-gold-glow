@@ -46,7 +46,7 @@ const whyWebQ = [
   { icon: CheckCircle, title: "End-to-End Ownership", description: "From strategy through implementation to ongoing optimization." },
 ];
 
-const globalPresence = [
+const globalPresence: { region: string; offices: string[] }[] = [
   { region: "North America", offices: ["New York", "San Francisco", "Toronto"] },
   { region: "Europe", offices: ["London", "Berlin", "Amsterdam"] },
   { region: "Asia Pacific", offices: ["Singapore", "Sydney", "Tokyo"] },
