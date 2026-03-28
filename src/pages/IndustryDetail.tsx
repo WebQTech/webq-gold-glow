@@ -3,6 +3,7 @@ import { useMemo } from "react";
 import { ArrowLeft, ArrowRight, Check, Building2, ChevronRight, Home, Layers } from "lucide-react";
 import { GoBackButton } from "@/components/GoBackButton";
 import SolutionImageCarousel from "@/components/SolutionImageCarousel";
+import { Helmet } from "react-helmet-async";
 
 import { Footer } from "@/components/Footer";
 import { getIndustryBySlug, industriesData, IndustryDetail as IndustryDetailType } from "@/data/industriesData";
@@ -35,7 +36,12 @@ const IndustryDetail = () => {
   const nextIndustry = currentIndex < industriesData.length - 1 ? industriesData[currentIndex + 1] : null;
 
   return (
-    <div className="min-h-screen bg-background">
+    <>
+      <Helmet>
+        <title>{industry.title} | WebQ Technologies Industries</title>
+        <meta name="description" content={industry.description} />
+      </Helmet>
+      <div className="min-h-screen bg-background">
       <main id="main-content" className="focus:outline-none" tabIndex={-1}>
         {/* Hero */}
         <section className="pt-6 pb-10 lg:pt-8 lg:pb-14 bg-gradient-to-b from-primary/5 to-background">

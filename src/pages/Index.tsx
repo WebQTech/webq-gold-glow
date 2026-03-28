@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { HeroSection } from "@/components/HeroSection";
 import { WebQCapabilities } from "@/components/WebQCapabilities";
 import { MissionBanner } from "@/components/MissionBanner";
@@ -13,7 +14,12 @@ import BackToTopButton from "@/components/BackToTopButton";
 
 const Index = () => {
   return (
-    <div className="relative overflow-hidden bg-background">
+    <>
+      <Helmet>
+        <title>WebQ Technologies | AI, Cloud, Cybersecurity & Digital Transformation</title>
+        <meta name="description" content="WebQ Technologies delivers enterprise AI, cloud infrastructure, cybersecurity, and digital transformation solutions for Fortune 500 companies and startups worldwide." />
+      </Helmet>
+      <div className="relative overflow-hidden bg-background">
       <main id="main-content" className="focus:outline-none" tabIndex={-1}>
         <HeroSection />
         <WebQCapabilities />
