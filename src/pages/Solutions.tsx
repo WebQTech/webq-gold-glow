@@ -330,6 +330,7 @@ const Solutions = () => {
       </main>
       <Footer />
     </div>
+    </>
   );
 };
 
