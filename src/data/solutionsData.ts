@@ -4575,28 +4575,34 @@ export const solutionsData: SolutionDetail[] = [
     ]
   },
   {
-    slug: "sap-s4hana",
-    name: "SAP S/4HANA Implementation",
-    shortDescription: "End-to-end SAP S/4HANA implementation, migration, and optimization for intelligent enterprises.",
-    fullDescription: "We deliver comprehensive SAP S/4HANA implementation and migration services — from greenfield deployments to system conversions and selective data transitions. Our certified SAP consultants guide organizations through every phase: discovery, design, build, test, deploy, and hypercare. S/4HANA's in-memory computing platform delivers real-time analytics on live transactional data, enabling instant business insights across finance, supply chain, manufacturing, and procurement. We leverage SAP Activate methodology, AI-powered data migration tools, and automated testing frameworks to accelerate deployments while reducing risk and cost.",
+    slug: "sap-solutions",
+    name: "SAP Solutions & Services",
+    shortDescription: "End-to-end SAP consulting, implementation, and managed services — from S/4HANA and BTP to SuccessFactors, Ariba, and Analytics Cloud.",
+    fullDescription: "We deliver the full spectrum of SAP services — from greenfield S/4HANA implementations and legacy ECC migrations to SAP BTP extensions, SuccessFactors HCM, Ariba procurement, Analytics Cloud, and ongoing managed services. Our certified SAP consultants guide organizations through every phase of their SAP journey: discovery, design, build, test, deploy, and hypercare. Whether you need to modernize your digital core with S/4HANA, extend SAP with custom BTP applications, transform procurement with Ariba, or unify workforce management with SuccessFactors, we bring deep domain expertise, AI-powered accelerators, and proven SAP Activate methodology to reduce risk, accelerate delivery, and maximize your SAP investment. Every engagement is tailored to your industry, compliance requirements, and business\u00A0objectives.",
     icon: Cable,
     features: [
-      "Greenfield & brownfield S/4HANA implementations",
+      "SAP S/4HANA greenfield & brownfield implementations",
       "Legacy ECC to S/4HANA migration & conversion",
-      "Selective data transition with minimal downtime",
+      "SAP Business Technology Platform (BTP) extensions",
+      "SAP Integration Suite & API management",
+      "SAP Analytics Cloud & embedded BI",
+      "SAP SuccessFactors HCM implementation",
+      "SAP Ariba procurement & supplier management",
       "SAP Fiori UX design & deployment",
+      "RISE with SAP cloud transformation",
       "Custom ABAP & RAP development",
-      "SAP Integration Suite configuration",
-      "Performance tuning & optimization",
-      "Hypercare & post-go-live support"
+      "SAP HANA Cloud database services",
+      "SAP managed services & hypercare"
     ],
     benefits: [
-      "Real-time financial close & reporting",
-      "Unified operations across business units",
-      "Reduced total cost of ownership",
-      "Future-proof digital core for innovation"
+      "Unified digital core for enterprise-wide visibility",
+      "Reduced total cost of ownership across SAP landscape",
+      "Faster time-to-value with SAP Activate methodology",
+      "Future-proof architecture with clean upgrade paths",
+      "AI-powered implementation accelerators",
+      "Global compliance across 100+ countries"
     ],
-    technologies: ["SAP S/4HANA", "SAP Fiori", "SAP BTP", "SAP Integration Suite", "ABAP RESTful Programming Model", "SAP Data Services", "SAP Solution Manager"],
+    technologies: ["SAP S/4HANA", "SAP BTP", "SAP Fiori", "SAP Integration Suite", "SAP Analytics Cloud", "SAP SuccessFactors", "SAP Ariba", "SAP HANA Cloud", "SAP Data Services", "ABAP RESTful Programming Model"],
     caseStudies: [
       {
         company: "Global Manufacturing Corp",
@@ -4606,320 +4612,32 @@ export const solutionsData: SolutionDetail[] = [
         results: ["70% reduction in month-end close time", "Unified operations across 12 plants", "Real-time inventory visibility reducing stockouts by 60%"]
       },
       {
-        company: "Chemical Manufacturing Group",
-        industry: "Manufacturing",
-        challenge: "Complex multi-plant operations with disconnected SAP modules and manual inter-company transactions.",
-        solution: "Implement SAP S/4HANA Implementation with unified SAP landscape, automated inter-company processing, and real-time production analytics.",
-        results: ["Inter-company transaction processing automated 100%", "Month-end close reduced from 15 to 4 days", "Production visibility achieved across all 8 plants"]
-      },
-      {
-        company: "Consumer Goods Conglomerate",
-        industry: "Consumer Goods",
-        challenge: "Rapid growth through acquisitions creating heterogeneous IT landscape with 5 separate SAP instances.",
-        solution: "Deploy SAP S/4HANA Implementation for landscape consolidation, harmonized master data, and unified reporting across all business units.",
-        results: ["SAP landscape consolidated to single instance", "IT operating costs reduced by 40%", "Unified reporting achieved across all acquisitions"]
-      },
-      {
-        company: "Aerospace & Defense Corp",
-        industry: "Aerospace",
-        challenge: "Strict regulatory compliance requirements with manual documentation and traceability across complex supply chains.",
-        solution: "Implement SAP S/4HANA Implementation with end-to-end traceability, automated compliance documentation, and supplier collaboration portal.",
-        results: ["Regulatory compliance documentation automated 90%", "Supply chain traceability improved to 100%", "Supplier collaboration cycle time reduced by 50%"]
-      }
-    ],
-    faqs: [
-      { question: "Should we choose greenfield or brownfield migration?", answer: "It depends on your current landscape complexity. Greenfield (new implementation) is ideal for process redesign, while brownfield (system conversion) preserves customizations. We assess your landscape and recommend the optimal approach." },
-      { question: "How long does an S/4HANA implementation take?", answer: "Timelines vary based on scope — typically 6-12 months for mid-size deployments and 12-24 months for large enterprises. Our SAP Activate methodology accelerates delivery with pre-configured best practices." }
-    ]
-  },
-  {
-    slug: "sap-btp",
-    name: "SAP Business Technology Platform",
-    shortDescription: "Extend and innovate on SAP BTP with custom applications, integrations, and AI capabilities.",
-    fullDescription: "SAP Business Technology Platform (BTP) is the foundation for extending SAP solutions and building intelligent enterprise applications. We help organizations leverage BTP's capabilities — from SAP Build for low-code development and SAP Integration Suite for seamless connectivity to SAP AI Core for machine learning workloads. Our BTP services enable businesses to build side-by-side extensions, automate workflows, and create data-driven applications without modifying the SAP core, ensuring clean upgrade paths and long-term maintainability.",
-    icon: Blocks,
-    features: [
-      "SAP Build Apps & Process Automation",
-      "SAP Integration Suite & API Management",
-      "SAP AI Core & AI Launchpad",
-      "Cloud Application Programming (CAP) model",
-      "SAP HANA Cloud database services",
-      "Custom Fiori Elements applications",
-      "SAP Analytics Cloud integration",
-      "Multi-cloud deployment (AWS, Azure, GCP)"
-    ],
-    benefits: [
-      "Extend SAP without modifying the core",
-      "Accelerate innovation with low-code tools",
-      "Unified integration across SAP & non-SAP systems",
-      "AI-powered business process automation"
-    ],
-    technologies: ["SAP BTP", "SAP Build", "SAP Integration Suite", "SAP AI Core", "SAP HANA Cloud", "Cloud Foundry", "Kyma Runtime", "SAP CAP"],
-    caseStudies: [
-      {
         company: "Retail Enterprise",
         industry: "Retail",
-        challenge: "Needed custom customer loyalty and inventory applications without disrupting core S/4HANA operations.",
+        challenge: "Needed custom loyalty and inventory applications without disrupting core S/4HANA operations.",
         solution: "Built side-by-side extensions on SAP BTP using CAP model with real-time S/4HANA integration via SAP Integration Suite.",
-        results: ["Custom apps deployed in 8 weeks", "Zero impact on core S/4HANA performance", "30% improvement in customer retention through loyalty platform"]
+        results: ["Custom apps deployed in 8 weeks", "Zero impact on core S/4HANA performance", "30% improvement in customer retention"]
       },
-      {
-        company: "Chemical Manufacturing Group",
-        industry: "Manufacturing",
-        challenge: "Complex multi-plant operations with disconnected SAP modules and manual inter-company transactions.",
-        solution: "Implement SAP Business Technology Platform with unified SAP landscape, automated inter-company processing, and real-time production analytics.",
-        results: ["Inter-company transaction processing automated 100%", "Month-end close reduced from 15 to 4 days", "Production visibility achieved across all 8 plants"]
-      },
-      {
-        company: "Consumer Goods Conglomerate",
-        industry: "Consumer Goods",
-        challenge: "Rapid growth through acquisitions creating heterogeneous IT landscape with 5 separate SAP instances.",
-        solution: "Deploy SAP Business Technology Platform for landscape consolidation, harmonized master data, and unified reporting across all business units.",
-        results: ["SAP landscape consolidated to single instance", "IT operating costs reduced by 40%", "Unified reporting achieved across all acquisitions"]
-      },
-      {
-        company: "Aerospace & Defense Corp",
-        industry: "Aerospace",
-        challenge: "Strict regulatory compliance requirements with manual documentation and traceability across complex supply chains.",
-        solution: "Implement SAP Business Technology Platform with end-to-end traceability, automated compliance documentation, and supplier collaboration portal.",
-        results: ["Regulatory compliance documentation automated 90%", "Supply chain traceability improved to 100%", "Supplier collaboration cycle time reduced by 50%"]
-      }
-    ],
-    faqs: [
-      { question: "What's the difference between SAP BTP and S/4HANA?", answer: "S/4HANA is the core ERP system for business operations, while BTP is a platform for extending, integrating, and innovating on top of SAP. Think of BTP as the innovation layer that enhances your SAP landscape." },
-      { question: "Can BTP integrate with non-SAP systems?", answer: "Absolutely. SAP Integration Suite on BTP supports 200+ pre-built connectors for popular platforms like Salesforce, ServiceNow, AWS, and Azure, plus open APIs for custom integrations." }
-    ]
-  },
-  {
-    slug: "sap-analytics",
-    name: "SAP Analytics & Planning",
-    shortDescription: "Enterprise analytics, planning, and reporting powered by SAP Analytics Cloud and embedded BI.",
-    fullDescription: "We implement SAP Analytics Cloud (SAC) and embedded analytics solutions that transform enterprise data into actionable insights. From financial planning and predictive forecasting to real-time operational dashboards, our analytics services help organizations move from reactive reporting to proactive decision-making. SAC unifies business intelligence, planning, and predictive capabilities in a single cloud platform, with native integration into S/4HANA for live data access without replication.",
-    icon: BarChart3,
-    features: [
-      "SAP Analytics Cloud implementation",
-      "Financial planning & budgeting",
-      "Predictive analytics & smart insights",
-      "Real-time dashboards & story design",
-      "SAP BW/4HANA & DataSphere integration",
-      "Embedded analytics in S/4HANA",
-      "Board-ready reporting automation",
-      "Data quality & governance frameworks"
-    ],
-    benefits: [
-      "Single source of truth for enterprise reporting",
-      "Faster planning cycles with collaborative workflows",
-      "AI-driven forecasting & anomaly detection",
-      "Reduced reporting infrastructure costs"
-    ],
-    technologies: ["SAP Analytics Cloud", "SAP BW/4HANA", "SAP DataSphere", "SAP HANA", "SAP BusinessObjects", "SAP Data Intelligence"],
-    caseStudies: [
-      {
-        company: "Financial Services Group",
-        industry: "Financial Services",
-        challenge: "Manual budget consolidation across 15 business units taking 6 weeks per cycle with inconsistent data.",
-        solution: "Deployed SAP Analytics Cloud for unified planning with live S/4HANA connectivity, automated consolidation, and predictive forecasting.",
-        results: ["Planning cycle reduced from 6 weeks to 5 days", "99.5% data accuracy in consolidated reports", "Predictive models improved forecast accuracy by 35%"]
-      },
-      {
-        company: "Chemical Manufacturing Group",
-        industry: "Manufacturing",
-        challenge: "Complex multi-plant operations with disconnected SAP modules and manual inter-company transactions.",
-        solution: "Implement SAP Analytics & Planning with unified SAP landscape, automated inter-company processing, and real-time production analytics.",
-        results: ["Inter-company transaction processing automated 100%", "Month-end close reduced from 15 to 4 days", "Production visibility achieved across all 8 plants"]
-      },
-      {
-        company: "Consumer Goods Conglomerate",
-        industry: "Consumer Goods",
-        challenge: "Rapid growth through acquisitions creating heterogeneous IT landscape with 5 separate SAP instances.",
-        solution: "Deploy SAP Analytics & Planning for landscape consolidation, harmonized master data, and unified reporting across all business units.",
-        results: ["SAP landscape consolidated to single instance", "IT operating costs reduced by 40%", "Unified reporting achieved across all acquisitions"]
-      },
-      {
-        company: "Aerospace & Defense Corp",
-        industry: "Aerospace",
-        challenge: "Strict regulatory compliance requirements with manual documentation and traceability across complex supply chains.",
-        solution: "Implement SAP Analytics & Planning with end-to-end traceability, automated compliance documentation, and supplier collaboration portal.",
-        results: ["Regulatory compliance documentation automated 90%", "Supply chain traceability improved to 100%", "Supplier collaboration cycle time reduced by 50%"]
-      }
-    ],
-    faqs: [
-      { question: "Can SAP Analytics Cloud replace our existing BI tools?", answer: "SAC can consolidate most BI, planning, and predictive needs into one platform. We assess your current landscape and create a migration roadmap that ensures continuity while maximizing SAC's capabilities." },
-      { question: "Does SAC require S/4HANA?", answer: "No, SAC works with various data sources including non-SAP systems. However, it offers the richest experience with S/4HANA through live data connections and embedded analytics." }
-    ]
-  },
-  {
-    slug: "sap-successfactors",
-    name: "SAP SuccessFactors (HCM)",
-    shortDescription: "Cloud-based human capital management covering the complete employee lifecycle.",
-    fullDescription: "We implement and optimize SAP SuccessFactors to modernize human capital management across the entire employee lifecycle — from recruiting and onboarding to performance management, learning, and succession planning. SuccessFactors delivers cloud-native HCM with built-in AI for talent intelligence, continuous performance management, and workforce analytics. Our services include module implementation, integration with S/4HANA HR, data migration from legacy HR systems, and ongoing optimization to ensure your HCM platform evolves with your workforce strategy.",
-    icon: Users,
-    features: [
-      "Employee Central & Core HR",
-      "Recruiting & onboarding management",
-      "Performance & goal management",
-      "Learning management system (LMS)",
-      "Succession planning & development",
-      "Compensation & benefits administration",
-      "Workforce analytics & people insights",
-      "Integration with S/4HANA & payroll"
-    ],
-    benefits: [
-      "Unified employee experience across HR processes",
-      "AI-driven talent insights & retention predictions",
-      "Global compliance across 100+ countries",
-      "Reduced HR administrative overhead"
-    ],
-    technologies: ["SAP SuccessFactors", "SAP BTP", "SAP Integration Suite", "SAP Work Zone", "Qualtrics", "SAP Concur"],
-    caseStudies: [
       {
         company: "Healthcare Network",
         industry: "Healthcare",
         challenge: "Managing 25,000 employees across 40 facilities with fragmented HR systems and manual onboarding taking 3 weeks.",
         solution: "Implemented SuccessFactors Employee Central with automated onboarding workflows, integrated recruiting, and workforce analytics.",
-        results: ["Onboarding time reduced from 3 weeks to 3 days", "Employee self-service adoption at 92%", "HR team capacity freed by 40% for strategic initiatives"]
+        results: ["Onboarding time reduced from 3 weeks to 3 days", "Employee self-service adoption at 92%", "HR team capacity freed by 40%"]
       },
-      {
-        company: "Chemical Manufacturing Group",
-        industry: "Manufacturing",
-        challenge: "Complex multi-plant operations with disconnected SAP modules and manual inter-company transactions.",
-        solution: "Implement SAP SuccessFactors (HCM) with unified SAP landscape, automated inter-company processing, and real-time production analytics.",
-        results: ["Inter-company transaction processing automated 100%", "Month-end close reduced from 15 to 4 days", "Production visibility achieved across all 8 plants"]
-      },
-      {
-        company: "Consumer Goods Conglomerate",
-        industry: "Consumer Goods",
-        challenge: "Rapid growth through acquisitions creating heterogeneous IT landscape with 5 separate SAP instances.",
-        solution: "Deploy SAP SuccessFactors (HCM) for landscape consolidation, harmonized master data, and unified reporting across all business units.",
-        results: ["SAP landscape consolidated to single instance", "IT operating costs reduced by 40%", "Unified reporting achieved across all acquisitions"]
-      },
-      {
-        company: "Aerospace & Defense Corp",
-        industry: "Aerospace",
-        challenge: "Strict regulatory compliance requirements with manual documentation and traceability across complex supply chains.",
-        solution: "Implement SAP SuccessFactors (HCM) with end-to-end traceability, automated compliance documentation, and supplier collaboration portal.",
-        results: ["Regulatory compliance documentation automated 90%", "Supply chain traceability improved to 100%", "Supplier collaboration cycle time reduced by 50%"]
-      }
-    ],
-    faqs: [
-      { question: "Can SuccessFactors integrate with our existing payroll?", answer: "Yes, SuccessFactors integrates with major payroll providers including ADP, Workday Payroll, and SAP Payroll. We configure bi-directional data flows to ensure accuracy and compliance." },
-      { question: "How do you handle data migration from legacy HR systems?", answer: "We use structured data migration templates, automated validation scripts, and parallel testing to ensure complete and accurate data transfer with zero disruption to HR operations." }
-    ]
-  },
-  {
-    slug: "sap-ariba",
-    name: "SAP Ariba & Procurement",
-    shortDescription: "Intelligent procurement and supply chain collaboration on the world's largest business network.",
-    fullDescription: "We implement SAP Ariba to transform procurement operations — from strategic sourcing and contract management to procure-to-pay automation. Ariba Network connects buyers with millions of suppliers globally, enabling real-time collaboration, spend visibility, and compliance enforcement. Our services cover Ariba Buying, Sourcing, Contracts, Supply Chain Collaboration, and integration with S/4HANA for end-to-end procure-to-pay automation. We help organizations achieve measurable savings through supplier consolidation, automated approvals, and intelligent spend analytics.",
-    icon: ShoppingCart,
-    features: [
-      "SAP Ariba Buying & invoicing",
-      "Strategic sourcing & auctions",
-      "Contract lifecycle management",
-      "Supplier management & qualification",
-      "Ariba Network onboarding",
-      "Guided buying & catalog management",
-      "Spend analytics & compliance",
-      "S/4HANA procurement integration"
-    ],
-    benefits: [
-      "Reduce procurement costs by 15-25%",
-      "100% spend visibility & compliance",
-      "Faster sourcing cycles with automation",
-      "Access to world's largest supplier network"
-    ],
-    technologies: ["SAP Ariba", "SAP S/4HANA", "SAP Integration Suite", "SAP Fieldglass", "SAP Business Network"],
-    caseStudies: [
       {
         company: "Energy Corporation",
         industry: "Energy",
         challenge: "Fragmented procurement across 20 operating companies with no spend visibility and 60% maverick buying.",
         solution: "Deployed SAP Ariba with guided buying, supplier qualification workflows, and spend analytics integrated with S/4HANA.",
         results: ["22% reduction in procurement costs", "Maverick spending reduced from 60% to 8%", "Supplier onboarding time cut from 30 days to 3 days"]
-      },
-      {
-        company: "Chemical Manufacturing Group",
-        industry: "Manufacturing",
-        challenge: "Complex multi-plant operations with disconnected SAP modules and manual inter-company transactions.",
-        solution: "Implement SAP Ariba & Procurement with unified SAP landscape, automated inter-company processing, and real-time production analytics.",
-        results: ["Inter-company transaction processing automated 100%", "Month-end close reduced from 15 to 4 days", "Production visibility achieved across all 8 plants"]
-      },
-      {
-        company: "Consumer Goods Conglomerate",
-        industry: "Consumer Goods",
-        challenge: "Rapid growth through acquisitions creating heterogeneous IT landscape with 5 separate SAP instances.",
-        solution: "Deploy SAP Ariba & Procurement for landscape consolidation, harmonized master data, and unified reporting across all business units.",
-        results: ["SAP landscape consolidated to single instance", "IT operating costs reduced by 40%", "Unified reporting achieved across all acquisitions"]
-      },
-      {
-        company: "Aerospace & Defense Corp",
-        industry: "Aerospace",
-        challenge: "Strict regulatory compliance requirements with manual documentation and traceability across complex supply chains.",
-        solution: "Implement SAP Ariba & Procurement with end-to-end traceability, automated compliance documentation, and supplier collaboration portal.",
-        results: ["Regulatory compliance documentation automated 90%", "Supply chain traceability improved to 100%", "Supplier collaboration cycle time reduced by 50%"]
       }
     ],
     faqs: [
-      { question: "What's the difference between Ariba and S/4HANA procurement?", answer: "S/4HANA handles operational procurement (purchase orders, goods receipts), while Ariba adds strategic sourcing, supplier collaboration, and the Ariba Network. Together they provide end-to-end procurement excellence." },
-      { question: "How long does Ariba implementation take?", answer: "Typical Ariba implementations take 3-6 months depending on modules and scope. We use phased rollouts starting with highest-impact areas like guided buying and invoice automation." }
-    ]
-  },
-  {
-    slug: "sap-integration",
-    name: "SAP Integration & Migration",
-    shortDescription: "Seamless integration of SAP with enterprise systems and cloud platforms for unified operations.",
-    fullDescription: "We specialize in integrating SAP landscapes with third-party applications, cloud platforms, and legacy systems. Using SAP Integration Suite, middleware platforms, and custom APIs, we create seamless data flows between SAP and non-SAP environments. Our migration services cover system conversions, data migrations, and cloud transitions — whether moving from on-premise to SAP cloud, consolidating multiple SAP instances, or integrating acquisitions. Every integration is designed for reliability, scalability, and maintainability.",
-    icon: ArrowRightLeft,
-    features: [
-      "SAP Integration Suite & CPI configuration",
-      "API-based & event-driven integrations",
-      "Legacy system migration & decommissioning",
-      "Multi-system landscape harmonization",
-      "Master data management & synchronization",
-      "Cloud migration (on-prem to RISE with SAP)",
-      "Real-time & batch integration patterns",
-      "Integration monitoring & error handling"
-    ],
-    benefits: [
-      "Eliminate data silos across the enterprise",
-      "Reduce integration maintenance overhead",
-      "Accelerate M&A system consolidation",
-      "Future-proof with API-first architecture"
-    ],
-    technologies: ["SAP Integration Suite", "SAP CPI", "SAP Data Services", "SAP LT Replication", "Dell Boomi", "MuleSoft", "Microsoft Azure Integration"],
-    caseStudies: [
-      {
-        company: "Pharmaceutical Company",
-        industry: "Life Sciences",
-        challenge: "Post-acquisition landscape with 3 separate SAP instances, 50+ point-to-point integrations, and frequent data inconsistencies.",
-        solution: "Consolidated to single S/4HANA instance with SAP Integration Suite as central hub, replacing point-to-point connections with managed APIs.",
-        results: ["Integration errors reduced by 95%", "System consolidation completed in 10 months", "Annual integration maintenance costs reduced by 60%"]
-      },
-      {
-        company: "Chemical Manufacturing Group",
-        industry: "Manufacturing",
-        challenge: "Complex multi-plant operations with disconnected SAP modules and manual inter-company transactions.",
-        solution: "Implement SAP Integration & Migration with unified SAP landscape, automated inter-company processing, and real-time production analytics.",
-        results: ["Inter-company transaction processing automated 100%", "Month-end close reduced from 15 to 4 days", "Production visibility achieved across all 8 plants"]
-      },
-      {
-        company: "Consumer Goods Conglomerate",
-        industry: "Consumer Goods",
-        challenge: "Rapid growth through acquisitions creating heterogeneous IT landscape with 5 separate SAP instances.",
-        solution: "Deploy SAP Integration & Migration for landscape consolidation, harmonized master data, and unified reporting across all business units.",
-        results: ["SAP landscape consolidated to single instance", "IT operating costs reduced by 40%", "Unified reporting achieved across all acquisitions"]
-      },
-      {
-        company: "Aerospace & Defense Corp",
-        industry: "Aerospace",
-        challenge: "Strict regulatory compliance requirements with manual documentation and traceability across complex supply chains.",
-        solution: "Implement SAP Integration & Migration with end-to-end traceability, automated compliance documentation, and supplier collaboration portal.",
-        results: ["Regulatory compliance documentation automated 90%", "Supply chain traceability improved to 100%", "Supplier collaboration cycle time reduced by 50%"]
-      }
-    ],
-    faqs: [
-      { question: "Can you integrate SAP with our CRM and other cloud apps?", answer: "Yes, we integrate SAP with Salesforce, ServiceNow, Workday, and 200+ other platforms using SAP Integration Suite's pre-built connectors and custom API development." },
-      { question: "What's RISE with SAP and should we consider it?", answer: "RISE with SAP is a bundled offering for cloud transformation including S/4HANA Cloud, BTP, and Business Network. We help evaluate whether RISE fits your roadmap versus standalone cloud migration." }
+      { question: "Which SAP modules and products do you support?", answer: "We cover the full SAP portfolio: S/4HANA (Finance, Supply Chain, Manufacturing, Procurement), BTP (Build Apps, Integration Suite, AI Core), SuccessFactors (all HCM modules), Ariba (Buying, Sourcing, Contracts), Analytics Cloud, and HANA Cloud." },
+      { question: "Should we choose greenfield or brownfield S/4HANA migration?", answer: "It depends on your landscape complexity. Greenfield is ideal for process redesign, while brownfield preserves customizations. We assess your landscape and recommend the optimal approach — or a selective data transition hybrid." },
+      { question: "How long does a typical SAP implementation take?", answer: "Timelines vary: 3-6 months for focused modules like Ariba or SuccessFactors, 6-12 months for mid-size S/4HANA deployments, and 12-24 months for large enterprise transformations. Our SAP Activate methodology accelerates every phase." },
+      { question: "What's RISE with SAP and should we consider it?", answer: "RISE with SAP bundles S/4HANA Cloud, BTP, and Business Network into a single subscription for cloud transformation. We help evaluate whether RISE fits your roadmap versus standalone deployment options." }
     ]
   }
 ];
