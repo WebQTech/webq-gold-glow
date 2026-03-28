@@ -98,13 +98,10 @@ const Insights = () => {
 
               {/* Remaining insights in 2-column grid */}
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                {featuredInsights.slice(1).map((insight) => (
+                {insightsData.slice(1).map((insight) => (
                   <Link
-                    key={insight.title}
-                    to={`/insights/${insight.title
-                      .toLowerCase()
-                      .replace(/[^a-z0-9]+/g, "-")
-                      .replace(/(^-|-$)/g, "")}`}
+                    key={insight.slug}
+                    to={`/insights/${insight.slug}`}
                     className="block"
                   >
                     <article className="group bg-card rounded-xl overflow-hidden border border-border hover:border-primary/50 transition-all hover:shadow-lg cursor-pointer h-full">
