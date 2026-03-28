@@ -41,6 +41,19 @@ const Insights = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [activeFilter, setActiveFilter] = useState<string>("All");
   const [searchQuery, setSearchQuery] = useState<string>("");
+  const [isHeroReady, setIsHeroReady] = useState(false);
+
+  useEffect(() => {
+    let loaded = 0;
+    heroImages.forEach(({ src }) => {
+      const img = new Image();
+      img.src = src;
+      img.onload = img.onerror = () => {
+        loaded++;
+        if (loaded >= 1) setIsHeroReady(true);
+      };
+    });
+  }, []);
 
   useEffect(() => {
     const timer = setInterval(() => {
