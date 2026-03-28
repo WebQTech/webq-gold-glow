@@ -10,10 +10,11 @@ import techHero1 from "@/assets/technologies-hero-1.jpg";
 import techHero2 from "@/assets/technologies-hero-2.jpg";
 import techHero3 from "@/assets/technologies-hero-3.jpg";
 
-const heroImages = [
-  { src: techHero1, alt: "AI and machine learning technology stack" },
-  { src: techHero2, alt: "DevOps and CI/CD pipeline infrastructure" },
-  { src: techHero3, alt: "Enterprise data analytics and cloud platforms" },
+const heroSlides = [
+  { type: "content" as const },
+  { type: "image" as const, src: techHero1, alt: "AI and machine learning technology stack" },
+  { type: "image" as const, src: techHero2, alt: "DevOps and CI/CD pipeline infrastructure" },
+  { type: "image" as const, src: techHero3, alt: "Enterprise data analytics and cloud platforms" },
 ];
 
 const technologyCategories = getAllTechnologyCategories().map(category => ({
@@ -39,19 +40,23 @@ const Technologies = () => {
 
   useEffect(() => {
     let loaded = 0;
-    heroImages.forEach(({ src }) => {
-      const img = new Image();
-      img.src = src;
-      img.onload = img.onerror = () => {
-        loaded++;
-        if (loaded >= 1) setIsHeroReady(true);
-      };
+    const imageSlides = heroSlides.filter(s => s.type === "image");
+    if (imageSlides.length === 0) { setIsHeroReady(true); return; }
+    imageSlides.forEach((slide) => {
+      if (slide.type === "image") {
+        const img = new Image();
+        img.src = slide.src;
+        img.onload = img.onerror = () => {
+          loaded++;
+          if (loaded >= 1) setIsHeroReady(true);
+        };
+      }
     });
   }, []);
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % heroImages.length);
+      setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
     }, 5000);
     return () => clearInterval(timer);
   }, []);
@@ -129,27 +134,49 @@ const Technologies = () => {
               </div>
 
               <div className="lg:col-span-2 hidden lg:block relative aspect-[3/2] rounded-xl overflow-hidden shadow-2xl">
-                {heroImages.map((img, idx) => (
-                  <img
-                    key={idx}
-                    src={img.src}
-                    alt={img.alt}
-                    className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ${idx === currentSlide ? "opacity-100" : "opacity-0"}`}
-                    width={960}
-                    height={640}
-                  />
-                ))}
-                <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2 z-10">
-                  {heroImages.map((_, idx) => (
-                    <button
-                      key={idx}
-                      onClick={() => setCurrentSlide(idx)}
-                      className={`w-2 h-2 rounded-full transition-all ${idx === currentSlide ? "bg-white w-5" : "bg-white/50"}`}
-                      aria-label={`View image ${idx + 1}`}
-                    />
+                  {heroSlides.map((slide, idx) => (
+                    slide.type === "content" ? (
+                      <div
+                        key="content-slide"
+                        className={`absolute inset-0 w-full h-full flex flex-col justify-center px-6 transition-opacity duration-700 ${idx === currentSlide ? "opacity-100" : "opacity-0"}`}
+                        style={{
+                          background: `linear-gradient(135deg, hsl(215 50% 12%) 0%, hsl(210 100% 20%) 60%, hsl(195 80% 28%) 100%)`,
+                        }}
+                      >
+                        <h2 className="text-xs font-semibold uppercase tracking-widest text-[hsl(195,100%,55%)] mb-4 border-l-2 border-[hsl(195,100%,55%)] pl-3">
+                          What We Deliver
+                        </h2>
+                        <ul className="space-y-2.5 pl-3">
+                          {techHighlights.map((item) => (
+                            <li key={item} className="flex items-start gap-2 text-sm text-white/90">
+                              <ChevronRight className="w-3.5 h-3.5 mt-0.5 text-[hsl(195,100%,55%)] shrink-0" />
+                              <span>{item}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    ) : (
+                      <img
+                        key={idx}
+                        src={slide.src}
+                        alt={slide.alt}
+                        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ${idx === currentSlide ? "opacity-100" : "opacity-0"}`}
+                        width={960}
+                        height={640}
+                      />
+                    )
                   ))}
+                  <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2 z-10">
+                    {heroSlides.map((_, idx) => (
+                      <button
+                        key={idx}
+                        onClick={() => setCurrentSlide(idx)}
+                        className={`w-2 h-2 rounded-full transition-all ${idx === currentSlide ? "bg-white w-5" : "bg-white/50"}`}
+                        aria-label={`View slide ${idx + 1}`}
+                      />
+                    ))}
+                  </div>
                 </div>
-              </div>
             </div>
           </div>
         </section>
