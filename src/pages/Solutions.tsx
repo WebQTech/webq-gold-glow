@@ -136,14 +136,32 @@ const Solutions = () => {
         {/* Section title + divider */}
         <section className="py-10 lg:py-14">
           <div className="container mx-auto px-6 lg:px-12">
-            <div className="flex items-center gap-4 mb-8">
+            <div className="flex items-center gap-4 mb-6">
               <h2 className="text-lg font-bold text-foreground uppercase tracking-wider whitespace-nowrap">
                 Our Solution Categories
               </h2>
               <div className="h-px flex-1 bg-border" />
             </div>
+
+            {/* Filter Tabs */}
+            <div className="flex flex-wrap gap-2 mb-8">
+              {filterOptions.map((filter) => (
+                <button
+                  key={filter}
+                  onClick={() => setActiveFilter(filter)}
+                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 border ${
+                    activeFilter === filter
+                      ? "bg-primary text-primary-foreground border-primary shadow-md"
+                      : "bg-background text-muted-foreground border-border hover:border-primary/40 hover:text-foreground"
+                  }`}
+                >
+                  {filter}
+                </button>
+              ))}
+            </div>
+
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {solutionCategories.map((category) => {
+              {filteredCategories.map((category) => {
                 const CategoryIcon = category.icon;
                 return (
                   <div
