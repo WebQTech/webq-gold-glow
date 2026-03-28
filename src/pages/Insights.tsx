@@ -1,11 +1,19 @@
+import { useState, useEffect } from "react";
 import { Footer } from "@/components/Footer";
-import { Mic, Calendar, ArrowRight, Clock, User } from "lucide-react";
+import { Mic, Calendar, ArrowRight, Clock, User, ChevronRight } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { GoBackButton } from "@/components/GoBackButton";
 import { insightsData } from "@/data/insightsData";
-import insightsHero from "@/assets/insights-hero.jpg";
+import insightsHero1 from "@/assets/insights-hero.jpg";
+import insightsHero2 from "@/assets/insights-hero-2.jpg";
+import insightsHero3 from "@/assets/insights-hero-3.jpg";
 
+const heroImages = [
+  { src: insightsHero1, alt: "Technology research and data analytics workspace" },
+  { src: insightsHero2, alt: "Team collaborating on cloud strategy" },
+  { src: insightsHero3, alt: "Cybersecurity and AI research presentation" },
+];
 const upcomingWebinars = [
   {
     title: "AI-Powered Digital Transformation",
