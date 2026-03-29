@@ -1,6 +1,9 @@
 import logo1 from "@/assets/logo-option1.png";
 import logo2 from "@/assets/logo-option2.png";
 import logo3 from "@/assets/logo-option3.png";
+import logoEarth1 from "@/assets/logo-earth1.png";
+import logoEarth2 from "@/assets/logo-earth2.png";
+import logoEarth3 from "@/assets/logo-earth3.png";
 import currentLogo from "@/assets/logo.png";
 
 const LogoPreview = () => {
@@ -9,6 +12,9 @@ const LogoPreview = () => {
     { src: logo1, label: "Option 1 – Geometric WQ" },
     { src: logo2, label: "Option 2 – Hexagonal Q" },
     { src: logo3, label: "Option 3 – Node Network W" },
+    { src: logoEarth1, label: "Earth 1 – Terracotta WQ" },
+    { src: logoEarth2, label: "Earth 2 – Forest Hex" },
+    { src: logoEarth3, label: "Earth 3 – Organic Nodes" },
   ];
 
   return (
