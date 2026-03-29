@@ -26,6 +26,7 @@ const About = lazy(() => import("./pages/About"));
 const Careers = lazy(() => import("./pages/Careers"));
 const News = lazy(() => import("./pages/News"));
 const Contact = lazy(() => import("./pages/Contact"));
+const LogoPreview = lazy(() => import("./pages/LogoPreview"));
 
 const queryClient = new QueryClient();
 
@@ -57,6 +58,7 @@ const AppRoutes = () => {
           <Route path="/careers" element={<Careers />} />
           <Route path="/news" element={<News />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/logo-preview" element={<LogoPreview />} />
 
           <Route path="/products" element={<SectionRedirect hash="#products" />} />
           <Route path="/process" element={<SectionRedirect hash="#process" />} />
