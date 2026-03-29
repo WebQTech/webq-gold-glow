@@ -58,6 +58,7 @@ const AppRoutes = () => {
           <Route path="/careers" element={<Careers />} />
           <Route path="/news" element={<News />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/logo-preview" element={<LogoPreview />} />
 
           <Route path="/products" element={<SectionRedirect hash="#products" />} />
           <Route path="/process" element={<SectionRedirect hash="#process" />} />
