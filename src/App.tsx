@@ -26,6 +26,7 @@ const About = lazy(() => import("./pages/About"));
 const Careers = lazy(() => import("./pages/Careers"));
 const News = lazy(() => import("./pages/News"));
 const Contact = lazy(() => import("./pages/Contact"));
+const LogoPreview = lazy(() => import("./pages/LogoPreview"));
 
 const queryClient = new QueryClient();
 
