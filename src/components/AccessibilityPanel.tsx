@@ -1,6 +1,7 @@
-import { Accessibility, Contrast, Type, RotateCcw } from "lucide-react";
+import { Accessibility, Contrast, Type, RotateCcw, MonitorOff } from "lucide-react";
 import { useHighContrast } from "@/hooks/useHighContrast";
 import { useFontSize, FontSize } from "@/hooks/useFontSize";
+import { useReducedMotion } from "@/hooks/useReducedMotion";
 import {
   Popover,
   PopoverContent,
@@ -26,13 +27,15 @@ const fontSizeOptions: { value: FontSize; label: string }[] = [
 export const AccessibilityPanel = () => {
   const { isHighContrast, toggleHighContrast } = useHighContrast();
   const { fontSize, setFontSize, resetFontSize } = useFontSize();
+  const { reducedMotion, toggleReducedMotion } = useReducedMotion();
 
   const resetAll = () => {
     if (isHighContrast) toggleHighContrast();
+    if (reducedMotion) toggleReducedMotion();
     resetFontSize();
   };
 
-  const hasCustomSettings = isHighContrast || fontSize !== "medium";
+  const hasCustomSettings = isHighContrast || fontSize !== "medium" || reducedMotion;
 
   return (
     <TooltipProvider>
@@ -109,7 +112,30 @@ export const AccessibilityPanel = () => {
 
               <Separator />
 
-              {/* Font Size Control */}
+              {/* Reduced Motion Toggle */}
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-3">
+                  <div className="w-8 h-8 rounded-md bg-muted flex items-center justify-center">
+                    <MonitorOff className="w-4 h-4 text-foreground/70" />
+                  </div>
+                  <div>
+                    <Label htmlFor="reduced-motion" className="text-sm font-medium cursor-pointer">
+                      Reduce Motion
+                    </Label>
+                    <p className="text-xs text-muted-foreground">
+                      Minimize animations
+                    </p>
+                  </div>
+                </div>
+                <Switch
+                  id="reduced-motion"
+                  checked={reducedMotion}
+                  onCheckedChange={toggleReducedMotion}
+                  aria-label="Toggle reduced motion"
+                />
+              </div>
+
+              <Separator />
               <div>
                 <div className="flex items-center gap-3 mb-3">
                   <div className="w-8 h-8 rounded-md bg-muted flex items-center justify-center">
