@@ -1,67 +1,17 @@
 import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { Send } from "lucide-react";
-import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { z } from "zod";
-import { useToast } from "@/hooks/use-toast";
-
-const contactSchema = z.object({
-  fullName: z.string().trim().min(1, "Full name is required").max(100, "Name must be less than 100 characters"),
-  email: z.string().trim().min(1, "Email is required").email("Please enter a valid email address").max(255, "Email must be less than 255 characters"),
-  company: z.string().trim().max(100, "Company name must be less than 100 characters").optional(),
-  topic: z.string().optional(),
-  message: z.string().trim().max(1000, "Message must be less than 1000 characters").optional(),
-});
-
-type ContactFormData = z.infer<typeof contactSchema>;
 
 export const ContactSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
-  const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const {
-    register,
-    handleSubmit,
-    reset,
-    formState: { errors, isSubmitting },
-  } = useForm<ContactFormData>({
-    resolver: zodResolver(contactSchema),
-  });
+  // Automatically detect the current domain for returnURL
+  const returnURL = `${window.location.origin}/thank-you`;
 
-  const onSubmit = async (data: ContactFormData) => {
-    try {
-      const response = await fetch("https://formspree.io/f/YOUR_FORM_ID", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          name: data.fullName,
-          email: data.email,
-          company: data.company || "",
-          topic: data.topic || "",
-          message: data.message || "",
-        }),
-      });
-
-      if (response.ok) {
-        toast({
-          title: "Message sent successfully!",
-          description: "We'll get back to you within 24 hours.",
-        });
-        reset();
-      } else {
-        throw new Error("Failed to send message");
-      }
-    } catch (error) {
-      toast({
-        title: "Error sending message",
-        description: "Please try again or email us directly.",
-        variant: "destructive",
-      });
-    }
+  const handleSubmit = () => {
+    setIsSubmitting(true);
   };
 
   return (
@@ -87,88 +37,91 @@ export const ContactSection = () => {
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.7, delay: 0.2 }}
             className="grid md:grid-cols-2 gap-6"
-            onSubmit={handleSubmit(onSubmit)}
+            action="https://desk.zoho.in/support/WebToCase"
+            method="POST"
+            onSubmit={handleSubmit}
+            encType="multipart/form-data"
           >
+            {/* Hidden Zoho Fields */}
+            <input type="hidden" name="xnQsjsdp" value="edbsn17fe34adbbb3eaacda29f3a0cf04f228" />
+            <input type="hidden" name="xmIwtLD" value="edbsn18a4fc5e6675ce19261a7bb9659100a6562083b76b7a809f0fed5bd07dcd06c3" />
+            <input type="hidden" name="xJdfEaS" value="" />
+            <input type="hidden" name="actionType" value="Q2FzZXM=" />
+            <input type="hidden" id="property(module)" value="Cases" />
+            <input type="hidden" id="dependent_field_values_Cases" value='{"JSON_VALUES":{},"JSON_SELECT_VALUES":{},"JSON_MAP_DEP_LABELS":[]}' />
+            <input type="hidden" name="returnURL" value={returnURL} />
+
             <div>
               <label className="block text-sm font-medium text-foreground mb-2">
                 Full Name *
               </label>
               <input
                 type="text"
-                {...register("fullName")}
-                className={`w-full px-4 py-3 bg-muted border rounded-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors ${
-                  errors.fullName ? "border-destructive" : "border-border"
-                }`}
+                name="Contact Name"
+                required
+                maxLength={120}
+                className="w-full px-4 py-3 bg-muted border border-border rounded-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors"
                 placeholder="John Smith"
               />
-              {errors.fullName && (
-                <p className="mt-1 text-sm text-destructive">{errors.fullName.message}</p>
-              )}
             </div>
+
             <div>
               <label className="block text-sm font-medium text-foreground mb-2">
                 Work Email *
               </label>
               <input
                 type="email"
-                {...register("email")}
-                className={`w-full px-4 py-3 bg-muted border rounded-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors ${
-                  errors.email ? "border-destructive" : "border-border"
-                }`}
+                name="Email"
+                required
+                maxLength={120}
+                className="w-full px-4 py-3 bg-muted border border-border rounded-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors"
                 placeholder="john@company.com"
               />
-              {errors.email && (
-                <p className="mt-1 text-sm text-destructive">{errors.email.message}</p>
-              )}
             </div>
+
             <div>
               <label className="block text-sm font-medium text-foreground mb-2">
                 Company
               </label>
               <input
                 type="text"
-                {...register("company")}
-                className={`w-full px-4 py-3 bg-muted border rounded-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors ${
-                  errors.company ? "border-destructive" : "border-border"
-                }`}
+                name="Company"
+                maxLength={100}
+                className="w-full px-4 py-3 bg-muted border border-border rounded-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors"
                 placeholder="Company Name"
               />
-              {errors.company && (
-                <p className="mt-1 text-sm text-destructive">{errors.company.message}</p>
-              )}
             </div>
+
             <div>
               <label className="block text-sm font-medium text-foreground mb-2">
                 Topic of Interest
               </label>
               <select
-                {...register("topic")}
+                name="Subject"
                 className="w-full px-4 py-3 bg-muted border border-border rounded-sm text-foreground focus:outline-none focus:border-primary transition-colors"
               >
                 <option value="">Select a topic</option>
-                <option value="ai">AI Solutions</option>
-                <option value="cloud">Cloud Services</option>
-                <option value="digital">Digital Transformation</option>
-                <option value="data">Data & Analytics</option>
-                <option value="other">Other</option>
+                <option value="AI Solutions">AI Solutions</option>
+                <option value="Cloud Services">Cloud Services</option>
+                <option value="Digital Transformation">Digital Transformation</option>
+                <option value="Data & Analytics">Data & Analytics</option>
+                <option value="Other">Other</option>
               </select>
             </div>
+
             <div className="md:col-span-2">
               <label className="block text-sm font-medium text-foreground mb-2">
                 Message
               </label>
               <textarea
                 rows={4}
-                {...register("message")}
-                className={`w-full px-4 py-3 bg-muted border rounded-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors resize-none ${
-                  errors.message ? "border-destructive" : "border-border"
-                }`}
+                name="Description"
+                maxLength={3000}
+                className="w-full px-4 py-3 bg-muted border border-border rounded-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors resize-none"
                 placeholder="Tell us about your project..."
               />
-              {errors.message && (
-                <p className="mt-1 text-sm text-destructive">{errors.message.message}</p>
-              )}
             </div>
+
             <div className="md:col-span-2">
               <button
                 type="submit"
